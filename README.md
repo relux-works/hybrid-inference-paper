@@ -16,9 +16,9 @@ Every version of the paper is a [GitHub Release](https://github.com/relux-works/
 carries the PDF, `hybrid-inference-X.Y.Z.ru.pdf`, and `SHA256SUMS`. The English version will join the same release as
 `.en.pdf`. To download one version: `gh release download vX.Y.Z -R relux-works/hybrid-inference-paper -p '*.pdf'`.
 
-The title page states the version, so a forwarded or printed copy identifies itself. Builds from pull requests and
-`main` are not releases. Their title page says «черновик» with the `git describe` label, and CI keeps them as workflow
-artifacts for 30 days.
+The title page states the version, so a forwarded or printed copy identifies itself. Any other build says «черновик»
+with its `git describe` label. For pull requests and `main`, CI only checks that the PDF builds and keeps no copy: the
+PDF never goes through Actions artifact storage. To share a draft, publish a pre-release such as `v0.2.0-rc.1`.
 
 Versions follow [Semantic Versioning](https://semver.org), read for a paper:
 
@@ -78,7 +78,7 @@ usage-event UTC date semantics and benchmark interpretation. For example:
 Outputs belong under `.temp/`; coverage and per-call CSV stay private. Run the
 Swift 6/Swift Testing fixtures with
 `swift test --package-path tools/tests --scratch-path .temp/session-stats-build`.
-The original delivered measurements remain under `data/measurements/`. The fixture suite also checks strict SemVer release labels in disposable Git repositories.
+The original delivered measurements remain under `data/measurements/`.
 
 ## Building the PDF
 
@@ -96,4 +96,4 @@ checking its SHA-256 digest. The fonts come from `paper/fonts/`, so every machin
 | `.scripts/release-check.sh` | Checks a tag before release and extracts its changelog section | `.scripts/release-check.sh vX.Y.Z` |
 | `.scripts/install-tectonic.sh` | Installs the pinned tectonic and prints its directory | See above |
 | `.scripts/test-release.sh` | Positive and negative tests of the two release scripts, on a throwaway repository | `.scripts/test-release.sh` |
-| `.github/workflows/paper.yml` | PDF artifact for pull requests and `main`; GitHub Release for tags. Runs on the private rise1 runner group | Automatic |
+| `.github/workflows/paper.yml` | Checks that the PDF builds for pull requests and `main`; for a tag, builds it and publishes the GitHub Release. Runs on the private rise1 runner group | Automatic |

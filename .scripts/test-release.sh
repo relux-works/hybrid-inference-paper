@@ -90,6 +90,14 @@ echo third > text.tex
 land "third"
 git tag v1.0
 expect_has "$(.scripts/version.sh --tex)" '\paperreleasefalse' "non-SemVer tag is a draft"
+# Claim: version.sh applies the same strict SemVer as release-check, so a numeric pre-release identifier with a
+# leading zero labels a draft, not a release.
+for t in v1.0.0-01 v1.0.0-rc.01; do
+  echo "$t" > text.tex
+  land "$t"
+  git tag "$t"
+  expect_has "$(.scripts/version.sh --tex)" '\paperreleasefalse' "$t is a draft"
+done
 for t in v1.0 0.0.1 v01.0.0 v1.0.0+build.1 v1.0.0- v1.0.0-01 v1.0.0-rc..1; do
   check_fails "$t" "is not vMAJOR.MINOR.PATCH"
 done
