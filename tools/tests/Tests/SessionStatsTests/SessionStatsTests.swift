@@ -330,3 +330,187 @@ struct CallTimeTests {
         #expect(t["timestamped_calls"] as? Int == 1); #expect(t["first_utc"] as? String == "2026-01-01T00:00:01Z")
     }
 }
+
+private func usageRows(_ report: [String:Any]) throws -> [[String:Any]] {
+    try #require(report["model_usage"] as? [[String:Any]])
+}
+private func reconcileModels(_ report: [String:Any]) throws {
+    let rows = try usageRows(report)
+    for agent in ["claude", "codex", "muse", "all"] {
+        let s = try stats(report, agent), totals = try #require(s["totals"] as? [String:Int])
+        let selected = rows.filter { agent == "all" || $0["agent"] as? String == agent }
+        #expect(try selected.reduce(0) { try $0 + #require($1["calls"] as? Int) } == s["calls"] as? Int)
+        for key in ["prompt", "cached", "output", "reasoning"] {
+            #expect(try selected.reduce(0) { try $0 + #require($1[key] as? Int) } == totals[key])
+        }
+    }
+}
+private func museUsage(_ id: String, _ model: String, _ usage: [String:Any]) -> [String:Any] {
+    ["payload_type":"runtime.session", "id":id, "stream":["session":"raw-muse"],
+     "payload":["event":["kind":"model_completed", "model":model, "usage":usage]]]
+}
+
+@Suite(.serialized)
+struct ModelUsageTests {
+    // Claude's measured 100/20/300 categories survive duplicate partials; their sum includes cache write and equals legacy prompt.
+    @Test func claudeRawCategoriesReconcile() throws {
+        let r = try directory(), p = r.appendingPathComponent("projects")
+        var full = claude("raw-claude",9,input:100,cache:300,write:20)
+        var message = try #require(full["message"] as? [String:Any])
+        var u = try #require(message["usage"] as? [String:Any]); u["output_tokens_details"] = ["thinking_tokens":4]
+        message["usage"] = u; full["message"] = message
+        try log([claude("raw-claude",1,input:0,cache:0,write:0), full, full],p.appendingPathComponent("one.jsonl"))
+        let (report,exit,_) = try run(r,roots:["claude":[p.path]])
+        let rows = try usageRows(report), row = try #require(rows.first)
+        #expect(exit == 0); #expect(report["version"] as? String == "1.6-model-usage"); #expect(rows.count == 1)
+        #expect(row["uncached_input"] as? Int == 100); #expect(row["cache_write"] as? Int == 20)
+        #expect(row["cache_read"] as? Int == 300); #expect(row["raw_input"] as? Int == 100)
+        #expect(row["output"] as? Int == 9); #expect(row["raw_output"] as? Int == 9)
+        #expect(row["reasoning"] as? Int == 4); #expect(row["raw_reasoning"] as? Int == 4)
+        let parts = try ["uncached_input", "cache_write", "cache_read"].map { try #require(row[$0] as? Int) }
+        #expect(parts.reduce(0,+) == row["prompt"] as? Int)
+        #expect(row["prompt"] as? Int == 420); #expect(row["cached"] as? Int == 300)
+        #expect(row["cache_write_5m"] is NSNull); #expect(row["cache_write_1h"] is NSNull)
+        #expect(row["unknown_counters"] as? [String] == ["cache_write_5m", "cache_write_1h"])
+        try reconcileModels(report)
+    }
+
+    // Codex reports inclusive input and measured cache read; reasoning stays separate and absent writes are unknown.
+    @Test func codexMeasuredCacheRead() throws {
+        let r = try directory(), p = r.appendingPathComponent("sessions")
+        var u = cu(500,17); u["cached_input_tokens"] = 300; u["reasoning_output_tokens"] = 6
+        let rows: [[String:Any]] = [["type":"session_meta", "payload":["id":"raw-codex"]],
+          ["type":"turn_context", "payload":["model":"codex-raw"]],
+          ["type":"token_usage_record", "payload":["response_id":"x-raw", "usage":u, "thread_token_usage":u]],
+          ["type":"event_msg", "payload":["type":"token_count", "info":["last_token_usage":u,"total_token_usage":u]]]]
+        try log(rows,p.appendingPathComponent("rollout-raw.jsonl"))
+        let (report,exit,_) = try run(r,roots:["codex":[p.path]])
+        let row = try #require(try usageRows(report).first)
+        #expect(exit == 0); #expect(row["calls"] as? Int == 1)
+        #expect(row["prompt"] as? Int == 500); #expect(row["uncached_input"] as? Int == 200)
+        #expect(row["cached"] as? Int == 300); #expect(row["cache_read"] as? Int == 300)
+        #expect(row["cache_write"] is NSNull); #expect(row["output"] as? Int == 17)
+        #expect(row["reasoning"] as? Int == 6); #expect(row["raw_reasoning"] as? Int == 6)
+        try reconcileModels(report)
+    }
+
+    // Muse missing cache stays null, measured zero stays zero, and a mixed group cannot claim a complete raw total.
+    @Test func museUnknownVersusZero() throws {
+        let r = try directory(), p = r.appendingPathComponent("muse")
+        let rows = [museUsage("missing","missing",["input_tokens":10,"output_tokens":4]),
+                    museUsage("zero","zero",["input_tokens":10,"output_tokens":4,"cached_tokens":0,"reasoning_tokens":0]),
+                    museUsage("mixed-missing","mixed",["input_tokens":10,"output_tokens":4]),
+                    museUsage("mixed-known","mixed",["input_tokens":10,"output_tokens":4,"cache_read_tokens":7])]
+        try log(rows,p.appendingPathComponent("one/session.jsonl"))
+        let (report,exit,_) = try run(r,roots:["muse":[p.path]])
+        let usage = try usageRows(report)
+        let missing = try #require(usage.first { $0["model"] as? String == "missing" })
+        let zero = try #require(usage.first { $0["model"] as? String == "zero" })
+        let mixed = try #require(usage.first { $0["model"] as? String == "mixed" })
+        #expect(exit == 0); #expect(missing["cache_read"] is NSNull); #expect(zero["cache_read"] as? Int == 0)
+        #expect(missing["raw_reasoning"] is NSNull); #expect(zero["raw_reasoning"] as? Int == 0)
+        #expect(mixed["cache_read"] is NSNull); #expect(mixed["cached"] as? Int == 7)
+        #expect((mixed["unknown_counter_calls"] as? [String:Int])?["cache_read"] == 1)
+        for row in usage {
+            #expect(row["cache_semantics"] as? String == "unverified")
+            #expect(row["uncached_input"] is NSNull); #expect(row["cache_write"] is NSNull)
+            #expect(row["raw_input"] as? Int == (row["model"] as? String == "mixed" ? 20 : 10))
+        }
+        try reconcileModels(report)
+    }
+
+    // Filtering uses deduplicated context size, retains null models, separates agents with equal model labels, and preserves unfiltered legacy models.
+    @Test func filteredModelsAndUnknownReconcile() throws {
+        let r = try directory(), c = r.appendingPathComponent("projects"), x = r.appendingPathComponent("sessions"), m = r.appendingPathComponent("muse")
+        var unknown = claude("unknown",3), message = try #require(unknown["message"] as? [String:Any])
+        message.removeValue(forKey:"model"); unknown["message"] = message
+        var short = claude("short",999); short["sessionId"] = "short-context"
+        try log([claude("known",4),unknown,unknown,short],c.appendingPathComponent("one.jsonl"))
+        try log([["type":"turn_context","payload":["model":"claude-test"]],
+                 ["type":"token_usage_record","payload":["response_id":"x1","usage":cu(50,5)]],
+                 ["type":"token_usage_record","payload":["response_id":"x2","usage":cu(60,6)]]],x.appendingPathComponent("rollout-one.jsonl"))
+        try log([museUsage("m1","short-muse",["input_tokens":9,"output_tokens":9])],m.appendingPathComponent("one/session.jsonl"))
+        let (report,exit,_) = try run(r,roots:["claude":[c.path],"codex":[x.path],"muse":[m.path]],extra:["--min-calls","2"])
+        let rows = try usageRows(report), unknownRow = try #require(rows.first { $0["model"] is NSNull })
+        #expect(exit == 2); #expect(rows.count == 3); #expect(unknownRow["calls"] as? Int == 1)
+        #expect(!rows.contains { $0["agent"] as? String == "muse" })
+        #expect(rows.filter { $0["model"] as? String == "claude-test" }.count == 2)
+        let legacyModels = try #require(report["models"] as? [[String:Any]])
+        #expect(legacyModels.count == 3)
+        #expect(legacyModels.first { $0["agent"] as? String == "claude" }?["calls"] as? Int == 2)
+        try reconcileModels(report)
+    }
+
+    // Missing usage is excluded by all three readers; missing raw fields do not replace legacy zero defaults or invent TTLs.
+    @Test func missingUsageAndTTLMeasurements() throws {
+        let r = try directory(), c = r.appendingPathComponent("projects"), x = r.appendingPathComponent("sessions"), m = r.appendingPathComponent("muse")
+        var invalid = claude("no-usage",999), im = try #require(invalid["message"] as? [String:Any])
+        im.removeValue(forKey:"usage"); invalid["message"] = im
+        var valid = claude("ttl",0,input:0,cache:0,write:20), vm = try #require(valid["message"] as? [String:Any])
+        var u = try #require(vm["usage"] as? [String:Any]); u["cache_creation"] = ["ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":20]
+        vm["usage"] = u; valid["message"] = vm
+        try log([invalid,valid],c.appendingPathComponent("one.jsonl"))
+        try log([["type":"token_usage_record","payload":["response_id":"bad"]],
+                 ["type":"token_usage_record","payload":["response_id":"good","usage":["input_tokens":5,"output_tokens":0]]]],x.appendingPathComponent("rollout-one.jsonl"))
+        var badMuse = museUsage("bad","bad",[:]); var payload = try #require(badMuse["payload"] as? [String:Any])
+        payload["event"] = ["kind":"model_completed"]; badMuse["payload"] = payload
+        try log([badMuse,museUsage("good","good",["input_tokens":0,"output_tokens":0])],m.appendingPathComponent("one/session.jsonl"))
+        let (report,exit,_) = try run(r,roots:["claude":[c.path],"codex":[x.path],"muse":[m.path]])
+        let rows = try usageRows(report), cr = try #require(rows.first { $0["agent"] as? String == "claude" })
+        let xr = try #require(rows.first { $0["agent"] as? String == "codex" })
+        #expect(exit == 2); #expect(rows.count == 3); #expect(try stats(report,"all")["calls"] as? Int == 3)
+        #expect(cr["cache_write_5m"] as? Int == 0); #expect(cr["cache_write_1h"] as? Int == 20)
+        #expect(cr["raw_output"] as? Int == 0); #expect(cr["raw_reasoning"] is NSNull)
+        #expect(xr["cached"] as? Int == 0); #expect(xr["cache_read"] is NSNull); #expect(xr["uncached_input"] is NSNull)
+        try reconcileModels(report)
+        let (empty,emptyExit,_) = try run(try directory(),roots:[:])
+        #expect(emptyExit == 2); #expect(try usageRows(empty).isEmpty); try reconcileModels(empty)
+    }
+
+    // Null required values keep prior zero-default acceptance; raw absence stays null, and impossible Codex subtraction stays unknown.
+    @Test func nullRawValuesAndInvalidCacheDifference() throws {
+        let r = try directory(), p = r.appendingPathComponent("sessions")
+        try log([["type":"turn_context","payload":["model":"null-values"]],
+                 ["type":"token_usage_record","payload":["response_id":"null","usage":["input_tokens":NSNull(),"output_tokens":NSNull()]]],
+                 ["type":"turn_context","payload":["model":"invalid-difference"]],
+                 ["type":"token_usage_record","payload":["response_id":"over","usage":["input_tokens":10,"output_tokens":0,"cached_input_tokens":11]]]],p.appendingPathComponent("rollout-one.jsonl"))
+        let (report,exit,_) = try run(r,roots:["codex":[p.path]])
+        let rows = try usageRows(report), missing = try #require(rows.first { $0["model"] as? String == "null-values" })
+        let over = try #require(rows.first { $0["model"] as? String == "invalid-difference" })
+        #expect(exit == 0); #expect(missing["raw_input"] is NSNull); #expect(missing["raw_output"] is NSNull)
+        #expect(missing["prompt"] as? Int == 0); #expect(missing["output"] as? Int == 0)
+        #expect(over["cache_read"] as? Int == 11); #expect(over["uncached_input"] is NSNull)
+        try reconcileModels(report)
+    }
+
+    // A reported sum adds only the calls that report the counter: a mixed group keeps its measured part, an
+    // all-missing group reports 0 with every call counted unknown, and wherever the strict total exists the two agree.
+    @Test func reportedSumsCountOnlyReportingCalls() throws {
+        let r = try directory(), p = r.appendingPathComponent("muse")
+        let rows = [museUsage("missing","missing",["input_tokens":10,"output_tokens":4]),
+                    museUsage("zero","zero",["input_tokens":10,"output_tokens":4,"cached_tokens":0,"reasoning_tokens":0]),
+                    museUsage("mixed-missing","mixed",["input_tokens":10,"output_tokens":4]),
+                    museUsage("mixed-known","mixed",["input_tokens":10,"output_tokens":4,"cache_read_tokens":7])]
+        try log(rows,p.appendingPathComponent("one/session.jsonl"))
+        let (report,exit,_) = try run(r,roots:["muse":[p.path]])
+        let usage = try usageRows(report)
+        let missing = try #require(usage.first { $0["model"] as? String == "missing" })
+        let zero = try #require(usage.first { $0["model"] as? String == "zero" })
+        let mixed = try #require(usage.first { $0["model"] as? String == "mixed" })
+        #expect(exit == 0)
+        #expect(mixed["cache_read"] is NSNull); #expect(mixed["cache_read_reported_sum"] as? Int == 7)
+        #expect((mixed["unknown_counter_calls"] as? [String:Int])?["cache_read"] == 1)
+        #expect(missing["cache_read"] is NSNull); #expect(missing["cache_read_reported_sum"] as? Int == 0)
+        #expect((missing["unknown_counter_calls"] as? [String:Int])?["cache_read"] == 1)
+        #expect(zero["cache_read"] as? Int == 0); #expect(zero["cache_read_reported_sum"] as? Int == 0)
+        #expect((zero["unknown_counter_calls"] as? [String:Int])?["cache_read"] == nil)
+        let counters = ["raw_input", "uncached_input", "cache_write", "cache_read", "raw_output", "raw_reasoning",
+                        "cache_write_5m", "cache_write_1h"]
+        for row in usage {
+            for key in counters {
+                #expect(row[key + "_reported_sum"] as? Int != nil)
+                if let strict = row[key] as? Int { #expect(row[key + "_reported_sum"] as? Int == strict) }
+            }
+        }
+    }
+}

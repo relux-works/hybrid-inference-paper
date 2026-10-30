@@ -9,7 +9,7 @@ Outputs go to the requested paths (defaults are in the current directory).
 
 Reads recorded Claude Code, Codex CLI and Muse usage locally, including live,
 Curator, alternate/isolated homes, archived Codex sessions and configured backup
-folders/ZIPs. Version 1.5 starts from the validated 1.4 backup-aware implementation;
+folders/ZIPs. Version 1.6 adds raw per-model usage to the 1.5 call-time implementation;
 the delivered 1.4 source and full04 measurements under `data/measurements/` remain
 historical evidence. No model/provider or network request is made.
 
@@ -71,6 +71,44 @@ uncached input or measured prefill traffic. Muse input/cache fields remain uncha
 and their cache semantics are unverified. Reasoning is not added to output. Tool
 sizes use a character heuristic. Model labels are logged metadata, not attested IDs.
 
+### Per-model raw usage (`1.6-model-usage`)
+
+The new top-level `model_usage` list has one row per `(agent, model)`, including
+`model: null` for calls without a model label. It uses the same deduplicated calls
+and context-level `--min-calls` filter as `agents.<agent>.totals`. Sum each row's
+`prompt`, `cached`, `output`, and `reasoning` to reproduce that agent's totals;
+sum all rows to reproduce `agents.all.totals`. Row `calls` similarly reconciles to
+the agent's `calls`. Reasoning is never added to output. The existing count-only
+`models` list is unchanged: it still omits unknown labels and ignores `--min-calls`. Each raw counter also has `<counter>_reported_sum`, the sum over the calls that report it; read it together with `unknown_counter_calls`, because a reported sum over zero reporting calls is 0, not a measurement.
+
+Each call internally retains nullable raw counters alongside its legacy counters.
+Rows add these counters independently across retained calls:
+
+| Field | Meaning |
+|---|---|
+| `raw_input` | Logged `input_tokens`, without provider-specific addition/subtraction |
+| `uncached_input` | Claude `input_tokens`; Codex input minus measured cache read when nonnegative; unknown for Muse |
+| `cache_write` | Claude `cache_creation_input_tokens`; Codex `cache_write_input_tokens` if present; unknown for Muse |
+| `cache_read` | Claude `cache_read_input_tokens`, Codex `cached_input_tokens`, or Muse `cache_read_tokens` / fallback `cached_tokens` |
+| `raw_output`, `raw_reasoning` | Logged counters, retaining absence separately from the legacy zero defaults in `output` / `reasoning` |
+| `cache_write_5m`, `cache_write_1h` | Only Claude's logged `cache_creation.ephemeral_5m_input_tokens` / `ephemeral_1h_input_tokens` |
+| `unknown_counters`, `unknown_counter_calls` | Names of incomplete raw totals and the number of retained calls missing each counter |
+| `cache_semantics` | `unverified` for Muse; `provider_reported` for Claude/Codex, without asserting billing eligibility |
+
+A raw total is `null` if **any** retained call in that row lacks its counter;
+it is `0` only when every call supplies a measured zero. These nullable totals are
+not partial sums. Missing optional raw counters do not change legacy totals or
+cause otherwise valid calls to be excluded. Calls without valid required usage
+remain excluded. Duplicate records fill missing raw counters or retain the maximum
+logged value per counter, as with the existing independent legacy maxima. Because
+maxima may come from different updates, raw component sums need not reconstruct a
+legacy prompt for inconsistent duplicate records.
+
+Muse's raw input/read numbers retain their logged values, but cannot establish
+uncached billing input. A missing cache-write counter or Claude TTL split stays
+unknown; neither a cache hit count, a prompt depth, nor `new_in` supplies it.
+The aggregate cache-write count does not imply a 5-minute or 1-hour allocation.
+
 ### Executable checks
 
 ```bash
@@ -86,6 +124,16 @@ exercise the ten retained backup/dedup/privacy groups plus date normalization,
 invalid/missing times, duplicate conflicts/fill, all three readers, UTC set union,
 min-call filtering and absent mtime fallback. A passing synthetic fixture does not
 establish source completeness for a real machine.
+
+`ModelUsageTests` additionally checks Claude's separate 100 input / 20 write / 300
+read fixture, Codex cache read, Muse unknown-versus-zero counters, raw TTL fields,
+missing usage, null model labels, legacy model-list behavior, deduplication and
+filtered per-model reconciliation for every agent and `all`. The Claude component
+sum check must fail if a scratch mutant drops cache write; select it with
+`--filter ModelUsageTests.claudeRawCategoriesReconcile` and override the script
+using `SESSION_STATS_TEST_SCRIPT=/absolute/path/to/mutant.py`.
+`ModelUsageTests.reportedSumsCountOnlyReportingCalls` checks `<counter>_reported_sum` for a mixed,
+an all-missing and a measured-zero group.
 
 ## 2. `hybrid_bench.py`: prefill and decode at long context
 

@@ -24,7 +24,7 @@ import sys
 import time
 import zipfile
 
-VERSION = '1.5-call-time'
+VERSION = '1.6-model-usage'
 CHARS_PER_TOKEN = 3.6
 AGENTS = ('claude', 'codex', 'muse')
 ZIP_HANDLES = {}
@@ -82,7 +82,34 @@ def usage(u, agent):
     details = u.get('output_tokens_details') or {}
     reasoning = number(details.get('thinking_tokens')) if agent == 'claude' else number(
         u.get('reasoning_output_tokens') if agent == 'codex' else u.get('reasoning_tokens'))
-    return inp + write + (cached if agent == 'claude' else 0), cached, output, reasoning
+    # Keep legacy zero defaults above; raw counters distinguish absent from zero.
+    def measured(value):
+        if value is None:
+            return None
+        try:
+            return number(value)
+        except ValueError:
+            return None
+
+    raw_input = measured(u.get('input_tokens'))
+    read = measured(u.get('cache_read_input_tokens') if agent == 'claude' else
+                    u.get('cached_input_tokens') if agent == 'codex' else
+                    u.get('cache_read_tokens', u.get('cached_tokens')))
+    uncached = raw_input if agent == 'claude' else (
+        raw_input - read if agent == 'codex' and raw_input is not None and
+        read is not None and read <= raw_input else None)
+    ttl = u.get('cache_creation') if agent == 'claude' else None
+    ttl = ttl if isinstance(ttl, dict) else {}
+    raw = dict(raw_input=raw_input, uncached_input=uncached,
+               cache_write=measured(u.get('cache_creation_input_tokens') if agent == 'claude' else
+                                    u.get('cache_write_input_tokens') if agent == 'codex' else None),
+               cache_read=read, raw_output=measured(u.get('output_tokens')),
+               raw_reasoning=measured(details.get('thinking_tokens') if agent == 'claude' else
+                                      u.get('reasoning_output_tokens') if agent == 'codex' else
+                                      u.get('reasoning_tokens')),
+               cache_write_5m=measured(ttl.get('ephemeral_5m_input_tokens')),
+               cache_write_1h=measured(ttl.get('ephemeral_1h_input_tokens')))
+    return inp + write + (cached if agent == 'claude' else 0), cached, output, reasoning, raw
 
 
 class Stream:
@@ -125,7 +152,7 @@ class Corpus:
 
     def call(self, agent, stream, cid, timestamp, u, model, fallback, aliases=()):
         try:
-            prompt, cached, output, reasoning = usage(u, agent)
+            prompt, cached, output, reasoning, raw = usage(u, agent)
         except (ValueError, AttributeError):
             self.bump(agent, 'invalid_usage_records')
             return
@@ -152,6 +179,10 @@ class Corpus:
                 self.bump(agent, 'usage_update_records')
             for k, v in [('prompt', prompt), ('cached', cached), ('output', output), ('reasoning', reasoning)]:
                 c[k] = max(c[k], v)
+            for k, v in raw.items():
+                if v is not None:
+                    old_value = c['raw_usage'][k]
+                    c['raw_usage'][k] = v if old_value is None else max(old_value, v)
             if not c['model'] and isinstance(model, str):
                 c['model'] = model
             self.timestamp(agent, c, timestamp)
@@ -160,7 +191,8 @@ class Corpus:
         s.order += 1
         c = dict(t=None, invalid_timestamp=False, conflicting_timestamp=False,
                  prompt=prompt, cached=cached, output=output,
-                 reasoning=reasoning, model=model if isinstance(model, str) else None, n=s.order, primary_identity=ident)
+                 reasoning=reasoning, raw_usage=raw,
+                 model=model if isinstance(model, str) else None, n=s.order, primary_identity=ident)
         self.timestamp(agent, c, timestamp)
         s.calls[str(cid)] = c
         self.unique_calls += 1
@@ -556,6 +588,33 @@ def analyse(streams, min_calls):
     ), rows
 
 
+def model_usage(streams, min_calls):
+    groups = collections.defaultdict(list)
+    for s in streams:
+        if len(s.calls) >= min_calls:
+            for c in s.calls.values():
+                groups[(s.agent, c['model'] or None)].append(c)
+    rows = []
+    for (agent, model), calls in sorted(groups.items(), key=lambda x: (x[0][0], x[0][1] or '')):
+        row = dict(agent=agent, model=model, calls=len(calls))
+        # These four counters use exactly the existing agent-total semantics.
+        row.update({k: sum(c[k] for c in calls) for k in ('prompt', 'cached', 'output', 'reasoning')})
+        unknown = {}
+        for key in calls[0]['raw_usage']:
+            values = [c['raw_usage'][key] for c in calls]
+            missing = sum(v is None for v in values)
+            row[key] = None if missing else sum(values)
+            # Sum over the calls that do report this counter, for pricing estimates with partial logs.
+            row[key + '_reported_sum'] = sum(v for v in values if v is not None)
+            if missing:
+                unknown[key] = missing
+        row['unknown_counters'] = list(unknown)
+        row['unknown_counter_calls'] = unknown
+        row['cache_semantics'] = 'unverified' if agent == 'muse' else 'provider_reported'
+        rows.append(row)
+    return rows
+
+
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
@@ -662,7 +721,11 @@ def main():
                       'call_time uses recorded usage-event time (Claude/Codex envelope timestamp; Muse recorded_at), not exact model start time or file dates.',
                       'Naive ISO timestamps assume UTC. Numeric timestamps use the existing positive seconds/milliseconds/microseconds/nanoseconds magnitude heuristic.',
                       'Call times use the first valid deduplicated timestamp; later copies can fill absent/invalid time, and disagreements are flagged without adding days.',
-                      'Time coverage is independent of source-reading status; distinct UTC days are a set union after min-call filtering, not calendar span or provider sum.'
+                      'Time coverage is independent of source-reading status; distinct UTC days are a set union after min-call filtering, not calendar span or provider sum.',
+                      'model_usage groups deduplicated, min-call-filtered calls by agent/model, including null models. Legacy counters reconcile to agent totals.',
+                      'Raw counters are null if any retained call lacks that counter; unknown_counter_calls reports how many. raw_output/raw_reasoning preserve missing versus zero independently of legacy totals.',
+                      'Claude uncached_input is input_tokens; Codex uncached_input is input_tokens minus measured cached_input_tokens when nonnegative. Muse uncached_input is unknown because cache semantics are unverified.',
+                      'Cache-write TTL counters are only taken from logged Claude cache_creation ephemeral_5m_input_tokens/ephemeral_1h_input_tokens; no TTL split is inferred.'
                   ], agents={})
     all_streams = list(corpus.streams.values())
     all_rows = []
@@ -684,6 +747,7 @@ def main():
             if c['model']:
                 models[(s.agent, c['model'])] += 1
     report['models'] = [dict(agent=a, model=m, calls=n) for (a,m),n in models.most_common()]
+    report['model_usage'] = model_usage(all_streams, args.min_calls)
     error_keys = ['invalid_json_rows','non_object_rows','invalid_usage_records','invalid_child_json',
                   'files_failed','truncated_source_files','files_changed_in_place','files_size_filtered','files_sample_filtered']
     incomplete = sum(v for a in AGENTS for k,v in corpus.audit[a].items() if k in error_keys)
