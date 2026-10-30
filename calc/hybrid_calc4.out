@@ -1,0 +1,236 @@
+== 0. Inputs
+  heavy developer: 40 sessions/day of 20k->200k (63 turns each), 21 days/month; fleets sized for the working-hour peak x2.0, idle off-hours -> effective utilization 11.5%
+  Mac premium = device price - $2,499 (MBP 14 M5 Pro base); residual 75% after 1 y, 35% after 4 y; servers 65% / 20%; remote egress $5.0/TB
+  server units: capex, opex per year = energy + colocation + support; $/GPU-h at 100% use, and per GPU-h of demand
+    HGX B300 node (8 GPU), DC                $ 660,000  opex $10,750 + 33,060 + 26,400 = $70,210/y  $3.36 / $25.08 per GPU-h  1350 TFLOP/s (book price)
+    8x RTX PRO 6000 Server, DC               $ 239,000  opex $4,448 + 13,680 + 9,560 = $27,688/y  $1.25 / $9.36 per GPU-h  302 TFLOP/s (Server Edition ~$23k each, host with 1 TB RAM)
+    4x RTX PRO 6000 server, office           $ 103,000  opex $2,733 + 0 + 2,060 = $4,793/y  $0.87 / $6.30 per GPU-h  302 TFLOP/s (GPUs + host with 512 GB RAM)
+    1x RTX PRO 6000 workstation, office      $  30,000  opex $769 + 0 + 600 = $1,369/y  $1.01 / $7.31 per GPU-h  302 TFLOP/s (GPU + host with 128 GB RAM, 8 TB NVMe)
+    1x RTX 5090 box, office (prefill only)   $  11,500  opex $683 + 0 + 230 = $913/y  $0.43 / $3.19 per GPU-h  126 TFLOP/s (4-bit weights; one session's KV at a time; GeForce licence: not for datacenters)
+
+== 1. Own all-server vs hybrid, step by step: 5000 heavy developers, all their agent work on the open model, B300 nodes, 4 years
+  Qwen3.8-27B:
+    own realistic: GPU-s per session = prefill 11.0 + decode 24.8 + KV residency 21.3 = 57.1; GPUs at peak = 5000 x 5/h x 57.1 / 3600 x 2.0 = 794 -> 100 nodes; capex $66,000,000, opex $7,020,970/y, residual $13,200,000 -> $337/dev-month
+    own ideal    : GPU-s per session = prefill 11.0 + decode 24.8 + KV residency 18.2 = 54.0; GPUs at peak = 5000 x 5/h x 54.0 / 3600 x 2.0 = 750 -> 94 nodes; capex $62,040,000, opex $6,599,712/y, residual $12,408,000 -> $317/dev-month
+    hybrid: server GPU-s per session = 13.1 (prefill of every new and generated token); GPUs at peak 182 -> 23 nodes -> $78; KV store $12; egress $40 (remote only); Mac premium $4,200 x 65% / 48 = $57 -> $146 office / $186 remote per dev-month
+    API: 27B API median $372, 27B API Alibaba $632, 27B API DeepInfra $285 per dev-month
+  Flash-Next:
+    own realistic: GPU-s per session = prefill 1.5 + decode 6.5 + KV residency 4.1 = 12.2; GPUs at peak = 5000 x 5/h x 12.2 / 3600 x 2.0 = 169 -> 22 nodes; capex $14,520,000, opex $1,544,613/y, residual $2,904,000 -> $74/dev-month
+    own ideal    : GPU-s per session = prefill 1.5 + decode 6.5 + KV residency 2.9 = 10.9; GPUs at peak = 5000 x 5/h x 10.9 / 3600 x 2.0 = 152 -> 20 nodes; capex $13,200,000, opex $1,404,194/y, residual $2,640,000 -> $67/dev-month
+    hybrid: server GPU-s per session = 1.8 (prefill of every new and generated token); GPUs at peak 26 -> 4 nodes -> $13; KV store $5; egress $13 (remote only); Mac premium $4,200 x 65% / 48 = $57 -> $75 office / $88 remote per dev-month
+    API: Flash API (Alibaba) $134 per dev-month
+
+== 2. Local share s of the agent work, device that fits it, payback (5000 developers, B300 server)
+   device fits when its 1G capacity >= 1.25 x daily local sessions; savings = reference - hybrid running cost
+   (server fleet + KV store, + egress for remote staff); payback = premium (or the whole price) / savings
+  Qwen3.8-27B s=20%: 168 local sessions/month -> M5 Pro 64 GB (MBP 14) (K4, 26/8h at 1G), premium $1,200; running cost $29 office / $37 remote (5x b300)
+     vs 27B API median                 $    74/mo | office: saves $45/mo, premium back in 26 mo, whole device in 81 mo, 4-y net $1,404 | remote: saves $37/mo, premium back in 32 mo, whole device in 99 mo, 4-y net $1,008
+     vs 27B API Alibaba                $   126/mo | office: saves $98/mo, premium back in 12 mo, whole device in 38 mo, 4-y net $3,904 | remote: saves $89/mo, premium back in 13 mo, whole device in 41 mo, 4-y net $3,508
+     vs 27B API DeepInfra              $    57/mo | office: saves $28/mo, premium back in 43 mo, whole device in 131 mo, 4-y net $571 | remote: saves $20/mo, premium back in 60 mo, whole device in 186 mo, 4-y net $175
+     vs own all-server (21x b300)      $    71/mo | office: saves $42/mo, premium back in 29 mo, whole device in 88 mo, 4-y net $1,234 | remote: saves $34/mo, premium back in 36 mo, whole device in 110 mo, 4-y net $838
+  Qwen3.8-27B s=50%: 420 local sessions/month -> M5 Pro 64 GB (MBP 14) (K4, 26/8h at 1G), premium $1,200; running cost $52 office / $73 remote (12x b300)
+     vs 27B API median                 $   186/mo | office: saves $133/mo, premium back in 9 mo, whole device in 28 mo, 4-y net $5,622 | remote: saves $113/mo, premium back in 11 mo, whole device in 33 mo, 4-y net $4,632
+     vs 27B API Alibaba                $   316/mo | office: saves $264/mo, premium back in 5 mo, whole device in 14 mo, 4-y net $11,873 | remote: saves $243/mo, premium back in 5 mo, whole device in 15 mo, 4-y net $10,883
+     vs 27B API DeepInfra              $   142/mo | office: saves $90/mo, premium back in 13 mo, whole device in 41 mo, 4-y net $3,539 | remote: saves $69/mo, premium back in 17 mo, whole device in 53 mo, 4-y net $2,549
+     vs own all-server (51x b300)      $   172/mo | office: saves $119/mo, premium back in 10 mo, whole device in 31 mo, 4-y net $4,954 | remote: saves $99/mo, premium back in 12 mo, whole device in 37 mo, 4-y net $3,965
+  Qwen3.8-27B s=100%: 840 local sessions/month -> M5 Max 64 GB (MBP 14) (K5, 54/8h at 1G), premium $2,600; running cost $89 office / $129 remote (23x b300)
+     vs 27B API median                 $   372/mo | office: saves $282/mo, premium back in 9 mo, whole device in 18 mo, 4-y net $11,850 | remote: saves $242/mo, premium back in 11 mo, whole device in 21 mo, 4-y net $9,947
+     vs 27B API Alibaba                $   632/mo | office: saves $543/mo, premium back in 5 mo, whole device in 9 mo, 4-y net $24,351 | remote: saves $503/mo, premium back in 5 mo, whole device in 10 mo, 4-y net $22,448
+     vs 27B API DeepInfra              $   285/mo | office: saves $195/mo, premium back in 13 mo, whole device in 26 mo, 4-y net $7,684 | remote: saves $156/mo, premium back in 17 mo, whole device in 33 mo, 4-y net $5,781
+     vs own all-server (101x b300)     $   340/mo | office: saves $251/mo, premium back in 10 mo, whole device in 20 mo, 4-y net $10,353 | remote: saves $211/mo, premium back in 12 mo, whole device in 24 mo, 4-y net $8,450
+  Flash-Next s=20%: 168 local sessions/month -> M5 Max 128 GB (MBP 14) (K7, 65/8h at 1G), premium $4,200; running cost $8 office / $11 remote (1x b300)
+     vs Flash API (Alibaba)            $    27/mo | office: saves $19/mo, premium back in 224 mo, whole device in 358 mo, 4-y net $-1,831 | remote: saves $16/mo, premium back in 261 mo, whole device in 417 mo, 4-y net $-1,958
+     vs own all-server (5x b300)       $    17/mo | office: saves $9/mo, premium back in 479 mo, whole device in 765 mo, 4-y net $-2,310 | remote: saves $6/mo, premium back in 688 mo, whole device in 1098 mo, 4-y net $-2,437
+  Flash-Next s=50%: 420 local sessions/month -> M5 Max 128 GB (MBP 14) (K7, 65/8h at 1G), premium $4,200; running cost $11 office / $18 remote (2x b300)
+     vs Flash API (Alibaba)            $    67/mo | office: saves $56/mo, premium back in 76 mo, whole device in 120 mo, 4-y net $-61 | remote: saves $49/mo, premium back in 86 mo, whole device in 137 mo, 4-y net $-379
+     vs own all-server (11x b300)      $    37/mo | office: saves $26/mo, premium back in 164 mo, whole device in 262 mo, 4-y net $-1,501 | remote: saves $19/mo, premium back in 221 mo, whole device in 353 mo, 4-y net $-1,819
+  Flash-Next s=100%: 840 local sessions/month -> M5 Max 128 GB (MBP 14) (K7, 65/8h at 1G), premium $4,200; running cost $18 office / $31 remote (4x b300)
+     vs Flash API (Alibaba)            $   134/mo | office: saves $116/mo, premium back in 36 mo, whole device in 58 mo, 4-y net $2,835 | remote: saves $103/mo, premium back in 41 mo, whole device in 65 mo, 4-y net $2,198
+     vs own all-server (22x b300)      $    74/mo | office: saves $56/mo, premium back in 75 mo, whole device in 120 mo, 4-y net $-45 | remote: saves $43/mo, premium back in 98 mo, whole device in 157 mo, 4-y net $-682
+
+== 3. For scale: moving work from frontier APIs to the open model (any deployment), per heavy developer-month
+  Opus 5.5   $2.88/session; s=20%: frontier part $1,935, s=50%: frontier part $1,210; 20%->50% saves $614/month at 27B API prices
+  Sonnet 5.5 $2.12/session; s=20%: frontier part $1,425, s=50%: frontier part $891; 20%->50% saves $423/month at 27B API prices
+
+== 4. Scale curve, Qwen3.8-27B, 4 years, $ per developer-month net of residual
+   office units up to 50 people (RTX 5090 only in the office: GeForce licence), datacenter units from 50
+   N      s   | API median | own all-server: fleet, capex, $/mo | hybrid: server fleet, capex, $/mo office/remote | up-front hybrid (server + store + Macs)
+      5  20% | $     74   | 1x rtx1  $     30,000 $   123 | 1x r5090 $     11,500 $    82/90 | $20,373 (m5pro, premium $1,200)
+     10  20% | $     74   | 2x rtx1  $     60,000 $   123 | 1x r5090 $     11,500 $    55/63 | $29,245 (m5pro, premium $1,200)
+     50  20% | $     74   | 10x rtx1  $    300,000 $   123 | 4x r5090 $     46,000 $    50/58 | $134,727 (m5pro, premium $1,200)
+    500  20% | $     74   | 3x b300  $  1,980,000 $   101 | 1x b300  $    660,000 $    62/70 | $1,547,268 (m5pro, premium $1,200)
+   5000  20% | $     74   | 21x b300  $ 13,860,000 $    71 | 5x b300  $  3,300,000 $    45/53 | $12,172,683 (m5pro, premium $1,200)
+      5  50% | $    186   | 3x rtx1  $     90,000 $   368 | 1x r5090 $     11,500 $    82/102 | $20,373 (m5pro, premium $1,200)
+     10  50% | $    186   | 5x rtx1  $    150,000 $   307 | 2x r5090 $     23,000 $    82/102 | $40,745 (m5pro, premium $1,200)
+     50  50% | $    186   | 6x rtx4  $    618,000 $   254 | 10x r5090 $    115,000 $    82/102 | $203,727 (m5pro, premium $1,200)
+    500  50% | $    186   | 6x b300  $  3,960,000 $   202 | 2x b300  $  1,320,000 $    96/116 | $2,207,268 (m5pro, premium $1,200)
+   5000  50% | $    186   | 51x b300  $ 33,660,000 $   172 | 12x b300  $  7,920,000 $    69/89 | $16,792,683 (m5pro, premium $1,200)
+      5 100% | $    372   | 5x rtx1  $    150,000 $   614 | 2x r5090 $     23,000 $   154/194 | $38,873 (m5max64, premium $2,600)
+     10 100% | $    372   | 10x rtx1  $    300,000 $   614 | 4x r5090 $     46,000 $   154/194 | $77,745 (m5max64, premium $2,600)
+     50 100% | $    372   | 12x rtx4  $  1,236,000 $   508 | 20x r5090 $    230,000 $   154/194 | $388,727 (m5max64, premium $2,600)
+    500 100% | $    372   | 11x b300  $  7,260,000 $   371 | 3x b300  $  1,980,000 $   148/188 | $3,567,268 (m5max64, premium $2,600)
+   5000 100% | $    372   | 101x b300  $ 66,660,000 $   340 | 23x b300  $ 15,180,000 $   125/164 | $31,052,683 (m5max64, premium $2,600)
+
+== 4b. What one server unit carries (27B, 20k->200k sessions): heavy developers at s = 100% / 50% / 20%, and agents
+  HGX B300 node (8 GPU), DC                $ 660,000: hybrid prefill    13 GPU-s/session ->  219.6 /  439.2 / 1097.9 developers, ~1537 agents at K7 | all-server    58 GPU-s/session ->  49.9 /  99.9 / 249.7; KV of 533 sessions at 110k fits in VRAM
+  8x RTX PRO 6000 Server, DC               $ 239,000: hybrid prefill    59 GPU-s/session ->   49.2 /   98.3 /  245.8 developers, ~344 agents at K7 | all-server   348 GPU-s/session ->   8.3 /  16.6 /  41.4; KV of 133 sessions at 110k fits in VRAM
+  4x RTX PRO 6000 server, office           $ 103,000: hybrid prefill    59 GPU-s/session ->   24.6 /   49.2 /  122.9 developers, ~172 agents at K7 | all-server   327 GPU-s/session ->   4.4 /   8.8 /  22.0; KV of 67 sessions at 110k fits in VRAM
+  1x RTX PRO 6000 workstation, office      $  30,000: hybrid prefill    59 GPU-s/session ->    6.1 /   12.3 /   30.7 developers, ~43 agents at K7 | all-server   327 GPU-s/session ->   1.1 /   2.2 /   5.5; KV of 17 sessions at 110k fits in VRAM
+  1x RTX 5090 box, office (prefill only)   $  11,500: hybrid prefill   141 GPU-s/session ->    2.6 /    5.1 /   12.8 developers, ~18 agents at K7
+
+== 4c. Startup of 10 heavy developers, 27B, 4 years: each server choice side by side ($ per developer-month, office)
+  s= 20% (M5 Pro 64 GB, premium $1,200 = $16/mo): API median $74; hybrid 1x r5090 ($11,500) $55; hybrid 1x rtx1 ($30,000) $90; hybrid 1x rtx4 ($103,000) $240; own 2x rtx1 ($60,000) $123; own 1x rtx4 ($103,000) $212
+  s= 50% (M5 Pro 64 GB, premium $1,200 = $16/mo): API median $186; hybrid 2x r5090 ($23,000) $82; hybrid 1x rtx1 ($30,000) $90; hybrid 1x rtx4 ($103,000) $240; own 5x rtx1 ($150,000) $307; own 2x rtx4 ($206,000) $423
+  s=100% (M5 Max 64 GB, premium $2,600 = $35/mo): API median $372; hybrid 4x r5090 ($46,000) $154; hybrid 2x rtx1 ($60,000) $170; hybrid 1x rtx4 ($103,000) $259; own 10x rtx1 ($300,000) $614; own 3x rtx4 ($309,000) $635
+
+== 5. If API prices for this model class fall: 4-year average API price vs the hybrid (N=5000, office/remote)
+  decline  0%/year (x1.00): s=20%: API $74 vs hybrid $45/53; s=50%: API $186 vs hybrid $69/89; s=100%: API $372 vs hybrid $125/164
+  decline 30%/year (x0.63): s=20%: API $47 vs hybrid $45/53; s=50%: API $118 vs hybrid $69/89; s=100%: API $235 vs hybrid $125/164
+  decline 50%/year (x0.47): s=20%: API $35 vs hybrid $45/53; s=50%: API $87 vs hybrid $69/89; s=100%: API $174 vs hybrid $125/164
+
+== 6. Long contexts, per 1000 agent turns (B300 fleet priced per GPU-s of demand; egress $5/TB; device at 8 h/day over 4 years)
+  Qwen3.8-27B:
+    20k->200k   63 turns/session | API 27B $7.1, Haiku 5.5 $6.5, Sonnet 5.5 $33.9, Opus 5.5 $46.0 | own $6.0-6.4 (GPU-s/turn x1.0 vs 200k) | hybrid server GPU-s/turn x1.0
+              hybrid: M5 Max 128 GB K8 4,111 turns/8h: server $1.5 + egress $0.7 + device $0.7 = $2.9 | M5 Ultra 256 GB K8 5,902 turns/8h: server $1.5 + egress $0.7 + device $1.2 = $3.3
+    20k->500k  167 turns/session | API 27B $14.6, Haiku 5.5 $15.2, Sonnet 5.5 $64.0, Opus 5.5 $76.0 | own $12.6-13.5 (GPU-s/turn x2.1 vs 200k) | hybrid server GPU-s/turn x1.6
+              hybrid: M5 Max 128 GB K5 1,961 turns/8h: server $2.3 + egress $0.8 + device $1.4 = $4.5 | M5 Ultra 256 GB K8 3,193 turns/8h: server $2.3 + egress $0.7 + device $2.2 = $5.2
+    20k->1M    338 turns/session | API 27B $26.9, Haiku 5.5 $27.9, Sonnet 5.5 $113.0, Opus 5.5 $125.1 | own $23.1-24.7 (GPU-s/turn x3.9 vs 200k) | hybrid server GPU-s/turn x2.6
+              hybrid: M5 Max 128 GB K2 955 turns/8h: server $3.8 + egress $0.8 + device $2.8 = $7.4 | M5 Ultra 256 GB K6 1,799 turns/8h: server $3.8 + egress $0.7 + device $3.9 = $8.4
+    200k->1M   282 turns/session | API 27B $31.9, Haiku 5.5 $33.2, Sonnet 5.5 $133.0, Opus 5.5 $144.8 | own $27.0-28.8 (GPU-s/turn x4.5 vs 200k) | hybrid server GPU-s/turn x2.9
+              hybrid: M5 Max 128 GB K2 852 turns/8h: server $4.2 + egress $0.8 + device $3.2 = $8.2 | M5 Ultra 256 GB K6 1,558 turns/8h: server $4.2 + egress $0.8 + device $4.5 = $9.5
+  Flash-Next:
+    20k->200k   63 turns/session | API Flash API (Alibaba) $2.6 | own $1.2-1.4 (GPU-s/turn x1.0 vs 200k) | hybrid server GPU-s/turn x1.0
+              hybrid: M5 Max 128 GB K8 4,210 turns/8h: server $0.2 + egress $0.3 + device $0.6 = $1.1 | M5 Ultra 256 GB K8 6,116 turns/8h: server $0.2 + egress $0.1 + device $1.1 = $1.5
+    20k->500k  167 turns/session | API Flash API (Alibaba) $5.0 | own $1.7-2.1 (GPU-s/turn x1.5 vs 200k) | hybrid server GPU-s/turn x1.0
+              hybrid: M5 Max 128 GB K7 4,016 turns/8h: server $0.2 + egress $0.3 + device $0.7 = $1.2 | M5 Ultra 256 GB K8 6,008 turns/8h: server $0.2 + egress $0.2 + device $1.2 = $1.6
+    20k->1M    338 turns/session | API Flash API (Alibaba) $8.9 | own $2.5-3.1 (GPU-s/turn x2.3 vs 200k) | hybrid server GPU-s/turn x1.1
+              hybrid: M5 Max 128 GB K3 3,225 turns/8h: server $0.2 + egress $0.4 + device $0.8 = $1.4 | M5 Ultra 256 GB K8 6,051 turns/8h: server $0.2 + egress $0.3 + device $1.2 = $1.7
+    200k->1M   282 turns/session | API Flash API (Alibaba) $10.5 | own $2.8-3.5 (GPU-s/turn x2.6 vs 200k) | hybrid server GPU-s/turn x1.1
+              hybrid: M5 Max 128 GB K3 3,256 turns/8h: server $0.2 + egress $0.4 + device $0.8 = $1.4 | M5 Ultra 256 GB K8 6,112 turns/8h: server $0.2 + egress $0.3 + device $1.1 = $1.7
+
+== 7. Precision of what crosses the network (27B): sessions per 8 h and GB downloaded per session
+  turn distribution: synthetic
+    M3 Max 128 GB          K4 state fp32, KV 8-bit   100M  25.5 ( 9.0 GB)  200M  28.4 (12.0 GB)  1000M  32.1 (14.6 GB)
+    M3 Max 128 GB          K4 state bf16, KV 8-bit   100M  27.4 ( 8.2 GB)  200M  30.2 ( 9.3 GB)  1000M  33.2 ( 9.9 GB)
+    M3 Max 128 GB          K4 state fp8,  KV 8-bit   100M  28.8 ( 7.0 GB)  200M  31.3 ( 7.4 GB)  1000M  33.7 ( 7.5 GB)
+    M3 Max 128 GB          K4 state bf16, K8 V4      100M  28.1 ( 7.1 GB)  200M  30.6 ( 8.0 GB)  1000M  33.3 ( 8.7 GB)
+    M3 Max 128 GB          K4 state fp8,  K8 V4      100M  29.6 ( 5.8 GB)  200M  31.8 ( 6.1 GB)  1000M  33.8 ( 6.2 GB)
+    M5 Max 128 GB (MBP 14) K7 state fp32, KV 8-bit   100M  31.9 ( 2.3 GB)  200M  46.8 ( 6.6 GB)  1000M  60.0 (12.9 GB)
+    M5 Max 128 GB (MBP 14) K7 state bf16, KV 8-bit   100M  38.8 ( 3.4 GB)  200M  57.0 ( 6.8 GB)  1000M  62.2 ( 9.4 GB)
+    M5 Max 128 GB (MBP 14) K7 state fp8,  KV 8-bit   100M  46.8 ( 4.2 GB)  200M  58.8 ( 6.4 GB)  1000M  63.4 ( 7.3 GB)
+    M5 Max 128 GB (MBP 14) K7 state bf16, K8 V4      100M  43.8 ( 3.6 GB)  200M  57.9 ( 6.0 GB)  1000M  62.4 ( 8.2 GB)
+    M5 Max 128 GB (MBP 14) K7 state fp8,  K8 V4      100M  53.6 ( 4.0 GB)  200M  59.8 ( 5.4 GB)  1000M  63.6 ( 6.1 GB)
+  turn distribution: agents1 sample
+    M3 Max 128 GB          K4 state fp32, KV 8-bit   100M  17.0 ( 6.1 GB)  200M  17.9 ( 8.3 GB)  1000M  19.0 (12.4 GB)
+    M3 Max 128 GB          K4 state bf16, KV 8-bit   100M  17.8 ( 5.7 GB)  200M  18.6 ( 6.8 GB)  1000M  19.5 ( 8.5 GB)
+    M3 Max 128 GB          K4 state fp8,  KV 8-bit   100M  18.4 ( 5.0 GB)  200M  19.1 ( 5.6 GB)  1000M  19.8 ( 6.2 GB)
+    M3 Max 128 GB          K4 state bf16, K8 V4      100M  18.0 ( 4.9 GB)  200M  18.7 ( 6.0 GB)  1000M  19.5 ( 7.6 GB)
+    M3 Max 128 GB          K4 state fp8,  K8 V4      100M  18.6 ( 4.2 GB)  200M  19.2 ( 4.8 GB)  1000M  19.8 ( 5.3 GB)
+    M5 Max 128 GB (MBP 14) K7 state fp32, KV 8-bit   100M  26.4 ( 1.9 GB)  200M  31.4 ( 4.5 GB)  1000M  35.2 ( 9.3 GB)
+    M5 Max 128 GB (MBP 14) K7 state bf16, KV 8-bit   100M  29.6 ( 2.6 GB)  200M  34.7 ( 4.7 GB)  1000M  36.2 ( 7.1 GB)
+    M5 Max 128 GB (MBP 14) K7 state fp8,  KV 8-bit   100M  32.7 ( 3.2 GB)  200M  35.6 ( 4.5 GB)  1000M  36.8 ( 5.6 GB)
+    M5 Max 128 GB (MBP 14) K7 state bf16, K8 V4      100M  31.1 ( 2.6 GB)  200M  35.0 ( 4.0 GB)  1000M  36.3 ( 6.3 GB)
+    M5 Max 128 GB (MBP 14) K7 state fp8,  K8 V4      100M  34.2 ( 2.9 GB)  200M  35.9 ( 3.7 GB)  1000M  36.9 ( 4.7 GB)
+
+== 8. Bounds: link rate in tokens/s (what offload delivers) vs local prefill
+  Qwen3.8-27B: KV 32.0 KiB/token -> link delivers 100M 343 tok/s, 200M 687 tok/s, 1G 3,433 tok/s, 10G 34,332 tok/s; plus 78 MB of state per offload
+  Flash-Next: KV 12.4 KiB/token -> link delivers 100M 888 tok/s, 200M 1,776 tok/s, 1G 8,878 tok/s, 10G 88,778 tok/s; plus 59 MB of state per offload
+  27B prefill FLOP per token: 20k 62 G, 110k 97 G, 200k 133 G, 500k 251 G, 1000k 447 G
+  prefill at depth: our working rate | bound at 100% of peak FP16 (tok/s) -- vs what the link delivers above
+   Qwen3.8-27B at 110k / 1000k:
+    M5 Pro 64 GB (MBP 14)      working    102 /     22 | bound    334 /     73  (working = 31% of peak; peak 32 TFLOP/s)
+    Ryzen AI Max+ 395 128 GB   working     89 /     19 | bound    607 /    132  (working = 15% of peak; peak 59 TFLOP/s)
+    DGX Spark 128 GB           working    273 /     59 | bound   1285 /    280  (working = 21% of peak; peak 125 TFLOP/s)
+    M3 Max 128 GB              working     68 /     15 | bound    144 /     31  (working = 47% of peak; peak 14 TFLOP/s)
+    M5 Max 64 GB (MBP 14)      working    205 /     44 | bound    720 /    157  (working = 28% of peak; peak 70 TFLOP/s)
+    M5 Max 128 GB (MBP 14)     working    205 /     44 | bound    720 /    157  (working = 28% of peak; peak 70 TFLOP/s)
+    M5 Ultra 96 GB (Studio)    working    327 /     71 | bound   1152 /    250  (working = 28% of peak; peak 112 TFLOP/s)
+    M5 Ultra 256 GB (Studio)   working    409 /     89 | bound   1440 /    313  (working = 28% of peak; peak 140 TFLOP/s)
+   Flash-Next at 110k / 1000k:
+    M5 Pro 64 GB (MBP 14)      working    750 /    225 | bound   2401 /   1997  (working = 31% of peak; peak 32 TFLOP/s)
+    Ryzen AI Max+ 395 128 GB   working    650 /    195 | bound   4358 /   3626  (working = 15% of peak; peak 59 TFLOP/s)
+    DGX Spark 128 GB           working   2000 /    600 | bound   9233 /   7682  (working = 22% of peak; peak 125 TFLOP/s)
+    M3 Max 128 GB              working    500 /    150 | bound   1034 /    860  (working = 48% of peak; peak 14 TFLOP/s)
+    M5 Max 64 GB (MBP 14)      working   1500 /    450 | bound   5171 /   4302  (working = 29% of peak; peak 70 TFLOP/s)
+    M5 Max 128 GB (MBP 14)     working   1500 /    450 | bound   5171 /   4302  (working = 29% of peak; peak 70 TFLOP/s)
+    M5 Ultra 96 GB (Studio)    working   2400 /    720 | bound   8273 /   6883  (working = 29% of peak; peak 112 TFLOP/s)
+    M5 Ultra 256 GB (Studio)   working   3000 /    900 | bound  10341 /   8604  (working = 29% of peak; peak 140 TFLOP/s)
+  27B decode bound at 100% bandwidth, one stream (3.5-bit weights, 8-bit KV), tok/s at 20k / 200k / 1M:
+    M5 Pro 64 GB (MBP 14)      24 / 17 / 7
+    Ryzen AI Max+ 395 128 GB   20 / 14 / 6
+    DGX Spark 128 GB           22 / 15 / 6
+    M3 Max 128 GB              32 / 22 / 9
+    M5 Max 64 GB (MBP 14)      49 / 33 / 14
+    M5 Max 128 GB (MBP 14)     49 / 33 / 14
+    M5 Ultra 96 GB (Studio)    97 / 66 / 27
+    M5 Ultra 256 GB (Studio)   97 / 66 / 27
+
+== 9. One-shot ingest: a 1-3 h meeting transcript (70k tokens), a 3k-token summary, then 10 questions (100 in / 700 out)
+  M5 32 GB (MacBook Air)   local TTFT 15.8m, 100M 3.6m, 200M 1.8m, 1000M 25s; then the summary takes 7.2m at 7 tok/s
+  M3 Max 128 GB            local TTFT 11.9m, 100M 3.6m, 200M 1.8m, 1000M 25s; then the summary takes 2.7m at 18 tok/s
+  M5 Pro 64 GB (MBP 14)    local TTFT 7.9m, 100M 3.6m, 200M 1.8m, 1000M 25s; then the summary takes 3.6m at 14 tok/s
+  M5 Max 128 GB (MBP 14)   local TTFT 4.0m, 100M 3.6m, 200M 1.8m, 1000M 25s; then the summary takes 1.8m at 28 tok/s
+  API 27B API median   $0.076 per transcript with 10 questions
+  API Haiku 5.5        $0.023 per transcript with 10 questions
+  API Sonnet 5.5       $0.454 per transcript with 10 questions
+  own all-server 13.1 GPU-s = $0.091; hybrid server 3.5 GPU-s = $0.024; Mac memory for one transcript 14 GB + OS
+
+== 10. Devices at v4 prices, Qwen3.8-27B, 4 years at 8 h/day: $ per session = device price / (1008 days x sessions/day) + server + egress (remote)
+   references per session: API median $0.442, own all-server $0.398 (B300 fleet, demand-priced)
+   device                     price      K   local  200M   1G  | $/session at 1G | break-even device price vs API / vs own
+   M5 Pro 64 GB (MBP 14)      $ 3,699-3,699   2    9.7  16.0  17.6 | $0.349-0.349     | $  5,357 / $  4,570
+   M5 Pro 64 GB (MBP 14)      $ 3,699-3,699   4   11.5  24.2  26.0 | $0.281-0.281     | $  7,923 / $  6,760
+   Ryzen AI Max+ 395 128 GB   $ 3,449-3,800   1    6.1   8.2   9.1 | $0.517-0.555     | $  2,766 / $  2,359
+   Ryzen AI Max+ 395 128 GB   $ 3,449-3,800   4    9.8  20.7  22.0 | $0.296-0.312     | $  6,686 / $  5,704
+   DGX Spark 128 GB           $ 6,950-6,950   1    8.4   8.9   9.6 | $0.852-0.852     | $  2,968 / $  2,537
+   DGX Spark 128 GB           $ 6,950-6,950   4   16.9  22.2  23.4 | $0.432-0.432     | $  7,190 / $  6,146
+   M5 Max 64 GB (MBP 14)      $ 5,099-5,099   4   23.0  43.2  48.5 | $0.243-0.243     | $ 14,839 / $ 12,674
+   M5 Max 64 GB (MBP 14)      $ 5,099-5,099   5   23.8  48.7  54.0 | $0.232-0.232     | $ 16,544 / $ 14,129
+   M5 Max 128 GB (MBP 14)     $ 6,699-6,699   4   23.0  43.2  48.5 | $0.276-0.276     | $ 14,839 / $ 12,674
+   M5 Max 128 GB (MBP 14)     $ 6,699-6,699   7   24.9  57.0  62.2 | $0.245-0.245     | $ 19,044 / $ 16,264
+   M5 Ultra 96 GB (Studio)    $ 5,499-5,499   4   35.8  59.6  68.1 | $0.216-0.216     | $ 21,034 / $ 17,992
+   M5 Ultra 96 GB (Studio)    $ 5,499-5,499   9   39.9  72.4  97.7 | $0.192-0.192     | $ 30,191 / $ 25,824
+   M5 Ultra 256 GB (Studio)   $10,799-10,799  4   40.4  55.8  68.2 | $0.291-0.291     | $ 21,202 / $ 18,155
+   M5 Ultra 256 GB (Studio)   $10,799-10,799 12   47.0  69.1 107.1 | $0.234-0.234     | $ 33,311 / $ 28,524
+
+== 11. Break-even local share: the smallest s at which the device premium returns within 4 years (office, N=5000)
+  M5 Pro 64 GB (MBP 14)      premium $1,200, capacity 26/8h (s up to 52%): vs API median: s >= 11%; vs API DeepInfra: s >= 15%; vs own: s >= 11%
+  M5 Max 64 GB (MBP 14)      premium $2,600, capacity 54/8h (s up to 100%): vs API median: s >= 17%; vs API DeepInfra: s >= 24%; vs own: s >= 17%
+  M5 Max 128 GB (MBP 14)     premium $4,200, capacity 62/8h (s up to 100%): vs API median: s >= 24%; vs API DeepInfra: s >= 34%; vs own: s >= 26%
+  M5 Ultra 96 GB (Studio)    whole price $5,499, capacity 98/8h (s up to 100%): vs API median: s >= 30%; vs API DeepInfra: s >= 43%; vs own: s >= 33%
+
+== 13. Server utilization and renting (N=5000, s=100%, M5 Max 128 clients, $ per developer-month, office/remote)
+   regions: the same fleet serves 1, 2 or 3 regions' working days in turn; rent: on-demand GPU-hours x1.5 autoscaling overhead
+  Qwen3.8-27B (API: 27B median $372):
+    1 region: own $337 (100 nodes) vs hybrid $146/186 (23)
+    2 regions: own $169 (50 nodes) vs hybrid $109/149 (12)
+    3 regions: own $115 (34 nodes) vs hybrid $96/135 (8)
+    rent neocloud B300 $9.50: own $190 vs hybrid $113/152
+    rent AWS B300 $17.80: own $356 vs hybrid $151/190
+  Flash-Next (API: Alibaba $134):
+    1 region: own $74 (22 nodes) vs hybrid $75/88 (4)
+    2 regions: own $37 (11 nodes) vs hybrid $68/82 (2)
+    3 regions: own $27 (8 nodes) vs hybrid $68/82 (2)
+    rent neocloud B300 $9.50: own $40 vs hybrid $68/81
+    rent AWS B300 $17.80: own $76 vs hybrid $73/86
+
+== 12. Tier 2: GLM-5.3-Flash (320B / 18B active, 1M native) on an M5 Ultra 256 GB, B300 server
+  memory, 85% of RAM for the GPU: Q4_K weights 181 GB -> 32 GB free -> sessions at 200k: 23, at 1M: 5
+  memory, Ivan's 236 GB (20 GB left to macOS): Q4_K weights 181 GB -> 51 GB free -> sessions at 200k: 37, at 1M: 8
+  KV 5984 B/token (8-bit) vs Qwen3.8-27B 32,768: x5.5 smaller; fixed KDA state per offload 76 MB bf16 (153 MB fp32)
+  prefill FLOP/token: 20k 47 G, 200k 52 G, 1000k 70 G
+  decode per stream / aggregate tok/s, bandwidth efficiency 0.23: K1@20k 29/29  K1@1000k 28/28  K4@20k 12/46  K4@1000k 11/44  K8@20k 7/54  K8@1000k 6/50
+  decode per stream / aggregate tok/s, bandwidth efficiency 0.4: K1@20k 50/50  K1@1000k 49/49  K4@20k 20/81  K4@1000k 19/77  K8@20k 12/93  K8@1000k 11/88
+  local prefill (MoE factor 0.5): 20k 556 tok/s, 200k 512 tok/s, 1000k 380 tok/s
+  local prefill (MoE factor 1.0): 20k 1112 tok/s, 200k 1025 tok/s, 1000k 759 tok/s
+  ingest 1M tokens: local 36.8m (MoE factor 0.5) / 18.4m (1.0); server 43s on one B300; download 6.1 GB: 100M 9.0m, 200M 4.5m, 1G 54s
+  smallest turn delta worth offloading (offload faster than local prefill at 200k, MoE factor 0.5):
+    state bf16: 100M 5,198 tokens, 200M 2,301 tokens, 1G 580 tokens
+    state fp8: 100M 2,744 tokens, 200M 1,272 tokens, 1G 397 tokens
+  sessions per 8 h, K=4 agents (local / 100M / 200M / 1G):
+    20k->200k: 43.4 / 54.9 / 61.0 / 64.6; at 1G offloaded 96% of new tokens, download 4.3 GB per session
+    200k->1M: 8.9 / 12.0 / 13.3 / 14.2; at 1G offloaded 97% of new tokens, download 20.5 GB per session
+  $ per session (B300 fleet priced per GPU-s of demand; Ultra 256 $9,499-10,799 over 4 years at 8 h/day; egress $5/TB):
+    20k->200k: API $0.25; own all-server $0.26 (prefill 6 + decode 24 + residency 7 GPU-s); hybrid server $0.07 + Ultra $0.15-0.17 = $0.21-0.23 (24 h use: $0.12-0.12)
+    200k->1M: API $5.31; own all-server $1.98 (prefill 30 + decode 112 + residency 142 GPU-s); hybrid server $0.35 + Ultra $0.66-0.76 = $1.02-1.11 (24 h use: $0.57-0.60)
+

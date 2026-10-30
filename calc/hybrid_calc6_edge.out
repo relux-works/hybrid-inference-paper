@@ -1,0 +1,80 @@
+== A. FLOP per transferred byte, I(L) = F(L) / kv, MFLOP per byte
+  Qwen3.8-27B        kv  32768 B/token, state  78.4 MB: 8k  1.74  32k  2.03  110k  2.97  1000k 13.65
+  Flash-Next         kv  12672 B/token, state  58.8 MB: 8k  1.04  32k  1.05  110k  1.07  1000k  1.28
+  GLM-5.3-Flash      kv   5984 B/token, state  76.3 MB: 8k  7.84  32k  7.98  110k  8.27  1000k 11.62
+  Qwen3.5-35B-A3B    kv  10240 B/token, state  31.5 MB: 8k  0.71  32k  1.10  110k  2.35  1000k 16.59
+  client ratio R = peak FLOP/s / link bytes/s, MFLOP per byte:
+    M5 Air (est.)  100M   1.42  200M   0.71  1000M   0.14  10000M   0.01
+    M5 Pro         100M   2.89  200M   1.44  1000M   0.29  10000M   0.03
+    M5 Max         100M   6.22  200M   3.11  1000M   0.62  10000M   0.06
+    M5 Ultra 80C   100M  12.44  200M   6.22  1000M   1.24  10000M   0.12
+  speed-up of offload over a perfect local engine at 110k / 1M (I / R):
+    Qwen3.8-27B        M5 Air (est.)  100M    2.1/   9.6  200M    4.2/  19.2  1000M   20.9/  96.0  10000M  208.7/ 959.6
+    Qwen3.8-27B        M5 Pro         100M    1.0/   4.7  200M    2.1/   9.4  1000M   10.3/  47.2  10000M  102.7/ 472.4
+    Qwen3.8-27B        M5 Max         100M    0.5/   2.2  200M    1.0/   4.4  1000M    4.8/  21.9  10000M   47.7/ 219.3
+    Qwen3.8-27B        M5 Ultra 80C   100M    0.2/   1.1  200M    0.5/   2.2  1000M    2.4/  11.0  10000M   23.8/ 109.7
+    Flash-Next         M5 Air (est.)  100M    0.8/   0.9  200M    1.5/   1.8  1000M    7.5/   9.0  10000M   75.1/  90.3
+    Flash-Next         M5 Pro         100M    0.4/   0.4  200M    0.7/   0.9  1000M    3.7/   4.4  10000M   37.0/  44.4
+    Flash-Next         M5 Max         100M    0.2/   0.2  200M    0.3/   0.4  1000M    1.7/   2.1  10000M   17.2/  20.6
+    Flash-Next         M5 Ultra 80C   100M    0.1/   0.1  200M    0.2/   0.2  1000M    0.9/   1.0  10000M    8.6/  10.3
+    GLM-5.3-Flash      M5 Air (est.)  100M    5.8/   8.2  200M   11.6/  16.3  1000M   58.2/  81.7  10000M  581.7/ 817.3
+    GLM-5.3-Flash      M5 Pro         100M    2.9/   4.0  200M    5.7/   8.0  1000M   28.6/  40.2  10000M  286.4/ 402.3
+    GLM-5.3-Flash      M5 Max         100M    1.3/   1.9  200M    2.7/   3.7  1000M   13.3/  18.7  10000M  133.0/ 186.8
+    GLM-5.3-Flash      M5 Ultra 80C   100M    0.7/   0.9  200M    1.3/   1.9  1000M    6.6/   9.3  10000M   66.5/  93.4
+    Qwen3.5-35B-A3B    M5 Air (est.)  100M    1.6/  11.7  200M    3.3/  23.3  1000M   16.5/ 116.6  10000M  164.9/1166.2
+    Qwen3.5-35B-A3B    M5 Pro         100M    0.8/   5.7  200M    1.6/  11.5  1000M    8.1/  57.4  10000M   81.2/ 574.1
+    Qwen3.5-35B-A3B    M5 Max         100M    0.4/   2.7  200M    0.8/   5.3  1000M    3.8/  26.7  10000M   37.7/ 266.6
+    Qwen3.5-35B-A3B    M5 Ultra 80C   100M    0.2/   1.3  200M    0.4/   2.7  1000M    1.9/  13.3  10000M   18.9/ 133.3
+
+== B. Light laptops: one-shot ingest, then a 3k-token answer (local prefill burst / sustained x0.6) vs hybrid
+   calibration: M6 measurement implies 16.2 TFLOP/s effective; earlier v4 assumed 4.8 for the M5 Air
+  MacBook Air 13 M5 32 GB, $1,699 (153 GB/s, 12.4 TFLOP/s effective burst): burst rate scaled from the M6 measurement; sustained x0.6-0.8
+    Qwen3.8-27B (AA 52.0)      context room ~304k; decode <= 8 tok/s; 3k answer 6.2 min
+        8k: local   0.6 /   1.0 min | hybrid 100M  0.5 min, 200M    16 s, 1G    3 s | download 0.34 GB
+       32k: local   2.6 /   4.3 min | hybrid 100M  1.7 min, 200M    52 s, 1G   11 s | download 1.13 GB
+       70k: local   6.4 /  10.6 min | hybrid 100M  3.6 min, 200M   109 s, 1G   25 s | download 2.37 GB
+    Qwen3.6-35B-A3B (AA 32.1)  context room ~547k; decode <= 55 tok/s; 3k answer 0.9 min
+        8k: local   0.1 /   0.1 min | hybrid 100M  0.2 min, 200M     5 s, 1G    1 s | download 0.11 GB
+       32k: local   0.4 /   0.6 min | hybrid 100M  0.5 min, 200M    16 s, 1G    3 s | download 0.36 GB
+       70k: local   1.1 /   1.8 min | hybrid 100M  1.1 min, 200M    34 s, 1G    7 s | download 0.75 GB
+  MacBook Air 13 M5 24 GB, $1,499 (153 GB/s, 12.4 TFLOP/s effective burst): as above; 27B leaves room for ~30K context (measured on a 24 GB M6)
+    Qwen3.8-27B (AA 52.0)      context room ~60k; decode <= 8 tok/s; 3k answer 6.2 min
+        8k: local   0.6 /   1.0 min | hybrid 100M  0.5 min, 200M    16 s, 1G    3 s | download 0.34 GB
+       32k: local   2.6 /   4.3 min | hybrid 100M  1.7 min, 200M    52 s, 1G   11 s | download 1.13 GB
+       70k: does not fit
+    Qwen3.6-35B-A3B (AA 32.1)  does not fit (20.4 GB weights in 24 GB)
+  MacBook Air M1 16 GB (2020) (68 GB/s, 1.3 TFLOP/s effective burst): 2.6 TFLOP/s FP32 [fact], FP16 at about the same rate, 50% efficiency assumed
+    Qwen3.8-27B (AA 52.0)      does not fit (16.1 GB weights in 16 GB)
+    Qwen3.6-35B-A3B (AA 32.1)  does not fit (20.4 GB weights in 16 GB)
+
+== C. Phones: time to first token, local (burst / sustained x0.5) vs hybrid, and what crosses the network
+   KV sent at 8 bits, recurrent state at bf16; links: 110 Mbps global mobile median, 190 US median, 300 good 5G
+  Gemma 4 E2B   KV   3.0 KiB/token + fixed  3.0 MiB; FLOP/byte at 8k 1.50 M; local 13.2 TFLOP/s effective
+      4K: local   1.4 /   2.8 s | hybrid 110M   1.3 s, 190M   0.8 s, 300M   0.5 s |     15 MiB per prompt
+     16K: local   5.7 /  11.4 s | hybrid 110M   4.4 s, 190M   2.6 s, 300M   1.7 s |     51 MiB per prompt
+     32K: local  11.4 /  22.8 s | hybrid 110M   8.5 s, 190M   5.0 s, 300M   3.2 s |     99 MiB per prompt
+  Gemma 4 E4B   KV   8.0 KiB/token + fixed 10.0 MiB; FLOP/byte at 8k 1.10 M; local 10.7 TFLOP/s effective
+      4K: local   3.4 /   6.9 s | hybrid 110M   3.6 s, 190M   2.1 s, 300M   1.4 s |     42 MiB per prompt
+     16K: local  13.8 /  27.6 s | hybrid 110M  11.8 s, 190M   6.9 s, 300M   4.4 s |    138 MiB per prompt
+     32K: local  27.6 /  55.1 s | hybrid 110M  22.8 s, 190M  13.3 s, 300M   8.5 s |    266 MiB per prompt
+  Qwen3.5-2B    KV   6.0 KiB/token + fixed  9.0 MiB; FLOP/byte at 8k 0.72 M; local 11.0 TFLOP/s effective
+      4K: local   1.5 /   3.1 s | hybrid 110M   2.8 s, 190M   1.7 s, 300M   1.1 s |     33 MiB per prompt
+     16K: local   6.6 /  13.1 s | hybrid 110M   9.0 s, 190M   5.2 s, 300M   3.3 s |    105 MiB per prompt
+     32K: local  14.3 /  28.6 s | hybrid 110M  17.2 s, 190M  10.0 s, 300M   6.4 s |    201 MiB per prompt
+  Qwen3.5-9B    KV  16.0 KiB/token + fixed 24.0 MiB; FLOP/byte at 8k 1.24 M; local 11.0 TFLOP/s effective
+      4K: local   7.3 /  14.6 s | hybrid 110M   7.5 s, 190M   4.4 s, 300M   2.8 s |     88 MiB per prompt
+     16K: local  30.3 /  60.7 s | hybrid 110M  24.0 s, 190M  14.0 s, 300M   9.0 s |    280 MiB per prompt
+     32K: local  63.9 / 127.8 s | hybrid 110M  46.0 s, 190M  26.8 s, 300M  17.2 s |    536 MiB per prompt
+  Llama 3.2 3B  KV  56.0 KiB/token + fixed  0.0 MiB; FLOP/byte at 8k 0.16 M; local 11.0 TFLOP/s effective
+      4K: local   2.6 /   5.3 s | hybrid 110M  19.0 s, 190M  11.0 s, 300M   7.0 s |    224 MiB per prompt
+     16K: local  13.7 /  27.5 s | hybrid 110M  76.1 s, 190M  44.1 s, 300M  28.0 s |    896 MiB per prompt
+     32K: local  35.9 /  71.7 s | hybrid 110M 152.2 s, 190M  88.2 s, 300M  56.0 s |   1792 MiB per prompt
+
+  Fleet of 100M devices, 10 offloaded prompts of 8k tokens per device-day:
+    Gemma 4 E2B   server  0.27 GPU-s/day -> $ 0.19/device-year; downlink   8.3 GB/month -> egress $0.10-0.50/device-year; B300 GPUs at 2x peak:    631 (   79 nodes)
+    Gemma 4 E4B   server  0.53 GPU-s/day -> $ 0.36/device-year; downlink  22.8 GB/month -> egress $0.27-1.37/device-year; B300 GPUs at 2x peak:  1,235 (  154 nodes)
+    Qwen3.5-2B    server  0.25 GPU-s/day -> $ 0.17/device-year; downlink  17.6 GB/month -> egress $0.21-1.05/device-year; B300 GPUs at 2x peak:    576 (   72 nodes)
+    Qwen3.5-9B    server  1.17 GPU-s/day -> $ 0.80/device-year; downlink  46.9 GB/month -> egress $0.56-2.81/device-year; B300 GPUs at 2x peak:  2,719 (  340 nodes)
+    Llama 3.2 3B  server  0.46 GPU-s/day -> $ 0.31/device-year; downlink 137.6 GB/month -> egress $1.65-8.26/device-year; B300 GPUs at 2x peak:  1,067 (  133 nodes)
+   B300 GPU-hour priced at $6.71 (100%-use price $3.36 at 50% utilisation)
+

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hybrid Prototype Spec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* engineering spec: one reading column, quiet slate neutrals, cobalt for the two nodes that change */
+  --bg: #f6f7f9;
+  --ink: #1a1e26;
+  --muted: #5a6271;
+  --rule: #dce0e7;
+  --accent: #2c56c9;
+  --code: #eceff4;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #13161c; --ink: #e5e8ee; --muted: #9aa3b3; --rule: #2b313c; --accent: #86a6ff; --code: #1c2129;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #13161c; --ink: #e5e8ee; --muted: #9aa3b3; --rule: #2b313c; --accent: #86a6ff; --code: #1c2129;
+  color-scheme: dark;
+}
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15.5px/1.62 var(--font-body); }
+main { max-width: 840px; margin: 0 auto; padding-block: 36px 72px; padding-inline: 20px; }
+h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .4em; text-wrap: balance; }
+h2 { font-size: 1.22rem; line-height: 1.3; margin: 2.2em 0 .6em; padding-top: .7em; border-top: 1px solid var(--rule); text-wrap: balance; }
+h3 { font-size: 1.04rem; margin: 1.6em 0 .4em; }
+h1 + p { color: var(--muted); }
+p, li, figcaption { max-width: 70ch; }
+ul, ol { padding-left: 1.3em; }
+li { margin: .25em 0; }
+a { color: var(--accent); }
+code { font-family: var(--font-mono); font-size: .86em; background: var(--code); padding: .08em .35em; border-radius: 4px; }
+pre { background: var(--code); padding: 14px 16px; border-radius: 8px; line-height: 1.5; margin: 1em 0; }
+pre code { background: none; padding: 0; font-size: .84rem; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; margin: 1em 0; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; color: var(--muted); font-size: .84rem; }
+td:first-child { white-space: nowrap; }
+figure { margin: 1.6em 0; }
+.diagram { display: block; width: 100%; min-width: 560px; height: auto; color: var(--ink); }
+.diagram .hl { stroke: var(--accent); stroke-width: 1.8; }
+.diagram .sub { fill: var(--muted); font-size: 11px; }
+.diagram .cap { fill: var(--muted); font-size: 12px; }
+figcaption { color: var(--muted); font-size: .9rem; margin-top: .6em; }
+</style>
+</head>
+<body>
+<main>
+<h1 id="hybrid-prefill-decode-prototype-technical-specification">Hybrid prefill/decode prototype: technical specification</h1>
+<p>Version 0.3, 2026-10-30. Owner: Ivan Aparin (Relux Works). Author: agents1 hybrid lane. Status: approved for development by Ivan on 2026-10-30. Section 12 gives the work split and section 14 the decisions, including what is still open. v0.3 adds several clients with several sessions each (section 4a). Builds on <code>prototype-plan.md</code> and the keeper's estimate of 2026-10-30.</p>
+<h2 id="1-purpose-and-scope">1. Purpose and scope</h2>
+<p>The prototype proves one claim on existing engines and hardware: a GPU server can prefill an agent session and hand the model state to a Mac, which continues decoding with the same result as if it had prefilled locally. The hand-off over 100 Mbit/s – 1 Gbit/s must beat the Mac's own prefill on large turns.</p>
+<p>In scope:</p>
+<ul><li>one model, Qwen3.8-27B (hybrid: 16 full-attention layers and 48 Gated DeltaNet layers);
+</li><li>one GGUF file used on both sides;
+</li><li>one prefill node serving several clients (Macs), each with several concurrent sessions (section 4a).
+</li></ul>
+<p>Out of scope:</p>
+<ul><li>production hardening, billing and quotas;
+</li><li>isolation stronger than per-client tokens and per-client session namespaces;
+</li><li>other models (Flash-Next, MoE models) and other engines (MLX, Strata, vLLM);
+</li><li>quality evaluation beyond the equivalence checks below.
+</li></ul>
+<h2 id="2-terms">2. Terms</h2>
+<div class="scroll"><table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td>Session</td><td>One agent conversation: a token sequence that only grows.</td></tr><tr><td>Position n</td><td>Number of tokens in the session so far.</td></tr><tr><td>Turn delta</td><td>Tokens appended by one turn: tool output, user text.</td></tr><tr><td>State delta (n0 → n1)</td><td>Attention KV for positions [n0, n1) of the 16 attention layers, plus the full recurrent state (SSM and conv) of the 48 DeltaNet layers at position n1.</td></tr><tr><td>Snapshot</td><td>The full session state at position n, as <code>llama-server</code> slot save writes it.</td></tr><tr><td>Offload</td><td>The client sends a turn delta to the server and receives the state delta back.</td></tr><tr><td>Shadow prefill</td><td>The server prefills tokens that the client processed locally (prompt or generated) so that its copy stays identical. Not latency-critical.</td></tr><tr><td>System of record</td><td>The server's copy of every session: tokens plus state, stored in tiers.</td></tr></tbody></table></div>
+<h2 id="3-model-and-formats">3. Model and formats</h2>
+<ul><li>Weights: one Qwen3.8-27B GGUF, for example Q4_K_M, with the same file and SHA-256 on server and client. The model hash goes into every state delta.
+</li><li>KV cache: <code>q8_0</code> for K and V on both sides, with flash attention on. <code>q4_0</code> V is an M4 experiment.
+</li><li>Recurrent state: dtype as the engine stores it (f32 today). Transfer in f32 for M0–M2; bf16 and fp8 are M4 experiments.
+</li><li>Expected sizes, to be verified in M1:
+<ul><li>KV: 16 layers × 2 × 4 heads × 256 dims × 1 byte ≈ 32 KiB per token;
+</li><li>state: about 157 MB in f32, 78 MB in bf16.
+</li></ul>
+</li><li>llama.cpp: pin one upstream commit at the start of the project. The fork keeps patches small enough to offer upstream.
+</li></ul>
+<h2 id="4-architecture">4. Architecture</h2>
+<figure>
+<div class="scroll">
+<svg viewBox="0 0 780 300" role="img" aria-label="The client proxy on the Mac sends token ids to the prefill node and receives KV for the new positions plus the recurrent state, then imports them into the decode node." class="diagram">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.2">
+    <rect x="8" y="24" width="376" height="268" rx="10" stroke-dasharray="4 4" opacity="0.6"/>
+    <rect x="476" y="24" width="296" height="268" rx="10" stroke-dasharray="4 4" opacity="0.6"/>
+    <rect x="24" y="110" width="140" height="48" rx="6"/>
+    <rect x="210" y="110" width="158" height="48" rx="6" class="hl"/>
+    <rect x="210" y="222" width="158" height="48" rx="6"/>
+    <rect x="500" y="110" width="250" height="48" rx="6" class="hl"/>
+    <rect x="500" y="222" width="250" height="48" rx="6"/>
+    <line x1="164" y1="134" x2="207" y2="134" marker-end="url(#arrow)"/>
+    <line x1="368" y1="124" x2="497" y2="124" marker-end="url(#arrow)"/>
+    <line x1="500" y1="146" x2="371" y2="146" marker-end="url(#arrow)"/>
+    <line x1="289" y1="161" x2="289" y2="219" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <line x1="625" y1="161" x2="625" y2="219" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <g fill="currentColor" font-size="12.5" text-anchor="middle">
+    <text x="196" y="18" class="cap">Mac, unified memory</text>
+    <text x="624" y="18" class="cap">GPU server</text>
+    <text x="94" y="139">Agent harness</text>
+    <text x="289" y="131">Client proxy</text>
+    <text x="289" y="148" class="sub">offload policy, journal</text>
+    <text x="289" y="243">Decode node</text>
+    <text x="289" y="260" class="sub">llama-server fork, Metal</text>
+    <text x="625" y="131">Prefill node</text>
+    <text x="625" y="148" class="sub">llama-server fork, CUDA</text>
+    <text x="625" y="243">Session store</text>
+    <text x="625" y="260" class="sub">VRAM, RAM, NVMe</text>
+    <text x="186" y="126" class="sub">API</text>
+    <text x="433" y="115" class="sub">token ids</text>
+    <text x="433" y="166" class="sub">KV n0..n1 + state</text>
+    <text x="433" y="196" class="sub">WAN, 0.1–1 Gbit/s</text>
+  </g>
+  <g fill="currentColor" font-size="11.5" text-anchor="start">
+    <text x="297" y="194" class="sub">import, decode</text>
+    <text x="633" y="194" class="sub">park, load</text>
+  </g>
+</svg>
+</div>
+<figcaption>Per turn, the proxy either prefills locally or sends the new token ids to the server and imports the returned state delta. Generated tokens go back to the server as shadow prefill, so the server keeps every session.</figcaption>
+</figure>
+
+<p>Components:</p>
+<ol><li><strong>Prefill node.</strong> A fork of <code>llama-server</code> on a CUDA host. It keeps every session as the system of record, prefills on request and returns state deltas. It shadow-prefills tokens the client produced. It stores sessions in tiers with a time-to-live.
+</li><li><strong>Decode node.</strong> A fork of <code>llama-server</code> on the Mac. It imports a state delta into a slot as an append, decodes, and exposes the slot's token count and prefix hash.
+</li><li><strong>Client proxy.</strong> A small HTTP service on the Mac, OpenAI- and Anthropic-compatible toward the agent harness. Per turn it chooses local prefill or offload, moves data between the nodes, and keeps both copies in sync. Language: Python or Go; no GPU code.
+</li></ol>
+<h2 id="4a-clients-and-sessions">4a. Clients and sessions</h2>
+<p>Added in v0.3 at Ivan's request: the prototype serves several clients, each with several sessions.</p>
+<ul><li><strong>Client.</strong> Each client proxy has an id and a bearer token. The prefill node keeps one session namespace per client: a client can list, extend, snapshot or delete only its own sessions. A request for another client's session returns <code>404</code>, never <code>403</code>, so session ids do not leak.
+</li><li><strong>Session.</strong> One agent conversation, addressed on the prefill node as <code>(client_id, session_id)</code>.
+</li><li><strong>Which session a request belongs to.</strong> Agent harnesses send stateless chat requests that carry the whole message history, so the proxy recovers the session itself:
+<ol><li><strong>Explicit id.</strong> If the request carries the header <code>X-Hybrid-Session: &lt;id&gt;</code>, the proxy uses it. A harness plugin or hook can set it. Pi extensions and Claude Code hooks are candidates for later; the prototype must not depend on them.
+</li><li><strong>Prefix match.</strong> Without a header, the proxy tokenizes the request and computes rolling hashes of the token ids at block boundaries (every 256 tokens). It picks the session with the longest matching prefix. A request that extends that session's n continues it.
+</li><li><strong>Fork.</strong> A request that matches a session only up to position p &lt; n starts a new session. Its state up to p is not available: recurrent state rolls back only a few tokens (<code>n_rs_seq</code>). It therefore gets a full prefill, or a server-side restore from the nearest stored snapshot at or before p. A copy-on-write shared prefix is an M4 experiment.
+</li><li><strong>New session.</strong> Everything else is a new session.
+</li></ol>
+</li><li><strong>Decode slots.</strong> The decode node runs K slots (<code>llama-server --parallel K</code>).
+<ul><li>The proxy maps active sessions to slots.
+</li><li>When more sessions are active than slots, it parks the least recently used session with slot save to local SSD, and restores it on its next request.
+</li><li>A parked session still continues by delta from the server: the proxy restores it, then imports the delta.
+</li></ul>
+</li><li><strong>Prefill node scheduling.</strong>
+<ul><li>Each session has its own lock and FIFO, because extends are append-only.
+</li><li>Across sessions, latency-critical extends go first, round-robin by client so one client cannot starve others.
+</li><li>Shadow extends are batched across sessions when the engine allows it.
+</li></ul>
+</li><li><strong>Proxy state.</strong> The session table (client, session id, n, block hashes, slot, last use) is kept in a small local database, so it survives a proxy restart. After a restart, the proxy checks n and the prefix hash against the server before it reuses a session.
+</li></ul>
+<h2 id="5-prefill-node-interface">5. Prefill node interface</h2>
+<p>HTTP/2 with JSON control messages. State deltas are binary streams. Authentication is a bearer token or mTLS between proxy and server.</p>
+<div class="scroll"><table><thead><tr><th>Method and path</th><th>Request</th><th>Response</th></tr></thead><tbody><tr><td><code>POST /v1/sessions</code></td><td><code>{model_sha256}</code> (client from the token)</td><td><code>{session_id}</code></td></tr><tr><td><code>GET /v1/sessions</code></td><td>—</td><td>the calling client's sessions: <code>[{session_id, n, tier, last_used}]</code></td></tr><tr><td><code>GET /v1/sessions/{id}</code></td><td>—</td><td><code>{n, prefix_hash, tier, last_used, model_sha256}</code></td></tr><tr><td><code>POST /v1/sessions/{id}/extend</code></td><td>`{n0, prefix_hash_n0, tokens: [...], return_delta: true\</td><td>false}`</td><td>if <code>return_delta</code>: <code>200</code> with a state-delta stream (n0 → n0+len); else <code>202</code> (shadow, queued)</td></tr><tr><td><code>GET /v1/sessions/{id}/snapshot</code></td><td>—</td><td>the full state at the current n (slot-file format)</td></tr><tr><td><code>DELETE /v1/sessions/{id}</code></td><td>—</td><td><code>204</code></td></tr><tr><td><code>GET /v1/health</code>, <code>GET /metrics</code></td><td>—</td><td>liveness; Prometheus metrics</td></tr></tbody></table></div>
+<p>Rules:</p>
+<ul><li><code>extend</code> is strictly append-only. The server checks that <code>n0</code> equals its n and that <code>prefix_hash_n0</code> matches. Otherwise it returns <code>409</code> with its own <code>{n, prefix_hash}</code>, and the client resyncs (section 7.5).
+</li><li>Shadow extends of the same session are applied in order and may be batched: one prefill for several queued deltas.
+</li><li>A latency-critical <code>extend</code> first drains the session's shadow queue, then prefills the new tokens.
+</li></ul>
+<h2 id="6-state-delta-format">6. State-delta format</h2>
+<div class="scroll"><pre><code>header (JSON, length-prefixed):
+  magic &quot;HYBD&quot;, version 1, model_sha256, session_id, n0, n1, prefix_hash_n1,
+  kv_type &quot;q8_0&quot;, state_dtype &quot;f32&quot;, layers: [{index, kind: attention|recurrent, bytes}]
+body: one section per layer, in layer order
+  attention layer: K[n0:n1] and V[n0:n1] for every KV head, in the engine&#x27;s cache layout
+  recurrent layer: SSM state and conv state at n1
+trailer: xxh3-128 of every section, then sha256 of the whole body</code></pre></div>
+<ul><li>Sections stream as soon as each layer is ready, so the client can import while the rest arrives.
+</li><li>The prefix hash is a rolling hash over token ids [0, n1). Both sides compute it the same way.
+</li><li>Version 1 has no compression. M4 adds an optional zstd per section and lower-precision dtypes.
+</li></ul>
+<h2 id="7-flows">7. Flows</h2>
+<h3 id="7-1-new-session">7.1 New session</h3>
+<p>The proxy creates the session on the server and in a client slot. The first prompt is usually large (system prompt, files), so it normally goes through offload (7.3).</p>
+<h3 id="7-2-turn-with-local-prefill">7.2 Turn with local prefill</h3>
+<ol><li>The proxy tokenizes the delta and runs <code>/completion</code> on the decode node (the prefix is cached).
+</li><li>It queues the delta and the generated tokens as a shadow <code>extend</code> with <code>return_delta: false</code>.
+</li></ol>
+<h3 id="7-3-turn-with-offload">7.3 Turn with offload</h3>
+<ol><li><code>extend(n0, prefix_hash, tokens, return_delta: true)</code>.
+</li><li>The proxy streams the delta into the decode node with <code>import_delta</code>, then checks the new <code>{n, prefix_hash}</code> against the trailer.
+</li><li>It runs <code>/completion</code> with an empty prompt suffix (decode only).
+</li><li>It queues the generated tokens as a shadow <code>extend</code>.
+</li></ol>
+<h3 id="7-4-server-unreachable">7.4 Server unreachable</h3>
+<p>The proxy prefills locally and keeps a local journal of unsynced token ids. On reconnect it replays the journal as shadow extends. The agent never blocks on the server.</p>
+<h3 id="7-5-divergence">7.5 Divergence</h3>
+<p>On <code>409</code>, or when the client's prefix hash does not match after an import:</p>
+<ol><li>The proxy fetches the server snapshot and restores the slot from it.
+</li><li>Or, if the server's copy is behind, the proxy replays its journal.
+</li><li>It logs the event with both hashes. Divergence is a bug to investigate, not a normal path.
+</li></ol>
+<h2 id="8-decode-node-changes-llama-cpp-fork">8. Decode node changes (llama.cpp fork)</h2>
+<ol><li>Engine API, at the pinned commit. Names below are proposals. Read the upstream memory code first; the keeper's estimate includes a 1–2 day spike for this.
+<ul><li><code>llama_state_seq_get_data_range(ctx, seq, p0, p1, flags)</code>: export attention KV for [p0, p1) plus the full recurrent state at p1.
+</li><li><code>llama_state_seq_set_data_append(ctx, seq, data, size)</code>: import it as an append. The import fails cleanly if p0 is not the current sequence length, the model hash differs, or a layer layout differs.
+</li><li>Build on the existing <code>llama_state_seq_*</code> and the <code>_ext</code> partial-state flags used for context checkpoints. Verify how <code>llama_memory_hybrid</code> and the recurrent cache serialize state.
+</li></ul>
+</li><li><code>llama-server</code> endpoints:
+<ul><li><code>POST /slots/{id}?action=import_delta</code>, with the body streamed;
+</li><li><code>GET /slots/{id}/info</code>, returning <code>{n, prefix_hash}</code>.
+</li><li>Slot save and restore stay as they are and serve M1 and resync.
+</li></ul>
+</li><li>The prefill node uses the same fork. It also needs <code>export_delta</code> (the server side of 8.1), session tiers (section 10) and batching of shadow extends.
+</li></ol>
+<h2 id="9-offload-policy-client-proxy">9. Offload policy (client proxy)</h2>
+<p>Offload a turn when it is predicted to be faster than local prefill:</p>
+<div class="scroll"><pre><code>t_local   = d / P_local(L)
+t_offload = T_fix + d * F(L) / P_server + (d * B_kv + S) / (C * eta)
+offload if t_offload &lt; t_local * (1 - margin)</code></pre></div>
+<p>Inputs:</p>
+<ul><li><code>P_local(L)</code>: local prefill rate at depth L, measured by <code>hybrid_bench.py</code> on that Mac and stored as a table.
+</li><li><code>C</code>: link bandwidth, an exponentially weighted moving average over recent transfers.
+</li><li><code>T_fix</code>, <code>P_server</code>: measured per server.
+</li><li><code>B_kv</code> and <code>S</code>: from section 3.
+</li><li>Margin 10%, with hysteresis so that one session does not flip between paths on every turn.
+</li></ul>
+<p>The policy is a pure function with unit tests and a trace-replay mode. The replay feeds agent session statistics (<code>agent_session_stats.py</code> output) and a link model, and prints the predicted time.</p>
+<h2 id="10-session-store-prefill-node">10. Session store (prefill node)</h2>
+<div class="scroll"><table><thead><tr><th>Tier</th><th>Holds</th><th>Eviction</th></tr></thead><tbody><tr><td>VRAM</td><td>Sessions in prefill now</td><td>after the request</td></tr><tr><td>Host RAM</td><td>Recently active sessions, LRU</td><td>by size</td></tr><tr><td>NVMe</td><td>Parked sessions</td><td>after a TTL (24 h by default; 72 h as an option)</td></tr></tbody></table></div>
+<ul><li>A 110k-token session takes about 3.6 GB at 8-bit KV plus its state. M4 must show 100+ parked sessions on one host.
+</li><li>Data at rest is encrypted, with keys held by the node.
+</li><li>Logs carry no token content.
+</li></ul>
+<h2 id="11-tests-and-acceptance">11. Tests and acceptance</h2>
+<p>The equivalence tests compare the decode after a state-delta import with the decode after local prefill of the same tokens:</p>
+<ul><li>same backend: greedy tokens identical for 64 tokens on at least 95% of test prompts;
+</li><li>CUDA server with Metal client: identical for 64 tokens on at least 90%, mean KL at most 0.01 nats/token over the first 64 positions. Batching and backends are not bit-deterministic, so these thresholds are to be calibrated in M0;
+</li><li>prompts: 50 synthetic and real agent prompts at 4k, 32k and 128k depth.
+</li></ul>
+<p>Negative tests:</p>
+<ul><li>each must fail with a clear error and leave the slot unchanged:
+<ul><li>a delta with the wrong model hash;
+</li><li>a gap or overlap in positions (n0 ≠ n);
+</li><li>a truncated stream or a corrupt section checksum;
+</li><li>a mismatched prefix hash;
+</li><li>a layer-layout mismatch;
+</li></ul>
+</li><li>a server restart in the middle of a shadow queue: no lost or duplicated tokens after recovery;
+</li><li>client isolation: client A's token cannot read, extend, snapshot or delete client B's session (<code>404</code>), and B's session is unchanged afterwards;
+</li><li>session mapping: two harness conversations that share a long system prompt but then diverge end up in two sessions and never import each other's deltas;
+</li><li>the server unreachable: the agent continues, and the journal replays on reconnect.
+</li></ul>
+<p>Concurrency test: 3 clients × 4 sessions each, interleaved turns with offloads and local prefills. Every session must pass the equivalence check at the end, and no session may receive another session's delta.</p>
+<p>Performance tests:</p>
+<ul><li>bytes per token and fixed bytes per delta, against section 3;
+</li><li>seconds per hand-off at 100 Mbit/s, 200 Mbit/s and 1 Gbit/s, with RTT 20–80 ms (<code>tc netem</code> on Linux, <code>dnctl</code>/<code>pfctl</code> on macOS);
+</li><li>end-to-end replay of real agent traces: wall-clock time against local-only, within ±25% of the cost model in <code>calc/</code>.
+</li></ul>
+<h2 id="12-milestones-and-deliverables">12. Milestones and deliverables</h2>
+<div class="scroll"><table><thead><tr><th></th><th>Deliverable</th><th>Acceptance</th></tr></thead><tbody><tr><td>M0</td><td>Harness: two <code>llama-server</code> processes on one Mac, slot save → restore, equivalence script</td><td>Section 11 equivalence, same backend</td></tr><tr><td>M1</td><td>CUDA prefill node and Mac client; whole-session transfer over HTTP</td><td>Cross-backend equivalence; measured sizes and times</td></tr><tr><td>M2</td><td>Engine patch: range export and append import; <code>extend</code> with deltas</td><td>Equivalence after delta import; all negative tests pass</td></tr><tr><td>M3</td><td>Client proxy with the policy, journal and resync; netem; trace replay</td><td>Real traces within ±25% of the model; agent harness works through the proxy</td></tr><tr><td>M4</td><td>Store tiers, shadow batching, bf16/fp8 state and 4-bit V experiments, drift over N turns</td><td>100+ parked sessions; bytes saved and drift reported</td></tr></tbody></table></div>
+<p>The keeper's estimate:</p>
+<ul><li>M0: 0.5–2 days;
+</li><li>M1: 1–5 days after a GPU host exists;
+</li><li>M2: 4 days – 3 weeks;
+</li><li>M3: 3 days – 2 weeks, in parallel with M2;
+</li><li>M4: 4 days – 2 weeks;
+</li><li>in total: 2.5–3 weeks to M3 at best, 5–7 weeks to M4 realistically.
+</li></ul>
+<h3 id="work-split-and-review-ivan-s-decision-2026-10-30">Work split and review (Ivan's decision, 2026-10-30)</h3>
+<p>Two producers work in parallel, one per side:</p>
+<div class="scroll"><table><thead><tr><th></th><th>Producer A: server side</th><th>Producer B: client side</th></tr></thead><tbody><tr><td>Owns</td><td>Prefill node (section 5): <code>llama-server</code> fork for CUDA, range export, <code>extend</code>, shadow prefill, session store (section 10)</td><td>Decode node (section 8): import of a state delta as an append, slot token count and prefix hash; client proxy (section 9) with the offload policy and journal</td></tr><tr><td>Shared contract</td><td>Section 6 (state-delta format) and section 5 (HTTP API): neither side changes them alone</td><td>Same</td></tr><tr><td>First integration</td><td>A golden delta that A exports and B imports</td><td>Same</td></tr></tbody></table></div>
+<ul><li><strong>Golden delta.</strong> The golden delta is produced on the same CPU backend with a small model of the same layer layout (Gated DeltaNet plus full attention). The first goal for both producers is the M0 equivalence on Linux CPU with that small model. Qwen3.8-27B on CUDA and Metal comes after.
+</li><li><strong>No review gate on the first build.</strong> Each producer aims for the first working end-to-end path as fast as possible.
+</li><li><strong>Cross-review.</strong> When both halves run end to end, A reviews B's change and B reviews A's.
+</li><li><strong>Lane review.</strong> The lane orchestrator then reviews both and reports to Ivan whether the result is fit for a prototype.
+</li><li><strong>GPU host.</strong> It is rented once there is something ready to run on it. Until then all work and tests are CPU-only.
+</li></ul>
+<h2 id="13-repository-layout">13. Repository layout</h2>
+<div class="scroll"><pre><code>engine/      llama.cpp fork as a submodule, plus a patch series
+server/      prefill node: store, extend queue, metrics
+proxy/       client proxy, offload policy, journal
+bench/       hybrid_bench.py, agent_session_stats.py, trace replay
+tests/       equivalence, negative, performance
+docs/        this spec, results</code></pre></div>
+<p>CI builds the engine for Linux CUDA and macOS Metal and runs the unit and negative tests. GPU and Mac runs are manual, with the results committed under <code>docs/results/</code>.</p>
+<h2 id="14-owner-decisions">14. Owner decisions</h2>
+<p>Decided by Ivan on 2026-10-30:</p>
+<ul><li>Development starts now, with the work split and review order in section 12.
+</li><li>The prototype serves several clients with several sessions each (section 4a).
+</li><li>Producers run on Codex gpt-6.1-sol, high effort. When the plan quota is out, they continue on Codex API credits. Claude producers need Ivan's separate approval.
+</li><li>The GPU host is rented when there is something ready to run on it. Ivan pays for it. The candidate is an RTX PRO 6000 or L40S at about $2.5/GPU-hour.
+</li></ul>
+<p>Still open:</p>
+<ul><li>The new repository under relux-works: name and visibility.
+</li><li>Resources on agents1 for a CPU build of llama.cpp and a small test model. This is the keeper's call.
+</li><li>The Mac: an ivmbp worker that can build llama.cpp with Metal, and time windows for long runs.
+</li></ul>
+<h2 id="15-open-questions">15. Open questions</h2>
+<p>Read in upstream llama.cpp at <code>e0f142d5</code> (2026-10-29), without a build or a run:</p>
+<ul><li><strong>Model support.</strong> Qwen3.8-27B is <code>Qwen3_5ForConditionalGeneration</code>, llama.cpp arch <code>qwen35</code>. Flash-Next is <code>Qwen4ExpForConditionalGeneration</code>, arch <code>qwen4exp</code>. Both are on the hybrid-memory list. Gated DeltaNet kernels exist for CPU, CUDA (with an MMA variant) and Metal (<code>GGML_OP_GATED_DELTA_NET</code>). Correctness at the pinned commit still needs a run.
+</li><li><strong>Range export is not upstream.</strong> <code>llama_kv_cache::state_write</code> writes every cell of the sequence. <code>LLAMA_STATE_SEQ_FLAGS_PARTIAL_ONLY</code> skips the full-attention KV and writes only partial states (SWA and recurrent). The recurrent half of a state delta can therefore be exported today.
+</li><li><strong>Append import is not upstream either.</strong> For one sequence, <code>state_read_meta</code> starts with <code>seq_rm(dest, -1, -1)</code>, so an import replaces the sequence. The M2 patch is therefore narrow:
+<ul><li>a position filter in the KV write;
+</li><li>an append path in the KV read: no <code>seq_rm</code>, and a check that n0 equals the current n;
+</li><li>the hybrid wrapper, which writes KV for [n0, n1) plus the full recurrent state.
+</li></ul>
+</li><li><strong><code>LLAMA_STATE_SEQ_FLAGS_ON_DEVICE</code></strong> keeps saved state in device buffers. It is a candidate for the prefill node's hot tier.
+</li><li><strong><code>n_rs_seq</code></strong> (experimental) keeps recurrent-state snapshots per sequence for a partial rollback. qwen35 and qwen4exp support it. It may let section 7.5 roll back a few tokens instead of doing a full resync; evaluate in M2–M3.
+</li></ul>
+<p>Still open:</p>
+<ul><li>Does Qwen3.8-27B decode correctly on Metal and CUDA at the pinned commit (M0/M1 runs)?
+</li><li>Recurrent state dtype in the engine (f32 or bf16), and whether bf16 export is lossless relative to it.
+</li><li>Thresholds for cross-backend equivalence: calibrate in M0, before M1 depends on them.
+</li></ul>
+
+</main>
+</body>
+</html>

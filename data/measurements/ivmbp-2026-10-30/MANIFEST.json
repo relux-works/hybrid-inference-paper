@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-30T05:50:25.144943+00:00",
+  "measurement": "ivmbp full04 historical agent-session usage",
+  "files": {
+    "README.md": {
+      "bytes": 1923,
+      "sha256": "62e56983df9fcb067733c26b8a0b93bfdc24132b31370ec8658618e8c48ac843"
+    },
+    "REPORT.md": {
+      "bytes": 4570,
+      "sha256": "8f7393a2ea3c63077fa3b10b2525ad2ca41742273f3771b957aab65b2a2ef4d9"
+    },
+    "agent_session_stats.py": {
+      "bytes": 31398,
+      "sha256": "6774541d434448893ad5827a95c0c13e98fe5139aa8b7647c533d34138ce7c3d"
+    },
+    "stats.json": {
+      "bytes": 22025,
+      "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+    }
+  }
+}

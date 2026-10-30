@@ -1,0 +1,188 @@
+Flash-Next: KV fp8 12.4 KiB/tok; state bf16 58.8 MB, fp32 117.7 MB; M3 Max prefill at 50/100/150/200/260k: 500/500/500/289/150
+Qwen3.8-27B: KV fp8 32.0 KiB/tok; state bf16 78.4 MB, fp32 156.9 MB; M3 Max prefill at 50/100/150/200/260k: 90/71/59/50/42
+
+== Flash-Next, M3 Max, delta 2k: prefill speedup (local time in header)
+net       50k( 4.0s)  100k( 4.0s)  150k( 4.0s)  200k( 6.9s)  260k(  13s)
+50M             0.3x          0.3x          0.3x          0.4x          0.9x
+100M            0.5x          0.5x          0.5x          0.9x          1.7x
+200M            1.0x          1.0x          1.0x          1.7x          3.2x
+300M            1.4x          1.4x          1.4x          2.4x          4.5x
+500M            2.1x          2.1x          2.1x          3.6x          6.9x
+1G              3.4x          3.4x          3.4x          5.8x         11.2x
+2.5G            5.4x          5.4x          5.4x          9.4x         18.0x
+10G             7.8x          7.8x          7.8x         13.4x         25.9x
+
+== Flash-Next, M3 Max, delta 10k: prefill speedup (local time in header)
+net       50k(  20s)  100k(  20s)  150k(  20s)  200k(  35s)  260k(  67s)
+50M             0.6x          0.6x          0.6x          1.0x          2.0x
+100M            1.2x          1.2x          1.2x          2.0x          3.9x
+200M            2.3x          2.3x          2.3x          3.9x          7.5x
+300M            3.3x          3.3x          3.3x          5.7x         10.9x
+500M            5.1x          5.1x          5.1x          8.9x         17.1x
+1G              8.9x          8.9x          8.9x         15.4x         29.6x
+2.5G           15.9x         15.9x         15.9x         27.4x         52.9x
+10G            26.1x         26.1x         26.1x         45.2x         87.2x
+
+== Flash-Next, M3 Max, delta 30k: prefill speedup (local time in header)
+net       50k(  60s)  100k(  60s)  150k(  60s)  200k( 1.7m)  260k( 3.3m)
+50M             0.8x          0.8x          0.8x          1.3x          2.5x
+100M            1.5x          1.5x          1.5x          2.6x          5.0x
+200M            2.9x          2.9x          2.9x          5.1x          9.8x
+300M            4.3x          4.3x          4.3x          7.4x         14.3x
+500M            6.8x          6.8x          6.8x         11.8x         22.7x
+1G             12.2x         12.2x         12.2x         21.2x         40.8x
+2.5G           23.4x         23.4x         23.4x         40.5x         78.1x
+10G            43.2x         43.2x         43.2x         74.6x        143.9x
+
+== Qwen3.8-27B, M3 Max, delta 2k: prefill speedup (local time in header)
+net       50k(  22s)  100k(  28s)  150k(  34s)  200k(  40s)  260k(  47s)
+50M             0.9x          1.1x          1.3x          1.5x          1.8x
+100M            1.7x          2.1x          2.6x          3.0x          3.5x
+200M            3.2x          4.1x          4.9x          5.8x          6.8x
+300M            4.7x          5.9x          7.1x          8.4x          9.9x
+500M            7.3x          9.2x         11.1x         13.1x         15.4x
+1G             12.5x         15.8x         19.1x         22.5x         26.5x
+2.5G           22.0x         27.8x         33.7x         39.5x         46.6x
+10G            35.4x         44.8x         54.3x         63.7x         75.0x
+
+== Qwen3.8-27B, M3 Max, delta 10k: prefill speedup (local time in header)
+net       50k( 1.9m)  100k( 2.3m)  150k( 2.8m)  200k( 3.3m)  260k( 3.9m)
+50M             1.5x          1.9x          2.3x          2.7x          3.2x
+100M            3.0x          3.8x          4.6x          5.4x          6.4x
+200M            5.9x          7.4x          9.0x         10.6x         12.4x
+300M            8.6x         10.9x         13.2x         15.5x         18.2x
+500M           13.7x         17.3x         21.0x         24.6x         29.0x
+1G             24.6x         31.2x         37.8x         44.3x         52.2x
+2.5G           47.4x         60.0x         72.7x         85.3x        100.5x
+10G            88.1x        111.6x        135.1x        158.6x        186.8x
+
+== Qwen3.8-27B, M3 Max, delta 30k: prefill speedup (local time in header)
+net       50k( 5.6m)  100k( 7.0m)  150k( 8.5m)  200k(10.0m)  260k(11.8m)
+50M             1.7x          2.2x          2.7x          3.1x          3.7x
+100M            3.5x          4.4x          5.3x          6.2x          7.3x
+200M            6.8x          8.6x         10.4x         12.2x         14.4x
+300M           10.0x         12.7x         15.3x         18.0x         21.2x
+500M           16.0x         20.3x         24.6x         28.9x         34.0x
+1G             29.4x         37.2x         45.1x         52.9x         62.3x
+2.5G           58.7x         74.4x         90.1x        105.7x        124.6x
+10G           117.2x        148.5x        179.7x        211.0x        248.5x
+
+== Flash-Next: downlink Mbit/s needed (break-even / 2x / 4x), state bf16
+  slow~200GB/s  @100k  2k:99/210/480  5k:56/114/241  10k:42/85/175  30k:33/66/135   asymptote 28
+  slow~200GB/s  @200k  2k:56/116/248  5k:32/65/133  10k:24/49/99  30k:19/38/77   asymptote 16
+  M3 Max        @100k  2k:210/480/1336  5k:114/241/543  10k:85/175/375  30k:66/135/279   asymptote 56
+  M3 Max        @200k  2k:116/248/581  5k:65/133/284  10k:49/99/205  30k:38/77/157   asymptote 33
+  M5 Max(2x)    @100k  2k:480/1336/12471  5k:241/543/1448  10k:175/375/868  30k:135/279/600   asymptote 113
+  M5 Max(2x)    @200k  2k:248/581/1764  5k:133/284/654  10k:99/205/443  30k:77/157/326   asymptote 65
+  M5 Max(4x)    @100k  2k:1336/12471/-  5k:543/1448/8689  10k:375/868/2538  30k:279/600/1419   asymptote 225
+  M5 Max(4x)    @200k  2k:581/1764/-  5k:284/654/1872  10k:205/443/1057  30k:157/326/712   asymptote 130
+  M5 Ultra      @100k  2k:12471/-/-  5k:1448/8689/-  10k:868/2538/65975  30k:600/1419/4460   asymptote 451
+  M5 Ultra      @200k  2k:1764/-/-  5k:654/1872/27046  10k:443/1057/3434  30k:326/712/1741   asymptote 261
+
+== Qwen3.8-27B: downlink Mbit/s needed (break-even / 2x / 4x), state bf16
+  slow~200GB/s  @100k  2k:23/46/94  5k:15/31/62  10k:13/26/52  30k:11/22/45   asymptote 10
+  slow~200GB/s  @200k  2k:16/32/66  5k:11/22/44  10k:9/18/36  30k:8/16/32   asymptote 7
+  M3 Max        @100k  2k:46/94/196  5k:31/62/127  10k:26/52/105  30k:22/45/91   asymptote 21
+  M3 Max        @200k  2k:32/66/135  5k:22/44/88  10k:18/36/74  30k:16/32/64   asymptote 15
+  M5 Max(2x)    @100k  2k:94/196/424  5k:62/127/264  10k:52/105/216  30k:45/91/185   asymptote 41
+  M5 Max(2x)    @200k  2k:66/135/284  5k:44/88/182  10k:36/74/150  30k:32/64/129   asymptote 29
+  M5 Max(4x)    @100k  2k:196/424/1017  5k:127/264/575  10k:105/216/457  30k:91/185/385   asymptote 83
+  M5 Max(4x)    @200k  2k:135/284/640  5k:88/182/385  10k:74/150/311  30k:64/129/265   asymptote 58
+  M5 Ultra      @100k  2k:424/1017/3373  5k:264/575/1391  10k:216/457/1032  30k:185/385/836   asymptote 166
+  M5 Ultra      @200k  2k:284/640/1706  5k:182/385/870  10k:150/311/675  30k:129/265/560   asymptote 117
+
+== Flash-Next: session 20k->200k, adaptive offload; time = prefill + decode (wall, one agent)
+  slow~200GB/s  local 11.1m+26.2m=37.4m (prefill 30%) | 100M:1.14x 200M:1.23x 300M:1.28x 1G:1.36x 10G:1.40x
+  M3 Max        local 5.6m+14.4m=20.0m (prefill 28%) | 100M:1.04x 200M:1.12x 300M:1.17x 1G:1.28x 10G:1.34x
+  M5 Max(2x)    local 2.8m+9.6m=12.4m (prefill 22%) | 100M:1.00x 200M:1.03x 300M:1.06x 1G:1.16x 10G:1.22x
+  M5 Max(4x)    local 84s+9.6m=11.0m (prefill 13%) | 100M:1.00x 200M:1.00x 300M:1.00x 1G:1.05x 10G:1.09x
+  M5 Ultra      local 42s+5.8m=6.5m (prefill 11%) | 100M:1.00x 200M:1.00x 300M:1.00x 1G:1.01x 10G:1.05x
+  per session: turns 63, new tokens 154k, output 30k, cloud cache reads 6.7M; @1G M3 offloaded 98% of new tokens, download 4.8 GB
+  @100M M3: offloaded 45% of new tokens, download 1.3 GB
+
+== Flash-Next: session 150k->260k, adaptive offload; time = prefill + decode (wall, one agent)
+  slow~200GB/s  local 12.2m+16.4m=28.6m (prefill 43%) | 100M:1.35x 200M:1.50x 300M:1.56x 1G:1.66x 10G:1.71x
+  M3 Max        local 6.1m+9.0m=15.1m (prefill 40%) | 100M:1.17x 200M:1.32x 300M:1.40x 1G:1.54x 10G:1.62x
+  M5 Max(2x)    local 3.1m+6.0m=9.1m (prefill 34%) | 100M:1.04x 200M:1.13x 300M:1.20x 1G:1.34x 10G:1.43x
+  M5 Max(4x)    local 92s+6.0m=7.5m (prefill 20%) | 100M:1.00x 200M:1.02x 300M:1.05x 1G:1.13x 10G:1.19x
+  M5 Ultra      local 46s+3.6m=4.4m (prefill 17%) | 100M:1.00x 200M:1.00x 300M:1.01x 1G:1.06x 10G:1.13x
+  per session: turns 39, new tokens 96k, output 19k, cloud cache reads 8.0M; @1G M3 offloaded 99% of new tokens, download 3.3 GB
+  @100M M3: offloaded 71% of new tokens, download 1.6 GB
+
+== Qwen3.8-27B: session 20k->200k, adaptive offload; time = prefill + decode (wall, one agent)
+  slow~200GB/s  local 74.4m+183.7m=258.0m (prefill 29%) | 100M:1.30x 200M:1.35x 300M:1.36x 1G:1.39x 10G:1.40x
+  M3 Max        local 37.2m+101.0m=138.2m (prefill 27%) | 100M:1.20x 200M:1.27x 300M:1.30x 1G:1.34x 10G:1.36x
+  M5 Max(2x)    local 18.6m+67.3m=85.9m (prefill 22%) | 100M:1.08x 200M:1.15x 300M:1.18x 1G:1.24x 10G:1.26x
+  M5 Max(4x)    local 9.3m+67.3m=76.6m (prefill 12%) | 100M:1.01x 200M:1.04x 300M:1.06x 1G:1.11x 10G:1.13x
+  M5 Ultra      local 4.6m+40.4m=45.1m (prefill 10%) | 100M:1.00x 200M:1.00x 300M:1.02x 1G:1.07x 10G:1.10x
+  per session: turns 63, new tokens 154k, output 30k, cloud cache reads 6.7M; @1G M3 offloaded 100% of new tokens, download 9.9 GB
+  @100M M3: offloaded 95% of new tokens, download 8.2 GB
+
+== Qwen3.8-27B: session 150k->260k, adaptive offload; time = prefill + decode (wall, one agent)
+  slow~200GB/s  local 64.5m+114.8m=179.3m (prefill 36%) | 100M:1.44x 200M:1.50x 300M:1.52x 1G:1.54x 10G:1.56x
+  M3 Max        local 32.3m+63.2m=95.4m (prefill 34%) | 100M:1.32x 200M:1.40x 300M:1.43x 1G:1.48x 10G:1.50x
+  M5 Max(2x)    local 16.1m+42.1m=58.2m (prefill 28%) | 100M:1.15x 200M:1.24x 300M:1.28x 1G:1.34x 10G:1.37x
+  M5 Max(4x)    local 8.1m+42.1m=50.2m (prefill 16%) | 100M:1.02x 200M:1.08x 300M:1.11x 1G:1.16x 10G:1.18x
+  M5 Ultra      local 4.0m+25.3m=29.3m (prefill 14%) | 100M:1.00x 200M:1.02x 300M:1.05x 1G:1.11x 10G:1.14x
+  per session: turns 39, new tokens 96k, output 19k, cloud cache reads 8.0M; @1G M3 offloaded 100% of new tokens, download 6.2 GB
+  @100M M3: offloaded 98% of new tokens, download 5.6 GB
+
+== Qwen3.8-27B, M3 Max, session 20k->200k, decode 5 vs 10 vs 15 tok/s
+  decode 5 tok/s: local 138.2m | 100M: 115.2m (1.2x) 200M: 108.7m (1.3x) 1G: 103.0m (1.3x) 10G: 101.7m (1.4x)
+  decode 10 tok/s: local 87.7m | 100M: 64.7m (1.4x) 200M: 58.2m (1.5x) 1G: 52.5m (1.7x) 10G: 51.2m (1.7x)
+  decode 15 tok/s: local 70.9m | 100M: 47.9m (1.5x) 200M: 41.4m (1.7x) 1G: 35.7m (2.0x) 10G: 34.4m (2.1x)
+
+== Big ingestion (repo/doc/log dump) on top of cached 20k prefix: time to first token
+  Flash-Next  slow~200GB/s  50k: local 3.3m | 100M 63s 200M 32s 1G 7.6s 10G 2.0s ;; 100k: local 6.7m | 100M 2.0m 200M 61s 1G 14s 10G 3.6s ;; 200k: local 15.6m | 100M 3.9m 200M 2.0m 1G 27s 10G 6.7s
+  Flash-Next  M3 Max        50k: local 1.7m | 100M 63s 200M 32s 1G 7.6s 10G 2.0s ;; 100k: local 3.3m | 100M 2.0m 200M 61s 1G 14s 10G 3.6s ;; 200k: local 7.8m | 100M 3.9m 200M 2.0m 1G 27s 10G 6.7s
+  Flash-Next  M5 Max(2x)    50k: local 50s | 100M 63s 200M 32s 1G 7.6s 10G 2.0s ;; 100k: local 1.7m | 100M 2.0m 200M 61s 1G 14s 10G 3.6s ;; 200k: local 3.9m | 100M 3.9m 200M 2.0m 1G 27s 10G 6.7s
+  Flash-Next  M5 Max(4x)    50k: local 25s | 100M 63s 200M 32s 1G 7.6s 10G 2.0s ;; 100k: local 50s | 100M 2.0m 200M 61s 1G 14s 10G 3.6s ;; 200k: local 2.0m | 100M 3.9m 200M 2.0m 1G 27s 10G 6.7s
+  Qwen3.8-27B slow~200GB/s  50k: local 18.0m | 100M 2.6m 200M 79s 1G 18s 10G 4.4s ;; 100k: local 40.9m | 100M 5.1m 200M 2.6m 1G 35s 10G 8.4s ;; 200k: local 101.5m | 100M 10.0m 200M 5.1m 1G 69s 10G 16s
+  Qwen3.8-27B M3 Max        50k: local 9.0m | 100M 2.6m 200M 79s 1G 18s 10G 4.4s ;; 100k: local 20.4m | 100M 5.1m 200M 2.6m 1G 35s 10G 8.4s ;; 200k: local 50.8m | 100M 10.0m 200M 5.1m 1G 69s 10G 16s
+  Qwen3.8-27B M5 Max(2x)    50k: local 4.5m | 100M 2.6m 200M 79s 1G 18s 10G 4.4s ;; 100k: local 10.2m | 100M 5.1m 200M 2.6m 1G 35s 10G 8.4s ;; 200k: local 25.4m | 100M 10.0m 200M 5.1m 1G 69s 10G 16s
+  Qwen3.8-27B M5 Max(4x)    50k: local 2.2m | 100M 2.6m 200M 79s 1G 18s 10G 4.4s ;; 100k: local 5.1m | 100M 5.1m 200M 2.6m 1G 35s 10G 8.4s ;; 200k: local 12.7m | 100M 10.0m 200M 5.1m 1G 69s 10G 16s
+
+== Sessions (20k->200k) per 8 h of GPU time, 4 parallel agents: local-only -> hybrid @1G / @200M
+  Flash-Next  slow~200GB/s  decode x1: 15 -> 23 / 22  (gain 1.53x / 1.48x)
+  Flash-Next  M3 Max        decode x1: 28 -> 41 / 38  (gain 1.47x / 1.35x)
+  Flash-Next  M5 Max(2x)    decode x1: 46 -> 61 / 52  (gain 1.32x / 1.13x)
+  Flash-Next  M5 Max(4x)    decode x1: 53 -> 60 / 53  (gain 1.13x / 1.00x)
+  Flash-Next  M5 Ultra      decode x1: 91 -> 96 / 91  (gain 1.06x / 1.00x)
+  Qwen3.8-27B slow~200GB/s  decode x1: 3 -> 5 / 5  (gain 1.81x / 1.81x)
+  Qwen3.8-27B slow~200GB/s  decode x3: 5 -> 16 / 16  (gain 3.43x / 3.42x)
+  Qwen3.8-27B M3 Max        decode x1: 5 -> 10 / 9  (gain 1.74x / 1.72x)
+  Qwen3.8-27B M3 Max        decode x3: 9 -> 28 / 28  (gain 3.21x / 3.14x)
+  Qwen3.8-27B M5 Max(2x)    decode x1: 9 -> 14 / 14  (gain 1.55x / 1.51x)
+  Qwen3.8-27B M5 Max(2x)    decode x3: 16 -> 43 / 39  (gain 2.65x / 2.45x)
+  Qwen3.8-27B M5 Max(4x)    decode x1: 11 -> 14 / 13  (gain 1.27x / 1.21x)
+  Qwen3.8-27B M5 Max(4x)    decode x3: 23 -> 42 / 36  (gain 1.81x / 1.55x)
+  Qwen3.8-27B M5 Ultra      decode x1: 19 -> 23 / 20  (gain 1.21x / 1.06x)
+  Qwen3.8-27B M5 Ultra      decode x3: 42 -> 68 / 48  (gain 1.62x / 1.13x)
+
+== Download per 200k session (adaptive), state share of bytes
+  Flash-Next  state bf16 @100M: 1.3 GB, state 30%, offloaded 45% of new tokens
+  Flash-Next  state bf16 @200M: 2.8 GB, state 46%, offloaded 78% of new tokens
+  Flash-Next  state bf16 @1000M: 4.8 GB, state 61%, offloaded 98% of new tokens
+  Flash-Next  state fp32 @100M: 0.8 GB, state 35%, offloaded 26% of new tokens
+  Flash-Next  state fp32 @200M: 2.5 GB, state 53%, offloaded 60% of new tokens
+  Flash-Next  state fp32 @1000M: 6.8 GB, state 73%, offloaded 95% of new tokens
+  Qwen3.8-27B state bf16 @100M: 8.2 GB, state 42%, offloaded 95% of new tokens
+  Qwen3.8-27B state bf16 @200M: 9.3 GB, state 46%, offloaded 99% of new tokens
+  Qwen3.8-27B state bf16 @1000M: 9.9 GB, state 49%, offloaded 100% of new tokens
+  Qwen3.8-27B state fp32 @100M: 9.0 GB, state 52%, offloaded 86% of new tokens
+  Qwen3.8-27B state fp32 @200M: 12.0 GB, state 60%, offloaded 96% of new tokens
+  Qwen3.8-27B state fp32 @1000M: 14.6 GB, state 66%, offloaded 100% of new tokens
+
+== Economics per 200k-class session (new 154k, out 30k, cache reads 6.7M)
+   own B300 node: $20,750/month -> $3.55/GPU-h at 100% use
+   Sonnet 5.5      $  2.11/session (with 10% cache misses $  3.66); x840/month = $1,772
+   Opus 5.5        $  2.87/session (with 10% cache misses $  6.10); x840/month = $2,412
+   Fable 5.1       $  5.50/session (with 10% cache misses $ 13.74); x840/month = $4,617
+   Flash-Next API  $  0.15/session (with 10% cache misses $  0.24); x840/month = $126
+   27B API         $  0.52/session (with 10% cache misses $  0.82); x840/month = $436
+   hybrid prefill Flash-Next    1.8 GPU-s/session, util 100%: $0.002/session, x840 = $2/month
+   hybrid prefill Flash-Next    1.8 GPU-s/session, util 16%: $0.011/session, x840 = $10/month
+   hybrid prefill Qwen3.8-27B  13.2 GPU-s/session, util 100%: $0.013/session, x840 = $11/month
+   hybrid prefill Qwen3.8-27B  13.2 GPU-s/session, util 16%: $0.082/session, x840 = $69/month
+   own cluster Flash-Next  prefill 2 + decode 2 + KV residency 16 = 20 GPU-s/session; util 50%: $33/month, util 25%: $65/month
+   own cluster Qwen3.8-27B prefill 13 + decode 17 + KV residency 41 = 71 GPU-s/session; util 50%: $117/month, util 25%: $234/month

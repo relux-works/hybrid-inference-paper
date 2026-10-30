@@ -1,0 +1,24 @@
+== 1. Call mix: synthetic sessions (hybrid_calc3) vs the sampler fitted to Ivan's measured calls
+  measured (all agents): d p50/p90/mean 158/3052/1066; depth p50/p90/p99/mean 135k/250k/826k/164k; output+reasoning mean 720; share of new tokens in calls >=2k/5k/10k/30k: 76%/51%/21%/4%
+  synthetic 20k->200k: 5038 calls; d p50/p90/mean 1208/5754/2439; depth p50/p90/p99/mean 110k/182k/198k/109k; decoded (o+r) p50/mean 355/480; share of new tokens in calls >=2k/5k/10k/30k: 78%/51%/29%/6%
+  sampled from measurements: 39904 calls; d p50/p90/mean 158/1864/1005; depth p50/p90/p99/mean 142k/250k/829k/172k; decoded (o+r) p50/mean 338/703; share of new tokens in calls >=2k/5k/10k/30k: 73%/55%/41%/20%
+
+== 2. Cost per 1000 agent calls (B300 priced per GPU-s of demand $25.08/GPU-h; egress $5/TB; Mac premium or Ultra price over 4 years at 8 h/day); K chosen for 250k depth
+  synthetic 20k->200k:
+    Qwen3.8-27B: API 27B $7.1, Haiku 5.5 $6.5, Sonnet 5.5 $33.9, Opus 5.5 $46.0 | own $6.4 per 1000 calls (GPU-s/call prefill 0.174 + decode 0.398 + KV residency 0.343)
+      M5 Max 64 GB (MBP 14) K4 (local only 1,446 calls/8h): 100M: 2,165 calls/8h, offloaded 52% of new tokens, 53.9 GB/1000 calls, $1.5+0.3+0.8=$2.5 | 200M: 2,720 calls/8h, offloaded 87% of new tokens, 107.3 GB/1000 calls, $1.5+0.5+0.6=$2.6 | 1000M: 3,052 calls/8h, offloaded 99% of new tokens, 150.0 GB/1000 calls, $1.5+0.7+0.5=$2.7
+      M5 Max 128 GB (MBP 14) K8 (local only 1,587 calls/8h): 100M: 2,497 calls/8h, offloaded 52% of new tokens, 53.9 GB/1000 calls, $1.5+0.3+1.1=$2.8 | 200M: 3,705 calls/8h, offloaded 87% of new tokens, 107.3 GB/1000 calls, $1.5+0.5+0.7=$2.7 | 1000M: 4,111 calls/8h, offloaded 99% of new tokens, 150.0 GB/1000 calls, $1.5+0.7+0.7=$2.9
+      M5 Ultra 96 GB (Studio) K7 (local only 2,446 calls/8h): 100M: 2,672 calls/8h, offloaded 11% of new tokens, 9.8 GB/1000 calls, $1.5+0.0+1.3=$2.8 | 200M: 4,350 calls/8h, offloaded 67% of new tokens, 73.3 GB/1000 calls, $1.5+0.4+0.8=$2.6 | 1000M: 5,597 calls/8h, offloaded 98% of new tokens, 141.2 GB/1000 calls, $1.5+0.7+0.6=$2.8
+    Flash-Next: API Flash API (Alibaba) $2.6 | own $1.4 per 1000 calls (GPU-s/call prefill 0.024 + decode 0.103 + KV residency 0.067)
+      M5 Max 64 GB (MBP 14): does not fit at 250k
+      M5 Max 128 GB (MBP 14) K8 (local only 3,565 calls/8h): 100M: 3,565 calls/8h, offloaded 0% of new tokens, 0.0 GB/1000 calls, $0.2+0.0+0.8=$1.0 | 200M: 3,672 calls/8h, offloaded 11% of new tokens, 4.4 GB/1000 calls, $0.2+0.0+0.7=$1.0 | 1000M: 4,210 calls/8h, offloaded 83% of new tokens, 50.2 GB/1000 calls, $0.2+0.3+0.6=$1.1
+      M5 Ultra 96 GB (Studio) K7 (local only 5,327 calls/8h): 100M: 5,327 calls/8h, offloaded 0% of new tokens, 0.0 GB/1000 calls, $0.2+0.0+0.7=$0.9 | 200M: 5,327 calls/8h, offloaded 0% of new tokens, 0.0 GB/1000 calls, $0.2+0.0+0.7=$0.9 | 1000M: 5,894 calls/8h, offloaded 68% of new tokens, 34.5 GB/1000 calls, $0.2+0.2+0.6=$1.0
+  measured call mix:
+    Qwen3.8-27B: API 27B $10.5, Haiku 5.5 $10.0, Sonnet 5.5 $45.6, Opus 5.5 $56.9 | own $11.5 per 1000 calls (GPU-s/call prefill 0.083 + decode 0.830 + KV residency 0.735)
+      M5 Max 64 GB (MBP 14) K4 (local only 1,373 calls/8h): 100M: 1,655 calls/8h, offloaded 60% of new tokens, 25.3 GB/1000 calls, $1.0+0.1+1.0=$2.2 | 200M: 1,704 calls/8h, offloaded 83% of new tokens, 41.6 GB/1000 calls, $1.0+0.2+1.0=$2.2 | 1000M: 1,751 calls/8h, offloaded 96% of new tokens, 66.7 GB/1000 calls, $1.0+0.3+1.0=$2.3
+      M5 Max 128 GB (MBP 14) K8 (local only 1,568 calls/8h): 100M: 1,946 calls/8h, offloaded 60% of new tokens, 25.3 GB/1000 calls, $1.0+0.1+1.4=$2.5 | 200M: 2,107 calls/8h, offloaded 83% of new tokens, 41.6 GB/1000 calls, $1.0+0.2+1.3=$2.5 | 1000M: 2,165 calls/8h, offloaded 96% of new tokens, 66.7 GB/1000 calls, $1.0+0.3+1.3=$2.6
+      M5 Ultra 96 GB (Studio) K7 (local only 2,349 calls/8h): 100M: 2,542 calls/8h, offloaded 19% of new tokens, 7.5 GB/1000 calls, $1.0+0.0+1.4=$2.4 | 200M: 2,957 calls/8h, offloaded 70% of new tokens, 30.8 GB/1000 calls, $1.0+0.2+1.2=$2.4 | 1000M: 3,077 calls/8h, offloaded 93% of new tokens, 58.0 GB/1000 calls, $1.0+0.3+1.2=$2.5
+    Flash-Next: API Flash API (Alibaba) $3.4 | own $2.1 per 1000 calls (GPU-s/call prefill 0.010 + decode 0.154 + KV residency 0.136)
+      M5 Max 64 GB (MBP 14): does not fit at 250k
+      M5 Max 128 GB (MBP 14) K8 (local only 2,836 calls/8h): 100M: 2,855 calls/8h, offloaded 3% of new tokens, 0.6 GB/1000 calls, $0.1+0.0+0.9=$1.1 | 200M: 2,927 calls/8h, offloaded 30% of new tokens, 4.9 GB/1000 calls, $0.1+0.0+0.9=$1.1 | 1000M: 2,964 calls/8h, offloaded 80% of new tokens, 19.5 GB/1000 calls, $0.1+0.1+0.9=$1.1
+      M5 Ultra 96 GB (Studio) K7 (local only 4,191 calls/8h): 100M: 4,194 calls/8h, offloaded 0% of new tokens, 0.1 GB/1000 calls, $0.1+0.0+0.8=$1.0 | 200M: 4,201 calls/8h, offloaded 6% of new tokens, 1.1 GB/1000 calls, $0.1+0.0+0.8=$1.0 | 1000M: 4,219 calls/8h, offloaded 71% of new tokens, 14.6 GB/1000 calls, $0.1+0.1+0.8=$1.0

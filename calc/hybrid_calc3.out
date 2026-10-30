@@ -1,0 +1,277 @@
+== Inputs
+  Flash-Next: KV 8-bit 12.4 KiB/tok, state bf16 59 MB
+  Qwen3.8-27B: KV 8-bit 32.0 KiB/tok, state bf16 78 MB
+  dense 'measured' bandwidth efficiency solved from 5 tok/s @200k on M3 Max: 0.37
+  own B300 node $20,750/month -> $3.55/GPU-h at 100% use
+  session 20k->200k: 63 turns on average
+
+== Decode per stream / aggregate (tok/s), Qwen3.8-27B tuned (3.5-bit, 8-bit KV); K agents at depth L
+  M5 Pro 64 GB (MBP 14)      K1@20k: 15.8/16  K1@110k: 12.8/13  K1@200k: 10.8/11  K1@1000k: 4.5/4  K4@20k: 13.3/53  K4@110k: 7.4/30  K4@200k: 5.2/21  K4@1000k: -  K8@20k: 10.9/87  K8@110k: 4.8/38  K8@200k: -  K8@1000k: -
+  Ryzen AI Max+ 395 128 GB   K1@20k: 13.2/13  K1@110k: 10.7/11  K1@200k: 9.0/9  K1@1000k: 3.7/4  K4@20k: 11.1/44  K4@110k: 6.2/25  K4@200k: 4.3/17  K4@1000k: -  K8@20k: 9.1/73  K8@110k: 4.0/32  K8@200k: 2.5/20  K8@1000k: -
+  DGX Spark 128 GB           K1@20k: 14.1/14  K1@110k: 11.4/11  K1@200k: 9.6/10  K1@1000k: 4.0/4  K4@20k: 11.8/47  K4@110k: 6.6/26  K4@200k: 4.6/18  K4@1000k: -  K8@20k: 9.7/78  K8@110k: 4.2/34  K8@200k: 2.7/22  K8@1000k: -
+  M3 Max 128 GB              K1@20k: 20.6/21  K1@110k: 16.7/17  K1@200k: 14.0/14  K1@1000k: 5.8/6  K4@20k: 17.3/69  K4@110k: 9.7/39  K4@200k: 6.7/27  K4@1000k: -  K8@20k: 14.2/114  K8@110k: 6.2/50  K8@200k: 4.0/32  K8@1000k: -
+  M5 Max 128 GB (MBP)        K1@20k: 31.6/32  K1@110k: 25.6/26  K1@200k: 21.6/22  K1@1000k: 8.9/9  K4@20k: 26.5/106  K4@110k: 14.9/59  K4@200k: 10.3/41  K4@1000k: -  K8@20k: 21.8/174  K8@110k: 9.5/76  K8@200k: 6.1/49  K8@1000k: -
+  M5 Ultra 96 GB (Studio)    K1@20k: 47.5/47  K1@110k: 38.5/38  K1@200k: 32.3/32  K1@1000k: 13.4/13  K4@20k: 39.8/159  K4@110k: 22.3/89  K4@200k: 15.5/62  K4@1000k: -  K8@20k: 32.7/262  K8@110k: 14.3/114  K8@200k: 9.1/73  K8@1000k: -
+  M5 Ultra 256 GB (Studio)   K1@20k: 47.5/47  K1@110k: 38.5/38  K1@200k: 32.3/32  K1@1000k: 13.4/13  K4@20k: 39.8/159  K4@110k: 22.3/89  K4@200k: 15.5/62  K4@1000k: 4.2/17  K8@20k: 32.7/262  K8@110k: 14.3/114  K8@200k: 9.1/73  K8@1000k: -
+  measured profile on M3 Max: K1@20k 8.3, K1@110k 6.2, K1@200k 5.0
+
+== Memory: max parallel 200k sessions (KV 8-bit) / agents with >=10 tok/s per stream at 110k
+  M5 Pro 64 GB (MBP 14)      27B: mem  5, >=10 tok/s  2;  Flash: mem  0, 1M-token sessions 27B: 1
+  Ryzen AI Max+ 395 128 GB   27B: mem 14, >=10 tok/s  1;  Flash: mem 19, 1M-token sessions 27B: 2
+  DGX Spark 128 GB           27B: mem 14, >=10 tok/s  1;  Flash: mem 19, 1M-token sessions 27B: 2
+  M3 Max 128 GB              27B: mem 14, >=10 tok/s  3;  Flash: mem 19, 1M-token sessions 27B: 2
+  M5 Max 128 GB (MBP)        27B: mem 14, >=10 tok/s  7;  Flash: mem 19, 1M-token sessions 27B: 2
+  M5 Ultra 96 GB (Studio)    27B: mem  9, >=10 tok/s  9;  Flash: mem  8, 1M-token sessions 27B: 2
+  M5 Ultra 256 GB (Studio)   27B: mem 30, >=10 tok/s 12;  Flash: mem 61, 1M-token sessions 27B: 6
+
+== Sessions 20k->200k per 8 h, Qwen3.8-27B, decode profile tuned
+   device                     K    local     100M      200M      1G     | 1G gain | dev-bound/wall-bound @1G
+   M5 Pro 64 GB (MBP 14)       2      9.7     14.6     16.0     17.6   | x1.81  | 20/18
+   M5 Pro 64 GB (MBP 14)       4     11.5     22.6     24.2     26.0   | x2.27  | 28/26
+   Ryzen AI Max+ 395 128 GB    1      6.1      7.5      8.2      9.1   | x1.50  | 10/9
+   Ryzen AI Max+ 395 128 GB    4      9.8     19.4     20.7     22.0   | x2.25  | 23/22
+   DGX Spark 128 GB            1      8.4      8.5      8.9      9.6   | x1.15  | 11/10
+   DGX Spark 128 GB            4     16.9     18.6     22.2     23.4   | x1.39  | 25/23
+   M3 Max 128 GB               3      9.2     23.0     25.6     28.5   | x3.10  | 32/29
+   M3 Max 128 GB               4      9.6     27.4     30.2     33.2   | x3.47  | 37/33
+   M5 Max 128 GB (MBP)         4     23.0     34.4     43.2     48.5   | x2.11  | 56/48
+   M5 Max 128 GB (MBP)         7     24.9     38.8     57.0     62.2   | x2.50  | 69/62
+   M5 Ultra 96 GB (Studio)     4     40.4     40.4     55.8     68.2   | x1.69  | 82/68
+   M5 Ultra 96 GB (Studio)     9     45.7     45.7     66.5     97.8   | x2.14  | 107/98
+   M5 Ultra 256 GB (Studio)    4     46.5     46.5     52.6     68.3   | x1.47  | 81/68
+   M5 Ultra 256 GB (Studio)   12     55.4     55.4     64.2    107.2   | x1.94  | 112/107
+
+== Sessions 20k->200k per 8 h, Qwen3.8-27B, decode profile measured
+   device                     K    local     100M      200M      1G     | 1G gain | dev-bound/wall-bound @1G
+   M5 Pro 64 GB (MBP 14)       1      3.6      3.9      4.1      4.3   | x1.20  | 5/4
+   M5 Pro 64 GB (MBP 14)       2      5.1      6.2      6.4      6.7   | x1.31  | 7/7
+   Ryzen AI Max+ 395 128 GB    1      3.0      3.3      3.5      3.6   | x1.20  | 4/4
+   Ryzen AI Max+ 395 128 GB    4      5.3      7.3      7.5      7.7   | x1.43  | 8/8
+   DGX Spark 128 GB            1      3.7      3.7      3.7      3.9   | x1.06  | 4/4
+   DGX Spark 128 GB            4      7.2      7.5      8.0      8.2   | x1.13  | 8/8
+   M3 Max 128 GB               1      3.9      4.9      5.2      5.5   | x1.40  | 6/6
+   M3 Max 128 GB               4      6.3     11.0     11.4     11.8   | x1.88  | 12/12
+   M5 Max 128 GB (MBP)         1      7.0      7.2      7.6      8.2   | x1.18  | 9/8
+   M5 Max 128 GB (MBP)         4     12.7     15.5     17.1     17.8   | x1.41  | 19/18
+   M5 Ultra 96 GB (Studio)     2     16.4     16.4     17.4     18.6   | x1.13  | 21/19
+   M5 Ultra 96 GB (Studio)     4     20.7     20.7     24.1     26.1   | x1.26  | 28/26
+   M5 Ultra 256 GB (Studio)    2     17.3     17.3     17.7     18.6   | x1.08  | 21/19
+   M5 Ultra 256 GB (Studio)    4     22.2     22.2     23.5     26.1   | x1.18  | 28/26
+
+== Sessions 20k->200k per 8 h, Flash-Next, g4=1.26
+   device                     K    local     100M      200M      1G     | 1G gain | dev-bound/wall-bound @1G
+   M5 Pro 64 GB (MBP 14)      does not fit
+   Ryzen AI Max+ 395 128 GB    2     19.8     20.2     20.6     21.5   | x1.09  | 24/21
+   Ryzen AI Max+ 395 128 GB    4     21.7     22.9     24.6     25.3   | x1.16  | 27/25
+   DGX Spark 128 GB            2     22.6     22.6     22.6     22.9   | x1.01  | 25/23
+   DGX Spark 128 GB            4     26.5     26.5     26.5     26.9   | x1.02  | 28/27
+   M3 Max 128 GB               4     28.3     33.5     36.5     38.1   | x1.35  | 42/38
+   M5 Max 128 GB (MBP)         4     51.7     51.7     53.1     56.1   | x1.09  | 62/56
+   M5 Max 128 GB (MBP)         7     55.6     55.6     57.3     64.8   | x1.16  | 68/65
+   M5 Ultra 96 GB (Studio)     4     79.2     79.2     79.2     79.9   | x1.01  | 90/80
+   M5 Ultra 96 GB (Studio)     8     89.8     89.8     89.8     97.1   | x1.08  | 100/97
+   M5 Ultra 256 GB (Studio)    4     79.9     79.9     79.9     80.2   | x1.00  | 90/80
+   M5 Ultra 256 GB (Studio)   12     99.5     99.5     99.5    106.3   | x1.07  | 106/107
+
+== 24 h: day (8 h, K as interactive) + night (16 h, K up to memory with >=5 tok/s/stream), hybrid 1G
+  Qwen3.8-27B M5 Pro 64 GB (MBP 14)      day    26 (K4) + night    58 (K5) -> 24h    84; laptop at 40% night availability    49
+  Qwen3.8-27B Ryzen AI Max+ 395 128 GB   day    22 (K4) + night    49 (K5) -> 24h    71; laptop at 40% night availability    41
+  Qwen3.8-27B DGX Spark 128 GB           day    23 (K4) + night    56 (K6) -> 24h    79; laptop at 40% night availability    46
+  Qwen3.8-27B M3 Max 128 GB              day    33 (K4) + night    94 (K10) -> 24h   127; laptop at 40% night availability    71
+  Qwen3.8-27B M5 Max 128 GB (MBP)        day    48 (K4) + night   153 (K14) -> 24h   202; laptop at 40% night availability   110
+  Qwen3.8-27B M5 Ultra 96 GB (Studio)    day    68 (K4) + night   196 (K9) -> 24h   264; laptop at 40% night availability   146
+  Qwen3.8-27B M5 Ultra 256 GB (Studio)   day    68 (K4) + night   251 (K28) -> 24h   319; laptop at 40% night availability   169
+  Flash-Next  Ryzen AI Max+ 395 128 GB   day    25 (K4) + night    58 (K8) -> 24h    84; laptop at 40% night availability    49
+  Flash-Next  DGX Spark 128 GB           day    27 (K4) + night    62 (K8) -> 24h    89; laptop at 40% night availability    52
+  Flash-Next  M3 Max 128 GB              day    38 (K4) + night    89 (K8) -> 24h   127; laptop at 40% night availability    74
+  Flash-Next  M5 Max 128 GB (MBP)        day    56 (K4) + night   134 (K8) -> 24h   190; laptop at 40% night availability   110
+  Flash-Next  M5 Ultra 96 GB (Studio)    day    80 (K4) + night   194 (K8) -> 24h   274; laptop at 40% night availability   158
+  Flash-Next  M5 Ultra 256 GB (Studio)   day    80 (K4) + night   195 (K8) -> 24h   275; laptop at 40% night availability   158
+
+== API price per session 20k->200k and per heavy developer-month (840 sessions)
+  Haiku 5.5            $ 0.402/session  $     338/month
+  Sonnet 5.5           $ 2.120/session  $   1,781/month
+  Opus 5.5             $ 2.880/session  $   2,419/month
+  Fable 5.1            $ 5.500/session  $   4,620/month
+  Flash API (Alibaba)  $ 0.160/session  $     134/month
+  27B API median       $ 0.442/session  $     372/month
+  27B API DeepInfra    $ 0.339/session  $     285/month
+  27B API Alibaba      $ 0.752/session  $     632/month
+
+== Own all-server cluster, GPU-seconds per session (prefill + decode + KV residency)
+  Flash-Next  ideal (KV leaves HBM in tool gaps)     1.5 +   6.5 +   2.9 =  10.9 GPU-s; per dev-month at 50%/25% use: $18 / $36
+  Flash-Next  realistic (KV stays in HBM)            1.5 +   6.5 +   4.1 =  12.2 GPU-s; per dev-month at 50%/25% use: $20 / $40
+  Qwen3.8-27B ideal (KV leaves HBM in tool gaps)    11.0 +  24.8 +  18.2 =  54.0 GPU-s; per dev-month at 50%/25% use: $90 / $179
+  Qwen3.8-27B realistic (KV stays in HBM)           11.0 +  24.8 +  21.3 =  57.1 GPU-s; per dev-month at 50%/25% use: $95 / $189
+
+== Hybrid server part per session (M3 Max client): GPU (shadow prefill of all tokens), download
+  Flash-Next  @200M:   1.8 GPU-s (latency-critical part 1.2), download 2.8 GB, offloaded 79% of new tokens; GPU $/dev-month at 40%/16% use: $4 / $10
+  Flash-Next  @1000M:   1.8 GPU-s (latency-critical part 1.5), download 4.8 GB, offloaded 98% of new tokens; GPU $/dev-month at 40%/16% use: $4 / $10
+  Qwen3.8-27B @200M:  13.1 GPU-s (latency-critical part 10.9), download 9.2 GB, offloaded 99% of new tokens; GPU $/dev-month at 40%/16% use: $27 / $68
+  Qwen3.8-27B @1000M:  13.1 GPU-s (latency-critical part 11.0), download 9.9 GB, offloaded 100% of new tokens; GPU $/dev-month at 40%/16% use: $27 / $68
+  egress per dev-month (download x 840): transit $2-9/TB (colo, 95th pct, working hours) vs cloud $50-90/TB
+    Flash-Next  2.4 TB/month -> colo $5-21, cloud $118-213
+    Qwen3.8-27B 7.7 TB/month -> colo $15-70, cloud $387-697
+
+== Company of N heavy developers (40 sessions/day each), 1 and 4 years, $M
+   capex sized for the working-hour peak: GPUs = N x 5 sessions/h x GPU-s / 3600 x 2.0 (peak + headroom)
+   residual value: servers 65% after 1 y, 20% after 4 y; Mac RAM/chip delta 75% / 35% [estimates]
+  Flash-Next, N=1000:
+    API Flash API (Alibaba)                          1y: cash     1.61  residual   0.00  net     1.61
+    API Flash API (Alibaba)                          4y: cash     6.44  residual   0.00  net     6.44
+    own all-server ideal (4 nodes)                   1y: cash     3.34  residual   2.03  net     1.31
+    own all-server ideal (4 nodes)                   4y: cash     3.98  residual   0.62  net     3.36
+    own all-server realistic (5 nodes)               1y: cash     4.17  residual   2.54  net     1.63
+    own all-server realistic (5 nodes)               4y: cash     4.98  residual   0.78  net     4.20
+    hybrid (1 nodes, Mac delta $2,600)               1y: cash     3.65  residual   2.46  net     1.19
+    hybrid (1 nodes, Mac delta $2,600)               4y: cash     4.23  residual   1.07  net     3.17
+    hybrid (1 nodes, Mac delta $3,900)               1y: cash     4.95  residual   3.43  net     1.51
+    hybrid (1 nodes, Mac delta $3,900)               4y: cash     5.53  residual   1.52  net     4.01
+  Flash-Next, N=5000:
+    API Flash API (Alibaba)                          1y: cash     8.05  residual   0.00  net     8.05
+    API Flash API (Alibaba)                          4y: cash    32.19  residual   0.00  net    32.19
+    own all-server ideal (20 nodes)                  1y: cash    16.68  residual  10.14  net     6.54
+    own all-server ideal (20 nodes)                  4y: cash    19.92  residual   3.12  net    16.80
+    own all-server realistic (22 nodes)              1y: cash    18.35  residual  11.15  net     7.19
+    own all-server realistic (22 nodes)              4y: cash    21.91  residual   3.43  net    18.48
+    hybrid (4 nodes, Mac delta $2,600)               1y: cash    17.40  residual  11.78  net     5.62
+    hybrid (4 nodes, Mac delta $2,600)               4y: cash    20.17  residual   5.17  net    15.00
+    hybrid (4 nodes, Mac delta $3,900)               1y: cash    23.90  residual  16.65  net     7.24
+    hybrid (4 nodes, Mac delta $3,900)               4y: cash    26.67  residual   7.45  net    19.22
+  Qwen3.8-27B, N=1000:
+    API 27B API median                               1y: cash     4.46  residual   0.00  net     4.46
+    API 27B API median                               4y: cash    17.84  residual   0.00  net    17.84
+    API 27B API Alibaba                              1y: cash     7.58  residual   0.00  net     7.58
+    API 27B API Alibaba                              4y: cash    30.34  residual   0.00  net    30.34
+    own all-server ideal (19 nodes)                  1y: cash    15.85  residual   9.63  net     6.21
+    own all-server ideal (19 nodes)                  4y: cash    18.92  residual   2.96  net    15.96
+    own all-server realistic (20 nodes)              1y: cash    16.68  residual  10.14  net     6.54
+    own all-server realistic (20 nodes)              4y: cash    19.92  residual   3.12  net    16.80
+    hybrid (5 nodes, Mac delta $2,600)               1y: cash     7.42  residual   4.49  net     2.93
+    hybrid (5 nodes, Mac delta $2,600)               4y: cash     9.62  residual   1.69  net     7.93
+    hybrid (5 nodes, Mac delta $3,900)               1y: cash     8.72  residual   5.46  net     3.26
+    hybrid (5 nodes, Mac delta $3,900)               4y: cash    10.92  residual   2.15  net     8.77
+  Qwen3.8-27B, N=5000:
+    API 27B API median                               1y: cash    22.29  residual   0.00  net    22.29
+    API 27B API median                               4y: cash    89.18  residual   0.00  net    89.18
+    API 27B API Alibaba                              1y: cash    37.92  residual   0.00  net    37.92
+    API 27B API Alibaba                              4y: cash   151.68  residual   0.00  net   151.68
+    own all-server ideal (94 nodes)                  1y: cash    78.40  residual  47.66  net    30.74
+    own all-server ideal (94 nodes)                  4y: cash    93.62  residual  14.66  net    78.96
+    own all-server realistic (100 nodes)             1y: cash    83.40  residual  50.70  net    32.70
+    own all-server realistic (100 nodes)             4y: cash    99.60  residual  15.60  net    84.00
+    hybrid (23 nodes, Mac delta $2,600)              1y: cash    35.41  residual  21.41  net    14.00
+    hybrid (23 nodes, Mac delta $2,600)              4y: cash    46.10  residual   8.14  net    37.97
+    hybrid (23 nodes, Mac delta $3,900)              1y: cash    41.91  residual  26.29  net    15.63
+    hybrid (23 nodes, Mac delta $3,900)              4y: cash    52.60  residual  10.41  net    42.19
+
+== 1M-token context, Qwen3.8-27B (native 262k; 1M via YaRN). Session 200k->1M and 20k->1M
+  200k->1M: 282 turns, cache reads 171M tokens per session
+    API 27B API median   $   8.99/session
+    API Haiku 5.5        $   9.38/session
+    API Sonnet 5.5       $  37.50/session
+    API Opus 5.5         $  40.85/session
+    own all-server ideal      0.30 GPU-h (prefill 0.04, decode 0.14, residency 0.12) -> $1.08 at 100% use, $4.31 at 25%
+    own all-server realistic  0.32 GPU-h (prefill 0.04, decode 0.14, residency 0.15) -> $1.15 at 100% use, $4.61 at 25%
+    M3 Max 128 GB            one agent: local 12.9h (prefill 62%), 100M 6.0h x2.2, 200M 5.4h x2.4, 1000M 5.0h x2.6; server 0.05 GPU-h = $0.17, download 44 GB
+    M5 Max 128 GB (MBP)      one agent: local 5.9h (prefill 45%), 100M 4.3h x1.4, 200M 3.8h x1.5, 1000M 3.4h x1.7; server 0.05 GPU-h = $0.17, download 40 GB
+    M5 Ultra 96 GB (Studio)  one agent: local 3.6h (prefill 37%), 100M 3.2h x1.1, 200M 2.8h x1.3, 1000M 2.4h x1.5; server 0.05 GPU-h = $0.17, download 34 GB
+  20k->1M: 338 turns, cache reads 170M tokens per session
+    API 27B API median   $   9.08/session
+    API Haiku 5.5        $   9.42/session
+    API Sonnet 5.5       $  38.19/session
+    API Opus 5.5         $  42.28/session
+    own all-server ideal      0.31 GPU-h (prefill 0.04, decode 0.14, residency 0.13) -> $1.10 at 100% use, $4.42 at 25%
+    own all-server realistic  0.33 GPU-h (prefill 0.04, decode 0.14, residency 0.15) -> $1.18 at 100% use, $4.72 at 25%
+    M3 Max 128 GB            one agent: local 14.0h (prefill 62%), 100M 6.6h x2.1, 200M 6.0h x2.3, 1000M 5.5h x2.6; server 0.05 GPU-h = $0.18, download 52 GB
+    M5 Max 128 GB (MBP)      one agent: local 6.5h (prefill 45%), 100M 4.8h x1.4, 200M 4.3h x1.5, 1000M 3.8h x1.7; server 0.05 GPU-h = $0.18, download 47 GB
+    M5 Ultra 96 GB (Studio)  one agent: local 3.9h (prefill 37%), 100M 3.5h x1.1, 200M 3.1h x1.3, 1000M 2.7h x1.5; server 0.05 GPU-h = $0.18, download 38 GB
+  Ingest 1M tokens at once (27B): local full prefill vs server (1 GPU / 8 GPUs) + download of KV 8-bit + state
+    FLOP 2.50e+17; KV 30.6 GiB; server 3.1m on 1 GPU ($0.18), ~26s on 8
+    M3 Max 128 GB              local 10.5h
+    M5 Max 128 GB (MBP)        local 3.5h
+    M5 Ultra 96 GB (Studio)    local 1.7h
+    DGX Spark 128 GB           local 2.6h
+    Ryzen AI Max+ 395 128 GB   local 8.1h
+    download: 100M 48.7m, 200M 24.3m, 1G 4.9m, 10G 29s
+  Prefill cost per token vs depth (FLOP): 8k 27B 57G / Flash 13.2G, 200k 27B 133G / Flash 13.8G, 1000k 27B 447G / Flash 16.3G
+
+== Equilibrium: cost per session and break-even device price over 4 years, 8 h/day (remote: egress $5/TB)
+   references per session: 27B API median $0.442, Haiku 5.5 $0.402, Flash API $0.160; own all-server at 25% use: 27B $0.226, Flash $0.048
+   device                     K  net   sess/8h  device $/sess   total $/sess   break-even price vs API / vs own
+   Qwen3 M5 Pro 64 GB (MBP 14)       2 local     9.8    0.305-0.356    0.305-0.356   $  4,347 / $  2,217
+   Qwen3 M5 Pro 64 GB (MBP 14)       2 200M     16.0    0.186-0.217    0.281-0.312   $  5,598 / $  2,104
+   Qwen3 M5 Pro 64 GB (MBP 14)       2 1G       17.6    0.169-0.197    0.270-0.298   $  6,058 / $  2,212
+   Qwen3 M5 Pro 64 GB (MBP 14)       4 local    11.5    0.259-0.302    0.259-0.302   $  5,118 / $  2,610
+   Qwen3 M5 Pro 64 GB (MBP 14)       4 200M     24.2    0.123-0.143    0.218-0.238   $  8,482 / $  3,188
+   Qwen3 M5 Pro 64 GB (MBP 14)       4 1G       26.0    0.114-0.133    0.215-0.234   $  8,963 / $  3,273
+   Qwen3 Ryzen AI Max+ 395 128 GB    1 local     6.0    0.410-0.566    0.410-0.566   $  2,697 / $  1,376
+   Qwen3 Ryzen AI Max+ 395 128 GB    1 200M      8.2    0.301-0.416    0.398-0.512   $  2,870 / $  1,072
+   Qwen3 Ryzen AI Max+ 395 128 GB    1 1G        9.1    0.273-0.376    0.374-0.477   $  3,130 / $  1,142
+   Qwen3 Ryzen AI Max+ 395 128 GB    4 local     9.8    0.253-0.349    0.253-0.349   $  4,365 / $  2,226
+   Qwen3 Ryzen AI Max+ 395 128 GB    4 200M     20.7    0.120-0.166    0.216-0.262   $  7,205 / $  2,690
+   Qwen3 Ryzen AI Max+ 395 128 GB    4 1G       22.0    0.113-0.156    0.214-0.257   $  7,564 / $  2,759
+   Qwen3 DGX Spark 128 GB            1 local     8.4    0.554-0.820    0.554-0.820   $  3,750 / $  1,912
+   Qwen3 DGX Spark 128 GB            1 200M      8.9    0.526-0.777    0.605-0.857   $  3,243 / $  1,305
+   Qwen3 DGX Spark 128 GB            1 1G        9.6    0.484-0.715    0.581-0.813   $  3,351 / $  1,245
+   Qwen3 DGX Spark 128 GB            4 local    16.9    0.276-0.409    0.276-0.409   $  7,521 / $  3,836
+   Qwen3 DGX Spark 128 GB            4 200M     22.2    0.210-0.311    0.290-0.390   $  8,113 / $  3,264
+   Qwen3 DGX Spark 128 GB            4 1G       23.4    0.200-0.295    0.297-0.392   $  8,124 / $  3,017
+   Qwen3 M3 Max 128 GB               3 local     9.2          owned    0.000+owned   $  4,106 / $  2,094
+   Qwen3 M3 Max 128 GB               3 200M     25.6          owned    0.098+owned   $  8,888 / $  3,292
+   Qwen3 M3 Max 128 GB               3 1G       28.5          owned    0.101+owned   $  9,796 / $  3,569
+   Qwen3 M3 Max 128 GB               4 local     9.6          owned    0.000+owned   $  4,262 / $  2,174
+   Qwen3 M3 Max 128 GB               4 200M     30.2          owned    0.098+owned   $ 10,478 / $  3,881
+   Qwen3 M3 Max 128 GB               4 1G       33.2          owned    0.101+owned   $ 11,398 / $  4,153
+   Qwen3 M5 Max 128 GB (MBP)         4 local    23.0    0.220-0.277    0.220-0.277   $ 10,236 / $  5,221
+   Qwen3 M5 Max 128 GB (MBP)         4 200M     43.2    0.117-0.147    0.203-0.233   $ 15,531 / $  6,094
+   Qwen3 M5 Max 128 GB (MBP)         4 1G       48.5    0.104-0.131    0.203-0.230   $ 16,772 / $  6,184
+   Qwen3 M5 Max 128 GB (MBP)         7 local    24.9    0.203-0.255    0.203-0.255   $ 11,084 / $  5,653
+   Qwen3 M5 Max 128 GB (MBP)         7 200M     57.0    0.089-0.111    0.174-0.197   $ 20,490 / $  8,040
+   Qwen3 M5 Max 128 GB (MBP)         7 1G       62.2    0.081-0.102    0.180-0.201   $ 21,524 / $  7,936
+   Qwen3 M5 Ultra 96 GB (Studio)     4 local    40.4    0.135-0.135    0.135-0.135   $ 18,025 / $  9,193
+   Qwen3 M5 Ultra 96 GB (Studio)     4 200M     55.8    0.098-0.098    0.165-0.165   $ 21,096 / $  8,897
+   Qwen3 M5 Ultra 96 GB (Studio)     4 1G       68.2    0.080-0.080    0.174-0.174   $ 23,920 / $  9,025
+   Qwen3 M5 Ultra 96 GB (Studio)     9 local    45.7    0.119-0.119    0.119-0.119   $ 20,393 / $ 10,401
+   Qwen3 M5 Ultra 96 GB (Studio)     9 200M     66.5    0.082-0.082    0.150-0.150   $ 25,123 / $ 10,595
+   Qwen3 M5 Ultra 96 GB (Studio)     9 1G       97.8    0.056-0.056    0.150-0.150   $ 34,317 / $ 12,948
+   Qwen3 M5 Ultra 256 GB (Studio)    4 local    46.5    0.203-0.203    0.203-0.203   $ 20,727 / $ 10,571
+   Qwen3 M5 Ultra 256 GB (Studio)    4 200M     52.6    0.179-0.179    0.237-0.237   $ 20,358 / $  8,869
+   Qwen3 M5 Ultra 256 GB (Studio)    4 1G       68.3    0.138-0.138    0.229-0.229   $ 24,190 / $  9,260
+   Qwen3 M5 Ultra 256 GB (Studio)   12 local    55.4    0.170-0.170    0.170-0.170   $ 24,677 / $ 12,586
+   Qwen3 M5 Ultra 256 GB (Studio)   12 200M     64.2    0.147-0.147    0.205-0.205   $ 24,861 / $ 10,831
+   Qwen3 M5 Ultra 256 GB (Studio)   12 1G      107.2    0.088-0.088    0.179-0.179   $ 37,964 / $ 14,533
+   Flash Ryzen AI Max+ 395 128 GB    2 local    19.8    0.126-0.173    0.126-0.173   $  3,181 / $    956
+   Flash Ryzen AI Max+ 395 128 GB    2 200M     20.6    0.120-0.166    0.139-0.184   $  2,937 / $    617
+   Flash Ryzen AI Max+ 395 128 GB    2 1G       21.5    0.115-0.159    0.145-0.189   $  2,814 / $    394
+   Flash Ryzen AI Max+ 395 128 GB    4 local    21.7    0.114-0.158    0.114-0.158   $  3,495 / $  1,050
+   Flash Ryzen AI Max+ 395 128 GB    4 200M     24.6    0.101-0.139    0.119-0.157   $  3,514 / $    739
+   Flash Ryzen AI Max+ 395 128 GB    4 1G       25.3    0.098-0.135    0.128-0.165   $  3,308 / $    463
+   Flash DGX Spark 128 GB            2 local    22.6    0.206-0.305    0.206-0.305   $  3,643 / $  1,095
+   Flash DGX Spark 128 GB            2 200M     22.6    0.206-0.305    0.213-0.312   $  3,473 / $    925
+   Flash DGX Spark 128 GB            2 1G       22.9    0.203-0.301    0.224-0.321   $  3,225 / $    645
+   Flash DGX Spark 128 GB            4 local    26.5    0.176-0.260    0.176-0.260   $  4,266 / $  1,282
+   Flash DGX Spark 128 GB            4 200M     26.6    0.176-0.260    0.183-0.267   $  4,074 / $  1,085
+   Flash DGX Spark 128 GB            4 1G       26.9    0.173-0.256    0.193-0.276   $  3,793 / $    759
+   Flash M3 Max 128 GB               4 local    28.3          owned    0.000+owned   $  4,551 / $  1,368
+   Flash M3 Max 128 GB               4 200M     36.5          owned    0.021+owned   $  5,097 / $    983
+   Flash M3 Max 128 GB               4 1G       38.1          owned    0.031+owned   $  4,938 / $    643
+   Flash M5 Max 128 GB (MBP)         4 local    51.7    0.098-0.123    0.098-0.123   $  8,318 / $  2,500
+   Flash M5 Max 128 GB (MBP)         4 200M     53.1    0.095-0.120    0.104-0.128   $  8,081 / $  2,104
+   Flash M5 Max 128 GB (MBP)         4 1G       56.1    0.090-0.113    0.113-0.136   $  7,733 / $  1,411
+   Flash M5 Max 128 GB (MBP)         7 local    55.6    0.091-0.114    0.091-0.114   $  8,957 / $  2,692
+   Flash M5 Max 128 GB (MBP)         7 200M     57.3    0.088-0.111    0.097-0.120   $  8,719 / $  2,271
+   Flash M5 Max 128 GB (MBP)         7 1G       64.8    0.078-0.098    0.101-0.121   $  8,923 / $  1,628
+   Flash M5 Ultra 96 GB (Studio)     4 local    79.2    0.069-0.069    0.069-0.069   $ 12,746 / $  3,831
+   Flash M5 Ultra 96 GB (Studio)     4 200M     79.2    0.069-0.069    0.076-0.076   $ 12,166 / $  3,251
+   Flash M5 Ultra 96 GB (Studio)     4 1G       79.9    0.068-0.068    0.084-0.084   $ 11,572 / $  2,579
+   Flash M5 Ultra 96 GB (Studio)     8 local    89.8    0.061-0.061    0.061-0.061   $ 14,461 / $  4,346
+   Flash M5 Ultra 96 GB (Studio)     8 200M     89.8    0.061-0.061    0.068-0.068   $ 13,803 / $  3,688
+   Flash M5 Ultra 96 GB (Studio)     8 1G       97.1    0.056-0.056    0.072-0.072   $ 14,071 / $  3,136
+   Flash M5 Ultra 256 GB (Studio)    4 local    80.0    0.118-0.118    0.118-0.118   $ 12,870 / $  3,868
+   Flash M5 Ultra 256 GB (Studio)    4 200M     80.0    0.118-0.118    0.125-0.125   $ 12,285 / $  3,283
+   Flash M5 Ultra 256 GB (Studio)    4 1G       80.2    0.117-0.117    0.131-0.131   $ 11,856 / $  2,821
+   Flash M5 Ultra 256 GB (Studio)   12 local    99.5    0.095-0.095    0.095-0.095   $ 16,022 / $  4,815
+   Flash M5 Ultra 256 GB (Studio)   12 200M     99.5    0.095-0.095    0.102-0.102   $ 15,293 / $  4,086
+   Flash M5 Ultra 256 GB (Studio)   12 1G      106.3    0.089-0.089    0.102-0.102   $ 15,711 / $  3,739
+
