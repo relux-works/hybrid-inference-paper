@@ -1,0 +1,54 @@
+% Shared layout for every language version of the paper.
+% Fonts are loaded from paper/fonts/, so every machine and CI build sets the same glyphs.
+\usepackage{fontspec}
+\usepackage[english,russian]{babel}
+\babelfont{rm}[Path=fonts/ptserif/, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]{PT_Serif-Web}
+\babelfont{sf}[Path=fonts/ptsans/, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]{PT_Sans-Web}
+\babelfont{tt}[Path=fonts/ptmono/, Extension=.ttf, Scale=0.88]{PTM55FT}
+\usepackage[a4paper,top=20mm,bottom=22mm,left=20mm,right=20mm]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt plus 1pt}
+\setlength{\emergencystretch}{4em}
+
+\titleformat{\section}{\normalfont\fontsize{11.5}{14}\bfseries}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 2pt}{3pt}
+\titleformat{\subsection}{\normalfont\fontsize{10}{12}\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{5pt plus 2pt minus 1pt}{2pt}
+
+\setlist[enumerate]{leftmargin=2.0em,itemsep=0.5pt,topsep=2pt,parsep=0pt}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0.5pt,topsep=2pt,parsep=0pt}
+\captionsetup{font=small,labelfont=bf,labelsep=period,skip=3pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+
+\pagestyle{plain}
+
+\tikzset{
+  box/.style={draw,rectangle,thick,align=center,inner sep=2.5pt,font=\footnotesize,minimum width=27mm,minimum height=8mm},
+  zone/.style={draw,dashed,rounded corners=2pt},
+  zl/.style={font=\scriptsize\itshape,anchor=north west,inner sep=2pt},
+  lbl/.style={font=\scriptsize,align=center,fill=white,inner sep=1pt},
+  arr/.style={-{Latex[length=1.8mm]},thick},
+}
+
+% Version line from version.tex, which `make pdf` writes from git (.scripts/version.sh):
+% a release tag gives "Октябрь 2026, версия 0.1.0"; any other build is marked as a draft.
+\newcommand{\papermonth}{\ifcase\month\or Январь\or Февраль\or Март\or Апрель\or Май\or Июнь\or
+  Июль\or Август\or Сентябрь\or Октябрь\or Ноябрь\or Декабрь\fi}
+\newcommand{\paperversionline}{\papermonth\ \the\year,
+  \ifpaperrelease версия \paperversion\else черновик \paperversion\fi}

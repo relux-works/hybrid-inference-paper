@@ -1,2 +1,5 @@
 .temp/
 tools/tests/.build/
+/build/
+/dist/
+/paper/version.tex
