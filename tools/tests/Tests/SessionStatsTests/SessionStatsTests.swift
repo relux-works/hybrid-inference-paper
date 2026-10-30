@@ -333,14 +333,15 @@ struct CallTimeTests {
 
 @Suite(.serialized)
 struct ReleaseVersionTests {
-    // Real signed Git fixtures reject numeric prerelease leading zeros while preserving valid stable/RC release labels.
+    // Real disposable Git fixtures reject numeric prerelease leading zeros while preserving valid stable/RC release labels.
     @Test func strictPrereleaseLabels() throws {
+        // Fixture objects stay local and unsigned, like test-release.sh; no production signing credentials are needed.
         let version = ProcessInfo.processInfo.environment["RELEASE_VERSION_TEST_SCRIPT"] ?? unit.deletingLastPathComponent().appendingPathComponent(".scripts/version.sh").path
         for (tag, release) in [("v1.0.0-01", false), ("v1.0.0-rc.01", false), ("v1.0.0", true), ("v1.0.0-rc.1", true)] {
             let r = try directory(), target = r.appendingPathComponent("version.sh")
             try FileManager.default.copyItem(atPath: version, toPath: target.path)
             try FileManager.default.setAttributes([.posixPermissions:0o755], ofItemAtPath:target.path)
-            for command in [["init", "-q", "-b", "main"], ["add", "--", "version.sh"], ["commit", "-S", "-q", "-m", "Disposable signed release-label fixture"], ["tag", "-s", tag, "-m", "Disposable local release-label fixture; never publish"]] {
+            for command in [["init", "-q", "-b", "main"], ["add", "--", "version.sh"], ["-c", "commit.gpgsign=false", "commit", "-q", "-m", "Disposable release-label fixture"], ["-c", "tag.gpgsign=false", "tag", tag]] {
                 let made = try process(["git", "-C", r.path] + command)
                 try #require(made.0 == 0, "Fixture setup failed: \(made.1)")
             }
