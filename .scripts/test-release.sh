@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
 # Tests for .scripts/version.sh and .scripts/release-check.sh on a throwaway git repository.
-# Run from anywhere: .scripts/test-release.sh   (needs bash and git; no TeX)
+# Run from anywhere: .scripts/test-release.sh   (needs bash, git and ssh-keygen; no TeX)
 set -euo pipefail
 
 here=$(cd "$(dirname "$0")" && pwd)
 work=$(mktemp -d)
 trap 'rm -rf "$work"' EXIT
-cd "$work"
+mkdir "$work/repo"
+cd "$work/repo"
 git init -q -b main .
 git config user.name test
 git config user.email test@example.invalid
 git config commit.gpgsign false
 git config tag.gpgsign false
-mkdir .scripts
+ssh-keygen -q -t ed25519 -N '' -f "$work/signing-key"
+git config gpg.format ssh
+git config user.signingkey "$work/signing-key"
+mkdir .scripts .github
+printf 'ivan@relux.works namespaces="git" %s\n' "$(cat "$work/signing-key.pub")" > .github/allowed_signers
 cp "$here/version.sh" "$here/release-check.sh" .scripts/
 
 passed=0
@@ -27,12 +32,15 @@ check_ok() {
 }
 check_fails() {
   local out
+  printf 'existing notes\n' > notes.md
   if out=$(.scripts/release-check.sh "$1" notes.md 2>&1); then
     bad "release-check $1 should fail"
   else
     expect_has "$out" "$2" "release-check $1 failure reason"
   fi
+  expect_eq "$(cat notes.md)" 'existing notes' "release-check $1 preserves notes on rejection"
 }
+sign_tag() { git tag -s "$1" -m "$1"; }
 # Commit everything and move the simulated origin/main to it, as a landed pull request would.
 land() { git add -A; git commit -q -m "$1"; git update-ref refs/remotes/origin/main HEAD; }
 
@@ -60,7 +68,7 @@ expect_has "$tex" '\paperreleasefalse' "untagged build is a draft"
 expect_has "$tex" '\year=2026 \month=10 \day=30' "title-page date is the commit date"
 
 # Claim: an exact SemVer tag on a clean tree is a release labelled by the bare version.
-git tag v0.0.1
+sign_tag v0.0.1
 expect_eq "$(.scripts/version.sh)" "0.0.1" "release label"
 expect_has "$(.scripts/version.sh --tex)" '\paperreleasetrue' "tagged clean build is a release"
 
@@ -80,7 +88,7 @@ land "second"
 described=$(git describe --tags)
 expect_eq "$(.scripts/version.sh)" "${described#v}" "label after a tag"
 expect_has "$(.scripts/version.sh)" "0.0.1-1-g" "label after a tag names the tag and distance"
-git tag v0.1.0-rc.1
+sign_tag v0.1.0-rc.1
 expect_eq "$(.scripts/version.sh)" "0.1.0-rc.1" "pre-release label"
 check_ok v0.1.0-rc.1
 expect_eq "$(cat notes.md)" "- Candidate." "release notes of v0.1.0-rc.1"
@@ -106,12 +114,12 @@ done
 check_fails v9.9.9 "does not exist"
 
 # Claim: release-check rejects a tag whose changelog has no section, or only an empty one, for that version.
-git tag v0.0.2
+sign_tag v0.0.2
 check_fails v0.0.2 'no non-empty section "## [0.0.2]"'
-git tag v0.0.3
+sign_tag v0.0.3
 check_fails v0.0.3 'no non-empty section "## [0.0.3]"'
 # Claim: a pre-release section does not count for the final version.
-git tag v0.1.0
+sign_tag v0.1.0
 check_fails v0.1.0 'no non-empty section "## [0.1.0]"'
 
 # Claim: the changelog is read at the tagged commit, so adding the section later does not release the tag.
@@ -126,9 +134,12 @@ git switch -q -c side
 echo side > text.tex
 git add -A
 git commit -q -m side
-git tag v0.2.0
+sign_tag v0.2.0
 check_fails v0.2.0 "is not on origin/main"
 git switch -q main
 
 echo "test-release: $passed passed, $failed failed"
 [[ $failed -eq 0 ]]
+
+# Run the independent SSH authorization fixtures as part of the hosted PR build too.
+"$here/test-release-signatures.sh"

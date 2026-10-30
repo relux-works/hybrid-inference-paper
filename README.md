@@ -37,10 +37,32 @@ To release version X.Y.Z:
 3. CI checks the tag, builds the PDF and publishes the release. Nothing is published unless all of these hold:
    - the tag is SemVer with a leading `v`;
    - the commit is on `main`;
+   - the tag is annotated and has a valid SSH signature for `ivan@relux.works`, verified with
+     `.github/allowed_signers` copied from the current reviewed `origin/main` commit;
+   - the tagged tree carries exactly that same signer pin;
    - `CHANGELOG.md` at that commit has a non-empty section for the version.
+
+The public signer pin is the `ssh-ed25519` key of GitHub user `ivanopcode`, key id `1245573`, titled
+"ivmbp agents signing 2026-10-15". Its fingerprint is
+`SHA256:rE/sRlfdFt/vT5y5yukDCsq4aFtC48pbWsq9z4hm8MA`. Source: the public
+[`GET /users/ivanopcode/ssh_signing_keys`](https://api.github.com/users/ivanopcode/ssh_signing_keys) API;
+pin supplied by the orchestrator and fingerprint checked on 2026-10-30. The committed allowed-signers entry
+restricts the principal to `ivan@relux.works` and the namespace to `git`. CI verifies with `git verify-tag`,
+`gpg.format=ssh` and `gpg.ssh.allowedSignersFile` pointing to a temporary copy extracted with `git show` from
+the resolved default-branch commit. It never uses the tagged or working-tree pin as its trust source.
+Signer-policy changes must land on the reviewed default branch before tagging. Historical tags with a
+different or absent pin cannot be released by this gate. No private signing key or signing agent is provisioned
+in CI; signature tests generate disposable fixture keys outside their throwaway repository trees.
 
 A published release is never rebuilt or replaced: a correction is a new version. If a run fails before publishing, for
 example on a network error, re-run it. If the tag itself is wrong, release the next version and leave the tag in place.
+
+Both CI jobs use standard GitHub-hosted Linux x64 `ubuntu-24.04` runners. Pull requests use `pull_request`
+with `contents: read`; no repository secrets, private-network connection, signing agent or production credentials
+are configured. Only the tag release job has `contents: write`, used by the publication step after tag verification
+and the PDF build. Checkout never persists credentials, and actions are pinned by full commit SHA. There is no
+self-hosted fallback. Assets and `SHA256SUMS` are uploaded into a draft release before it is published, without
+Actions artifact storage.
 
 ## Layout
 
@@ -93,7 +115,9 @@ checking its SHA-256 digest. The fonts come from `paper/fonts/`, so every machin
 |---|---|---|
 | `Makefile` | Builds the PDF | `make pdf`, `make clean` |
 | `.scripts/version.sh` | Version label from git tags; with `--tex`, the title-page version | Called by `make pdf` |
-| `.scripts/release-check.sh` | Checks a tag before release and extracts its changelog section | `.scripts/release-check.sh vX.Y.Z` |
+| `.scripts/release-check.sh` | Verifies the tag signature and release criteria, then extracts its changelog section | `.scripts/release-check.sh vX.Y.Z`; notes go to `build/release-notes.md` |
 | `.scripts/install-tectonic.sh` | Installs the pinned tectonic and prints its directory | See above |
-| `.scripts/test-release.sh` | Positive and negative tests of the two release scripts, on a throwaway repository | `.scripts/test-release.sh` |
-| `.github/workflows/paper.yml` | Checks that the PDF builds for pull requests and `main`; for a tag, builds it and publishes the GitHub Release. Runs on the private rise1 runner group | Automatic |
+| `.scripts/test-release.sh` | Version, changelog, ancestry and SSH authorization tests; needs Bash, Git and OpenSSH `ssh-keygen` | `.scripts/test-release.sh`; disposable repositories and keys are removed on exit |
+| `.scripts/test-release-signatures.sh` | Authorized signature control plus rejection fixtures for unsigned, lightweight, foreign-key, tampered-pin and related trust failures | `.scripts/test-release-signatures.sh`; disposable repositories and keys are removed on exit |
+| Git / OpenSSH | Checks SSH tag signatures using the reviewed public pin | Called by `.scripts/release-check.sh`; temporary verification files are removed on exit |
+| `.github/workflows/paper.yml` | Hosted `ubuntu-24.04` builds for pull requests and `main`; verified tags build and publish a draft-first GitHub Release | Automatic; PDF and `SHA256SUMS` go directly to the Release |
