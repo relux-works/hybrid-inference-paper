@@ -78,7 +78,7 @@ usage-event UTC date semantics and benchmark interpretation. For example:
 Outputs belong under `.temp/`; coverage and per-call CSV stay private. Run the
 Swift 6/Swift Testing fixtures with
 `swift test --package-path tools/tests --scratch-path .temp/session-stats-build`.
-The original delivered measurements remain under `data/measurements/`.
+The original delivered measurements remain under `data/measurements/`. The fixture suite also checks strict SemVer release labels in disposable signed Git repositories.
 
 ## Building the PDF
 

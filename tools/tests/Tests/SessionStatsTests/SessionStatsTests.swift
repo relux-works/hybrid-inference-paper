@@ -330,3 +330,23 @@ struct CallTimeTests {
         #expect(t["timestamped_calls"] as? Int == 1); #expect(t["first_utc"] as? String == "2026-01-01T00:00:01Z")
     }
 }
+
+@Suite(.serialized)
+struct ReleaseVersionTests {
+    // Real signed Git fixtures reject numeric prerelease leading zeros while preserving valid stable/RC release labels.
+    @Test func strictPrereleaseLabels() throws {
+        let version = ProcessInfo.processInfo.environment["RELEASE_VERSION_TEST_SCRIPT"] ?? unit.deletingLastPathComponent().appendingPathComponent(".scripts/version.sh").path
+        for (tag, release) in [("v1.0.0-01", false), ("v1.0.0-rc.01", false), ("v1.0.0", true), ("v1.0.0-rc.1", true)] {
+            let r = try directory(), target = r.appendingPathComponent("version.sh")
+            try FileManager.default.copyItem(atPath: version, toPath: target.path)
+            try FileManager.default.setAttributes([.posixPermissions:0o755], ofItemAtPath:target.path)
+            for command in [["init", "-q", "-b", "main"], ["add", "--", "version.sh"], ["commit", "-S", "-q", "-m", "Disposable signed release-label fixture"], ["tag", "-s", tag, "-m", "Disposable local release-label fixture; never publish"]] {
+                let made = try process(["git", "-C", r.path] + command)
+                try #require(made.0 == 0, "Fixture setup failed: \(made.1)")
+            }
+            let result = try process(["bash", "-c", "cd \"$1\" && exec ./version.sh --tex", "fixture", r.path])
+            #expect(result.0 == 0)
+            #expect(result.1.contains(release ? "\\paperreleasetrue" : "\\paperreleasefalse"), "SemVer label mismatch for \(tag)")
+        }
+    }
+}
