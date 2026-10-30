@@ -1,4 +1,5 @@
-ad999a0afa000d222a78ba64f39a8ad35abb27453887b9bd1d11b4714a2c4217  ./README.md
+2277f74affb2304a58191deefb25e2cd5ccc6984d0ba1f26c0370a508a713c8c  ./.gitignore
+e5fe75825ff2d95752371476cce231889cd7204942153c0d7ffafa8489175401  ./README.md
 3c840e014c585a7cc9385a8cf5d96bc892f10e99b7e9890b1b4ac23f260c921b  ./calc/equilibrium.csv
 6b8353abd618faa23c0ca5bf34d0f49316a9a78a74133f985be96587732f58b1  ./calc/hybrid_calc2.out
 18445ae81397edb70e3124cd0b602c323efd3e6c497c4a8e80930f63d853fafe  ./calc/hybrid_calc2.py
@@ -33,6 +34,8 @@ b6989605f6a2db41430257b55e42b36551a280265ad5d817ce18d8623a213608  ./data/researc
 5b124dd03c3237b73abc9d406026ac81526b2cf84683b3724e718322911a2236  ./docs/prototype/prototype-spec.html
 e5858388ab249646c8c65df4d6b4f4c6009fc5ffd30c8f766cc6052b3cf0936b  ./docs/prototype/prototype-spec.md
 8afd6e7615f6a7662ed8a627c5d95a541821d5130b9d067a1a038a12d01a7d99  ./paper/README.md
-555f0a18fe9d18e3b78cfaadaaa907aae3e7a3e3aa64e2008a3eef26917af6ff  ./tools/README.md
-0982d9641a18a2195d6cac3a3e0cc22c5509c2d2b4d2223353185af99325619d  ./tools/agent_session_stats.py
+cbe293a3b57c1a4e675cde652523aead31b7fa9d77f71d8aa9b1d84a215002e6  ./tools/README.md
+99dce8012210a4ec961c82d0193255aa81ace74a0eda848428157ff74dcef37b  ./tools/agent_session_stats.py
 c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095  ./tools/hybrid_bench.py
+bc4f38b911d553229ad3c950c9ed41fa18951e33219a2a534e79caa321ac6881  ./tools/tests/Package.swift
+b253c0e511137df87fb77e4ce6f0e137a2b3a568d1abb63dbce3e547a61c36dd  ./tools/tests/Tests/SessionStatsTests/SessionStatsTests.swift

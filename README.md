@@ -33,3 +33,14 @@ is made public; the proposal is CC BY 4.0 for text and Apache-2.0 for code.
 
 Run, for example: `cd calc && python3 hybrid_calc4.py > hybrid_calc4.out`. Numbers marked as estimates in the outputs
 are model results, not measurements.
+
+## Measurement tools
+
+Use Python 3 for local numeric session analysis and inference benchmarking; see
+[`tools/README.md`](tools/README.md) for exact commands, private source coverage,
+usage-event UTC date semantics and benchmark interpretation. For example:
+`mkdir -p .temp/session-stats && python3 tools/agent_session_stats.py --auto --out .temp/session-stats/stats.json --coverage .temp/session-stats/coverage.json`.
+Outputs belong under `.temp/`; coverage and per-call CSV stay private. Run the
+Swift 6/Swift Testing fixtures with
+`swift test --package-path tools/tests --scratch-path .temp/session-stats-build`.
+The original delivered measurements remain under `data/measurements/`.

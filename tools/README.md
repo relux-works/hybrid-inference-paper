@@ -1,39 +1,91 @@
 # Hybrid-inference measurement tools
 
 Two standalone scripts for the hybrid-inference study (server prefill, client decode).
-Both need only Python 3.8+ and its standard library. Neither sends data anywhere: the
+Both scripts use Python 3.8+ and its standard library. Neither sends data anywhere: the
 session script reads local logs, the benchmark talks only to a local inference server.
-Both write their results to the current directory.
+Outputs go to the requested paths (defaults are in the current directory).
 
 ## 1. `agent_session_stats.py`: what agent turns look like
 
-Reads Claude Code, Codex CLI and Muse session logs. It reports the distribution of four
-things per model call: context depth, new input tokens since the previous call (tool
-output, user text), output tokens, and the time between calls. It also reports tool
-result sizes. Only numbers are written. There is no text, no paths and no project names,
-and the per-call CSV carries salted hashes instead of session ids.
+Reads recorded Claude Code, Codex CLI and Muse usage locally, including live,
+Curator, alternate/isolated homes, archived Codex sessions and configured backup
+folders/ZIPs. Version 1.5 starts from the validated 1.4 backup-aware implementation;
+the delivered 1.4 source and full04 measurements under `data/measurements/` remain
+historical evidence. No model/provider or network request is made.
+
+From the repository root:
 
 ```bash
-python3 agent_session_stats.py --auto --out stats.json --csv calls.csv
-# a sample instead of everything, recent sessions only:
-python3 agent_session_stats.py --auto --sample 500 --since 2026-06-01 --out stats.json
+mkdir -p .temp/session-stats
+python3 tools/agent_session_stats.py --auto --out .temp/session-stats/stats.json \
+  --coverage .temp/session-stats/coverage.json
+# Explicit reproducible inventory, instead of automatic discovery:
+python3 tools/agent_session_stats.py --sources /private/path/sources.json \
+  --out .temp/session-stats/stats.json --coverage .temp/session-stats/coverage.json
+# Intentional partial sample, capped per provider:
+python3 tools/agent_session_stats.py --auto --sample 500 --out .temp/session-stats/sample.json
 ```
 
-`--auto` scans these locations:
+The private source manifest is `{"roots":{"claude":["/path/projects"],
+"codex":["/path/sessions"],"muse":["/path/sessions"]},"zip_roots":["/path/archives"]}`.
+Add `--claude DIR`, `--codex DIR` or `--muse DIR` for more roots. `--auto` also
+considers provider environment variables, local Claude usage archives, default
+AgentSessions backups and the mounted LaCie archive. Custom/older backup layouts
+need explicit roots. Absent defaults are recorded in private coverage; a successful
+exit cannot prove an unconfigured location was scanned. ZIPs are streamed without
+extraction. Inode/content copies and provider call identities are deduplicated;
+updated partial usage records retain their maximum logged token counts.
 
-| Agent | Locations |
+`stats.json` contains numeric aggregates/model labels, no transcripts, paths or
+native session IDs. Optional `--csv .temp/session-stats/calls.csv` contains per-call
+numbers and salted context identifiers; keep it local unless specifically requested.
+**Coverage is private**: it contains root paths, source counts and salted references.
+Exit 2/`partial` marks parse/read errors, intentional filtering or an empty corpus;
+inspect coverage, missing roots and provider counts before claiming completeness.
+Every input is bounded to its length at open, not an atomic cross-session snapshot.
+Runtime depends on bytes and archive compression; full historical inventories can
+take tens of minutes. There is no `--since` filter.
+
+Per provider and for `all`, `call_time` reports:
+
+| Field | Meaning |
 |---|---|
-| Claude Code | `~/.claude/projects` and `$CLAUDE_CONFIG_DIR/projects` |
-| Codex | `~/.codex/sessions` and `$CODEX_HOME/sessions` |
-| Muse | `~/.local/share/muse/sessions` and `~/Library/Application Support/muse/sessions` |
-| All three | the Curator homes `~/.curator/environments/*` |
+| `first_utc`, `last_utc` | Earliest/latest retained valid usage-event time; null without time coverage |
+| `distinct_utc_days` | UTC dates containing retained calls, not the calendar span; `all` is a set union |
+| `timestamped_calls` | Deduplicated, min-call-filtered calls with valid time |
+| `missing_timestamp_calls` | No supplied timestamp on any copy and no valid time |
+| `invalid_timestamp_calls` | Supplied invalid time and no valid copy; includes bool, nonfinite and unrepresentable UTC dates |
+| `conflicting_timestamp_calls` | Unique calls with differing valid projection timestamps; never extra calls/days |
+| `status` | `no_calls`, `no_timestamped_calls`, `partial` (missing/invalid/conflicting), or `complete` |
 
-Add `--claude DIR`, `--codex DIR` or `--muse DIR` for other places.
+Time coverage is separate from source-reading status. Claude/Codex use the usage
+envelope `timestamp`; Muse uses runtime.session `recorded_at`. These are event
+logging times, not evidence of exact inference start. Naive ISO timestamps assume
+UTC; positive numeric values retain the prior seconds/ms/us/ns magnitude heuristic.
+The first valid time in discovery/reader order is retained. A later duplicate can
+fill missing/invalid time; other valid times flag a conflict, without extending the
+date range. File names, backup labels and mtimes never supply call dates.
 
-Runtime: about 15 s per 600 MB of logs.
+`new_in` estimates context growth after previous output; it is **not** billed
+uncached input or measured prefill traffic. Muse input/cache fields remain unchanged
+and their cache semantics are unverified. Reasoning is not added to output. Tool
+sizes use a character heuristic. Model labels are logged metadata, not attested IDs.
 
-Send back `stats.json`. `calls.csv` is optional: it holds per-call numbers and model names
-only.
+### Executable checks
+
+```bash
+swift test --package-path tools/tests --scratch-path .temp/session-stats-build
+# Expected red control: the six date tests must fail on the frozen pre-feature source.
+SESSION_STATS_TEST_SCRIPT="$PWD/data/measurements/ivmbp-2026-10-30/agent_session_stats.py" \
+  swift test --package-path tools/tests --scratch-path .temp/session-stats-build --filter CallTimeTests
+```
+
+Swift 6/Swift Testing and Python 3 standard library are required for these checks.
+Fixtures stay under `.temp/session-stats-tests/`, never touch real user data, and
+exercise the ten retained backup/dedup/privacy groups plus date normalization,
+invalid/missing times, duplicate conflicts/fill, all three readers, UTC set union,
+min-call filtering and absent mtime fallback. A passing synthetic fixture does not
+establish source completeness for a real machine.
 
 ## 2. `hybrid_bench.py`: prefill and decode at long context
 

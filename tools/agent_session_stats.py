@@ -1,247 +1,465 @@
 #!/usr/bin/env python3
-"""Agent session statistics for the hybrid-inference study (server prefill, client decode).
+"""Read-only, local Claude Code / Codex / Muse usage statistics, including backups.
 
-Reads Claude Code, Codex CLI and Muse session logs and reports, per model call:
-  depth      context tokens the call was conditioned on (cached + uncached input);
-  new_in     input tokens added since the previous call, excluding the previous
-             call's own output (tool results, user text, injected reminders);
-  output     generated tokens (thinking/reasoning included);
-  gap        seconds between consecutive calls of the same agent (model + tool time);
-and per tool result its size. These are the inputs of the hybrid model: new_in is what
-the server would prefill per turn, output is what the client decodes.
-
-Privacy: only numbers leave the script. No text, no file paths, no project names; the
-optional per-call CSV carries salted hashes instead of session ids.
-
-Python 3.8+, standard library only. Examples:
-  python3 agent_session_stats.py --auto --out stats.json
-  python3 agent_session_stats.py --auto --sample 300 --since 2026-06-01 --csv calls.csv
-  python3 agent_session_stats.py --claude ~/.claude/projects --codex ~/.codex/sessions
+Standard library only; no network or provider requests. Contents and native IDs are
+never exported. Inputs are bounded to the length seen at file open. ZIP members
+are streamed, CRC checked, and never extracted. Reports distinguish usage records
+from estimates: new_in is a context-growth heuristic, NOT uncached billing input.
+Muse input_tokens are reported unchanged; cache accounting is not guessed.
 """
 import argparse
+import collections
+import contextlib
 import datetime as dt
 import fnmatch
 import glob
 import hashlib
 import json
+import math
 import os
+from pathlib import Path
 import random
 import statistics
 import sys
 import time
+import zipfile
 
-VERSION = "1.0"
-CHARS_PER_TOKEN = 3.6     # rough, for tool-result sizes measured in characters
+VERSION = '1.5-call-time'
+CHARS_PER_TOKEN = 3.6
+AGENTS = ('claude', 'codex', 'muse')
+ZIP_HANDLES = {}
 
 
-# ------------------------------------------------------------------ helpers
-def parse_ts(v):
-    """ISO string or epoch number (s, ms, us, ns) -> epoch seconds, or None."""
-    if v is None:
-        return None
-    if isinstance(v, (int, float)):
-        x = float(v)
-        if x > 1e17:
-            return x / 1e9      # ns
-        if x > 1e14:
-            return x / 1e6      # us
-        if x > 1e11:
-            return x / 1e3      # ms
+def parse_ts(value):
+    try:
+        if isinstance(value, bool):
+            return None
+        if isinstance(value, (int, float)):
+            x = float(value)
+            x /= 1e9 if x > 1e17 else 1e6 if x > 1e14 else 1e3 if x > 1e11 else 1
+        elif isinstance(value, str):
+            d = dt.datetime.fromisoformat(value.replace('Z', '+00:00'))
+            x = d.replace(tzinfo=dt.timezone.utc).timestamp() if d.tzinfo is None else d.timestamp()
+        else:
+            return None
+        if not math.isfinite(x):
+            return None
+        dt.datetime.fromtimestamp(x, dt.timezone.utc)  # require a representable UTC instant
         return x
-    if isinstance(v, str):
-        s = v.strip().replace("Z", "+00:00")
-        try:
-            return dt.datetime.fromisoformat(s).timestamp()
-        except ValueError:
-            try:
-                return dt.datetime.fromisoformat(s[:26] + s[-6:]).timestamp()
-            except ValueError:
-                return None
-    return None
+    except (ValueError, OverflowError, OSError):
+        return None
 
 
-def text_len(v):
-    """Total length of text in a tool result (str, list of parts, or dict)."""
-    if v is None:
-        return 0
-    if isinstance(v, str):
-        return len(v)
-    if isinstance(v, list):
-        return sum(text_len(x) for x in v)
-    if isinstance(v, dict):
-        if v.get("type") in ("image", "input_image"):
-            return 0
-        for k in ("text", "content", "output"):
-            if k in v:
-                return text_len(v[k])
+def text_len(value):
+    if isinstance(value, str):
+        return len(value)
+    if isinstance(value, list):
+        return sum(map(text_len, value))
+    if isinstance(value, dict) and value.get('type') not in ('image', 'input_image'):
+        for key in ('text', 'content', 'output'):
+            if key in value:
+                return text_len(value[key])
     return 0
 
 
-def lines(path):
-    with open(path, "r", encoding="utf-8", errors="replace") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                yield json.loads(line)
-            except ValueError:
-                continue
+def number(value):
+    if value is None:
+        return 0
+    if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+        raise ValueError('INVALID_TOKEN_COUNT')
+    return value
+
+
+def usage(u, agent):
+    if not isinstance(u, dict) or 'input_tokens' not in u or 'output_tokens' not in u:
+        raise ValueError('INCOMPLETE_USAGE')
+    inp = number(u.get('input_tokens'))
+    cached = number(u.get('cache_read_input_tokens') if agent == 'claude' else
+                    u.get('cached_input_tokens') if agent == 'codex' else
+                    u.get('cache_read_tokens', u.get('cached_tokens')))
+    write = number(u.get('cache_creation_input_tokens')) if agent == 'claude' else 0
+    output = number(u.get('output_tokens'))
+    details = u.get('output_tokens_details') or {}
+    reasoning = number(details.get('thinking_tokens')) if agent == 'claude' else number(
+        u.get('reasoning_output_tokens') if agent == 'codex' else u.get('reasoning_tokens'))
+    return inp + write + (cached if agent == 'claude' else 0), cached, output, reasoning
 
 
 class Stream:
-    """One agent context: ordered model calls and tool results."""
-
     def __init__(self, agent, key):
         self.agent, self.key = agent, key
-        self.calls = {}        # call id -> dict(t, prompt, cached, output, reasoning, model)
-        self.tools = []        # tool result sizes, chars
+        self.calls, self.tool_map = {}, {}
         self.order = 0
 
-    def add_call(self, cid, t, prompt, cached, output, reasoning, model):
-        c = self.calls.get(cid)
-        if c is None:
-            self.order += 1
-            self.calls[cid] = dict(t=t, prompt=prompt, cached=cached, output=output,
-                                   reasoning=reasoning, model=model, n=self.order)
-        else:   # streamed blocks repeat usage; keep the final (largest) output
-            c["output"] = max(c["output"], output)
-            c["reasoning"] = max(c["reasoning"], reasoning)
-            if c["t"] is None:
-                c["t"] = t
+    @property
+    def tools(self):
+        return self.tool_map.values()
 
 
-# ------------------------------------------------------------------ readers
-def read_claude(path):
-    streams = {}
-    for e in lines(path):
-        typ = e.get("type")
-        key = (bool(e.get("isSidechain")), e.get("agentId"))
-        if typ == "assistant":
-            m = e.get("message") or {}
-            u = m.get("usage")
-            if not isinstance(u, dict) or m.get("model") == "<synthetic>":
+class Corpus:
+    def __init__(self):
+        self.streams = {}
+        self.seen = {}
+        self.unique_calls = 0
+        self.seen_tools = {}
+        self.audit = {a: collections.Counter() for a in AGENTS}
+        self.file_audit = None
+
+    def bump(self, agent, key, count=1):
+        self.audit[agent][key] += count
+        if self.file_audit is not None:
+            self.file_audit[key] += count
+
+    def stream(self, agent, key):
+        return self.streams.setdefault((agent, key), Stream(agent, key))
+
+    def timestamp(self, agent, c, value):
+        parsed = parse_ts(value)
+        if parsed is None:
+            c['invalid_timestamp'] |= value is not None
+        elif c['t'] is None:
+            c['t'] = parsed
+        elif c['t'] != parsed:
+            c['conflicting_timestamp'] = True
+            self.bump(agent, 'conflicting_timestamp_records')
+
+    def call(self, agent, stream, cid, timestamp, u, model, fallback, aliases=()):
+        try:
+            prompt, cached, output, reasoning = usage(u, agent)
+        except (ValueError, AttributeError):
+            self.bump(agent, 'invalid_usage_records')
+            return
+        self.bump(agent, 'usage_records')
+        if agent == 'muse' and not any((prompt, cached, output, reasoning)):
+            self.bump(agent, 'zero_usage_completions')
+        if cached > prompt:
+            self.bump(agent, 'cache_greater_than_reported_input')
+        if not cid:
+            self.bump(agent, 'calls_with_fallback_identity')
+            cid = ('fallback', fallback)
+        ident = (agent, str(cid))
+        identities = [ident] + [(agent, str(x)) for x in aliases]
+        old = next((self.seen[x] for x in identities if x in self.seen), None)
+        if old is not None and ident != old['primary_identity']:
+            self.bump(agent, 'cross_format_identity_matches')
+        if old is not None:
+            for x in identities:
+                self.seen[x] = old
+        if old is not None:
+            self.bump(agent, 'duplicate_call_records')
+            c = old
+            if (prompt, cached, output, reasoning) != (c['prompt'], c['cached'], c['output'], c['reasoning']):
+                self.bump(agent, 'usage_update_records')
+            for k, v in [('prompt', prompt), ('cached', cached), ('output', output), ('reasoning', reasoning)]:
+                c[k] = max(c[k], v)
+            if not c['model'] and isinstance(model, str):
+                c['model'] = model
+            self.timestamp(agent, c, timestamp)
+            return c
+        s = self.stream(agent, stream)
+        s.order += 1
+        c = dict(t=None, invalid_timestamp=False, conflicting_timestamp=False,
+                 prompt=prompt, cached=cached, output=output,
+                 reasoning=reasoning, model=model if isinstance(model, str) else None, n=s.order, primary_identity=ident)
+        self.timestamp(agent, c, timestamp)
+        s.calls[str(cid)] = c
+        self.unique_calls += 1
+        for x in identities:
+            self.seen[x] = c
+        return c
+
+    def tool(self, agent, stream, cid, content):
+        ident = (agent, cid)
+        s = self.seen_tools.get(ident)
+        if s is None:
+            s = self.stream(agent, stream)
+            self.seen_tools[ident] = s
+        else:
+            self.bump(agent, 'duplicate_tool_records')
+        s.tool_map[cid] = max(s.tool_map.get(cid, 0), text_len(content))
+
+
+def records(source, corpus, agent):
+    with source.open() as f:
+        remaining = source.size
+        i = 0
+        while remaining:
+            line = f.readline(remaining)
+            if not line:
+                corpus.bump(agent, 'truncated_source_files')
+                break
+            remaining -= len(line)
+            i += 1
+            if not line.strip():
                 continue
-            inp = int(u.get("input_tokens") or 0)
-            cw = int(u.get("cache_creation_input_tokens") or 0)
-            cr = int(u.get("cache_read_input_tokens") or 0)
-            out = int(u.get("output_tokens") or 0)
-            reas = int(((u.get("output_tokens_details") or {}).get("thinking_tokens")) or 0)
-            cid = m.get("id") or e.get("requestId") or e.get("uuid")
-            s = streams.setdefault(key, Stream("claude", (path, key)))
-            s.add_call(cid, parse_ts(e.get("timestamp")), inp + cw + cr, cr, out, reas, m.get("model"))
-        elif typ == "user":
-            c = (e.get("message") or {}).get("content")
-            if isinstance(c, list):
-                for b in c:
-                    if isinstance(b, dict) and b.get("type") == "tool_result":
-                        streams.setdefault(key, Stream("claude", (path, key))).tools.append(text_len(b.get("content")))
-    return list(streams.values())
-
-
-def read_codex(path):
-    streams, model, have_records, last_total = {}, None, False, {}
-    pending = []
-    for e in lines(path):
-        typ, p = e.get("type"), e.get("payload") or {}
-        if typ == "turn_context":
-            model = p.get("model") or model
-        elif typ == "token_usage_record":
-            have_records = True
-            u = p.get("usage") or {}
-            tid = p.get("thread_id") or "main"
-            s = streams.setdefault(tid, Stream("codex", (path, tid)))
-            s.add_call(p.get("response_id") or e.get("ordinal"), parse_ts(e.get("timestamp")),
-                       int(u.get("input_tokens") or 0), int(u.get("cached_input_tokens") or 0),
-                       int(u.get("output_tokens") or 0), int(u.get("reasoning_output_tokens") or 0), model)
-        elif typ == "event_msg" and p.get("type") == "token_count":
-            info = p.get("info") or {}
-            lu, tu = info.get("last_token_usage"), info.get("total_token_usage")
-            if isinstance(lu, dict) and isinstance(tu, dict):
-                sig = tu.get("total_tokens")
-                if last_total.get("main") != sig:
-                    last_total["main"] = sig
-                    pending.append((sig, parse_ts(e.get("timestamp")), lu, model))
-        elif typ == "response_item" and p.get("type") in (
-                "function_call_output", "custom_tool_call_output", "local_shell_call_output", "tool_search_output"):
-            tid = "main"
-            streams.setdefault(tid, Stream("codex", (path, tid))).tools.append(text_len(p.get("output")))
-    if not have_records:   # older rollouts: per-response usage only via token_count events
-        s = streams.setdefault("main", Stream("codex", (path, "main")))
-        for sig, t, lu, mdl in pending:
-            s.add_call(sig, t, int(lu.get("input_tokens") or 0), int(lu.get("cached_input_tokens") or 0),
-                       int(lu.get("output_tokens") or 0), int(lu.get("reasoning_output_tokens") or 0), mdl)
-    return list(streams.values())
-
-
-def muse_events(path):
-    for r in lines(path):
-        if "children" in r:
-            for ch in r.get("children") or []:
-                try:
-                    yield json.loads(ch.get("record_json") or "")
-                except (ValueError, AttributeError):
+            try:
+                e = json.loads(line)
+                if not isinstance(e, dict):
+                    corpus.bump(agent, 'non_object_rows')
                     continue
-        elif r.get("record_type") == "event":
-            yield r
+                yield i, e
+            except (ValueError, UnicodeError):
+                corpus.bump(agent, 'invalid_json_rows')
+    if source.member is None:
+        after = source.path.stat()
+        if after.st_size > source.size:
+            corpus.bump(agent, 'files_appended_during_read')
+        elif after.st_size != source.size or after.st_mtime_ns != source.mtime_ns:
+            corpus.bump(agent, 'files_changed_in_place')
 
 
-def read_muse(path):
-    s = Stream("muse", (path, "main"))
-    for r in muse_events(path):
-        if r.get("payload_type") != "runtime.session":
+def read_claude(source, corpus):
+    for row, e in records(source, corpus, 'claude'):
+        session = e.get('sessionId') or e.get('session_id') or source.session_hint
+        key = (str(session), bool(e.get('isSidechain')), str(e.get('agentId') or 'main'))
+        m = e.get('message') or {}
+        if not isinstance(m, dict):
             continue
-        p = r.get("payload") or {}
-        ev = p.get("event") if isinstance(p.get("event"), dict) else {}
-        kind = ev.get("kind")
-        if kind == "model_completed":
-            u = ev.get("usage") or {}
-            inp = int(u.get("input_tokens") or 0)
-            cached = int(u.get("cache_read_tokens") or u.get("cached_tokens") or 0)
-            prompt = inp + cached if cached > inp else inp     # Anthropic-style vs OpenAI-style accounting
-            s.add_call(r.get("id") or r.get("sequence"), parse_ts(r.get("recorded_at")), prompt, cached,
-                       int(u.get("output_tokens") or 0), int(u.get("reasoning_tokens") or 0), ev.get("model"))
-        elif kind == "tool_result_batch_committed":
-            for res in ev.get("results") or []:
-                s.tools.append(text_len(res.get("text")))
-    return [s]
+        if e.get('type') == 'assistant' and m.get('model') != '<synthetic>':
+            if m.get('usage') is not None:
+                corpus.call('claude', key, m.get('id') or e.get('requestId') or e.get('uuid'),
+                            e.get('timestamp'), m['usage'], m.get('model'), (key, row))
+            else:
+                corpus.bump('claude', 'assistant_rows_without_usage')
+        elif e.get('type') == 'user' and isinstance(m.get('content'), list):
+            for i, b in enumerate(m['content']):
+                if isinstance(b, dict) and b.get('type') == 'tool_result':
+                    cid = b.get('tool_use_id') or e.get('uuid') or (source.digest, row, i)
+                    corpus.tool('claude', key, str(cid), b.get('content'))
 
 
-READERS = {"claude": read_claude, "codex": read_codex, "muse": read_muse}
+def codex_signature(u, totals):
+    fields = ['input_tokens','cached_input_tokens','output_tokens','reasoning_output_tokens']
+    values = [u.get(k,0) for k in fields] if isinstance(u,dict) else None
+    return json.dumps([values, (totals or {}).get('total_tokens')], separators=(',', ':'))
 
 
-# ------------------------------------------------------------------ discovery
+def legacy_identity(session, total):
+    fields = ['input_tokens','cached_input_tokens','output_tokens','reasoning_output_tokens']
+    return ('legacy', session, total.get('total_tokens'), tuple(total.get(k,0) for k in fields))
+
+
+def read_codex(source, corpus):
+    session = source.session_hint
+    model = None
+    pending, modern = [], {}
+    for row, e in records(source, corpus, 'codex'):
+        typ, p = e.get('type'), e.get('payload') or {}
+        if not isinstance(p, dict):
+            continue
+        if typ == 'session_meta':
+            session = p.get('id') or p.get('session_id') or session
+        elif typ == 'turn_context':
+            model = p.get('model') or model
+        elif typ == 'token_usage_record':
+            tid = p.get('thread_id') or p.get('session_id') or session
+            u = p.get('usage')
+            total = p.get('thread_token_usage') or {}
+            # Both formats may coexist. Suppress only the matching cumulative
+            # update, never the entire older history of a migrated rollout.
+            c = corpus.call('codex', str(tid), p.get('response_id'), e.get('timestamp'), u, model,
+                            (session, e.get('ordinal') or row, codex_signature(u, total)),
+                            aliases=[legacy_identity(str(tid), total)] if total.get('total_tokens') is not None else [])
+            if isinstance(u, dict):
+                modern[codex_signature(u, total)] = c
+        elif typ == 'event_msg' and p.get('type') == 'token_count':
+            info = p.get('info') or {}
+            if isinstance(info, dict) and isinstance(info.get('last_token_usage'), dict):
+                u, total = info['last_token_usage'], info.get('total_token_usage')
+                if isinstance(total, dict):
+                    pending.append((u, total, e.get('timestamp'), model, session))
+                else:
+                    corpus.bump('codex', 'invalid_usage_records')
+        elif typ == 'response_item' and p.get('type') in (
+                'function_call_output', 'custom_tool_call_output', 'local_shell_call_output', 'tool_search_output'):
+            cid = p.get('call_id') or p.get('id') or (source.digest, row)
+            corpus.tool('codex', str(session), str(cid), p.get('output'))
+    last = None
+    for u, total, timestamp, model, session in pending:
+        sig = codex_signature(u, total)
+        if sig in modern:
+            corpus.bump('codex', 'legacy_updates_matched_to_modern')
+            # Suppression removes duplicate token usage, not timestamp evidence.
+            c = modern[sig]
+            if c is not None:
+                corpus.timestamp('codex', c, timestamp)
+            continue
+        cid = legacy_identity(str(session), total)
+        if sig == last:
+            corpus.bump('codex', 'repeated_legacy_updates')
+            c = corpus.seen.get(('codex', str(cid)))
+            if c is not None:
+                corpus.timestamp('codex', c, timestamp)
+            continue
+        last = sig
+        corpus.call('codex', str(session), cid, timestamp, u, model, cid)
+
+
+def read_muse(source, corpus):
+    model = None
+    for row, frame in records(source, corpus, 'muse'):
+        entries = []
+        if 'children' in frame:
+            for child in frame.get('children') or []:
+                try:
+                    entries.append(json.loads(child.get('record_json') or ''))
+                except (ValueError, AttributeError, TypeError):
+                    corpus.bump('muse', 'invalid_child_json')
+        else:
+            entries = [frame]
+        for r in entries:
+            if not isinstance(r, dict) or r.get('payload_type') != 'runtime.session':
+                continue
+            p = r.get('payload') or {}
+            ev = p.get('event') or {}
+            if not isinstance(ev, dict):
+                continue
+            stream = r.get('stream')
+            key = json.dumps(stream, sort_keys=True) if stream else source.session_hint
+            kind = ev.get('kind')
+            if kind in ('model_request_configured', 'model_started'):
+                model = ev.get('model') or model
+            elif kind == 'model_completed':
+                # Projected runtime.session events identify the original run
+                # record; prefer it over projection IDs duplicated across streams.
+                cid = p.get('source_run_record_id') or r.get('id')
+                corpus.call('muse', key, cid, r.get('recorded_at'), ev.get('usage'),
+                            ev.get('model') or model, (key, r.get('sequence') or row))
+            elif kind == 'tool_result_batch_committed':
+                for i, res in enumerate(ev.get('results') or []):
+                    if isinstance(res, dict):
+                        cid = res.get('tool_call_id') or (p.get('source_run_record_id') or r.get('id') or source.digest, i)
+                        corpus.tool('muse', key, str(cid), res.get('text'))
+
+
+READERS = {'claude': read_claude, 'codex': read_codex, 'muse': read_muse}
+
+
+class Source:
+    def __init__(self, agent, path, member=None, info=None):
+        self.agent, self.path, self.member = agent, Path(path), member
+        self.zip_info = info
+        st = self.path.stat()
+        self.size = info.file_size if info else st.st_size
+        self.mtime_ns = st.st_mtime_ns
+        self.inode = None if member is not None else (st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns)
+        self.session_hint = Path(member or path).stem
+        self.digest = None
+
+    @contextlib.contextmanager
+    def open(self):
+        if self.member is None:
+            with self.path.open('rb') as f:
+                yield f
+        else:
+            key = str(self.path.resolve())
+            z = ZIP_HANDLES.get(key)
+            if z is None:
+                z = ZIP_HANDLES[key] = zipfile.ZipFile(self.path)
+            with z.open(self.zip_info or self.member) as f:
+                yield f
+
+    def fingerprint(self):
+        h, remaining = hashlib.sha256(), self.size
+        with self.open() as f:
+            while remaining:
+                b = f.read(min(8 * 1024 * 1024, remaining))
+                if not b:
+                    raise OSError('SOURCE_SHRANK')
+                h.update(b)
+                remaining -= len(b)
+        self.digest = h.hexdigest()
+        return self.digest
+
+
+def matches(agent, name):
+    p = Path(name)
+    if agent == 'codex':
+        return fnmatch.fnmatch(p.name, 'rollout-*.jsonl')
+    if agent == 'muse':
+        return p.name == 'session.jsonl'
+    # Exclude history/index/metadata logs and arbitrary files in saved tool CWDs.
+    return p.suffix == '.jsonl' and any(x == 'projects' or x.endswith('-projects') or
+        x == 'claude-desktop-local-sessions' or x == 'local-agent-mode-sessions' for x in p.parts)
+
+
 def default_roots():
-    h = os.path.expanduser("~")
-    cur = os.path.join(h, ".curator", "environments", "*")
-    roots = {
-        "claude": [os.path.join(h, ".claude", "projects"), os.path.join(cur, "claude_code", "projects")],
-        "codex": [os.path.join(h, ".codex", "sessions"), os.path.join(cur, "codex*", "sessions")],
-        "muse": [os.path.join(h, ".local", "share", "muse", "sessions"),
-                 os.path.join(h, "Library", "Application Support", "muse", "sessions"),
-                 os.path.join(cur, "muse", "data", "muse", "sessions")],
-    }
-    for env, agent in (("CLAUDE_CONFIG_DIR", "claude"), ("CODEX_HOME", "codex")):
-        if os.environ.get(env):
-            roots[agent].append(os.path.join(os.environ[env], "projects" if agent == "claude" else "sessions"))
-    return roots
+    h = Path.home()
+    roots = {a: [] for a in AGENTS}
+    claude_homes = [h/'.claude', h/'.config/claude', h/'Library/Developer/Xcode/CodingAssistant/ClaudeAgentConfig']
+    codex_homes = [h/'.codex']
+    codex_homes.extend(p for p in h.glob('.codex*') if p.is_dir() and
+                       ((p/'sessions').is_dir() or (p/'archived_sessions').is_dir()))
+    claude_homes.extend(p for p in h.glob('.claude*') if p.is_dir() and (p/'projects').is_dir())
+    for p in (h/'.curator/environments').glob('*'):
+        claude_homes.append(p/'claude_code')
+        codex_homes.extend(p.glob('codex*'))
+        roots['muse'].append(str(p/'muse/data/muse/sessions'))
+    if os.environ.get('CLAUDE_CONFIG_DIR'):
+        claude_homes.append(Path(os.environ['CLAUDE_CONFIG_DIR']))
+    if os.environ.get('CODEX_HOME'):
+        codex_homes.append(Path(os.environ['CODEX_HOME']))
+    for p in claude_homes:
+        roots['claude'].extend(str(p/x) for x in ['projects', '.agent-environment-backup'])
+    for p in codex_homes:
+        roots['codex'].extend(str(p/x) for x in ['sessions', 'archived_sessions', '.agent-environment-backup'])
+    roots['muse'].extend(str(p/'muse/sessions') for p in [h/'.local/share', h/'Library/Application Support'])
+    if os.environ.get('XDG_DATA_HOME'):
+        roots['muse'].append(str(Path(os.environ['XDG_DATA_HOME'])/'muse/sessions'))
+    roots['claude'].extend(str(h/p) for p in ['Library/Application Support/Claude/local-agent-mode-sessions',
+        'Library/Application Support/ClaudeUsageArchive/raw', 'Library/Application Support/ClaudeUsageArchive/raw-revisions'])
+    zip_roots = []
+    for p in [h/'Backups/AgentSessions', Path('/Volumes/LaCie/Archives/AgentSessions')]:
+        for a in ('claude', 'codex'):
+            roots[a].extend(str(p/x) for x in ['cumulative', 'versions'])
+        zip_roots.append(str(p/'archives'))
+    return {'roots': {a:list(dict.fromkeys(v)) for a,v in roots.items()}, 'zip_roots': zip_roots}
 
 
-PATTERNS = {"claude": "*.jsonl", "codex": "rollout-*.jsonl", "muse": "session.jsonl"}
+def discover(config):
+    sources, coverage, seen = [], [], set()
+    for agent in AGENTS:
+        for root in config['roots'].get(agent, []):
+            item = dict(agent=agent, root=root, present=False, matches=0, errors=0)
+            for name in glob.glob(os.path.expanduser(root)):
+                item['present'] = True
+                def error(_):
+                    item['errors'] += 1
+                for d, dirs, files in os.walk(name, onerror=error):
+                    dirs[:] = [x for x in dirs if x not in {'.git', 'node_modules', '__pycache__'}]
+                    for f in files:
+                        path = Path(d)/f
+                        if not matches(agent, str(path)):
+                            continue
+                        item['matches'] += 1
+                        key = (agent, str(path.resolve()))
+                        if key in seen:
+                            continue
+                        seen.add(key)
+                        try:
+                            sources.append(Source(agent, path))
+                        except OSError:
+                            item['errors'] += 1
+            coverage.append(item)
+    for root in config.get('zip_roots', []):
+        item = dict(agent='zip', root=root, present=Path(root).exists(), matches=0, errors=0)
+        for path in sorted(Path(root).glob('*.zip')):
+            try:
+                with zipfile.ZipFile(path) as z:
+                    for info in z.infolist():
+                        for agent in AGENTS:
+                            if matches(agent, info.filename):
+                                key = (agent, str(path.resolve()), info.filename, info.header_offset)
+                                if key not in seen:
+                                    sources.append(Source(agent, path, info.filename, info))
+                                    seen.add(key)
+                                item['matches'] += 1
+                                break
+            except (OSError, zipfile.BadZipFile):
+                item['errors'] += 1
+        coverage.append(item)
+    return sources, coverage
 
-
-def find_files(agent, roots):
-    out = set()
-    for root in roots:
-        for r in glob.glob(os.path.expanduser(root)):
-            for dirpath, _, files in os.walk(r):
-                for fn in files:
-                    if fnmatch.fnmatch(fn, PATTERNS[agent]):
-                        out.add(os.path.join(dirpath, fn))
-    return sorted(out)
-
-
-# ------------------------------------------------------------------ statistics
 def pct(xs, ps=(10, 25, 50, 75, 90, 99)):
     if not xs:
         return None
@@ -254,6 +472,29 @@ def pct(xs, ps=(10, 25, 50, 75, 90, 99)):
     res["mean"] = round(statistics.fmean(xs), 1)
     res["n"] = len(xs)
     return res
+
+
+def call_time(calls):
+    times, days = [], set()
+    missing = invalid = conflicts = 0
+    for c in calls:
+        if c['t'] is not None:
+            times.append(c['t'])
+            days.add(dt.datetime.fromtimestamp(c['t'], dt.timezone.utc).date())
+        elif c['invalid_timestamp']:
+            invalid += 1
+        else:
+            missing += 1
+        conflicts += c['conflicting_timestamp']
+    def utc(t):
+        return dt.datetime.fromtimestamp(t, dt.timezone.utc).isoformat().replace('+00:00', 'Z')
+    status = ('no_calls' if not calls else 'no_timestamped_calls' if not times else
+              'partial' if missing or invalid or conflicts else 'complete')
+    return dict(first_utc=utc(min(times)) if times else None,
+                last_utc=utc(max(times)) if times else None,
+                distinct_utc_days=len(days), timestamped_calls=len(times),
+                missing_timestamp_calls=missing, invalid_timestamp_calls=invalid,
+                conflicting_timestamp_calls=conflicts, status=status)
 
 
 def analyse(streams, min_calls):
@@ -315,88 +556,158 @@ def analyse(streams, min_calls):
     ), rows
 
 
-# ------------------------------------------------------------------ main
-def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--auto", action="store_true", help="scan the default locations of all three agents")
-    for a in READERS:
-        ap.add_argument(f"--{a}", nargs="*", default=[], metavar="DIR", help=f"{a} session directories")
-    ap.add_argument("--sample", type=int, default=0, help="random sample of N files per agent (0 = all)")
-    ap.add_argument("--seed", type=int, default=1)
-    ap.add_argument("--since", help="only files modified on or after YYYY-MM-DD")
-    ap.add_argument("--min-calls", type=int, default=3, help="skip contexts with fewer model calls")
-    ap.add_argument("--max-mb", type=float, default=500, help="skip files larger than this")
-    ap.add_argument("--out", default="agent_session_stats.json")
-    ap.add_argument("--csv", help="optional per-call numeric CSV (hashed ids, no content)")
-    args = ap.parse_args()
 
-    roots = default_roots() if args.auto else {a: [] for a in READERS}
-    for a in READERS:
-        roots[a] = roots.get(a, []) + getattr(args, a)
-    since = dt.datetime.fromisoformat(args.since).timestamp() if args.since else None
-    rnd = random.Random(args.seed)
-    salt = os.urandom(8)
-    report = dict(tool="agent_session_stats", version=VERSION, generated=dt.datetime.utcnow().isoformat() + "Z",
-                  python=sys.version.split()[0], platform=sys.platform, params=dict(
-                      sample=args.sample, since=args.since, min_calls=args.min_calls, chars_per_token=CHARS_PER_TOKEN),
-                  agents={})
-    all_streams, all_rows, models = [], [], {}
-    t0 = time.time()
-    for agent, reader in READERS.items():
-        files = find_files(agent, roots[agent])
-        files = [f for f in files if os.path.getsize(f) <= args.max_mb * 1e6 and (since is None or os.path.getmtime(f) >= since)]
-        found = len(files)
-        if args.sample and len(files) > args.sample:
-            files = rnd.sample(files, args.sample)
-        streams, errors = [], 0
-        for i, f in enumerate(files):
-            try:
-                streams.extend(reader(f))
-            except Exception:       # a broken or foreign file must not stop the run
-                errors += 1
-            if (i + 1) % 50 == 0:
-                print(f"  {agent}: {i+1}/{len(files)} files", file=sys.stderr)
-        for s in streams:
-            for c in s.calls.values():
-                if c["model"]:
-                    models[(agent, c["model"])] = models.get((agent, c["model"]), 0) + 1
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--auto', action='store_true')
+    ap.add_argument('--sources', help='JSON manifest: roots per provider and zip_roots; additive to --auto')
+    for agent in AGENTS:
+        ap.add_argument('--'+agent, nargs='*', default=[])
+    ap.add_argument('--sample', type=int, default=0, help='0 = every discovered file/member')
+    ap.add_argument('--seed', type=int, default=1)
+    ap.add_argument('--min-calls', type=int, default=1)
+    ap.add_argument('--max-mb', type=float, default=0, help='0 = no size cutoff')
+    ap.add_argument('--out', default='agent_session_stats.json')
+    ap.add_argument('--coverage', help='PRIVATE root coverage, salted file references, no contents/native IDs')
+    ap.add_argument('--csv', help='Optional numeric calls with salted context identifiers')
+    args = ap.parse_args()
+    if args.sample < 0 or args.min_calls < 1 or not math.isfinite(args.max_mb) or args.max_mb < 0:
+        ap.error('invalid sampling/size/context limit')
+    config = default_roots() if args.auto else {'roots': {a: [] for a in AGENTS}, 'zip_roots': []}
+    if args.sources:
+        supplied = json.loads(Path(args.sources).read_text())
+        for a in AGENTS:
+            config['roots'][a] += supplied['roots'].get(a, [])
+        config['zip_roots'] += supplied.get('zip_roots', [])
+    for a in AGENTS:
+        config['roots'][a] += getattr(args, a)
+    start = time.monotonic()
+    sources, coverage = discover(config)
+    corpus = Corpus()
+    salt = os.urandom(32)
+    details = []
+    digests, inodes = set(), set()
+    selected = {a: [] for a in AGENTS}
+    for source in sources:
+        corpus.bump(source.agent, 'files_discovered')
+        corpus.bump(source.agent, 'bytes_discovered', source.size)
+        if args.max_mb and source.size > args.max_mb*1e6:
+            corpus.bump(source.agent, 'files_size_filtered')
+        else:
+            selected[source.agent].append(source)
+    if args.sample:
+        rnd = random.Random(args.seed)
+        for a in AGENTS:
+            files = selected[a]
+            if len(files) > args.sample:
+                corpus.bump(a, 'files_sample_filtered', len(files)-args.sample)
+                selected[a] = rnd.sample(files, args.sample)
+    sequence = sorted([s for ss in selected.values() for s in ss], key=lambda s: (s.member is not None, -s.size))
+    progress = time.monotonic()
+    pid_path = Path(args.out).with_suffix('.pid')
+    pid_path.write_text(str(os.getpid())+'\n')
+    for i, source in enumerate(sequence):
+        a = source.agent
+        file_audit = collections.Counter()
+        corpus.file_audit = file_audit
+        status = 'read'
+        try:
+            inode_key = (a, source.inode)
+            if source.inode is not None and inode_key in inodes:
+                corpus.bump(a, 'duplicate_physical_files')
+                status = 'duplicate_physical'
+            else:
+                digest = source.fingerprint()
+                corpus.bump(a, 'bytes_hashed', source.size)
+                if source.inode is not None:
+                    inodes.add(inode_key)
+                if (a, digest) in digests:
+                    corpus.bump(a, 'duplicate_content_files')
+                    status = 'duplicate_content'
+                else:
+                    digests.add((a, digest))
+                    READERS[a](source, corpus)
+                    corpus.bump(a, 'files_parsed')
+                    if not file_audit['usage_records']:
+                        corpus.bump(a, 'files_without_usage')
+                    else:
+                        corpus.bump(a, 'files_with_usage')
+        except (OSError, ValueError, TypeError, AttributeError, zipfile.BadZipFile, EOFError, RuntimeError) as error:
+            corpus.bump(a, 'files_failed')
+            file_audit['error_class_'+type(error).__name__] += 1
+            status = 'failed'
+        finally:
+            corpus.file_audit = None
+        ref = hashlib.sha256(salt+str((source.path, source.member)).encode()).hexdigest()[:20]
+        details.append(dict(ref=ref, agent=a, archive_member=source.member is not None,
+                            bytes=source.size, status=status, audit=dict(file_audit)))
+        if time.monotonic()-progress > 10 or i+1 == len(sequence):
+            print(f'progress {i+1}/{len(sequence)}; unique calls {corpus.unique_calls}; elapsed {time.monotonic()-start:.0f}s', file=sys.stderr, flush=True)
+            progress = time.monotonic()
+    for archive in ZIP_HANDLES.values():
+        archive.close()
+    ZIP_HANDLES.clear()
+    report = dict(tool='agent_session_stats', version=VERSION,
+                  generated=dt.datetime.now(dt.timezone.utc).isoformat(),
+                  python=sys.version.split()[0], platform=sys.platform,
+                  params=dict(sample=args.sample, min_calls=args.min_calls, max_mb=args.max_mb, chars_per_token=CHARS_PER_TOKEN),
+                  notes=[
+                      'Session counts are contexts WITH recorded usage, not every discovered transcript. Zero-usage and unreadable files are explicit in coverage.',
+                      'new_in is an estimate from context growth, not exact prefill traffic or uncached input; compaction, forks and reasoning retention affect it.',
+                      'Muse input_tokens are unchanged as recorded. Cache semantics are unverified; no value-dependent addition is performed.',
+                      'Output/reasoning are logged usage fields; reasoning is not added to output. Tool token sizes are character-based estimates.',
+                      'Each file is read to its observed length; the corpus is not an atomic cross-session snapshot. Append/in-place changes are counted.',
+                      'Copies deduplicate by inode then SHA256; model calls deduplicate by provider response/message/source-record identity.',
+                      'Missing response IDs use session/cumulative counters or row identity; fallback identities cannot prove cross-fork equivalence.',
+                      'call_time uses recorded usage-event time (Claude/Codex envelope timestamp; Muse recorded_at), not exact model start time or file dates.',
+                      'Naive ISO timestamps assume UTC. Numeric timestamps use the existing positive seconds/milliseconds/microseconds/nanoseconds magnitude heuristic.',
+                      'Call times use the first valid deduplicated timestamp; later copies can fill absent/invalid time, and disagreements are flagged without adding days.',
+                      'Time coverage is independent of source-reading status; distinct UTC days are a set union after min-call filtering, not calendar span or provider sum.'
+                  ], agents={})
+    all_streams = list(corpus.streams.values())
+    all_rows = []
+    models = collections.Counter()
+    for a in (*AGENTS, 'all'):
+        streams = [s for s in all_streams if a == 'all' or s.agent == a]
         stats, rows = analyse(streams, args.min_calls)
-        stats.update(files_found=found, files_read=len(files), files_failed=errors)
-        report["agents"][agent] = stats
-        all_streams.extend(streams)
-        all_rows.extend(rows)
-    report["agents"]["all"], _ = analyse(all_streams, args.min_calls)
-    report["models"] = [dict(agent=a, model=m, calls=n) for (a, m), n in sorted(models.items(), key=lambda x: -x[1])]
-    report["seconds"] = round(time.time() - t0, 1)
-    with open(args.out, "w") as f:
-        json.dump(report, f, indent=1)
+        if a != 'all':
+            stats['coverage'] = dict(corpus.audit[a])
+            all_rows += rows
+        cs = [c for s in streams for c in s.calls.values() if len(s.calls) >= args.min_calls]
+        stats['call_time'] = call_time(cs)
+        stats['totals'] = {k: sum(c[k] for c in cs) for k in ['prompt', 'cached', 'output', 'reasoning']}
+        stats['unknown_model_calls'] = sum(not c['model'] for c in cs)
+        stats['zero_usage_calls'] = sum(not any(c[k] for k in ['prompt','cached','output','reasoning']) for c in cs)
+        report['agents'][a] = stats
+    for s in all_streams:
+        for c in s.calls.values():
+            if c['model']:
+                models[(s.agent, c['model'])] += 1
+    report['models'] = [dict(agent=a, model=m, calls=n) for (a,m),n in models.most_common()]
+    error_keys = ['invalid_json_rows','non_object_rows','invalid_usage_records','invalid_child_json',
+                  'files_failed','truncated_source_files','files_changed_in_place','files_size_filtered','files_sample_filtered']
+    incomplete = sum(v for a in AGENTS for k,v in corpus.audit[a].items() if k in error_keys)
+    incomplete += sum(x['errors'] for x in coverage)
+    report['status'] = 'partial' if incomplete or args.min_calls > 1 or not any(s.calls for s in all_streams) else 'complete_for_discovered_sources'
+    report['seconds'] = round(time.monotonic()-start, 1)
+    os.umask(0o077)
+    Path(args.out).write_text(json.dumps(report, indent=2, allow_nan=False)+'\n')
+    if args.coverage:
+        Path(args.coverage).write_text(json.dumps(dict(roots=coverage, files=details),indent=2)+'\n')
     if args.csv:
         import csv
-        with open(args.csv, "w", newline="") as f:
-            w = csv.writer(f)
-            w.writerow(["agent", "model", "stream", "call", "t_rel_s", "depth", "new_in", "output", "reasoning"])
-            t_first = {}
-            for agent, model, key, n, t, depth, new, out, reas in all_rows:
-                h = hashlib.sha256(salt + repr(key).encode()).hexdigest()[:12]
+        with open(args.csv, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['agent','model','stream','call','t_rel_s','depth','new_in_est','output','reasoning'])
+            first = {}
+            for agent,model,key,n,t,depth,new,out,reasoning in all_rows:
+                stream = hashlib.sha256(salt+repr((agent,key)).encode()).hexdigest()[:20]
                 if t is not None:
-                    t_first.setdefault(h, t)
-                w.writerow([agent, model, h, n, round(t - t_first[h], 1) if t is not None else "",
-                            depth, "" if new is None else new, out, reas])
+                    first.setdefault(stream,t)
+                writer.writerow([agent,model,stream,n,round(t-first[stream],1) if t is not None else '',depth,new,out,reasoning])
+    print(json.dumps(dict(status=report['status'],seconds=report['seconds'],agents={a:dict(
+        contexts=s['streams'],calls=s['calls'],totals=s['totals']) for a,s in report['agents'].items()}),indent=2))
+    return 2 if report['status']=='partial' else 0
 
-    def m(d, k="p50"):
-        return "-" if not d else f"{d[k]:,.0f}"
-    print(f"agent_session_stats {VERSION}: {report['seconds']} s -> {args.out}")
-    print("agent   files  contexts  calls | new_in p50 / p90 / mean | output p50 / mean | depth p50 / p90 | tool result p50 / p90 | gap p50 s")
-    for a, s in report["agents"].items():
-        if not s.get("calls"):
-            print(f"{a:<7} no data (files found: {s.get('files_found', '-')})")
-            continue
-        print(f"{a:<7} {s.get('files_read', '-'):>5} {s['streams']:>9} {s['calls']:>6} | "
-              f"{m(s['new_in_per_call'])} / {m(s['new_in_per_call'], 'p90')} / {m(s['new_in_per_call'], 'mean')} | "
-              f"{m(s['output_per_call'])} / {m(s['output_per_call'], 'mean')} | "
-              f"{m(s['depth_per_call'])} / {m(s['depth_per_call'], 'p90')} | "
-              f"{m(s['tool_result_tokens_est'])} / {m(s['tool_result_tokens_est'], 'p90')} | {m(s['gap_seconds'])}")
-
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    sys.exit(main())
