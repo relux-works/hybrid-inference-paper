@@ -16,6 +16,11 @@ from hybridcalc.paper import calculate
 from hybridcalc.formatters import render
 
 
+def setUpModule():
+    # .temp is git-ignored, so a fresh checkout lacks it; the engine reads local inputs only under ROOT.
+    (ROOT/'.temp').mkdir(exist_ok=True)
+
+
 def tables(result):
     return {table['name']: table for table in result['tables']}
 
