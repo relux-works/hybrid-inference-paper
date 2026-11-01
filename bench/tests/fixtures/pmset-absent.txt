@@ -1,0 +1,4 @@
+System-wide power settings:
+Currently in use:
+ standby              1
+ powernap             1

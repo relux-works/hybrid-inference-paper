@@ -1,0 +1,896 @@
+{
+  "r7": {
+    "turn": {
+      "depths": [
+        {
+          "value": 100000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 existing-context turn depths."
+          }
+        },
+        {
+          "value": 200000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 existing-context turn depths."
+          }
+        }
+      ],
+      "portions": [
+        {
+          "value": 2000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 new-token portions, not full context transfers."
+          }
+        },
+        {
+          "value": 10000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 new-token portions, not full context transfers."
+          }
+        }
+      ]
+    },
+    "oneshot": {
+      "contexts": [
+        {
+          "value": 100000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 cold context loaded from zero; decimal262k, below measured262144 limit."
+          }
+        },
+        {
+          "value": 200000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 cold context loaded from zero; decimal262k, below measured262144 limit."
+          }
+        },
+        {
+          "value": 262000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 cold context loaded from zero; decimal262k, below measured262144 limit."
+          }
+        }
+      ]
+    },
+    "links": [
+      {
+        "value": 50000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R7 decimal line-rate chart grid."
+        }
+      },
+      {
+        "value": 100000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R7 decimal line-rate chart grid."
+        }
+      },
+      {
+        "value": 200000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R7 decimal line-rate chart grid."
+        }
+      },
+      {
+        "value": 300000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R7 decimal line-rate chart grid."
+        }
+      },
+      {
+        "value": 1000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R7 decimal line-rate chart grid."
+        }
+      },
+      {
+        "value": 10000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R7 decimal line-rate chart grid."
+        }
+      }
+    ],
+    "goodput": {
+      "value": 1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Line-rate timing comparison. No protocol-efficiency loss unless explicitly overridden."
+      }
+    },
+    "latency": {
+      "value": 0,
+      "unit": "s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Idealized line-rate chart excludes round-trip latency; separate nonnegative input, not an implicit default."
+      }
+    },
+    "integration_step": {
+      "value": 256,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Midpoint integration of measured local marginal curve and depth-dependent server FLOPs; refinement is checked."
+      }
+    },
+    "context_limit": {
+      "value": 262144,
+      "unit": "token",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030 server.n_ctx",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      }
+    },
+    "import_efficiency": {
+      "value": 0.1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "No isolated delta-import measurement. Estimate one serial memory copy at10% of client nominal bandwidth (M3:40GB/s), distinct from filesystem slot restore."
+      }
+    },
+    "import_copies": {
+      "value": 1,
+      "unit": "copy",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimate one serial full payload copy; excludes parsing/dequantization/runtime compatibility overhead."
+      }
+    },
+    "import_fixed_s": {
+      "value": 0,
+      "unit": "s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Explicit optimistic zero fixed import overhead; set a positive measured runtime overhead when available."
+      }
+    },
+    "last_token_tokens": {
+      "value": 1,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Conservative extra single-stream decode-equivalent evaluation at final depth, charged after full delta import; no additional resident token is allocated."
+      }
+    },
+    "states": {
+      "f32": {
+        "factor": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Identity applied to hash-checked measured slot intercept156894784 bytes."
+          }
+        },
+        "basis": "measured f32 state"
+      },
+      "bf16": {
+        "factor": {
+          "value": 0.5,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 estimate: recurrent representation at half f32 bytes. Numerics/compatibility and speed are not measured."
+          }
+        },
+        "basis": "estimated bf16 state; half f32 bytes"
+      }
+    },
+    "decode": {
+      "scales": [
+        {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+          }
+        },
+        {
+          "value": 1.5,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+          }
+        },
+        {
+          "value": 2,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+          }
+        },
+        {
+          "value": 3,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+          }
+        }
+      ],
+      "links": [
+        {
+          "value": 300000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 real-mix sensitivity links."
+          }
+        },
+        {
+          "value": 1000000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner R7 real-mix sensitivity links."
+          }
+        }
+      ]
+    },
+    "arch": {
+      "q8_factor": {
+        "value": 1.0625,
+        "unit": "B/value",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Attached script llama.cpp q8_0 block layout:34 bytes per32 quantized values, no slot metadata."
+        }
+      },
+      "reference_depth": {
+        "value": 131072,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Attached architecture script coordinate; uses measured41.2 segment rate at approximately131k (actual midpoint131448)."
+        }
+      },
+      "reference_segment_end": {
+        "value": 150000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Select hash-checked segment ending150000, starting112896: measured41.2 tok/s; attached script rounds its midpoint to131k."
+        }
+      },
+      "comparison_depth": {
+        "value": 262144,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Attached script optional second depth; unsupported contexts alarm where script used None."
+        }
+      },
+      "portion": {
+        "value": 1000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Attached script client prefill/savings comparison portion."
+        }
+      },
+      "large_portion": {
+        "value": 10000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Attached script second transfer delta."
+        }
+      },
+      "links": [
+        {
+          "value": 100000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Attached script line-rate savings links, no server/import/evaluation charge in this architecture-only saving formula."
+          }
+        },
+        {
+          "value": 300000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Attached script line-rate savings links, no server/import/evaluation charge in this architecture-only saving formula."
+          }
+        },
+        {
+          "value": 1000000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Attached script line-rate savings links, no server/import/evaluation charge in this architecture-only saving formula."
+          }
+        }
+      ],
+      "models": {
+        "qwen27": {
+          "label": "Qwen3.8-27B",
+          "kind": "dense; linear attention3:1",
+          "parameters": {
+            "value": 27800000000.0,
+            "unit": "parameter",
+            "provenance": {
+              "kind": "estimate",
+              "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json; not an independent weight census.",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+            }
+          },
+          "context": {
+            "value": 262144,
+            "unit": "token",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          },
+          "full": {
+            "layers": {
+              "value": 16,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 4,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 256,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 24,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_copies": {
+              "value": 2,
+              "unit": "1",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "sliding": {
+            "layers": {
+              "value": 0,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 0,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 0,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 0,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "window": {
+              "value": 0,
+              "unit": "token",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "state": {
+            "value": 156894784,
+            "unit": "B",
+            "provenance": {
+              "kind": "measured",
+              "package": "ivmbp-qwen27b-bench-20261030 measured affine state intercept",
+              "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+            }
+          }
+        },
+        "glimmer": {
+          "label": "Muse Glimmer 30B",
+          "kind": "dense; sliding window3:1",
+          "parameters": {
+            "value": 28000000000.0,
+            "unit": "parameter",
+            "provenance": {
+              "kind": "estimate",
+              "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json; not an independent weight census.",
+              "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+            }
+          },
+          "context": {
+            "value": 131072,
+            "unit": "token",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          },
+          "full": {
+            "layers": {
+              "value": 13,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 2,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 128,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 32,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_copies": {
+              "value": 2,
+              "unit": "1",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "sliding": {
+            "layers": {
+              "value": 39,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 2,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 128,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 32,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "window": {
+              "value": 2048,
+              "unit": "token",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "state": {
+            "value": 0,
+            "unit": "B",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          }
+        },
+        "gemma": {
+          "label": "Gemma 4 31B",
+          "kind": "dense; sliding window5:1",
+          "parameters": {
+            "value": 30700000000.0,
+            "unit": "parameter",
+            "provenance": {
+              "kind": "estimate",
+              "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json; not an independent weight census.",
+              "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+            }
+          },
+          "context": {
+            "value": 262144,
+            "unit": "token",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          },
+          "full": {
+            "layers": {
+              "value": 10,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 4,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 512,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 32,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_copies": {
+              "value": 1,
+              "unit": "1",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "sliding": {
+            "layers": {
+              "value": 50,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 16,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 256,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 32,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "window": {
+              "value": 1024,
+              "unit": "token",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "state": {
+            "value": 0,
+            "unit": "B",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          }
+        },
+        "qwen3": {
+          "label": "Qwen3-32B",
+          "kind": "dense; full attention",
+          "parameters": {
+            "value": 32799999999.999996,
+            "unit": "parameter",
+            "provenance": {
+              "kind": "estimate",
+              "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json; not an independent weight census.",
+              "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+            }
+          },
+          "context": {
+            "value": 40960,
+            "unit": "token",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          },
+          "full": {
+            "layers": {
+              "value": 64,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 8,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 128,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 64,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_copies": {
+              "value": 2,
+              "unit": "1",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "sliding": {
+            "layers": {
+              "value": 0,
+              "unit": "layer",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "kv_heads": {
+              "value": 0,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "dim": {
+              "value": 0,
+              "unit": "value",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "q_heads": {
+              "value": 0,
+              "unit": "head",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            },
+            "window": {
+              "value": 0,
+              "unit": "token",
+              "provenance": {
+                "kind": "fact",
+                "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+                "access_date": "2026-10-30",
+                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+              }
+            }
+          },
+          "state": {
+            "value": 0,
+            "unit": "B",
+            "provenance": {
+              "kind": "fact",
+              "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json",
+              "access_date": "2026-10-30",
+              "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+            }
+          }
+        }
+      },
+      "transfer_bandwidth": {
+        "value": 300000000,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Attached script LINK=300e6/8 bytes/s for its transfer_1k_300mbit_s column; explicit separately from the savings grid."
+        }
+      }
+    }
+  }
+}

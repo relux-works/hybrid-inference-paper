@@ -1,0 +1,228 @@
+{
+  "r8": {
+    "shares": [
+      {
+        "value": 0.2,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 open-model shares for heavy-user prefill sizing;100% full-open bound."
+        }
+      },
+      {
+        "value": 0.5,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 open-model shares for heavy-user prefill sizing;100% full-open bound."
+        }
+      },
+      {
+        "value": 1,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 open-model shares for heavy-user prefill sizing;100% full-open bound."
+        }
+      }
+    ],
+    "links": [
+      {
+        "value": 200000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 peak-compute/link grid, decimal line rate."
+        }
+      },
+      {
+        "value": 1000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 peak-compute/link grid, decimal line rate."
+        }
+      },
+      {
+        "value": 10000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 peak-compute/link grid, decimal line rate."
+        }
+      }
+    ],
+    "depths": [
+      {
+        "value": 110000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 arithmetic-intensity depths; declared model context governs computation."
+        }
+      },
+      {
+        "value": 1000000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R8 arithmetic-intensity depths; declared model context governs computation."
+        }
+      }
+    ],
+    "portion": {
+      "value": 1000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner fixed delta size for recurrent/window overhead amortization."
+      }
+    },
+    "output_fractions": [
+      {
+        "value": 0,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Run11 provider usage evidence supplied by the owner: Codex 126/126 token_count events satisfy total_tokens == input_tokens + output_tokens and reasoning_output_tokens <= output_tokens (e.g. output 94, reasoning 15); Claude Code 4577/4577 usage records have output_tokens_details.thinking_tokens <= output_tokens. tools/agent_session_stats.py stores both counters side by side and notes reasoning is not added to output. Claude and Codex cover 93% of 1528194 calls. Generated tokens are output_per_call alone (mean 511.9); reasoning_per_call (about 207.5) is an informational subset, not an additional decode or API charge. Muse is treated the same way, unverified. Fraction 1 is only the explicitly labelled reasoning-on-top upper bound reproducing the old accounting; it is not a provider billing claim. Joint depth/new-token fitting and random draws are unchanged."
+        }
+      },
+      {
+        "value": 1,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Run11 provider usage evidence supplied by the owner: Codex 126/126 token_count events satisfy total_tokens == input_tokens + output_tokens and reasoning_output_tokens <= output_tokens (e.g. output 94, reasoning 15); Claude Code 4577/4577 usage records have output_tokens_details.thinking_tokens <= output_tokens. tools/agent_session_stats.py stores both counters side by side and notes reasoning is not added to output. Claude and Codex cover 93% of 1528194 calls. Generated tokens are output_per_call alone (mean 511.9); reasoning_per_call (about 207.5) is an informational subset, not an additional decode or API charge. Muse is treated the same way, unverified. Fraction 1 is only the explicitly labelled reasoning-on-top upper bound reproducing the old accounting; it is not a provider billing claim. Joint depth/new-token fitting and random draws are unchanged."
+        }
+      }
+    ],
+    "sensitivity_team": {
+      "value": 50,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Comparison team size; hybrid fractional service/API costs are flat but owned comparator is integer-sized."
+      }
+    },
+    "transcript": {
+      "tokens": {
+        "value": 70000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner meeting transcript loaded from empty prefix."
+        }
+      },
+      "summary": {
+        "value": 3000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner summary length decoded once after ingest."
+        }
+      },
+      "links": [
+        {
+          "value": 200000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner transcript links, decimal line rate."
+          }
+        },
+        {
+          "value": 1000000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner transcript links, decimal line rate."
+          }
+        }
+      ],
+      "air_reserve": {
+        "value": 8000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Dedicated Air transcript appliance OS/app estimate8GB; developer-client reserve remains12GB. Not measured; increase to12GB to see the nonfit alarm."
+        }
+      }
+    },
+    "flash_context_basis": "Estimated calc3/4 Flash-Next native envelope; no new quality validation"
+  },
+  "hardware": {
+    "clients": {
+      "m5air32": {
+        "label": "M5 Air 32 GB (estimate)",
+        "memory": {
+          "value": 32000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline laptop source snapshot, decimal32GB configuration."
+          }
+        },
+        "bandwidth": {
+          "value": 153000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline Apple M5 snapshot in laptops-office-2026-10.md:153GB/s nominal, not measured here."
+          }
+        },
+        "compute": {
+          "value": 7440000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "NOTES estimate:12.4TFLOP/s burst calibrated from M6, times0.6 sustained factor for fanless long transcript. Scales measured M3 curve by compute ratio; unqualified portability."
+          }
+        }
+      }
+    }
+  },
+  "models": {
+    "flashnext": {
+      "base_flop": {
+        "value": 13200000000.0,
+        "unit": "FLOP/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Offline calc3 Flash-Next F(L)=13.2GF+3072L (active parameters plus recurrent allowance), sparse/QSA approximation; transfer/residency are separately declared."
+        }
+      },
+      "attention_slope": {
+        "value": 3072,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Offline calc3 Flash-Next F(L)=13.2GF+3072L (active parameters plus recurrent allowance), sparse/QSA approximation; transfer/residency are separately declared."
+        }
+      },
+      "sparse_slope": {
+        "value": 0,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Offline calc3 Flash-Next F(L)=13.2GF+3072L (active parameters plus recurrent allowance), sparse/QSA approximation; transfer/residency are separately declared."
+        }
+      },
+      "sparse_cap": {
+        "value": 8192,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Offline calc3 Flash-Next F(L)=13.2GF+3072L (active parameters plus recurrent allowance), sparse/QSA approximation; transfer/residency are separately declared."
+        }
+      },
+      "context_limit": {
+        "value": 1048576,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Offline calc3 Flash-Next F(L)=13.2GF+3072L (active parameters plus recurrent allowance), sparse/QSA approximation; transfer/residency are separately declared."
+        }
+      }
+    }
+  }
+}

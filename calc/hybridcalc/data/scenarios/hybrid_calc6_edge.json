@@ -1,0 +1,10 @@
+{
+  "name": "hybrid_calc6_edge",
+  "description": "Historical hybrid_calc6_edge output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "edge",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": []
+}

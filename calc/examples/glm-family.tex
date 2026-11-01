@@ -1,0 +1,13 @@
+% Requires \usepackage{booktabs}. Values from glm-tier2 structured output.
+% Memory capacity at 200k tokens; tok/s at 110k; 8h working day.
+% Session = 116 calls. Monetary columns: USD/session; estimates.
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Hardware & $K_{\rm mem}$ & $K$ & tok/s & sess./8h & Hybrid & API & Cluster \\
+\midrule
+M5 Ultra 256 GB & 23 & 8 & 11.6 & 41.1 & 0.276 & 0.644 & 0.494 \\
+M3 Ultra 256 GB & 23 & 5 & 11.3 & 25.0 & 0.315 & 0.644 & 0.494 \\
+2 $\times$ Spark 128 GB & 20 & 1 & 11.2 & 5.0 & 2.019 & 0.644 & 0.494 \\
+2 $\times$ Strix 128 GB & 20 & 1 & 10.5 & 4.7 & 1.210 & 0.644 & 0.494 \\
+\bottomrule
+\end{tabular}

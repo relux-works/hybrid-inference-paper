@@ -1,0 +1,49 @@
+{
+  "measurements": {
+    "stats": {
+      "path": "data/measurements/ivmbp-2026-10-30/stats.json",
+      "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      }
+    },
+    "depth": {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/depth.jsonl",
+      "sha256": "a75b1aefd40df99d96d8a96ff4eac20073b239c39d4d4d4332fa23da1b9acb5b",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      }
+    },
+    "parallel": {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/parallel.jsonl",
+      "sha256": "207c537716d5e21bfba10a8fb204081bb76380581b3556d706e3f468e0a5fb16",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      }
+    },
+    "normalized": {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/normalized-results.json",
+      "sha256": "d7c7cbc72d5ee69991aafdc3b3579dd13d5cd956cb9d4a99d05a25dac7743fb5",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      }
+    },
+    "dates": {
+      "path": "data/measurements/ivmbp-2026-10-30/session-call-dates/call-dates.json",
+      "sha256": "9b85066011b501a89f0651fa7eafa3e23bca8558fd0af608b565fb3ce63fb481",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-session-call-dates-20261030",
+        "sha256": "164be0dbe0a294ef12bd209207582421164e049a7b8bec9d8d4d2a1e85c1d190"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+% Claim: all six default R6 chart CSVs parse in native pgfplots at exact row counts; the Studio load sweep plots after numeric filters.
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\pgfplotstableread[col sep=comma]{../out/paper/perimeter_cost.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 918 rows after adding team 20.
+\ifnum\pgfplotsretval=918\relax\else\errmessage{Wrong R6 chart row count}\fi
+\typeout{R6 TABLE perimeter_cost ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/perimeter_cost_light.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 306 rows after adding team 20.
+\ifnum\pgfplotsretval=306\relax\else\errmessage{Wrong R6 chart row count}\fi
+\typeout{R6 TABLE perimeter_cost_light ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/perimeter_cost_medium.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 306 rows after adding team 20.
+\ifnum\pgfplotsretval=306\relax\else\errmessage{Wrong R6 chart row count}\fi
+\typeout{R6 TABLE perimeter_cost_medium ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/perimeter_cost_heavy.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 306 rows after adding team 20.
+\ifnum\pgfplotsretval=306\relax\else\errmessage{Wrong R6 chart row count}\fi
+\typeout{R6 TABLE perimeter_cost_heavy ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/glm_utilization.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=48\relax\else\errmessage{Wrong R6 chart row count}\fi
+\typeout{R6 TABLE glm_utilization ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/decode_scaling.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=42\relax\else\errmessage{Wrong R6 chart row count}\fi
+\typeout{R6 TABLE decode_scaling ROWS \pgfplotsretval}
+\begin{tikzpicture}\begin{axis}[xlabel=Sessions per user-day,ylabel=USD per session]
+\addplot[restrict expr to domain={\thisrow{team}}{5000:5000},restrict expr to domain={\thisrow{context}}{1000000:1000000},restrict expr to domain={\thisrow{users_per_studio}}{1:1}] table[x=requested_user_day,y=hybrid_session,col sep=comma]{../out/paper/glm_utilization.csv};
+\end{axis}\end{tikzpicture}
+\end{document}

@@ -1,0 +1,36 @@
+{
+  "name": "paper-base",
+  "kind": "paper",
+  "description": "Qwen3.8-27B, measured M3 Max curve, real call mix and B300 prefill",
+  "inputs": [
+    "hardware.json",
+    "models.json",
+    "prices.json",
+    "workload.json",
+    "economics.json",
+    "sampler.json"
+  ],
+  "client_keys": [
+    "m3max",
+    "m5pro",
+    "m5max64",
+    "m5max",
+    "ultra96",
+    "ultra256"
+  ],
+  "family_keys": [
+    "m5ultra",
+    "m3ultra",
+    "spark2",
+    "strix2"
+  ],
+  "server": "b300",
+  "link": "wan",
+  "api_keys": [
+    "qwen_median",
+    "qwen_cheap",
+    "sonnet"
+  ],
+  "fleet_client": "m5max",
+  "model": "qwen27"
+}

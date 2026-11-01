@@ -1,0 +1,735 @@
+{
+  "hardware": {
+    "clients": {
+      "m3max": {
+        "label": "M3 Max 128 GB",
+        "memory": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+          }
+        },
+        "bandwidth": {
+          "value": 400000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+          }
+        },
+        "prefill_scale": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 long-context multiplier relative to M3 Max; extrapolation only."
+          }
+        },
+        "price": {
+          "value": 0,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+          }
+        },
+        "cost_basis": "owned"
+      },
+      "m5pro": {
+        "label": "M5 Pro 64 GB",
+        "memory": {
+          "value": 64000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+          }
+        },
+        "bandwidth": {
+          "value": 307000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+          }
+        },
+        "prefill_scale": {
+          "value": 1.5,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 long-context multiplier relative to M3 Max; extrapolation only."
+          }
+        },
+        "price": {
+          "value": 3699,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+          }
+        },
+        "cost_basis": "laptop_premium"
+      },
+      "m5max64": {
+        "label": "M5 Max 64 GB",
+        "memory": {
+          "value": 64000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+          }
+        },
+        "bandwidth": {
+          "value": 614000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+          }
+        },
+        "prefill_scale": {
+          "value": 3,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 long-context multiplier relative to M3 Max; extrapolation only."
+          }
+        },
+        "price": {
+          "value": 5099,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+          }
+        },
+        "cost_basis": "laptop_premium"
+      },
+      "m5max": {
+        "label": "M5 Max 128 GB",
+        "memory": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+          }
+        },
+        "bandwidth": {
+          "value": 614000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+          }
+        },
+        "prefill_scale": {
+          "value": 3,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 long-context multiplier relative to M3 Max; extrapolation only."
+          }
+        },
+        "price": {
+          "value": 6699,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+          }
+        },
+        "cost_basis": "laptop_premium"
+      },
+      "ultra96": {
+        "label": "M5 Ultra 96 GB",
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+          }
+        },
+        "bandwidth": {
+          "value": 1228000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+          }
+        },
+        "prefill_scale": {
+          "value": 4.8,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 long-context multiplier relative to M3 Max; extrapolation only."
+          }
+        },
+        "price": {
+          "value": 5499,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+          }
+        },
+        "cost_basis": "full"
+      },
+      "ultra256": {
+        "label": "M5 Ultra 256 GB",
+        "memory": {
+          "value": 256000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+          }
+        },
+        "bandwidth": {
+          "value": 1228000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+          }
+        },
+        "prefill_scale": {
+          "value": 6,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 long-context multiplier relative to M3 Max; extrapolation only."
+          }
+        },
+        "price": {
+          "value": 10799,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+          }
+        },
+        "cost_basis": "full"
+      }
+    },
+    "servers": {
+      "b300": {
+        "label": "HGX B300 (8 GPU)",
+        "gpus": {
+          "value": 8,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. GPUs per purchasable unit."
+          }
+        },
+        "peak": {
+          "value": 4500000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. FP8 dense prefill peak per GPU."
+          }
+        },
+        "mfu": {
+          "value": 0.3,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. MFU applied to dense FP8 peak."
+          }
+        },
+        "bandwidth": {
+          "value": 8000000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Peak memory bandwidth per GPU."
+          }
+        },
+        "memory": {
+          "value": 288000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Device memory per GPU."
+          }
+        },
+        "reserved": {
+          "value": 48000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Weights and workspace reserved per GPU."
+          }
+        },
+        "capex": {
+          "value": 660000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Unit capex, B300 includes 20% infrastructure."
+          }
+        },
+        "power": {
+          "value": 14.5,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Unit rated draw used for energy and colocation."
+          }
+        }
+      },
+      "rtx1": {
+        "label": "RTX PRO 6000 workstation",
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. GPUs per purchasable unit."
+          }
+        },
+        "peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. FP8 dense prefill peak per GPU."
+          }
+        },
+        "mfu": {
+          "value": 0.3,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. MFU applied to dense FP8 peak."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Peak memory bandwidth per GPU."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Device memory per GPU."
+          }
+        },
+        "reserved": {
+          "value": 36000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Weights and workspace reserved per GPU."
+          }
+        },
+        "capex": {
+          "value": 30000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Unit capex, B300 includes 20% infrastructure."
+          }
+        },
+        "power": {
+          "value": 0.9,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4. Unit rated draw used for energy and colocation."
+          }
+        }
+      }
+    },
+    "links": {
+      "wan": {
+        "label": "wan",
+        "bandwidth": {
+          "value": 1000000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc3 WAN: 90% goodput and scheduling/session-load/RTT overhead 0.4s."
+          }
+        },
+        "goodput": {
+          "value": 0.9,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc3 WAN: 90% goodput and scheduling/session-load/RTT overhead 0.4s."
+          }
+        },
+        "latency": {
+          "value": 0.4,
+          "unit": "s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc3 WAN: 90% goodput and scheduling/session-load/RTT overhead 0.4s."
+          }
+        }
+      },
+      "spark": {
+        "label": "spark",
+        "bandwidth": {
+          "value": 200000000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: ConnectX-7 nominal 200 Gbit/s as requested; 80% payload goodput; 50 microseconds/message."
+          }
+        },
+        "goodput": {
+          "value": 0.8,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: ConnectX-7 nominal 200 Gbit/s as requested; 80% payload goodput; 50 microseconds/message."
+          }
+        },
+        "latency": {
+          "value": 5e-05,
+          "unit": "s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: ConnectX-7 nominal 200 Gbit/s as requested; 80% payload goodput; 50 microseconds/message."
+          }
+        }
+      },
+      "strix": {
+        "label": "strix",
+        "bandwidth": {
+          "value": 10000000000.0,
+          "unit": "bit/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: direct 10GbE Ethernet with compatible external NICs/PCIe expansion; 80% goodput, 100 microseconds/message. NIC availability/driver support not verified."
+          }
+        },
+        "goodput": {
+          "value": 0.8,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: direct 10GbE Ethernet with compatible external NICs/PCIe expansion; 80% goodput, 100 microseconds/message. NIC availability/driver support not verified."
+          }
+        },
+        "latency": {
+          "value": 0.0001,
+          "unit": "s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: direct 10GbE Ethernet with compatible external NICs/PCIe expansion; 80% goodput, 100 microseconds/message. NIC availability/driver support not verified."
+          }
+        }
+      }
+    },
+    "glm_family": {
+      "m5ultra": {
+        "label": "Mac Studio M5 Ultra 256 GB",
+        "link": null,
+        "split": "none",
+        "nodes": {
+          "value": 1,
+          "unit": "machine",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+          }
+        },
+        "memory_per_node": {
+          "value": 256000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+          }
+        },
+        "bandwidth_per_node": {
+          "value": 1228000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+          }
+        },
+        "price": {
+          "value": 10799,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+          }
+        },
+        "power": {
+          "value": 0.15,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New whole-device power assumption; excludes prefiller."
+          }
+        },
+        "efficiency": {
+          "value": 0.4,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+          }
+        },
+        "buffer_per_node": {
+          "value": 4000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+          }
+        }
+      },
+      "m3ultra": {
+        "label": "M3 Ultra 256 GB",
+        "link": null,
+        "split": "none",
+        "nodes": {
+          "value": 1,
+          "unit": "machine",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline."
+          }
+        },
+        "memory_per_node": {
+          "value": 256000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline."
+          }
+        },
+        "bandwidth_per_node": {
+          "value": 819200000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline."
+          }
+        },
+        "price": {
+          "value": 8000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline."
+          }
+        },
+        "power": {
+          "value": 0.15,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline. New whole-device power assumption; excludes prefiller."
+          }
+        },
+        "efficiency": {
+          "value": 0.4,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline."
+          }
+        },
+        "buffer_per_node": {
+          "value": 4000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: $8,000 for a 256 GB configuration; 819.2 GB/s assumed from M3 Ultra class, unverified offline."
+          }
+        }
+      },
+      "spark2": {
+        "label": "2 x DGX Spark 128 GB",
+        "link": "spark",
+        "split": "pipeline",
+        "nodes": {
+          "value": 2,
+          "unit": "machine",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W."
+          }
+        },
+        "memory_per_node": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W."
+          }
+        },
+        "bandwidth_per_node": {
+          "value": 273000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W."
+          }
+        },
+        "price": {
+          "value": 13900,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W."
+          }
+        },
+        "power": {
+          "value": 0.48,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W. New whole-device power assumption; excludes prefiller."
+          }
+        },
+        "efficiency": {
+          "value": 0.4,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W."
+          }
+        },
+        "buffer_per_node": {
+          "value": 4000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. calc4: 2 x $6,950. New power estimate: 2 x 240 W."
+          }
+        }
+      },
+      "strix2": {
+        "label": "2 x Strix Halo 128 GB",
+        "link": "strix",
+        "split": "pipeline",
+        "nodes": {
+          "value": 2,
+          "unit": "machine",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion."
+          }
+        },
+        "memory_per_node": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion."
+          }
+        },
+        "bandwidth_per_node": {
+          "value": 256000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion."
+          }
+        },
+        "price": {
+          "value": 7498,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion."
+          }
+        },
+        "power": {
+          "value": 0.3,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion. New whole-device power assumption; excludes prefiller."
+          }
+        },
+        "efficiency": {
+          "value": 0.4,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion."
+          }
+        },
+        "buffer_per_node": {
+          "value": 4000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights. New estimate: 2 x $3,449 plus $600 for two 10GbE NICs/cabling, assuming suitable PCIe expansion."
+          }
+        }
+      }
+    }
+  }
+}

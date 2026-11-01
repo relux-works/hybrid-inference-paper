@@ -1,0 +1,10 @@
+assumption,s20,s50,academic_s100,paper_uses,status,alarm_inputs
+calc5 Rule A / one time zone,3000,1000,500,Historical baseline,ok,
+Server weight traffic: FP8 27 GB to Q4 15.1875 GB,1000,200,100,Quantized server weights,ok,
+Replace synthetic calls with measured calc8 calls,none through 20000,none through 20000,none through 20000,Measured call mix,ok,
+Daily work window: 8 hours to 10 hours,800,400,200,Use eight-hour client/operator baseline instead,ok,
+Peak/headroom: 2 to 1/0.70,400,150,75,Target-load planning,ok,
+R3 sparse team grid (reviewed endpoint),200,200,100,Historical sampled grid only,ok,
+Integer sweep 1..20000 (grid sensitivity),306,123,62,Every-integer crossover,ok,
+Correct all-server output double counting for paper,306,123,62,Input-only prefill; output decoded once,ok,
+Paper: measured KV 34844 B/token,612,245,123,Corrected r4 paper reference; new client tables use measured scaling,ok,

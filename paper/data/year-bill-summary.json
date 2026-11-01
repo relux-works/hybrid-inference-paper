@@ -1,0 +1,57 @@
+{
+ "calls": 1530739,
+ "priced_calls": 1521469,
+ "low": 112543.74134611001,
+ "high": 124462.941563286,
+ "claude_ttl_excess_tokens": 166164,
+ "by_class": {
+  "at_or_below": {
+   "calls": 21935,
+   "priced_calls": 21935,
+   "low": 606.131101,
+   "high": 606.131101,
+   "qwen_low": 166.12029455,
+   "qwen_high": 166.12029455
+  },
+  "effort": {
+   "calls": 238266,
+   "priced_calls": 238266,
+   "low": 4823.74376817,
+   "high": 5126.71753109,
+   "qwen_low": 2334.934619575,
+   "qwen_high": 2334.934619575
+  },
+  "above": {
+   "calls": 1248111,
+   "priced_calls": 1248111,
+   "low": 106836.71732294,
+   "high": 118452.94377719601,
+   "qwen_low": 15061.07082815,
+   "qwen_high": 24456.49167515
+  },
+  "unclassified": {
+   "calls": 13157,
+   "priced_calls": 13157,
+   "low": 277.149154,
+   "high": 277.149154,
+   "qwen_low": 86.4953674,
+   "qwen_high": 86.4953674
+  },
+  "unknown": {
+   "calls": 3092,
+   "priced_calls": 0,
+   "low": 0,
+   "high": 0,
+   "qwen_low": 0,
+   "qwen_high": 0
+  },
+  "local": {
+   "calls": 6178,
+   "priced_calls": 0,
+   "low": 0,
+   "high": 0,
+   "qwen_low": 0,
+   "qwen_high": 0
+  }
+ }
+}

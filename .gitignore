@@ -3,3 +3,11 @@ tools/tests/.build/
 /build/
 /dist/
 /paper/version.tex
+__pycache__/
+
+# Measurement kits: local runs, models, builds and results never enter git.
+/bench/*/work/
+/bench/*/results/
+/bench/*/*-results-*.tar.gz
+__pycache__/
+*.pyc

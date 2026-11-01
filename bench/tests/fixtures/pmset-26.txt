@@ -1,0 +1,5 @@
+System-wide power settings:
+Currently in use:
+ Sleep On Power Button 1
+ powermode            1
+ displaysleep         10

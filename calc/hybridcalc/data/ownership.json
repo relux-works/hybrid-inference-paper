@@ -1,0 +1,1553 @@
+{
+  "owners": {
+    "calls_day": {
+      "value": 2500,
+      "unit": "call/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 heavy-user profile; all open shares apply to this demand."
+      }
+    },
+    "days": {
+      "value": 21,
+      "unit": "day/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 active working days."
+      }
+    },
+    "hours": {
+      "value": 10,
+      "unit": "h/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: one time zone; daily calls remain fixed when window changes."
+      }
+    },
+    "load": {
+      "value": 0.7,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Target active-window occupancy; MFU is separate."
+      }
+    },
+    "years": {
+      "value": 4,
+      "unit": "year",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: four-year ownership horizon."
+      }
+    },
+    "residual": {
+      "value": 0.2,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Default lower residual scenario; no resale guarantee."
+      }
+    },
+    "margin": {
+      "value": 0.2,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New explicit target gross margin; price=cost/(1-margin)."
+      }
+    },
+    "front_month": {
+      "value": 5,
+      "unit": "USD/person/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: front/support/storage allocation per customer-month."
+      }
+    },
+    "client_cost_fraction": {
+      "value": 0,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Summary incremental cost on an existing Mac; residual grid charges full purchase separately."
+      }
+    },
+    "server_precision": {
+      "value": "Q4",
+      "unit": "precision",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner decision: quantized server weights, INT8/FP8 tensor arithmetic for Q4/Q6/Q8; dequantization covered by MFU."
+      }
+    },
+    "client_quant": {
+      "value": "Q4",
+      "unit": "precision",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: Q3 or Q4 client; other representations are outside contract."
+      }
+    },
+    "workspace": {
+      "value": 8000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Minimum server runtime buffers per model replica; KV residency modeled separately."
+      }
+    },
+    "server_batch": {
+      "value": 32,
+      "unit": "stream",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 decode batching assumption, not a serving benchmark."
+      }
+    },
+    "server_stream_rate": {
+      "value": 25,
+      "unit": "token/s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 server per-stream generation target."
+      }
+    },
+    "server_bw_efficiency": {
+      "value": 0.7,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 sustained decode bandwidth fraction."
+      }
+    },
+    "client_efficiency": {
+      "value": 0.34,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner 30-37% efficiency coordinate; 0.34 anchored to measured 16k M3 Max curve by an explicit calibration factor, not raw GGUF-byte efficiency."
+      }
+    },
+    "anchor_efficiency": {
+      "value": 0.34,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Reference coordinate for measured M3 Max 16k anchor. The actual GGUF-byte bandwidth fraction is shown separately."
+      }
+    },
+    "anchor_depth": {
+      "value": 16000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured benchmark 16k turn group."
+      }
+    },
+    "client_reserve": {
+      "value": 12000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 12 GB for OS/apps/runtime outside weights and per-session KV/state."
+      }
+    },
+    "client_memory": {
+      "value": 96000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Mac Studio 96 GB main dense client; decimal GB."
+      }
+    },
+    "glm_client_memory": {
+      "value": 256000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "GLM Mac Studio 256 GB per calc4."
+      }
+    },
+    "client_price": {
+      "value": 5499,
+      "unit": "USD",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 Ultra 96 full purchase estimate; summary can allocate an explicit fraction."
+      }
+    },
+    "glm_client_price": {
+      "value": 10799,
+      "unit": "USD",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 Ultra 256 full purchase estimate."
+      }
+    },
+    "client_bandwidth": {
+      "value": 1228000000000.0,
+      "unit": "B/s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 M5 Ultra projected unified-memory bandwidth; estimate, unreleased device."
+      }
+    },
+    "anchor_bandwidth": {
+      "value": 400000000000.0,
+      "unit": "B/s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured M3 Max system nominal bandwidth."
+      }
+    },
+    "parallel_agents": {
+      "value": 4,
+      "unit": "stream",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New client parallel-agent assumption; throughput shares weights but not KV/state."
+      }
+    },
+    "client_prefill_scale": {
+      "value": 4.8,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 Ultra 96 prefill multiplier versus measured M3 Max; GLM scales by FLOP ratio."
+      }
+    },
+    "ssd_token_latency": {
+      "value": 0.0002,
+      "unit": "s/token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: serial n-gram SSD lookup overhead; unqualified on real hardware."
+      }
+    },
+    "client_power": {
+      "value": 0.15,
+      "unit": "kW",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 Studio active draw estimate."
+      }
+    },
+    "teams": [
+      {
+        "value": 5,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 20,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 100,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 200,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 500,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 1000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 5000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      },
+      {
+        "value": 20000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner team grid."
+        }
+      }
+    ],
+    "shares": [
+      {
+        "value": 0.2,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner open-model shares; 1 is academic bound only."
+        }
+      },
+      {
+        "value": 0.5,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner open-model shares; 1 is academic bound only."
+        }
+      },
+      {
+        "value": 1,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner open-model shares; 1 is academic bound only."
+        }
+      }
+    ],
+    "residuals": [
+      {
+        "value": 0.2,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner: cheaper hardware / wear / scarcity residual after four years."
+        }
+      },
+      {
+        "value": 0.5,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner: cheaper hardware / wear / scarcity residual after four years."
+        }
+      },
+      {
+        "value": 0.8,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner: cheaper hardware / wear / scarcity residual after four years."
+        }
+      }
+    ],
+    "windows": [
+      {
+        "value": 10,
+        "unit": "h/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner: one time zone or global daily window; fixed monthly calls."
+        }
+      },
+      {
+        "value": 24,
+        "unit": "h/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner: one time zone or global daily window; fixed monthly calls."
+        }
+      }
+    ],
+    "small_teams": [
+      {
+        "value": 5,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner small-team cohorts."
+        }
+      },
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner small-team cohorts."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner small-team cohorts."
+        }
+      }
+    ],
+    "memories": [
+      {
+        "value": 36000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner Mac memory grid, decimal GB."
+        }
+      },
+      {
+        "value": 64000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner Mac memory grid, decimal GB."
+        }
+      },
+      {
+        "value": 96000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner Mac memory grid, decimal GB."
+        }
+      },
+      {
+        "value": 128000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner Mac memory grid, decimal GB."
+        }
+      }
+    ],
+    "contexts": [
+      {
+        "value": 32000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner context grid; decimal tokens."
+        }
+      },
+      {
+        "value": 64000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner context grid; decimal tokens."
+        }
+      },
+      {
+        "value": 128000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner context grid; decimal tokens."
+        }
+      }
+    ],
+    "formats": {
+      "Q3": {
+        "value": 0.4375,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "Q4": {
+        "value": 0.5625,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "Q6": {
+        "value": 0.8125,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "Q8": {
+        "value": 1.0625,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "FP8": {
+        "value": 1,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "NVFP4": {
+        "value": 0.5625,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "BF16": {
+        "value": 2,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      }
+    },
+    "benchmarks": {
+      "mimo_flash": {
+        "value": 0.83,
+        "unit": "USD/1000call",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner calc8/API offline research rounded reference; comparison does not assert equal capability."
+        }
+      },
+      "chutes_27b": {
+        "value": 1.61,
+        "unit": "USD/1000call",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner calc8/API offline research rounded reference; comparison does not assert equal capability."
+        }
+      },
+      "qwen_flash": {
+        "value": 3.42,
+        "unit": "USD/1000call",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner calc8/API offline research rounded reference; comparison does not assert equal capability."
+        }
+      }
+    },
+    "models": {
+      "qwen27": {
+        "label": "Qwen3.8-27B",
+        "parameters": {
+          "value": 27000000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "active_parameters": {
+          "value": 27000000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "weights_q4": {
+          "value": 18973870432,
+          "unit": "B",
+          "provenance": {
+            "kind": "measured",
+            "package": "ivmbp-qwen27b-bench-20261030",
+            "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+          }
+        },
+        "kv": {
+          "value": 34816,
+          "unit": "B/token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "state": {
+          "value": 156894784,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        }
+      },
+      "flashnext": {
+        "label": "Qwen3.8-Flash-Next",
+        "parameters": {
+          "value": 125000000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "active_parameters": {
+          "value": 6000000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "weights_q4": {
+          "value": 70312500000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "kv": {
+          "value": 12672,
+          "unit": "B/token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "state": {
+          "value": 58834944,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "ngram": {
+          "value": 51000000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        }
+      },
+      "glm": {
+        "label": "GLM-5.3-Flash",
+        "parameters": {
+          "value": 328000000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "active_parameters": {
+          "value": 17500000000.0,
+          "unit": "parameter",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "weights_q4": {
+          "value": 181400000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://huggingface.co/ggml-org/GLM-5.3-Flash-GGUF",
+            "access_date": "2026-10-30",
+            "note": "181.4 GB Q4_K from the existing data/research/models-apis-2026-10.md snapshot; no network revalidation."
+          }
+        },
+        "kv": {
+          "value": 5984,
+          "unit": "B/token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        },
+        "state": {
+          "value": 152600000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+          }
+        }
+      }
+    },
+    "options": {
+      "h100": {
+        "label": "H100 SXM on demand",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 80000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1979000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 989500000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 3350000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 3.99,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.runpod.io/pricing",
+            "access_date": "2026-10-30",
+            "note": "Section 5 RunPod Secure Cloud tariff. Offline note source R7; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "capex": {
+          "value": 40000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New hypothetical acquisition budget including host: $40000/unit. Supplied research has rental tariffs only; this is not a supplier purchase quote. Override for procurement."
+          }
+        },
+        "power": {
+          "value": 0.9,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "l40s": {
+        "label": "L40S on demand",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 48000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 724000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 362000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 864000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 1.09,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.runpod.io/pricing",
+            "access_date": "2026-10-30",
+            "note": "Section 5 RunPod Secure Cloud tariff. Offline note source R7; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "capex": {
+          "value": 15000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New hypothetical acquisition budget including host: $15000/unit. Supplied research has rental tariffs only; this is not a supplier purchase quote. Override for procurement."
+          }
+        },
+        "power": {
+          "value": 0.45,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "rtx6000": {
+        "label": "RTX PRO 6000 hourly",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 2.2,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.koyeb.com/pricing",
+            "access_date": "2026-10-30",
+            "note": "Supplied serverless-gpu-prefill-2026-10.md section 2 K1; RTX PRO6000 $2.20/h, pair H200=2*$3/h. No network refresh."
+          }
+        },
+        "capex": {
+          "value": 30000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "power": {
+          "value": 0.9,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "b300": {
+        "label": "B300 288 GB hourly",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 288000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 4500000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 2250000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 9000000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 8000000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 9.5,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 $9.50/GPU/h snapshot; serverless research note does not quote B300 (B200 must not be substituted). Node=8*$9.50."
+          }
+        },
+        "capex": {
+          "value": 82500,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "power": {
+          "value": 1.8125,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "h200_pair": {
+        "label": "2x H200 hourly",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 2,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 141000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1979000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 989500000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 4800000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 6,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.koyeb.com/pricing",
+            "access_date": "2026-10-30",
+            "note": "Supplied serverless-gpu-prefill-2026-10.md section 2 K1; RTX PRO6000 $2.20/h, pair H200=2*$3/h. No network refresh."
+          }
+        },
+        "capex": {
+          "value": 80000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New hypothetical acquisition budget including host: $80000/unit. Supplied research has rental tariffs only; this is not a supplier purchase quote. Override for procurement."
+          }
+        },
+        "power": {
+          "value": 1.8,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 0.9,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "office5090": {
+        "label": "Office RTX 5090",
+        "location": {
+          "value": "office",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 32000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 419000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 209500000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 838000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 1.09,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Counterfactual rent comparison: closest supplied 48/96GB tariff scaled by GPU count; not a provider offer for this office box."
+          }
+        },
+        "capex": {
+          "value": 11500,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "power": {
+          "value": 0.8,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "office6000": {
+        "label": "Office RTX PRO 6000",
+        "location": {
+          "value": "office",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 2.2,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Counterfactual rent comparison: closest supplied 48/96GB tariff scaled by GPU count; not a provider offer for this office box."
+          }
+        },
+        "capex": {
+          "value": 30000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "power": {
+          "value": 0.9,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "office4": {
+        "label": "Office 4x RTX PRO 6000",
+        "location": {
+          "value": "office",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 4,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 8.8,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Counterfactual rent comparison: closest supplied 48/96GB tariff scaled by GPU count; not a provider offer for this office box."
+          }
+        },
+        "capex": {
+          "value": 103000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "power": {
+          "value": 3.2,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 0.9,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      },
+      "b300_node": {
+        "label": "Owned HGX B300 8-GPU",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+          }
+        },
+        "gpus": {
+          "value": 8,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "memory": {
+          "value": 288000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 4500000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 2250000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 9000000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 8000000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 76,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 $9.50/GPU/h snapshot; serverless research note does not quote B300 (B200 must not be substituted). Node=8*$9.50."
+          }
+        },
+        "capex": {
+          "value": 660000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "power": {
+          "value": 14.5,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        }
+      }
+    },
+    "office_colo": {
+      "value": 0,
+      "unit": "USD/kW/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 office premises assumed already paid; explicit zero colocated-space fee."
+      }
+    },
+    "office_support": {
+      "value": 0.02,
+      "unit": "1/year",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 office annual support allowance: 2% of acquisition."
+      }
+    },
+    "office_load": {
+      "value": 0.5,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 office energy duty-factor estimate, separate from service sizing target load."
+      }
+    }
+  }
+}

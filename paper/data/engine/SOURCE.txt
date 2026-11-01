@@ -1,0 +1,2 @@
+Engine snapshot: hybrid-calc calc-engine commit a57db67fb1163f59487ac829c01730efdaa186fc (run 11), calc/out/paper/*.csv.
+Files without a suffix are the design hosting case; *_conservative.csv are the conservative case.

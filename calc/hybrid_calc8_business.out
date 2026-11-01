@@ -1,0 +1,84 @@
+== Inputs (measured call mix, Qwen3.8-27B)
+  per call: mean depth 172k; server prefills 1708 tokens (new + client-decoded); 196.69 TFLOP; KV + state downloaded 67 MB at 1G (M5 Max 64 K4)
+
+== A. Provider cost per 1000 calls and per million prefilled tokens, by GPU option (MFU 30%)
+  B300 own, 1 region (11.5% use)         $ 29.19/GPU-h effective: server $ 1.18 + egress $0.07-0.33 per 1000 calls; $0.692 per M prefilled tokens  (hybrid_calc4 node incl. opex)
+  B300 own, 3 regions (35% use)          $  9.59/GPU-h effective: server $ 0.39 + egress $0.07-0.33 per 1000 calls; $0.227 per M prefilled tokens  (same fleet, three working days)
+  B300 rent $9.50, 70% use               $ 13.57/GPU-h effective: server $ 0.55 + egress $0.07-0.33 per 1000 calls; $0.322 per M prefilled tokens  ([fact] neocloud on-demand $7.10-9.50)
+  B200 rent $7.00, 70% use               $ 10.00/GPU-h effective: server $ 0.40 + egress $0.07-0.33 per 1000 calls; $0.237 per M prefilled tokens  ([fact] neocloud $6.25-8.60)
+  H100 rent $4.00, 70% use               $  5.71/GPU-h effective: server $ 0.53 + egress $0.07-0.33 per 1000 calls; $0.308 per M prefilled tokens  ([fact] neocloud $3.95-6.16)
+  RTX PRO 6000 rent $2.50, 70% use       $  3.57/GPU-h effective: server $ 0.65 + egress $0.07-0.33 per 1000 calls; $0.378 per M prefilled tokens  ([fact] CoreWeave/RunPod $2.49-2.50)
+  RTX PRO 6000 own DC, 35% use           $  3.56/GPU-h effective: server $ 0.64 + egress $0.07-0.33 per 1000 calls; $0.377 per M prefilled tokens  (hybrid_calc4 8-GPU server incl. colo)
+  RTX PRO 6000 own office, 11.5% use     $  8.80/GPU-h effective: server $ 1.59 + egress $0.07-0.33 per 1000 calls; $0.932 per M prefilled tokens  (workstation, office power)
+
+== B. API alternatives per 1000 calls on the same mix (cache reads priced as listed)
+  27B API median                 $ 10.51
+  Haiku 5.5                      $  9.96
+  Sonnet 5.5                     $ 45.62
+  Opus 5.5                       $ 56.90
+  GLM-5.3-Flash API (Z.ai)       $  5.65
+  Qwen3.8-Flash API (Alibaba)    $  3.42
+  price the provider can ask, per 1000 calls (server + egress at $5/TB), at 0% / 40% / 70% gross margin:
+    B300 rent $9.50, 70% use             $0.88 / $1.47 / $2.94
+    RTX PRO 6000 rent $2.50, 70% use     $0.98 / $1.63 / $3.26
+    B300 own, 3 regions (35% use)        $0.72 / $1.20 / $2.40
+    H100 rent $4.00, 70% use             $0.86 / $1.43 / $2.86
+
+== C. Monthly cost to serve one user (provider: B300 rent $9.50 at 70% use, egress $5/TB, session store)
+  heavy  (2500/day at s=100%; store $18.5/mo): s=20%:  10.5k calls -> $  27.8 | s=50%:  26.2k calls -> $  41.7 | s=100%:  52.5k calls -> $  64.9
+  medium (800/day at s=100%; store $8.6/mo): s=20%:   3.4k calls -> $  11.5 | s=50%:   8.4k calls -> $  16.0 | s=100%:  16.8k calls -> $  23.4
+  light  (200/day at s=100%; store $4.0/mo): s=20%:   0.8k calls -> $   4.7 | s=50%:   2.1k calls -> $   5.8 | s=100%:   4.2k calls -> $   7.7
+
+== D. Team of 10 heavy developers, half of their calls on the hybrid (s=50%), office box, 4 years
+  1x RTX PRO 6000 workstation, office: needs 0.56 GPUs at peak -> 1 box(es); box $614/month
+  1x RTX 5090 box, office (prefill only): needs 1.36 GPUs at peak -> 2 box(es); box $536/month
+  hybrid part with 1 RTX PRO 6000 box + 10 x M5 Max 128 premium: $1,183/month for 262k calls = $4.51 per 1000 calls
+  the same calls via Opus 5.5                  : $   14,937/month
+  the same calls via Sonnet 5.5                : $   11,974/month
+  the same calls via Haiku 5.5                 : $    2,615/month
+  the same calls via 27B API median            : $    2,758/month
+  the same calls via GLM-5.3-Flash API (Z.ai)  : $    1,484/month
+  for scale: all calls of the team (s=100%) via Opus 5.5 list prices: $29,874/month; 10 flat $200 subscriptions: $2,000/month
+
+== E. One developer on pay-as-you-go API who moves a share of calls to a hybrid subscription priced P
+  heavy  s=20% (10.5k calls/mo), P=$20: vs Sonnet 5.5: saves $  459/mo, M5 Max 64 premium back in    6 mo; vs Haiku 5.5: saves $   85/mo, M5 Max 64 premium back in   31 mo; vs 27B: saves $   90/mo, M5 Max 64 premium back in   29 mo
+  heavy  s=20% (10.5k calls/mo), P=$40: vs Sonnet 5.5: saves $  439/mo, M5 Max 64 premium back in    6 mo; vs Haiku 5.5: saves $   65/mo, M5 Max 64 premium back in   40 mo; vs 27B: saves $   70/mo, M5 Max 64 premium back in   37 mo
+  heavy  s=50% (26.2k calls/mo), P=$20: vs Sonnet 5.5: saves $ 1177/mo, M5 Max 64 premium back in    2 mo; vs Haiku 5.5: saves $  241/mo, M5 Max 64 premium back in   11 mo; vs 27B: saves $  256/mo, M5 Max 64 premium back in   10 mo
+  heavy  s=50% (26.2k calls/mo), P=$40: vs Sonnet 5.5: saves $ 1157/mo, M5 Max 64 premium back in    2 mo; vs Haiku 5.5: saves $  221/mo, M5 Max 64 premium back in   12 mo; vs 27B: saves $  236/mo, M5 Max 64 premium back in   11 mo
+  medium s=20% ( 3.4k calls/mo), P=$20: vs Sonnet 5.5: saves $  133/mo, M5 Max 64 premium back in   20 mo; vs Haiku 5.5: saves $   13/mo, M5 Max 64 premium back in  193 mo; vs 27B: saves $   15/mo, M5 Max 64 premium back in  170 mo
+  medium s=20% ( 3.4k calls/mo), P=$40: vs Sonnet 5.5: saves $  113/mo, M5 Max 64 premium back in   23 mo; vs Haiku 5.5: saves $   -7/mo, M5 Max 64 premium back in  inf mo; vs 27B: saves $   -5/mo, M5 Max 64 premium back in  inf mo
+  medium s=50% ( 8.4k calls/mo), P=$20: vs Sonnet 5.5: saves $  363/mo, M5 Max 64 premium back in    7 mo; vs Haiku 5.5: saves $   64/mo, M5 Max 64 premium back in   41 mo; vs 27B: saves $   68/mo, M5 Max 64 premium back in   38 mo
+  medium s=50% ( 8.4k calls/mo), P=$40: vs Sonnet 5.5: saves $  343/mo, M5 Max 64 premium back in    8 mo; vs Haiku 5.5: saves $   44/mo, M5 Max 64 premium back in   60 mo; vs 27B: saves $   48/mo, M5 Max 64 premium back in   54 mo
+
+== F. Speed: prefill wait per call (time to first token), local vs the hybrid policy, measured call mix
+  MacBook Air M5 32 GB:
+    200M: mean  22.4 s ->  4.0 s (always-offload  5.4 s); calls waiting >10 s 30.3% ->  4.8%; heavy user saves 12.8 agent-hours/day
+    1000M: mean  22.4 s ->  1.3 s (always-offload  1.5 s); calls waiting >10 s 30.3% ->  0.5%; heavy user saves 14.7 agent-hours/day
+  MacBook Air M5 32 GB, M6-calibrated:
+    200M: mean   8.7 s ->  3.3 s (always-offload  5.4 s); calls waiting >10 s 15.7% ->  4.8%; heavy user saves  3.8 agent-hours/day
+    1000M: mean   8.7 s ->  1.1 s (always-offload  1.5 s); calls waiting >10 s 15.7% ->  0.5%; heavy user saves  5.2 agent-hours/day
+  M3 Max 128 GB:
+    200M: mean  16.8 s ->  3.8 s (always-offload  5.4 s); calls waiting >10 s 25.3% ->  4.8%; heavy user saves  9.0 agent-hours/day
+    1000M: mean  16.8 s ->  1.2 s (always-offload  1.5 s); calls waiting >10 s 25.3% ->  0.5%; heavy user saves 10.8 agent-hours/day
+  M5 Pro 64 GB (MBP 14):
+    200M: mean  11.2 s ->  3.5 s (always-offload  5.4 s); calls waiting >10 s 19.2% ->  4.8%; heavy user saves  5.4 agent-hours/day
+    1000M: mean  11.2 s ->  1.2 s (always-offload  1.5 s); calls waiting >10 s 19.2% ->  0.5%; heavy user saves  7.0 agent-hours/day
+  M5 Max 64 GB (MBP 14):
+    200M: mean   5.6 s ->  2.9 s (always-offload  5.4 s); calls waiting >10 s 10.9% ->  4.8%; heavy user saves  1.9 agent-hours/day
+    1000M: mean   5.6 s ->  1.1 s (always-offload  1.5 s); calls waiting >10 s 10.9% ->  0.5%; heavy user saves  3.2 agent-hours/day
+
+== G. B2C at break-even for a user whose Mac is already paid for (no margin; sessions parked on NVMe only)
+   price per 1000 calls = server + egress; per month adds the NVMe session store; compared with the cheapest APIs
+  B200 rent $7.00, 70% use: $0.47-0.74 per 1000 calls
+    heavy  (store $4.3/mo): s=20%: $  9.2- 12.0 | s=50%: $ 16.7- 23.7 | s=100%: $ 29.0- 43.0
+    medium (store $1.4/mo): s=20%: $  3.0-  3.9 | s=50%: $  5.4-  7.6 | s=100%: $  9.3- 13.8
+    light  (store $0.4/mo): s=20%: $  0.8-  1.0 | s=50%: $  1.4-  2.0 | s=100%: $  2.4-  3.5
+  B300 own, 3 regions (35% use): $0.45-0.72 per 1000 calls
+    heavy  (store $4.3/mo): s=20%: $  9.1- 11.9 | s=50%: $ 16.2- 23.2 | s=100%: $ 28.2- 42.2
+    medium (store $1.4/mo): s=20%: $  3.0-  3.8 | s=50%: $  5.2-  7.5 | s=100%: $  9.1- 13.5
+    light  (store $0.4/mo): s=20%: $  0.8-  1.0 | s=50%: $  1.4-  1.9 | s=100%: $  2.3-  3.5
+  B300 rent $9.50, 70% use: $0.62-0.88 per 1000 calls
+    heavy  (store $4.3/mo): s=20%: $ 10.7- 13.5 | s=50%: $ 20.4- 27.4 | s=100%: $ 36.6- 50.6
+    medium (store $1.4/mo): s=20%: $  3.5-  4.4 | s=50%: $  6.6-  8.8 | s=100%: $ 11.8- 16.3
+    light  (store $0.4/mo): s=20%: $  0.9-  1.2 | s=50%: $  1.7-  2.3 | s=100%: $  3.0-  4.1
+  the same calls via the cheapest APIs, $ per 1000 calls: MiMo-V2.6-Flash 0.83; GPT-6 Luna Flex 1.08; DeepSeek V4.1 Flash off-peak 1.10; Qwen3.8-27B at Chutes 1.61 (research api-capability-2026-10.md)

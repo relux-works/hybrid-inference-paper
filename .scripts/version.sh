@@ -4,7 +4,17 @@
 # A clean checkout exactly at a release tag vX.Y.Z[-PRERELEASE] is a release: label "X.Y.Z".
 # Anything else is a draft labelled by `git describe`, for example "0.1.0-3-g1a2b3c4" or
 # "1a2b3c4-dirty". The date is the commit date, so rebuilding a tag reproduces its title page.
+# With --label-of FILE, print the label recorded in a file that --tex wrote, so `make pdf` names the PDF after the
+# label its title page prints, even if the tree changed during the build.
 set -euo pipefail
+
+if [[ ${1:-} == --label-of ]]; then
+  file=${2:?usage: .scripts/version.sh --label-of paper/version.tex}
+  label=$(sed -n 's/^\\newcommand{\\paperversion}{\(.*\)}$/\1/p' "$file")
+  [[ -n $label ]] || { echo "version.sh: no \\paperversion in $file" >&2; exit 1; }
+  printf '%s\n' "$label"
+  exit 0
+fi
 
 semver='^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-((0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(\.(0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*))?$'
 

@@ -1,0 +1,1852 @@
+{
+  "hardware.clients.*.memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.clients.*.bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.clients.*.prefill_scale": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.clients.*.price": {
+    "unit": "USD",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "hardware.clients.*.power": {
+    "unit": "kW",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.servers.*.gpus": {
+    "unit": "GPU",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "hardware.servers.*.peak": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.servers.*.mfu": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "hardware.servers.*.bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.servers.*.memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.servers.*.reserved": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "hardware.servers.*.capex": {
+    "unit": "USD",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.servers.*.power": {
+    "unit": "kW",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.links.*.bandwidth": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.links.*.goodput": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "hardware.links.*.latency": {
+    "unit": "s",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "hardware.glm_family.*.nodes": {
+    "unit": "machine",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "hardware.glm_family.*.memory_per_node": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.glm_family.*.bandwidth_per_node": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.glm_family.*.price": {
+    "unit": "USD",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.glm_family.*.power": {
+    "unit": "kW",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.glm_family.*.efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "hardware.glm_family.*.buffer_per_node": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.base_flop": {
+    "unit": "FLOP/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.attention_slope": {
+    "unit": "FLOP/token^2",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "models.*.sparse_slope": {
+    "unit": "FLOP/token^2",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "models.*.sparse_cap": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.kv": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.state": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.weights": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.server_weights": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.experts": {
+    "unit": "expert",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "models.*.active_experts": {
+    "unit": "expert",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "models.*.shared_bytes": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.routed_bytes": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.decode_kv_slope": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.decode_fixed": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.hidden_width": {
+    "unit": "element",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "models.*.activation_bytes": {
+    "unit": "B/element",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.boundary_messages": {
+    "unit": "message",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "prices.apis.*.input": {
+    "unit": "USD/Mtoken",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.apis.*.output": {
+    "unit": "USD/Mtoken",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.apis.*.cache_read": {
+    "unit": "USD/Mtoken",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.apis.*.cache_write": {
+    "unit": "USD/Mtoken",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.rental_gpu_hour": {
+    "unit": "USD/GPU/h",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.energy_dc": {
+    "unit": "USD/kWh",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.energy_client": {
+    "unit": "USD/kWh",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.colo": {
+    "unit": "USD/kW/month",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "prices.egress": {
+    "unit": "USD/TB",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "economics.years": {
+    "unit": "year",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "economics.days_month": {
+    "unit": "day/month",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 31,
+    "integer": true
+  },
+  "economics.hours_day": {
+    "unit": "h/day",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 24
+  },
+  "economics.hours_month": {
+    "unit": "h/month",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.pue": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.load": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "economics.support": {
+    "unit": "1/year",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "maximum": 1
+  },
+  "economics.server_residual": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "maximum": 1
+  },
+  "economics.client_residual": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "maximum": 1
+  },
+  "economics.peak": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.regions": {
+    "unit": "region",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 3,
+    "integer": true
+  },
+  "economics.calls_day": {
+    "unit": "call/day",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "economics.baseline_laptop": {
+    "unit": "USD",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "economics.usable_memory": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "economics.runtime_buffer": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "economics.decode_floor": {
+    "unit": "token/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.rental_utilization": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "workload.sample_calls": {
+    "unit": "call",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "workload.chunk_calls": {
+    "unit": "call/session",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "workload.seed": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "workload.input_cap": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "workload.output_cap": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "workload.tail_cap": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "workload.tool_median": {
+    "unit": "s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "workload.tool_sigma": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "workload.reasoning_extra_fraction": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "maximum": 1
+  },
+  "analysis.capacity_depth": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "analysis.rate_depth": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "analysis.stream_cap": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "analysis.decode_state_passes": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "analysis.prefill_calibration_scale": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "analysis.decode_calibration_scale": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "analysis.team_grid.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "edge.*.memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "edge.*.bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "edge.*.compute": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "edge.*.weights": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "edge.*.kv": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "edge.*.state": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "edge.*.base_flop": {
+    "unit": "FLOP/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "edge.*.attention_slope": {
+    "unit": "FLOP/token^2",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "edge.*.thermal": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "edge.*.prompt": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.depth_50k": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.depth_100k": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.depth_200k": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.above_p90": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.above_p99": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.minimum_mean_ratio": {
+    "unit": "1",
+    "minimum": 1,
+    "exclusive_minimum": false
+  },
+  "models.*.server_batch": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "models.*.server_stream_rate": {
+    "unit": "token/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.server_bandwidth_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "models.*.server_shared_bytes": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.server_routed_bytes": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.prefill_batch": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.wire_state": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "prices.dram": {
+    "unit": "USD/GB",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "prices.nvme": {
+    "unit": "USD/TB",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.active_sessions": {
+    "unit": "session/person",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.parked_sessions": {
+    "unit": "session/person",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "economics.storage_redundancy": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "models.*.context_limit": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.minimum_median": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.active_hours": {
+    "unit": "h/day",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 24
+  },
+  "service.active_days": {
+    "unit": "day/month",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 31
+  },
+  "service.target_load": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "service.mfu": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "service.egress_price": {
+    "unit": "USD/TB",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "service.setup_months": {
+    "unit": "month",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.server_parameters": {
+    "unit": "parameter",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.workspace": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "service.precision": {
+    "unit": "precision",
+    "enum": [
+      "Q4",
+      "Q6",
+      "Q8",
+      "FP8",
+      "NVFP4",
+      "BF16"
+    ]
+  },
+  "service.bytes_per_parameter.*": {
+    "unit": "B/parameter",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.fx_usd_eur": {
+    "unit": "USD/EUR",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.users.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "service.profiles.*": {
+    "unit": "call/day",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "service.egress_prices.*": {
+    "unit": "USD/TB",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "service.transfer.wire_kv": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.transfer.wire_state": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.transfer.client_compute": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.transfer.decision_server_compute": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.transfer.bandwidth": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.transfer.goodput": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.transfer.latency": {
+    "unit": "s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.options.*.fp8_peak": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.options.*.bf16_peak": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.options.*.memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.options.*.hourly_usd": {
+    "unit": "USD/GPU/h",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "service.options.*.billing_quantum": {
+    "unit": "s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "service.options.*.monthly_eur": {
+    "unit": "EUR/GPU/month",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "service.options.*.setup_eur": {
+    "unit": "EUR/GPU",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "service.options.*.setup_usd": {
+    "unit": "USD/GPU",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "owners.calls_day": {
+    "unit": "call/day",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.days": {
+    "unit": "day/month",
+    "minimum": 0,
+    "maximum": 31,
+    "exclusive_minimum": true
+  },
+  "owners.hours": {
+    "unit": "h/day",
+    "minimum": 0,
+    "maximum": 24,
+    "exclusive_minimum": true
+  },
+  "owners.load": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "exclusive_minimum": true
+  },
+  "owners.years": {
+    "unit": "year",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.residual": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "owners.margin": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "owners.front_month": {
+    "unit": "USD/person/month",
+    "minimum": 0
+  },
+  "owners.client_cost_fraction": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "owners.server_precision": {
+    "unit": "precision",
+    "enum": [
+      "Q4",
+      "Q6",
+      "Q8",
+      "FP8",
+      "NVFP4",
+      "BF16"
+    ]
+  },
+  "owners.client_quant": {
+    "unit": "precision",
+    "enum": [
+      "Q3",
+      "Q4"
+    ]
+  },
+  "owners.workspace": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.server_batch": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "owners.server_stream_rate": {
+    "unit": "token/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.server_bw_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "exclusive_minimum": true
+  },
+  "owners.client_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "exclusive_minimum": true
+  },
+  "owners.anchor_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "exclusive_minimum": true
+  },
+  "owners.anchor_depth": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.client_reserve": {
+    "unit": "B",
+    "minimum": 0
+  },
+  "owners.client_memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.glm_client_memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.client_price": {
+    "unit": "USD",
+    "minimum": 0
+  },
+  "owners.glm_client_price": {
+    "unit": "USD",
+    "minimum": 0
+  },
+  "owners.client_bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.anchor_bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.parallel_agents": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "owners.client_prefill_scale": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.ssd_token_latency": {
+    "unit": "s/token",
+    "minimum": 0
+  },
+  "owners.client_power": {
+    "unit": "kW",
+    "minimum": 0
+  },
+  "owners.teams.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "owners.shares.*": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "owners.residuals.*": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "owners.windows.*": {
+    "unit": "h/day",
+    "minimum": 0,
+    "maximum": 24,
+    "exclusive_minimum": true
+  },
+  "owners.small_teams.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "owners.memories.*": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.contexts.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.formats.*": {
+    "unit": "B/parameter",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.benchmarks.*": {
+    "unit": "USD/1000call",
+    "minimum": 0
+  },
+  "owners.models.*.parameters": {
+    "unit": "parameter",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.models.*.active_parameters": {
+    "unit": "parameter",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.models.*.weights_q4": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.models.*.kv": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.models.*.state": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.models.*.ngram": {
+    "unit": "parameter",
+    "minimum": 0
+  },
+  "owners.options.*.gpus": {
+    "unit": "GPU",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "owners.options.*.memory": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.options.*.fp8_peak": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.options.*.bf16_peak": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.options.*.fp4_peak": {
+    "unit": "FLOP/s",
+    "minimum": 0
+  },
+  "owners.options.*.bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.options.*.hourly": {
+    "unit": "USD/unit/h",
+    "minimum": 0
+  },
+  "owners.options.*.capex": {
+    "unit": "USD/unit",
+    "minimum": 0
+  },
+  "owners.options.*.power": {
+    "unit": "kW",
+    "minimum": 0
+  },
+  "owners.options.*.shard_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "service.options.*.fp4_peak": {
+    "unit": "FLOP/s",
+    "minimum": 0
+  },
+  "owners.office_colo": {
+    "unit": "USD/kW/month",
+    "minimum": 0
+  },
+  "owners.office_support": {
+    "unit": "1/year",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "owners.office_load": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "exclusive_minimum": true
+  },
+  "owners.options.*.location": {
+    "unit": "deployment",
+    "enum": [
+      "office",
+      "datacenter"
+    ]
+  },
+  "bridge.moments.*.calls_per_session": {
+    "unit": "call/session",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.moments.*.depth": {
+    "unit": "token",
+    "minimum": 0
+  },
+  "bridge.moments.*.delta": {
+    "unit": "token/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.output": {
+    "unit": "token/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.tool": {
+    "unit": "s/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.output_context": {
+    "unit": "token^2/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.tool_context": {
+    "unit": "token*s/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.prefill": {
+    "unit": "FLOP/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.shadow": {
+    "unit": "FLOP/call",
+    "minimum": 0
+  },
+  "bridge.moments.*.previous_output": {
+    "unit": "token/call",
+    "minimum": 0
+  },
+  "bridge.units.*.gpus": {
+    "unit": "GPU",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "bridge.units.*.compute": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.units.*.bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.units.*.kv_free": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.units.*.capex": {
+    "unit": "USD",
+    "minimum": 0
+  },
+  "bridge.units.*.opex": {
+    "unit": "USD/month",
+    "minimum": 0
+  },
+  "bridge.units.*.batch": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "bridge.units.*.stream_rate": {
+    "unit": "token/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.weight_fp8": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.kv_legacy": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.state_legacy": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.sessions_day": {
+    "unit": "session/day",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.hours_legacy": {
+    "unit": "h/day",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.peak_legacy": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.office_max": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "bridge.mixed_max": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "bridge.include_zero": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "integer": true
+  },
+  "bridge.include_one": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1,
+    "integer": true
+  },
+  "bridge.min_team": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "bridge.max_team": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "bridge.legacy_grid.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "operations.autopilot_share": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "operations.reference_share": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "operations.pool_price": {
+    "unit": "USD/GPU/h",
+    "minimum": 0
+  },
+  "operations.pool_fill": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "operations.drain_hours": {
+    "unit": "h",
+    "minimum": 0
+  },
+  "operations.job_limit_hours": {
+    "unit": "h",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "operations.idle_power_fraction": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "operations.small_team_max": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "operations.teams.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "operations.depths.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "operations.context_limits.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "owners.options.*.colo_min_month": {
+    "unit": "USD/month",
+    "minimum": 0
+  },
+  "bridge.tariff.*": {
+    "unit": "USD/Mtoken",
+    "minimum": 0
+  },
+  "bridge.kv_measured": {
+    "unit": "B/token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "bridge.probe_team": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "operations.owner_restore_hours": {
+    "unit": "h",
+    "minimum": 0
+  },
+  "hardware.clients.*.compute": {
+    "unit": "FLOP/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hardware.clients.*.purchase_price": {
+    "unit": "USD",
+    "minimum": 0
+  },
+  "hardware.clients.*.premium_credit": {
+    "unit": "USD",
+    "minimum": 0
+  },
+  "paper_tables.hours": {
+    "unit": "h/day",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 24
+  },
+  "paper_tables.streams": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.glm.streams": {
+    "unit": "stream",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.teams.*": {
+    "unit": "person",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.shares.*": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "paper_tables.sizing_share": {
+    "unit": "1",
+    "minimum": 0,
+    "maximum": 1
+  },
+  "paper_tables.links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "paper_tables.offload_links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "paper_tables.state_bits.*": {
+    "unit": "bit",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.offload_goodput": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "paper_tables.egress_prices.*": {
+    "unit": "USD/TB",
+    "minimum": 0
+  },
+  "paper_tables.glm.contexts.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.glm.ingest_tokens": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.glm.integration_step": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "paper_tables.glm.start_depth": {
+    "unit": "token",
+    "minimum": 0,
+    "integer": true
+  },
+  "paper_tables.glm.sessions_day": {
+    "unit": "session/day",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "paper_tables.glm.moe_prefill_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "paper_tables.decode_scaling": {
+    "unit": "decode law",
+    "enum": [
+      "measured_power_roofline"
+    ]
+  },
+  "r6.perimeter.small_team_max": {
+    "unit": "person",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r6.perimeter.overlap_min": {
+    "unit": "person",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r6.perimeter.local_front_month": {
+    "unit": "USD/person/month",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "r6.utilization.contexts.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r6.utilization.teams.*": {
+    "unit": "person",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r6.utilization.sessions_day.*": {
+    "unit": "session/day",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r6.utilization.users_per_studio.*": {
+    "unit": "person/device",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r6.decode.memories.*": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r6.decode.depths.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r6.decode.streams.*": {
+    "unit": "stream",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r6.decode.state_passes": {
+    "unit": "1",
+    "minimum": 2,
+    "exclusive_minimum": false,
+    "integer": true,
+    "maximum": 2
+  },
+  "r6.perimeter.share": {
+    "unit": "1",
+    "minimum": 1,
+    "maximum": 1
+  },
+  "r6.perimeter.policy": {
+    "unit": "deployment policy",
+    "enum": [
+      "closed_perimeter_own_rack"
+    ]
+  },
+  "r6.decode.client_quant": {
+    "unit": "weight format",
+    "enum": [
+      "Q4"
+    ]
+  },
+  "r7.turn.depths.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.turn.portions.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.oneshot.contexts.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r7.goodput": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "r7.latency": {
+    "unit": "s",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "r7.integration_step": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.context_limit": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.import_efficiency": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "r7.import_copies": {
+    "unit": "copy",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.import_fixed_s": {
+    "unit": "s",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "r7.last_token_tokens": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.states.*.factor": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "r7.decode.scales.*": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r7.decode.links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r7.arch.q8_factor": {
+    "unit": "B/value",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r7.arch.reference_depth": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.reference_segment_end": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.arch.comparison_depth": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.portion": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.arch.large_portion": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.arch.links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r7.arch.models.*.parameters": {
+    "unit": "parameter",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r7.arch.models.*.context": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r7.arch.models.*.state": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "r7.arch.models.*.full.layers": {
+    "unit": "layer",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.full.kv_heads": {
+    "unit": "head",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.full.dim": {
+    "unit": "value",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.full.q_heads": {
+    "unit": "head",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.full.kv_copies": {
+    "unit": "1",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true,
+    "maximum": 2
+  },
+  "r7.arch.models.*.sliding.layers": {
+    "unit": "layer",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.sliding.kv_heads": {
+    "unit": "head",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.sliding.dim": {
+    "unit": "value",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.sliding.q_heads": {
+    "unit": "head",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.models.*.sliding.window": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r7.arch.transfer_bandwidth": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.mode": {
+    "unit": "sampler law",
+    "enum": [
+      "legacy_lognormal",
+      "measured_tail"
+    ]
+  },
+  "sampler.fit.thresholds.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "sampler.fit.representatives.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "sampler.fit.low_probabilities.*": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "sampler.fit.iterations": {
+    "unit": "iteration",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "sampler.fit.tolerance": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "sampler.fit.minimum_calls": {
+    "unit": "call",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "hosting.sessions_per_person": {
+    "unit": "session/person",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hosting.month_fraction": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "maximum": 1
+  },
+  "hosting.pcie_bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hosting.tiers.*.price": {
+    "unit": "USD/GB/month",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "hosting.tiers.*.bandwidth": {
+    "unit": "B/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "hosting.tier": {
+    "unit": "storage tier",
+    "enum": [
+      "HBM",
+      "RAM",
+      "NVMe"
+    ]
+  },
+  "r8.shares.*": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "r8.links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r8.depths.*": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r8.portion": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r8.output_fractions.*": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "maximum": 1
+  },
+  "r8.sensitivity_team": {
+    "unit": "person",
+    "minimum": 1,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r8.transcript.tokens": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r8.transcript.summary": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": false,
+    "integer": true
+  },
+  "r8.transcript.links.*": {
+    "unit": "bit/s",
+    "minimum": 0,
+    "exclusive_minimum": true
+  },
+  "r8.transcript.air_reserve": {
+    "unit": "B",
+    "minimum": 0,
+    "exclusive_minimum": false
+  },
+  "sampler.fit.depth_probabilities.*": {
+    "unit": "1",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "maximum": 1
+  },
+  "hosting.catch_up": {
+    "unit": "catch-up policy",
+    "enum": [
+      "per_call",
+      "at_offload"
+    ]
+  },
+  "hosting.retention": {
+    "unit": "retention policy",
+    "enum": [
+      "ram_month",
+      "tiered"
+    ]
+  },
+  "r9.large_portion": {
+    "unit": "token",
+    "minimum": 0,
+    "exclusive_minimum": true,
+    "integer": true
+  },
+  "r9.state_bits.*": {
+    "unit": "bit",
+    "minimum": 16,
+    "maximum": 32,
+    "integer": true
+  }
+}

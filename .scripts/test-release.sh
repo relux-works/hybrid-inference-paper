@@ -78,6 +78,23 @@ expect_eq "$(.scripts/version.sh)" "0.0.1-dirty" "dirty label"
 expect_has "$(.scripts/version.sh --tex)" '\paperreleasefalse' "dirty build is a draft"
 git checkout -q -- text.tex
 
+# Claim: the PDF name takes its label from the version file the title page prints, so a tree that changes after the
+# title page was written keeps the title page's label in the file name.
+.scripts/version.sh --tex > version.tex
+written=$(.scripts/version.sh)
+echo later > text.tex
+expect_eq "$(.scripts/version.sh --label-of version.tex)" "$written" "PDF label follows the title page"
+expect_has "$(.scripts/version.sh)" "-dirty" "the tree changed after the title page was written"
+git checkout -q -- text.tex
+# Claim: a version file without a label is rejected, so the PDF is never named with an empty label.
+echo '% no label' > bad.tex
+if out=$(.scripts/version.sh --label-of bad.tex 2>&1); then
+  bad "label-of should reject a file without a label"
+else
+  expect_has "$out" "no \\paperversion" "label-of failure reason"
+fi
+rm -f version.tex bad.tex
+
 # Claim: release-check accepts a SemVer tag on main with a changelog section and writes that section.
 check_ok v0.0.1
 expect_eq "$(cat notes.md)" "$(printf '### Added\n- First.')" "release notes of v0.0.1"

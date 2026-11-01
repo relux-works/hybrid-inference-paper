@@ -1,0 +1,2774 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 90,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 91,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 92,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 93,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 94,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 95,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 96,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 97,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 98,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 99,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 100,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 101,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 102,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 103,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 104,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 105,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 106,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 107,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 108,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 109,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 110,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 111,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 112,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 113,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 114,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 115,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 116,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 117,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 118,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 119,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 120,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 121,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 122,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 123,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 124,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "units",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "colo_month",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "owned_month",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "rent_month",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "monthly_cost",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "per_user_month",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "operations.small_team_max",
+        "reason": "office boxes are reserved for large companies; small remote teams use colocation"
+      }
+    ],
+    "column": "buy_beats_rent",
+    "row": 125,
+    "table": "remote_rent_buy_conservative"
+  }
+]

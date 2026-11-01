@@ -1,0 +1,78 @@
+{
+  "generated_utc": "2026-10-30T10:56:27.627911+00:00",
+  "dataset": "full05",
+  "tool_version": "1.5-call-time",
+  "source_commit": "ec7fd1a03fcfc6a0f3948d6d6e0df8f0e41d82ce",
+  "source_sha256": "99dce8012210a4ec961c82d0193255aa81ace74a0eda848428157ff74dcef37b",
+  "read_started_utc": "2026-10-30T10:20:58.901453+00:00",
+  "process_finished_utc": "2026-10-30T10:52:56.184410+00:00",
+  "source_reading_status": "complete_for_discovered_sources",
+  "time_coverage_status": "partial",
+  "provenance": "Locally saved CLI usage-event records, including configured live, Curator and backup sources. Does not attest where model inference executed.",
+  "agents": {
+    "claude": {
+      "contexts": 2867,
+      "calls": 285129,
+      "call_time": {
+        "first_utc": "2026-05-07T14:11:48.637000Z",
+        "last_utc": "2026-10-28T14:26:26.469000Z",
+        "distinct_utc_days": 119,
+        "timestamped_calls": 285129,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 169887,
+        "status": "partial"
+      }
+    },
+    "codex": {
+      "contexts": 7664,
+      "calls": 1126620,
+      "call_time": {
+        "first_utc": "2025-11-18T22:58:13.635000Z",
+        "last_utc": "2026-10-30T10:20:58.812000Z",
+        "distinct_utc_days": 214,
+        "timestamped_calls": 1126620,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 172383,
+        "status": "partial"
+      }
+    },
+    "muse": {
+      "contexts": 2644,
+      "calls": 116445,
+      "call_time": {
+        "first_utc": "2026-08-06T18:09:56.868201Z",
+        "last_utc": "2026-10-30T04:02:31.931557Z",
+        "distinct_utc_days": 42,
+        "timestamped_calls": 116445,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 6,
+        "status": "partial"
+      }
+    },
+    "all": {
+      "contexts": 13175,
+      "calls": 1528194,
+      "call_time": {
+        "first_utc": "2025-11-18T22:58:13.635000Z",
+        "last_utc": "2026-10-30T10:20:58.812000Z",
+        "distinct_utc_days": 233,
+        "timestamped_calls": 1528194,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 342276,
+        "status": "partial"
+      }
+    }
+  },
+  "limits": [
+    "Time coverage partial because valid duplicate projection timestamps disagree; first valid in discovery/reader order retained, not exact inference start. Conflict spans are not retained by the stats report.",
+    "All counted calls have representable timestamps, but 2198 parsed journals without usage remain unknown consumption, not zero.",
+    "One active Codex file appended after its per-file observed boundary; corpus is not an atomic snapshot.",
+    "81 zero-usage calls,106 unknown-model labels retained;890 Claude web chats without per-call usage remain excluded.",
+    "Original full04 measurements remain historical; full05 is a later corpus snapshot. Do not splice full05 dates into full04 counts without labeling the mismatch.",
+    "new_in is context-growth heuristic, Muse cache semantics unverified, reasoning not additive; source inventory/coverage stays private."
+  ]
+}

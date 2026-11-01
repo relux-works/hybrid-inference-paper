@@ -2,9 +2,21 @@
 \documentclass[10pt,a4paper]{article}
 \input{preamble}
 \input{version}
+% No page break after a hyphenated line, and no single orphan or widow lines.
+\brokenpenalty=10000
+\clubpenalty=10000
+\widowpenalty=10000
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning,fit,backgrounds,calc,patterns,decorations.pathreplacing}
+\usepackage{url}
+% Long reference addresses may also break after a hyphen, so a newsroom URL stays inside the margin.
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks\do\-}
+
+\newcommand{\papertitle}{Гибридный инференс с клиент-серверным разнесением prefill и decode: архитектура и экономика для клиентов с унифицированной памятью}
 
 \hypersetup{
-  pdftitle={Гибридный инференс с клиент-серверным разнесением prefill и decode: архитектура и экономика для клиентов с унифицированной памятью},
+  pdftitle={\papertitle},
   pdfauthor={Иван Опарин, Алексей Григорьев},
   pdfsubject={\ifpaperrelease Версия \paperversion\else Черновик \paperversion\fi, коммит \papercommit},
 }
@@ -17,9 +29,31 @@
 \vspace{6pt}
 Иван Опарин, Алексей Григорьев\\
 Relux Works · github.com/relux-works\\
-\paperversionline
+\paperversionline\par
+\vspace{4pt}
+{\small\itshape Посвящается всем энтузиастам локальных моделей\par}
 \end{center}
 
-\textbf{Состояние.} Эта версия проверяет сборку и выпуск PDF. Текст статьи появится в следующих версиях.
+\input{sections/00-abstract}
+\input{sections/01-introduction}
+\input{sections/02-workload}
+\input{sections/03-architecture}
+\input{sections/04-channel}
+\input{sections/05-clients}
+\input{sections/05b-models}
+\input{sections/06-server}
+\input{sections/07-economics}
+\input{sections/08-million}
+\input{sections/09-security}
+\input{sections/10-resilience}
+\input{sections/11-limitations}
+\input{sections/12-related}
+\input{sections/13-outlook}
+\input{sections/14-conclusion}
+
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+\input{sections/90-appendix}
 
 \end{document}

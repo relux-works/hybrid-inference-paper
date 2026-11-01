@@ -1,0 +1,372 @@
+{
+  "operations": {
+    "autopilot_share": {
+      "value": 0.5,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: fraction of fixed total monthly calls spread uniformly over the entire calendar month; remainder in operator windows. Endpoints 0 and 1 are valid."
+      }
+    },
+    "reference_share": {
+      "value": 0,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Operator-only reference: no automatic calls outside the operator windows."
+      }
+    },
+    "pool_price": {
+      "value": 0.5,
+      "unit": "USD/GPU/h",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Hypothetical net price received by owner after any pool fee; tenant network/storage assumed billed separately. Pool does not exist."
+      }
+    },
+    "pool_fill": {
+      "value": 0.5,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Hypothetical fill fraction of guaranteed idle-window capacity only; pool does not exist."
+      }
+    },
+    "drain_hours": {
+      "value": 0.25,
+      "unit": "h",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimate: stop admitting pool jobs 15 minutes before the next owner window."
+      }
+    },
+    "job_limit_hours": {
+      "value": 0.2,
+      "unit": "h",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimate contract: maximum tenant job time 12 minutes. Job plus owner restore bound must fit the drain guard; not runtime-qualified."
+      }
+    },
+    "idle_power_fraction": {
+      "value": 0.15,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: idle power is 15% of full-load power; linear incremental energy accounting."
+      }
+    },
+    "small_team_max": {
+      "value": 100,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: remote teams up to 100 use colocated servers; office options only above this size."
+      }
+    },
+    "teams": [
+      {
+        "value": 5,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner remote-team sizes and one large-company office comparison."
+        }
+      },
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner remote-team sizes and one large-company office comparison."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner remote-team sizes and one large-company office comparison."
+        }
+      },
+      {
+        "value": 100,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner remote-team sizes and one large-company office comparison."
+        }
+      },
+      {
+        "value": 1000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner remote-team sizes and one large-company office comparison."
+        }
+      }
+    ],
+    "depths": [
+      {
+        "value": 256000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner deep-context fit grid, decimal tokens."
+        }
+      },
+      {
+        "value": 500000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner deep-context fit grid, decimal tokens."
+        }
+      },
+      {
+        "value": 1000000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner deep-context fit grid, decimal tokens."
+        }
+      }
+    ],
+    "context_limits": {
+      "qwen27": {
+        "value": 1000000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Declared inference envelope, separate from raw memory capacity. Qwen uses the repository 1M estimate; other models use calc4 1,048,576-token envelope."
+        }
+      },
+      "flashnext": {
+        "value": 1048576,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Declared inference envelope, separate from raw memory capacity. Qwen uses the repository 1M estimate; other models use calc4 1,048,576-token envelope."
+        }
+      },
+      "glm": {
+        "value": 1048576,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Declared inference envelope, separate from raw memory capacity. Qwen uses the repository 1M estimate; other models use calc4 1,048,576-token envelope."
+        }
+      }
+    },
+    "owner_restore_hours": {
+      "value": 0.05,
+      "unit": "h",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New conservative 3-minute bound for owner model/KV restoration, scheduling and resource handback. Offline note gives 5-15 seconds for weights alone, not full-state readiness; this bound is unqualified and must be enforced before a real no-fallback claim."
+      }
+    }
+  },
+  "owners": {
+    "options": {
+      "colo1": {
+        "label": "1x RTX PRO 6000 Server, colocation",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owned remote-team server colocated in a datacenter, not an office."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner 1\u20132 GPU small colocated host."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 2.2,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Counterfactual same-memory Koyeb RTX PRO6000 rental comparison: 2.20 USD/GPU/h; co-location/sharding not guaranteed by independent tariffs."
+          }
+        },
+        "capex": {
+          "value": 36000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate from calc4 Server Edition $23k/GPU plus 13000 USD host allowance; not a purchase quote."
+          }
+        },
+        "power": {
+          "value": 0.9,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 0.9 kW per GPU including host envelope, scaled to the small server."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Single GPU factor 1; dual GPU 0.9 estimates dense dispatch or MoE sharding overhead. Not qualified."
+          }
+        },
+        "colo_min_month": {
+          "value": 100,
+          "unit": "USD/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 USD per host-month minimum colo charge; actual space fee=max(minimum,power*prices.colo). CBRE-based 190 USD/kW/month rate is inherited; obtain a small-server quote."
+          }
+        }
+      },
+      "colo2": {
+        "label": "2x RTX PRO 6000 Server, colocation",
+        "location": {
+          "value": "datacenter",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owned remote-team server colocated in a datacenter, not an office."
+          }
+        },
+        "gpus": {
+          "value": 2,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner 1\u20132 GPU small colocated host."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "hourly": {
+          "value": 4.4,
+          "unit": "USD/unit/h",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Counterfactual same-memory Koyeb RTX PRO6000 rental comparison: 2.20 USD/GPU/h; co-location/sharding not guaranteed by independent tariffs."
+          }
+        },
+        "capex": {
+          "value": 62000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate from calc4 Server Edition $23k/GPU plus 16000 USD host allowance; not a purchase quote."
+          }
+        },
+        "power": {
+          "value": 1.8,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 0.9 kW per GPU including host envelope, scaled to the small server."
+          }
+        },
+        "shard_efficiency": {
+          "value": 0.9,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Single GPU factor 1; dual GPU 0.9 estimates dense dispatch or MoE sharding overhead. Not qualified."
+          }
+        },
+        "colo_min_month": {
+          "value": 100,
+          "unit": "USD/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: 100 USD per host-month minimum colo charge; actual space fee=max(minimum,power*prices.colo). CBRE-based 190 USD/kW/month rate is inherited; obtain a small-server quote."
+          }
+        }
+      }
+    }
+  }
+}

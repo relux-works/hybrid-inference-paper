@@ -1,0 +1,1027 @@
+{
+  "tool": "agent_session_stats",
+  "version": "1.5-call-time",
+  "generated": "2026-10-30T10:51:36.706920+00:00",
+  "python": "3.15.1",
+  "platform": "darwin",
+  "params": {
+    "sample": 0,
+    "min_calls": 1,
+    "max_mb": 0,
+    "chars_per_token": 3.6
+  },
+  "notes": [
+    "Session counts are contexts WITH recorded usage, not every discovered transcript. Zero-usage and unreadable files are explicit in coverage.",
+    "new_in is an estimate from context growth, not exact prefill traffic or uncached input; compaction, forks and reasoning retention affect it.",
+    "Muse input_tokens are unchanged as recorded. Cache semantics are unverified; no value-dependent addition is performed.",
+    "Output/reasoning are logged usage fields; reasoning is not added to output. Tool token sizes are character-based estimates.",
+    "Each file is read to its observed length; the corpus is not an atomic cross-session snapshot. Append/in-place changes are counted.",
+    "Copies deduplicate by inode then SHA256; model calls deduplicate by provider response/message/source-record identity.",
+    "Missing response IDs use session/cumulative counters or row identity; fallback identities cannot prove cross-fork equivalence.",
+    "call_time uses recorded usage-event time (Claude/Codex envelope timestamp; Muse recorded_at), not exact model start time or file dates.",
+    "Naive ISO timestamps assume UTC. Numeric timestamps use the existing positive seconds/milliseconds/microseconds/nanoseconds magnitude heuristic.",
+    "Call times use the first valid deduplicated timestamp; later copies can fill absent/invalid time, and disagreements are flagged without adding days.",
+    "Time coverage is independent of source-reading status; distinct UTC days are a set union after min-call filtering, not calendar span or provider sum."
+  ],
+  "agents": {
+    "claude": {
+      "streams": 2867,
+      "calls": 285129,
+      "new_in_per_call": {
+        "p10": 73.0,
+        "p25": 154.0,
+        "p50": 380.0,
+        "p75": 927.0,
+        "p90": 2420.0,
+        "p99": 10038.0,
+        "mean": 1022.3,
+        "n": 281976
+      },
+      "output_per_call": {
+        "p10": 141.0,
+        "p25": 211.0,
+        "p50": 382.0,
+        "p75": 770.0,
+        "p90": 1562.0,
+        "p99": 6372.9,
+        "mean": 762.0,
+        "n": 285129
+      },
+      "reasoning_per_call": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 159.0,
+        "p90": 492.0,
+        "p99": 2857.4,
+        "mean": 210.4,
+        "n": 285129
+      },
+      "depth_per_call": {
+        "p10": 84022.0,
+        "p25": 124893.0,
+        "p50": 212311.0,
+        "p75": 431845.0,
+        "p90": 720173.2,
+        "p99": 940754.7,
+        "mean": 307858.2,
+        "n": 285129
+      },
+      "first_call_prompt": {
+        "p10": 38599.6,
+        "p25": 42341.5,
+        "p50": 56820.0,
+        "p75": 67817.5,
+        "p90": 84675.2,
+        "p99": 521519.0,
+        "mean": 66382.7,
+        "n": 2867
+      },
+      "gap_seconds": {
+        "p10": 3.0,
+        "p25": 4.5,
+        "p50": 8.1,
+        "p75": 18.3,
+        "p90": 60.6,
+        "p99": 2177.6,
+        "mean": 333.0,
+        "n": 282262
+      },
+      "tool_result_tokens_est": {
+        "p10": 16.9,
+        "p25": 53.3,
+        "p50": 136.4,
+        "p75": 516.4,
+        "p90": 1398.9,
+        "p99": 5802.5,
+        "mean": 548.8,
+        "n": 286301
+      },
+      "new_in_by_depth": {
+        "<50k": {
+          "p50": 1241.5,
+          "p90": 4430.0,
+          "mean": 1983.8,
+          "n": 2888
+        },
+        "50-100k": {
+          "p50": 741.0,
+          "p90": 4952.4,
+          "mean": 1853.6,
+          "n": 39107
+        },
+        "100-200k": {
+          "p50": 414.0,
+          "p90": 2937.0,
+          "mean": 1186.5,
+          "n": 89636
+        },
+        "200k+": {
+          "p50": 321.0,
+          "p90": 1392.0,
+          "mean": 689.7,
+          "n": 150345
+        }
+      },
+      "share_of_new_tokens_in_calls": {
+        ">=2k": 0.61,
+        ">=5k": 0.348,
+        ">=10k": 0.168,
+        ">=30k": 0.03
+      },
+      "calls_per_stream": {
+        "p10": 8.0,
+        "p25": 20.0,
+        "p50": 45.0,
+        "p75": 79.0,
+        "p90": 117.0,
+        "p99": 982.1,
+        "mean": 99.5,
+        "n": 2867
+      },
+      "max_depth_per_stream": {
+        "p10": 72796.2,
+        "p25": 107536.0,
+        "p50": 158480.0,
+        "p75": 233500.0,
+        "p90": 345033.4,
+        "p99": 965806.4,
+        "mean": 195393.5,
+        "n": 2867
+      },
+      "duration_s_per_stream": {
+        "p10": 92.4,
+        "p25": 262.4,
+        "p50": 657.5,
+        "p75": 1395.8,
+        "p90": 2642.7,
+        "p99": 1240210.9,
+        "mean": 32781.0,
+        "n": 2867
+      },
+      "new_in_total_per_stream": {
+        "p10": 10769.8,
+        "p25": 31057.0,
+        "p50": 60990.0,
+        "p75": 99838.0,
+        "p90": 158030.0,
+        "p99": 683461.1,
+        "mean": 100548.6,
+        "n": 2867
+      },
+      "output_total_per_stream": {
+        "p10": 5547.0,
+        "p25": 15290.0,
+        "p50": 34049.0,
+        "p75": 66821.0,
+        "p90": 111310.6,
+        "p99": 780936.0,
+        "mean": 75781.1,
+        "n": 2867
+      },
+      "resets": 286,
+      "calls_with_uncarried_output": 628,
+      "coverage": {
+        "files_discovered": 13073,
+        "bytes_discovered": 23070443030,
+        "bytes_hashed": 23070443030,
+        "usage_records": 868129,
+        "duplicate_call_records": 583000,
+        "conflicting_timestamp_records": 379709,
+        "files_parsed": 3116,
+        "files_with_usage": 2961,
+        "duplicate_content_files": 9957,
+        "usage_update_records": 8895,
+        "duplicate_tool_records": 183766,
+        "files_without_usage": 155
+      },
+      "call_time": {
+        "first_utc": "2026-05-07T14:11:48.637000Z",
+        "last_utc": "2026-10-28T14:26:26.469000Z",
+        "distinct_utc_days": 119,
+        "timestamped_calls": 285129,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 169887,
+        "status": "partial"
+      },
+      "totals": {
+        "prompt": 87779295193,
+        "cached": 86515880673,
+        "output": 217264370,
+        "reasoning": 59981785
+      },
+      "unknown_model_calls": 0,
+      "zero_usage_calls": 5
+    },
+    "codex": {
+      "streams": 7664,
+      "calls": 1126620,
+      "new_in_per_call": {
+        "p10": 0.0,
+        "p25": 25.0,
+        "p50": 73.0,
+        "p75": 682.0,
+        "p90": 3330.0,
+        "p99": 10988.8,
+        "mean": 1068.7,
+        "n": 1113619
+      },
+      "output_per_call": {
+        "p10": 46.0,
+        "p25": 93.0,
+        "p50": 190.0,
+        "p75": 454.0,
+        "p90": 989.0,
+        "p99": 3783.0,
+        "mean": 432.8,
+        "n": 1126620
+      },
+      "reasoning_per_call": {
+        "p10": 0.0,
+        "p25": 7.0,
+        "p50": 30.0,
+        "p75": 162.0,
+        "p90": 516.0,
+        "p99": 2245.8,
+        "mean": 192.0,
+        "n": 1126620
+      },
+      "depth_per_call": {
+        "p10": 54706.0,
+        "p25": 83704.8,
+        "p50": 124939.0,
+        "p75": 170952.0,
+        "p90": 204358.0,
+        "p99": 239724.8,
+        "mean": 127920.2,
+        "n": 1126620
+      },
+      "first_call_prompt": {
+        "p10": 16259.2,
+        "p25": 18658.8,
+        "p50": 33002.0,
+        "p75": 36966.5,
+        "p90": 44143.5,
+        "p99": 79346.5,
+        "mean": 30792.3,
+        "n": 7664
+      },
+      "gap_seconds": {
+        "p10": 0.0,
+        "p25": 3.4,
+        "p50": 7.9,
+        "p75": 18.4,
+        "p90": 33.6,
+        "p99": 120.3,
+        "mean": 88.6,
+        "n": 1118956
+      },
+      "tool_result_tokens_est": {
+        "p10": 17.5,
+        "p25": 42.8,
+        "p50": 134.2,
+        "p75": 1098.9,
+        "p90": 4255.6,
+        "p99": 11150.0,
+        "mean": 1271.4,
+        "n": 860796
+      },
+      "new_in_by_depth": {
+        "<50k": {
+          "p50": 302.0,
+          "p90": 6655.6,
+          "mean": 1902.4,
+          "n": 79843
+        },
+        "50-100k": {
+          "p50": 109.0,
+          "p90": 5413.0,
+          "mean": 1472.4,
+          "n": 298442
+        },
+        "100-200k": {
+          "p50": 59.0,
+          "p90": 2178.0,
+          "mean": 817.6,
+          "n": 602688
+        },
+        "200k+": {
+          "p50": 58.0,
+          "p90": 1639.0,
+          "mean": 799.3,
+          "n": 132646
+        }
+      },
+      "share_of_new_tokens_in_calls": {
+        ">=2k": 0.809,
+        ">=5k": 0.571,
+        ">=10k": 0.234,
+        ">=30k": 0.049
+      },
+      "calls_per_stream": {
+        "p10": 12.0,
+        "p25": 23.0,
+        "p50": 39.0,
+        "p75": 72.0,
+        "p90": 165.0,
+        "p99": 1967.4,
+        "mean": 147.0,
+        "n": 7664
+      },
+      "max_depth_per_stream": {
+        "p10": 62431.1,
+        "p25": 95098.8,
+        "p50": 131899.0,
+        "p75": 185414.8,
+        "p90": 222751.8,
+        "p99": 244724.4,
+        "mean": 138783.6,
+        "n": 7664
+      },
+      "duration_s_per_stream": {
+        "p10": 144.1,
+        "p25": 309.5,
+        "p50": 581.9,
+        "p75": 1263.4,
+        "p90": 3452.6,
+        "p99": 204391.9,
+        "mean": 12930.9,
+        "n": 7664
+      },
+      "new_in_total_per_stream": {
+        "p10": 23210.9,
+        "p25": 50743.2,
+        "p50": 81938.0,
+        "p75": 125832.0,
+        "p90": 199654.6,
+        "p99": 1388100.3,
+        "mean": 155285.2,
+        "n": 7664
+      },
+      "output_total_per_stream": {
+        "p10": 3965.5,
+        "p25": 9165.8,
+        "p50": 16823.0,
+        "p75": 34658.5,
+        "p90": 86651.3,
+        "p99": 1034118.6,
+        "mean": 63624.4,
+        "n": 7664
+      },
+      "resets": 5337,
+      "calls_with_uncarried_output": 217479,
+      "coverage": {
+        "files_discovered": 52443,
+        "bytes_discovered": 109059510030,
+        "bytes_hashed": 109059510030,
+        "usage_records": 1175547,
+        "duplicate_call_records": 48927,
+        "usage_update_records": 4633,
+        "conflicting_timestamp_records": 178323,
+        "repeated_legacy_updates": 29021,
+        "files_parsed": 9532,
+        "files_with_usage": 7731,
+        "duplicate_content_files": 42911,
+        "duplicate_tool_records": 117449,
+        "legacy_updates_matched_to_modern": 147022,
+        "cross_format_identity_matches": 606,
+        "files_appended_during_read": 1,
+        "files_without_usage": 1801
+      },
+      "call_time": {
+        "first_utc": "2025-11-18T22:58:13.635000Z",
+        "last_utc": "2026-10-30T10:20:58.812000Z",
+        "distinct_utc_days": 214,
+        "timestamped_calls": 1126620,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 172383,
+        "status": "partial"
+      },
+      "totals": {
+        "prompt": 144117431810,
+        "cached": 140955791586,
+        "output": 487617730,
+        "reasoning": 216311769
+      },
+      "unknown_model_calls": 44,
+      "zero_usage_calls": 14
+    },
+    "muse": {
+      "streams": 2644,
+      "calls": 116445,
+      "new_in_per_call": {
+        "p10": 142.0,
+        "p25": 238.0,
+        "p50": 472.0,
+        "p75": 1111.0,
+        "p90": 2791.3,
+        "p99": 10001.3,
+        "mean": 1136.1,
+        "n": 113668
+      },
+      "output_per_call": {
+        "p10": 105.0,
+        "p25": 153.0,
+        "p50": 269.0,
+        "p75": 598.0,
+        "p90": 1474.0,
+        "p99": 6369.6,
+        "mean": 665.3,
+        "n": 116445
+      },
+      "reasoning_per_call": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 42.0,
+        "p75": 222.0,
+        "p90": 809.0,
+        "p99": 5277.6,
+        "mean": 350.8,
+        "n": 116445
+      },
+      "depth_per_call": {
+        "p10": 46680.4,
+        "p25": 84289.0,
+        "p50": 154140.0,
+        "p75": 238099.0,
+        "p90": 305071.8,
+        "p99": 373145.6,
+        "mean": 165764.2,
+        "n": 116445
+      },
+      "first_call_prompt": {
+        "p10": 9624.3,
+        "p25": 9966.0,
+        "p50": 25044.0,
+        "p75": 32321.0,
+        "p90": 44801.7,
+        "p99": 115112.2,
+        "mean": 25719.1,
+        "n": 2644
+      },
+      "gap_seconds": {
+        "p10": 2.9,
+        "p25": 4.0,
+        "p50": 6.1,
+        "p75": 12.3,
+        "p90": 32.8,
+        "p99": 297.9,
+        "mean": 27.8,
+        "n": 113801
+      },
+      "tool_result_tokens_est": {
+        "p10": 91.7,
+        "p25": 183.6,
+        "p50": 402.5,
+        "p75": 1015.1,
+        "p90": 2346.7,
+        "p99": 7805.8,
+        "mean": 957.7,
+        "n": 129904
+      },
+      "new_in_by_depth": {
+        "<50k": {
+          "p50": 679.0,
+          "p90": 4021.3,
+          "mean": 1548.7,
+          "n": 10898
+        },
+        "50-100k": {
+          "p50": 827.0,
+          "p90": 5375.0,
+          "mean": 1981.8,
+          "n": 22584
+        },
+        "100-200k": {
+          "p50": 481.0,
+          "p90": 2482.6,
+          "mean": 1051.9,
+          "n": 38595
+        },
+        "200k+": {
+          "p50": 359.0,
+          "p90": 1276.0,
+          "mean": 646.9,
+          "n": 41591
+        }
+      },
+      "share_of_new_tokens_in_calls": {
+        ">=2k": 0.591,
+        ">=5k": 0.322,
+        ">=10k": 0.118,
+        ">=30k": 0.003
+      },
+      "calls_per_stream": {
+        "p10": 1.0,
+        "p25": 1.0,
+        "p50": 3.0,
+        "p75": 65.0,
+        "p90": 134.0,
+        "p99": 328.0,
+        "mean": 44.0,
+        "n": 2644
+      },
+      "max_depth_per_stream": {
+        "p10": 9624.3,
+        "p25": 9966.0,
+        "p50": 50921.0,
+        "p75": 151935.2,
+        "p90": 268135.7,
+        "p99": 383600.4,
+        "mean": 95843.7,
+        "n": 2644
+      },
+      "duration_s_per_stream": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 12.2,
+        "p75": 855.9,
+        "p90": 2544.5,
+        "p99": 10002.1,
+        "mean": 1198.4,
+        "n": 2644
+      },
+      "new_in_total_per_stream": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 559.5,
+        "p75": 81144.8,
+        "p90": 149323.8,
+        "p99": 302914.4,
+        "mean": 48841.7,
+        "n": 2644
+      },
+      "output_total_per_stream": {
+        "p10": 716.0,
+        "p25": 1338.8,
+        "p50": 2999.5,
+        "p75": 37429.0,
+        "p90": 94885.8,
+        "p99": 231254.5,
+        "mean": 29299.0,
+        "n": 2644
+      },
+      "resets": 133,
+      "calls_with_uncarried_output": 1025,
+      "coverage": {
+        "files_discovered": 3352,
+        "bytes_discovered": 6242902655,
+        "bytes_hashed": 6242902655,
+        "usage_records": 116910,
+        "files_parsed": 3351,
+        "files_with_usage": 3109,
+        "files_without_usage": 242,
+        "zero_usage_completions": 62,
+        "duplicate_call_records": 465,
+        "usage_update_records": 465,
+        "conflicting_timestamp_records": 465,
+        "duplicate_content_files": 1
+      },
+      "call_time": {
+        "first_utc": "2026-08-06T18:09:56.868201Z",
+        "last_utc": "2026-10-30T04:02:31.931557Z",
+        "distinct_utc_days": 42,
+        "timestamped_calls": 116445,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 6,
+        "status": "partial"
+      },
+      "totals": {
+        "prompt": 19302410608,
+        "cached": 18896006312,
+        "output": 77466551,
+        "reasoning": 40844472
+      },
+      "unknown_model_calls": 62,
+      "zero_usage_calls": 62
+    },
+    "all": {
+      "streams": 13175,
+      "calls": 1528194,
+      "new_in_per_call": {
+        "p10": 0.0,
+        "p25": 32.0,
+        "p50": 157.0,
+        "p75": 804.0,
+        "p90": 3048.0,
+        "p99": 10875.0,
+        "mean": 1065.1,
+        "n": 1509263
+      },
+      "output_per_call": {
+        "p10": 54.0,
+        "p25": 113.0,
+        "p50": 229.0,
+        "p75": 531.0,
+        "p90": 1136.0,
+        "p99": 4502.1,
+        "mean": 511.9,
+        "n": 1528194
+      },
+      "reasoning_per_call": {
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 27.0,
+        "p75": 166.0,
+        "p90": 516.0,
+        "p99": 2583.0,
+        "mean": 207.5,
+        "n": 1528194
+      },
+      "depth_per_call": {
+        "p10": 57788.0,
+        "p25": 89073.0,
+        "p50": 135384.5,
+        "p75": 190206.8,
+        "p90": 249787.1,
+        "p99": 825931.8,
+        "mean": 164376.5,
+        "n": 1528194
+      },
+      "first_call_prompt": {
+        "p10": 11175.0,
+        "p25": 19470.0,
+        "p50": 34002.0,
+        "p75": 42799.0,
+        "p90": 62214.6,
+        "p99": 121440.6,
+        "mean": 37519.0,
+        "n": 13175
+      },
+      "gap_seconds": {
+        "p10": 0.2,
+        "p25": 3.8,
+        "p50": 7.8,
+        "p75": 17.9,
+        "p90": 34.8,
+        "p99": 341.1,
+        "mean": 129.5,
+        "n": 1515019
+      },
+      "tool_result_tokens_est": {
+        "p10": 17.5,
+        "p25": 43.6,
+        "p50": 165.8,
+        "p75": 887.2,
+        "p90": 3211.1,
+        "p99": 11143.6,
+        "mean": 1077.5,
+        "n": 1277001
+      },
+      "new_in_by_depth": {
+        "<50k": {
+          "p50": 405.0,
+          "p90": 6211.0,
+          "mean": 1863.7,
+          "n": 93629
+        },
+        "50-100k": {
+          "p50": 196.0,
+          "p90": 5338.0,
+          "mean": 1545.7,
+          "n": 360133
+        },
+        "100-200k": {
+          "p50": 97.0,
+          "p90": 2326.0,
+          "mean": 875.2,
+          "n": 730919
+        },
+        "200k+": {
+          "p50": 222.0,
+          "p90": 1448.0,
+          "mean": 729.0,
+          "n": 324582
+        }
+      },
+      "share_of_new_tokens_in_calls": {
+        ">=2k": 0.756,
+        ">=5k": 0.511,
+        ">=10k": 0.213,
+        ">=30k": 0.042
+      },
+      "calls_per_stream": {
+        "p10": 1.0,
+        "p25": 17.0,
+        "p50": 37.0,
+        "p75": 73.0,
+        "p90": 143.0,
+        "p99": 1315.3,
+        "mean": 116.0,
+        "n": 13175
+      },
+      "max_depth_per_stream": {
+        "p10": 23726.0,
+        "p25": 82737.5,
+        "p50": 128542.0,
+        "p75": 191807.5,
+        "p90": 241710.2,
+        "p99": 470852.1,
+        "mean": 142485.1,
+        "n": 13175
+      },
+      "duration_s_per_stream": {
+        "p10": 0.0,
+        "p25": 202.8,
+        "p50": 528.4,
+        "p75": 1241.6,
+        "p90": 2999.2,
+        "p99": 218302.7,
+        "mean": 14895.9,
+        "n": 13175
+      },
+      "new_in_total_per_stream": {
+        "p10": 0.0,
+        "p25": 30794.5,
+        "p50": 69022.0,
+        "p75": 114617.5,
+        "p90": 178347.6,
+        "p99": 993839.2,
+        "mean": 122012.6,
+        "n": 13175
+      },
+      "output_total_per_stream": {
+        "p10": 1722.0,
+        "p25": 7030.5,
+        "p50": 17749.0,
+        "p75": 42338.0,
+        "p90": 98441.8,
+        "p99": 737471.4,
+        "mean": 59381.3,
+        "n": 13175
+      },
+      "resets": 5756,
+      "calls_with_uncarried_output": 219132,
+      "call_time": {
+        "first_utc": "2025-11-18T22:58:13.635000Z",
+        "last_utc": "2026-10-30T10:20:58.812000Z",
+        "distinct_utc_days": 233,
+        "timestamped_calls": 1528194,
+        "missing_timestamp_calls": 0,
+        "invalid_timestamp_calls": 0,
+        "conflicting_timestamp_calls": 342276,
+        "status": "partial"
+      },
+      "totals": {
+        "prompt": 251199137611,
+        "cached": 246367678571,
+        "output": 782348651,
+        "reasoning": 317138026
+      },
+      "unknown_model_calls": 106,
+      "zero_usage_calls": 81
+    }
+  },
+  "models": [
+    {
+      "agent": "codex",
+      "model": "gpt-5.6-sol",
+      "calls": 444098
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-6.1-sol",
+      "calls": 268261
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-6-luna",
+      "calls": 145850
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-6-astra",
+      "calls": 138563
+    },
+    {
+      "agent": "claude",
+      "model": "claude-opus-5-5",
+      "calls": 131507
+    },
+    {
+      "agent": "muse",
+      "model": "muse-spark-1.3-contributor",
+      "calls": 113520
+    },
+    {
+      "agent": "claude",
+      "model": "claude-opus-5",
+      "calls": 96830
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.4",
+      "calls": 40690
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.2",
+      "calls": 16813
+    },
+    {
+      "agent": "claude",
+      "model": "claude-fable-5",
+      "calls": 16369
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.5",
+      "calls": 15578
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.6-luna",
+      "calls": 15066
+    },
+    {
+      "agent": "claude",
+      "model": "claude-sonnet-5-5",
+      "calls": 12536
+    },
+    {
+      "agent": "claude",
+      "model": "claude-sonnet-5",
+      "calls": 10688
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.6-terra",
+      "calls": 10167
+    },
+    {
+      "agent": "claude",
+      "model": "claude-opus-4-8",
+      "calls": 9426
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.3-codex-spark",
+      "calls": 7875
+    },
+    {
+      "agent": "claude",
+      "model": "claude-fable-5-1",
+      "calls": 7493
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.1-codex-max",
+      "calls": 5282
+    },
+    {
+      "agent": "codex",
+      "model": "Qwen3.6-27B",
+      "calls": 5198
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-6-sol",
+      "calls": 4137
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.3-codex",
+      "calls": 3265
+    },
+    {
+      "agent": "codex",
+      "model": "muse-spark-1.2-contributor",
+      "calls": 1634
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5-codex",
+      "calls": 1566
+    },
+    {
+      "agent": "muse",
+      "model": "muse-wonder-full-1.0-contributor",
+      "calls": 1469
+    },
+    {
+      "agent": "muse",
+      "model": "muse-spark-1.2-contributor",
+      "calls": 1157
+    },
+    {
+      "agent": "codex",
+      "model": "muse-spark-1.3-contributor-free",
+      "calls": 984
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-oss-20b-high-131k",
+      "calls": 329
+    },
+    {
+      "agent": "claude",
+      "model": "claude-opus-4-7",
+      "calls": 227
+    },
+    {
+      "agent": "codex",
+      "model": "google/gemma-4-26b-a4b",
+      "calls": 213
+    },
+    {
+      "agent": "codex",
+      "model": "qwen/qwen3-coder-next",
+      "calls": 181
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.1-codex",
+      "calls": 172
+    },
+    {
+      "agent": "muse",
+      "model": "muse-wonder-full-1.0",
+      "calls": 161
+    },
+    {
+      "agent": "codex",
+      "model": "muse-spark-1.3-contributor",
+      "calls": 136
+    },
+    {
+      "agent": "codex",
+      "model": "codex-auto-review",
+      "calls": 119
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-oss-120b",
+      "calls": 91
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.2-codex",
+      "calls": 74
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-5.4-mini",
+      "calls": 65
+    },
+    {
+      "agent": "codex",
+      "model": "openai/gpt-oss-20b",
+      "calls": 61
+    },
+    {
+      "agent": "muse",
+      "model": "muse-spark-1.3",
+      "calls": 50
+    },
+    {
+      "agent": "claude",
+      "model": "claude-sonnet-4-6",
+      "calls": 45
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-oss-20b-high-131k:latest",
+      "calls": 45
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-oss-120b-high-131k",
+      "calls": 38
+    },
+    {
+      "agent": "muse",
+      "model": "muse-wonder-1.0-contributor",
+      "calls": 26
+    },
+    {
+      "agent": "codex",
+      "model": "qwen3.8-27b-q4km",
+      "calls": 10
+    },
+    {
+      "agent": "claude",
+      "model": "claude-haiku-4-5-20251001",
+      "calls": 8
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-oss:20b",
+      "calls": 6
+    },
+    {
+      "agent": "codex",
+      "model": "gpt-oss-safeguard-120b-mlx",
+      "calls": 6
+    },
+    {
+      "agent": "codex",
+      "model": "muse-spark-1.2",
+      "calls": 3
+    }
+  ],
+  "status": "complete_for_discovered_sources",
+  "seconds": 1911.0
+}

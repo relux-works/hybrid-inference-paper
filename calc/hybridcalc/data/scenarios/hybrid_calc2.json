@@ -1,0 +1,10 @@
+{
+  "name": "hybrid_calc2",
+  "description": "Historical hybrid_calc2 output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "v2",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": []
+}

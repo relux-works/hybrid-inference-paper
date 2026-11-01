@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-30T10:13:17.594472+00:00",
+  "files": {
+    "REPORT.md": {
+      "bytes": 5845,
+      "sha256": "796032048e5cda55f3cdf59830d3442eb67ba8e989bf3fd3b61f81d0d55a3781"
+    },
+    "depth-trace.jsonl": {
+      "bytes": 24625,
+      "sha256": "b31381776e781eaf89d2887c5b7c6a56de70c222dbc9aa713d8c5ac8e61868b4"
+    },
+    "depth.jsonl": {
+      "bytes": 9504,
+      "sha256": "a75b1aefd40df99d96d8a96ff4eac20073b239c39d4d4d4332fa23da1b9acb5b"
+    },
+    "normalized-results.json": {
+      "bytes": 7901,
+      "sha256": "d7c7cbc72d5ee69991aafdc3b3579dd13d5cd956cb9d4a99d05a25dac7743fb5"
+    },
+    "parallel-trace.jsonl": {
+      "bytes": 9631,
+      "sha256": "be90a5c67f38775cd7f3424eeaab8f86a1dfd1299967981310012bb54d48d777"
+    },
+    "parallel.jsonl": {
+      "bytes": 1121,
+      "sha256": "207c537716d5e21bfba10a8fb204081bb76380581b3556d706e3f468e0a5fb16"
+    },
+    "power-summary.json": {
+      "bytes": 37524,
+      "sha256": "b8ef654eb8ee8dcf63294723138ccf02293e6b2cec0289653bd63dfa89ae6bce"
+    }
+  }
+}

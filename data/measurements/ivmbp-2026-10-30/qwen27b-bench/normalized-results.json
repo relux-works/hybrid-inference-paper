@@ -1,0 +1,249 @@
+{
+  "depth": {
+    "utc": "2026-10-30T09:50:25.389930+00:00",
+    "status": "PASS",
+    "source_sha256": "c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095",
+    "actual_exit_code": 0,
+    "counts": {
+      "meta": 1,
+      "server": 1,
+      "segment": 6,
+      "slot_save": 6,
+      "slot_restore": 6,
+      "turn": 18,
+      "done": 1
+    },
+    "paired_http_requests": 43,
+    "completed_token_requests": 24,
+    "prefix_reuse_max_extra_turn_token": 1,
+    "server_final_requested_prompt_tokens": 261768,
+    "final_predicted_tokens": 128,
+    "planned_final_tokens": 261896,
+    "raw_generated_array_limit": "Frozen rows state gen_tokens_exact and server predicted_n128. Following turn/segment lengths corroborate128 returned IDs except final turn (no subsequent request). Raw arrays were intentionally not persisted; final array length is not independently retained.",
+    "rows": [
+      {
+        "depth": 16000,
+        "segment_new_tokens": 16000,
+        "segment_prefill_tok_s": 173.6,
+        "turns": [
+          {
+            "delta": 512,
+            "prefill_tok_s": 132.1,
+            "server_decode_tok_s": 7.480838303918422,
+            "frozen_v11_decode_tok_s": 7.54
+          },
+          {
+            "delta": 2000,
+            "prefill_tok_s": 163.4,
+            "server_decode_tok_s": 8.465528335289848,
+            "frozen_v11_decode_tok_s": 8.53
+          },
+          {
+            "delta": 10000,
+            "prefill_tok_s": 144.1,
+            "server_decode_tok_s": 8.820042859852366,
+            "frozen_v11_decode_tok_s": 8.89
+          }
+        ],
+        "slot_bytes": 714398784,
+        "save_ms": 2436.794,
+        "restore_ms": 2634.911
+      },
+      {
+        "depth": 50000,
+        "segment_new_tokens": 21105,
+        "segment_prefill_tok_s": 93.7,
+        "turns": [
+          {
+            "delta": 512,
+            "prefill_tok_s": 71.5,
+            "server_decode_tok_s": 7.54239807636779,
+            "frozen_v11_decode_tok_s": 7.6
+          },
+          {
+            "delta": 2000,
+            "prefill_tok_s": 75.6,
+            "server_decode_tok_s": 7.775138584192568,
+            "frozen_v11_decode_tok_s": 7.84
+          },
+          {
+            "delta": 10000,
+            "prefill_tok_s": 70.6,
+            "server_decode_tok_s": 7.538126747012809,
+            "frozen_v11_decode_tok_s": 7.6
+          }
+        ],
+        "slot_bytes": 1899094784,
+        "save_ms": 5737.057,
+        "restore_ms": 2218.334
+      },
+      {
+        "depth": 100000,
+        "segment_new_tokens": 37105,
+        "segment_prefill_tok_s": 49.9,
+        "turns": [
+          {
+            "delta": 512,
+            "prefill_tok_s": 40.0,
+            "server_decode_tok_s": 6.976249550663612,
+            "frozen_v11_decode_tok_s": 7.03
+          },
+          {
+            "delta": 2000,
+            "prefill_tok_s": 46.5,
+            "server_decode_tok_s": 6.593281881853477,
+            "frozen_v11_decode_tok_s": 6.65
+          },
+          {
+            "delta": 10000,
+            "prefill_tok_s": 41.9,
+            "server_decode_tok_s": 5.299425688302552,
+            "frozen_v11_decode_tok_s": 5.34
+          }
+        ],
+        "slot_bytes": 3641294784,
+        "save_ms": 8825.131,
+        "restore_ms": 4315.535
+      },
+      {
+        "depth": 150000,
+        "segment_new_tokens": 37105,
+        "segment_prefill_tok_s": 41.2,
+        "turns": [
+          {
+            "delta": 512,
+            "prefill_tok_s": 37.2,
+            "server_decode_tok_s": 6.790937253611295,
+            "frozen_v11_decode_tok_s": 6.84
+          },
+          {
+            "delta": 2000,
+            "prefill_tok_s": 42.4,
+            "server_decode_tok_s": 5.4346519054103535,
+            "frozen_v11_decode_tok_s": 5.48
+          },
+          {
+            "delta": 10000,
+            "prefill_tok_s": 38.5,
+            "server_decode_tok_s": 6.176456699074908,
+            "frozen_v11_decode_tok_s": 6.23
+          }
+        ],
+        "slot_bytes": 5383494784,
+        "save_ms": 16274.044,
+        "restore_ms": 4955.798
+      },
+      {
+        "depth": 200000,
+        "segment_new_tokens": 37105,
+        "segment_prefill_tok_s": 27.7,
+        "turns": [
+          {
+            "delta": 512,
+            "prefill_tok_s": 28.9,
+            "server_decode_tok_s": 4.342958731940858,
+            "frozen_v11_decode_tok_s": 4.38
+          },
+          {
+            "delta": 2000,
+            "prefill_tok_s": 34.8,
+            "server_decode_tok_s": 6.002362094903773,
+            "frozen_v11_decode_tok_s": 6.05
+          },
+          {
+            "delta": 10000,
+            "prefill_tok_s": 26.7,
+            "server_decode_tok_s": 5.344992093830789,
+            "frozen_v11_decode_tok_s": 5.39
+          }
+        ],
+        "slot_bytes": 7125694784,
+        "save_ms": 24921.297,
+        "restore_ms": 7393.086
+      },
+      {
+        "depth": 249000,
+        "segment_new_tokens": 36105,
+        "segment_prefill_tok_s": 22.2,
+        "turns": [
+          {
+            "delta": 512,
+            "prefill_tok_s": 22.8,
+            "server_decode_tok_s": 5.441542388479767,
+            "frozen_v11_decode_tok_s": 5.48
+          },
+          {
+            "delta": 2000,
+            "prefill_tok_s": 24.5,
+            "server_decode_tok_s": 5.249502661291176,
+            "frozen_v11_decode_tok_s": 5.29
+          },
+          {
+            "delta": 10000,
+            "prefill_tok_s": 20.8,
+            "server_decode_tok_s": 4.821496982179482,
+            "frozen_v11_decode_tok_s": 4.86
+          }
+        ],
+        "slot_bytes": 8833050784,
+        "save_ms": 28271.376,
+        "restore_ms": 8032.661
+      }
+    ],
+    "segment_prefix_reuse_max_extra_token": 1,
+    "validated_reuse_is_not_output_semantics": "Counts/cache continuity and successful checkpoint restoration are measured. No semantic correctness/quality claim or cross-engine state-transfer equivalence.",
+    "updated_utc": "2026-10-30T09:54:39.173973+00:00"
+  },
+  "parallel": {
+    "utc": "2026-10-30T10:09:49.904232+00:00",
+    "status": "PASS",
+    "actual_exit_code": 0,
+    "counts": {
+      "meta": 1,
+      "server": 1,
+      "parallel": 1,
+      "done": 1
+    },
+    "paired_http_requests": 15,
+    "warm_contexts": 4,
+    "context_per_slot": 35072,
+    "baseline_native_decode_tok_s": 8.440946539830035,
+    "concurrent_native_decode_tok_s": [
+      3.5147796345254645,
+      3.5144516604469636,
+      3.514155447033639,
+      3.5135765844190034
+    ],
+    "four_requests_common_overlap_seconds": 38.869247375,
+    "joint_request_wall_seconds": 38.906695083,
+    "actual_generated_tokens": 512,
+    "actual_wall_generated_tokens_per_second": 13.159688812111792,
+    "normalized_max_decode_interval_aggregate_tok_s": 14.054306337676012,
+    "normalized_decode_interval_gain": 1.665015442445748,
+    "frozen_v11_row": {
+      "kind": "parallel",
+      "streams": 4,
+      "depth": 32000,
+      "single_decode_tok_s": 8.51,
+      "per_stream_decode_tok_s": [
+        3.54,
+        3.54,
+        3.54,
+        3.54
+      ],
+      "aggregate_decode_tok_s": 14.16,
+      "batching_gain": 1.67,
+      "wall_s": 38.92,
+      "ts": 1793354926.306
+    },
+    "limits": [
+      "All four client requests overlap; aggregate interval convention uses maximum server decode duration, not exact common GPU kernel time.",
+      "Actual wall throughput includes fresh16/17token prefill, scheduling and HTTP overhead.",
+      "n_predict0 warmups return one initial token with zero timed decode iterations; those raw counts are retained and not counted as128-token generation trials."
+    ]
+  },
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "model_bytes": 18973870432,
+  "engine_commit": "c21284cdf5fd833b90ac1f824cdf8065e2700dc4",
+  "frozen_benchmark_sha256": "c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095"
+}

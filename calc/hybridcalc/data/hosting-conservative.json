@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "catch_up": {
+      "value": "per_call",
+      "unit": "catch-up policy",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Conservative protocol budget: reload/shadow every client-served call; append-only KV spill, not the defective R8 full-slot rewrite."
+      }
+    },
+    "retention": {
+      "value": "ram_month",
+      "unit": "retention policy",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Conservative storage budget retains the full session population in active RAM for the whole month."
+      }
+    }
+  }
+}

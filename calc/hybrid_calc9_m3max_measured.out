@@ -1,0 +1,40 @@
+A. Slot bytes (llama-server slot save, q8_0 KV + recurrent state + token ids)
+   per token 34,844.0 B (q8_0 K+V: 16 layers x 2 x 4 heads x 256 x 34/32 = 34,816 B, plus ids and cell metadata)
+   fixed 156.9 MB; calc3 recurrent state 78.4 MB (bf16) -> ratio 2.000  => the engine keeps the recurrent state in f32
+   linear fit residual at most 0 B over 6 depths
+
+B. Prefill by depth: marginal segment rate, MFU at the segment midpoint, calc3 assumption
+   segment            mid     tok/s   TFLOP/s  MFU    calc3 tok/s  measured/calc3
+         0-16,000     8.0k   173.6     9.92    71%      116.1     1.50
+    28,896-50,000    39.4k    93.7     6.51    47%       95.4     0.98
+    62,896-100,000   81.4k    49.9     4.29    31%       77.1     0.65
+   112,896-150,000  131.4k    41.2     4.35    31%       62.8     0.66
+   162,896-200,000  181.4k    27.7     3.47    25%       52.9     0.52
+   212,896-249,000  230.9k    22.2     3.21    23%       45.8     0.48
+   turn deltas (prefill tok/s at each level, 512 / 2k / 10k):
+        16k   132.1   163.4   144.1
+        50k    71.5    75.6    70.6
+       100k    40.0    46.5    41.9
+       150k    37.2    42.4    38.5
+       200k    28.9    34.8    26.7
+       249k    22.8    24.5    20.8
+
+C. Local prefill time per call, Ivan's real call mix (calc7 sampler, 40k calls)
+   measured   mean   28.0 s   p50   4.4 s   p90   54.8 s
+   calc3 old  mean   16.8 s   p50   2.7 s   p90   33.0 s
+   measured / old mean: 1.66
+
+D. Offload break-even per call: server prefill + transfer < local prefill
+   (server: calc3 fixed overhead T_FIX and calc4 B300 effective FLOP/s; link in Mbit/s, payload = d x KV + state)
+   state f32 (today):
+       100 Mbit/s: offload wins on 27.3% of calls, saves  19.3 s per call on average
+       300 Mbit/s: offload wins on 48.2% of calls, saves  24.0 s per call on average
+      1000 Mbit/s: offload wins on 67.7% of calls, saves  26.3 s per call on average
+      2500 Mbit/s: offload wins on 77.3% of calls, saves  27.0 s per call on average
+   state bf16 (M1 option):
+       100 Mbit/s: offload wins on 39.0% of calls, saves  21.3 s per call on average
+       300 Mbit/s: offload wins on 59.8% of calls, saves  25.1 s per call on average
+      1000 Mbit/s: offload wins on 75.4% of calls, saves  26.7 s per call on average
+      2500 Mbit/s: offload wins on 81.5% of calls, saves  27.2 s per call on average
+
+E. Parallel decode at 32k: single 8.51 tok/s, 4 streams aggregate 14.16 tok/s (raw v1.1 row; normalized 8.441 / 14.054 / 1.665x in the package report)

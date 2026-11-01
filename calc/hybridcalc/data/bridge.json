@@ -1,0 +1,901 @@
+{
+  "bridge": {
+    "moments": {
+      "server": {
+        "calls_per_session": {
+          "value": 62.975,
+          "unit": "call/session",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; calls_per_session=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "depth": {
+          "value": 109268.18180692395,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; depth=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "delta": {
+          "value": 2439.4911179872574,
+          "unit": "token/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; delta=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "output": {
+          "value": 479.52021462330003,
+          "unit": "token/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; output=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "tool": {
+          "value": 3.328364067942807,
+          "unit": "s/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; tool=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "output_context": {
+          "value": 53431298.43286667,
+          "unit": "token^2/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; output_context=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "tool_context": {
+          "value": 378407.3848297648,
+          "unit": "token*s/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; tool_context=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "prefill": {
+          "value": 234715406322114.56,
+          "unit": "FLOP/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; prefill=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "shadow": {
+          "value": 46443424243319.56,
+          "unit": "FLOP/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; shadow=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "previous_output": {
+          "value": 472.1689288706546,
+          "unit": "token/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), first 80 sessions for calc5 server sizing; previous_output=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        }
+      },
+      "api": {
+        "calls_per_session": {
+          "value": 62.7,
+          "unit": "call/session",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; calls_per_session=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "depth": {
+          "value": 108487.86640609494,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; depth=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "delta": {
+          "value": 2456.3057797667966,
+          "unit": "token/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; delta=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "output": {
+          "value": 479.7824822329313,
+          "unit": "token/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; output=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "tool": {
+          "value": 3.2684629942523444,
+          "unit": "s/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; tool=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "output_context": {
+          "value": 53077368.717798084,
+          "unit": "token^2/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; output_context=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "tool_context": {
+          "value": 365676.4188274632,
+          "unit": "token*s/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; tool_context=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "prefill": {
+          "value": 236558287600237.12,
+          "unit": "FLOP/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; prefill=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "shadow": {
+          "value": 46327424408956.56,
+          "unit": "FLOP/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; shadow=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "previous_output": {
+          "value": 472.1906439063801,
+          "unit": "token/call",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Derived once from frozen calc3.make_sessions(seed=7), all 200 sessions for calc5 API billing; previous_output=arithmetic mean over its calls (previous output reset per session). Legacy parameter file sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        }
+      }
+    },
+    "units": {
+      "b300": {
+        "gpus": {
+          "value": 8,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 gpus; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "compute": {
+          "value": 1350000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 compute; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "bandwidth": {
+          "value": 5600000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 bandwidth; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "kv_free": {
+          "value": 240000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 kv_free; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "capex": {
+          "value": 660000.0,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 capex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "opex": {
+          "value": 5850.808550000001,
+          "unit": "USD/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 opex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "batch": {
+          "value": 32,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 batch; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "stream_rate": {
+          "value": 25.0,
+          "unit": "token/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit b300 stream_rate; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        }
+      },
+      "rtx8": {
+        "gpus": {
+          "value": 8,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 gpus; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "compute": {
+          "value": 302280000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 compute; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "bandwidth": {
+          "value": 1117900000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 bandwidth; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "kv_free": {
+          "value": 60000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 kv_free; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "capex": {
+          "value": 239000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 capex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "opex": {
+          "value": 2307.3460666666665,
+          "unit": "USD/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 opex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "batch": {
+          "value": 8,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 batch; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "stream_rate": {
+          "value": 20.0,
+          "unit": "token/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx8 stream_rate; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        }
+      },
+      "rtx4": {
+        "gpus": {
+          "value": 4,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 gpus; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "compute": {
+          "value": 302280000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 compute; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "bandwidth": {
+          "value": 1253000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 bandwidth; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "kv_free": {
+          "value": 60000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 kv_free; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "capex": {
+          "value": 103000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 capex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "opex": {
+          "value": 399.42666666666673,
+          "unit": "USD/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 opex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "batch": {
+          "value": 8,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 batch; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "stream_rate": {
+          "value": 20.0,
+          "unit": "token/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx4 stream_rate; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        }
+      },
+      "rtx1": {
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 gpus; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "compute": {
+          "value": 302280000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 compute; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "bandwidth": {
+          "value": 1253000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 bandwidth; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "kv_free": {
+          "value": 60000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 kv_free; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "capex": {
+          "value": 30000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 capex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "opex": {
+          "value": 114.0575,
+          "unit": "USD/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 opex; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "batch": {
+          "value": 8,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 batch; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        },
+        "stream_rate": {
+          "value": 20.0,
+          "unit": "token/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Frozen calc4 Unit rtx1 stream_rate; see legacy/fleet.py and legacy.json sha256 a74753d4deaf8e0d6334770059a2e030a7c1f1b214888f486e4a1b82cfde94ca"
+          }
+        }
+      }
+    },
+    "steps": [
+      {
+        "label": "calc5 Rule A / one time zone",
+        "changes": {}
+      },
+      {
+        "label": "Precision audit: calc5 already FP8 (not BF16)",
+        "changes": {}
+      },
+      {
+        "label": "Existing-Mac incremental basis: irrelevant to own/API",
+        "changes": {}
+      },
+      {
+        "label": "Median API token prices: unchanged",
+        "changes": {
+          "tariff": "@bridge.current_tariff"
+        }
+      },
+      {
+        "label": "Fleet eligibility: fixed B300 nodes",
+        "changes": {
+          "fleet": "b300"
+        }
+      },
+      {
+        "label": "Server weight traffic: FP8 27 GB to Q4 15.1875 GB",
+        "changes": {
+          "weight": "@bridge.q4_weight"
+        }
+      },
+      {
+        "label": "Align API sample: first 80 synthetic sessions like server",
+        "changes": {
+          "api_moments": "@bridge.legacy_server",
+          "api_calls": "@bridge.legacy_server_calls"
+        }
+      },
+      {
+        "label": "Activity normalization: 2500 calls/day for both paths",
+        "changes": {
+          "server_calls": "owners.calls_day",
+          "api_calls": "owners.calls_day"
+        }
+      },
+      {
+        "label": "Replace synthetic calls with measured calc8 calls",
+        "changes": {
+          "server_moments": "@bridge.measured",
+          "api_moments": "@bridge.measured"
+        }
+      },
+      {
+        "label": "KV geometry: 32768 to r3 34816 B/token",
+        "changes": {
+          "kv": "owners.models.qwen27.kv"
+        }
+      },
+      {
+        "label": "Recurrent state: bf16 78.45 MB to r3 156.89 MB",
+        "changes": {
+          "state": "owners.models.qwen27.state"
+        }
+      },
+      {
+        "label": "Count recurrent state in resident occupancy",
+        "changes": {
+          "resid_state": "bridge.include_one"
+        }
+      },
+      {
+        "label": "HBM geometry: replica reserves to r3 pooled free HBM",
+        "changes": {
+          "geometry": "pooled"
+        }
+      },
+      {
+        "label": "Add r3 redundant output shadow-prefill (defect)",
+        "changes": {
+          "shadow": "bridge.include_one"
+        }
+      },
+      {
+        "label": "Daily work window: 8 hours to 10 hours",
+        "changes": {
+          "hours": "owners.hours"
+        }
+      },
+      {
+        "label": "Peak/headroom: 2 to 1/0.70",
+        "changes": {
+          "peak": "@bridge.r3_peak"
+        }
+      },
+      {
+        "label": "R3 sparse team grid (reviewed endpoint)",
+        "changes": {
+          "grid": "@bridge.r3_grid"
+        }
+      },
+      {
+        "label": "Integer sweep 1..20000 (grid sensitivity)",
+        "changes": {
+          "grid": "@bridge.integer_grid"
+        }
+      },
+      {
+        "label": "Correct all-server output double counting for paper",
+        "changes": {
+          "shadow": "bridge.include_zero"
+        }
+      },
+      {
+        "label": "Paper: retain requested 8-hour operator day",
+        "changes": {
+          "hours": "bridge.hours_legacy"
+        }
+      },
+      {
+        "label": "Paper: dense replicas reserve weights/workspace per GPU",
+        "changes": {
+          "geometry": "replicas_quantized"
+        }
+      },
+      {
+        "label": "Paper: measured KV 34844 B/token",
+        "changes": {
+          "kv": "bridge.kv_measured"
+        }
+      }
+    ],
+    "weight_fp8": {
+      "value": 27000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Frozen calc3 dense w_srv=27e9: already FP8, not BF16."
+      }
+    },
+    "kv_legacy": {
+      "value": 32768,
+      "unit": "B/token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Frozen calc3 8-bit KV geometry."
+      }
+    },
+    "state_legacy": {
+      "value": 78446592,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Frozen calc3 bf16 recurrent state."
+      }
+    },
+    "sessions_day": {
+      "value": 40,
+      "unit": "session/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc5: five sessions/hour for an eight-hour day."
+      }
+    },
+    "hours_legacy": {
+      "value": 8,
+      "unit": "h/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc5 operator day."
+      }
+    },
+    "peak_legacy": {
+      "value": 2,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc5 peak/headroom factor; distinct from energy duty factor."
+      }
+    },
+    "office_max": {
+      "value": 10,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Actual calc4 units_for: office-only through 10 people; comments say 50 (label defect)."
+      }
+    },
+    "mixed_max": {
+      "value": 50,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Actual calc4 units_for: mixed office/DC candidates through 50, DC-only thereafter."
+      }
+    },
+    "include_zero": {
+      "value": 0,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Reference toggle: exclude state from KV occupancy and no redundant output prefill."
+      }
+    },
+    "include_one": {
+      "value": 1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "R3 toggle: include recurrent state in residency, or output shadow in all-server prefill."
+      }
+    },
+    "min_team": {
+      "value": 1,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Exact integer sweep starts with one person."
+      }
+    },
+    "max_team": {
+      "value": 20000,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Finite upper bound for exact-integer crossover search."
+      }
+    },
+    "legacy_grid": [
+      {
+        "value": 5,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 20,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 30,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 75,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 100,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 150,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 200,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 300,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 400,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 500,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 600,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 800,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 1000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 1500,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 2000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 3000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 5000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 7500,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 10000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      },
+      {
+        "value": 20000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc5 team-size grid."
+        }
+      }
+    ],
+    "base": {
+      "server_moments": "@bridge.legacy_server",
+      "api_moments": "@bridge.legacy_api",
+      "server_calls": "@bridge.legacy_server_calls",
+      "api_calls": "@bridge.legacy_api_calls",
+      "weight": "bridge.weight_fp8",
+      "kv": "bridge.kv_legacy",
+      "state": "bridge.state_legacy",
+      "resid_state": "bridge.include_zero",
+      "shadow": "bridge.include_zero",
+      "hours": "bridge.hours_legacy",
+      "peak": "bridge.peak_legacy",
+      "grid": "@bridge.legacy_grid",
+      "fleet": "rule_a",
+      "geometry": "replicas",
+      "tariff": "@bridge.legacy_tariff"
+    },
+    "tariff": {
+      "cache_read": {
+        "value": 0.05,
+        "unit": "USD/Mtoken",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc3 27B median tariff: cache-read .05, cache-write .18, output 2.30 USD/Mtoken, same as r3 snapshot."
+        }
+      },
+      "cache_write": {
+        "value": 0.18,
+        "unit": "USD/Mtoken",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc3 27B median tariff: cache-read .05, cache-write .18, output 2.30 USD/Mtoken, same as r3 snapshot."
+        }
+      },
+      "output": {
+        "value": 2.3,
+        "unit": "USD/Mtoken",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Frozen calc3 27B median tariff: cache-read .05, cache-write .18, output 2.30 USD/Mtoken, same as r3 snapshot."
+        }
+      }
+    },
+    "kv_measured": {
+      "value": 34844,
+      "unit": "B/token",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030 slot slope",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      }
+    },
+    "probe_team": {
+      "value": 500,
+      "unit": "person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner-requested comparison at the legacy 500-person academic-share parity point."
+      }
+    }
+  }
+}

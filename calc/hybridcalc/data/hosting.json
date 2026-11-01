@@ -1,0 +1,100 @@
+{
+  "hosting": {
+    "tier": {
+      "value": "RAM",
+      "unit": "storage tier",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated cold-RAM session pool, retained between calls. Hosting is an incremental budget, not included in compute rental/capex."
+      }
+    },
+    "sessions_per_person": {
+      "value": 4,
+      "unit": "session/person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated four retained agent sessions per hybrid user, independently of the116-call normalization group."
+      }
+    },
+    "month_fraction": {
+      "value": 1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Retain the active session population for a full calendar month; not just the active21 days."
+      }
+    },
+    "pcie_bandwidth": {
+      "value": 50000000000.0,
+      "unit": "B/s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated sustained PCIe bandwidth per active GPU for cold-prefix reload and spill; not a measured migration rate."
+      }
+    },
+    "tiers": {
+      "HBM": {
+        "price": {
+          "value": 8,
+          "unit": "USD/GB/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Incremental HBM storage-pool amortization/operation estimate per decimalGB-month; includes capacity beyond prefill nodes; not a vendor quote."
+          }
+        }
+      },
+      "RAM": {
+        "price": {
+          "value": 0.5,
+          "unit": "USD/GB/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Incremental RAM storage-pool amortization/operation estimate per decimalGB-month; includes capacity beyond prefill nodes; not a vendor quote."
+          }
+        },
+        "bandwidth": {
+          "value": 100000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Estimated RAM storage transfer bandwidth; cold migration bottleneck is min(storage,PCIe). HBM is resident with zero migration."
+          }
+        }
+      },
+      "NVMe": {
+        "price": {
+          "value": 0.1,
+          "unit": "USD/GB/month",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Incremental NVMe storage-pool amortization/operation estimate per decimalGB-month; includes capacity beyond prefill nodes; not a vendor quote."
+          }
+        },
+        "bandwidth": {
+          "value": 7000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Estimated NVMe storage transfer bandwidth; cold migration bottleneck is min(storage,PCIe). HBM is resident with zero migration."
+          }
+        }
+      }
+    },
+    "catch_up": {
+      "value": "at_offload",
+      "unit": "catch-up policy",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Protocol design: journal local input/output; one reload for the next offload plus one pending-tail catch-up per active session-day. All tokens are still prefilled once. Expected local run=(1-p)/p; pending seconds=(sum local input/output work + sum previous offloaded output work)/offload count. Remove nonwinning offloads monotonically until stable. Day-end flush changes reload/I/O counts, never duplicates compute."
+      }
+    },
+    "retention": {
+      "value": "tiered",
+      "unit": "retention policy",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Protocol design: active-window RAM, NVMe otherwise; active fraction uses scenario hours x workdays/calendar hours. One daily promotion is background I/O, not GPU time."
+      }
+    }
+  }
+}

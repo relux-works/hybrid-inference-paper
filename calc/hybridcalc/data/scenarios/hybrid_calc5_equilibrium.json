@@ -1,0 +1,10 @@
+{
+  "name": "hybrid_calc5_equilibrium",
+  "description": "Historical hybrid_calc5_equilibrium output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "equilibrium",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": []
+}

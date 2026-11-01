@@ -1,0 +1,30 @@
+{
+  "r9": {
+    "large_portion": {
+      "value": 10000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R9 arithmetic-intensity large portion, retaining the existing r8.portion=1000 coordinate."
+      }
+    },
+    "state_bits": [
+      {
+        "value": 32,
+        "unit": "bit",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R9 recurrent-state wire variants: f32 or estimated bf16 half; KV remains q8_0."
+        }
+      },
+      {
+        "value": 16,
+        "unit": "bit",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner R9 recurrent-state wire variants: f32 or estimated bf16 half; KV remains q8_0."
+        }
+      }
+    ]
+  }
+}

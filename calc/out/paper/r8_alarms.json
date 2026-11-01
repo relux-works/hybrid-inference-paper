@@ -1,0 +1,6338 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 225,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 225,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 225,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 225,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 226,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 226,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 226,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 226,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 227,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 227,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 227,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 227,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 228,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 228,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 228,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 228,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 229,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 229,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 229,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 229,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 230,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 230,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 230,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 230,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 231,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 231,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 231,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 231,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 232,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 232,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 232,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 232,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 233,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 233,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 233,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 233,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 243,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 243,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 243,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 243,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 244,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 244,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 244,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 244,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 245,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 245,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 245,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 245,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 246,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 246,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 246,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 246,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 247,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 247,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 247,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 247,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 248,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 248,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 248,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 248,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 249,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 249,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 249,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 249,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 250,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 250,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 250,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 250,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 251,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 251,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 251,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 251,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 261,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 261,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 261,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 261,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 262,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 262,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 262,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 262,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 263,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 263,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 263,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 263,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 264,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 264,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 264,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 264,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 265,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 265,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 265,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 265,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 266,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 266,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 266,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 266,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 267,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 267,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 267,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 267,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 268,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 268,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 268,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 268,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 269,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 269,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 269,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 269,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 279,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 279,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 279,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 279,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 280,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 280,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 280,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 280,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 281,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 281,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 281,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 281,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 282,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 282,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 282,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 282,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 283,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 283,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 283,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 283,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 284,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 284,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 284,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 284,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 285,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 285,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 285,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 285,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 286,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 286,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 286,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 286,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 287,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 287,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 287,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.glimmer.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 287,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 297,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 297,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 297,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 297,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 298,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 298,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 298,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 298,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 299,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 299,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 299,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 299,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 300,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 300,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 300,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 300,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 301,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 301,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 301,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 301,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 302,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 302,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 302,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 302,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 303,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 303,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 303,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 303,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 304,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 304,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 304,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 304,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 305,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 305,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 305,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 305,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 315,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 315,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 315,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 315,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 316,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 316,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 316,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 316,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 317,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 317,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 317,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 317,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 318,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 318,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 318,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 318,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 319,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 319,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 319,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 319,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 320,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 320,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 320,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 320,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 321,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 321,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 321,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 321,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 322,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 322,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 322,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 322,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 323,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 323,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 323,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 323,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 333,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 333,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 333,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 333,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 334,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 334,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 334,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 334,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 335,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 335,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 335,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 335,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 336,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 336,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 336,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 336,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 337,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 337,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 337,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 337,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 338,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 338,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 338,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 338,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 339,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 339,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 339,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 339,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 340,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 340,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 340,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 340,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 341,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 341,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 341,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 341,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 351,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 351,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 351,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 351,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 352,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 352,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 352,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 352,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 353,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 353,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 353,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 353,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 354,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 354,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 354,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 354,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 355,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 355,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 355,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 355,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 356,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 356,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 356,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 356,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 357,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 357,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 357,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 357,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 358,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 358,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 358,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 358,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 359,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 359,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 359,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.gemma.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 359,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 360,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 360,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 360,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 360,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 361,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 361,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 361,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 361,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 362,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 362,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 362,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 362,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 363,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 363,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 363,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 363,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 364,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 364,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 364,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 364,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 365,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 365,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 365,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 365,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 366,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 366,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 366,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 366,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 367,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 367,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 367,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 367,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 368,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 368,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 368,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 368,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 369,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 369,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 369,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 369,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 370,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 370,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 370,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 370,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 371,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 371,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 371,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 371,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 372,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 372,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 372,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 372,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 373,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 373,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 373,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 373,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 374,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 374,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 374,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 374,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 375,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 375,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 375,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 375,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 376,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 376,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 376,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 376,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 377,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 377,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 377,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 377,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 378,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 378,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 378,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 378,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 379,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 379,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 379,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 379,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 380,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 380,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 380,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 380,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 381,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 381,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 381,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 381,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 382,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 382,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 382,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 382,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 383,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 383,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 383,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 383,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 384,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 384,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 384,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 384,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 385,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 385,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 385,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 385,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 386,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 386,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 386,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 386,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 387,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 387,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 387,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 387,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 388,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 388,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 388,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 388,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 389,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 389,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 389,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 389,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 390,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 390,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 390,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 390,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 391,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 391,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 391,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 391,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 392,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 392,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 392,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 392,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 393,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 393,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 393,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 393,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 394,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 394,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 394,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 394,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 395,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 395,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 395,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 395,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 396,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 396,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 396,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 396,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 397,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 397,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 397,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 397,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 398,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 398,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 398,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 398,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 399,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 399,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 399,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 399,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 400,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 400,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 400,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 400,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 401,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 401,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 401,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 401,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 402,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 402,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 402,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 402,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 403,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 403,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 403,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 403,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 404,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 404,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 404,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 404,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 405,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 405,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 405,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 405,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 406,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 406,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 406,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 406,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 407,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 407,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 407,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 407,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 408,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 408,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 408,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 408,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 409,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 409,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 409,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 409,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 410,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 410,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 410,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 410,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 411,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 411,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 411,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 411,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 412,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 412,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 412,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 412,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 413,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 413,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 413,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 413,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 414,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 414,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 414,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 414,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 415,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 415,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 415,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 415,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 416,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 416,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 416,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 416,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 417,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 417,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 417,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 417,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 418,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 418,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 418,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 418,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 419,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 419,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 419,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 419,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 420,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 420,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 420,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 420,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 421,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 421,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 421,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 421,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 422,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 422,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 422,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 422,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 423,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 423,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 423,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 423,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 424,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 424,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 424,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 424,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 425,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 425,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 425,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 425,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 426,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 426,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 426,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 426,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 427,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 427,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 427,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 427,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 428,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 428,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 428,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 428,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 429,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 429,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 429,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 429,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 430,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 430,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 430,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 430,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "flop_new_token",
+    "row": 431,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "model_flop_byte",
+    "row": 431,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "ratio",
+    "row": 431,
+    "table": "flop_per_byte"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.arch.models.qwen3.context",
+        "reason": "depth exceeds published config context; ratio not computable"
+      }
+    ],
+    "column": "beats_ideal_local",
+    "row": 431,
+    "table": "flop_per_byte"
+  }
+]

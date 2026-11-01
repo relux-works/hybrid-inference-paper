@@ -1,0 +1,50 @@
+{
+  "name": "glm-tier2",
+  "kind": "glm",
+  "description": "GLM-5.3-Flash on four 256 GB-class decode configurations",
+  "inputs": [
+    "hardware.json",
+    "models.json",
+    "prices.json",
+    "workload.json",
+    "economics.json",
+    "sampler.json"
+  ],
+  "client_keys": [
+    "m3max",
+    "m5pro",
+    "m5max64",
+    "m5max",
+    "ultra96",
+    "ultra256"
+  ],
+  "family_keys": [
+    "m5ultra",
+    "m3ultra",
+    "spark2",
+    "strix2"
+  ],
+  "server": "b300",
+  "link": "wan",
+  "api_keys": [
+    "glm"
+  ],
+  "fleet_client": "m5ultra",
+  "model": "glm",
+  "overrides": {
+    "hardware": {
+      "servers": {
+        "b300": {
+          "reserved": {
+            "value": 174000000000.0,
+            "unit": "B",
+            "provenance": {
+              "kind": "estimate",
+              "reason": "calc4 GLM FP8 TP2: 328 GB weights / 2 + 10 GB workspace per GPU; 288 - 174 = 114 GB for KV. All-server decode GPU-seconds sum across the pair."
+            }
+          }
+        }
+      }
+    }
+  }
+}

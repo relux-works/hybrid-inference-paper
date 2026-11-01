@@ -1,0 +1,1363 @@
+{
+  "generated_utc": "2026-10-30T10:11:24.170961+00:00",
+  "source_bytes_at_open": 144273452,
+  "source_prefix_sha256": "56077d1d746990d43363eb86d0cd8c602dce19ef69157b42475bccdff8827e3e",
+  "complete_samples": 17904,
+  "ignored_incomplete_boundary_samples": 1,
+  "trailing_partial_line": false,
+  "invalid_complete_samples": 0,
+  "separately_recorded_second_GPU_readings": 17905,
+  "first_sample_utc": "2026-10-30T07:32:58+00:00",
+  "last_sample_utc": "2026-10-30T10:09:50+00:00",
+  "interpretation": [
+    "CPU/GPU/ANE estimates for all processes, not AC wall power or exclusive model energy.",
+    "CPU/GPU/ANE/Combined columns use the CPU-power section; GPU-usage section is reported separately as gpu_usage_mean_watts and never added to Combined.",
+    "Individual GPU sampler readings can differ; phase averages agree within0.001W in these reported windows. Keep them separate; do not add or treat as exclusive model power.",
+    "Samples selected by whole-second reported heading; up to1s selection uncertainty at each boundary.",
+    "Energy is sum(power*reported sample duration); sampled duration may differ from request wall time.",
+    "Turn requests include prefill and decode; client request bounds are not exact GPU phase boundaries.",
+    "Overlapping request windows and whole-phase windows are alternatives, never additive.",
+    "Pre-smoke background is descriptive; nonstationary background prevents exclusive-energy subtraction."
+  ],
+  "windows": [
+    {
+      "name": "smoke-01/completion-1",
+      "slot": 0,
+      "prompt_tokens": 2000,
+      "new_prompt_tokens": 2000,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 35,
+      "sampled_seconds": 18.16857,
+      "gpu_usage_joules": 636.083343,
+      "gpu_usage_sampled_seconds": 18.16857,
+      "joules": {
+        "CPU": 75.758539,
+        "GPU": 636.126399,
+        "ANE": 0.0,
+        "Combined": 711.886474
+      },
+      "thermal": {
+        "Nominal": 35
+      },
+      "gpu_usage_mean_watts": 35.010094,
+      "wall_seconds": 18.007408,
+      "mean_watts": {
+        "CPU": 4.169758,
+        "GPU": 35.012464,
+        "ANE": 0.0,
+        "Combined": 39.182306
+      },
+      "start_utc": "2026-10-30T07:42:11.211856+00:00",
+      "end_utc": "2026-10-30T07:42:29.219264+00:00"
+    },
+    {
+      "name": "smoke-01/completion-2",
+      "slot": 0,
+      "prompt_tokens": 2256,
+      "new_prompt_tokens": 256,
+      "predicted_tokens": 16,
+      "mode": "prefill_plus_decode",
+      "samples": 13,
+      "sampled_seconds": 6.79023,
+      "gpu_usage_joules": 114.464684,
+      "gpu_usage_sampled_seconds": 6.79023,
+      "joules": {
+        "CPU": 31.185817,
+        "GPU": 114.449094,
+        "ANE": 0.0,
+        "Combined": 145.634902
+      },
+      "thermal": {
+        "Nominal": 13
+      },
+      "gpu_usage_mean_watts": 16.857262,
+      "wall_seconds": 7.221271,
+      "mean_watts": {
+        "CPU": 4.592748,
+        "GPU": 16.854966,
+        "ANE": 0.0,
+        "Combined": 21.447713
+      },
+      "start_utc": "2026-10-30T07:42:29.220509+00:00",
+      "end_utc": "2026-10-30T07:42:36.441780+00:00"
+    },
+    {
+      "name": "smoke-01/completion-3",
+      "slot": 0,
+      "prompt_tokens": 2784,
+      "new_prompt_tokens": 513,
+      "predicted_tokens": 16,
+      "mode": "prefill_plus_decode",
+      "samples": 10,
+      "sampled_seconds": 5.1609,
+      "gpu_usage_joules": 216.389269,
+      "gpu_usage_sampled_seconds": 5.1609,
+      "joules": {
+        "CPU": 23.650662,
+        "GPU": 215.972611,
+        "ANE": 0.0,
+        "Combined": 239.623794
+      },
+      "thermal": {
+        "Nominal": 10
+      },
+      "gpu_usage_mean_watts": 41.928592,
+      "wall_seconds": 5.016777,
+      "mean_watts": {
+        "CPU": 4.582662,
+        "GPU": 41.847858,
+        "ANE": 0.0,
+        "Combined": 46.430621
+      },
+      "start_utc": "2026-10-30T07:42:36.445032+00:00",
+      "end_utc": "2026-10-30T07:42:41.461809+00:00"
+    },
+    {
+      "name": "smoke-01/completion-4",
+      "slot": 0,
+      "prompt_tokens": 4000,
+      "new_prompt_tokens": 1201,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 13,
+      "sampled_seconds": 6.75382,
+      "gpu_usage_joules": 358.64401,
+      "gpu_usage_sampled_seconds": 6.75382,
+      "joules": {
+        "CPU": 38.527595,
+        "GPU": 359.073066,
+        "ANE": 0.0,
+        "Combined": 397.601712
+      },
+      "thermal": {
+        "Nominal": 13
+      },
+      "gpu_usage_mean_watts": 53.102394,
+      "wall_seconds": 7.356249,
+      "mean_watts": {
+        "CPU": 5.704563,
+        "GPU": 53.165922,
+        "ANE": 0.0,
+        "Combined": 58.870641
+      },
+      "start_utc": "2026-10-30T07:42:41.470054+00:00",
+      "end_utc": "2026-10-30T07:42:48.826303+00:00"
+    },
+    {
+      "name": "smoke-01/completion-5",
+      "slot": 0,
+      "prompt_tokens": 4256,
+      "new_prompt_tokens": 256,
+      "predicted_tokens": 16,
+      "mode": "prefill_plus_decode",
+      "samples": 10,
+      "sampled_seconds": 5.17697,
+      "gpu_usage_joules": 151.199421,
+      "gpu_usage_sampled_seconds": 5.17697,
+      "joules": {
+        "CPU": 26.526905,
+        "GPU": 151.173034,
+        "ANE": 0.0,
+        "Combined": 177.699426
+      },
+      "thermal": {
+        "Nominal": 10
+      },
+      "gpu_usage_mean_watts": 29.206161,
+      "wall_seconds": 5.15242,
+      "mean_watts": {
+        "CPU": 5.124021,
+        "GPU": 29.201064,
+        "ANE": 0.0,
+        "Combined": 34.324987
+      },
+      "start_utc": "2026-10-30T07:42:48.827683+00:00",
+      "end_utc": "2026-10-30T07:42:53.980103+00:00"
+    },
+    {
+      "name": "smoke-01/completion-6",
+      "slot": 0,
+      "prompt_tokens": 4784,
+      "new_prompt_tokens": 513,
+      "predicted_tokens": 16,
+      "mode": "prefill_plus_decode",
+      "samples": 12,
+      "sampled_seconds": 6.23826,
+      "gpu_usage_joules": 226.445104,
+      "gpu_usage_sampled_seconds": 6.23826,
+      "joules": {
+        "CPU": 34.831531,
+        "GPU": 226.468253,
+        "ANE": 0.0,
+        "Combined": 261.299788
+      },
+      "thermal": {
+        "Nominal": 12
+      },
+      "gpu_usage_mean_watts": 36.299401,
+      "wall_seconds": 5.723718,
+      "mean_watts": {
+        "CPU": 5.583533,
+        "GPU": 36.303112,
+        "ANE": 0.0,
+        "Combined": 41.886646
+      },
+      "start_utc": "2026-10-30T07:42:53.982392+00:00",
+      "end_utc": "2026-10-30T07:42:59.706110+00:00"
+    },
+    {
+      "name": "smoke-01/whole_phase",
+      "samples": 95,
+      "sampled_seconds": 49.31718,
+      "gpu_usage_joules": 1705.569746,
+      "gpu_usage_sampled_seconds": 49.31718,
+      "joules": {
+        "CPU": 234.487001,
+        "GPU": 1705.566125,
+        "ANE": 0.0,
+        "Combined": 1940.056231
+      },
+      "thermal": {
+        "Nominal": 95
+      },
+      "gpu_usage_mean_watts": 34.583684,
+      "wall_seconds": 49.553493,
+      "mean_watts": {
+        "CPU": 4.754672,
+        "GPU": 34.58361,
+        "ANE": 0.0,
+        "Combined": 39.338345
+      },
+      "start_utc": "2026-10-30T07:42:10.156036+00:00",
+      "end_utc": "2026-10-30T07:42:59.709529+00:00"
+    },
+    {
+      "name": "ladder-01/completion-1",
+      "slot": 0,
+      "prompt_tokens": 16000,
+      "new_prompt_tokens": 16000,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 177,
+      "sampled_seconds": 91.80635,
+      "gpu_usage_joules": 4172.544959,
+      "gpu_usage_sampled_seconds": 91.80635,
+      "joules": {
+        "CPU": 352.871197,
+        "GPU": 4172.553212,
+        "ANE": 0.0,
+        "Combined": 4525.422853
+      },
+      "thermal": {
+        "Nominal": 177
+      },
+      "gpu_usage_mean_watts": 45.449416,
+      "wall_seconds": 92.208826,
+      "mean_watts": {
+        "CPU": 3.843647,
+        "GPU": 45.449506,
+        "ANE": 0.0,
+        "Combined": 49.293136
+      },
+      "start_utc": "2026-10-30T07:46:43.711519+00:00",
+      "end_utc": "2026-10-30T07:48:15.920345+00:00"
+    },
+    {
+      "name": "ladder-01/completion-2",
+      "slot": 0,
+      "prompt_tokens": 16512,
+      "new_prompt_tokens": 512,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 41,
+      "sampled_seconds": 21.30538,
+      "gpu_usage_joules": 531.281953,
+      "gpu_usage_sampled_seconds": 21.30538,
+      "joules": {
+        "CPU": 54.109913,
+        "GPU": 530.262784,
+        "ANE": 0.0,
+        "Combined": 584.371151
+      },
+      "thermal": {
+        "Nominal": 41
+      },
+      "gpu_usage_mean_watts": 24.936516,
+      "wall_seconds": 21.01848,
+      "mean_watts": {
+        "CPU": 2.53973,
+        "GPU": 24.88868,
+        "ANE": 0.0,
+        "Combined": 27.428337
+      },
+      "start_utc": "2026-10-30T07:48:21.037725+00:00",
+      "end_utc": "2026-10-30T07:48:42.056205+00:00"
+    },
+    {
+      "name": "ladder-01/completion-3",
+      "slot": 0,
+      "prompt_tokens": 18640,
+      "new_prompt_tokens": 2001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 52,
+      "sampled_seconds": 27.09072,
+      "gpu_usage_joules": 967.337394,
+      "gpu_usage_sampled_seconds": 27.09072,
+      "joules": {
+        "CPU": 88.885379,
+        "GPU": 967.906904,
+        "ANE": 0.0,
+        "Combined": 1056.790746
+      },
+      "thermal": {
+        "Nominal": 52
+      },
+      "gpu_usage_mean_watts": 35.707334,
+      "wall_seconds": 27.268124,
+      "mean_watts": {
+        "CPU": 3.281027,
+        "GPU": 35.728357,
+        "ANE": 0.0,
+        "Combined": 39.009327
+      },
+      "start_utc": "2026-10-30T07:48:42.059009+00:00",
+      "end_utc": "2026-10-30T07:49:09.327133+00:00"
+    },
+    {
+      "name": "ladder-01/completion-4",
+      "slot": 0,
+      "prompt_tokens": 28768,
+      "new_prompt_tokens": 10001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 162,
+      "sampled_seconds": 83.80451,
+      "gpu_usage_joules": 3561.857445,
+      "gpu_usage_sampled_seconds": 83.80451,
+      "joules": {
+        "CPU": 283.32386,
+        "GPU": 3561.805282,
+        "ANE": 0.0,
+        "Combined": 3845.124996
+      },
+      "thermal": {
+        "Nominal": 162
+      },
+      "gpu_usage_mean_watts": 42.501978,
+      "wall_seconds": 83.849035,
+      "mean_watts": {
+        "CPU": 3.380771,
+        "GPU": 42.501356,
+        "ANE": 0.0,
+        "Combined": 45.882077
+      },
+      "start_utc": "2026-10-30T07:49:09.331017+00:00",
+      "end_utc": "2026-10-30T07:50:33.180052+00:00"
+    },
+    {
+      "name": "ladder-01/completion-5",
+      "slot": 0,
+      "prompt_tokens": 50000,
+      "new_prompt_tokens": 21105,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 435,
+      "sampled_seconds": 225.09997,
+      "gpu_usage_joules": 5552.027106,
+      "gpu_usage_sampled_seconds": 225.09997,
+      "joules": {
+        "CPU": 482.456439,
+        "GPU": 5552.547026,
+        "ANE": 0.0,
+        "Combined": 6035.000451
+      },
+      "thermal": {
+        "Nominal": 435
+      },
+      "gpu_usage_mean_watts": 24.664717,
+      "wall_seconds": 225.474997,
+      "mean_watts": {
+        "CPU": 2.143299,
+        "GPU": 24.667027,
+        "ANE": 0.0,
+        "Combined": 26.810312
+      },
+      "start_utc": "2026-10-30T07:50:33.184020+00:00",
+      "end_utc": "2026-10-30T07:54:18.659017+00:00"
+    },
+    {
+      "name": "ladder-01/completion-6",
+      "slot": 0,
+      "prompt_tokens": 50512,
+      "new_prompt_tokens": 512,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 46,
+      "sampled_seconds": 23.89527,
+      "gpu_usage_joules": 457.33239,
+      "gpu_usage_sampled_seconds": 23.89527,
+      "joules": {
+        "CPU": 61.719849,
+        "GPU": 457.172655,
+        "ANE": 0.0,
+        "Combined": 518.890398
+      },
+      "thermal": {
+        "Nominal": 46
+      },
+      "gpu_usage_mean_watts": 19.139034,
+      "wall_seconds": 24.047561,
+      "mean_watts": {
+        "CPU": 2.582932,
+        "GPU": 19.132349,
+        "ANE": 0.0,
+        "Combined": 21.715193
+      },
+      "start_utc": "2026-10-30T07:54:26.785455+00:00",
+      "end_utc": "2026-10-30T07:54:50.833016+00:00"
+    },
+    {
+      "name": "ladder-01/completion-7",
+      "slot": 0,
+      "prompt_tokens": 52640,
+      "new_prompt_tokens": 2001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 83,
+      "sampled_seconds": 43.0273,
+      "gpu_usage_joules": 911.247079,
+      "gpu_usage_sampled_seconds": 43.0273,
+      "joules": {
+        "CPU": 84.884139,
+        "GPU": 911.02065,
+        "ANE": 0.0,
+        "Combined": 995.904814
+      },
+      "thermal": {
+        "Nominal": 83
+      },
+      "gpu_usage_mean_watts": 21.178347,
+      "wall_seconds": 42.943712,
+      "mean_watts": {
+        "CPU": 1.972797,
+        "GPU": 21.173084,
+        "ANE": 0.0,
+        "Combined": 23.145882
+      },
+      "start_utc": "2026-10-30T07:54:50.838305+00:00",
+      "end_utc": "2026-10-30T07:55:33.782017+00:00"
+    },
+    {
+      "name": "ladder-01/completion-8",
+      "slot": 0,
+      "prompt_tokens": 62768,
+      "new_prompt_tokens": 10001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 306,
+      "sampled_seconds": 159.24271,
+      "gpu_usage_joules": 3311.677535,
+      "gpu_usage_sampled_seconds": 159.24271,
+      "joules": {
+        "CPU": 334.708982,
+        "GPU": 3312.063778,
+        "ANE": 0.0,
+        "Combined": 3646.779409
+      },
+      "thermal": {
+        "Nominal": 306
+      },
+      "gpu_usage_mean_watts": 20.796415,
+      "wall_seconds": 158.470306,
+      "mean_watts": {
+        "CPU": 2.101879,
+        "GPU": 20.798841,
+        "ANE": 0.0,
+        "Combined": 22.900762
+      },
+      "start_utc": "2026-10-30T07:55:33.797859+00:00",
+      "end_utc": "2026-10-30T07:58:12.268165+00:00"
+    },
+    {
+      "name": "ladder-01/completion-9",
+      "slot": 0,
+      "prompt_tokens": 100000,
+      "new_prompt_tokens": 37105,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 1435,
+      "sampled_seconds": 742.8642,
+      "gpu_usage_joules": 13050.879885,
+      "gpu_usage_sampled_seconds": 742.8642,
+      "joules": {
+        "CPU": 1857.633253,
+        "GPU": 13050.912871,
+        "ANE": 0.0,
+        "Combined": 14908.533043
+      },
+      "thermal": {
+        "Nominal": 1435
+      },
+      "gpu_usage_mean_watts": 17.568325,
+      "wall_seconds": 743.234472,
+      "mean_watts": {
+        "CPU": 2.500636,
+        "GPU": 17.56837,
+        "ANE": 0.0,
+        "Combined": 20.068988
+      },
+      "start_utc": "2026-10-30T07:58:12.271038+00:00",
+      "end_utc": "2026-10-30T08:10:35.505510+00:00"
+    },
+    {
+      "name": "ladder-01/completion-10",
+      "slot": 0,
+      "prompt_tokens": 100512,
+      "new_prompt_tokens": 512,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 61,
+      "sampled_seconds": 31.70525,
+      "gpu_usage_joules": 571.894818,
+      "gpu_usage_sampled_seconds": 31.70525,
+      "joules": {
+        "CPU": 64.273799,
+        "GPU": 571.908578,
+        "ANE": 0.0,
+        "Combined": 636.180798
+      },
+      "thermal": {
+        "Nominal": 61
+      },
+      "gpu_usage_mean_watts": 18.037859,
+      "wall_seconds": 31.447464,
+      "mean_watts": {
+        "CPU": 2.027229,
+        "GPU": 18.038293,
+        "ANE": 0.0,
+        "Combined": 20.065472
+      },
+      "start_utc": "2026-10-30T08:10:48.771604+00:00",
+      "end_utc": "2026-10-30T08:11:20.219068+00:00"
+    },
+    {
+      "name": "ladder-01/completion-11",
+      "slot": 0,
+      "prompt_tokens": 102640,
+      "new_prompt_tokens": 2001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 120,
+      "sampled_seconds": 62.2389,
+      "gpu_usage_joules": 1163.16931,
+      "gpu_usage_sampled_seconds": 62.2389,
+      "joules": {
+        "CPU": 134.89388,
+        "GPU": 1162.920712,
+        "ANE": 0.0,
+        "Combined": 1297.816632
+      },
+      "thermal": {
+        "Nominal": 120
+      },
+      "gpu_usage_mean_watts": 18.688783,
+      "wall_seconds": 62.357666,
+      "mean_watts": {
+        "CPU": 2.167356,
+        "GPU": 18.684789,
+        "ANE": 0.0,
+        "Combined": 20.852178
+      },
+      "start_utc": "2026-10-30T08:11:20.231176+00:00",
+      "end_utc": "2026-10-30T08:12:22.588842+00:00"
+    },
+    {
+      "name": "ladder-01/completion-12",
+      "slot": 0,
+      "prompt_tokens": 112768,
+      "new_prompt_tokens": 10001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 501,
+      "sampled_seconds": 262.78165,
+      "gpu_usage_joules": 4554.972234,
+      "gpu_usage_sampled_seconds": 262.78165,
+      "joules": {
+        "CPU": 510.49977,
+        "GPU": 4554.454988,
+        "ANE": 0.0,
+        "Combined": 5064.957859
+      },
+      "thermal": {
+        "Nominal": 501
+      },
+      "gpu_usage_mean_watts": 17.333677,
+      "wall_seconds": 262.546497,
+      "mean_watts": {
+        "CPU": 1.942677,
+        "GPU": 17.331709,
+        "ANE": 0.0,
+        "Combined": 19.274397
+      },
+      "start_utc": "2026-10-30T08:12:22.591655+00:00",
+      "end_utc": "2026-10-30T08:16:45.138152+00:00"
+    },
+    {
+      "name": "ladder-01/completion-13",
+      "slot": 0,
+      "prompt_tokens": 150000,
+      "new_prompt_tokens": 37105,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 1695,
+      "sampled_seconds": 900.1783,
+      "gpu_usage_joules": 15958.274411,
+      "gpu_usage_sampled_seconds": 900.1783,
+      "joules": {
+        "CPU": 1125.759302,
+        "GPU": 15959.001745,
+        "ANE": 0.0,
+        "Combined": 17084.782782
+      },
+      "thermal": {
+        "Nominal": 1695
+      },
+      "gpu_usage_mean_watts": 17.727904,
+      "wall_seconds": 899.917524,
+      "mean_watts": {
+        "CPU": 1.250596,
+        "GPU": 17.728712,
+        "ANE": 0.0,
+        "Combined": 18.979332
+      },
+      "start_utc": "2026-10-30T08:16:45.146252+00:00",
+      "end_utc": "2026-10-30T08:31:45.063776+00:00"
+    },
+    {
+      "name": "ladder-01/completion-14",
+      "slot": 0,
+      "prompt_tokens": 150512,
+      "new_prompt_tokens": 512,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 60,
+      "sampled_seconds": 31.84494,
+      "gpu_usage_joules": 688.658254,
+      "gpu_usage_sampled_seconds": 31.84494,
+      "joules": {
+        "CPU": 31.674513,
+        "GPU": 688.494524,
+        "ANE": 0.0,
+        "Combined": 720.168499
+      },
+      "thermal": {
+        "Nominal": 60
+      },
+      "gpu_usage_mean_watts": 21.625359,
+      "wall_seconds": 32.57514,
+      "mean_watts": {
+        "CPU": 0.994648,
+        "GPU": 21.620217,
+        "ANE": 0.0,
+        "Combined": 22.614849
+      },
+      "start_utc": "2026-10-30T08:32:06.321542+00:00",
+      "end_utc": "2026-10-30T08:32:38.896682+00:00"
+    },
+    {
+      "name": "ladder-01/completion-15",
+      "slot": 0,
+      "prompt_tokens": 152640,
+      "new_prompt_tokens": 2001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 134,
+      "sampled_seconds": 71.06038,
+      "gpu_usage_joules": 1512.04929,
+      "gpu_usage_sampled_seconds": 71.06038,
+      "joules": {
+        "CPU": 82.966076,
+        "GPU": 1512.203682,
+        "ANE": 0.0,
+        "Combined": 1595.1708
+      },
+      "thermal": {
+        "Nominal": 134
+      },
+      "gpu_usage_mean_watts": 21.278373,
+      "wall_seconds": 70.746155,
+      "mean_watts": {
+        "CPU": 1.167543,
+        "GPU": 21.280546,
+        "ANE": 0.0,
+        "Combined": 22.448104
+      },
+      "start_utc": "2026-10-30T08:32:38.902554+00:00",
+      "end_utc": "2026-10-30T08:33:49.648709+00:00"
+    },
+    {
+      "name": "ladder-01/completion-16",
+      "slot": 0,
+      "prompt_tokens": 162768,
+      "new_prompt_tokens": 10001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 529,
+      "sampled_seconds": 280.90553,
+      "gpu_usage_joules": 5375.061307,
+      "gpu_usage_sampled_seconds": 280.90553,
+      "joules": {
+        "CPU": 310.926855,
+        "GPU": 5374.80373,
+        "ANE": 0.0,
+        "Combined": 5685.724704
+      },
+      "thermal": {
+        "Nominal": 529
+      },
+      "gpu_usage_mean_watts": 19.134765,
+      "wall_seconds": 280.417152,
+      "mean_watts": {
+        "CPU": 1.106873,
+        "GPU": 19.133848,
+        "ANE": 0.0,
+        "Combined": 20.240701
+      },
+      "start_utc": "2026-10-30T08:33:49.683618+00:00",
+      "end_utc": "2026-10-30T08:38:30.100770+00:00"
+    },
+    {
+      "name": "ladder-01/completion-17",
+      "slot": 0,
+      "prompt_tokens": 200000,
+      "new_prompt_tokens": 37105,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 2556,
+      "sampled_seconds": 1340.05913,
+      "gpu_usage_joules": 20347.976976,
+      "gpu_usage_sampled_seconds": 1340.05913,
+      "joules": {
+        "CPU": 2465.776064,
+        "GPU": 20348.216704,
+        "ANE": 0.0,
+        "Combined": 22813.994073
+      },
+      "thermal": {
+        "Nominal": 2556
+      },
+      "gpu_usage_mean_watts": 15.184387,
+      "wall_seconds": 1340.75771,
+      "mean_watts": {
+        "CPU": 1.84005,
+        "GPU": 15.184566,
+        "ANE": 0.0,
+        "Combined": 17.024617
+      },
+      "start_utc": "2026-10-30T08:38:30.108566+00:00",
+      "end_utc": "2026-10-30T09:00:50.866276+00:00"
+    },
+    {
+      "name": "ladder-01/completion-18",
+      "slot": 0,
+      "prompt_tokens": 200512,
+      "new_prompt_tokens": 512,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 89,
+      "sampled_seconds": 47.20924,
+      "gpu_usage_joules": 926.131145,
+      "gpu_usage_sampled_seconds": 47.20924,
+      "joules": {
+        "CPU": 72.374047,
+        "GPU": 926.117428,
+        "ANE": 0.0,
+        "Combined": 998.493107
+      },
+      "thermal": {
+        "Nominal": 89
+      },
+      "gpu_usage_mean_watts": 19.617582,
+      "wall_seconds": 47.354202,
+      "mean_watts": {
+        "CPU": 1.533048,
+        "GPU": 19.617292,
+        "ANE": 0.0,
+        "Combined": 21.150375
+      },
+      "start_utc": "2026-10-30T09:01:23.372711+00:00",
+      "end_utc": "2026-10-30T09:02:10.726913+00:00"
+    },
+    {
+      "name": "ladder-01/completion-19",
+      "slot": 0,
+      "prompt_tokens": 202640,
+      "new_prompt_tokens": 2001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 148,
+      "sampled_seconds": 78.54181,
+      "gpu_usage_joules": 1850.968477,
+      "gpu_usage_sampled_seconds": 78.54181,
+      "joules": {
+        "CPU": 108.908739,
+        "GPU": 1850.245199,
+        "ANE": 0.0,
+        "Combined": 1959.156576
+      },
+      "thermal": {
+        "Nominal": 148
+      },
+      "gpu_usage_mean_watts": 23.566664,
+      "wall_seconds": 78.836217,
+      "mean_watts": {
+        "CPU": 1.386634,
+        "GPU": 23.557456,
+        "ANE": 0.0,
+        "Combined": 24.944123
+      },
+      "start_utc": "2026-10-30T09:02:10.737329+00:00",
+      "end_utc": "2026-10-30T09:03:29.573546+00:00"
+    },
+    {
+      "name": "ladder-01/completion-20",
+      "slot": 0,
+      "prompt_tokens": 212768,
+      "new_prompt_tokens": 10001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 750,
+      "sampled_seconds": 398.23585,
+      "gpu_usage_joules": 6649.457119,
+      "gpu_usage_sampled_seconds": 398.23585,
+      "joules": {
+        "CPU": 544.528276,
+        "GPU": 6650.16781,
+        "ANE": 0.0,
+        "Combined": 7194.704545
+      },
+      "thermal": {
+        "Nominal": 750
+      },
+      "gpu_usage_mean_watts": 16.697284,
+      "wall_seconds": 398.072899,
+      "mean_watts": {
+        "CPU": 1.367351,
+        "GPU": 16.699069,
+        "ANE": 0.0,
+        "Combined": 18.066441
+      },
+      "start_utc": "2026-10-30T09:03:29.581406+00:00",
+      "end_utc": "2026-10-30T09:10:07.654305+00:00"
+    },
+    {
+      "name": "ladder-01/completion-21",
+      "slot": 0,
+      "prompt_tokens": 249000,
+      "new_prompt_tokens": 36105,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 3069,
+      "sampled_seconds": 1628.74683,
+      "gpu_usage_joules": 23374.075505,
+      "gpu_usage_sampled_seconds": 1628.74683,
+      "joules": {
+        "CPU": 2506.695984,
+        "GPU": 23374.140056,
+        "ANE": 0.0,
+        "Combined": 25880.825979
+      },
+      "thermal": {
+        "Nominal": 3069
+      },
+      "gpu_usage_mean_watts": 14.350957,
+      "wall_seconds": 1628.724152,
+      "mean_watts": {
+        "CPU": 1.539034,
+        "GPU": 14.350996,
+        "ANE": 0.0,
+        "Combined": 15.890024
+      },
+      "start_utc": "2026-10-30T09:10:07.667263+00:00",
+      "end_utc": "2026-10-30T09:37:16.391415+00:00"
+    },
+    {
+      "name": "ladder-01/completion-22",
+      "slot": 0,
+      "prompt_tokens": 249512,
+      "new_prompt_tokens": 512,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 86,
+      "sampled_seconds": 45.65742,
+      "gpu_usage_joules": 963.774377,
+      "gpu_usage_sampled_seconds": 45.65742,
+      "joules": {
+        "CPU": 57.650314,
+        "GPU": 963.678131,
+        "ANE": 0.0,
+        "Combined": 1021.324187
+      },
+      "thermal": {
+        "Nominal": 86
+      },
+      "gpu_usage_mean_watts": 21.108823,
+      "wall_seconds": 46.208129,
+      "mean_watts": {
+        "CPU": 1.262671,
+        "GPU": 21.106715,
+        "ANE": 0.0,
+        "Combined": 22.369293
+      },
+      "start_utc": "2026-10-30T09:37:52.756189+00:00",
+      "end_utc": "2026-10-30T09:38:38.964318+00:00"
+    },
+    {
+      "name": "ladder-01/completion-23",
+      "slot": 0,
+      "prompt_tokens": 251640,
+      "new_prompt_tokens": 2001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 202,
+      "sampled_seconds": 107.29601,
+      "gpu_usage_joules": 2080.30235,
+      "gpu_usage_sampled_seconds": 107.29601,
+      "joules": {
+        "CPU": 144.043158,
+        "GPU": 2079.191083,
+        "ANE": 0.0,
+        "Combined": 2223.237915
+      },
+      "thermal": {
+        "Nominal": 202
+      },
+      "gpu_usage_mean_watts": 19.388441,
+      "wall_seconds": 106.352649,
+      "mean_watts": {
+        "CPU": 1.342484,
+        "GPU": 19.378084,
+        "ANE": 0.0,
+        "Combined": 20.720602
+      },
+      "start_utc": "2026-10-30T09:38:38.989095+00:00",
+      "end_utc": "2026-10-30T09:40:25.341744+00:00"
+    },
+    {
+      "name": "ladder-01/completion-24",
+      "slot": 0,
+      "prompt_tokens": 261768,
+      "new_prompt_tokens": 10001,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 955,
+      "sampled_seconds": 507.71496,
+      "gpu_usage_joules": 7436.540204,
+      "gpu_usage_sampled_seconds": 507.71496,
+      "joules": {
+        "CPU": 674.906083,
+        "GPU": 7437.74177,
+        "ANE": 0.0,
+        "Combined": 8112.657801
+      },
+      "thermal": {
+        "Nominal": 955
+      },
+      "gpu_usage_mean_watts": 14.647077,
+      "wall_seconds": 508.161914,
+      "mean_watts": {
+        "CPU": 1.329301,
+        "GPU": 14.649444,
+        "ANE": 0.0,
+        "Combined": 15.978765
+      },
+      "start_utc": "2026-10-30T09:40:25.348937+00:00",
+      "end_utc": "2026-10-30T09:48:53.510851+00:00"
+    },
+    {
+      "name": "ladder-01/whole_phase",
+      "samples": 13914,
+      "sampled_seconds": 7330.60518,
+      "gpu_usage_joules": 126044.031819,
+      "gpu_usage_sampled_seconds": 7330.60518,
+      "joules": {
+        "CPU": 12667.992725,
+        "GPU": 126044.037162,
+        "ANE": 0.0,
+        "Combined": 138712.043992
+      },
+      "thermal": {
+        "Nominal": 13914
+      },
+      "gpu_usage_mean_watts": 17.194219,
+      "wall_seconds": 7330.963025,
+      "mean_watts": {
+        "CPU": 1.728096,
+        "GPU": 17.19422,
+        "ANE": 0.0,
+        "Combined": 18.922318
+      },
+      "start_utc": "2026-10-30T07:46:42.563773+00:00",
+      "end_utc": "2026-10-30T09:48:53.526798+00:00"
+    },
+    {
+      "name": "parallel4_joint_wall",
+      "samples": 73,
+      "sampled_seconds": 38.72046,
+      "gpu_usage_joules": 975.715798,
+      "gpu_usage_sampled_seconds": 38.72046,
+      "joules": {
+        "CPU": 53.960893,
+        "GPU": 975.699919,
+        "ANE": 0.0,
+        "Combined": 1029.657097
+      },
+      "thermal": {
+        "Nominal": 73
+      },
+      "gpu_usage_mean_watts": 25.198972,
+      "wall_seconds": 38.904608,
+      "mean_watts": {
+        "CPU": 1.393602,
+        "GPU": 25.198562,
+        "ANE": 0.0,
+        "Combined": 26.592068
+      },
+      "start_utc": "2026-10-30T10:08:07.398320+00:00",
+      "end_utc": "2026-10-30T10:08:46.302928+00:00"
+    },
+    {
+      "name": "parallel-01/completion-1",
+      "slot": 0,
+      "prompt_tokens": 32000,
+      "new_prompt_tokens": 32000,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 386,
+      "sampled_seconds": 200.8384,
+      "gpu_usage_joules": 8818.164082,
+      "gpu_usage_sampled_seconds": 200.8384,
+      "joules": {
+        "CPU": 426.762159,
+        "GPU": 8818.285514,
+        "ANE": 0.0,
+        "Combined": 9245.059603
+      },
+      "thermal": {
+        "Nominal": 386
+      },
+      "gpu_usage_mean_watts": 43.906763,
+      "wall_seconds": 200.944776,
+      "mean_watts": {
+        "CPU": 2.124903,
+        "GPU": 43.907368,
+        "ANE": 0.0,
+        "Combined": 46.03233
+      },
+      "start_utc": "2026-10-30T09:51:37.558020+00:00",
+      "end_utc": "2026-10-30T09:54:58.502796+00:00"
+    },
+    {
+      "name": "parallel-01/completion-2",
+      "slot": 1,
+      "prompt_tokens": 32000,
+      "new_prompt_tokens": 32000,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 477,
+      "sampled_seconds": 248.11651,
+      "gpu_usage_joules": 7187.276613,
+      "gpu_usage_sampled_seconds": 248.11651,
+      "joules": {
+        "CPU": 498.578375,
+        "GPU": 7187.234749,
+        "ANE": 0.0,
+        "Combined": 7685.809966
+      },
+      "thermal": {
+        "Nominal": 477
+      },
+      "gpu_usage_mean_watts": 28.967345,
+      "wall_seconds": 247.939787,
+      "mean_watts": {
+        "CPU": 2.009453,
+        "GPU": 28.967177,
+        "ANE": 0.0,
+        "Combined": 30.976616
+      },
+      "start_utc": "2026-10-30T09:54:58.503574+00:00",
+      "end_utc": "2026-10-30T09:59:06.443361+00:00"
+    },
+    {
+      "name": "parallel-01/completion-3",
+      "slot": 2,
+      "prompt_tokens": 32000,
+      "new_prompt_tokens": 32000,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 508,
+      "sampled_seconds": 264.18708,
+      "gpu_usage_joules": 6653.554286,
+      "gpu_usage_sampled_seconds": 264.18708,
+      "joules": {
+        "CPU": 543.154698,
+        "GPU": 6653.619681,
+        "ANE": 0.0,
+        "Combined": 7196.770885
+      },
+      "thermal": {
+        "Nominal": 508
+      },
+      "gpu_usage_mean_watts": 25.18501,
+      "wall_seconds": 264.358444,
+      "mean_watts": {
+        "CPU": 2.055947,
+        "GPU": 25.185258,
+        "ANE": 0.0,
+        "Combined": 27.241192
+      },
+      "start_utc": "2026-10-30T09:59:06.443931+00:00",
+      "end_utc": "2026-10-30T10:03:30.802375+00:00"
+    },
+    {
+      "name": "parallel-01/completion-4",
+      "slot": 3,
+      "prompt_tokens": 32000,
+      "new_prompt_tokens": 32000,
+      "predicted_tokens": 1,
+      "mode": "prefill_only",
+      "samples": 493,
+      "sampled_seconds": 259.03928,
+      "gpu_usage_joules": 6723.602076,
+      "gpu_usage_sampled_seconds": 259.03928,
+      "joules": {
+        "CPU": 472.766252,
+        "GPU": 6723.586575,
+        "ANE": 0.0,
+        "Combined": 7196.359606
+      },
+      "thermal": {
+        "Nominal": 493
+      },
+      "gpu_usage_mean_watts": 25.955917,
+      "wall_seconds": 259.092325,
+      "mean_watts": {
+        "CPU": 1.825076,
+        "GPU": 25.955857,
+        "ANE": 0.0,
+        "Combined": 27.780959
+      },
+      "start_utc": "2026-10-30T10:03:30.803147+00:00",
+      "end_utc": "2026-10-30T10:07:49.895472+00:00"
+    },
+    {
+      "name": "parallel-01/completion-5",
+      "slot": 0,
+      "prompt_tokens": 32016,
+      "new_prompt_tokens": 16,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 34,
+      "sampled_seconds": 18.02172,
+      "gpu_usage_joules": 276.564262,
+      "gpu_usage_sampled_seconds": 18.02172,
+      "joules": {
+        "CPU": 32.777537,
+        "GPU": 276.561846,
+        "ANE": 0.0,
+        "Combined": 309.341484
+      },
+      "thermal": {
+        "Nominal": 34
+      },
+      "gpu_usage_mean_watts": 15.346164,
+      "wall_seconds": 17.487201,
+      "mean_watts": {
+        "CPU": 1.81878,
+        "GPU": 15.346029,
+        "ANE": 0.0,
+        "Combined": 17.164926
+      },
+      "start_utc": "2026-10-30T10:07:49.896349+00:00",
+      "end_utc": "2026-10-30T10:08:07.383550+00:00"
+    },
+    {
+      "name": "parallel-01/completion-6",
+      "slot": 0,
+      "prompt_tokens": 32160,
+      "new_prompt_tokens": 17,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 73,
+      "sampled_seconds": 38.72046,
+      "gpu_usage_joules": 975.715798,
+      "gpu_usage_sampled_seconds": 38.72046,
+      "joules": {
+        "CPU": 53.960893,
+        "GPU": 975.699919,
+        "ANE": 0.0,
+        "Combined": 1029.657097
+      },
+      "thermal": {
+        "Nominal": 73
+      },
+      "gpu_usage_mean_watts": 25.198972,
+      "wall_seconds": 38.879854,
+      "mean_watts": {
+        "CPU": 1.393602,
+        "GPU": 25.198562,
+        "ANE": 0.0,
+        "Combined": 26.592068
+      },
+      "start_utc": "2026-10-30T10:08:07.398320+00:00",
+      "end_utc": "2026-10-30T10:08:46.278174+00:00"
+    },
+    {
+      "name": "parallel-01/completion-7",
+      "slot": 1,
+      "prompt_tokens": 32016,
+      "new_prompt_tokens": 16,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 73,
+      "sampled_seconds": 38.72046,
+      "gpu_usage_joules": 975.715798,
+      "gpu_usage_sampled_seconds": 38.72046,
+      "joules": {
+        "CPU": 53.960893,
+        "GPU": 975.699919,
+        "ANE": 0.0,
+        "Combined": 1029.657097
+      },
+      "thermal": {
+        "Nominal": 73
+      },
+      "gpu_usage_mean_watts": 25.198972,
+      "wall_seconds": 38.888055,
+      "mean_watts": {
+        "CPU": 1.393602,
+        "GPU": 25.198562,
+        "ANE": 0.0,
+        "Combined": 26.592068
+      },
+      "start_utc": "2026-10-30T10:08:07.401775+00:00",
+      "end_utc": "2026-10-30T10:08:46.289830+00:00"
+    },
+    {
+      "name": "parallel-01/completion-8",
+      "slot": 3,
+      "prompt_tokens": 32016,
+      "new_prompt_tokens": 16,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 73,
+      "sampled_seconds": 38.72046,
+      "gpu_usage_joules": 975.715798,
+      "gpu_usage_sampled_seconds": 38.72046,
+      "joules": {
+        "CPU": 53.960893,
+        "GPU": 975.699919,
+        "ANE": 0.0,
+        "Combined": 1029.657097
+      },
+      "thermal": {
+        "Nominal": 73
+      },
+      "gpu_usage_mean_watts": 25.198972,
+      "wall_seconds": 38.88727,
+      "mean_watts": {
+        "CPU": 1.393602,
+        "GPU": 25.198562,
+        "ANE": 0.0,
+        "Combined": 26.592068
+      },
+      "start_utc": "2026-10-30T10:08:07.413123+00:00",
+      "end_utc": "2026-10-30T10:08:46.300393+00:00"
+    },
+    {
+      "name": "parallel-01/completion-9",
+      "slot": 2,
+      "prompt_tokens": 32016,
+      "new_prompt_tokens": 16,
+      "predicted_tokens": 128,
+      "mode": "prefill_plus_decode",
+      "samples": 73,
+      "sampled_seconds": 38.72046,
+      "gpu_usage_joules": 975.715798,
+      "gpu_usage_sampled_seconds": 38.72046,
+      "joules": {
+        "CPU": 53.960893,
+        "GPU": 975.699919,
+        "ANE": 0.0,
+        "Combined": 1029.657097
+      },
+      "thermal": {
+        "Nominal": 73
+      },
+      "gpu_usage_mean_watts": 25.198972,
+      "wall_seconds": 38.895934,
+      "mean_watts": {
+        "CPU": 1.393602,
+        "GPU": 25.198562,
+        "ANE": 0.0,
+        "Combined": 26.592068
+      },
+      "start_utc": "2026-10-30T10:08:07.406994+00:00",
+      "end_utc": "2026-10-30T10:08:46.302928+00:00"
+    },
+    {
+      "name": "parallel-01/whole_phase",
+      "samples": 1973,
+      "sampled_seconds": 1029.95785,
+      "gpu_usage_joules": 30635.716268,
+      "gpu_usage_sampled_seconds": 1029.95785,
+      "joules": {
+        "CPU": 2029.480199,
+        "GPU": 30635.717384,
+        "ANE": 0.0,
+        "Combined": 32665.207511
+      },
+      "thermal": {
+        "Nominal": 1973
+      },
+      "gpu_usage_mean_watts": 29.744631,
+      "wall_seconds": 1029.686484,
+      "mean_watts": {
+        "CPU": 1.97045,
+        "GPU": 29.744632,
+        "ANE": 0.0,
+        "Combined": 31.715092
+      },
+      "start_utc": "2026-10-30T09:51:36.635481+00:00",
+      "end_utc": "2026-10-30T10:08:46.321965+00:00"
+    },
+    {
+      "name": "pre_smoke_descriptive_background",
+      "samples": 58,
+      "sampled_seconds": 30.02429,
+      "gpu_usage_joules": 58.748373,
+      "gpu_usage_sampled_seconds": 30.02429,
+      "joules": {
+        "CPU": 133.773273,
+        "GPU": 58.699528,
+        "ANE": 0.0,
+        "Combined": 192.470717
+      },
+      "thermal": {
+        "Nominal": 58
+      },
+      "gpu_usage_mean_watts": 1.956695,
+      "wall_seconds": 30.0,
+      "mean_watts": {
+        "CPU": 4.455502,
+        "GPU": 1.955068,
+        "ANE": 0.0,
+        "Combined": 6.4105
+      },
+      "start_utc": "2026-10-30T07:41:30+00:00",
+      "end_utc": "2026-10-30T07:42:00+00:00"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "hybrid_calc8_business",
+  "description": "Historical hybrid_calc8_business output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "business",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": [
+    "stats"
+  ]
+}

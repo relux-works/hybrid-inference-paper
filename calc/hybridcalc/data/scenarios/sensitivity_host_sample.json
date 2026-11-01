@@ -1,0 +1,10 @@
+{
+  "name": "sensitivity_host_sample",
+  "description": "Historical sensitivity_host_sample output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "sensitivity",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": []
+}

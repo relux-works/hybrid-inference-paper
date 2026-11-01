@@ -1,0 +1,246 @@
+{
+  "sampler": {
+    "depth_50k": {
+      "value": 50000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      }
+    },
+    "depth_100k": {
+      "value": 100000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      }
+    },
+    "depth_200k": {
+      "value": 200000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      }
+    },
+    "above_p90": {
+      "value": 0.1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      }
+    },
+    "above_p99": {
+      "value": 0.01,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      }
+    },
+    "minimum_mean_ratio": {
+      "value": 1.0001,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      }
+    },
+    "minimum_median": {
+      "value": 1,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Explicit calc7 floor for fitting lognormal distributions with a recorded zero median. This is a modeling floor, never a replacement for missing statistics."
+      }
+    },
+    "mode": {
+      "value": "legacy_lognormal",
+      "unit": "sampler law",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Historical reference sampler. Current paper scenarios explicitly select measured_tail; old comparisons and legacy transcripts stay dated references."
+      }
+    },
+    "fit": {
+      "thresholds": [
+        {
+          "value": 2000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+          }
+        },
+        {
+          "value": 5000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+          }
+        },
+        {
+          "value": 10000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+          }
+        },
+        {
+          "value": 30000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+          }
+        }
+      ],
+      "representatives": [
+        {
+          "value": 3500,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+          }
+        },
+        {
+          "value": 7500,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+          }
+        },
+        {
+          "value": 20000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+          }
+        },
+        {
+          "value": 40000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+          }
+        }
+      ],
+      "low_probabilities": [
+        {
+          "value": 0.1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+          }
+        },
+        {
+          "value": 0.25,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+          }
+        },
+        {
+          "value": 0.5,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+          }
+        },
+        {
+          "value": 0.75,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+          }
+        }
+      ],
+      "iterations": {
+        "value": 160,
+        "unit": "iteration",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Bounded IPF/exponential tilt and bisection budget; failed convergence alarms, never substitutes an unfitted distribution."
+        }
+      },
+      "tolerance": {
+        "value": 1e-08,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Relative moment tolerance for the aggregate joint probability fit."
+        }
+      },
+      "minimum_calls": {
+        "value": 4096,
+        "unit": "call",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "At least4096 calls required for exact finite-cohort token-band/output/depth mean correction; smaller samples remain valid draws with finite-sample error."
+        }
+      },
+      "depth_probabilities": [
+        {
+          "value": 0.1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+          }
+        },
+        {
+          "value": 0.25,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+          }
+        },
+        {
+          "value": 0.5,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+          }
+        },
+        {
+          "value": 0.75,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+          }
+        },
+        {
+          "value": 0.9,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+          }
+        },
+        {
+          "value": 0.99,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+          }
+        }
+      ]
+    }
+  }
+}
