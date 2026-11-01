@@ -6,10 +6,10 @@ bc5eb70603c5b21c3224af1737ab292bf8b7ac4a0d94194ca6611229c32f95df  ./.scripts/ins
 9c9f4eb9a4ee062a9ac4a07e26f090068fe846f5b4d09905f096a790e8726d65  ./.scripts/test-release-signatures.sh
 e8d00e67f0a9d832abfcd6fc97f481837fb76c65c75e27cf88a7b9d21802ef1d  ./.scripts/test-release.sh
 42fc96edf185b9d67b3725858639953132e02bdc01756dff8aba7d7e8c5fe427  ./.scripts/version.sh
-724a041a191c0cf471334363fcfa8fa10733394614a62a9d5f6f82ed66d14a63  ./CHANGELOG.md
+e952fde8565cdc9e3ef98ca3e22f3f058b849e0584a953eb57ecac4cd92d1c03  ./CHANGELOG.md
 cc8c4ce3d82a7bf81eacbff5f6b526136c13732a6955c2bd92447a28ee06d294  ./LICENSE
 0b69625fbbd558de515237e3948bf6eb399fc73ce8f1e2c4dc34379bbc01a7fe  ./Makefile
-5bd5326f31264ec8f5ac9ab70c8a54cbd8c1678e3c1d076750c76b5364c114fa  ./README.md
+d50d65cf5cc03da7615d92613aa75298a99ce5bb47808eff4f7a0b5e5600fb19  ./README.md
 cc92bacd8b0ac0c6e262be5bd5c1507cfebdd88f0ffc46b32872d53d53902f0f  ./UNRESOLVED_QUESTIONS.md
 d104c379c9315762e588073fc3215d8ae3f88c1351288ef26a08c57039610128  ./bench/AGENT_PROMPT.md
 d4ac3b5e944846ffbb6ce30cef7012efe963ed2782546f869c13942f1b339d8d  ./bench/README.md
@@ -391,7 +391,7 @@ ddf311c28ddf5a5ad9747649837346b67bed9d356789c3072bb27dbce49e514d  ./paper/fonts/
 f003788ba08981eb0988b3557a6f224a53dab49c20e283e8b74d5af3c466f8be  ./paper/fonts/ptserif/PT_Serif-Web-BoldItalic.ttf
 f57e95ff9dc85691a3b2e193f2028db36f6663939a46c0fc4f286d618b80b7ce  ./paper/fonts/ptserif/PT_Serif-Web-Italic.ttf
 a4951fade06ff8f09b7673aa81ffb65a8cd409e24d3289a6dc670bc4dda2557a  ./paper/fonts/ptserif/PT_Serif-Web-Regular.ttf
-345de1917f86c9062952624a941ce7e80327be8540dbe2f7499477e5d72a5241  ./paper/hybrid-inference.ru.tex
+f17a090fd54acdff1f504393ab78c5cb9bb5047712cec40c9cf01a5e137db328  ./paper/hybrid-inference.ru.tex
 37506afb859935ed33d8509af8f958b9781ae6f74be3e547bbe9f8e3797ac9f0  ./paper/preamble.tex
 368e9953e4a217a2c9b251009b63ac848d02f2e1899bcc804f2ba2a35701983f  ./paper/references.bib
 55a6999121727a2ee2c6326471d126f39ce5b7c5597d0c3c168456312fd0353a  ./paper/sections/00-abstract.tex

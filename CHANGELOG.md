@@ -5,7 +5,12 @@ README.md defines it for the paper, in the section "Versions and releases".
 
 ## [Unreleased]
 
+## [0.1.0-rc.1] - 2026-11-01
+
+A draft snapshot of the current text for review, published as a GitHub pre-release.
+
 ### Added
+- Timur Kackan joins the authors.
 - The Russian text of the paper: the client–server split of prefill and decode for long agent sessions, the channel it
   needs, clients and model architectures, the server side, economics against APIs and own clusters for teams of 5 to
   5000 people and an own RTX PRO 6000 server for teams of 5 and 20, contexts up to one million tokens, the trust
