@@ -9,7 +9,7 @@ e8d00e67f0a9d832abfcd6fc97f481837fb76c65c75e27cf88a7b9d21802ef1d  ./.scripts/tes
 724a041a191c0cf471334363fcfa8fa10733394614a62a9d5f6f82ed66d14a63  ./CHANGELOG.md
 cc8c4ce3d82a7bf81eacbff5f6b526136c13732a6955c2bd92447a28ee06d294  ./LICENSE
 0b69625fbbd558de515237e3948bf6eb399fc73ce8f1e2c4dc34379bbc01a7fe  ./Makefile
-82c66b3c557c3bbcdcfb679a4cd57fa29504142c79ef02502854bd88fc08fdf0  ./README.md
+5bd5326f31264ec8f5ac9ab70c8a54cbd8c1678e3c1d076750c76b5364c114fa  ./README.md
 cc92bacd8b0ac0c6e262be5bd5c1507cfebdd88f0ffc46b32872d53d53902f0f  ./UNRESOLVED_QUESTIONS.md
 d104c379c9315762e588073fc3215d8ae3f88c1351288ef26a08c57039610128  ./bench/AGENT_PROMPT.md
 d4ac3b5e944846ffbb6ce30cef7012efe963ed2782546f869c13942f1b339d8d  ./bench/README.md
@@ -80,7 +80,7 @@ f48f625fe58d83fb0135d936b3eac402085cabf40cb24d1b026ea201b7739a52  ./calc/PAPER-R
 53ab312e5a716c14ea8642d31dd3f8b5c061ab984576be8e7c6dad36ce332ffa  ./calc/PAPER-R9-SOURCES-261030.md
 f1255959792a04e1629132c01ac60af27b32ed6adb8d1736fd294ceb07ef8c9d  ./calc/PAPER-TABLES-SOURCES-261030.md
 8282c36812fb9ce3919124f795b4836d88ef1bb66ebaeae48b82720cc1c0eb5d  ./calc/PERIMETER-NODES-R9-261030.csv
-c0a0ba50d6b6dc6f323f368afde6539edae9a905b1cb7bbca5ccbf9830378c01  ./calc/README.md
+5b292e2a3e4c1630ed70bb60ead4684f77809447ba79196f16985a8925b84806  ./calc/README.md
 cb186f118e789dbd2345979a2d68f4182954441a319d43ccad9c53dbf02c1675  ./calc/SERVICE-SOURCES-261030.md
 3c840e014c585a7cc9385a8cf5d96bc892f10e99b7e9890b1b4ac23f260c921b  ./calc/equilibrium.csv
 54a1fdb86bc06d72b072a1c6b49e94697b634e44336721b4043ac8513d6e5546  ./calc/examples/glm-family.tex
@@ -262,6 +262,8 @@ e117456522382507b7393c479040cde496e39aeeedd1675fb7dafaf3aa5494bf  ./calc/prices-
 dba31e99c5974df3032fb0239bee0f3032a288e30694a3c0f085729c0af6289c  ./calc/prices-2026-10-29/qwen_qwen3.8-flash.json
 c5d7716ea3652c5ccc2dfc807dca5d5dafac2f44e52b1d1e276e28aaebaf41e2  ./calc/sensitivity_host_sample.out
 231b16d2b6b882251bffaa94194d55443af93959842b7591fe8a829cfe166264  ./calc/sensitivity_host_sample.py
+2bed40ce362f59be9883e2b9f98005f246810d2fb12cfe1e02a9294300ca15c1  ./calc/tests/data/history/paper-csv-history.json
+136d0c6c8b2bdf070530acad038bc7064d098c38e1a50806a446d2fef496e640  ./calc/tests/data/history/paper-csv-history.tar.gz
 dda56210f89fd976cf1c9f16d90d2f24fc49a8783db47cb456fd978399c48d61  ./calc/tests/fixtures/arch_compare_r7.py
 e0cbfe7e65929362fd29296394819f8766e4ac45fe1757b82ec3400711895609  ./calc/tests/golden.json
 af40dbde204f78950732e3d7b9853338e60ccae54ff3a5f9e6afb0fef8769fde  ./calc/tests/paper_controls.py
@@ -270,8 +272,8 @@ b7549a4e1436e10c3972b6b5a6f23bb52c174134294754c7d7d3ba01606eacfd  ./calc/tests/p
 610e24cf1c86f981b4883c4f3ac263e3a09957ac3b6d066f0464690f7ee577af  ./calc/tests/paper_r8_smoke.tex
 b62f3b86c1ab5684c86504851f44df99273122f1280c76eac42fe4b991a78187  ./calc/tests/paper_r9_smoke.tex
 8b8a1789e2f6c9589c502709149bebc56cee411114f5d04dea156d5a760783be  ./calc/tests/paper_tables_smoke.tex
-6af23b900e35386864287fd7c5f51c889d10358d8219bca2ae490e7a618f0308  ./calc/tests/r10_controls.py
-595de518957f680395e378832662203299e7a111bb178b8c7f782efeb5fcdf86  ./calc/tests/r11_audit.py
+5fcca1869d54380db4f2847c61334ed3a46382e144bb752b2631a5b139cdee0d  ./calc/tests/r10_controls.py
+7dd4b45b6d80ce310cb210def0d5d366db936276db5540e1f0b8968100d833f0  ./calc/tests/r11_audit.py
 ec20944e1267b31956e2c36324d8791c749a7c4a7ff86618fcd44262737b2d16  ./calc/tests/r11_controls.py
 46b0110923e6814527a5c3ee0977738b7357c29ecd0b702649c43823c3c4a29e  ./calc/tests/r6_controls.py
 acd4ddb92e05ca996a11f1816a6fb1da3bf631a120783392dbfec4511ca9a1e0  ./calc/tests/r7_controls.py
@@ -284,7 +286,7 @@ cfce0d82a13a360388bea3537d3ed4e82d190fd236e10cda0000881a83c54d33  ./calc/tests/t
 ab29b9e5f6f5a7ae660584141eae1ba0d8216180892015923733bae9e7473754  ./calc/tests/test_paper_r6.py
 43f8f3c6fb639bfbdd59cdbced9ba028bf27b2348ef982a24b7caea207e287ef  ./calc/tests/test_paper_r7.py
 a4e6f6ab37315e099d8ae5e9d7312bc961902199ee0966b5ae7877bcfbdc8373  ./calc/tests/test_paper_tables.py
-1e26d0e0e42fae865ca48680fa0566b2e95b43ea73746d3df6fb86cd786b8e30  ./calc/tests/test_run10.py
+718857eab84cc7b52c47d36cacef8c226a56abaf7074f6ca51283a92ba242557  ./calc/tests/test_run10.py
 eb8168f9728ace9a523ba3c3264ebeda315370c51b91b826304eaad8b0ba7332  ./calc/tests/test_run11.py
 2833617054df2b71b93ade8c4f66981cc9847d51d8e1a86411507b698840c748  ./calc/tests/test_run4.py
 5bf8910339e8ce01b8f27706719e29cf3b1dee28f96213d6c5bf77a297a19dfa  ./calc/tests/test_run8.py

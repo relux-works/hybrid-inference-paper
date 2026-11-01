@@ -1013,7 +1013,7 @@ The paper grid is now 5, 10, **20**, 50, 500, 5000 people; the new point is an
 estimate requested by the owner on 2026-10-31 for the small-team own-server case.
 Re-export with the same eight default/conservative commands in the run-9 section.
 All previous CSV record bytes and their relative order are preserved. Audit offline
-against pinned R9 commit `e9db8129887126ca6a5d27066dd4f4519d223c2d` (local git history required):
+against pinned R9 commit `e9db8129887126ca6a5d27066dd4f4519d223c2d`:
 
 ```bash
 python3 calc/tests/r10_controls.py --diff calc/ENGINE-DIFF-R10-261031.csv --added calc/ENGINE-CHANGES-R10-261031.csv
@@ -1021,8 +1021,14 @@ python3 -m unittest discover -s calc/tests
 python3 -m unittest discover -s calc/tests -p test_golden.py
 ```
 
-The Python audit uses local `git ls-tree` / `git show` to read the baseline;
-it performs no network operation. `ENGINE-DIFF-R10-261031.csv` counts removed,
+The Python audit reads the baseline with local `git ls-tree` / `git show` when that
+commit is present. The public repository starts from a single publication commit, so
+the R9 and R10 paper CSVs are also kept in `calc/tests/data/history/paper-csv-history.tar.gz`,
+recorded file by file in `paper-csv-history.json` (git blob id, SHA-256, size); without the
+commits the audit reads that archive and refuses any byte that does not match the record.
+Git reads run with `GIT_NO_LAZY_FETCH=1` and an empty `GIT_ALLOW_PROTOCOL`, and git is used only
+when the commit and every paper CSV blob are already local, so a partial clone never fetches.
+It performs no network operation. `ENGINE-DIFF-R10-261031.csv` counts removed,
 changed and added records for every published CSV. `ENGINE-CHANGES-R10-261031.csv`
 contains only added records, with file, identity key and exact CSV record bytes
 encoded in a CSV cell (including its trailing newline). The team-5 planted-cost

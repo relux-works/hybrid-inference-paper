@@ -21,8 +21,15 @@ CASES=[('paper-tables',''),('paper-tables-conservative','conservative_'),
        ('paper-tables-r8','r8_'),('paper-tables-r8-conservative','r8_conservative_')]
 
 
+OLD={}
+
+
 def old_bytes(name):
-    return subprocess.check_output(['git','show',BASELINE+':calc/out/paper/'+name],cwd=ROOT)
+    # Signed run 10 from local git history when present, else from the recorded archive (see r10_controls).
+    if not OLD:
+        from r10_controls import revision_csv
+        OLD.update(revision_csv(BASELINE))
+    return OLD[name]
 
 
 def read_rows(data):
