@@ -32,7 +32,7 @@ class MacImport(unittest.TestCase):
             (bin_dir/'caffeinate').chmod(0o755)
             harness = d/'common.sh'
             harness.write_text('''source "$REAL_COMMON"
-file_bytes() { wc -c < "$1"; }
+file_bytes() { wc -c < "$1" | tr -d " \t"; }
 mac_fit_streams() { echo "$TEST_STREAMS"; }
 mac_usable_bytes() { echo 100000000000; }
 sha256_of() {

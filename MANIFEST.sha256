@@ -61,7 +61,7 @@ c7c36003a04f5259f7831c5cc6dc3df4842eb5eacac216b4654f68a662f19fb3  ./bench/tests/
 25981b368b1cc18a23650cf75dda5fbe8b019234df26e49a9d6c3ec4e4c542ad  ./bench/tests/fixtures/pmset-absent.txt
 21f4287a87d7e3fede448f257c39c35b22eea40a1a07e9d2eae6363baa8511c9  ./bench/tests/fixtures/pmset-legacy.txt
 c830b6bf5c03ce153b5af1c1fa5d0683c1ed3a652be2563afceb0896e12095c7  ./bench/tests/test_kitlib.py
-1daf16bf901c86575b69313cd95ceb5231cadb8541320099522ee0d8f8ac7e56  ./bench/tests/test_mac_import.py
+472a219ac8df550a55d2a782bf5b7f98134a3701aad8ce41428867ebb4331947  ./bench/tests/test_mac_import.py
 6d423447ce1968e3cb0767458be9afb1589807239562f81470f02a236a69e301  ./bench/tests/test_restream.py
 6001d3a717d9e7b1d94cc6f74f5573be1f7202cdd5611148eae1692fc8af7482  ./calc/CROSSOVER-SOURCES-261030.md
 616ea270ea5481f38d7ae1e612e8037eb0c712d2318e5dc9e405f8bb218767d9  ./calc/ENGINE-CHANGES-R10-261031.csv
