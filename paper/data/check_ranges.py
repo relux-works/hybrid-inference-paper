@@ -496,7 +496,11 @@ def directions(m):
             and all(up[(True, s)][k] > up[(False, s)][k] for s in (20, 50) for k in ('api_median', 'api_cheapest'))
             and all(up[(True, s)]['hybrid_cheapest'] / up[(True, s)]['api_cheapest']
                     < up[(False, s)]['hybrid_cheapest'] / up[(False, s)]['api_cheapest'] for s in (20, 50)),
-        'storage dearer than prefill (M5 Max, 20%)': m['s20'][CLIENT]['hosting_month'] > m['s20'][CLIENT]['compute_month'],
+        'teams: own cluster below the median API at 500, above it at 50, above the cheapest at every size': [
+        (P_TEAMS, 'на 500 человек свой кластер уже дешевле медианного поставщика API при обеих долях'),
+        (P_TEAMS, 'на 50 человек ещё дороже'),
+        (P_TEAMS, 'Самого дешёвого поставщика API свой кластер не догоняет ни при каком размере команды до 5000')],
+    'storage dearer than prefill (M5 Max, 20%)': m['s20'][CLIENT]['hosting_month'] > m['s20'][CLIENT]['compute_month'],
         '1M: own cluster cheaper at one and two sessions a day (500, 5000, both policies)':
             all(util[(p, t, 1, f'{s}/day')]['own_cluster_session'] < util[(p, t, 1, f'{s}/day')]['hybrid_session']
                 for p in ('design', 'conservative') for t in big for s in (1, 2)),
@@ -530,6 +534,8 @@ P_OPEN = ('07-economics.tex', 'Все числа этого раздела')
 P_S20 = ('07-economics.tex', 'При доле 20\\% пользователь')
 P_S50 = ('07-economics.tex', 'При доле 50\\% на открытую')
 P_BUY = ('07-economics.tex', 'Покупка клиента')
+P_TEAMS = ('07-economics.tex', 'Команды от 5 до 5000 человек')
+CAP_PAY = ('07-economics.tex', 'Окупаемость клиента против медианного')
 P_HOST = ('07-economics.tex', 'Мак уже есть')
 M_DEEP = ('07-economics.tex', 'Глубокий контекст.}')
 M_OPEN = ('07-economics.tex', 'У поставщика GLM-5.3-Flash', 'sentence')
@@ -568,6 +574,12 @@ SITES = {
     'purchase at 50%': [P_BUY],
     'purchase against cheapest': [P_BUY],
     'payback s50, overflow to cheapest': [P_BUY],
+    'payback s50, overflow to median': [CAP_PAY],
+    'payback s50, overflow to median, whole': [CAP_PAY],
+    'payback, dearer than cheapest': [CAP_PAY],
+    'teams at 500, 20%': [P_TEAMS],
+    'teams at 500, 50%': [P_TEAMS],
+    'B300 node per person, five people': [('07-economics.tex', 'B300 покупается целиком', 'sentence')],
     'GLM API session to 1M': [M_OPEN, M_COST2],
     'GLM API session to 200k': [M_OPEN],
     'GLM growth of the session cost': [M_OPEN],
@@ -587,7 +599,7 @@ DIRECTION_SITES = {
     'cheapest API cheaper than the hybrid on every client, both shares and policies': [
         (P_S20, 'раза дороже, чем у самого дешёвого поставщика API'), (P_S20, 'раза дороже самого дешёвого поставщика'),
         (P_S50, '\\% дороже самого дешёвого API ('), (K14, 'раза дороже самого дешёвого'),
-        (ABSTRACT, 'раза дороже самого дешёвого')],
+        (ABSTRACT, 'раза дороже самого дешёвого'), (CAP_PAY, 'Против самого дешёвого поставщика гибрид дороже')],
     'at 50% Ultra clients dearer than the cheapest API': [
         (P_S50, 'дороже самого дешёвого API при хранении по политике протокола')],
     'storage dearer than prefill (M5 Max, 20%)': [(P_HOST, 'в месяц, больше, чем сам prefill')],
