@@ -5,6 +5,21 @@ README.md defines it for the paper, in the section "Versions and releases".
 
 ## [Unreleased]
 
+### Changed
+- The paper is cut from 22 pages to 9 (7 of text) and keeps what states and tests the core idea: the server copies
+  the model memory of new positions to the client, and what that copy costs and saves. The protocol section takes
+  the delta and offload-rule formulas from the appendix; the channel section takes the offload bound; the prototype
+  results, the trust model and the limitations share one section; economics keeps the client table, the purchase,
+  the closed perimeter and the million-token context, each reduced to a paragraph.
+
+### Removed
+- Sections on clients and weight classes, model architectures, the million-token context, security, resilience and
+  outlook, the appendix, and the figures and tables for teams, renting against buying, payback, model progress,
+  the owner's yearly bill, one-shot ingestion and the transcript example. Heterogeneous quantisation, the patchwork
+  cache and provider routing are dropped from the protocol.
+- `paper/data/check_ranges.py` and `paper/data/offload_bound.py` follow the shorter text: the sites of removed
+  figures and the closed-perimeter table are no longer checked.
+
 ## [0.1.0-rc.1] - 2026-11-01
 
 A draft snapshot of the current text for review, published as a GitHub pre-release.

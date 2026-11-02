@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Checks the worked example of the offload bound in the models section against the engine snapshot.
+"""Checks the worked example of the offload bound in the channel section against the engine snapshot.
 
-The intensity table gives the channel bound: the time an ideal local engine at the client's peak needs to read a
+The channel bound is: the time an ideal local engine at the client's peak needs to read a
 portion, divided by the time the link needs to carry its delta. The text adds the server's prefill time to the
 transfer for one example (Qwen3.8-27B, 10 000-token portion, depth 110 000, 32-bit state, M5 Max at its 60 TFLOPS
 peak, the B300 server at the engine's effective prefill rate) and states the ceiling that server speed sets on any
@@ -12,7 +12,7 @@ Run: python3 offload_bound.py            (exit 0 when the text matches)
 import csv, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SECTION = os.path.join(HERE, '..', 'sections', '05b-models.tex')
+SECTION = os.path.join(HERE, '..', 'sections', '04-channel.tex')
 ENGINE = os.path.join(HERE, 'engine')
 EXAMPLE = ('Qwen3.8-27B', '32', 'M5 Max 128 GB', '10000', '110000')
 
