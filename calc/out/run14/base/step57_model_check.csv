@@ -1,0 +1,9 @@
+device,sessions,calls,new_tokens,generated_tokens,predicted_s,measured_s,error_s,error_fraction,basis,status,alarm_inputs
+M3 Max,1,4,801,2706,372.4758343893536,405.1,-32.6241656106464,-0.08053361049283236,steady saturated two-bound model; finite-batch drain/queue unmodelled,ok,
+PRO 6000,1,4,801,2706,12.210314160347991,84.3,-72.089685839652,-0.855156415654235,analytical batch32 resource bound; not a server scheduler prediction,ok,
+M3 Max,2,8,5493,2108,319.2871585251729,408.8,-89.5128414748271,-0.21896487640613282,steady saturated two-bound model; finite-batch drain/queue unmodelled,ok,
+PRO 6000,2,8,5493,2108,12.908878078209735,68.6,-55.691121921790256,-0.8118239347199747,analytical batch32 resource bound; not a server scheduler prediction,ok,
+M3 Max,4,16,24970,14324,1752.9084720484154,2775.5,-1022.5915279515846,-0.3684350668173607,steady saturated two-bound model; finite-batch drain/queue unmodelled,ok,
+PRO 6000,4,16,24970,14324,80.10725964222384,441.0,-360.8927403577762,-0.8183508851650253,analytical batch32 resource bound; not a server scheduler prediction,ok,
+M3 Max,8,32,25706,16416,1941.4292809288586,2914.3,-972.8707190711416,-0.3338265515119039,steady saturated two-bound model; finite-batch drain/queue unmodelled,ok,
+PRO 6000,8,32,25706,16416,88.86742139234948,486.7,-397.8325786076505,-0.8174082157543672,analytical batch32 resource bound; not a server scheduler prediction,ok,

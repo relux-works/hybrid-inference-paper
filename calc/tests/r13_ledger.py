@@ -1,0 +1,228 @@
+"""Current v2 publication guard and retained historical producer audit functions.
+
+r13_reverse documents the orchestrator's numeric scope and compares every TeX
+occurrence against all changed export keys, independent of the site catalog.
+Only number-words remain manual (the report contains the writer's checklist).
+"""
+import csv
+import io
+import re
+import subprocess
+
+from r13_audit import ROOT, OUT, module
+
+NUMBER = re.compile(r'(?<![\w.])\d+(?:\\,\d{3})*(?:\.\d+)?(?:--\d+(?:\.\d+)?)?(?!\w|\.\d)')
+
+# Exact lexical collisions with changed architecture values. These quantities
+# are not derived from the native architecture CSV; no path/section is waived.
+# An unused exception is an error, so moving/changing a site requires review.
+NATIVE_COLLISIONS = {
+    ('paper/hybrid-inference.ru.tex',50,'12'): 'section input filename',
+    ('paper/preamble.tex',29,'12'): 'subsection font leading in points',
+    ('paper/sections/03-architecture.tex',57,'12'): 'TikZ rectangle coordinate',
+    ('paper/sections/04-channel.tex',28,'12'): 'Qwen turn speedup, tab:turn, not Gemma transfer seconds',
+    ('paper/sections/04-channel.tex',67,'12'): 'OS memory reserve in GB',
+    ('paper/sections/04-channel.tex',79,'21.6'): 'Air transcript local latency in minutes, tab:transcript',
+    ('paper/sections/05-clients.tex',14,'12'): 'OS memory reserve in GB',
+    ('paper/sections/05-clients.tex',36,'12'): 'OS memory reserve in GB',
+    ('paper/sections/05-clients.tex',45,'12'): 'OS memory reserve in GB',
+    ('paper/sections/06-server.tex',26,'12'): 'server user count, not native model geometry or transfer',
+    ('paper/sections/06-server.tex',29,'22'): 'server user count under conservative hosting',
+    ('paper/sections/07-economics.tex',108,'12'): 'client payback in months',
+    ('paper/sections/07-economics.tex',294,'12'): 'resale-value plot time in months',
+}
+
+
+def read(path):
+    return list(csv.DictReader(io.StringIO(path.read_text())))
+
+
+def paper_numbers(texts=None):
+    texts = texts if texts is not None else {
+        str(p.relative_to(ROOT)): p.read_text() for p in sorted((ROOT/'paper').rglob('*.tex'))}
+    return [(name, text.count('\n', 0, match.start())+1, match.group())
+            for name, text in texts.items() for match in NUMBER.finditer(text)]
+
+
+def native_ranges(numbers=None, before=None, after=None):
+    """Discover rounded min/max ranges in *all* TeX, from native CSV columns.
+
+    A range selects the rows whose rounded old value lies in its printed
+    interval; both endpoints must be attained. Unchanged ranges need no row.
+    Each result names the selected models, column and rounding formula. The
+    current paper has exactly one changed native range (the 300 Mbit/s case).
+    """
+    if before is None:
+        before = list(csv.DictReader(io.StringIO(subprocess.check_output(
+            ['git','show','c04a99d:paper/data/arch-compare.csv'],cwd=ROOT,text=True))))
+    after = after if after is not None else read(ROOT/'paper/data/arch-compare.csv')
+    assert [r['model'] for r in before] == [r['model'] for r in after], 'native row identity changed'
+    found = []
+    for name,line,token in numbers if numbers is not None else paper_numbers():
+        if '--' not in token:
+            continue
+        low,high = token.split('--');digits = len(low.split('.')[1]) if '.' in low else 0
+        for key in before[0]:
+            try:
+                selected = [i for i,r in enumerate(before) if r[key] and
+                            float(low) <= float(f'{float(r[key]):.{digits}f}') <= float(high)]
+                old = [float(before[i][key]) for i in selected]
+                new = [float(after[i][key]) for i in selected]
+            except ValueError:
+                continue
+            if len(selected) < 2:
+                continue
+            span = lambda values: f'{min(values):.{digits}f}--{max(values):.{digits}f}'
+            if span(old) != token or span(new) == token:
+                continue
+            models = '|'.join(before[i]['model'] for i in selected)
+            found.append(dict(paper_site=f'{name}:{line}',kind='sentence',
+                engine_key=f'arch-compare.csv[models={models}].{key}:minmax(round{digits})',
+                old=token,new=span(new),unit='seconds',source='paper/data/arch-compare.csv'))
+    return found
+
+
+def native_changes(numbers):
+    before=list(csv.DictReader(io.StringIO(subprocess.check_output(
+        ['git','show','c04a99d:paper/data/arch-compare.csv'],cwd=ROOT,text=True))))
+    after=read(ROOT/'paper/data/arch-compare.csv')
+    found=native_ranges(numbers,before,after);used=set()
+    for name,line,token in numbers:
+        if '--' in token or '\\' in token:
+            continue
+        digits=len(token.split('.')[1]) if '.' in token else 0
+        for a,b in zip(before,after):
+            for key,value in a.items():
+                try: old,new=float(value),float(b[key])
+                except ValueError: continue
+                # tab:arch also prints bytes/token as decimal KB/token.
+                for scale in (1,1000) if key=='kv_full_bytes_token' else (1,):
+                    printed=lambda v:f'{v/scale:.{digits}f}'
+                    if printed(old)!=token or printed(new)==token:
+                        continue
+                    collision=(name,line,token)
+                    if collision in NATIVE_COLLISIONS:
+                        used.add(collision)
+                        continue
+                    found.append(dict(paper_site=f'{name}:{line}',kind='printed-number',
+                        engine_key=f'arch-compare.csv[model={a["model"]}].{key}/ {scale}:round{digits}',
+                        old=token,new=printed(new),unit='native CSV unit / '+str(scale),source='paper/data/arch-compare.csv'))
+    # Synthetic text controls intentionally supply only a subset of the paper.
+    present={name for name,_,_ in numbers}
+    stale={c for c in NATIVE_COLLISIONS if c[0] in present}-used
+    assert not stale, ('unused native numeric collision',stale)
+    return found
+
+
+def changed_cells(out=OUT):
+    """All numeric snapshot cells, not merely cells registered by quote code."""
+    for path in sorted((ROOT/'paper/data/engine').glob('*.csv')):
+        target = out/'base'/path.name
+        if not target.exists():
+            raise AssertionError('missing R13 export: '+str(target))
+        before,after = read(path),read(target)
+        assert len(before) == len(after), (path.name,'row identity changed')
+        assert before[0].keys() == after[0].keys(), (path.name,'columns changed')
+        for i,(a,b) in enumerate(zip(before,after)):
+            for key,value in a.items():
+                try:
+                    float(value)
+                except (ValueError,TypeError):
+                    continue
+                if value != b[key]:
+                    yield dict(paper_site='paper/data/engine/'+path.name,kind='table-cell',
+                        engine_key=f'{path.name}[row={i}].{key}',old=value,new=b[key])
+
+
+def formula_changes(out=OUT):
+    """Recompute the paper's existing economics formulas on both export sets."""
+    m = module('r13_ledger_ranges',ROOT/'paper/data/check_ranges.py')
+    old_model = m.model(); old = m.values(old_model)
+    m.HERE = str(out/'paper-derived')
+    m.rows = lambda name: read(out/'base'/name)
+    new_model = m.model(); new = m.values(new_model)
+    for key in old:
+        if old[key] != new[key]:
+            for site in m.SITES[key]:
+                yield dict(paper_site='paper/sections/'+site[0]+' :: '+site[1],kind='sentence',
+                           engine_key=key,old=old[key],new=new[key])
+    for key,before,after in (
+            ('tab:econ',m.econ_rows(old_model['s20'],old_model['s50'],old_model['b50']),
+                        m.econ_rows(new_model['s20'],new_model['s50'],new_model['b50'])),
+            ('tab:perimeter',m.perimeter_rows(old_model['design'],old_model['cons']),
+                             m.perimeter_rows(new_model['design'],new_model['cons']))):
+        for i,(a,b) in enumerate(zip(before,after)):
+            if a!=b:
+                yield dict(paper_site='paper/sections/07-economics.tex :: '+key,kind='printed-table-row',
+                           engine_key=f'{key}[row={i}]',old=a,new=b)
+    # The existing publication checker scans all occurrences, resolves equal
+    # forms at other registered quantities/tables, and names literal collisions
+    # explicitly in ALLOW. No section is exempt from its unregistered-site gate.
+    texts = {p.name:p.read_text() for p in (ROOT/'paper/sections').glob('*.tex')}
+    unregistered=m.guard(texts,old_model,old)
+    assert not unregistered, ('unregistered paper formula numbers',unregistered)
+
+
+def figure_changes(out=OUT):
+    sections={p.name:p.read_text() for p in (ROOT/'paper/sections').glob('*.tex')}
+    for path in sorted((ROOT/'paper/data').glob('*.csv')):
+        target=out/'paper-derived'/path.name
+        if path.name=='arch-compare.csv':
+            before=list(csv.DictReader(io.StringIO(subprocess.check_output(
+                ['git','show','c04a99d:paper/data/arch-compare.csv'],cwd=ROOT,text=True))))
+            after=read(path)
+        elif target.exists():
+            before,after=read(path),read(target)
+        else:
+            continue
+        assert len(before)==len(after), (path.name,'figure row identity changed')
+        sites=[name for name,text in sections.items() if 'data/'+path.name in text]
+        sites=sites or ['05b-models.tex' if path.name=='arch-compare.csv' else '07-economics.tex']
+        for i,(a,b) in enumerate(zip(before,after)):
+            for key,value in a.items():
+                try: float(value)
+                except (ValueError,TypeError): continue
+                if value!=b[key]:
+                    for site in sites:
+                        yield dict(paper_site='paper/sections/'+site,kind='figure-cell',
+                                   engine_key=f'{path.name}[row={i}].{key}',old=value,new=b[key])
+
+
+def check_historical_ledger(records=None, out=OUT, texts=None):
+    records = records if records is not None else read(ROOT/'calc/ENGINE-QUOTES-R13-261101.csv')
+    fields = ('paper_site','kind','engine_key','old','new')
+    signatures = {tuple(str(r[k]) for k in fields) for r in records}
+    numbers = paper_numbers(texts)
+    from r13_reverse import check_reverse
+    reverse_summary=check_reverse(records,out,texts)
+    expected = list(changed_cells(out))+list(figure_changes(out))+list(formula_changes(out))+native_changes(numbers)
+    # Supplemental arithmetic and printed tables retain their exact source-key
+    # bindings as well; this checks content, not just a count or a file hash.
+    from r13_quotes import supplement
+    def add(site,kind,key,old,new,unit,source):
+        if str(old)!=str(new):
+            expected.append(dict(paper_site=site,kind=kind,engine_key=key,old=old,new=new))
+    supplement(add,out)
+    from r13_quotes import traffic_changes
+    traffic_changes(add,out)
+    from r13_sites import printed_sites
+    expected.extend(printed_sites(records,out))
+    missing = [r for r in expected if tuple(str(r[k]) for k in fields) not in signatures]
+    if missing:
+        raise AssertionError('changed values without ledger rows: '+repr(missing[:8]))
+    return dict(scanned_numbers=len(numbers),changed_dependencies=len(expected),**reverse_summary)
+
+
+def check_ledger(records=None, out=OUT, texts=None):
+    """Validate the current v2 publication; historical producer inputs are immutable.
+
+    The historical contract is exercised without edits in publication_history's
+    source-revision fixture, including its original check_ledger entry point.
+    """
+    from publication_v2 import check_publication
+    assert out == OUT, 'v2 publication must use the reviewed historical output namespace; current publication uses its pinned run14 snapshot'
+    return check_publication(records, texts)
+
+
+if __name__ == '__main__':
+    print(check_ledger())

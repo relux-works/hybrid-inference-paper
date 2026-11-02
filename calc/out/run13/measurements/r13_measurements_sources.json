@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "path": "data/measurements/vast-2026-11-01/r13-phase_a/qwen27b-gpu-bench-results-qwen27-161-phaseA-20261101T191633Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.3",
+        "sha256": "fd0bc08cd310718fadbe10f9badb081abcceb15d8bdb24d0e108305340d76040"
+      },
+      "sha256": "fd0bc08cd310718fadbe10f9badb081abcceb15d8bdb24d0e108305340d76040"
+    },
+    {
+      "path": "data/measurements/vast-2026-11-01/r13-phase_a/results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.3",
+        "sha256": "fd0bc08cd310718fadbe10f9badb081abcceb15d8bdb24d0e108305340d76040"
+      },
+      "sha256": "387c61d566f0aabfffb1695d58cf7ad64b5ea0f790d4ae82dbe8fd98642ea1e7"
+    },
+    {
+      "path": "data/measurements/vast-2026-11-01/r13-off/qwen27b-gpu-bench-results-ab-ckpt-off-20261101T181253Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.3",
+        "sha256": "e80d4240b6e35d384e29a31c14269716b430728472a1253220e2235bbd1ab3c2"
+      },
+      "sha256": "e80d4240b6e35d384e29a31c14269716b430728472a1253220e2235bbd1ab3c2"
+    },
+    {
+      "path": "data/measurements/vast-2026-11-01/r13-off/results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.3",
+        "sha256": "e80d4240b6e35d384e29a31c14269716b430728472a1253220e2235bbd1ab3c2"
+      },
+      "sha256": "59e02d78efaa45520b7b2bd88e6140e7a282c2e126b50b47e7325a60ab90ff33"
+    },
+    {
+      "path": "data/measurements/vast-2026-11-01/r13-on/qwen27b-gpu-bench-results-ab-ckpt-default-20261101T182241Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.3",
+        "sha256": "92828a6c8e5796042fd7175d2b9281d71de3e9a9522af2d1833b8ddaa48c5d38"
+      },
+      "sha256": "92828a6c8e5796042fd7175d2b9281d71de3e9a9522af2d1833b8ddaa48c5d38"
+    },
+    {
+      "path": "data/measurements/vast-2026-11-01/r13-on/results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.3",
+        "sha256": "92828a6c8e5796042fd7175d2b9281d71de3e9a9522af2d1833b8ddaa48c5d38"
+      },
+      "sha256": "e72ddfe7b20d699234496624e73c1f4a0755efee9ddde7b48b7f5d1ff8d7bf7d"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "c7b4ce09f5a1a56c56a1b80003c85c6a66343380ceb303a338a4276203ebfcbb"
+    },
+    {
+      "path": "data/measurements/vast-2026-11-01/qwen27b-gpu-bench/results/hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T020831.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "Vast RTX PRO 6000 GPU kit1.2.0 bench e5f64d2 2026-11-01",
+        "sha256": "9accab80ed21dfa24714d5e11b16d31e0106419cd13c3fd27123528949673661"
+      },
+      "sha256": "340f7fde1812828ca8609e71fc762de583ac3e024826cdfbd2f68c4d7e38a3f4"
+    },
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/depth.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "sha256": "a75b1aefd40df99d96d8a96ff4eac20073b239c39d4d4d4332fa23da1b9acb5b"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "hardware.servers.rtx1.peak",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4. FP8 dense prefill peak per GPU."
+      },
+      "unit": "FLOP/s",
+      "value": 1007600000000000.0
+    }
+  ]
+}

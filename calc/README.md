@@ -1045,3 +1045,210 @@ Current nonlegacy base scenarios count `output_per_call` alone for client and se
 `reasoning_on_top_sensitivity.csv` and its conservative counterpart replace `output_only_sensitivity*.csv`. `accounting_case=base_output` is fraction 0; `reasoning_on_top_upper_bound` is fraction 1, which recovers run-10 numbers. Conservative here describes hosting, independently of output accounting. Regenerate all eight cases using the commands above.
 
 Run `python3 -m unittest discover -s calc/tests -p test_run11.py`; `python3 calc/tests/r11_controls.py output_sum` must exit **1**, with the named output-mean assertion. The ordinary suite must exit **0**. Run `python3 calc/tests/r11_audit.py` for the complete run-10-to-run-11 publication-cell ledger and headline replacements; outputs are `ENGINE-CHANGES-R11-261101.csv` and `ENGINE-QUOTES-R11-261101.csv`. No TeX/build command is needed.
+
+## Measured-server sensitivity (run 12)
+
+Label: **server at the measured llama.cpp rate**. Design run11 at `a57db67` is
+unchanged, including its42 chart CSVs and32 manifest/schema/source/alarm sidecars.
+The eight original paper scenarios each have a `-measured-server` sibling; e.g.
+`paper-tables-r6-conservative-measured-server`. Only these opt-in scenarios load
+`data/server-measured.json`; that layer hash-checks the delivered bulk-turn JSONL.
+
+The curve is an unweighted twelve-point OLS fit to seconds/token = a+b×nominal
+depth, using2k and10k portions at16k/50k/100k/150k/200k/249k. Fills are held out;
+512-token overhead is outside this bulk curve. Per-call marginal-depth accounting
+is retained, while cold fills and large spans integrate the curve. Beyond249k
+the same linear seconds/token law extrapolates. The raw1.04M fill uses YaRN x4.
+B300 shared/owned options inherit RTX’s depth-dependent dense-FP8 fraction;
+consistent FP16 scaling yields the same ratio. GLM uses its own FLOPs on that
+estimated envelope. RTX Server Edition portability is also an estimate.
+
+```bash
+python3 calc/tests/r12_audit.py
+python3 -m hybridcalc run paper-tables-measured-server --format md
+python3 -m hybridcalc export paper-tables-r8-conservative-measured-server --output calc/out/paper
+python3 -m unittest discover -s calc/tests -p test_run12.py
+python3 calc/tests/r12_controls.py old_mfu
+```
+
+The audit exports all42 chart siblings plus2 payback comparisons, preserves the
+89 frozen run11 publication/paper files, and writes the complete numeric delta,
+quote, direction-change and fit residual ledgers next to the prior runs. The old
+MFU plant is expected red(exit1), killed by
+`test_measured_server_timing_replaces_mfu`; a setup error is not a killed mutant.
+The positive path requires<2% per bulk-turn residual and<15% on each held-out
+fill. Exact commands, scope and qualifications are in
+[ENGINE-REPORT-R12-261101.md](ENGINE-REPORT-R12-261101.md).
+
+## Run 13: reproduced server base and measured M5 Max
+
+Current paper candidates use the `-r13` suffix, for example
+`paper-tables-r13`, `paper-tables-r6-r13`, `paper-tables-r7-r13`, and
+`paper-tables-r8-r13`; insert `-conservative` before `-r13` for the other
+hosting policy. Append `-earlier-run` or `-checkpoints-on` to select a named
+server sensitivity with the same current client, prices and geometry.
+
+```bash
+mkdir -p .temp/hybrid-b-r32-261101/tmp
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 calc/tests/r13_audit.py
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 -m unittest discover -s calc/tests -v
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 -m unittest discover -s calc/tests -p test_run13.py -v
+python3 -m hybridcalc export server-options-r13 --output .temp/hybrid-b-r32-261101/measurement-tables
+```
+
+The audit writes 42 chart CSVs per server case under
+`calc/out/run13/{base,earlier-run,checkpoints-on}/`, seven raw/recomputed
+measurement tables under `calc/out/run13/measurements/`, eight current API
+scenario results under `calc/out/run13/api-baselines/`, and derived figure
+inputs under `calc/out/run13/paper-derived/`. It preserves all 150 historical
+files under `calc/out/paper/`, including every run-12 payload and sidecar.
+Historical paper scenarios explicitly read `prices-r12.json` and
+`paper-tables-r7-r12.json`; current scenarios read the corrected inputs.
+`--quotes-only` regenerates the quote ledger/derived inputs without replaying
+all chart calculations. The paper's reviewed economics sentence registry is
+reused with explicit readers pointed at the new tables; its source is unchanged.
+`r13_quotes.py` supplies the other printed table and narrative coordinates.
+
+The base server curve is the phase-A checkpoints-off twelve-point
+seconds/token OLS fit, reproduced within 1% by the A/B off arm. vLLM 0.32 FP8
+cold fits and cached-delta rates are separate server-only measurements: cached
+blocks contain 784 tokens and no compatible client-state bridge exists.
+Measured M5 Max64 prefill uses six harmonic-mean bulk anchors; single-stream
+and parallel decode use steps40/50/55. Three streams interpolate aggregate
+throughput between measured two/four-stream controls; the economic model uses
+at most four. Step57 is archived but excluded for swap. Depth interpolation,
+extrapolation, cross-device/GLM portability and unmeasured M5 variants remain
+estimates. Native step55 reported throughput counts `predicted_n-1`; the
+counter-recomputed interval column uses `predicted_n`, exposed separately.
+
+Sonnet cache reads are $0.10/MTok in current inputs. Gemma full-attention K and
+V total 43,520 B/token; both the paper's architecture formula/CSV and new engine
+exports use it. Published TeX prose and the embedded run-11 engine snapshot are
+unchanged. [The report](ENGINE-REPORT-R13-261101.md) and
+[quote ledger](ENGINE-QUOTES-R13-261101.csv) identify their pending numeric edits.
+
+Each server case also has `payback.csv` and `payback_conservative.csv` covering
+all six clients, both open shares and both same-API overflow comparisons.
+`paper-derived/payback.csv` is the separate published plot definition, with
+cheapest-API overflow. The root `INDEX.json` hashes all 251 payloads. A bounded
+accounting-child control is `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 calc/tests/r13_controls.py unmeasured_child`: expected exit1 is the named
+`test_accounting_child_retains_measured_m5` AssertionError, never a setup error.
+
+## Run 14: measured parallel, M5 and B300
+
+Run14 is opt-in. The eight `paper-tables…-r14` scenarios and
+`server-options-r14` write only `calc/out/run14/`. All150 historical and252
+run13 files retain their exact bytes and historical generator identities.
+The [report](ENGINE-REPORT-R14-261102.md) explains day throughput versus agent
+wait; the [ledger](ENGINE-QUOTES-R14-261102.csv) maps run13 old/new numeric
+cells and their embedded-paper/TeX consumers. Paper prose is unchanged.
+
+| Tool | Purpose | Exact entry point | Outputs |
+| --- | --- | --- | --- |
+| Run14 audit, Python standard library + local Git | Verify all archive hashes/manifests; export eight paper families and measured server options; compare402 frozen files; map changed paper cells | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r4-261102/tmp" python3 -I calc/tests/r14_audit.py` after creating TMPDIR | `calc/out/run14/{base,measurements}/`, `INDEX.json`, `calc/ENGINE-QUOTES-R14-261102.csv` |
+| Run14 tests | Refusal witnesses, measured rate consumers, memory, server-only flags and byte identity | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r4-261102/tmp" python3 -I -m unittest discover -s calc/tests -p test_run14.py -v` | stdout/stderr, logs under `.temp/hybrid-e-r4-261102/` |
+| Full suites | Engine regressions and kit helper/CLI contracts, CPU only | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r4-261102/tmp" python3 -I -m unittest discover -s calc/tests -v`; repeat with `-s bench/tests` | stdout/stderr, task-scoped logs |
+
+M3 parallel lookup never interpolates across stream counts and refuses depths
+above the last anchor for that count. Shallow depths use the first point with
+an explicit conservative flag. Actual depths include the16-token suffix;
+1.04M is a YaRN scale4 condition, not a model-quality claim. The128k restored
+control replaces hot-prefill1/2/4/8 rates; the12-stream hot-prefill result is
+labelled a lower bound. Memory admission remains per call after output growth.
+The full39904-call mix contains unsupported three-stream admissions and
+four-stream depths beyond260016, so four-agent full-day capacities are gaps.
+The separate `client_agents_day_bounded.csv` filters to explicit depth ceilings
+and displays its smaller call count; it never substitutes for the full mix.
+
+M5 Max64/128 share the existing measured Max curves. Ultra96/256 scale those
+prefill curves by compute and decode by bandwidth; `client_m5_m3_sensitivity`
+preserves the old M3-based estimates. M5 interpolation/extrapolation retains
+run13's stated limits. B300 llama.cpp uses its own bulk seconds/token OLS fit
+and measured single-stream decode; deeper fitted values and GLM portability
+remain estimates. Step70 is recorded as skipped because the two builds are
+identical. No tuning uplift exists in this archive. B300 FP8 default/FP8 KV
+and large-batch controls are exported in the same cold/cached form as PRO6000:
+**server-only rate; hybrid transfer through the vLLM bridge is in qualification**.
+
+## Run14 r5: corrected full-mix depth, import and owned fleets
+
+R5 supersedes the R4 full-mix gaps and import-free capacities. Within a measured
+stream count's depth range, retain the R4 lookup. Beyond its deepest point,
+multiply that point's aggregate by the Run13 `measured_rate(k,d)` ratio between
+the requested depth and that same anchor. Count holes use the nearest lower
+measured aggregate. Counts above 24 refuse at every depth. Full-mix rows expose
+call shares and aggregate decode-device-time shares for shallow clamping,
+modelled depth, conservative count reuse and measured lower bounds. Flags can
+overlap. Bounded tables still refuse outside the R4 measured lookup.
+
+Client import is `fixed_s + tokens * seconds_token`, charged once to foreground
+device time and once to agent wait before deciding to offload. M3 uses the one
+point 39,504 tokens / 42.4 s; its intercept cannot be identified and is assumed
+zero. Other Apple devices and GLM use that coefficient as an uncalibrated
+portability estimate. PR9's preserved CUDA calls independently fit 1.618657 s
+plus 0.0004953084 s/token; they never replace the Mac calibration. The Mac v2
+sensitivity stays alarmed until a Mac gate supplies an admitted measurement.
+
+The primary closed-perimeter comparison now tries all hardware at every team
+size and all three storage tiers for both architectures. Both use the same
+retention window, session population, target load and mean/p90 prefill limits
+(the local-M3 workload mean/p90, with queueing excluded). Retention is paid in
+an incremental pool; active decode residency is charged, tool-idle storage is
+not also charged as compute occupancy. RAM/NVMe all-server paths read the
+prefix and append new KV/output plus the endpoint state on every call. HBM
+has no migration cost. Every storage candidate is exported for inspection.
+Other explicitly named hardware/GLM reference tables retain their stated
+fixed-configuration scope; use the symmetric perimeter table for optimized
+architecture conclusions.
+
+| Tool | Exact command | Artifacts |
+| --- | --- | --- |
+| R14 export, frozen-byte and quote audit (Python standard library + Git) | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I calc/tests/r14_audit.py` | `calc/out/run14/`, `ENGINE-QUOTES-R14-261102.csv`, `R14-R5-CHANGED-OUTPUTS-261102.csv`, `R14-R5-CONCLUSIONS-261102.csv` |
+| R5 contract tests | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I -m unittest discover -s calc/tests -p test_run14_r5.py -v` | task-scoped logs; paired rejection/positive controls |
+| Engine and kit regression suites | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I -m unittest discover -s calc/tests -v`; repeat with `-s bench/tests` | task-scoped logs with actual exits |
+
+Create TMPDIR before running. CPU only; no downloads or native builds required.
+`e2e_first_call_check.csv` preserves the 25.5 s measured unallocated residual.
+`step57_model_check.csv` is a held-out finite-batch check of a steady-capacity
+model, not a scheduler simulation or an additional calibration anchor.
+
+R5 bounded fault controls run with
+`PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I calc/tests/r14_r5_controls.py control`.
+Replace `control` with `flat_depth`, `upper_count`, `zero_foreground`,
+`free_reload`, `ignore_latency`, `unchecked_cuda` or `erase_reread` for the
+named expected-red cases (actual exit1). Logs stay in the task directory.
+The isolated import attribution is exported as
+`calc/R14-R5-IMPORT-EFFECT-261102.csv`; it holds the R5 depth law fixed while
+setting only import to zero.
+
+### Break-even server prefill price (Run14 r5 task 7)
+
+`breakeven_prefill_price.csv` has 192 rows: eight client classes, default/cautious
+storage, 20%/50%/100% open shares, owned/premium purchase cases and both API
+baselines. Routing and non-prefill budgets stay fixed. Each price solves
+`API_month = fixed_month + USD_per_MTok * prefilled_MTok_month`.
+Prefilled tokens are every client-served delta plus eventual output catch-up,
+once; retained-prefix reload and migration are separately priced, not tokens.
+Overflow uses the same API as its comparison target, excluding supplier-switch
+savings. The row splits storage, transfer/egress, power, device, front, migration
+and overflow. It says `no break-even` when the zero-price floor exceeds the API.
+
+The storage ceiling is an effective blended USD/GB-month at zero prefill price.
+A second column holds inactive NVMe fixed and solves for the active RAM price;
+if the inactive floor already exceeds the ceiling, no nonnegative RAM price can
+work. Negative provider prices, missing measured options and missing power
+budgets refuse. Strix/Spark reuse the existing pair's per-node whole-device
+power/price estimates; Strix retains the NIC allocation and neither gets a
+laptop credit. Those estimates are labelled in each row.
+
+Every threshold has four measured-fit rental cost columns: llama.cpp PRO6000
+(run13 base), vLLM FP8 PRO6000, B300 auto KV and B300 FP8 KV. Rates are weighted
+by this client's prefilled tokens and the engine's rental tariffs/target load.
+vLLM stays server-only. Cold marginal fits and extrapolated token shares are
+explicit; these are modelled unit costs based on measurements, not measured
+commercial invoices or a qualified client bridge.
+
+The export command above includes this table. The narrow price gate is
+`PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I -m unittest discover -s calc/tests -p test_prefill_price_r14.py -v`.
+The control driver also accepts `negative_price`, `missing_option`,
+`zero_price_floor` and `double_catchup` (expected actual exit1).

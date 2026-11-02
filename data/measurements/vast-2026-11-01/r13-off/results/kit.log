@@ -1,0 +1,21 @@
+2026-11-01T18:04:05Z GPU 0: NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 97887 MiB (97249 free), compute 12.0, driver 595.91.07, CUDA 12.8, PCIe gen 4 x16
+2026-11-01T18:04:05Z host: AMD EPYC 7532 32-Core Processor, 64 threads, 251 GB RAM, Ubuntu 24.04.5 LTS, free disk 120 GB; one slot fits 262144 tokens
+2026-11-01T18:04:05Z check passed; results/system.json written
+2026-11-01T18:04:07Z cloning https://github.com/ggml-org/llama.cpp
+2026-11-01T18:04:16Z configuring llama.cpp c21284cdf5fd833b90ac1f824cdf8065e2700dc4 with CUDA for architecture 120a-real
+2026-11-01T18:04:22Z building llama-server and llama-bench (several minutes)
+2026-11-01T18:08:22Z built: 0.00.000.812 I srv  llama_server: initializing ... version: 0.4.1-dev (build 11087, commit c21284cdf) built with GNU 13.3.0 for Linux x86_64 
+2026-11-01T18:08:22Z verifying SHA-256 (about a minute)
+2026-11-01T18:08:36Z model verified: Qwen3.8-27B-Q4_K_M.gguf, 18973870432 bytes, sha256 31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34
+2026-11-01T18:08:37Z GGUF geometry recorded in results/model-geometry.json
+2026-11-01T18:08:38Z llama-server (smoke) started with pid 58196 on GPU 0; arguments: -c 32768 -np 1 --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T18:08:45Z llama-server ready after 5s; GPU memory used: 19526 MiB
+2026-11-01T18:08:47Z smoke test finished; check results/hybrid-bench-*smoke*.md
+2026-11-01T18:08:49Z llama-server pid 58196 stopped
+2026-11-01T18:08:50Z context planned for the depth run: 262144 tokens
+2026-11-01T18:08:50Z slot save/restore on (120 GB free)
+2026-11-01T18:08:50Z llama-server (depth-1) started with pid 58380 on GPU 0; arguments: -c 262144 -np 1 --slot-save-path <work>/slots --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T18:08:56Z llama-server ready after 5s; GPU memory used: 28262 MiB
+2026-11-01T18:08:56Z depth run started at context 262144, depths 16k,50k,100k,150k,200k,249k; expect 20 to 60 minutes on a recent GPU
+2026-11-01T18:12:51Z depth run finished
+2026-11-01T18:12:52Z llama-server pid 58380 stopped

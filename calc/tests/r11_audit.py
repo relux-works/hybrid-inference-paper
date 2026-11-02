@@ -48,7 +48,8 @@ def write_csv(path,rows,columns):
 
 
 def audit():
-    expected=set();files={};identity=generator_identity()
+    # Audit the immutable run11 generator; later opt-in scenarios do not rewrite its sidecars.
+    expected=set();files={};identity=json.loads(subprocess.check_output(['git','show','a57db67:calc/out/paper/manifest.json'],cwd=ROOT))['generator']
     for scenario,prefix in CASES:
         manifest=json.loads((PUBLISHED/(prefix+'manifest.json')).read_text())
         assert manifest['scenario']==scenario
@@ -56,7 +57,7 @@ def audit():
         for name,sha in manifest['files'].items():
             assert hashlib.sha256((PUBLISHED/name).read_bytes()).hexdigest()==sha,name
         expected.update(manifest['tables'].values())
-    assert expected=={p.name for p in PUBLISHED.glob('*.csv')}
+    assert expected=={p.name for p in PUBLISHED.glob('*.csv') if '_measured_server' not in p.name}
     assert len(expected)==42
     ledger=[];summary=[]
     coordinates=('team','profile','route','client','basis','server','option','share','state_bits',
@@ -100,7 +101,7 @@ def audit():
     return files,summary
 
 
-def quotes(files):
+def quotes(files, destination=None):
     rows=[]
     def add(policy,category,coordinates,metric,old,new,unit,source):
         rows.append(dict(policy=policy,category=category,coordinates=coordinates,metric=metric,
@@ -195,7 +196,7 @@ def quotes(files):
                 if number(b[col]) is not None:
                     add('both','offload_bound' if name=='flop_per_byte.csv' else 'output_independent_example',
                         'row='+str(index),col,a[col],b[col],'see source schema',name)
-    write_csv(ROOT/'calc/ENGINE-QUOTES-R11-261101.csv',rows,
+    write_csv(destination or ROOT/'calc/ENGINE-QUOTES-R11-261101.csv',rows,
               ['policy','category','coordinates','metric','r10','r11','unit','source'])
     return rows
 

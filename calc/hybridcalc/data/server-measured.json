@@ -1,0 +1,13 @@
+{
+  "measurements": {
+    "gpu_server": {
+      "path": "data/measurements/vast-2026-11-01/qwen27b-gpu-bench/results/hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T020831.jsonl",
+      "sha256": "340f7fde1812828ca8609e71fc762de583ac3e024826cdfbd2f68c4d7e38a3f4",
+      "provenance": {
+        "kind": "measured",
+        "package": "Vast RTX PRO 6000 GPU kit1.2.0 bench e5f64d2 2026-11-01",
+        "sha256": "9accab80ed21dfa24714d5e11b16d31e0106419cd13c3fd27123528949673661"
+      }
+    }
+  }
+}

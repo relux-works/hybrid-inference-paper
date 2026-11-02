@@ -1,0 +1,7 @@
+component,predicted_s,measured_s,error_s,error_fraction,basis,status,alarm_inputs
+server_prefill,11.69486569291432,10.6,1.0948656929143201,0.10328921631267174,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
+transfer,125.36981305521472,123.2,2.1698130552147177,0.017612118954664968,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
+client_import,42.4,42.4,0.0,0.0,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
+total,179.46467874812905,201.7,-22.235321251870943,-0.11023956991507655,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
+local,289.38775917895293,271.5,17.887759178952933,0.06588493251916372,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
+unallocated,0.0,25.5,-25.5,-1.0,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,

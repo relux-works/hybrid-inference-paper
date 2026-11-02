@@ -1,5 +1,11 @@
 # Hybrid inference: architecture and economics (working repository)
 
+Engine run14 adds archive-backed M3 depth/stream anchors, the measured M5 Max
+family and measured B300 llama.cpp/FP8 options. It preserves every historical
+and run13 export. See [`calc/README.md`](calc/README.md#run-14-measured-parallel-m5-and-b300)
+for CPU-only commands and output locations; the corrected full-mix table labels
+modelled depth/count zones and preserves separate measured-depth subsets.
+
 Working repository for the paper «Hybrid Inference with Client–Server Prefill–Decode Disaggregation: Architecture and
 Economics for Unified-Memory Clients». Authors: Ivan Oparin, Alexey Grigoriev and Timur Kackan (Relux Works).
 
@@ -7,9 +13,14 @@ The idea: a GPU server prefills an agent session and ships the model state (atte
 fixed recurrent state) to a unified-memory client such as a Mac, which decodes locally.
 
 Status: a draft heading for version 0.1.0 (versions `0.y.z` are drafts; see below). The Russian text, the calculation
-engine (`calc/`, runs 1–10) and the data behind every number of the paper are in place. Version 0.1.0 is released
+engine (`calc/`, runs 1–14) and the data behind every number of the paper are in place. Version 0.1.0 is released
 after the scheme has been checked on GPU hardware. The prototype lives in a separate repository,
 [`relux-works/hybrid-inference`](https://github.com/relux-works/hybrid-inference).
+
+The `0.1.0-rc.2` candidate contains reviewed paper v2 and engine runs 13 and 14; see
+[`CHANGELOG.md`](CHANGELOG.md#010-rc2---2026-11-02). The growing-session CUDA-to-Metal run, the KL study,
+CUDA-to-Metal calibration and cooled kit 1.6.6 measurements remain pending. The incident lane publishes the
+candidate under the owner's identity after its release gates pass.
 
 Licences: everything in this repository is licensed under MIT (`LICENSE`), except the paper and its materials, which
 are licensed under CC BY 4.0 (`paper/LICENSE`): the text, figures and data under `paper/` other than the scripts in
@@ -247,3 +258,147 @@ checking its SHA-256 digest. The fonts come from `paper/fonts/`, so every machin
 | `sha256sum` | Checks every tracked file against `MANIFEST.sha256`; after any change, `make manifest` rewrites the list | `sha256sum -c MANIFEST.sha256` | stdout |
 | Run 11 audit (Python; recorded history or local Git) | Compare every publication numeric cell and all requested headline derivations against signed run 10 | `python3 calc/tests/r11_audit.py` | `calc/ENGINE-{CHANGES,DIFF,QUOTES}-R11-261101.csv` |
 | Run 11 negative control (Python) | Plant the forbidden output-plus-reasoning base generation; expected exit 1 is the named output-mean assertion | `python3 calc/tests/r11_controls.py output_sum` | stdout/stderr; capture in `.temp/hybrid-calc-r11-261101/` |
+
+## Engine run 12: measured-server sensitivity
+
+Run11 remains the design case, with all existing publication files preserved byte
+for byte. Separate `*_measured_server.csv` charts use the measured llama.cpp Q4
+prefill curve from a rented Vast RTX PRO6000; B300 rates transfer the measured
+depth-dependent fraction of FP8 peak as an explicit estimate. Decode, prices,
+hosting and policy inputs are unchanged. GLM uses an inferred compute envelope,
+not a GLM measurement. See the [run12 report](calc/ENGINE-REPORT-R12-261101.md),
+[complete comparison](calc/ENGINE-CHANGES-R12-261101.csv),
+[quoted values](calc/ENGINE-QUOTES-R12-261101.csv), and
+[measurement provenance](data/measurements/vast-2026-11-01/qwen27b-gpu-bench/README.md).
+
+| Tool | Purpose | Exact entry point | Outputs |
+| --- | --- | --- | --- |
+| Run12 publication audit (Python + local Git) | Export all42 sensitivity charts, paired payback tables, fit/fill residuals and every quoted comparison; assert run11 preservation | `python3 calc/tests/r12_audit.py` (`--audit-only` rechecks existing exports) | `calc/out/paper/*_measured_server.csv`, namespaced JSON sidecars; `calc/ENGINE-{CHANGES,DIFF,QUOTES,FLIPS}-R12-261101.csv`, `calc/SERVER-FIT-R12-261101.csv`; audit log in `.temp/hybrid-calc-r12-261101/` |
+| Measured-server engine (Python) | Run/export one labelled sensitivity | `python3 -m hybridcalc export paper-tables-measured-server --output calc/out/paper` (also `paper-tables-r6-measured-server`, `paper-tables-r7-measured-server`, `paper-tables-r8-measured-server`; insert `-conservative` before `-measured-server` for the other policy) | Measured-server siblings only |
+| Run12 tests/control (Python) | Rate fidelity, immutable design CSVs and intended old-MFU rejection | `python3 -m unittest discover -s calc/tests -p test_run12.py`; `python3 calc/tests/r12_controls.py old_mfu` | stdout/stderr; old-MFU plant must exit1 with the named timing assertion; logs under `.temp/hybrid-calc-r12-261101/` |
+
+These commands need no build, download or network. Existing run11 manifests retain
+their historical generator identity; they are not overwritten by the sensitivity.
+
+## Engine run 13
+
+The [run-13 report](calc/ENGINE-REPORT-R13-261101.md) and
+[paper number ledger](calc/ENGINE-QUOTES-R13-261101.csv) cover the reproduced
+checkpoints-off server base, earlier/checkpoints-on sensitivities, server-only
+vLLM FP8, measured M5 Max64, Sonnet cache pricing and Gemma KV correction.
+Historical publication quotes are retained in the ledger. The paper-v2 candidate applies them to the text. New exports live under `calc/out/run13/`;
+all run-12 exports retain their original bytes.
+
+| Tool | Purpose | Exact entry point | Outputs |
+| --- | --- | --- | --- |
+| Run13 audit (Python standard library, local Git) | Verify archives; generate three complete chart cases, current API baselines, derived figures and the paper number ledger | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 calc/tests/r13_audit.py` after creating TMPDIR; `--quotes-only` rechecks quotes | `calc/out/run13/`, `calc/ENGINE-QUOTES-R13-261101.csv`; logs in `.temp/hybrid-b-r32-261101/` |
+| Run13 measurement engine | Recompute server fits/reproduction, cold/cached vLLM and admitted client rates | `python3 -m hybridcalc export server-options-r13 --output .temp/hybrid-b-r32-261101/measurement-tables` | Seven CSVs with sources/schema/alarm/manifest sidecars |
+| Run13 tests | Archive/manifest and swap rejection, golden inputs, recomputation, bandwidth limits and historical byte preservation | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 -m unittest discover -s calc/tests -p test_run13.py -v` | stdout/stderr; task-scoped logs |
+| Run13 child-calibration control | Proves the accounting sensitivity cannot revert to estimated M5 rates | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 calc/tests/r13_controls.py unmeasured_child` | Expected exit1 with `test_accounting_child_retains_measured_m5`; `.temp/hybrid-b-r32-261101/child-mutant-01.log` |
+| Run13 historical dependency coverage | Original all-export, formula and reverse-coordinate coverage remains bound to producer source `49a1c1d3`; current CLI validates v2 separately | `PYTHONPATH=calc/tests python3 -m unittest test_run13.Run13Tests.test_historical_quote_ledger_provenance -v` | Read-only verdict from an isolated original-source fixture; historical ledger and waivers unchanged |
+| Run13 review-r5d controls | Exercise deleted/narrowed swap guards, unsafe paths, links, duplicate/unmanifested members and reverted native Gemma geometry through named behavioral tests | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r1-261101/tmp" python3 calc/tests/r13fix_controls.py M3` (also `M9`, `M5`, `M6`, `M8`, `link`, `duplicate`, `M10`) | Each fault must exit1 with the named assertion; comment-only M10 must exit0. No production file is edited; task-scoped logs |
+| R13 reverse inventory / manual number-word checklist (Python standard library; Python 3.14 validation host) | Audit all paired export keys, list new-only exports explicitly, and enumerate number-words for the writer's manual checklist in the r2 report | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r2-261101/tmp" python3 calc/tests/r13_reverse.py --inventory .temp/hybrid-e-r2-261101/export-inventory-final.json` after creating TMPDIR | Task-scoped inventory JSON; [r2 report](calc/ENGINE-REPORT-R13-261101.md#r2-reverse-quote-ledger-guard-hybrid-e-r2-261101); exact waivers in `calc/tests/data/r13_numeric_waivers.csv` |
+| R13 reverse-guard controls (Python) | Narrow to architecture-only changes or widen the native waiver to token-only, through named regression tests | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r2-261101/tmp" python3 calc/tests/r13reverse_controls.py arch_only` (also `token_waiver`, `comment`) | Faults must exit 1 with their named assertion; comment control must exit 0; logs in `.temp/hybrid-e-r2-261101/` |
+
+## Paper v2 candidate (run 13)
+
+`paper/data/engine/` is the exact 42-CSV run13 base; `SOURCE.txt` pins the reviewed engine commit. Measured claims
+and pending qualifications are mapped in [PAPER-V2-GAPS-261101.md](calc/PAPER-V2-GAPS-261101.md). Rebuild the chart
+inputs with `python3 paper/data/derive_charts.py`, `python3 paper/data/arch_compare.py`, and
+`python3 paper/data/year_bill.py paper/data/owner-model-usage-2026-10-30.json > paper/data/year-bill-summary.json`.
+Outputs stay in `paper/data/`. Use disk-backed `TMPDIR` and `PYTHONDONTWRITEBYTECODE=1` for validation.
+
+The publication checkers now encode run13: storage is cheaper than prefill, four-session GLM/API savings are
+3.3–3.6 times, the llama.cpp envelope varies with depth, and vLLM rates remain server-only. The gap map records every
+migrated test, changed conclusion and clean/planted control. Historical exports and producer quote ledgers keep their
+original bytes and coordinates; the current v2 publication has a separate exact byte and numeric-site baseline.
+The owner reviews and publishes this local candidate; no push or tag is made here.
+
+| Tool | Purpose | Exact entry point | Outputs |
+| --- | --- | --- | --- |
+| Run13 range guard | All existing sites, computed comparisons, tables and unregistered-number guard | `python3 paper/data/check_ranges.py`; `python3 paper/data/check_ranges.py --self-test` | Named site controls on stdout; `.temp/hybrid-c-r8-261101/ranges-*.log` |
+| Run13 offload/server guard | Depth-specific llama.cpp B300 bound; separate vLLM cold-fit and cached-delta rates and bridge boundary | `python3 paper/data/offload_bound.py`; `python3 paper/data/offload_bound.py --self-test` | Named wrong-rate controls on stdout; `.temp/hybrid-c-r8-261101/offload-*.log` |
+| v2 publication guard | Pin all paper bytes, every numeric occurrence, exact snapshot and four chart inputs, plus live checker claims | `python3 calc/tests/publication_v2.py` (also `python3 calc/tests/r13_ledger.py`) | Read-only verdict; baselines in `calc/tests/data/paper-v2-publication.json` and `paper-v2-sites.csv` |
+| Historical producer-ledger validation | Run the original ledger on its original local source objects at `02f4b6fd`; no downloads or history rewrites | `PYTHONPATH=calc/tests python3 -m unittest test_run13.Run13Tests.test_historical_quote_ledger_provenance -v` | Task-scoped temporary fixture and test output; invoked by full engine suite |
+| Complete local suites | Engine and kit regressions | `python3 -m unittest discover -s calc/tests -v`; `python3 -m unittest discover -s bench/tests -v` | `.temp/hybrid-c-r8-261101/engine-01.log`, `kit-01.log` |
+| Cache-only paper build | Use `make pdf` with Tectonic's no-download compile option, as in r7 | `make pdf TECTONIC="$PWD/.temp/paper-v2-261101/tectonic-cached"`; wrapper executes `tectonic -X compile --only-cached` | `build/`, `dist/`, `.temp/hybrid-c-r8-261101/pdf-01.log` |
+
+The v2 baseline refresh, `python3 calc/tests/publication_v2.py --refresh`, is an explicit owner-authorized migration
+operation. Tests and ordinary validation never refresh it. A later intentional publication edit must review its exact
+baseline diff. The historical run13 ledger and reverse-control commands above describe the producer revision;
+use the historical-fixture test for those contracts after the v2 text migration.
+
+External-review text response (2026-11-02) narrows the service contribution, adds the primary-source mechanism table,
+and treats audit as proposed. The one-user corpus and per-tool dates are explicit; the call-count difference comes
+from two snapshots with identical filter parameters. Run14 economics and the growing-session measurement remain
+`TODO(data)`. Source readback and finite verification boundaries are in the external-review section of the gap map.
+
+| Tool | Purpose | Exact entry point | Outputs |
+| --- | --- | --- | --- |
+| External-review publication controls (Python standard library) | Clean publication plus prose/numeric plants in every changed TeX file; corpus reconciliation; finite deferred-tail routing fixtures | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-c-r9-261102/tmp" PYTHONPATH=calc/tests python3 -m unittest test_paper_review -v` after creating TMPDIR | `.temp/hybrid-c-r9-261102/review-controls-01.log`; also part of the complete engine suite |
+| Updated offload guard | Numeric/server claims and possibility-versus-actual-gain wording, each with a plant and clean control | `python3 paper/data/offload_bound.py`; `python3 paper/data/offload_bound.py --self-test` | `.temp/hybrid-c-r9-261102/offload-*.log` |
+
+R9 validation uses the same cache-only PDF wrapper and standalone suite commands listed above, with logs under
+`.temp/hybrid-c-r9-261102/`, disk-backed `TMPDIR`, and `PYTHONDONTWRITEBYTECODE=1`. No push or tag is authorized.
+
+Overnight measurements (hybrid-c-r10-261102) add the parallel/realistic-agent observations, measured server-only
+B300 ladder and vLLM rates, the first heterogeneous uncalibrated bridge run, and pre-import-speed-v2 costs.
+The engine snapshot remains run13; the cooled kit1.6.6 sweep, deep bridge/adapter runs and run14 economics remain pending.
+Source hashes, evidence paths and finite coverage are in the r10 section of the gap map.
+
+| Tool | Purpose | Exact entry point | Outputs |
+| --- | --- | --- | --- |
+| Measurement/publication guard | Named source-transcribed rate rows, denominator/version boundaries and pending qualifiers, with an applied violation and clean control at every site | `python3 paper/data/offload_bound.py`; `python3 paper/data/offload_bound.py --self-test` | Verdict and named controls; `.temp/hybrid-c-r10-261102/offload-*.log` |
+| Publication drift controls | Exact-byte and numeric plants in all13 changed sections across r9/r10 | `PYTHONPATH=calc/tests python3 -m unittest test_paper_review -v` | `.temp/hybrid-c-r10-261102/review-controls-01.log`; also in the engine suite |
+
+Use the standalone engine/kit/checker and cache-only PDF/manifest commands above with logs in
+`.temp/hybrid-c-r10-261102/`, disk-backed `TMPDIR` and `PYTHONDONTWRITEBYTECODE=1`. The guard transcribes the
+named measurements; it does not independently reproduce the hardware runs or turn server-only rates into hybrid economics.
+
+Engine Run14 r5 corrects full-mix depth modelling, client import and the primary
+owned-fleet comparison. See [the engine instructions](calc/README.md#run14-r5-corrected-full-mix-depth-import-and-owned-fleets)
+for tools, exact commands and output paths; the report and quote ledger remain
+under `calc/`. Historical and Run13 exports are frozen.
+
+## Current paper v2 candidate: run 14 (2026-11-02)
+
+This section supersedes the historical run13 candidate and pending-run14 notes above.
+The signed local merge imports engine-r14 `2d457aed87d415043a2c0566f7a185607f11487e` intact.
+The current paper embeds all61 run14 base CSVs, charges client import, uses the measured M5 Max family and B300
+llama.cpp curves, and displays optimized symmetric own fleets at all six team sizes. The fixed-B300/API tables remain
+explicit hardware references. The 16-agent row is mostly modelled; vLLM unit costs stay server-only.
+The31,360-token uncalibrated bridge,48-case task pilot and functional B300 node smoke are added;
+heterogeneous equivalence, Mac import-v2 and optimized end-to-end timing remain unqualified.
+Exact old/new conclusions, controls and command exits are recorded in
+[the run14 gap map](calc/PAPER-V2-GAPS-261101.md#run14-integration-and-publication-migration-hybrid-c-r11-261102).
+No push or tag is authorized.
+
+Use `PYTHONDONTWRITEBYTECODE=1` and disk-backed `TMPDIR="$PWD/.temp/hybrid-c-r11-261102/tmp"` after creating that path.
+CPU only; no downloads or native builds. Logs belong in `.temp/hybrid-c-r11-261102/`.
+
+| Tool | Purpose / exact command | Outputs |
+| --- | --- | --- |
+| Engine reproduction | In the task's detached exact engine-head checkout: `python3 -I calc/tests/r14_audit.py`; then `git status --short` must be empty, including ledger/report/R14-R5 CSVs | Existing run14 exports regenerated byte-identically; `engine-export-02.log` |
+| Chart derivation | `python3 paper/data/derive_charts.py` | Five CSVs under `paper/data/`, including `team-perimeter.csv` |
+| Range checker | `python3 paper/data/check_ranges.py`; `python3 paper/data/check_ranges.py --self-test` | Retained156 site plants, table and engine controls; task logs |
+| Offload / measurement checker | `python3 paper/data/offload_bound.py`; `python3 paper/data/offload_bound.py --self-test` | Measured B300 bound, all55 retained named sites and new table/qualification controls |
+| Current publication guard | `python3 calc/tests/publication_v2.py`; authorized migration only: `python3 calc/tests/publication_v2.py --refresh` | Exact file and numeric-site pins; five figure inputs recomputed in temporary storage |
+| Migration regression tests | `PYTHONPATH=calc/tests python3 -m unittest test_paper_r14 -v` | Payload identity, retained sites, symmetric-budget rejection, all team sizes, no-break-even plus threshold controls |
+| Engine / kit suites | `python3 -m unittest discover -s calc/tests -v`; `python3 -m unittest discover -s bench/tests -v` | Standalone logs and actual exits |
+| Cache-only PDF | `make pdf TECTONIC="$PWD/.temp/paper-v2-261101/tectonic-cached"` | `build/`, `dist/`; wrapper adds `--only-cached`, never downloads |
+| File manifest | `make manifest` | `MANIFEST.sha256` |
+
+The historical producer fixture now uses accepted R13 r3 `49a1c1d3` so all later reviewer regressions remain executable
+under their original names. Current reverse checks use the exact current publication baseline; producer ledgers keep
+original bytes/coordinates. `calc/tests/data/paper-r14-migration.json` inventories every retained guard site.
+
+The r5j correction (`hybrid-c-r12-261102`) names the traffic sentence's client, binds B300 $3,373/$845 to a unique
+light-load one-node record, and aligns the economics caption with the measured M5 Max basis and stated transfers.
+The earlier B300 cross-profile uniqueness check had been weakened to a minimum in r11; the correction and finite
+controls are recorded in [the r12 gap map](calc/PAPER-V2-GAPS-261101.md#three-r5j-minors-hybrid-c-r12-261102).
+Use the same gate commands above with disk-backed `TMPDIR="$PWD/.temp/hybrid-c-r12-261102/tmp"` and
+`PYTHONDONTWRITEBYTECODE=1`; logs go in `.temp/hybrid-c-r12-261102/`.
+
+| Tool | Purpose / exact command | Outputs |
+| --- | --- | --- |
+| r5j regression controls | `PYTHONPATH=calc/tests python3 -m unittest test_paper_r14 -v`; both checker self-tests above | Named pronoun, duplicate/missing/wrong-node B300, other-profile and caption controls; task logs |

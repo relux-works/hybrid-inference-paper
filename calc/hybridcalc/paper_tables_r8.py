@@ -1,6 +1,7 @@
 """Review accounting sensitivity and three explicitly estimated paper examples."""
 import copy
 import math
+from .server_prefill import compute_at,mean_seconds
 from .analysis_graph import mean_flops
 from .inputs import Inputs,InputGap
 from .metrics import unique
@@ -24,12 +25,13 @@ def people_table(c):
             if any((d+n+o)*kv+state>free for d,n,o,t in rows):raise InputGap(p+'.memory','sample session exceeds one GPU replica memory')
             return True
         ready=c.add('people.'+key+'.fit',[c.valid,s['free'],m['kv'],m['state']],fit)
-        seconds=c.add('people.'+key+'.seconds',[work,compute,ready],lambda f,c,ready:f/c)
+        seconds=c.add('people.'+key+'.seconds',[c.valid,m['flop'],compute,ready],lambda rows,fm,c,ready:mean_seconds(rows,fm,c))
         local=c.local_rate(c.scenario['people_reference_client'],m)
         wire=c.add('people.'+key+'.wire',[m['flop'],m['kv'],m['state']],lambda fm,k,s:dict(fm,kv=k,wire_state=s))
         link=c.g.bundle('pt.people.'+key+'.link','hardware.links.wan',('bandwidth','goodput','latency'))
         migration=c.hosting.vector('people.'+key,c.valid,m['kv'],m['state'])
-        steps=c.add('people.'+key+'.steps',[c.valid,wire,compute,link,local,migration],policy_with_reload)
+        steps=c.add('people.'+key+'.steps',[c.valid,wire,compute,link,local,migration],
+                    lambda *args:policy_with_reload(*args,client_import=c.client_import(c.scenario['people_reference_client'])))
         host=c.hosting.summary('people.'+key+'.budget',c.valid,m['kv'],m['state'],steps)
         for j,share in enumerate(c.positions('r8.shares')):
             n='people.'+key+'.'+str(j)
@@ -62,7 +64,7 @@ def transcript_table(r):
             return d
         server_ok=r.add(n+'.server_fit',[final,r.server['free'],c.kv,c.state],server_fit)
         local=r.add(n+'.local',['r8.transcript.tokens',cl['local'],'r7.integration_step',admitted],lambda n,rate,step,ok:integrate_span(lambda d:1/rate(d),0,n,step))
-        server=r.add(n+'.server',['r8.transcript.tokens',m['flop'],r.compute,'r7.integration_step',server_ok],lambda n,m,c,step,ok:integrate_span(lambda d:flop(m,d)/c,0,n,step))
+        server=r.add(n+'.server',['r8.transcript.tokens',m['flop'],r.compute,'r7.integration_step',server_ok],lambda n,m,c,step,ok:integrate_span(lambda d:flop(m,d)/compute_at(c,d),0,n,step))
         size=r.add(n+'.size',['r8.transcript.tokens',c.kv,c.state],payload)
         imp=r.import_node(n+'.import',size,cl)
         last=r.add(n+'.last',[cl['rate'],'r8.transcript.tokens','r7.last_token_tokens',admitted],lambda rate,d,n,ok:n/rate(1,d))
@@ -145,6 +147,10 @@ def output_sensitivity(c):
     for i,path in enumerate(c.positions('r8.output_fractions')):
         fraction=c.g.resolve(path);path=sorted(c.g.roots(path))[0];team=c.g.resolve('r8.sensitivity_team')
         scenario,_=load('paper-tables');scenario.update(economics_clients=['m3max','m5max64'],share_keys=['s20','s50'])
+        if c.scenario.get('measured_server'):scenario['measured_server']=True
+        if c.scenario.get('run13'):
+            scenario['run13']=True
+            scenario['server_case']=c.scenario['server_case']
         data=copy.deepcopy(c.inputs.data)
         data.setdefault('workload',{})['reasoning_extra_fraction']=copy.deepcopy(c.inputs.locate(path)) if not fraction.alarms else None
         data.setdefault('paper_tables',{})['teams']=[copy.deepcopy(c.inputs.locate('r8.sensitivity_team')) if not team.alarms else None]

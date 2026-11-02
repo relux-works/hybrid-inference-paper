@@ -7,6 +7,7 @@ from .metrics import field,nonempty
 from .paper import policy,throughput
 from .paper_tables import Context,api_vector,end_memory,growing_calls
 from .performance import flop
+from .server_prefill import compute_at,mean_seconds
 from .session_hosting import policy_with_reload
 
 
@@ -47,6 +48,9 @@ def decode_bound(streams,bandwidth,weights,depth,kv,state,passes):
 
 
 def perimeter_table(c):
+    if c.scenario.get('run14'):
+        from .run14_r5 import perimeter_table as symmetric_perimeter
+        return symmetric_perimeter(c)
     m=c.model('qwen27');servers={};rows=[]
     for key in c.scenario['perimeter_options']:
         srv=c.server(key,m);n='r6.perimeter.server.'+key
@@ -78,12 +82,12 @@ def perimeter_table(c):
                          lambda *v,keys=tuple(servers):min((v[2*i+1],key) for i,key in enumerate(keys) if v[2*i])[1])
             for key,(srv,month,seconds) in servers.items():
                 units,cost,call=own[key];k=n+'.all.'+key
-                server_wait=c.add(k+'.wait',[c.valid,m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda calls,fm,compute,latency:sum(n*flop(fm,d)/compute+latency for d,n,o,t in nonempty(calls))/len(calls))
+                server_wait=c.add(k+'.wait',[c.valid,m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda calls,fm,compute,latency:sum(n*flop(fm,d)/compute_at(compute,d)+latency for d,n,o,t in nonempty(calls))/len(calls))
                 selected=c.add(k+'.selected',[choice],lambda selected,key=key:int(selected==key))
                 rows.append(dict(profile=c.label(k+'.profile',profile),team=team,route=c.label(k+'.route','all server'),client=none,basis=c.label(k+'.basis','server only'),server=srv['label'],
                                  share='r6.perimeter.share',case=c.label(k+'.case','closed perimeter; all calls open'),office_policy='r6.perimeter.policy',server_precision=c.precision_label,client_quant=none,eligible=elig[key],selected=selected,
                                  requested_day=requested,client_served_day=zero,turbo_day=requested,unserved_day=zero,external_calls_day=zero,client_served_share=zero,client_capacity_day=zero,
-                                 streams=zero,min_streams=zero,max_streams=zero,p90_scope=c.label(k+'.p90_scope','all calls'),prefill_mean_s=server_wait,prefill_p90_s=c.add(k+'.p90',[c.valid,m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda calls,fm,compute,latency:wait_stats([(n*flop(fm,d)/compute+latency,) for d,n,o,t in calls])[1]),
+                                 streams=zero,min_streams=zero,max_streams=zero,p90_scope=c.label(k+'.p90_scope','all calls'),prefill_mean_s=server_wait,prefill_p90_s=c.add(k+'.p90',[c.valid,m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda calls,fm,compute,latency:wait_stats([(n*flop(fm,d)/compute_at(compute,d)+latency,) for d,n,o,t in calls])[1]),
                                  units=units,unit_month=month,fleet_person_month=cost,all_server_call=call,prefill_reference_month=zero,turbo_reference_month=cost,fleet_adjustment_month=zero,
                                  device_month=zero,client_energy_month=zero,front_month=zero,hosting_storage_month=zero,person_month=cost))
             for client in c.scenario['economics_clients']:
@@ -108,14 +112,14 @@ def perimeter_table(c):
                         bounded=c.add(pre+'.end_memory',[cl['matched'],cl['memory']],end_memory)
                         capacity=c.add(pre+'.capacity',[cl['matched'],steps,cl['streams'],bounded,cl['decoder'],'owners.hours'],throughput)
                         # Every client-served input AND output maintains the server copy, including local-only portions.
-                        shadow=c.add(pre+'.shadow',[cl['matched'],m['flop'],srv['total_compute']],lambda rows,fm,compute:mean_flops(rows,fm)/compute)
+                        shadow=c.add(pre+'.shadow',[cl['matched'],m['flop'],srv['total_compute']],lambda rows,fm,compute:mean_seconds(rows,fm,compute))
                         hosting=c.hosting.summary(pre+'.hosting',cl['matched'],m['kv'],m['state'],steps,'owners.hours')
                         migration_work=c.add(pre+'.migration_work',[hosting['seconds'],srv['prefix']+'.gpus'],lambda s,g:s/g)
                         shadow=c.add(pre+'.shadow_hosting',[shadow,migration_work],lambda a,b:a+b)
                         eligible_s=c.own_seconds(pre+'.eligible_seconds',cl['matched'],m,srv)
                         wait=c.add(pre+'.wait',[steps],wait_stats)
-                        all_wait=c.add(pre+'.turbo_all_wait',[c.valid,m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda rows,fm,compute,latency:sum(n*flop(fm,d)/compute+latency for d,n,o,t in nonempty(rows))/len(rows))
-                        eligible_wait=c.add(pre+'.turbo_eligible_wait',[cl['matched'],m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda rows,fm,compute,latency:sum(n*flop(fm,d)/compute+latency for d,n,o,t in rows)/len(rows))
+                        all_wait=c.add(pre+'.turbo_all_wait',[c.valid,m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda rows,fm,compute,latency:sum(n*flop(fm,d)/compute_at(compute,d)+latency for d,n,o,t in nonempty(rows))/len(rows))
+                        eligible_wait=c.add(pre+'.turbo_eligible_wait',[cl['matched'],m['flop'],srv['compute'],'hardware.links.wan.latency'],lambda rows,fm,compute,latency:sum(n*flop(fm,d)/compute_at(compute,d)+latency for d,n,o,t in rows)/len(rows))
                         candidates[key]=(capacity,shadow,eligible_s,wait,all_wait,eligible_wait,hosting)
                     c.cache[cn]=(fraction,energy,localwait,device,candidates,localcap)
                 fraction,energy,localwait,premium,candidates,localcap=c.cache[cn]
@@ -188,14 +192,14 @@ def utilization_table(c):
         migration=c.hosting.vector(pre,calls,m['kv'],m['state'])
         def admission(rows,wire,compute,link,local,free,state,migration):
             if any((d+n+o)*wire['kv']+state>free for d,n,o,t in rows):raise InputGap(server['prefix']+'.memory','GLM context does not fit server replica')
-            return policy_with_reload(rows,wire,compute,link,local,migration)
+            return policy_with_reload(rows,wire,compute,link,local,migration,c.client_import(c.scenario['glm_client']))
         steps=c.add(pre+'.steps',[calls,wire,server['compute'],link,local,server['free'],m['state'],migration],admission)
         bounded=c.add(pre+'.end_memory',[calls,memory],end_memory)
         cap=c.add(pre+'.capcalls',[calls,steps,streams,bounded,rate,'paper_tables.hours'],throughput)
         cap=c.add(pre+'.capacity',[cap,calls],lambda cap,rows:cap/len(rows))
         api=c.add(pre+'.api',[calls,m['api']['glm'][0]],lambda calls,tariff:sum(api_vector(calls,tariff,len(calls))))
         own_s=c.own_seconds(pre+'.ownseconds',calls,m,server,per_call=False)
-        shadow=c.add(pre+'.shadow',[calls,m['flop'],server['total_compute']],lambda calls,m,compute:mean_flops(calls,m)*len(calls)/compute)
+        shadow=c.add(pre+'.shadow',[calls,m['flop'],server['total_compute']],lambda calls,m,compute:mean_seconds(calls,m,compute)*len(calls) if callable(compute) else mean_flops(calls,m)*len(calls)/compute)
         hosting=c.hosting.summary(pre+'.hosting',calls,m['kv'],m['state'],steps)
         migration_s=c.add(pre+'.migration_work',[hosting['seconds'],calls,server['prefix']+'.gpus'],lambda s,rows,g:s*len(rows)/g)
         shadow=c.add(pre+'.shadow_hosting',[shadow,migration_s],lambda a,b:a+b)

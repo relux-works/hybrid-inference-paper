@@ -1,0 +1,37 @@
+2026-11-01T15:02:34Z machine: Apple M5 Max, 64 GB, GPU cores 40, macOS 27.0.1 (26A434), power: AC Power, free disk: 2027 GB
+2026-11-01T15:02:34Z check passed; results/system.json written
+2026-11-01T15:03:19Z cloning https://github.com/ggml-org/llama.cpp
+2026-11-01T15:03:34Z configuring llama.cpp c21284cdf5fd833b90ac1f824cdf8065e2700dc4 with Metal
+2026-11-01T15:03:38Z building llama-server
+2026-11-01T15:04:16Z built: 0.00.000.173 I srv  llama_server: initializing ... version: 0.4.1-dev (build 11087, commit c21284cdf) built with AppleClang 21.0.0.21000334 for Darwin arm64 
+2026-11-01T15:04:26Z downloading the model (19 GB) from Hugging Face, pinned revision 0669b986; the download resumes if interrupted
+2026-11-01T15:16:07Z verifying SHA-256 (about a minute)
+2026-11-01T15:16:39Z model verified: Qwen3.8-27B-Q4_K_M.gguf, 18973870432 bytes, sha256 31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34
+2026-11-01T15:16:51Z llama-server (smoke) started with pid 39538; arguments: -c 32768 -np 1
+2026-11-01T15:16:53Z llama-server ready after 2s
+2026-11-01T15:17:03Z smoke test finished; check results/hybrid-bench-*smoke*.md
+2026-11-01T15:17:04Z llama-server pid 39538 stopped
+2026-11-01T15:18:52Z slot save/restore on (2009 GB free)
+2026-11-01T15:18:52Z llama-server (depth) started with pid 39772; arguments: -c 262144 -np 1 --slot-save-path <work>/slots
+2026-11-01T15:18:54Z llama-server ready after 2s
+2026-11-01T15:18:54Z depth run started; expect one to three hours
+2026-11-01T16:07:34Z depth run finished
+2026-11-01T16:07:35Z llama-server pid 39772 stopped
+2026-11-01T16:07:35Z llama-server (par4) started with pid 42738; arguments: -c 140000 -np 4
+2026-11-01T16:07:37Z llama-server ready after 2s
+2026-11-01T16:13:42Z parallel run finished
+2026-11-01T16:13:43Z llama-server pid 42738 stopped
+2026-11-01T16:13:43Z llama-server (scale-64k-np8) started with pid 43205; arguments: -c 532480 -np 8 --slot-save-path <work>/slots
+2026-11-01T16:13:46Z llama-server ready after 3s
+2026-11-01T16:19:25Z llama-server pid 43205 stopped
+2026-11-01T16:19:25Z llama-server (scale-128k-np4) started with pid 43915; arguments: -c 528384 -np 4 --slot-save-path <work>/slots
+2026-11-01T16:19:28Z llama-server ready after 3s
+2026-11-01T16:33:41Z llama-server pid 43915 stopped
+2026-11-01T16:33:41Z scaling run finished
+2026-11-01T16:33:41Z max-context step skipped
+2026-11-01T16:33:41Z llama-server (agents-128k-np4) started with pid 44952; arguments: -c 720896 -np 4 --slot-save-path <work>/slots
+2026-11-01T16:33:45Z llama-server ready after 3s
+2026-11-01T16:33:45Z agents step started: depth 131072, sessions 1,2,4, 4 turns each
+2026-11-01T17:16:38Z llama-server pid 44952 stopped
+2026-11-01T17:16:38Z agents step finished
+2026-11-01T17:16:38Z archive ready: qwen27b-mac-bench-results-20261101T171638Z.tar.gz in the kit folder (68K)

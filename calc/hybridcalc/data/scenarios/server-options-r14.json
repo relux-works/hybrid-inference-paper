@@ -1,0 +1,11 @@
+{
+  "name": "server-options-r14",
+  "kind": "measurements_r14",
+  "description": "Measured PRO 6000 and B300 server-only vLLM FP8 options; both B300 KV settings",
+  "inputs": [
+    "hardware.json",
+    "server-measured.json"
+  ],
+  "export_namespace": "r14_measurements",
+  "run14": true
+}

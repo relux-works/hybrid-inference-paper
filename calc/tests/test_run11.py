@@ -10,10 +10,11 @@ from hybridcalc.paper_tables import Context, api_vector
 
 
 class Run11Tests(unittest.TestCase):
-    # All current base scenarios count output once; the bridge alone intentionally reproduces historical accounting.
+    # All current workload scenarios count output once; the bridge intentionally
+    # reproduces historical accounting. Measurement-only reductions have no workload.
     def test_base_scenario_accounting(self):
         for scenario in scenarios():
-            if scenario['kind'] in ('legacy', 'bridge'):
+            if scenario['kind'] in ('legacy', 'bridge', 'measurements_r13', 'measurements_r14'):
                 continue
             with self.subTest(scenario=scenario['name']):
                 _, inputs = load(scenario['name'])

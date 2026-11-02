@@ -1,0 +1,3 @@
+variant,tokens,seconds,fixed_s,seconds_token,m3_four_sessions_day,basis,status,alarm_inputs
+pre-import-speed-v2,39504,42.4,0,0.0010733090319967598,4.8668066750544865,M3 single point; fixed0 unidentified assumption; other Apple clients estimated same token rate,ok,
+import-speed-v2,nan,nan,nan,nan,nan,Mac gate pending,alarm,measurements.client_import.import_speed_v2

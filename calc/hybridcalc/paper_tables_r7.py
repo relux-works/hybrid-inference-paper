@@ -1,5 +1,6 @@
 """Four R7 charts: measured spans, explicit import, decode what-ifs and config formulas."""
 import math
+from .server_prefill import compute_at
 from .inputs import InputGap
 from .metrics import field,nonempty
 from .paper import throughput
@@ -82,9 +83,17 @@ class R7:
             gain=field(doc,'parallel.normalized_decode_interval_gain','measurements.normalized');anchor=field(doc,'parallel.frozen_v11_row.streams','measurements.normalized')
             return measured_rate(w,kv,s,b,cal[0],gain,anchor,passes)
         rate=self.add(n+'.rate',[m['weights'],self.c.kv,s,p+'.bandwidth',self.c.cal,'analysis.decode_state_passes',self.c.normalized,self.q4],decoder)
+        if self.c.measured_m5 and key=='m5max64':
+            rate=self.add(n+'.measured_rate',['owners.client_quant'],self.c.m5_decoder)
+        if self.c.scenario.get('run14') and key in ('m5max','ultra96','ultra256'):
+            rate=self.add(n+'.measured_family_rate',['owners.client_quant',p+'.bandwidth','hardware.clients.m5max64.bandwidth'],self.c.m5_scaled_decoder)
+        if self.c.parallel and key=='m3max':
+            rate=self.add(n+'.parallel_rate',['owners.client_quant'],self.c.m3_decoder)
         self.clients[n]=dict(prefix=p,local=local,memory=memory,rate=rate,state=s)
         return self.clients[n]
     def import_node(self,name,size,client):
+        if self.c.scenario.get('run14'):
+            return self.add(name,[size,client['state'],self.c.kv],lambda b,s,k:self.c.client_import()((b-s)/k))
         return self.add(name,[size,client['prefix']+'.bandwidth','r7.import_efficiency','r7.import_copies','r7.import_fixed_s'],import_time)
     def span(self,name,depth,portion,state):
         client=self.client('m3max',state);m=self.model
@@ -104,7 +113,7 @@ class R7:
         migration=self.c.hosting.vector('r7.'+name,one,self.c.kv,client['state'])
         reload_s=self.add(name+'.reload',[migration],lambda rows:rows[0][0])
         local=self.add(name+'.local',[depth,portion,client['local'],'r7.integration_step',client_final],lambda d,n,r,step,ready:integrate_span(lambda x:1/r(x),d,n,step))
-        server=self.add(name+'.server',[depth,portion,m['flop'],self.compute,'r7.integration_step',server_final],lambda d,n,m,c,step,ready:integrate_span(lambda x:flop(m,x)/c,d,n,step))
+        server=self.add(name+'.server',[depth,portion,m['flop'],self.compute,'r7.integration_step',server_final],lambda d,n,m,c,step,ready:integrate_span(lambda x:flop(m,x)/compute_at(c,x),d,n,step))
         size=self.add(name+'.payload',[portion,self.c.kv,client['state']],payload)
         imp=self.import_node(name+'.import',size,client)
         last=self.add(name+'.last',[client['rate'],client_final,'r7.last_token_tokens'],lambda r,d,n:n/r(1,d))
@@ -125,7 +134,7 @@ def timing_tables(r):
                         total=r.add(n+'.total',[span['server'],wire,span['import_s'],span['last'],span['reload']],lambda s,w,i,l,reload:hybrid_time(s+reload,w,i,l))
                         row={'state_format':r.label(n+'.format',state),'state_basis':'r7.states.'+state+'.basis','client':'hardware.clients.m3max.label','server':r.server['label'],'server_precision':r.c.precision_label,'quant':r.q4,
                              'kv_bytes_token':r.c.kv,'state_bytes':span['state'],'link_mbit':r.add(n+'.mbit',[bw],lambda b:b/1e6),'payload_bytes':span['size'],
-                             'server_compute':r.compute,'server_reload_s':span['reload'],'server_prefill_s':span['server'],'transfer_s':wire,'import_s':span['import_s'],'last_token_s':span['last'],
+                             'server_compute':r.add(n+'.reported_compute',[r.compute,depth],lambda c,d:compute_at(c,d)) if r.c.scenario.get('measured_server') else r.compute,'server_reload_s':span['reload'],'server_prefill_s':span['server'],'transfer_s':wire,'import_s':span['import_s'],'last_token_s':span['last'],
                              'speedup':r.add(n+'.speedup',[span['local'],total],lambda local,remote:local/remote)}
                         if oneshot:row.update(start_depth=depth,context=portion,local_s=span['local'],hybrid_ttft_s=total)
                         else:row.update(depth=depth,portion=portion,local_prefill_s=span['local'],hybrid_s=total)
@@ -160,6 +169,12 @@ def sensitivity_table(r):
             for i,scale in enumerate(r.positions('r7.decode.scales')):
                 pre=name+'.'+str(i)
                 valid=r.add(pre+'.physical',[scale,r.c.cal],lambda s,cal,path=scale:scale_guard(s,cal[0],path))
+                if r.c.measured_m5 and key=='m5max64':
+                    def physical(scale,base,calls,w,kv,state,bw,passes,path=scale):
+                        depths={32000,65536,131072}|{d+n+o for d,n,o,t in calls}
+                        efficiency=max(base(k,d)*(w+k*(d*kv+passes*state))/bw for d in depths for k in (1,2,3,4))
+                        return scale_guard(scale,efficiency,path)
+                    valid=r.add(pre+'.measured_physical',[scale,cl['rate'],calls,m['weights'],r.c.kv,cl['state'],p+'.bandwidth','analysis.decode_state_passes'],physical)
                 rate=r.add(pre+'.rate',[cl['rate'],scale],lambda base,s:lambda k,d:base(k,d)*s)
                 ready=r.add(pre+'.ready_rate',[rate,valid],lambda fn,v:fn)
                 single=r.add(pre+'.single',[rate,anchor],lambda rate,d:rate(1,d))
@@ -172,9 +187,9 @@ def sensitivity_table(r):
                         for (d,delta,o,t),(reload_s,spill) in zip(rows,migration):
                             if (d+delta+o)*kv+state>free:raise InputGap(r.server['prefix']+'.memory','complete context does not fit B300 replica')
                             local_s=delta/local(d)
-                            imp=import_time(payload(delta,kv,state),bandwidth,eff,copies,fixed);evaluation=last/rate(1,d+delta)
-                            remote=hybrid_time(reload_s+delta*flop(model,d)/compute,transfer(delta,kv,state,link),imp,evaluation)
-                            own.append(local_s);remote_times.append(remote);shadow.append((delta+o)*flop(model,d)/compute);outputs.append(o*flop(model,d)/compute);wires.append(payload(delta,kv,state));foreground.append(imp+evaluation)
+                            imp=(r.c.client_import()(delta) if r.c.scenario.get('run14') else import_time(payload(delta,kv,state),bandwidth,eff,copies,fixed));evaluation=last/rate(1,d+delta)
+                            remote=hybrid_time(reload_s+delta*flop(model,d)/compute_at(compute,d),transfer(delta,kv,state,link),imp,evaluation)
+                            own.append(local_s);remote_times.append(remote);shadow.append((delta+o)*flop(model,d)/compute_at(compute,d));outputs.append(o*flop(model,d)/compute_at(compute,d));wires.append(payload(delta,kv,state));foreground.append(imp+evaluation)
                         return route(own,remote_times,shadow,outputs,wires,foreground,migration.catch_up)
                     policy=r.add(n+'.policy',[calls,cl['local'],ready,m['flop'],r.compute,r.server['free'],r.c.kv,cl['state'],link,p+'.bandwidth','r7.import_efficiency','r7.import_copies','r7.import_fixed_s','r7.last_token_tokens',migration],steps)
                     cap=r.add(n+'.hybrid',[calls,policy,streams,bounded,ready,'paper_tables.hours'],throughput)

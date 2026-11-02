@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Chart inputs for the economics and million-token sections, derived from the engine snapshot in engine/.
 
-Engine: hybrid-calc run 11 (commit in engine/SOURCE.txt). Files without a suffix are the design hosting case;
+Engine: hybrid-calc run 14 (commit in engine/SOURCE.txt). Files without a suffix are the design hosting case;
 *_conservative.csv are the conservative case.
 - team-cost-s20.csv, team-cost-s50.csv: USD per person-month for the M5 Max 64 GB client (Q4 server and client,
   decision case): own cluster, API at the median and the cheapest provider, and the hybrid with overflow to the
@@ -10,6 +10,7 @@ Engine: hybrid-calc run 11 (commit in engine/SOURCE.txt). Files without a suffix
 - payback.csv: months until the saving against the median API pays the laptop premium (PRICE - BASELINE) or the
   whole Mac (PRICE); hybrid with overflow to the cheapest API, Mac already owned; s=100% uses the academic bound.
   The *_median_overflow columns leave the calls above client capacity at the median API instead.
+- team-perimeter.csv: optimized symmetric own/hybrid monthly costs at every team size, three loads.
 - glm-1m-cost.csv: USD per GLM-5.3-Flash session at a final depth of 1M tokens: API, own cluster, and the hybrid on an
   M5 Ultra 256 GB.
 Run: python3 derive_charts.py
@@ -74,6 +75,18 @@ def main():
                           'whole_months', 'saving_cheapest', 'hybrid_cons', 'premium_months_cons',
                           'whole_months_cons', 'hybrid_median_overflow', 'premium_months_median_overflow',
                           'whole_months_median_overflow'], pay)
+    # All team sizes use the same optimized closed-perimeter candidates and
+    # budgets; the old fixed-B300 API reference is kept in its named tables.
+    selected = {}
+    for r in rows('perimeter_cost.csv'):
+        if r['selected'] != '1':
+            continue
+        if r['route'] == 'all server' or (r['route'] == 'hybrid' and r['client'] == CLIENT and r['basis'] == owned):
+            selected[(int(r['team']), r['profile'], r['route'])] = float(r['person_month'])
+    teams = sorted({key[0] for key in selected})
+    write('team-perimeter.csv', ['team'] + [profile+'_'+route for profile in ('light','medium','heavy')
+          for route in ('own','hybrid')], [[team] + [round(selected[(team, profile, route)], 2)
+          for profile in ('light','medium','heavy') for route in ('all server','hybrid')] for team in teams])
     glm = {}
     for suffix in ('', '_conservative'):
         for r in rows(f'glm_long_sessions{suffix}.csv'):

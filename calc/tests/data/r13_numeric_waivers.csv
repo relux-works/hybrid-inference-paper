@@ -1,0 +1,892 @@
+file,line,token,reason
+paper/hybrid-inference.ru.tex,6,10000,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,7,10000,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,8,10000,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,10,1.18,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,37,00,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,38,01,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,39,02,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,40,03,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,41,04,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,42,05,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,44,06,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,45,07,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,46,08,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,47,09,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,48,10,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,49,11,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,51,13,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,52,14,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/hybrid-inference.ru.tex,57,90,"TeX input filename, layout penalty or pgfplots compatibility version"
+paper/preamble.tex,9,0.88,"TeX font, leading or macro-argument constant, independent of engine results"
+paper/preamble.tex,27,11.5,TeX section font size in points; unrelated to removed payback delta
+paper/preamble.tex,27,14,"TeX font, leading or macro-argument constant, independent of engine results"
+paper/preamble.tex,29,10,"TeX font, leading or macro-argument constant, independent of engine results"
+paper/preamble.tex,35,1,"TeX font, leading or macro-argument constant, independent of engine results"
+paper/sections/00-abstract.tex,4,10,"Fixed model precision, portion/depth, workload size or open-model share; not a changed engine result"
+paper/sections/00-abstract.tex,4,150,"Fixed model precision, portion/depth, workload size or open-model share; not a changed engine result"
+paper/sections/00-abstract.tex,4,4,"Fixed model precision, portion/depth, workload size or open-model share; not a changed engine result"
+paper/sections/00-abstract.tex,8,1.5,"Fixed model precision, portion/depth, workload size or open-model share; not a changed engine result"
+paper/sections/00-abstract.tex,8,20,"Fixed model precision, portion/depth, workload size or open-model share; not a changed engine result"
+paper/sections/01-introduction.tex,9,131,Unchanged M3 measurement and its depth/portion coordinates
+paper/sections/01-introduction.tex,9,181,Unchanged M3 measurement and its depth/portion coordinates
+paper/sections/01-introduction.tex,9,28,Unchanged M3 measurement and its depth/portion coordinates
+paper/sections/01-introduction.tex,9,41,Unchanged M3 measurement and its depth/portion coordinates
+paper/sections/01-introduction.tex,10,10,Unchanged M3 measurement and its depth/portion coordinates
+paper/sections/01-introduction.tex,14,164,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,15,0.05,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,15,150,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,16,0.18,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,16,2.30,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,16,48,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,16,85,"Fixed workload depth, Qwen API tariff or unchanged Qwen cache-cost fraction (Sonnet price change is separate)"
+paper/sections/01-introduction.tex,21,5.3,Model identifier or unchanged M3 parallel measurement/depth
+paper/sections/01-introduction.tex,29,1.56,Model identifier or unchanged M3 parallel measurement/depth
+paper/sections/01-introduction.tex,29,32,Model identifier or unchanged M3 parallel measurement/depth
+paper/sections/01-introduction.tex,35,5,"Fixed team-grid, historical workload count or device-memory input"
+paper/sections/01-introduction.tex,35,5000,"Fixed team-grid, historical workload count or device-memory input"
+paper/sections/01-introduction.tex,50,1.5,"Fixed team-grid, historical workload count or device-memory input"
+paper/sections/01-introduction.tex,53,128,"Fixed team-grid, historical workload count or device-memory input"
+paper/sections/01-introduction.tex,53,64,"Fixed team-grid, historical workload count or device-memory input"
+paper/sections/02-workload.tex,7,135,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,7,164,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,7,"1\,065","Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,7,512,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,8,40,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,10,10,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,10,2,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,10,30,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,10,5,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,10,75.6,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,11,21,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,11,21.3,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,11,4,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,11,4.2,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,11,51,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,11,76,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,12,"1\,860","Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,12,200,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,12,50,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,12,730,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,17,1000,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,21,100,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,21,20,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,21,50,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,31,40,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,31,8,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,36,16,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,36,5,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,36,7.5--8.8,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,37,249,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,37,32,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,38,14.05,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,38,8.44,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,43,131,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,43,181,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,43,231,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,43,39,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,43,8,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,43,81,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,44,173.6,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,44,22.2,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,44,27.7,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,44,41.2,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,44,49.9,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,44,93.7,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,49,10,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,49,131--181,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,49,4,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,49,6,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,150,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,28,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,4,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,5.5,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,512,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,6.8,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,75--93,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/02-workload.tex,50,77,"Unchanged workload/sampler observation, open-share input or original M3 measurement and its coordinates"
+paper/sections/03-architecture.tex,11,"34\,844","Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,11,8,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,12,32,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,44,150,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,45,10,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,45,700,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,47,700,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,52,"0,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,53,"60,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,54,-3,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,54,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,55,-3,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,55,60,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,56,-2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,56,-8,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,57,-1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,57,-12,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,57,-20,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,57,1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,58,-16,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,58,3,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,59,-23,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,59,1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,59,58.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,60,-2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,60,-30,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,61,-35,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,61,1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,61,58.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,62,58.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,62,61.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,63,63,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,64,1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,64,58.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,65,-1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,65,-50,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,65,-60,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,65,1.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,66,3,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,75,100--160,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,75,164,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,91,3,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,91,4,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,92,6,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,92,8,"Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,103,"34\,844","Unchanged Qwen state geometry, protocol example coordinates or quantization input"
+paper/sections/03-architecture.tex,110,10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,112,"-2,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,113,"0,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,114,"40,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,115,"48,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,116,"78,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,117,"90,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,118,"110,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,119,-10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,119,-2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,120,-10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,120,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,121,-10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,121,110,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,122,-20,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,122,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,123,-20,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,123,8,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,124,-20,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,124,50,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,125,-20,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,125,58,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,126,"0,5","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/03-architecture.tex,126,"118,5","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/04-channel.tex,4,"34\,844","Unchanged Qwen byte geometry, link rate or channel-only transfer estimate"
+paper/sections/04-channel.tex,5,1,"Unchanged Qwen byte geometry, link rate or channel-only transfer estimate"
+paper/sections/04-channel.tex,6,100,"Unchanged Qwen byte geometry, link rate or channel-only transfer estimate"
+paper/sections/04-channel.tex,6,16,"Unchanged Qwen byte geometry, link rate or channel-only transfer estimate"
+paper/sections/04-channel.tex,11,10,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,11,100,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,11,200,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,11,6.6,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,12,2,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,18,32,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,18,8,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,24,1,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,24,10,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,24,100,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,24,300,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,26,100,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,26,2,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,26,2.3,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,26,43,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,27,10,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,27,100,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,27,15,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,27,3.6,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,28,19,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,28,2,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,28,200,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,28,4.2,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,28,78,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,29,10,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,29,200,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,29,6.6,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,36,200,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,36,69,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,47,1,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,47,10,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,47,100,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,47,300,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,49,100,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,49,21,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,49,5.0,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,50,200,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,50,69,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,51,1.9,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,51,262,Fixed depth/portion/link or unchanged local M3 timing; changed hybrid timings have exact ledger sites
+paper/sections/04-channel.tex,56,70,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,57,11.5,Original measured M3 local transcript latency is unchanged at 11.5 minutes
+paper/sections/04-channel.tex,57,3,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,57,6.3,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,59,17.8,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,60,0.6,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,60,2,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,60,20,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,65,3,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,65,70,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,73,3,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,74,2-4,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/04-channel.tex,74,5-7,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/04-channel.tex,75,1,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,75,200,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,77,1.8,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,77,11.5,Original measured M3 local transcript table latency is unchanged at 11.5 minutes
+paper/sections/04-channel.tex,77,17.8,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,77,8.1,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,78,1.8,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,79,1.8,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,79,38.1,Fixed transcript/summary/link input or unchanged M3/Air local and rounded hybrid timing; changed M5 cells are separately ledgered
+paper/sections/04-channel.tex,97,1,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,97,100,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,97,2.5,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,97,300,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,99,32,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,101,16,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,108,100,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,108,19,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,108,28,Fixed precision/link coordinate or unchanged rounded saving/fraction; changed table cells are separately ledgered
+paper/sections/04-channel.tex,118,135,Independent measured public network bandwidth/link example
+paper/sections/04-channel.tex,118,314,Independent measured public network bandwidth/link example
+paper/sections/04-channel.tex,120,100,Independent measured public network bandwidth/link example
+paper/sections/04-channel.tex,124,130,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,125,1.7,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,125,21,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,125,5,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,125,620,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,125,8,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,126,50,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,126,84,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,126,90,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/04-channel.tex,136,100,"Unchanged tariff/calendar or traffic result at its printed precision (130 MB, 620 calls, 1.7 TB, 8/84 USD); changed compute/hosting comparison has exact ledger sites"
+paper/sections/05-clients.tex,8,180,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,8,30,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,8,330,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,14,4,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,20,1,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,20,256,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,20,500,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,22,1,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,22,19,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,22,3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,23,10,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,23,19,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,23,2,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,23,5,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,24,13,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,24,3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,24,7,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,24,70,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,25,10,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,25,181,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,25,19,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,25,37,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,25,5.3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,34,15,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,34,19,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,34,3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,34,4,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,37,128,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,38,500,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,39,262,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,44,19,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,44,"34\,844","Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,44,4,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,44,8,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,50,1,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,50,128,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,50,256,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,50,32,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,50,500,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,50,64,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,52,1,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,52,2,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,52,3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,53,1,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,53,13,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,53,25,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,53,3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,53,7,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,54,1,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,54,14,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,54,27,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,54,3,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,54,51,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,54,7,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,55,10,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,55,2,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,55,21,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,55,40,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,55,5,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,55,76,"Unchanged weight/KV memory-fit input, context limit or session count; M5 rate calibration changes no memory geometry"
+paper/sections/05-clients.tex,61,19,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,62,16,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,62,40,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,62,7.5--8.8,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,64,14.05,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,64,32,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,64,64,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,64,8.44,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,65,20,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,72,1.6,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,72,28,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,72,32,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,72,512,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,73,19--27,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,77,16,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,77,256,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,78,180,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,78,6,"Unchanged M3 observation, model/hardware identifier, depth or theoretical bandwidth bound"
+paper/sections/05-clients.tex,83,116,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,84,1,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,85,32,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,93,3.37,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,93,5.31,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,93,8.4,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,94,11.5,"Unchanged estimated M4 single-stream decode anchor, not a payback delta"
+paper/sections/05-clients.tex,94,5.24,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,94,7.18,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,96,13.0,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,96,6.86,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,97,1.14,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,97,13.41,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,97,25.9,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,98,25.9,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,99,1.13,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,99,5.4,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,100,1.04,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,100,3.52,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,100,3.66,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05-clients.tex,100,5.8,Fixed session/depth/link convention or cell unchanged at printed precision for the R13 base; sensitivity collisions do not change this cell
+paper/sections/05b-models.tex,6,4,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,11,30,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,12,8,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,13,131,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,13,41.2,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,14,100,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,14,4,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,15,41,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,20,4,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,23,10,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,23,13,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,23,16,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,23,52,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,23,60,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,23,64,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,24,1024,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,24,2048,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,25,131,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,25,262,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,25,41,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,26,139,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,26,21.2,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,26,34.8,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,26,435,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,26,7.1,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,27,0,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,27,157,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,27,43,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,27,446,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,28,1000,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,28,139,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,28,192,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,28,28,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,29,0.8,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,29,3.7,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,29,300,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,29,5.1,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,30,1000,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,30,19,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,30,24,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,30,34,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,30,77,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,32,0,Native Gemma saving is clamped to zero in print for both old -2.8 and new -4.5 seconds
+paper/sections/05b-models.tex,32,100,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,32,17.0,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,32,66.0,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,32,8.9,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,33,18.6,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,33,19.2,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,33,300,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,33,73.4,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,34,1,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,34,19.1,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,34,22.7,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,34,76.0,Unchanged model geometry/input or non-Gemma native cell; corrected Gemma cells have exact ledger sites
+paper/sections/05b-models.tex,41,131,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,41,64,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,47,128,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,48,16,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,48,256,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,48,300,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,48,4,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,49,5.3,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,52,100,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,53,17,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,53,4,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,53,9,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,54,300,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,55,131,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,55,30,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,55,4,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,56,262,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,56,36,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,56,4,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,57,53,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,58,41,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,59,100,"Unchanged non-Gemma geometry/transfer, context limit or rounded Gemma saving 30.1 -> 29.9 (both print 30)"
+paper/sections/05b-models.tex,67,192,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,68,10,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,68,110,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,69,4.0,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,70,10,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,70,40,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,72,6,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,73,1.5--1.8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,82,110,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,84,140,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,84,60,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,85,10,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,85,16,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,85,32,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,86,8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,91,1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,0.5,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,0.51,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,1.1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,2.1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,2.3,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,93,4.9,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,1.7,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,1.9,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,10,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,18,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,4.0,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,7.9,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,94,8.8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,95,0.19,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,95,0.2,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,95,0.23,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,95,0.4,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,95,0.5,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,95,1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,0.7,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,0.73,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,0.8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,0.88,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,1.5,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,1.8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,96,10,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,0.5,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,0.60,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,0.8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,0.85,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,1.3,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,1.8,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,97,5.3,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,10,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,11,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,3.2,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,3.6,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,4.6,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,5.1,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,5.3,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,98,7.6,"Unchanged channel-only FLOP/byte bound, portion/depth, precision or peak input; server-dependent bounds are separately ledgered"
+paper/sections/05b-models.tex,109,16,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,110,256,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,114,5.3,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,115,16,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,115,192,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,116,100,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,116,18,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/05b-models.tex,116,9,"Counterfactual KV/precision geometry or channel-only transfer estimate, independent of changed server/client rates"
+paper/sections/06-server.tex,10,0.12,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,19,100,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,19,16,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,20,0.1--0.2,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,20,0.3--1.3,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,22,13,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,22,164,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,22,172,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,22,33,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,25,6000,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,25,70,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,25,8,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,26,20,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,26,50,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,28,6000,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,29,20,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/06-server.tex,30,50,"Fixed workday/open-share/utilization input, hardware/depth coordinate or unchanged migration/restore estimate"
+paper/sections/07-economics.tex,5,21,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,5,"2\,500",Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,7,4,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,8,1000,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,9,512,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,11,5--20,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,12,268,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,12,42,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,12,50,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,13,20,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,13,50,Fixed workload/open-share/API baseline input; changed upper-bound capacity and hybrid costs have exact ledger sites
+paper/sections/07-economics.tex,16,1.53,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,17,113--124,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,18,16,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,18,6--7,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,19,1.4,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,19,15.6,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,20,17,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,21,20,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,21,5,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,23,6.2,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,30,2026-10,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,30,30,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,38,0.6,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,38,1.4,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,39,15.6,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,39,4.8--5.1,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,40,107--118,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,40,81.5,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,41,0.3,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,41,0.9,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,42,0.4,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,43,0.2,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,45,100,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,45,113--124,"Historical owner bill, dates and index shares, unchanged by current-price R13 API baselines"
+paper/sections/07-economics.tex,52,5,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,52,70,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,52,9.50,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,53,5,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,54,0.50,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,55,0.10,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,55,20,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,57,16.5,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,59,20,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,59,500,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,61,102,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,61,14,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,64,"1\,250",Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,64,50,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,67,254,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,67,35,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,69,"1\,250",Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,75,"2\,500",Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,77,9--17,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,83,20,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,83,50,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,86,616,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,87,833,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,94,14.1,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,94,35.2,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,100,100,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,100,50,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,100,800,Fixed tariff/share/demand input or source cell unchanged at printed precision; changed client prices/capacities have separate ledger sites
+paper/sections/07-economics.tex,104,"2\,600",Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,104,35,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,105,254,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,105,35,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,105,50,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,106,102,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,106,20,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,108,50,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,109,20,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,109,50,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,114,50,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,121,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,121,0.62,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,121,74,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,122,100,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,122,20,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,122,50,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,123,0.25,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,124,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,127,-0.2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,127,0.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,127,2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,129,"2\,600",Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,131,"5\,099",Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,132,"0,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,132,0.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,132,"1,0","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,132,"20,48","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,137,50,Fixed purchase/residual/share input or API baseline; changed payback/cost figures have separate exact ledger sites
+paper/sections/07-economics.tex,142,5,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,142,5000,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,143,"3\,370",Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,144,500,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,145,102,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,145,20,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,145,254,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,145,50,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,146,5000,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,147,70,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,149,6000,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,151,145--506,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,151,"3\,370",Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,159,0.49,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,159,10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,160,10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,160,4,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,160,"5,10","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,160,"500,5000","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,160,5000,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,161,20,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,163,3,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,176,0.49,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,177,10,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,177,4,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,177,"5,10","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,177,"500,5000","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,177,5000,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,178,50,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,192,70,Fixed team/hardware/utilization input or unchanged owned-fleet cost; changed fleet selection rows are separately ledgered
+paper/sections/07-economics.tex,198,6000,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,199,10,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,199,5--10,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,199,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,200,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,200,7,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,200,80,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,201,1.4,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,201,1.8,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,201,20,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,201,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,201,80,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,207,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,207,6000,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,208,2.20,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,208,6000,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,209,20,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,209,24,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,209,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,209,80,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,215,20,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,215,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,215,80,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,1,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,10,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,104,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,149,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,194,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,5,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,217,98,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,1,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,108,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,153,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,198,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,231,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,24,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,218,5,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,219,1,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,219,10,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,219,100,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,219,51,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,219,55,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,219,77,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,1,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,10,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,104,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,120,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,24,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,59,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,220,81,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,221,10,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,221,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,222,24,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,222,50,Fixed team/hours/residual/tariff input or unchanged small-team rent/buy cell; changed 50-person rows are separately ledgered
+paper/sections/07-economics.tex,228,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,233,800,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,235,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,236,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,236,500,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,236,5000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,237,6000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,238,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,238,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,239,500,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,240,34,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,240,46,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,241,500,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,241,6000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,242,34,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,246,145,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,250,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,252,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,252,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,252,6000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,253,20,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,255,70,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,262,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,262,200,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,262,27,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,262,34,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,262,43,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,262,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,263,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,263,200,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,263,34,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,263,46,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,263,500,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,263,53,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,264,100,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,264,200,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,264,5000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,265,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,265,800,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,266,135,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,266,46,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,266,500,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,266,53,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,266,800,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,267,5000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,267,800,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,268,"2\,500",Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,268,50,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,269,"2\,500",Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,269,500,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,270,"2\,500",Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,270,5000,Fixed workload/team/fleet-admission input or unchanged integer-fleet cost/cell; changed costs and coverage fractions have separate ledger sites
+paper/sections/07-economics.tex,276,13,"Historical model-price/index observation or its plot constants, independent of R13 timing measurements"
+paper/sections/07-economics.tex,278,34.6,"Historical model-price/index observation or its plot constants, independent of R13 timing measurements"
+paper/sections/07-economics.tex,290,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,290,0.1,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,290,1.2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,290,8.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,"0,2","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,0.1,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,0.2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,0.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,1,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,"4,6","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,291,8,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,294,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,294,13,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,294,40,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,294,8,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,297,0,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,297,30,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,297,56,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,297,8.5,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,298,"0,2","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,298,"4,6","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,298,8,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,301,0.75,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,301,2.7,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,301,34.6,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,301,37.7,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,301,6.45,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,302,0.75,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,302,34.6,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,303,2.7,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,303,37.7,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,304,6.45,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/07-economics.tex,308,13,"Historical model-price/index observation or its plot constants, independent of R13 timing measurements"
+paper/sections/07-economics.tex,315,20,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,316,50,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,317,49,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,317,50,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,317,75,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,321,50,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,322,100,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,322,500,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,322,5000,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,322,6000,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/07-economics.tex,324,50,Fixed share/team/fleet-admission input or unchanged served fraction; changed price/saving comparisons have exact ledger sites
+paper/sections/08-million.tex,6,0.44,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,6,200,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,6,5.3,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,7,21,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,9,17.5,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,9,328,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,9,5.3,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,10,16,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,10,4,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,11,10,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,11,200,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,11,46,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,12,19,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,12,57,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,18,26--28,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,19,181,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,19,231,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,20,131,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,20,231,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,20,25.9,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,20,28.2,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,22,18,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,22,5,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,23,0.10,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,23,3.5,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,24,0.50,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,24,6.7,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,30,"10\,799","Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,31,149,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,31,35,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,32,500,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,34,10,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,34,50,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,35,8.02,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,40,500,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,42,20,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/08-million.tex,49,0.62,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,50,120,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,50,2,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,50,4,"TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,50,"5,10","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,50,"500,5000","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,51,"2,5","TeX drawing/plot coordinate, tick, size or style constant; chart payload changes have separate ledger rows"
+paper/sections/08-million.tex,63,5.3,"Fixed GLM geometry/device/calendar/team/API input, unchanged local timing/hosting or rounded cost; changed server/cost/ratio figures are separately ledgered"
+paper/sections/09-security.tex,28,170,"Fixed audit fraction, depth or quantization example with unchanged M3 curve"
+paper/sections/09-security.tex,29,5,"Fixed audit fraction, depth or quantization example with unchanged M3 curve"
+paper/sections/09-security.tex,54,4,"Fixed audit fraction, depth or quantization example with unchanged M3 curve"
+paper/sections/11-limitations.tex,10,9--17,"Fixed hosting-policy premium, fleet-utilization input or hardware/model identifier; capacity replacements are separately ledgered"
+paper/sections/11-limitations.tex,17,70,"Fixed hosting-policy premium, fleet-utilization input or hardware/model identifier; capacity replacements are separately ledgered"
+paper/sections/11-limitations.tex,19,5.3,"Fixed hosting-policy premium, fleet-utilization input or hardware/model identifier; capacity replacements are separately ledgered"
+paper/sections/11-limitations.tex,38,6000,"Fixed hosting-policy premium, fleet-utilization input or hardware/model identifier; capacity replacements are separately ledgered"
+paper/sections/13-outlook.tex,5,256,"Fixed prototype context, working-hours calendar or prospective precision input"
+paper/sections/13-outlook.tex,13,21,"Fixed prototype context, working-hours calendar or prospective precision input"
+paper/sections/13-outlook.tex,13,8,"Fixed prototype context, working-hours calendar or prospective precision input"
+paper/sections/13-outlook.tex,24,4,"Fixed prototype context, working-hours calendar or prospective precision input"
+paper/sections/13-outlook.tex,27,16,"Fixed prototype context, working-hours calendar or prospective precision input"
+paper/sections/14-conclusion.tex,10,19--27,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,11,1.6,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,14,20,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,16,500,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,19,50,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,19,5000,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,20,100,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,20,500,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/14-conclusion.tex,20,6000,Fixed workload/open-share/context input or unchanged M3 latency; changed ratios have separate exact ledger sites
+paper/sections/90-appendix.tex,10,16,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,10,2,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,10,256,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,10,4,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,11,32,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,11,34,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,11,"34\,816","Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,11,8,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,12,"34\,844","Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,15,156.9,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,15,32,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,18,4,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,43,1,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,45,0.10,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,45,0.50,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,45,4,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,45,50,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,54,64,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,55,2048,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,55,512,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,55,8192,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,58,63,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,58,64,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,60,4--5,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,60,512,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,60,8192,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,62,1530,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"
+paper/sections/90-appendix.tex,62,524,"Unchanged Qwen geometry, protocol/accounting input or historical prototype correctness observation"

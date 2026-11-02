@@ -1,0 +1,59 @@
+2026-11-01T00:55:31Z GPU 0: NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 97887 MiB (97249 free), compute 12.0, driver 595.71.05, CUDA 12.8, PCIe gen 5 x16
+2026-11-01T00:55:31Z host: AMD Ryzen 9 9950X 16-Core Processor, 32 threads, 188 GB RAM, Ubuntu 24.04.5 LTS, free disk 199 GB; one slot fits 262144 tokens
+2026-11-01T00:55:31Z check passed; results/system.json written
+2026-11-01T00:55:31Z cloning https://github.com/ggml-org/llama.cpp
+2026-11-01T00:55:38Z configuring llama.cpp c21284cdf5fd833b90ac1f824cdf8065e2700dc4 with CUDA for architecture 120
+2026-11-01T00:55:40Z building llama-server (several minutes)
+2026-11-01T00:57:45Z built: 0.00.000.385 I srv  llama_server: initializing ... version: 0.4.1-dev (build 11087, commit c21284cdf) built with GNU 13.3.0 for Linux x86_64 
+2026-11-01T00:57:45Z downloading the model (19 GB) from Hugging Face, pinned revision 0669b986; the download resumes if interrupted
+2026-11-01T01:00:34Z verifying SHA-256 (about a minute)
+2026-11-01T01:00:42Z model verified: Qwen3.8-27B-Q4_K_M.gguf, 18973870432 bytes, sha256 31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34
+2026-11-01T01:00:42Z llama-server (smoke) started with pid 6017 on GPU 0; arguments: -c 32768 -np 1
+2026-11-01T01:00:45Z llama-server ready after 3s; GPU memory used: 19526 MiB
+2026-11-01T01:00:48Z smoke test finished; check results/hybrid-bench-*smoke*.md
+2026-11-01T01:00:49Z llama-server pid 6017 stopped
+2026-11-01T01:00:49Z llama-server (slot-131k) started with pid 6154 on GPU 0; arguments: -c 133120 -np 1 --slot-save-path <work>/slots-export
+2026-11-01T01:00:52Z llama-server ready after 3s; GPU memory used: 23348 MiB
+2026-11-01T01:02:23Z llama-server pid 6154 stopped
+2026-11-01T01:02:25Z slot file ready: work/slots-export/parallel-depth-131072.bin, 4723967552 bytes, sha256 5d0bac320cf2bbb04a0d74b50143d8e75954308cf8471222806bc137b117aedc
+2026-11-01T01:02:25Z llama-server (slot-260k) started with pid 6322 on GPU 0; arguments: -c 262144 -np 1 --slot-save-path <work>/slots-export
+2026-11-01T01:02:28Z llama-server ready after 3s; GPU memory used: 28262 MiB
+2026-11-01T01:07:21Z llama-server pid 6322 stopped
+2026-11-01T01:07:25Z slot file ready: work/slots-export/parallel-depth-260000.bin, 9216334784 bytes, sha256 d05fed26348d37c1f8a9f8258d979c5a05badb4021a1b1354de0f2934da67cec
+2026-11-01T01:07:25Z llama-server (slot-1040k) started with pid 6647 on GPU 0; arguments: -c 1042432 -np 1 --slot-save-path <work>/slots-export --rope-scaling yarn --rope-scale 4 --yarn-orig-ctx 262144
+2026-11-01T01:07:29Z llama-server ready after 4s; GPU memory used: 57982 MiB
+2026-11-01T02:08:13Z llama-server pid 6647 stopped
+2026-11-01T02:08:28Z slot file ready: work/slots-export/parallel-depth-1040000.bin, 36394654784 bytes, sha256 97f31a7ff520dcd9cc7ec70761bcea0e9fb9367a799735eb62de9b0de2b1def8
+2026-11-01T02:08:28Z slot files done; copy them into work/slots-import of the Mac kit (see AGENT_PROMPT.md)
+2026-11-01T02:08:28Z context planned for the depth run: 262144 tokens
+2026-11-01T02:08:28Z slot save/restore on (134 GB free)
+2026-11-01T02:08:28Z llama-server (depth-1) started with pid 9537 on GPU 0; arguments: -c 262144 -np 1 --slot-save-path <work>/slots
+2026-11-01T02:08:31Z llama-server ready after 3s; GPU memory used: 28262 MiB
+2026-11-01T02:08:31Z depth run started at context 262144, depths 16k,50k,100k,150k,200k,249k; expect 20 to 60 minutes on a recent GPU
+2026-11-01T02:14:51Z depth run finished
+2026-11-01T02:14:52Z llama-server pid 9537 stopped
+2026-11-01T02:14:52Z llama-server (par4) started with pid 10081 on GPU 0; arguments: -c 140000 -np 4
+2026-11-01T02:14:56Z llama-server ready after 4s; GPU memory used: 23968 MiB
+2026-11-01T02:16:04Z parallel run finished with 4 streams
+2026-11-01T02:16:05Z llama-server pid 10081 stopped
+2026-11-01T02:16:05Z llama-server (scale-64k-np32) started with pid 10265 on GPU 0; arguments: -c 2129920 -np 32 --slot-save-path <work>/slots
+2026-11-01T02:16:08Z llama-server exited during start; see results/server-scale-64k-np32.log
+2026-11-01T02:16:08Z dropping 32 streams at 64k
+2026-11-01T02:16:08Z llama-server (scale-64k-np16) started with pid 10327 on GPU 0; arguments: -c 1064960 -np 16 --slot-save-path <work>/slots
+2026-11-01T02:16:11Z llama-server ready after 3s; GPU memory used: 60106 MiB
+2026-11-01T02:17:46Z llama-server pid 10327 stopped
+2026-11-01T02:17:46Z llama-server (scale-128k-np16) started with pid 10523 on GPU 0; arguments: -c 2113536 -np 16 --slot-save-path <work>/slots
+2026-11-01T02:17:49Z llama-server exited during start; see results/server-scale-128k-np16.log
+2026-11-01T02:17:49Z dropping 16 streams at 128k
+2026-11-01T02:17:49Z llama-server (scale-128k-np8) started with pid 10580 on GPU 0; arguments: -c 1056768 -np 8 --slot-save-path <work>/slots
+2026-11-01T02:17:52Z llama-server ready after 3s; GPU memory used: 58670 MiB
+2026-11-01T02:20:21Z llama-server pid 10580 stopped
+2026-11-01T02:20:21Z llama-server (scale-260k-np8) started with pid 10790 on GPU 0; arguments: -c 2088192 -np 8 --slot-save-path <work>/slots
+2026-11-01T02:20:25Z llama-server ready after 3s; GPU memory used: 97100 MiB
+2026-11-01T02:26:45Z llama-server pid 10790 stopped
+2026-11-01T02:26:45Z scaling run finished
+2026-11-01T02:26:45Z llama-server (agents-128k-np8) started with pid 11154 on GPU 0; arguments: -c 1441792 -np 8 --slot-save-path <work>/slots
+2026-11-01T02:26:48Z llama-server ready after 3s; GPU memory used: 73006 MiB
+2026-11-01T02:26:48Z agents step started: depth 131072, sessions 1,2,4,8, 4 turns each
+2026-11-01T02:46:37Z llama-server pid 11154 stopped
+2026-11-01T02:46:37Z agents step finished

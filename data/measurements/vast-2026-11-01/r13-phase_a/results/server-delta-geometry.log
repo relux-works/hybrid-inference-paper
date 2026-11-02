@@ -1,0 +1,20 @@
+0.00.000.802 I srv  llama_server: initializing ...
+0.00.099.679 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.100.207 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.101.631 I srv    load_model: loading model '<models>/Qwen3.8-27B-Q4_K_M.gguf'
+0.05.765.371 I cmn          init: llama threadpool init, n_threads = 32
+0.05.901.908 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 262144, kv_unified = 'false'
+0.05.908.211 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.05.908.259 I srv  llama_server: model loaded
+0.05.908.264 I srv  llama_server: listening on http://127.0.0.1:8080
+0.05.908.265 W srv  llama_server: notice: server default port will be changed to :9931 in a future release (ref: https://github.com/ggml-org/llama.cpp/pull/26508)
+0.06.859.631 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.06.859.724 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.09.997.156 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  12288, progress = 0.77, t =   3.14 s / 3916.65 tokens per second
+0.10.558.322 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =  14336, progress = 0.90, t =   3.70 s / 3876.12 tokens per second
+0.11.093.639 I slot print_timing: id  0 | task 0 | prompt eval time =    4233.86 ms / 16000 tokens (    0.26 ms per token,  3779.06 tokens per second)
+0.11.093.645 I slot print_timing: id  0 | task 0 |        eval time =       0.00 ms /     1 tokens (    0.00 ms per token,     0.00 tokens per second)
+0.11.093.646 I slot print_timing: id  0 | task 0 |       total time =    4233.86 ms / 16001 tokens
+0.11.093.650 I slot print_timing: id  0 | task 0 |    graphs reused =          1
+0.11.094.103 I slot      release: id  0 | task 0 | stop processing: n_tokens = 16000, truncated = 0
+0.11.364.476 I srv    operator(): operator(): cleaning up before exit...
