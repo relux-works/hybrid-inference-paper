@@ -2,7 +2,7 @@
 
 You are an agent helping the owner of this machine contribute data to the paper "Hybrid Inference with
 Client–Server Prefill–Decode Disaggregation" (repository `relux-works/hybrid-inference-paper`). In the hybrid scheme a
-GPU server reads the long context of an agent session (prefill) and a unified-memory client such as a Mac generates
+GPU server reads the long context of an agent session (prefill) and the user's machine, such as a Mac, generates
 (decode). The paper needs three kinds of data:
 
 1. **Client measurements.** Long-context prefill and decode of Qwen3.8-27B in llama.cpp on Apple Silicon Macs:

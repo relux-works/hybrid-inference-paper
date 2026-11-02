@@ -13,6 +13,10 @@ README.md defines it for the paper, in the section "Versions and releases".
   the client table and the charts for payback, team size, the million-token session and model progress, with the
   purchase, teams, closed perimeter and million-token context each reduced to a paragraph.
 
+- The title drops «для клиентов с унифицированной памятью» / «for Unified-Memory Clients», and the text no longer
+  ties the client to unified memory: any machine that runs the model qualifies, and what matters is that it trails a
+  server GPU far more in compute than in memory bandwidth.
+
 ### Removed
 - Sections on clients and weight classes, model architectures, the million-token context, security, resilience and
   outlook, the appendix, and the tables for client tiers and session fit, client capacity, model architectures,
