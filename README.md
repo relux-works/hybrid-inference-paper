@@ -1,10 +1,10 @@
 # Hybrid inference: architecture and economics (working repository)
 
 Working repository for the paper «Hybrid Inference with Client–Server Prefill–Decode Disaggregation: Architecture and
-Economics for Unified-Memory Clients». Authors: Ivan Oparin, Alexey Grigoriev and Timur Kackan (Relux Works).
+Economics». Authors: Ivan Oparin, Alexey Grigoriev and Timur Kackan (Relux Works).
 
 The idea: a GPU server prefills an agent session and ships the model state (attention KV of the new positions plus the
-fixed recurrent state) to a unified-memory client such as a Mac, which decodes locally.
+fixed recurrent state) to the user's machine, such as a Mac, which decodes locally.
 
 Status: a draft heading for version 0.1.0 (versions `0.y.z` are drafts; see below). The Russian text, the calculation
 engine (`calc/`, runs 1–10) and the data behind every number of the paper are in place. Version 0.1.0 is released
