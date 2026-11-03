@@ -9,6 +9,7 @@ from .ownership import fit_sessions,selected
 from .paper import policy,throughput
 from .performance import flop,payload,roofline_prefill,transfer
 from .session_hosting import Hosting,policy_with_reload
+from .server_prefill import compute_at,scale_compute,mean_seconds,measured_compute
 
 
 def api_vector(calls,tariff,chunk):
@@ -74,8 +75,8 @@ def overflow_cost(requested,served,indices,prices,days):
     return requested*days*sum(p*(1-probability if i in eligible else 1) for i,p in enumerate(prices))/len(prices)
 
 
-def offload_stats(calls,local,model,compute,link,migration):
-    steps=policy_with_reload(calls,model,compute,link,local,migration)
+def offload_stats(calls,local,model,compute,link,migration,client_import=None):
+    steps=policy_with_reload(calls,model,compute,link,local,migration,client_import)
     saving=[max(0,n/local(d)-step[0]) if step[3] else 0.0 for (d,n,o,t),step in zip(calls,steps)]
     wins=sum(x>0 for x in saving)
     return {'share':wins/len(saving),'saved':sum(saving)/len(saving),'wins':wins,'total':sum(saving)}
@@ -95,6 +96,19 @@ class Context:
         self.precision_label=self.add('precision_label',['owners.server_precision'],lambda p:'BF16 (academic reference)' if p=='BF16' else p)
         self.cal=self.add('decode_cal',[self.normalized,'owners.models.qwen27.weights_q4',self.kv,'hardware.clients.m3max.bandwidth','analysis.decode_state_passes',self.state],
                           lambda doc,w,k,b,p,s:decode_calibration(doc,w,k,b,p,s,inputs))
+        self.measured_m5=None
+        self.parallel=None
+        self.b300=None
+        if scenario.get('run14'):
+            from .measurements_r14 import ParallelAnchors,B300Measurements
+            self.parallel=ParallelAnchors(inputs.measured_json('normalized'), self.m3_depth_law)
+            self.b300=B300Measurements()
+        if scenario.get('run15'):
+            from .measurements_r15 import ParallelAnchors
+            self.parallel=ParallelAnchors(inputs.measured_json('normalized'), self.m3_depth_law)
+        if scenario.get('run13'):
+            from .measurements_r13 import MeasuredM5
+            self.measured_m5=MeasuredM5()
     def add(self,name,refs,fn):return self.g.add('pt.'+name,refs,fn)
     def label(self,name,value):return self.g.constant('pt.'+name,value)
     def positions(self,path):
@@ -127,13 +141,19 @@ class Context:
             if rate<=0:raise InputGap(p+'.'+field,'selected precision unavailable; NVFP4 needs engine-supported Blackwell FP4')
             return rate*mfu
         compute=self.add(cache+'.compute',['owners.server_precision',p+'.'+field,'service.mfu'],peak)
+        if self.scenario.get('measured_server') and key in ('rtx6000','office6000','office4','colo1','colo2','rack1','rack2','b300','b300_node'):
+            if 'gpu_server' not in self.cache:
+                self.cache['gpu_server']=self.g.measurement('gpu_server',json_lines=True)
+            compute=self.add(cache+'.measured_compute',[self.cache['gpu_server'],self.fm,'hardware.servers.rtx1.peak',p+'.fp8_peak','owners.server_precision'],measured_compute)
+        if self.b300 and key in ('b300','b300_node'):
+            compute=self.add(cache+'.b300_measured_compute',[self.fm,'owners.server_precision'],self.b300.compute)
         def free(h,w,workspace):
             # The paper fleet uses independent replicas. Never credit one copy pooled over all GPUs.
             available=h['memory']-w-workspace
             if available<=0:raise InputGap(p+'.memory','server weights plus workspace do not fit one GPU replica')
             return available
         free=self.add(cache+'.free',[h,model['server_weights'],'owners.workspace'],free)
-        ready=self.add(cache+'.ready',[compute,free,p+'.gpus',p+'.shard_efficiency'],lambda c,f,g,s:c*g*s)
+        ready=self.add(cache+'.ready',[compute,free,p+'.gpus',p+'.shard_efficiency'],lambda c,f,g,s:scale_compute(scale_compute(c,g),s))
         location=self.g.resolve(p+'.location')
         ep='prices.energy_client' if not location.alarms and location.value=='office' else 'prices.energy_dc'
         duty='owners.office_load' if not location.alarms and location.value=='office' else 'owners.load'
@@ -159,19 +179,34 @@ class Context:
         def seconds(rows,fm,decoder,kv,state,h,compute,free,batch,rate,eff,passes):
             nonempty(rows)
             if m['key']=='glm' and decoder['active_experts']>decoder['experts']:raise InputGap('models.glm.active_experts','active experts exceed total experts')
-            pre=mean_flops(rows,fm,shadow=False)/compute/h['gpus']/h['shard_efficiency']
+            pre=mean_seconds(rows,fm,compute,shadow=False)/h['gpus']/h['shard_efficiency']
             decode=res=0
             for d,n,o,t in rows:
                 if (d+n+o)*kv+state>free:raise InputGap(server['prefix']+'.memory','one full session KV/state does not fit alongside the server replica')
                 traffic=decoder['weights']/batch+(d+n)*kv+passes*state if m['key']=='qwen27' else step_bytes(decoder,batch,d+n,passes)/batch
-                decode+=o*traffic/(h['bandwidth']*eff*h['gpus']*h['shard_efficiency'])
-                res+=((d+n)*kv+state)*(o/rate+t)/(free*h['gpus'])
+                measured_decode=self.b300 and m['key']=='qwen27' and server['prefix'] in ('owners.options.b300','owners.options.b300_node')
+                decode+=o/self.b300.decode(d+n)/(h['gpus']*h['shard_efficiency']) if measured_decode else o*traffic/(h['bandwidth']*eff*h['gpus']*h['shard_efficiency'])
+                residence_rate=self.b300.decode(d+n) if measured_decode else rate
+                res+=((d+n)*kv+state)*(o/residence_rate+t)/(free*h['gpus'])
             value=pre+(decode+res)/len(rows)
             return value if per_call else value*len(rows)
         return self.add(name,[calls,m['flop'],decoder,m['kv'],m['state'],server['hardware'],server['compute'],server['free'],'owners.server_batch','owners.server_stream_rate','owners.server_bw_efficiency','analysis.decode_state_passes'],seconds)
+    def prefill_mean(self,name,calls,m,server,shadow=True):
+        return self.add(name,[calls,m['flop'],server['total_compute']],lambda rows,fm,compute:mean_seconds(rows,fm,compute,shadow))
     def local_rate(self,key,m):
         p='hardware.clients.'+key;name='local.'+m['key']+'.'+key
         if name in self.cache:return self.cache[name]
+        measured_family=self.scenario.get('run14') and not self.scenario.get('m5_m3_sensitivity') and key in ('m5max','ultra96','ultra256')
+        if self.measured_m5 and (key=='m5max64' or measured_family) and m['key']=='qwen27':
+            if key in ('m5max64','m5max'):
+                self.cache[name]=self.add(name,['owners.client_quant'],lambda q:self.m5_prefill(q))
+            else:
+                def measured_scale(q,compute,anchor,bw,w,kv,batch):
+                    measured=self.m5_prefill(q)
+                    return lambda d:1/roofline_prefill(dict(base_flop=54e9,attention_slope=393216,sparse_slope=0,sparse_cap=0,context_limit=2e6),d,
+                        measured(d)*(54e9+393216*d)*compute/anchor,bw,w/batch+kv)
+                self.cache[name]=self.add(name,['owners.client_quant',p+'.compute','hardware.clients.m5max64.compute',p+'.bandwidth',m['weights'],m['kv'],'models.qwen27.prefill_batch'],measured_scale)
+            return self.cache[name]
         refs=[self.curve,self.fm,m['flop'],p+'.compute','hardware.clients.m3max.compute',p+'.bandwidth',m['weights'],m['kv'],'models.qwen27.prefill_batch']
         if m['key']=='glm':refs+=['paper_tables.glm.moe_prefill_efficiency']
         def rate(curve,base,model,compute,anchor,bw,w,kv,batch,*factor):
@@ -179,6 +214,29 @@ class Context:
             return lambda d:1/roofline_prefill(model,d,curve.rate(d)*flop(base,d)*scale,bw,w/batch+kv)
         self.cache[name]=self.add(name,refs,rate)
         return self.cache[name]
+    def m5_prefill(self,quant):
+        if quant!='Q4':raise InputGap('owners.client_quant','measured M5 requires Q4/q8_0')
+        return self.measured_m5.prefill
+    def m5_decoder(self,quant):
+        if quant!='Q4':raise InputGap('owners.client_quant','measured M5 requires Q4/q8_0')
+        return self.measured_m5.decode
+    def m5_scaled_decoder(self,quant,bandwidth,anchor):
+        measured=self.m5_decoder(quant);scale=bandwidth/anchor
+        return lambda streams,depth:measured(streams,depth)*scale
+    def m3_depth_law(self,streams,depth):
+        if 'r14.depth_law' not in self.cache:
+            p=self.inputs.measured_json('normalized')['parallel']
+            self.cache['r14.depth_law']=measured_rate(self.inputs.get('owners.models.qwen27.weights_q4'),
+                self.g.resolve(self.kv).value,self.g.resolve(self.state).value,
+                self.inputs.get('hardware.clients.m3max.bandwidth'),self.g.resolve(self.cal).value[0],
+                p['normalized_decode_interval_gain'],p['frozen_v11_row']['streams'],self.inputs.get('analysis.decode_state_passes'))
+        return self.cache['r14.depth_law'](streams,depth)
+    def client_import(self,key='m3max'):
+        if not self.scenario.get('run14'):return None
+        from .run14_r5 import import_seconds
+        # Other Apple devices use the single-point M3 token rate as a
+        # labelled portability estimate, without inventing a bandwidth speedup.
+        return import_seconds
     def client(self,key,link,tag):
         cache='client.'+key+'.'+tag
         if cache in self.cache:return self.cache[cache]
@@ -194,12 +252,22 @@ class Context:
             if k<1:raise InputGap(p+'.memory','client model/state does not fit even one anchor stream')
             return k
         streams=self.add(cache+'.streams',['paper_tables.streams',self.cal,memory,self.normalized],choose)
+        if self.parallel and key=='m3max':
+            # Counts are admitted per call; the rate lookup refuses every
+            # unsupported count/depth instead of limiting requests to four.
+            streams=self.add(cache+'.measured_streams',['paper_tables.streams'],lambda k:k)
         def decoder_fn(w,k,s,b,cal,passes,doc,law):
             from .metrics import field
             gain=field(doc,'parallel.normalized_decode_interval_gain','measurements.normalized')
             anchor=field(doc,'parallel.frozen_v11_row.streams','measurements.normalized')
             return measured_rate(w,k,s,b,cal[0],gain,anchor,passes)
         decoder=self.add(cache+'.rate',[m['weights'],m['kv'],m['state'],p+'.bandwidth',self.cal,'analysis.decode_state_passes',self.normalized,'paper_tables.decode_scaling'],decoder_fn)
+        if self.measured_m5 and key=='m5max64':
+            decoder=self.add(cache+'.measured_rate',['owners.client_quant'],lambda q:self.m5_decoder(q))
+        if self.scenario.get('run14') and not self.scenario.get('m5_m3_sensitivity') and key in ('m5max','ultra96','ultra256'):
+            decoder=self.add(cache+'.measured_family_rate',['owners.client_quant',p+'.bandwidth','hardware.clients.m5max64.bandwidth'],self.m5_scaled_decoder)
+        if self.parallel and key=='m3max':
+            decoder=self.add(cache+'.parallel_rate',['owners.client_quant'],lambda q:self.m3_decoder(q))
         local=self.local_rate(key,m)
         srv=self.server(self.scenario['summary_option'],m)
         # Client eligibility is independent of server prices/admission.
@@ -210,7 +278,7 @@ class Context:
         migration=self.hosting.vector(cache,matched,m['kv'],m['state'])
         def hybrid_steps(rows,m,c,l,r,free,state,migration):
             if any((d+n+o)*m['kv']+state>free for d,n,o,t in rows):raise InputGap(srv['prefix']+'.memory','full context does not fit the server replica; hybrid admission unavailable')
-            return policy_with_reload(rows,m,c,l,r,migration)
+            return policy_with_reload(rows,m,c,l,r,migration,self.client_import(key))
         steps=self.add(cache+'.steps',[matched,model,srv['compute'],wire,local,srv['free'],m['state'],migration],hybrid_steps)
         local_steps=self.add(cache+'.local_steps',[matched,local],lambda rows,r:[(n/r(d),n/r(d),0,False) for d,n,o,t in rows])
         bounded=self.add(cache+'.end_memory',[matched,memory],end_memory)
@@ -226,7 +294,12 @@ class Context:
         minstreams=self.add(cache+'.min_streams',[matched,memory,streams],lambda rows,mem,k:min(min(k,mem(d+n+o)) for d,n,o,t in rows))
         maxstreams=self.add(cache+'.max_streams',[matched,memory,streams],lambda rows,mem,k:max(min(k,mem(d+n+o)) for d,n,o,t in rows))
         value=dict(hosting=hosting,steps=steps,min_streams=minstreams,max_streams=maxstreams,model=m,server=srv,indices=eligibility,matched=matched,capacity=cap,local_capacity=localcap,streams=streams,downloads=downloads,work=work,rate=perstream,single=single,gain=gain,local=local,memory=memory,decoder=decoder)
+        value['local_steps']=local_steps
         self.cache[cache]=value;return value
+
+    def m3_decoder(self,quant):
+        if quant!='Q4':raise InputGap('owners.client_quant','measured M3 anchors require Q4/q8_0')
+        return self.parallel.decode
 
 
 def person_tables(c):
@@ -241,7 +314,10 @@ def person_tables(c):
             fraction=c.add(name+'.fit_share',[cl['indices'],c.valid],lambda idx,rows:len(idx)/len(nonempty(rows)))
             served=c.add(name+'.served',[requested,fraction,cl['capacity']],lambda n,f,cap:min(n*f,cap))
             overflow=c.add(name+'.overflow',[requested,served],lambda n,s:n-s)
-            compute=c.add(name+'.compute',[served,cl['work'],cl['server']['total_compute'],cl['server']['hourly'],'owners.load','owners.days'],lambda n,f,compute,p,l,d:n*f/compute*p/3600/l*d)
+            prefill=c.prefill_mean(name+'.prefill',cl['matched'],m,cl['server'])
+            compute=c.add(name+'.compute',[served,prefill,cl['server']['hourly'],'owners.load','owners.days'],lambda n,s,p,l,d:n*s*p/3600/l*d)
+            if not c.scenario.get('measured_server'):
+                compute=c.add(name+'.design_compute',[served,cl['work'],cl['server']['total_compute'],cl['server']['hourly'],'owners.load','owners.days'],lambda n,f,compute,p,l,d:n*f/compute*p/3600/l*d)
             migration_day=c.hosting.daily(name,cl['hosting'],served)
             migration=c.add(name+'.migration',[migration_day,cl['server']['prefix']+'.gpus',cl['server']['hourly'],'owners.load','owners.days'],lambda s,g,p,l,d:s/g*p/3600/l*d)
             promotion=c.hosting.promotion(name,cl['hosting'])
@@ -252,7 +328,7 @@ def person_tables(c):
             storage=c.add(name+'.storage',[served,cl['hosting']['storage']],lambda n,p:p if n>0 else 0)
             hosting=c.add(name+'.hosting',[migration,storage],lambda a,b:a+b)
             gpu=c.add(name+'.gpu',[compute,hosting],lambda a,b:a+b)
-            compute_call=c.add(name+'.compute_call',[cl['work'],cl['server']['total_compute'],cl['server']['hourly'],'owners.load'],lambda f,c,p,l:f/c*p/3600/l)
+            compute_call=c.add(name+'.compute_call',[prefill,cl['server']['hourly'],'owners.load'],lambda s,p,l:s*p/3600/l)
             hosting_call=c.add(name+'.hosting_call',[hosting,served,'owners.days'],lambda p,n,d:p/(n*d) if n else 0)
             egress=c.add(name+'.egress',[served,cl['downloads'],'owners.days','prices.egress'],lambda n,b,d,p:n*b*d/1e12*p)
             energy=c.add(name+'.energy',[p+'.power','paper_tables.hours','owners.days','prices.energy_client'],lambda p,h,d,e:p*h*d*e)
@@ -290,7 +366,7 @@ def remote_table(c):
         fraction=c.add(name+'.fraction',[idx,c.valid],lambda idx,rows:len(idx)/len(rows))
         served=c.add(name+'.served',[offered,fraction],lambda n,f:n*f)
         work=c.add(name+'.work',[subset,m['flop']],mean_flops)
-        compute_seconds=c.add(name+'.compute_seconds',[work,srv['total_compute']],lambda w,r:w/r)
+        compute_seconds=c.prefill_mean(name+'.compute_seconds',subset,m,srv)
         no_offload=c.add(name+'.not_foreground',[subset],lambda rows:[(0,0,0,False) for _ in rows])
         hosting=c.hosting.summary(name,subset,m['kv'],m['state'],no_offload)
         migration_day=c.hosting.daily(name,hosting,served)
@@ -350,7 +426,8 @@ def offload_table(c):
         for j,link in enumerate(c.positions('paper_tables.offload_links')):
             n='offload.'+str(i)+'.'+str(j)
             l=c.add(n+'.link',[link,'paper_tables.offload_goodput','hardware.links.wan.latency'],lambda b,g,t:dict(bandwidth=b,goodput=g,latency=t))
-            result=c.add(n+'.result',[c.valid,local,wire,srv['compute'],l,migration],offload_stats)
+            result=c.add(n+'.result',[c.valid,local,wire,srv['compute'],l,migration],
+                         lambda *args:offload_stats(*args,client_import=c.client_import(c.scenario['reference_client'])))
             def conditional(r):
                 if not r['wins']:raise InputGap('paper_tables.offload_links','no calls benefit; conditional saving undefined')
                 return r['total']/r['wins']
@@ -394,7 +471,7 @@ def glm_table(c):
     ingest=c.add('long.ingest_local',[local,'paper_tables.glm.ingest_tokens','paper_tables.glm.integration_step'],lambda rate,n,step:integrate(lambda d:1/rate(d),n,step))
     def ingest_remote(fm,compute,wire,link,n,step,free):
         if n*wire['kv']+wire['wire_state']>free:raise InputGap(server['prefix']+'.memory','cold-ingest KV does not fit server replica')
-        return integrate(lambda d:flop(fm,d),n,step)/compute+transfer(n,wire['kv'],wire['wire_state'],link)
+        return (integrate(lambda d:flop(fm,d)/compute_at(compute,d),n,step) if callable(compute) else integrate(lambda d:flop(fm,d),n,step)/compute)+transfer(n,wire['kv'],wire['wire_state'],link)
     remote=c.add('long.ingest_remote',[m['flop'],server['compute'],wire,link,'paper_tables.glm.ingest_tokens','paper_tables.glm.integration_step',server['free']],ingest_remote)
     def studio_price(price,residual,years,power,hours,days,energy):return price*(1-residual)/(12*years)+power*hours*days*energy
     studio=c.add('long.studio',[p+'.purchase_price','economics.client_residual','owners.years',p+'.power','paper_tables.hours','owners.days','prices.energy_client'],studio_price)
@@ -413,7 +490,7 @@ def glm_table(c):
         migration=c.hosting.vector(n,calls,m['kv'],m['state'])
         def admission(rows,fm,compute,l,r,free,state,migration):
             if any((d+n+o)*fm['kv']+state>free for d,n,o,t in rows):raise InputGap(server['prefix']+'.memory','GLM context does not fit server replica')
-            return policy_with_reload(rows,fm,compute,l,r,migration)
+            return policy_with_reload(rows,fm,compute,l,r,migration,c.client_import(c.scenario['glm_client']))
         steps=c.add(n+'.policy',[calls,wire,server['compute'],link,local,server['free'],m['state'],migration],admission)
         local_steps=c.add(n+'.local_steps',[calls,local],lambda rows,r:[(x/r(d),x/r(d),0,False) for d,x,o,t in rows])
         bounded=c.add(n+'.end_memory',[calls,memory],end_memory)
@@ -425,7 +502,7 @@ def glm_table(c):
         overflow=c.add(n+'.overflow',['paper_tables.glm.sessions_day',served],lambda n,s:n-s)
         api_session=c.add(n+'.api',[calls,api],lambda rows,p:sum(api_vector(rows,p,len(rows))))
         own_s=c.own_seconds(n+'.own_seconds',calls,m,server,per_call=False)
-        shadow=c.add(n+'.shadow',[calls,m['flop'],server['total_compute']],lambda rows,m,compute:mean_flops(rows,m)*len(rows)/compute)
+        shadow=c.add(n+'.shadow',[calls,m['flop'],server['total_compute']],lambda rows,m,compute:mean_seconds(rows,m,compute)*len(rows) if callable(compute) else mean_flops(rows,m)*len(rows)/compute)
         hosting=c.hosting.summary(n+'.hosting',calls,m['kv'],m['state'],steps)
         migration_s=c.add(n+'.migration_seconds',[hosting['seconds'],calls,server['prefix']+'.gpus'],lambda s,rows,g:s*len(rows)/g)
         shadow=c.add(n+'.with_hosting',[shadow,migration_s],lambda a,b:a+b)
@@ -437,7 +514,7 @@ def glm_table(c):
             ownunits=c.add(nm+'.own_units',[team,'paper_tables.glm.sessions_day',own_s,'paper_tables.hours','owners.load'],units)
             calls_day=c.add(nm+'.calls_day',[served,calls],lambda sessions,rows:sessions*len(rows))
             migration_day=c.hosting.daily(nm,hosting,calls_day,served)
-            compute_shadow=c.add(nm+'.compute_shadow',[calls,m['flop'],server['total_compute']],lambda rows,m,c:mean_flops(rows,m)*len(rows)/c)
+            compute_shadow=c.add(nm+'.compute_shadow',[calls,m['flop'],server['total_compute']],lambda rows,m,c:mean_seconds(rows,m,c)*len(rows) if callable(c) else mean_flops(rows,m)*len(rows)/c)
             daily_shadow=c.add(nm+'.daily_shadow',[served,compute_shadow,migration_day,server['prefix']+'.gpus'],lambda s,w,io,g:s*w+io/g)
             hyunits=c.add(nm+'.hybrid_units',[team,daily_shadow,'paper_tables.hours','owners.load'],lambda t,w,h,l:max(1,math.ceil(t*w/(h*3600*l))))
             monthly=c.add(nm+'.month_sessions',[team,'paper_tables.glm.sessions_day','owners.days'],lambda n,s,d:n*s*d)
@@ -544,4 +621,8 @@ def calculate(scenario,inputs):
     reference=historical_crossover(inputs);result['tables'].insert(3,reference)
     result['alarms']=unique(result['alarms']+reference['alarms'])
     result['computed_metrics']+=sum(type(v) in (int,float) for row in reference['rows'] for v in row.values())
+    if scenario.get('run14'):
+        from .measurements_r14 import append_parallel_tables,append_hardware_tables
+        append_parallel_tables(result,c)
+        append_hardware_tables(result,c)
     return result

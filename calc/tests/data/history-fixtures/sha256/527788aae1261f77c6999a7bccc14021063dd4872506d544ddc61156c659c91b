@@ -1,0 +1,60 @@
+{
+  "client_import": {
+    "baseline": {
+      "gate": "measured",
+      "tokens": 39504,
+      "seconds": 42.4,
+      "bytes": 2004023525,
+      "source": "FACTS.md section3; pre-import-speed-v2 M3 Max 5G first call; actual old four-state-copy wire bytes",
+      "fixed_s": 0,
+      "seconds_token": 0.0010733090319967598,
+      "limitation": "One point cannot identify both intercept and slope; fixed0 is an assumption, not measured. Other Apple clients use this token rate as an estimate."
+    },
+    "import_speed_v2": {
+      "gate": "pending",
+      "source": "Mac gate not received; CPU 2.1-2.6x is not a Mac measurement"
+    },
+    "cuda_pr9": {
+      "gate": "measured",
+      "fixed_s": 1.618657356721653,
+      "seconds_token": 0.0004953084013066794,
+      "source": {
+        "path": "data/measurements/run14-2026-11-02/pr9/hybrid-bench-r13-27b-cuda-20261101T132757015879Z.jsonl",
+        "sha256": "b88f8fb440db84abbd48b9d5a606e07ec672b3ed11f16b73fef4a66ece82a634"
+      },
+      "limitation": "OLS across positive Q4 PR9 CUDA call imports; old repeated-state chunks; same PRO6000 hosts node and client; not a WAN rate or Mac calibration."
+    }
+  },
+  "first_call": {
+    "tokens": 39504,
+    "kv_bytes_token": 34840,
+    "state_bytes": 156894784,
+    "chunks": 4,
+    "rtt_s": 0.11,
+    "down_bytes_s": 16000000.0,
+    "up_bytes_s": 9780000.0,
+    "measured": {
+      "server_prefill": 10.6,
+      "transfer": 123.2,
+      "client_import": 42.4,
+      "total": 201.7,
+      "local": 271.5
+    }
+  },
+  "step57_server_seconds": {
+    "1": 84.3,
+    "2": 68.6,
+    "4": 441.0,
+    "8": 486.7
+  },
+  "source": {
+    "path": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+    "sha256": "f090441eaec3ec3a9bf170766e44329f281275c0d0fe99e147716e966ef4bdb9",
+    "access_utc": "2026-11-02",
+    "scope": "Owner supplied baseline and component measurements; same values in r5 brief"
+  },
+  "cuda_pr9": {
+    "path": "data/measurements/run14-2026-11-02/pr9/hybrid-bench-r13-27b-cuda-20261101T132757015879Z.jsonl",
+    "sha256": "b88f8fb440db84abbd48b9d5a606e07ec672b3ed11f16b73fef4a66ece82a634"
+  }
+}

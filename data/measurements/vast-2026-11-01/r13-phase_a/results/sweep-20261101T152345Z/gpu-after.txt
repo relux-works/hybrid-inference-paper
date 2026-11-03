@@ -1,0 +1,4 @@
+name, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W], power.draw [W], temperature.gpu
+NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 2610 MHz, 14001 MHz, 600.00 W, 117.69 W, 64
+
+exit_code=0

@@ -91,11 +91,13 @@
           }
         },
         "cache_read": {
-          "value": 0.2,
+          "value": 0.1,
           "unit": "USD/Mtoken",
           "provenance": {
-            "kind": "estimate",
-            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+            "kind": "fact",
+            "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "access_date": "2026-11-01",
+            "snapshot": "Owner verified: cache hits and refreshes on Claude Opus 5.5 and Sonnet 5.5 cost 0.05x base input; Sonnet input $2/MTok, cache read $0.10/MTok. Offline supplied evidence; no network recheck."
           }
         },
         "cache_write": {

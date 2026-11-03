@@ -1,6 +1,7 @@
 """Append-only session journal, expected catch-up routing and explicit tier budgets."""
 from .metrics import nonempty
 from .inputs import InputGap
+from .server_prefill import compute_at
 
 
 class Migration(list):
@@ -37,14 +38,17 @@ def route(own,remote,shadow,output,wire,foreground,mode):
     return result
 
 
-def policy_with_reload(calls,model,compute,link,local,vector):
+def policy_with_reload(calls,model,compute,link,local,vector,client_import=None):
     from .performance import flop,payload,transfer
-    own=[];remote=[];shadow=[];output=[];wire=[]
+    own=[];remote=[];shadow=[];output=[];wire=[];foreground=[]
     for (d,n,o,t),(reload_s,spill) in zip(nonempty(calls),vector):
-        f=flop(model,d)/compute
-        own.append(n/local(d));remote.append(reload_s+n*f+transfer(n,model['kv'],model['wire_state'],link))
+        f=flop(model,d)/compute_at(compute,d)
+        size=payload(n,model['kv'],model['wire_state'])
+        imp=client_import(n) if client_import else 0.0
+        foreground.append(imp)
+        own.append(n/local(d));remote.append(reload_s+n*f+transfer(n,model['kv'],model['wire_state'],link)+imp)
         shadow.append((n+o)*f);output.append(o*f);wire.append(payload(n,model['kv'],model['wire_state']))
-    return route(own,remote,shadow,output,wire,[0.0]*len(own),vector.catch_up)
+    return route(own,remote,shadow,output,wire,foreground,vector.catch_up)
 
 
 class Hosting:

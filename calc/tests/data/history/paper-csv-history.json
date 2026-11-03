@@ -1,5 +1,5 @@
 {
- "1e8f897c4f82092c632507b520515cefa7eecab5": {
+ "r10-paper": {
   "files": {
    "arch_compare.csv": {
     "bytes": 2831,
@@ -213,9 +213,10 @@
    }
   },
   "label": "R10",
-  "path": "calc/out/paper"
+  "path": "calc/out/paper",
+  "original_commit": "1e8f897c4f82092c632507b520515cefa7eecab5"
  },
- "e9db8129887126ca6a5d27066dd4f4519d223c2d": {
+ "r9-paper": {
   "files": {
    "arch_compare.csv": {
     "bytes": 2831,
@@ -429,6 +430,7 @@
    }
   },
   "label": "R9",
-  "path": "calc/out/paper"
+  "path": "calc/out/paper",
+  "original_commit": "e9db8129887126ca6a5d27066dd4f4519d223c2d"
  }
 }

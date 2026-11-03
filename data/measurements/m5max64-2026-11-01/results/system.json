@@ -1,0 +1,15 @@
+{
+  "kit_version": "1.4.1",
+  "chip": "Apple M5 Max",
+  "model_identifier": "Mac17,6",
+  "memory_gb": 64,
+  "gpu_cores": "40",
+  "macos": "27.0.1 (26A434)",
+  "python": "3.14.7",
+  "power_source": "AC Power",
+  "low_power_mode": 0,
+  "low_power_mode_status": "measured",
+  "low_power_mode_raw": "powermode 0",
+  "disk_free_gb_at_check": 2027,
+  "metal_recommended_working_set_bytes": 55662788608
+}

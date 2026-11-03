@@ -5,7 +5,7 @@
   "inputs": [
     "hardware.json",
     "models.json",
-    "prices.json",
+    "prices-r12.json",
     "workload.json",
     "sampler.json",
     "economics.json",

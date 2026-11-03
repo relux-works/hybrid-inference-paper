@@ -4,15 +4,13 @@ import csv
 import hashlib
 import io
 import json
-import os
 from pathlib import Path
-import subprocess
 import tarfile
 
 ROOT = Path(__file__).resolve().parents[2]
-BASELINE = 'e9db8129887126ca6a5d27066dd4f4519d223c2d'
+BASELINE = 'r9-paper'
 # The public repository starts from one publication commit, so these historical commits exist only in the authors'
-# history. Their paper CSVs are kept here, recorded by git blob id and SHA-256.
+# history. Release comparisons use named SHA-256 fixtures; git blob IDs are provenance.
 HISTORY = ROOT / 'calc/tests/data/history'
 KEYS = {
     'person_cost': ('team', 'client', 'basis'),
@@ -70,51 +68,18 @@ def git_blob_id(data):
     return hashlib.sha1(b'blob %d\0' % len(data) + data).hexdigest()
 
 
-# Historical reads stay local: in a partial clone git would otherwise fetch missing objects from its promisor remote.
-# GIT_NO_LAZY_FETCH stops the lazy fetch, and an empty GIT_ALLOW_PROTOCOL refuses every transport if one is tried.
-LOCAL_GIT_ENV = dict(GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='', GIT_TERMINAL_PROMPT='0')
-
-
-def local_git(args, repo=ROOT, check=True, text=False, data=None):
-    result = subprocess.run(['git'] + args, cwd=repo, env=dict(os.environ, **LOCAL_GIT_ENV), input=data,
-                            capture_output=True, text=text)
-    if check and result.returncode:
-        raise subprocess.CalledProcessError(result.returncode, ['git'] + args, result.stdout, result.stderr)
-    return result
-
-
-def history_present(revision, repo=ROOT):
-    """True only when the commit, its tree and every paper CSV blob are already in the local object store."""
-    if local_git(['cat-file', '-e', revision + '^{commit}'], repo, check=False).returncode:
-        return False
-    listing = local_git(['ls-tree', '-r', revision, 'calc/out/paper'], repo, check=False, text=True)
-    if listing.returncode:
-        return False
-    blobs = [meta.split()[2] for meta, _, path in (line.partition('\t') for line in listing.stdout.splitlines())
-             if path.endswith('.csv') and meta.split()[1] == 'blob']
-    if not blobs:
-        return False
-    check = local_git(['cat-file', '--batch-check'], repo, check=False, text=True, data='\n'.join(blobs) + '\n')
-    return check.returncode == 0 and not any(line.endswith(' missing') for line in check.stdout.splitlines())
-
-
-def revision_csv(revision, source='auto', archive=None, record=None, repo=ROOT):
-    """Paper CSV bytes of a historical publication, by file name. They come from local git when the commit and all its
-    paper CSV blobs are present (source 'auto' or 'git'), otherwise from the archived copy; nothing is ever fetched,
-    and either way every file must match the record."""
+def revision_csv(revision, source='archive', archive=None, record=None, repo=None):
+    """Verified in-tree bytes only; git-object auditing lives in tools/dev/history_audit.py."""
+    assert source in ('auto', 'archive'), 'git history reads are dev-only'
     recorded = json.loads(Path(record or HISTORY / 'paper-csv-history.json').read_text())
     if revision not in recorded:
         raise AssertionError('no recorded history for revision ' + revision)
     expected = recorded[revision]['files']
-    present = history_present(revision, repo)
-    if source == 'git' and not present:
-        raise AssertionError('historical commit is not fully present in local git: ' + revision)
     files = {}
-    if source == 'git' or (source == 'auto' and present):
-        paths = local_git(['ls-tree', '-r', '--name-only', revision, 'calc/out/paper'], repo, text=True).stdout
-        for path in paths.splitlines():
-            if path.endswith('.csv'):
-                files[Path(path).name] = local_git(['show', revision + ':' + path], repo).stdout
+    if archive is None and record is None:
+        from history_fixtures import snapshot_files
+        files = {Path(name).name: data for name, data in snapshot_files(revision, 'calc/out/paper').items()
+                 if name.endswith('.csv')}
     else:
         with tarfile.open(archive or HISTORY / 'paper-csv-history.tar.gz') as stored:
             for member in stored.getmembers():
@@ -156,7 +121,7 @@ def audit_revision(revision):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--directory', type=Path, help='Audit an explicit R10 export directory instead of immutable history')
-    parser.add_argument('--revision', default='1e8f897c4f82092c632507b520515cefa7eecab5', help='Historical publication commit (default: signed R10)')
+    parser.add_argument('--revision', default='r10-paper', help='Historical publication commit (default: signed R10)')
     parser.add_argument('--diff', type=Path)
     parser.add_argument('--added', type=Path)
     args = parser.parse_args()

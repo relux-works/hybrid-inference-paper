@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-11-01T18:12:53Z",
+  "kit": "qwen27b-gpu-bench",
+  "kit_version": "1.6.3",
+  "llama_cpp_commit": "c21284cdf5fd833b90ac1f824cdf8065e2700dc4",
+  "ctx_checkpoints": "0",
+  "model": "ggml-org/Qwen3.8-27B-GGUF@0669b98607d4 Qwen3.8-27B-Q4_K_M.gguf",
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "benchmark_sha256": "c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095",
+  "results_kit_version": "1.6.3",
+  "files": {
+    "build-configure.log": {
+      "bytes": 2418,
+      "sha256": "6b1cc16fd18244dcf95923fc822c4f8813aea22e12617743862ce84a4fd93913"
+    },
+    "build.log": {
+      "bytes": 32694,
+      "sha256": "ced81456b999b8ac8ed12a4955dd0af33a10a6611f743c57a4a762eeef0752aa"
+    },
+    "ctx-checkpoints.log": {
+      "bytes": 4,
+      "sha256": "52f96c26a39ed25108a6db43d6e11c6051eba8a498a5baab1891adfa7ac7c262"
+    },
+    "cuda-architecture.txt": {
+      "bytes": 10,
+      "sha256": "6e92feabd2c4bf697fbf11201911b39c40a96f5106450ab58dd50ac4dc6eb9b0"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T180856.jsonl": {
+      "bytes": 9249,
+      "sha256": "099ca157449943479d738677a1aab599ee4f8250eb5098d915c49cdf2a7893ef"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T180856.md": {
+      "bytes": 892,
+      "sha256": "2eaf86fd64bd82ca2e6c13281afc3b31269f53dcb9ce22e9852c668afb04f693"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-smoke-20261101T180845.jsonl": {
+      "bytes": 2279,
+      "sha256": "8eda66b7e58b2573c570a33e5031151f33b54d4113fbd96579eaee7cb9d136c0"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-smoke-20261101T180845.md": {
+      "bytes": 239,
+      "sha256": "8f28a69e72380a7b5e29d2405743537fb2076b253ce66d3eb074db1963c101c3"
+    },
+    "kit.log": {
+      "bytes": 2086,
+      "sha256": "6fc374053027acf688d2587824618be334b236e8ba999af5f68e6d265e7a513e"
+    },
+    "llama-server-version.txt": {
+      "bytes": 141,
+      "sha256": "1d95ff777a4de77fbeb50af3a1c974082b21dc52e07e286d0b7b1872089f0b3b"
+    },
+    "model-geometry.json": {
+      "bytes": 373,
+      "sha256": "00c6db51733ae801d7ed927d5477edd397d196813009325b32a9e3538b319f82"
+    },
+    "server-depth-1.log": {
+      "bytes": 32191,
+      "sha256": "109944ca3704a417abf1e46a0b1e3c59af1e12ea49688455526163ff469ec805"
+    },
+    "server-smoke.log": {
+      "bytes": 5528,
+      "sha256": "c7d742566d078c23da7cc391108406109904e7c624e186898e81d6da6e5e1cc0"
+    },
+    "system.json": {
+      "bytes": 664,
+      "sha256": "18281f3eb5e252251a66a478e21daa4c0b4a666868736372fd4517d758619c8d"
+    }
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "r6": {
+    "perimeter": {
+      "share": {
+        "value": 1,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Closed perimeter owner decision run6: every call uses open models inside owned infrastructure; this is the real use case, not the academic bound."
+        }
+      },
+      "small_team_max": {
+        "value": 100,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run6: small own-rack RTX PRO 6000 hosts for teams up to 100."
+        }
+      },
+      "overlap_min": {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Planning comparison: expose both small-host and B300 paths at 50 through 100 users."
+        }
+      },
+      "policy": {
+        "value": "closed_perimeter_own_rack",
+        "unit": "deployment policy",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run6 explicitly overrides the office small-team exclusion: owned rack is inside the organization perimeter. No colocation provider or API access."
+        }
+      },
+      "local_front_month": {
+        "value": 0,
+        "unit": "USD/person/month",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Existing local agent frontend is a sunk baseline; no external provider charge. Set a positive incremental software budget if needed."
+        }
+      }
+    },
+    "utilization": {
+      "contexts": [
+        {
+          "value": 200000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 final growing-session contexts; replay measured deltas from zero."
+          }
+        },
+        {
+          "value": 1000000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 final growing-session contexts; replay measured deltas from zero."
+          }
+        }
+      ],
+      "teams": [
+        {
+          "value": 50,
+          "unit": "person",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 utilization chart team grid."
+          }
+        },
+        {
+          "value": 500,
+          "unit": "person",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 utilization chart team grid."
+          }
+        },
+        {
+          "value": 5000,
+          "unit": "person",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 utilization chart team grid."
+          }
+        }
+      ],
+      "sessions_day": [
+        {
+          "value": 1,
+          "unit": "session/day",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 per-user active-day demand; fourth mode saturates the actual integer fleet of Studios."
+          }
+        },
+        {
+          "value": 2,
+          "unit": "session/day",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 per-user active-day demand; fourth mode saturates the actual integer fleet of Studios."
+          }
+        },
+        {
+          "value": 4,
+          "unit": "session/day",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 per-user active-day demand; fourth mode saturates the actual integer fleet of Studios."
+          }
+        }
+      ],
+      "users_per_studio": [
+        {
+          "value": 1,
+          "unit": "person/device",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 one user or two users sharing one aggregate Studio capacity. Studios=ceil(team/users_per_Studio)."
+          }
+        },
+        {
+          "value": 2,
+          "unit": "person/device",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 one user or two users sharing one aggregate Studio capacity. Studios=ceil(team/users_per_Studio)."
+          }
+        }
+      ]
+    },
+    "decode": {
+      "memories": [
+        {
+          "value": 64000000000,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 memory configurations; decimal GB, same as R5."
+          }
+        },
+        {
+          "value": 128000000000,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 memory configurations; decimal GB, same as R5."
+          }
+        }
+      ],
+      "depths": [
+        {
+          "value": 64000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 unmeasured depth grid: bandwidth bounds only."
+          }
+        },
+        {
+          "value": 128000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 unmeasured depth grid: bandwidth bounds only."
+          }
+        }
+      ],
+      "streams": [
+        {
+          "value": 1,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+          }
+        },
+        {
+          "value": 2,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+          }
+        },
+        {
+          "value": 4,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+          }
+        },
+        {
+          "value": 8,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+          }
+        },
+        {
+          "value": 16,
+          "unit": "stream",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+          }
+        }
+      ],
+      "client_quant": {
+        "value": "Q4",
+        "unit": "weight format",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run6 fixes Qwen27 client Q4 for this table, independent of economic scenario quantization."
+        }
+      },
+      "state_passes": {
+        "value": 2,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Bandwidth formula reads and writes recurrent state each decode step: two state buffers in traffic, one resident buffer in the memory fit."
+        }
+      }
+    }
+  },
+  "owners": {
+    "options": {
+      "rack1": {
+        "label": "1x RTX PRO 6000 Server; own perimeter rack",
+        "location": {
+          "value": "office",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Own perimeter rack, run6 policy exception: reuse R4 office electricity, sunk rack-space fee and support rates; owned hardware stays inside the organization. Not a colocation or external provider."
+          }
+        },
+        "gpus": {
+          "value": 1,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner 1–2 GPU small colocated host."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "capex": {
+          "value": 36000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate from calc4 Server Edition $23k/GPU plus 13000 USD host allowance; not a purchase quote."
+          }
+        },
+        "power": {
+          "value": 0.9,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 0.9 kW per GPU including host envelope, scaled to the small server."
+          }
+        },
+        "shard_efficiency": {
+          "value": 1,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Single GPU factor 1; dual GPU 0.9 estimates dense dispatch or MoE sharding overhead. Not qualified."
+          }
+        }
+      },
+      "rack2": {
+        "label": "2x RTX PRO 6000 Server; own perimeter rack",
+        "location": {
+          "value": "office",
+          "unit": "deployment",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Own perimeter rack, run6 policy exception: reuse R4 office electricity, sunk rack-space fee and support rates; owned hardware stays inside the organization. Not a colocation or external provider."
+          }
+        },
+        "gpus": {
+          "value": 2,
+          "unit": "GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Owner 1–2 GPU small colocated host."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp8_peak": {
+          "value": 1007600000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bf16_peak": {
+          "value": 503800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "fp4_peak": {
+          "value": 2015200000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "bandwidth": {
+          "value": 1790000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+          }
+        },
+        "capex": {
+          "value": 62000,
+          "unit": "USD/unit",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate from calc4 Server Edition $23k/GPU plus 16000 USD host allowance; not a purchase quote."
+          }
+        },
+        "power": {
+          "value": 1.8,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 0.9 kW per GPU including host envelope, scaled to the small server."
+          }
+        },
+        "shard_efficiency": {
+          "value": 0.9,
+          "unit": "1",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Single GPU factor 1; dual GPU 0.9 estimates dense dispatch or MoE sharding overhead. Not qualified."
+          }
+        }
+      }
+    }
+  }
+}

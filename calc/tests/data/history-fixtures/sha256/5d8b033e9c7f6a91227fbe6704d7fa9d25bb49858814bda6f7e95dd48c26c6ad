@@ -1,0 +1,301 @@
+{
+  "models": {
+    "qwen27": {
+      "label": "Qwen3.8-27B",
+      "base_flop": {
+        "value": 54000000000.0,
+        "unit": "FLOP/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "attention_slope": {
+        "value": 393216,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "sparse_slope": {
+        "value": 0,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "sparse_cap": {
+        "value": 8192,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "kv": {
+        "value": 34816,
+        "unit": "B/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "16 full-attention layers x 2 x 4 KV heads x 256 x 34/32 bytes per q8_0 value; excludes slot metadata."
+        }
+      },
+      "weights": {
+        "value": 18973870432,
+        "unit": "B",
+        "provenance": {
+          "kind": "measured",
+          "package": "ivmbp-qwen27b-bench-20261030",
+          "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+        }
+      },
+      "server_weights": {
+        "value": 27000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "server_batch": {
+        "value": 32,
+        "unit": "stream",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 all-server batch, stream rate and 70% bandwidth assumption."
+        }
+      },
+      "server_stream_rate": {
+        "value": 25,
+        "unit": "token/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 all-server batch, stream rate and 70% bandwidth assumption."
+        }
+      },
+      "server_bandwidth_efficiency": {
+        "value": 0.7,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 all-server batch, stream rate and 70% bandwidth assumption."
+        }
+      },
+      "prefill_batch": {
+        "value": 512,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New roofline memory traffic estimate: weights read once per 512 prefill tokens; compute calibration remains measured. Memory bound = bandwidth/(weights/prefill_batch + KV)."
+        }
+      },
+      "context_limit": {
+        "value": 1000000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Declared prefill analysis envelope: Qwen long-context extension to 1M as in calc3/4, GLM native 1,048,576. Dense decode/state memory beyond measured depths is an extrapolation, not a validated runtime context."
+        }
+      }
+    },
+    "glm": {
+      "label": "GLM-5.3-Flash",
+      "base_flop": {
+        "value": 35213909504.0,
+        "unit": "FLOP/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "attention_slope": {
+        "value": 22528,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "sparse_slope": {
+        "value": 1441792,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "sparse_cap": {
+        "value": 8192,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "kv": {
+        "value": 5984,
+        "unit": "B/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "state": {
+        "value": 152600000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "weights": {
+        "value": 181400000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "fact",
+          "url": "https://huggingface.co/ggml-org/GLM-5.3-Flash-GGUF",
+          "access_date": "2026-10-30",
+          "note": "181.4 GB Q4_K from the existing data/research/models-apis-2026-10.md snapshot; no network revalidation."
+        }
+      },
+      "server_weights": {
+        "value": 328000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+        }
+      },
+      "experts": {
+        "value": 288,
+        "unit": "expert",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 GLM expert/decode formula."
+        }
+      },
+      "active_experts": {
+        "value": 8,
+        "unit": "expert",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 GLM expert/decode formula."
+        }
+      },
+      "shared_bytes": {
+        "value": 4612500000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 GLM expert/decode formula."
+        }
+      },
+      "routed_bytes": {
+        "value": 4758750000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 GLM expert/decode formula."
+        }
+      },
+      "decode_kv_slope": {
+        "value": 352,
+        "unit": "B/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 GLM expert/decode formula."
+        }
+      },
+      "decode_fixed": {
+        "value": 46137344,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 GLM expert/decode formula."
+        }
+      },
+      "hidden_width": {
+        "value": 6144,
+        "unit": "element",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New pipeline communication estimate: hidden width 6144 assumed from GLM class; bf16 activations, one boundary activation and one feedback message of equal size per token/stream. No tensor collective assumed."
+        }
+      },
+      "activation_bytes": {
+        "value": 2,
+        "unit": "B/element",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New pipeline communication estimate: hidden width 6144 assumed from GLM class; bf16 activations, one boundary activation and one feedback message of equal size per token/stream. No tensor collective assumed."
+        }
+      },
+      "boundary_messages": {
+        "value": 2,
+        "unit": "message",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New pipeline communication estimate: hidden width 6144 assumed from GLM class; bf16 activations, one boundary activation and one feedback message of equal size per token/stream. No tensor collective assumed."
+        }
+      },
+      "server_batch": {
+        "value": 64,
+        "unit": "stream",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 all-server batch, stream rate and 70% bandwidth assumption."
+        }
+      },
+      "server_stream_rate": {
+        "value": 40,
+        "unit": "token/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 all-server batch, stream rate and 70% bandwidth assumption."
+        }
+      },
+      "server_bandwidth_efficiency": {
+        "value": 0.7,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 all-server batch, stream rate and 70% bandwidth assumption."
+        }
+      },
+      "server_shared_bytes": {
+        "value": 8200000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 FP8 per-step shared/active routed weights, scaled by union of experts."
+        }
+      },
+      "server_routed_bytes": {
+        "value": 8460000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4 FP8 per-step shared/active routed weights, scaled by union of experts."
+        }
+      },
+      "wire_state": {
+        "value": 76300000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc4: 71.3 MB bf16 KDA state plus 5 MB convolution, separate from f32 resident state."
+        }
+      },
+      "context_limit": {
+        "value": 1048576,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Declared prefill analysis envelope: Qwen long-context extension to 1M as in calc3/4, GLM native 1,048,576. Dense decode/state memory beyond measured depths is an extrapolation, not a validated runtime context."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "hybrid_calc9_m3max_measured",
+  "description": "Historical hybrid_calc9_m3max_measured output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "calibration",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": [
+    "stats",
+    "benchmark"
+  ]
+}

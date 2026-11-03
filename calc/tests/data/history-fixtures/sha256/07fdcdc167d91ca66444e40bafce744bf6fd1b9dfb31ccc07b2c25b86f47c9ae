@@ -1,0 +1,4 @@
+profile,client,streams,calls_day,served_day,overflow_day,bytes_per_served_call,offered_tb_month,hybrid_tb_month,price_0,egress_0,offered_egress_0,price_1,egress_1,offered_egress_1,price_2,egress_2,offered_egress_2,price_3,egress_3,offered_egress_3,status,alarm_inputs
+light,M3 Max 128 GB (measured),4,200,nan,nan,130590284.98384465,0.5484791969321475,nan,0,nan,0.0,5,nan,2.7423959846607375,50,nan,27.423959846607378,90,nan,49.36312772389328,alarm,measurements.parallel
+medium,M3 Max 128 GB (measured),4,800,nan,nan,130590284.98384465,2.19391678772859,nan,0,nan,0.0,5,nan,10.96958393864295,50,nan,109.69583938642951,90,nan,197.4525108955731,alarm,measurements.parallel
+heavy,M3 Max 128 GB (measured),4,2500,nan,nan,130590284.98384465,6.8559899616518445,nan,0,nan,0.0,5,nan,34.279949808259225,50,nan,342.7994980825922,90,nan,617.039096548666,alarm,measurements.parallel

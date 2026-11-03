@@ -1,0 +1,6 @@
+{
+  "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz",
+  "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618",
+  "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+  "facts_source": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md :: Kit1.6.6 cooled parallel sweep, supplied2026-11-02"
+}

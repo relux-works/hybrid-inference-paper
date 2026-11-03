@@ -1,0 +1,15 @@
+client,link_mbit,agents,calls,depth_ceiling,local_sessions_day,hybrid_sessions_day,gain,local_bound,hybrid_bound,local_agent_s,hybrid_agent_s,admitted_streams,coverage,status,alarm_inputs
+M3 Max 128 GB,1000,1,39904,full mix,2.3242788347387027,3.0367898787663488,1.3065514487239855,agent cycle,agent cycle,106.81844981687702,81.75602263592367,1..1,conservative below shallowest anchor,ok,
+M3 Max 128 GB,1000,2,39904,full mix,3.070904116217061,4.444393664416873,1.447259014355605,device,agent cycle,136.78784163140384,111.72541445045037,2..2,conservative below shallowest anchor,ok,
+M3 Max 128 GB,1000,4,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..4,gap: unmeasured stream count: 3,alarm,measurements.parallel
+M3 Max 128 GB,1000,6,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..6,gap: unmeasured stream count: 3,alarm,measurements.parallel
+M3 Max 128 GB,1000,8,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..8,gap: unmeasured stream count: 3,alarm,measurements.parallel
+M3 Max 128 GB,1000,12,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..12,gap: depth exceeds deepest measured anchor for 12 streams: 201161.3360324425 > 131088,alarm,measurements.parallel
+M3 Max 128 GB,1000,16,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..16,gap: depth exceeds deepest measured anchor for 16 streams: 113067.33516329165 > 65552,alarm,measurements.parallel
+M3 Max 128 GB,300,1,39904,full mix,2.3242788347387027,2.9491878811429726,1.2688614795541615,agent cycle,agent cycle,106.81844981687702,84.18448470388564,1..1,conservative below shallowest anchor,ok,
+M3 Max 128 GB,300,2,39904,full mix,3.070904116217061,4.349845482977006,1.4164706283097592,device,agent cycle,136.78784163140384,114.15387651841237,2..2,conservative below shallowest anchor,ok,
+M3 Max 128 GB,300,4,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..4,gap: unmeasured stream count: 3,alarm,measurements.parallel
+M3 Max 128 GB,300,6,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..6,gap: unmeasured stream count: 3,alarm,measurements.parallel
+M3 Max 128 GB,300,8,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..8,gap: unmeasured stream count: 3,alarm,measurements.parallel
+M3 Max 128 GB,300,12,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..12,gap: depth exceeds deepest measured anchor for 12 streams: 201161.3360324425 > 131088,alarm,measurements.parallel
+M3 Max 128 GB,300,16,39904,full mix,nan,nan,nan,nan,nan,nan,nan,2..16,gap: depth exceeds deepest measured anchor for 16 streams: 113067.33516329165 > 65552,alarm,measurements.parallel

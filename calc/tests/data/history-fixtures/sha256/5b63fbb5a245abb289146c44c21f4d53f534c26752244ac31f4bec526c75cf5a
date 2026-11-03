@@ -1,0 +1,7106 @@
+{
+  "v2": {
+    "EFF_L65_6": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "T_FIX_L66_8": {
+      "unit": "s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "CONV_L13_7": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "CONV_L13_15": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sim_sessions_L92_39": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sim_sessions_L92_48": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sim_sessions_L92_57": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sim_sessions_L92_78": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sim_sessions_L92_90": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_PF_L255_9": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_PF_L255_18": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "life_L279_11": {
+      "unit": "s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hbm_gpu_L280_14": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "TIERS_L54_21": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "TIERS_L54_26": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "TIERS_L56_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "TIERS_L57_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "TIERS_L57_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "TIERS_L58_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L62_12": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L62_26": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L62_41": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L62_56": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L62_71": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L63_27": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L63_42": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L190_25": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "BATCH4_L217_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L247_24": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L247_30": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L247_36": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L248_17": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L248_22": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L248_28": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L248_34": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L249_18": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L249_24": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L249_30": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L249_36": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L250_23": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L250_29": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L250_35": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L250_42": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L251_16": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L251_22": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L251_28": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICES_L251_34": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_MONTH_L253_27": {
+      "unit": "USD/month",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_MONTH_L253_32": {
+      "unit": "USD/month",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_MONTH_L253_39": {
+      "unit": "USD/month",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPU_H_L254_26": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "avg_L_L273_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dec_gpu_L281_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dec_gpu_L281_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L25_17": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L27_12": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L33_17": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L35_12": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L44_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L45_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "f_L46_38": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L50_11": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "acc_L95_25": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L95_36": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L95_43": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L95_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L95_64": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L95_75": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L95_86": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L96_21": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L96_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L96_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L96_64": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "fmt_t_L124_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L138_18": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L138_23": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L138_29": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_MONTH_L253_13": {
+      "unit": "USD/month",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_MONTH_L253_21": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "econ_L275_26": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "state_bytes_L17_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L31_24": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "f_L46_29": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L50_28": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L100_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L101_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "fmt_t_L124_63": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "depths_L140_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "depths_L140_28": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "depths_L140_35": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "depths_L140_42": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "depths_L140_49": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L154_22": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L154_29": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L165_26": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L165_32": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L165_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L165_48": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "r_L184_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L194_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L194_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L194_76": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L205_22": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L205_28": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L205_35": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L236_23": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L236_28": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "state_bytes_L17_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L23_24": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L23_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L24_35": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L24_63": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L24_67": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L26_23": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L31_20": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L32_35": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L32_63": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L32_67": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L34_23": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "f_L46_20": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L47_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L100_61": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L101_59": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L156_26": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L156_31": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L156_36": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L156_42": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "line_L193_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_tl__L__L206_29": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L221_29": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L223_36": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "pre_L284_45": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "res_L286_14": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "state_bytes_L17_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L23_30": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L23_35": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L26_32": {
+      "unit": "FLOP/token^2",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L31_11": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L100_54": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L101_53": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L207_26": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "econ_L270_96": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L288_87": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L288_92": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L23_11": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L34_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L47_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L47_70": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hy_L210_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hy_L210_66": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hy_L210_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hy_L210_82": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "c_miss_L268_21": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "econ_L277_122": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L34_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L133_61": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L133_65": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L133_70": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L133_75": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L133_80": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "v_L157_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "line_L172_37": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L182_80": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L185_39": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L34_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L34_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L239_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L239_84": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L288_44": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "sessions": {
+    "MEM_USABLE_L95_13": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MEM_BUFFERS_L96_14": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_NET_L99_10": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "T_FIX_L100_8": {
+      "unit": "s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "HBM_KV_L103_9": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_OPEX_Y_L227_14": {
+      "unit": "USD/year",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK_L231_7": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "CONV_L31_7": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "CONV_L31_15": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "__W_M___KV_M__L53_14": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_MEASURED_L54_71": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_PF_L101_9": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_PF_L101_18": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "HBM_BW_L102_9": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "HBM_BW_L102_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dec_rates_L114_52": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "k_max_L134_28": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "k_max_L134_40": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "k_max_L134_53": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "best_L136_11": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "make_sessions_L144_20": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "make_sessions_L144_28": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "make_sessions_L144_37": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "make_sessions_L144_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "make_sessions_L144_61": {
+      "unit": "s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "run_L160_82": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "tot_L215_10": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "NODE_CAPEX_L226_13": {
+      "unit": "USD",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_CAPEX_L226_21": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SRV_DEC_BATCH_L232_26": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SRV_DEC_BATCH_L232_40": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SRV_STREAM_TPS_L233_42": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "pre_L239_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "EFF_MEASURED_L54_15": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DENSE_PROFILES_L55_69": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DENSE_PROFILES_L55_95": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L86_42": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L86_46": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L86_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L87_45": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L87_50": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L87_60": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L88_37": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L88_42": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L88_52": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L89_34": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L89_39": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L90_40": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L90_45": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L90_55": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L91_46": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L91_50": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L91_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L91_62": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L92_48": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L92_53": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L92_59": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L98_31": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NETS_L98_46": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "r1_L121_58": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_prev_L217_17": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "NODE_MONTH_L228_26": {
+      "unit": "USD/month",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NODE_MONTH_L228_45": {
+      "unit": "USD/month",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L41_26": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L42_24": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L43_23": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L46_26": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L47_24": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "__W_M___KV_M__L53_35": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DENSE_PROFILES_L55_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "f_L65_38": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L68_11": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L86_62": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L86_68": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L87_66": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L87_72": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L88_58": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L88_64": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L90_61": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L90_67": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L91_68": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L91_74": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L92_71": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L92_77": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "acc_L162_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L162_34": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L162_49": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L162_62": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L162_75": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L162_93": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L163_21": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L163_31": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L163_40": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L163_49": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L163_60": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "GPU_S_L229_26": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "fmt_t_L260_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L282_21": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L364_19": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gb_L372_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L381_24": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S1_L415_25": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S1_L415_32": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S1_L415_42": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S1_L415_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S2_L416_25": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S2_L416_32": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S2_L416_41": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "S2_L416_51": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "own_ps_L455_43": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "row__server_usd_per_session___L465_51": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "row__api_ref_usd_per_session___L468_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "state_bytes_L35_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L40_36": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L44_54": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L45_36": {
+      "unit": "B",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "__W_M___KV_M__L53_31": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DENSE_PROFILES_L55_86": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L61_42": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L64_47": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "f_L65_29": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L68_28": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "agg_L122_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L151_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L152_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "fmt_t_L260_63": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L283_22": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L283_28": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L283_35": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "km_L329_35": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "k_day_L332_24": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "r_L365_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L402_26": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L402_32": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L433_23": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L433_28": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "r_L436_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "srv_L462_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "days_L464_15": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "days_L464_20": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "row__device_usd_per_session_low___L466_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "row__device_usd_per_session_high___L467_72": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "state_bytes_L35_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L39_53": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L39_70": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L40_59": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L44_50": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L45_59": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "__W_M___KV_M__L53_22": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_MEASURED_L54_29": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EFF_MEASURED_L54_61": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DENSE_PROFILES_L55_77": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "f_L65_20": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L66_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L151_61": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L152_59": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_30": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "w_step_L248_25": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "km_L306_39": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L385_29": {
+      "unit": "year",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L391_29": {
+      "unit": "year",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "storage_L400_34": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "storage_L400_57": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "tb_month_L401_59": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L403_29": {
+      "unit": "year",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "srv_L462_69": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "state_bytes_L35_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L39_59": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L39_64": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L40_68": {
+      "unit": "FLOP/token^2",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L44_41": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L63_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L151_54": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L152_53": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_38": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_44": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_50": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_56": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_77": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_83": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_89": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L200_95": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L201_47": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L201_53": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L201_59": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L202_40": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L202_45": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L202_51": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L202_57": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L203_41": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L203_47": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L203_53": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L203_59": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L205_51": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L205_57": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L205_63": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L205_70": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L207_46": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L207_52": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L207_58": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L207_64": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L208_49": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L208_55": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L208_62": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L208_70": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L209_47": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L209_54": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L209_60": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "API_L209_67": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L296_60": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L297_46": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L346_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L373_99": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L373_123": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L373_140": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gs_L396_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_gb_L399_20": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_gb_L399_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "storage_L400_53": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "egress_L404_49": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L442_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L442_139": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "be_api_L479_128": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "be_own_L480_159": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L39_40": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L45_82": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L66_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L66_70": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "w_step_L248_55": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_tok_L249_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L291_98": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L291_104": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L291_111": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L310_37": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "k_night_L333_57": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L358_62": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L358_89": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L369_74": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L369_111": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gb_L372_25": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "resid_L393_50": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "resid_L393_70": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpus_L397_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L427_86": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L449_18": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L449_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "be_api_L479_123": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "be_own_L480_154": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L45_76": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "p_local_m3_L63_58": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "touched_L247_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "touched_L247_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_tok_L249_57": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L337_80": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L368_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpus_L389_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "egress_L404_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "resid_L406_50": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "resid_L406_70": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "resid_L406_91": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "resid_L406_111": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L432_60": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L446_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L446_105": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L446_133": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L45_66": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_L45_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_tok_L249_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L358_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L358_76": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L369_51": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L369_88": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "tb_month_L401_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L386_81": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L322_85": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L386_60": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "fleet": {
+    "BASELINE_LAPTOP_L49_18": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICE_KWH_DC_L95_15": {
+      "unit": "USD/kWh",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PRICE_KWH_OFFICE_L96_19": {
+      "unit": "USD/kWh",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "COLO_KW_MONTH_L97_16": {
+      "unit": "USD/kW/month",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "RTX6000_L98_10": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "RTX_PF8_L99_10": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "R5090_PF8_L100_12": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "RTX5090_L101_10": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK_L121_7": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SESS_PER_H_L122_13": {
+      "unit": "session/h",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DAYS_MONTH_L123_13": {
+      "unit": "day/month",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EGRESS_TB_L124_12": {
+      "unit": "USD/TB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DRAM_GB_L193_10": {
+      "unit": "USD/GB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "NVME_TB_L194_10": {
+      "unit": "USD/TB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L28_20": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L28_27": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L28_36": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L28_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L61_19": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L61_37": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L61_53": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L61_70": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L61_88": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L61_104": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L62_21": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PEAK16_L62_41": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MAC_RESID_L64_22": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MAC_RESID_L64_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MAC_RESID_L64_25": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "B300_NODE_L102_12": {
+      "unit": "USD",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "B300_NODE_L102_20": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SRV_RESID_L120_22": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SRV_RESID_L120_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "SRV_RESID_L120_25": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "pre_L141_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "kv_store_cost_L185_42": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_store_cost_L185_53": {
+      "unit": "parameter",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_store_cost_L185_62": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "N_L260_8": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_dec_L608_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_dec_L608_31": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_p_local_L618_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_p_local_L618_31": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_run_L623_49": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_run_L623_59": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_own_gpu_s_L650_47": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_own_gpu_s_L650_62": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "pre_L655_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "tot_L721_10": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "DEVICES_L51_42": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L51_46": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L51_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L52_45": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L52_50": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L52_60": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L53_37": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L53_42": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L53_52": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L54_34": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L54_39": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L55_44": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L55_48": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L55_58": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L56_43": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L56_48": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L56_58": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L57_46": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L57_50": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L57_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L57_62": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L58_48": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L58_53": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L58_59": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L58_65": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L105_49": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L105_57": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L105_63": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L105_69": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L105_76": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L105_93": {
+      "unit": "kW",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L106_41": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_59": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_65": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_75": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_81": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_106": {
+      "unit": "kW",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_51": {
+      "unit": "GPU",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_63": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_69": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_78": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_84": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_111": {
+      "unit": "kW",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L111_68": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L111_74": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L111_83": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L111_89": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L111_112": {
+      "unit": "kW",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L113_74": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L113_80": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L113_89": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L113_95": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L113_117": {
+      "unit": "kW",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "km_L211_30": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "units_for_L222_12": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "units_for_L224_12": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L345_14": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L345_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L384_14": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L384_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L403_20": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L403_25": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "st_L452_24": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_d0__o0__L493_13": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_d0__o0__L493_19": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_L495_46": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_L495_50": {
+      "unit": "GB/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_L495_60": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L597_36": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L598_14": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_17": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_77": {
+      "unit": "expert",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_88": {
+      "unit": "expert",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_hbm_kv__bw__L652_17": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L675_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L675_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L682_16": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_prev_L724_17": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "DEVICES_L51_62": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L51_68": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L52_66": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L52_72": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L53_58": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L53_64": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L55_64": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L55_70": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L56_64": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L56_70": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L57_68": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L57_74": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L58_71": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DEVICES_L58_78": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "self_bw_L74_27": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "colo_L86_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "UNITS_L106_19": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_99": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L108_19": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L108_34": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_104": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L110_19": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L110_34": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L111_105": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L112_19": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L112_34": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L113_111": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "nvme_L189_44": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "util_L205_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "util_L238_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_n__cash__resid__L281_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "mac_L286_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L350_19": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L350_22": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L350_26": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L350_30": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L350_35": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "mac_m_L389_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "mult_L404_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L500_19": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L500_24": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "mac_L570_79": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L574_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L597_53": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L597_63": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L597_77": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L597_86": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_31": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_39": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_54": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_L599_63": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sel_L604_17": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sel_L604_24": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_97": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "acc_L625_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L625_34": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L625_43": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L625_54": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L625_64": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "acc_L625_73": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "_hbm_kv__bw__L652_24": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_hbm_kv__bw__L652_31": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "w_step_L654_14": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L668_106": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L677_21": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "L_L694_16": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "med_L35_18": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "med_L35_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L36_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L37_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "colo_L82_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "support_L83_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "energy_L85_63": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "support_L87_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L107_91": {
+      "unit": "USD",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "UNITS_L109_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_gpu_month_L204_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_gpu_month_L204_75": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "demand_gpu_s_price_L206_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "device_k_L212_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_n__cash__resid__L271_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "srv_L282_36": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "store_L283_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "egress_L284_37": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L299_37": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L299_42": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L299_65": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L299_70": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sess_m_L305_21": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_k__n__gpus__cash__resid__L306_83": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "shift_L336_16": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "shift_L336_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_ko__no__go__co__ro__L352_68": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kh__nh__gh__ch__rh__L354_79": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kk__n__g__c__rr__L392_76": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kk__n__g__c__rr__L396_65": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "Lend_L426_19": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_114": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_58": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_109": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L455_57": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L458_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L458_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L477_33": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L477_58": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L544_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "store_L571_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "egress_L572_37": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_n1__c1__r1__L575_88": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_n2__c2__r2__L576_94": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L579_51": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L579_78": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_91": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_stream_L612_17": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_stream_L612_39": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_p_local_L620_11": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L668_51": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L668_59": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "free_L669_24": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L678_22": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "loc_L686_88": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L693_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L693_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "res_L702_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "med_L35_30": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L36_60": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L37_59": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "energy_L81_44": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpu_s_price_L92_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpu_s_price_L92_55": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpu_s_price_L92_74": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "B_L148_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "w_step_L150_25": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L242_98": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_L272_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L335_90": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L335_95": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "api_m_L351_20": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "own_m_L353_38": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hyb_m_L357_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "line_L372_133": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "line_L373_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sess_fit_L377_44": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "srv_m_L393_32": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "srv_m_L393_37": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L406_27": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L406_32": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L413_69": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L413_76": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L413_85": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L413_97": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L414_47": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L414_54": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L414_63": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L414_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L415_48": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L415_55": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L415_65": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L415_75": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "Lend_L426_52": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_58": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_110": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_103": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L455_51": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L487_95": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L487_101": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sess_L504_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sess_L504_63": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L522_29": {
+      "unit": "stream",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "days_L528_19": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "s__L545_25": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_k___n___g___c___r___L548_83": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "om_L580_39": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_API_L600_34": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_API_L600_40": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_API_L600_46": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GLM_API_L600_52": {
+      "unit": "USD/Mtoken",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_15": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_85": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_stream_L612_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_stream_L612_32": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "w_step_L654_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L672_66": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L699_49": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L699_87": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L699_94": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L699_104": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "profiles_L699_114": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "res_L702_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "res_L702_53": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dev_L713_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dev_L713_68": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L37_53": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "energy_L81_37": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "energy_L85_38": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "run_m_L307_42": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "run_m_L307_79": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kk__nn__g2__c2__r2__L316_75": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "egress_m_L358_43": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L378_100": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kk__n__g__c__rr__L392_55": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kk__n__g__c__rr__L396_44": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L453_101": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_94": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L454_99": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L455_42": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "variants_L455_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L462_31": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L462_36": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sess_L504_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L522_55": {
+      "unit": "stream",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L523_52": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "v_L525_64": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L546_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kk__nn__g2__c2__r2__L551_76": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L555_19": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_75": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_80": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dev_L713_24": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "energy_L81_31": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "energy_L85_31": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "w_step_L150_55": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_tok_L151_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "pick_device_L218_63": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "net4_L326_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L335_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L335_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L390_32": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L397_77": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "mult_L404_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L405_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L475_117": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L475_123": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L475_130": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L475_137": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sess_L504_51": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L509_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "run_m_L549_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "run_m_L549_80": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ref_m_L552_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ref_m_L554_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L560_18": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hm_L577_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "om_L580_17": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hm_L581_45": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_24": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_57": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L674_94": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L674_100": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L716_37": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L716_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "touched_L149_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "touched_L149_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_tok_L151_57": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L310_51": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_ref_m__lab__L317_50": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L361_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L394_115": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L398_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L405_91": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L405_117": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L407_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dev_t_L436_53": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L484_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L487_32": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L509_53": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L560_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L578_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_flop_L605_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_own_gpu_s_L659_61": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L683_121": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L683_127": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L689_70": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L689_85": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L705_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "per_tok_L151_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L276_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L394_101": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L405_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cells_L487_43": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hm_L581_17": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L583_69": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L583_152": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_own_gpu_s_L659_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_own_gpu_s_L659_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_own_gpu_s_L659_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "glm_section_L671_27": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L292_42": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L473_83": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L473_98": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L473_126": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L560_26": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L558_89": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "equilibrium": {
+    "GRID_L14_8": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_11": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_15": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_19": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_23": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_27": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_31": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_36": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_41": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_46": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_51": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_56": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_61": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_66": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_77": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L14_83": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L15_8": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L15_14": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L15_20": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L15_26": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GRID_L15_33": {
+      "unit": "person",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_ko__no__go__co__ro__L33_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_kh__nh__gh__ch__rh__L36_84": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sweep_L78_14": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sweep_L78_19": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "api_m_L31_12": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "own_m_L35_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hyb_m_L39_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sweep_L83_30": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "egress_m_L40_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "hybr_api_L93_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sweep_L101_26": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sweep_L85_33": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "edge": {
+    "LINK_EFF_L18_11": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_EFF_L135_12": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_SUSTAINED_L136_18": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "M6_EFF_L70_9": {
+      "unit": "FLOP/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "n_L89_8": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ttft_hybrid_L93_32": {
+      "unit": "s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "decode_bound_L98_31": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "phone_model_L139_66": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "_EGRESS_TB_LOW__EGRESS_TB_HIGH__L159_37": {
+      "unit": "USD/TB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "phone_ttft_hybrid_L162_38": {
+      "unit": "s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "att_L31_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_42": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_49": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_58": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_67": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_72": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "MODELS_EDGE_L41_79": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "devs_L50_29": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "M6_EFF_L70_16": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L147_38": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L149_38": {
+      "unit": "B",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_37": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_37": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L155_39": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "USAGE_L158_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "USAGE_L158_40": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpu_h_price_L180_57": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "M6_EFF_L70_23": {
+      "unit": "FLOP/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "M6_EFF_L70_32": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L72_66": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L72_98": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L74_66": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L74_98": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L76_62": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L76_96": {
+      "unit": "GB",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LIGHT_MODELS_L81_57": {
+      "unit": "GB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LIGHT_MODELS_L81_74": {
+      "unit": "GB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LIGHT_MODELS_L83_61": {
+      "unit": "GB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LIGHT_MODELS_L83_78": {
+      "unit": "GB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L147_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L147_55": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L147_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L149_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L149_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L149_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_44": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_55": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_45": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L155_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_c_L172_18": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_c_L172_24": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_c_L172_31": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "rows_L205_66": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "rows_L206_69": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "afm_L210_65": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "section_d_L215_18": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_d_L215_24": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_d_L225_18": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_d_L225_24": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L72_86": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L74_86": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L76_75": {
+      "unit": "B/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "LAPTOPS_L76_84": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dec_L115_34": {
+      "unit": "token/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_b_L117_22": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_b_L117_27": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_b_L117_33": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L147_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L149_64": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_63": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_96": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_64": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_98": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L155_92": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gb_month_L184_89": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "rows_L207_104": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "afm_L210_46": {
+      "unit": "B/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_d_L211_84": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_92": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L155_86": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "mb__L175_50": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "srv_y_L185_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpus_L187_15": {
+      "unit": "GPU",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "rows_L207_91": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "rows_L207_98": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "afm_L210_87": {
+      "unit": "FLOP/token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_d_L216_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "loc_L227_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "loc_L227_34": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "radio_L228_35": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "radio_L228_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "usable_L111_36": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L151_82": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L153_87": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L155_76": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "PHONE_MODELS_L155_81": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L174_57": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L174_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L174_67": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_eg_lo__eg_hi__L186_34": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_eg_lo__eg_hi__L186_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L219_57": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L219_62": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L219_67": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "radio_L228_27": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "radio_L228_45": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L121_55": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "th_L121_60": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_c_L170_86": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L49_81": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L49_86": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L49_92": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L54_85": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L54_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L54_101": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_b_L116_108": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_c_L171_40": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L60_27": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L60_32": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L60_43": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "prefill_flops_L90_34": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_b_L122_69": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "section_a_L59_35": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "workload": {
+    "make_real_calls_L41_31": {
+      "unit": "call",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "make_real_calls_L41_44": {
+      "unit": "call/session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "make_real_calls_L41_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "costing_L91_34": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "median_L36_17": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ranges_L46_54": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ranges_L46_73": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ranges_L46_79": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ranges_L46_100": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "ranges_L46_107": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L66_70": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L67_52": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "r_L68_52": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "above90_L56_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "above99_L57_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "shares_L84_65": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "shares_L84_70": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "shares_L84_75": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "shares_L84_81": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "costing_L108_23": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "costing_L108_28": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "sigma_L37_54": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "L_L59_32": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L85_60": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L85_75": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L87_38": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L86_37": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L86_57": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L86_77": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "describe_L88_70": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "dev_t_L112_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L134_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "costing_L115_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "business": {
+    "MFU_L21_6": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "DAYS_L36_7": {
+      "unit": "day/month",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "EGRESS_L34_15": {
+      "unit": "USD/TB",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "USERS_L35_18": {
+      "unit": "call/day",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "USERS_L35_34": {
+      "unit": "call/day",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "USERS_L35_48": {
+      "unit": "call/day",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "call_stats_L41_31": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L25_39": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L26_38": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L27_33": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L28_33": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L29_33": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L30_41": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L31_37": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L32_43": {
+      "unit": "FLOP/s",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "STORE_L38_19": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "STORE_L38_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "STORE_L38_38": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "STORE_L38_56": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "cs_L64_28": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "macs_L117_90": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_L143_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_L143_52": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_L143_62": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_cal_L144_68": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_cal_L144_72": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L25_86": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L26_85": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L27_41": {
+      "unit": "USD/GPU/h",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L27_48": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L28_41": {
+      "unit": "USD/GPU/h",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L28_48": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L29_43": {
+      "unit": "USD/GPU/h",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L29_50": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L30_52": {
+      "unit": "USD/GPU/h",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L30_59": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L31_87": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "GPUS_L32_93": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "apis__GLM_5_3_Flash_API__Z_ai____L84_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "apis__GLM_5_3_Flash_API__Z_ai____L84_62": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "apis__GLM_5_3_Flash_API__Z_ai____L84_68": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "store_L99_103": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L101_18": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L101_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "calls_m_L109_36": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "box_L119_46": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "box_L119_71": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L130_18": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L130_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_cal_L144_96": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L148_19": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "loc_L149_33": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "stall_l_L150_32": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": false
+    },
+    "store_nvme_L170_72": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "calls_m_L109_14": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "macs_L117_11": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L132_22": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L132_28": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_cal_L144_82": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "air_cal_L144_89": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L177_23": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L177_28": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpu_s_day_L112_42": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "box_m_L115_55": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "box_m_L115_78": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L157_32": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L158_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L91_41": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L91_56": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "gpu_s_day_L112_20": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "store_nvme_L170_46": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "store_L99_76": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L104_36": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L162_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L162_54": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L179_41": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L138_38": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "calibration": {
+    "kv_wire_L100_38": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_wire_L100_33": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L103_21": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L103_26": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L103_37": {
+      "unit": "Mbit/s",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_wire_L100_27": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L55_108": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_wire_L100_23": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L55_105": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "kv_wire_L100_14": {
+      "unit": "B/token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L55_101": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L55_99": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L95_111": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "main_L55_94": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  },
+  "sensitivity": {
+    "host_sessions_L9_20": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L9_27": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L9_36": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "host_sessions_L9_48": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_S0__S1__L22_27": {
+      "unit": "session",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "module_L25_29": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "module_L25_43": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "module_L25_57": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "module_L25_73": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_r0__r1__L37_42": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_r0__r1__L37_47": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_r0__r1__L37_84": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "_r0__r1__L37_89": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "med_L14_18": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "med_L14_40": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L15_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L16_20": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "module_L27_31": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "med_L14_30": {
+      "unit": "1",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "d_L15_60": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L16_59": {
+      "unit": "token",
+      "integer": false,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "o_L16_53": {
+      "unit": "token",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    },
+    "v_L31_83": {
+      "unit": "1",
+      "integer": true,
+      "minimum": 0,
+      "exclusive_minimum": true
+    }
+  }
+}

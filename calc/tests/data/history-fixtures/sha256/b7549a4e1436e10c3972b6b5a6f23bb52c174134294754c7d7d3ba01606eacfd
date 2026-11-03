@@ -1,0 +1,25 @@
+% Claim: the four default R7 CSVs parse with exact row counts and pgfplots plots the state/portion/depth-filtered turn chart.
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\pgfplotstableread[col sep=comma]{../out/paper/turn_speedup.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=48\relax\else\errmessage{Wrong R7 chart row count}\fi
+\typeout{R7 TABLE turn_speedup ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/oneshot_ingest.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=36\relax\else\errmessage{Wrong R7 chart row count}\fi
+\typeout{R7 TABLE oneshot_ingest ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/decode_sensitivity.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=32\relax\else\errmessage{Wrong R7 chart row count}\fi
+\typeout{R7 TABLE decode_sensitivity ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/arch_compare.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=8\relax\else\errmessage{Wrong R7 chart row count}\fi
+\typeout{R7 TABLE arch_compare ROWS \pgfplotsretval}
+\begin{tikzpicture}\begin{axis}[xlabel=Link Mbit/s,ylabel=Speedup]
+\addplot[restrict expr to domain={\thisrow{depth}}{100000:100000},restrict expr to domain={\thisrow{portion}}{2000:2000},restrict expr to domain={\thisrow{state_bytes}}{156894784:156894784}] table[x=link_mbit,y=speedup,col sep=comma]{../out/paper/turn_speedup.csv};
+\end{axis}\end{tikzpicture}
+\end{document}

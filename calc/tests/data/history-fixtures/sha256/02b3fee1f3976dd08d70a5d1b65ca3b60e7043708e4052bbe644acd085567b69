@@ -1,0 +1,12 @@
+{
+  "name": "hybrid_calc7_realcalls",
+  "description": "Historical hybrid_calc7_realcalls output, original algorithms and assumptions",
+  "kind": "legacy",
+  "module": "workload",
+  "inputs": [
+    "legacy.json"
+  ],
+  "requires": [
+    "stats"
+  ]
+}

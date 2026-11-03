@@ -1,0 +1,25 @@
+client,share,overflow_api,capital,saving_month,cash_months,residual_adjusted_months,source
+M3 Max 128 GB (measured),0.2,median,3501,60.43302407367734,57.9319015333691,37.65573599668991,person_cost_s20_conservative.csv
+M3 Max 128 GB (measured),0.2,cheapest,3501,-27.136234575420673,no payback,no payback,person_cost_s20_conservative.csv
+M4 Max 128 GB (estimate),0.2,median,3500,61.347921923254084,57.05164723229714,37.08357070099314,person_cost_s20_conservative.csv
+M4 Max 128 GB (estimate),0.2,cheapest,3500,-26.221336725843926,no payback,no payback,person_cost_s20_conservative.csv
+M5 Max 64 GB,0.2,median,2600,60.74150363845695,42.8043404304841,27.82282127981467,person_cost_s20_conservative.csv
+M5 Max 64 GB,0.2,cheapest,2600,-25.722102378462807,no payback,no payback,person_cost_s20_conservative.csv
+M5 Max 128 GB,0.2,median,4200,62.44392915397339,67.26034150803831,43.7192219802249,person_cost_s20_conservative.csv
+M5 Max 128 GB,0.2,cheapest,4200,-25.125329495124618,no payback,no payback,person_cost_s20_conservative.csv
+M5 Ultra 96 GB,0.2,median,5499,63.374793749184605,86.76951315633673,56.40018355161887,person_cost_s20_conservative.csv
+M5 Ultra 96 GB,0.2,cheapest,5499,-24.194464899913406,no payback,no payback,person_cost_s20_conservative.csv
+M5 Ultra 256 GB,0.2,median,10799,63.787853614423696,169.29555374721267,110.04210993568823,person_cost_s20_conservative.csv
+M5 Ultra 256 GB,0.2,cheapest,10799,-23.781405034674314,no payback,no payback,person_cost_s20_conservative.csv
+M3 Max 128 GB (measured),0.5,median,3501,78.93889034092342,44.35076278472862,28.827995810073606,person_cost_s50_conservative.csv
+M3 Max 128 GB (measured),0.5,cheapest,3501,-28.92876479265054,no payback,no payback,person_cost_s50_conservative.csv
+M4 Max 128 GB (estimate),0.5,median,3500,115.16694164383492,30.39066549864712,19.75393257412063,person_cost_s50_conservative.csv
+M4 Max 128 GB (estimate),0.5,cheapest,3500,-30.765572835544916,no payback,no payback,person_cost_s50_conservative.csv
+M5 Max 64 GB,0.5,median,2600,115.20697112023646,22.568078777858798,14.66925120560822,person_cost_s50_conservative.csv
+M5 Max 64 GB,0.5,cheapest,2600,-30.111665314080227,no payback,no payback,person_cost_s50_conservative.csv
+M5 Max 128 GB,0.5,median,4200,133.55996290026422,31.446549615593604,20.440257250135843,person_cost_s50_conservative.csv
+M5 Max 128 GB,0.5,cheapest,4200,-30.097329507486606,no payback,no payback,person_cost_s50_conservative.csv
+M5 Ultra 96 GB,0.5,median,5499,187.54161142416154,29.321492751616336,19.05897028855062,person_cost_s50_conservative.csv
+M5 Ultra 96 GB,0.5,cheapest,5499,-31.381535198583492,no payback,no payback,person_cost_s50_conservative.csv
+M5 Ultra 256 GB,0.5,median,10799,188.57426108725926,57.26656404610257,37.22326662996667,person_cost_s50_conservative.csv
+M5 Ultra 256 GB,0.5,cheapest,10799,-30.348885535485763,no payback,no payback,person_cost_s50_conservative.csv

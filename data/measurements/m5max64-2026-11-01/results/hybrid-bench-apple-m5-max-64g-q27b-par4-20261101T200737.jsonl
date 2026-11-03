@@ -1,0 +1,4 @@
+{"kind": "meta", "tool": "hybrid_bench", "version": "1.1", "label": "apple-m5-max-64g-q27b-par4", "notes": "4 streams at 32k, np 4, ctx 140000", "depths": "16k,50k,100k,150k,200k,260k", "deltas": "512,2k,10k", "gen": 128, "smoke": false, "python": "3.14.7", "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O", "machine": "arm64", "machdep.cpu.brand_string": "Apple M5 Max", "hw.memsize": "68719476736", "hw.model": "Mac17,6", "ts": 1793549257.43}
+{"kind": "server", "api": "llama", "n_ctx": 35072, "total_slots": 4, "model_file": "Qwen3.8-27B-Q4_K_M.gguf", "build": "b11087-c21284cdf", "ts": 1793549257.44}
+{"kind": "parallel", "streams": 4, "depth": 32000, "single_decode_tok_s": 18.29, "per_stream_decode_tok_s": [8.34, 8.34, 8.34, 8.34], "aggregate_decode_tok_s": 33.37, "batching_gain": 1.82, "wall_s": 16.78, "ts": 1793549622.588}
+{"kind": "done", "minutes": 6.1, "ts": 1793549622.589}

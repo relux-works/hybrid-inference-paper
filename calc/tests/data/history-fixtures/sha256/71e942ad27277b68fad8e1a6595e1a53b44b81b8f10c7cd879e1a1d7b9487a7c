@@ -1,0 +1,52 @@
+agent,model,price_name,priced_as,cls,calls,prompt,cached,output,reasoning,low,high,qwen_low,qwen_high,note
+codex,gpt-5.6-sol,gpt-5.6-sol,,above,444098,59478361117,58201425024,118618255,42443607,30760.68,39043.94,3904.39,3904.39,price changed during the year
+codex,gpt-6-astra,gpt-6-astra,,above,138672,17635825132,17244051072,63417197,19978260,24332.65,24332.65,1248.34,1248.34,
+claude,claude-opus-5-5,claude-opus-5-5,,above,131507,52841507791,52194825325,88026832,28296276,17237.22,17237.22,3503.54,3503.54,"TTL split exceeds total write by 3806 tokens (independent maxima), priced as logged"
+claude,claude-opus-5,claude-opus-5,,above,96830,21451923599,21172165936,72215689,17390741,15170.72,15170.72,1553.18,1553.18,"TTL split exceeds total write by 433 tokens (independent maxima), priced as logged"
+claude,claude-fable-5,claude-fable-5,,above,16369,4838391945,4732102808,16307361,1830314,7571.67,7571.67,386.74,386.74,
+codex,gpt-6.1-sol,gpt-6.1-sol,,above,270697,33488087077,32844950400,150783934,60463909,6078.61,6078.61,2416.17,2416.17,
+claude,claude-opus-4-8,claude-opus-4-8,,above,9426,2776981394,2695188918,12055578,136093,2441.49,2441.49,250.18,250.18,"TTL split exceeds total write by 161925 tokens (independent maxima), priced as logged"
+claude,claude-fable-5-1,claude-fable-5-1,,above,7493,1995538827,1924671297,10816442,3899190,2405.32,2405.32,197.85,197.85,
+codex,gpt-5.4,gpt-5.4,,effort,40690,5039694045,4820313344,21328772,10033459,2073.46,2073.46,414.69,414.69,
+muse,muse-spark-1.3-contributor,muse-spark-1.3-contributor,,above,113520,18861828790,18470483110,76210037,40462190,91.32,1938.37,1347.83,10583.07,
+codex,gpt-5.5,gpt-5.5,,effort,15578,1907383300,1827119872,6453928,2480554,1508.49,1508.49,150.85,150.85,
+muse,muse-wonder-full-1.0-contributor,muse-wonder-full-1.0-contributor,muse-wonder-1.0,above,1469,299906960,293368712,570634,146362,96.24,1269.71,19.65,166.33,proxy price muse-wonder-1.0
+claude,claude-sonnet-5-5,claude-sonnet-5-5,,above,12536,2089659607,2042508618,11265794,5163640,501.62,705.87,182.1,182.1,price changed during the year
+claude,claude-sonnet-5,claude-sonnet-5,,effort,10688,1705946889,1682109648,6264961,3259055,492.83,492.83,126.34,126.34,
+codex,gpt-5.2,gpt-5.2,,at_or_below,16813,1509566344,1471589632,9850039,7774388,461.89,461.89,122.12,122.12,
+codex,gpt-5.6-terra,gpt-5.6-terra,,effort,10167,1015683772,981691904,3853441,1709014,310.56,388.2,77.64,77.64,price changed during the year
+codex,gpt-5.6-luna,gpt-5.6-luna,,effort,15066,1998203466,1955442944,7226887,3096609,56.33,281.67,140.83,140.83,price changed during the year
+codex,gpt-6-luna,gpt-6-luna,,effort,145850,19361070169,19012978909,96279009,63521718,273.08,273.08,1413.53,1413.53,
+codex,gpt-5.3-codex-spark,gpt-5.3-codex-spark,gpt-5.3-codex,unclassified,7875,458307085,436206720,3646803,2200829,166.07,166.07,43.8,43.8,proxy price gpt-5.3-codex
+codex,gpt-6-sol,gpt-6-sol,,above,4137,523825495,518374528,1031307,391850,124.89,124.89,31.74,31.74,
+muse,muse-wonder-full-1.0,muse-wonder-full-1.0,muse-wonder-1.0,above,161,27620255,24024848,107368,57691,21.33,117.43,3.32,15.33,proxy price muse-wonder-1.0
+codex,gpt-5.1-codex-max,gpt-5.1-codex-max,,unclassified,5282,567094729,546818048,1738399,996160,111.08,111.08,42.69,42.69,
+claude,claude-opus-4-7,claude-opus-4-7,,effort,227,75694899,68987973,296666,0,108.98,108.98,11.05,11.05,
+codex,gpt-5.3-codex,gpt-5.3-codex,,at_or_below,3265,311885465,298798464,1388846,738930,94.64,94.64,25.65,25.65,
+codex,gpt-5-codex,gpt-5-codex,,at_or_below,1566,209156771,200827648,769260,425536,43.21,43.21,16.51,16.51,
+muse,muse-wonder-1.0-contributor,muse-wonder-1.0-contributor,muse-wonder-1.0,above,26,2639867,2356752,15449,3185,1.91,11.34,0.31,1.48,proxy price muse-wonder-1.0
+codex,gpt-5.1-codex,gpt-5.1-codex,,at_or_below,172,14894984,14476928,75179,52160,3.08,3.08,1.16,1.16,
+muse,muse-spark-1.3,muse-spark-1.3,,above,50,2035899,608272,42655,34988,0.15,2.82,0.87,1.18,low bound at Contributor-mode price
+claude,claude-sonnet-4-6,claude-sonnet-4-6,,at_or_below,45,3301889,3167081,12912,5359,1.95,1.95,0.33,0.33,
+codex,gpt-5.2-codex,gpt-5.2-codex,,at_or_below,74,3221028,3079168,41160,34048,1.36,1.36,0.35,0.35,
+codex,muse-spark-1.3-contributor-free,muse-spark-1.3-contributor,,above,984,228266198,226328370,211776,80353,0.69,0.69,12.92,12.92,label read as muse-spark-1.3-contributor
+codex,muse-spark-1.3-contributor,muse-spark-1.3-contributor,,above,136,22415075,20972318,61168,34034,0.2,0.2,1.95,1.95,
+claude,claude-haiku-4-5-20251001,claude-haiku-4-5,,unknown,8,348353,153069,2135,1117,,,0.19,0.19,no list price
+codex,,,,unknown,44,4720974,4375680,12737,2857,,,0.43,0.43,no list price
+codex,Qwen3.6-27B,qwen3.6-27b,,local,5198,441645930,435360906,1739344,0,,,,,"own machine, no API bill"
+codex,codex-auto-review,codex-auto-review,,unknown,119,6002595,5692416,5336,2870,,,0.46,0.46,no list price
+codex,google/gemma-4-26b-a4b,google/gemma-4-26b-a4b,,local,213,6800548,6536444,118946,102348,,,,,"own machine, no API bill"
+codex,gpt-5.4-mini,gpt-5.4-mini,,unknown,65,2087409,1960832,21912,13269,,,0.23,0.23,no list price
+codex,gpt-oss-120b,gpt-oss-120b,,local,91,2799064,2724378,22678,20022,,,,,"own machine, no API bill"
+codex,gpt-oss-120b-high-131k,gpt-oss-120b-high-131k,,local,38,707603,0,7549,0,,,,,"own machine, no API bill"
+codex,gpt-oss-20b-high-131k,gpt-oss-20b-high-131k,,local,329,5762308,0,64677,0,,,,,"own machine, no API bill"
+codex,gpt-oss-20b-high-131k:latest,gpt-oss-20b-high-131k:latest,,local,45,607658,0,6826,0,,,,,"own machine, no API bill"
+codex,gpt-oss-safeguard-120b-mlx,gpt-oss-safeguard-120b-mlx,,local,6,74030,0,1115,492,,,,,"own machine, no API bill"
+codex,gpt-oss:20b,gpt-oss:20b,,local,6,83818,0,809,0,,,,,"own machine, no API bill"
+codex,muse-spark-1.2,muse-spark-1.2,,unknown,3,131440,86114,562,118,,,0.03,0.03,no list price
+codex,muse-spark-1.2-contributor,muse-spark-1.2-contributor,,unknown,1634,210232993,203961763,615570,273094,,,15.18,15.18,no list price
+codex,openai/gpt-oss-20b,openai/gpt-oss-20b,,local,61,837496,0,15045,11775,,,,,"own machine, no API bill"
+codex,qwen/qwen3-coder-next,qwen/qwen3-coder-next,,local,181,592830,0,13305,0,,,,,"own machine, no API bill"
+codex,qwen3.8-27b-q4km,qwen3.8-27b-q4km,,local,10,66245,52880,443,0,,,,,"own machine, no API bill"
+muse,,,,unknown,62,0,0,0,0,,,0.0,0.0,no list price
+muse,muse-spark-1.2-contributor,muse-spark-1.2-contributor,,unknown,1157,108378837,105164618,520408,140056,,,8.43,61.01,no list price

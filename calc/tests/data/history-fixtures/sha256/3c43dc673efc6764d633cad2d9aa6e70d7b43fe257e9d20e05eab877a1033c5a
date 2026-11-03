@@ -1,0 +1,602 @@
+{
+  "paper_tables": {
+    "hours": {
+      "value": 8,
+      "unit": "h/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner eight-hour operator day for client capacity and owned all-server sizing."
+      }
+    },
+    "streams": {
+      "value": 4,
+      "unit": "stream",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Use the measured four-stream anchor; memory may reduce active streams per call. No extrapolation beyond measured stream count."
+      }
+    },
+    "teams": [
+      {
+        "value": 5,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      },
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      },
+      {
+        "value": 20,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "owner request 2026-10-31, small-team own-server case"
+        }
+      },
+      {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      },
+      {
+        "value": 500,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      },
+      {
+        "value": 5000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      }
+    ],
+    "shares": {
+      "s20": {
+        "value": 0.2,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner open-model shares; 100% is academic only."
+        }
+      },
+      "s50": {
+        "value": 0.5,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner open-model shares; 100% is academic only."
+        }
+      },
+      "academic_s100": {
+        "value": 1,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner open-model shares; 100% is academic only."
+        }
+      }
+    },
+    "links": [
+      {
+        "value": 100000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      },
+      {
+        "value": 300000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      },
+      {
+        "value": 1000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+        }
+      }
+    ],
+    "offload_links": [
+      {
+        "value": 100000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner legacy calc9 D link grid, decimal line rate."
+        }
+      },
+      {
+        "value": 300000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner legacy calc9 D link grid, decimal line rate."
+        }
+      },
+      {
+        "value": 1000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner legacy calc9 D link grid, decimal line rate."
+        }
+      },
+      {
+        "value": 2500000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner legacy calc9 D link grid, decimal line rate."
+        }
+      }
+    ],
+    "state_bits": [
+      {
+        "value": 32,
+        "unit": "bit",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner state-transfer formats; 16-bit is a hypothetical compatible representation, not measured equivalence."
+        }
+      },
+      {
+        "value": 16,
+        "unit": "bit",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner state-transfer formats; 16-bit is a hypothetical compatible representation, not measured equivalence."
+        }
+      }
+    ],
+    "offload_goodput": {
+      "value": 1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Reproduce calc9 D line-rate convention; hardware.links.wan.goodput remains the separate client-policy goodput."
+      }
+    },
+    "sizing_share": {
+      "value": 0.5,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Dedicated remote prefill pool planning at 50% of heavy-profile calls, before any individual client cap."
+      }
+    },
+    "egress_prices": [
+      {
+        "value": 0,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner traffic sensitivity; decimal TB."
+        }
+      },
+      {
+        "value": 5,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner traffic sensitivity; decimal TB."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner traffic sensitivity; decimal TB."
+        }
+      },
+      {
+        "value": 90,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner traffic sensitivity; decimal TB."
+        }
+      }
+    ],
+    "glm": {
+      "contexts": [
+        {
+          "value": 200000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Final context of a growing GLM session replaying measured call increments from zero."
+          }
+        },
+        {
+          "value": 400000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Final context of a growing GLM session replaying measured call increments from zero."
+          }
+        },
+        {
+          "value": 600000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Final context of a growing GLM session replaying measured call increments from zero."
+          }
+        },
+        {
+          "value": 800000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Final context of a growing GLM session replaying measured call increments from zero."
+          }
+        },
+        {
+          "value": 1000000,
+          "unit": "token",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Final context of a growing GLM session replaying measured call increments from zero."
+          }
+        }
+      ],
+      "sessions_day": {
+        "value": 2,
+        "unit": "session/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Explicit planning estimate: two full growing GLM sessions per person per active day. Client excess is costed at GLM API."
+        }
+      },
+      "moe_prefill_efficiency": {
+        "value": 0.5,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Calc4 conservative MoE local-prefill efficiency relative to FLOP-scaled Qwen curve; GLM has no local benchmark in the package."
+        }
+      },
+      "streams": {
+        "value": 4,
+        "unit": "stream",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Calc4 GLM four-agent estimate, capped by memory at the final context; Qwen measured batching gain is not applied to GLM."
+        }
+      },
+      "ingest_tokens": {
+        "value": 1000000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner one-million-token cold-ingest comparison."
+        }
+      },
+      "integration_step": {
+        "value": 1000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Midpoint quadrature width for depth-dependent local/server cold ingest; refinement tested."
+        }
+      },
+      "start_depth": {
+        "value": 0,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Cold growing sessions: start without a cached prefix; final delta/output is clipped to the requested context."
+        }
+      }
+    },
+    "crossover_steps": [
+      {
+        "step": "calc5 Rule A / one time zone",
+        "paper_uses": "Historical baseline"
+      },
+      {
+        "step": "Server weight traffic: FP8 27 GB to Q4 15.1875 GB",
+        "paper_uses": "Quantized server weights"
+      },
+      {
+        "step": "Replace synthetic calls with measured calc8 calls",
+        "paper_uses": "Measured call mix"
+      },
+      {
+        "step": "Daily work window: 8 hours to 10 hours",
+        "paper_uses": "Use eight-hour client/operator baseline instead"
+      },
+      {
+        "step": "Peak/headroom: 2 to 1/0.70",
+        "paper_uses": "Target-load planning"
+      },
+      {
+        "step": "R3 sparse team grid (reviewed endpoint)",
+        "paper_uses": "Historical sampled grid only"
+      },
+      {
+        "step": "Integer sweep 1..20000 (grid sensitivity)",
+        "paper_uses": "Every-integer crossover"
+      },
+      {
+        "step": "Correct all-server output double counting for paper",
+        "paper_uses": "Input-only prefill, output decoded once"
+      },
+      {
+        "step": "Paper: measured KV 34844 B/token",
+        "paper_uses": "Corrected r4 paper reference; new client tables use measured scaling"
+      }
+    ],
+    "decode_scaling": {
+      "value": "measured_power_roofline",
+      "unit": "decode law",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Aggregate decode = min(single*k**(log(measured_gain)/log(measured_streams)), calibrated_bandwidth*k/(weights+k*state_traffic)). Interpolation one-to-four streams uses measured gain at 32k; depth extrapolation is capped by the memory roofline and monotone in stream capacity."
+      }
+    }
+  },
+  "hardware": {
+    "clients": {
+      "m3max": {
+        "compute": {
+          "value": 14000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        },
+        "purchase_price": {
+          "value": 6000,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Replacement valuation for a bought M3 Max 128 GB: $6k estimate below the existing $6,699 M5 Max 128 reference. Not a quote or original purchase receipt."
+          }
+        },
+        "premium_credit": {
+          "value": 2499,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+          }
+        },
+        "label": "M3 Max 128 GB (measured)"
+      },
+      "m5max64": {
+        "compute": {
+          "value": 60000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        },
+        "purchase_price": {
+          "value": 5099,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "premium_credit": {
+          "value": 2499,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+          }
+        }
+      },
+      "m5max": {
+        "compute": {
+          "value": 60000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        },
+        "purchase_price": {
+          "value": 6699,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "premium_credit": {
+          "value": 2499,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+          }
+        }
+      },
+      "ultra96": {
+        "compute": {
+          "value": 112000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        },
+        "purchase_price": {
+          "value": 5499,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "premium_credit": {
+          "value": 0,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+          }
+        }
+      },
+      "ultra256": {
+        "compute": {
+          "value": 140000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        },
+        "purchase_price": {
+          "value": 10799,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+          }
+        },
+        "premium_credit": {
+          "value": 0,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+          }
+        }
+      },
+      "m4max": {
+        "label": "M4 Max 128 GB (estimate)",
+        "memory": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Chosen M4 Max configuration for comparison; 128 GB memory envelope, no measured package."
+          }
+        },
+        "bandwidth": {
+          "value": 546000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "M4 Max 40-core 546 GB/s hardware-envelope estimate; no live source verification."
+          }
+        },
+        "compute": {
+          "value": 28000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Unmeasured M4 Max compute envelope: twice the 14 TFLOP/s M3 reference, explicitly an estimate."
+          }
+        },
+        "power": {
+          "value": 0.1,
+          "unit": "kW",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Reuse 100 W Mac envelope from calc4; estimate."
+          }
+        },
+        "purchase_price": {
+          "value": 5999,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Unquoted M4 Max 128 GB replacement budget, rounded near the $6k M3 valuation; estimate."
+          }
+        },
+        "premium_credit": {
+          "value": 2499,
+          "unit": "USD",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Credit the same baseline laptop as other purchased laptop premiums; estimate."
+          }
+        }
+      },
+      "strix": {
+        "label": "Strix Halo 128 GB",
+        "memory": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Single 128 GB client from calc4/NOTES, not a two-node GLM pair."
+          }
+        },
+        "bandwidth": {
+          "value": 256000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 single-client bandwidth envelope; estimate, no live refresh."
+          }
+        },
+        "compute": {
+          "value": 37000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        }
+      },
+      "spark": {
+        "label": "DGX Spark 128 GB",
+        "memory": {
+          "value": 128000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Single 128 GB client from calc4/NOTES, not a two-node GLM pair."
+          }
+        },
+        "bandwidth": {
+          "value": 273000000000.0,
+          "unit": "B/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc4 single-client bandwidth envelope; estimate, no live refresh."
+          }
+        },
+        "compute": {
+          "value": 99800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline NOTES.md, \u041f\u0435\u0440\u0435\u0441\u0447\u0451\u0442 v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "prices": {
+    "apis": {
+      "qwen_median": {
+        "label": "27B median",
+        "input": {
+          "value": 0.18,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "output": {
+          "value": 2.3,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "cache_read": {
+          "value": 0.05,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "cache_write": {
+          "value": 0.18,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        }
+      },
+      "qwen_cheap": {
+        "label": "27B Chutes",
+        "input": {
+          "value": 0.039,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "output": {
+          "value": 1.25,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "cache_read": {
+          "value": 0.0039,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ.",
+            "note": "Corrected in run 3 from .003 to .0039 USD/Mtoken, per owner offline api-capability-2026-10.md / NOTES cheapest-provider table. Legacy data untouched."
+          }
+        },
+        "cache_write": {
+          "value": 0.039,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        }
+      },
+      "sonnet": {
+        "label": "Sonnet 5.5",
+        "input": {
+          "value": 2,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "output": {
+          "value": 10,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "cache_read": {
+          "value": 0.2,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        },
+        "cache_write": {
+          "value": 2.5,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        }
+      },
+      "glm": {
+        "label": "GLM-5.3-Flash API",
+        "input": {
+          "value": 0.15,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://docs.z.ai/guides/overview/pricing",
+            "access_date": "2026-10-30",
+            "note": "Historical values from the existing data/research/models-apis-2026-10.md snapshot, not a current network quote."
+          }
+        },
+        "output": {
+          "value": 0.5,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://docs.z.ai/guides/overview/pricing",
+            "access_date": "2026-10-30",
+            "note": "Historical values from the existing data/research/models-apis-2026-10.md snapshot, not a current network quote."
+          }
+        },
+        "cache_read": {
+          "value": 0.03,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://docs.z.ai/guides/overview/pricing",
+            "access_date": "2026-10-30",
+            "note": "Historical values from the existing data/research/models-apis-2026-10.md snapshot, not a current network quote."
+          }
+        },
+        "cache_write": {
+          "value": 0.15,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+          }
+        }
+      },
+      "qwen_flash": {
+        "label": "Qwen3.8-Flash",
+        "input": {
+          "value": 0.15,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Historical calc3 Flash API (Alibaba) tariff, OpenRouter 2026-10-29 snapshot; cache write 0.20 inherited assumption. Retained for exact calc8 API comparison, not current live pricing."
+          }
+        },
+        "output": {
+          "value": 0.47,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Historical calc3 Flash API (Alibaba) tariff, OpenRouter 2026-10-29 snapshot; cache write 0.20 inherited assumption. Retained for exact calc8 API comparison, not current live pricing."
+          }
+        },
+        "cache_read": {
+          "value": 0.016,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Historical calc3 Flash API (Alibaba) tariff, OpenRouter 2026-10-29 snapshot; cache write 0.20 inherited assumption. Retained for exact calc8 API comparison, not current live pricing."
+          }
+        },
+        "cache_write": {
+          "value": 0.2,
+          "unit": "USD/Mtoken",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Historical calc3 Flash API (Alibaba) tariff, OpenRouter 2026-10-29 snapshot; cache write 0.20 inherited assumption. Retained for exact calc8 API comparison, not current live pricing."
+          }
+        }
+      }
+    },
+    "rental_gpu_hour": {
+      "value": 9.5,
+      "unit": "USD/GPU/h",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      }
+    },
+    "energy_dc": {
+      "value": 0.093,
+      "unit": "USD/kWh",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      }
+    },
+    "energy_client": {
+      "value": 0.15,
+      "unit": "USD/kWh",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      }
+    },
+    "colo": {
+      "value": 190,
+      "unit": "USD/kW/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      }
+    },
+    "egress": {
+      "value": 5,
+      "unit": "USD/TB",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      }
+    },
+    "dram": {
+      "value": 30,
+      "unit": "USD/GB",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 DDR5 RAM estimate for active hybrid KV store."
+      }
+    },
+    "nvme": {
+      "value": 800,
+      "unit": "USD/TB",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 enterprise NVMe estimate for parked hybrid sessions."
+      }
+    }
+  }
+}

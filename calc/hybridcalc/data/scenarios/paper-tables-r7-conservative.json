@@ -2,7 +2,7 @@
   "inputs": [
     "hardware.json",
     "models.json",
-    "prices.json",
+    "prices-r12.json",
     "workload.json",
     "sampler.json",
     "economics.json",
@@ -11,7 +11,7 @@
     "operations.json",
     "bridge.json",
     "paper-tables.json",
-    "paper-tables-r7.json",
+    "paper-tables-r7-r12.json",
     "hosting.json",
     "hosting-conservative.json"
   ],

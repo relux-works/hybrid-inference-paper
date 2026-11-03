@@ -62,5 +62,14 @@
   ],
   "paper-tables-r9.json": [
     "r9"
+  ],
+  "prices-r12.json": [
+    "prices"
+  ],
+  "paper-tables-r7-r12.json": [
+    "r7"
+  ],
+  "server-measured.json": [
+    "measurements"
   ]
 }

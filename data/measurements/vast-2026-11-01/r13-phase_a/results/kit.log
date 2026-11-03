@@ -1,0 +1,57 @@
+2026-11-01T15:11:55Z GPU 0: NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 97887 MiB (97249 free), compute 12.0, driver 595.91.07, CUDA 12.8, PCIe gen 4 x16
+2026-11-01T15:11:55Z host: AMD EPYC 7532 32-Core Processor, 64 threads, 251 GB RAM, Ubuntu 24.04.5 LTS, free disk 247 GB; one slot fits 262144 tokens
+2026-11-01T15:11:55Z check passed; results/system.json written
+2026-11-01T15:11:57Z cloning https://github.com/ggml-org/llama.cpp
+2026-11-01T15:12:04Z configuring llama.cpp c21284cdf5fd833b90ac1f824cdf8065e2700dc4 with CUDA for architecture 120a-real
+2026-11-01T15:12:10Z building llama-server and llama-bench (several minutes)
+2026-11-01T15:17:15Z built: 0.00.000.794 I srv  llama_server: initializing ... version: 0.4.1-dev (build 11087, commit c21284cdf) built with GNU 13.3.0 for Linux x86_64 
+2026-11-01T15:17:15Z verifying SHA-256 (about a minute)
+2026-11-01T15:17:30Z model verified: Qwen3.8-27B-Q4_K_M.gguf, 18973870432 bytes, sha256 31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34
+2026-11-01T15:17:31Z GGUF geometry recorded in results/model-geometry.json
+2026-11-01T15:17:32Z llama-server (smoke) started with pid 31427 on GPU 0; arguments: -c 32768 -np 1 --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T15:17:38Z llama-server ready after 5s; GPU memory used: 19526 MiB
+2026-11-01T15:17:41Z smoke test finished; check results/hybrid-bench-*smoke*.md
+2026-11-01T15:17:42Z llama-server pid 31427 stopped
+2026-11-01T15:17:44Z context planned for the depth run: 262144 tokens
+2026-11-01T15:17:44Z slot save/restore on (247 GB free)
+2026-11-01T15:17:44Z llama-server (depth-1) started with pid 31609 on GPU 0; arguments: -c 262144 -np 1 --slot-save-path <work>/slots --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T15:17:50Z llama-server ready after 5s; GPU memory used: 28262 MiB
+2026-11-01T15:17:50Z depth run started at context 262144, depths 16k,50k,100k,150k,200k,249k; expect 20 to 60 minutes on a recent GPU
+2026-11-01T15:21:45Z depth run finished
+2026-11-01T15:21:46Z llama-server pid 31609 stopped
+2026-11-01T15:21:47Z llama-server (delta-geometry) started with pid 31854 on GPU 0; arguments: -c 262144 -np 1 --slot-save-path <work>/delta-geometry-sVUpGx --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T15:21:54Z llama-server ready after 5s; GPU memory used: 28262 MiB
+2026-11-01T15:21:59Z ERROR: delta geometry failed; partial observations retained in <results>/delta-geometry-20261101T152154Z.json
+2026-11-01T15:22:00Z llama-server pid 31854 stopped
+2026-11-01T15:22:01Z llama-server (slot-65k) started with pid 32008 on GPU 0; arguments: -c 67584 -np 1 --slot-save-path <work>/slots-export --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T15:22:08Z llama-server ready after 5s; GPU memory used: 20852 MiB
+2026-11-01T15:22:32Z llama-server pid 32008 stopped
+2026-11-01T15:22:34Z slot file ready: work/slots-export/parallel-depth-65536.bin, 2440431168 bytes, sha256 9d97296bad5d6ef6790e58873ec2e50cfb0ec2e2c9465b668da0b3412ed8d716
+2026-11-01T15:22:34Z llama-server (slot-131k) started with pid 32155 on GPU 0; arguments: -c 133120 -np 1 --slot-save-path <work>/slots-export --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T15:22:40Z llama-server ready after 5s; GPU memory used: 23348 MiB
+2026-11-01T15:23:40Z llama-server pid 32155 stopped
+2026-11-01T15:23:44Z slot file ready: work/slots-export/parallel-depth-131072.bin, 4723967552 bytes, sha256 235e28cf0e31f106b74d06d437d7a1e340c50a695131046a9d294994e842dc40
+2026-11-01T15:23:44Z slot files done; copy them into work/slots-import of the Mac kit (see AGENT_PROMPT.md)
+2026-11-01T16:01:53Z sweep recorded in <results>/sweep-20261101T152345Z
+2026-11-01T16:22:38Z server load import sha256 235e28cf0e31f106b74d06d437d7a1e340c50a695131046a9d294994e842dc40
+2026-11-01T16:22:38Z llama-server (serverload-np1) started with pid 41162 on GPU 0; arguments: -c 180224 -np 1 --slot-save-path <work>/slots-export --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T16:22:45Z llama-server ready after 5s; GPU memory used: 25142 MiB
+2026-11-01T16:22:51Z llama-server pid 41162 stopped
+IN  sha256 235e28cf0e31f106b74d06d437d7a1e340c50a695131046a9d294994e842dc40  <work>/slots-export/parallel-depth-131072.bin
+OUT sha256 6c3e2b84253ece687c5e618bd0ba48583485b073fa92093f198cafe2ea792c39  <work>/slots-serverload/step-YQUvWl/parallel-depth-131072.bin
+2026-11-01T16:22:56Z llama-server (serverload-np4) started with pid 41311 on GPU 0; arguments: -c 720896 -np 4 --slot-save-path <work>/slots-serverload/step-YQUvWl --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T16:23:03Z llama-server ready after 5s; GPU memory used: 45656 MiB
+2026-11-01T16:24:32Z llama-server pid 41311 stopped
+IN  sha256 235e28cf0e31f106b74d06d437d7a1e340c50a695131046a9d294994e842dc40  <work>/slots-export/parallel-depth-131072.bin
+OUT sha256 a5f97180cf129f0aa9cda8e26e25510fa450fbe7792cb6806ce9fcaf129b5878  <work>/slots-serverload/step-kw7QaR/parallel-depth-131072.bin
+2026-11-01T16:24:38Z llama-server (serverload-np8) started with pid 41492 on GPU 0; arguments: -c 1441792 -np 8 --slot-save-path <work>/slots-serverload/step-kw7QaR --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T16:24:44Z llama-server ready after 5s; GPU memory used: 73006 MiB
+2026-11-01T16:30:03Z llama-server pid 41492 stopped
+IN  sha256 235e28cf0e31f106b74d06d437d7a1e340c50a695131046a9d294994e842dc40  <work>/slots-export/parallel-depth-131072.bin
+OUT sha256 92ffec088ab8c4533c9a62dee914fd7b59532be14931ebc913df3517ad9b5bbd  <work>/slots-serverload/step-PGdiEe/parallel-depth-131072.bin
+2026-11-01T16:30:09Z llama-server (serverload-np12) started with pid 41829 on GPU 0; arguments: -c 2162688 -np 12 --slot-save-path <work>/slots-serverload/step-PGdiEe --ctx-checkpoints 0 (context checkpoint snapshots disabled)
+2026-11-01T16:30:16Z llama-server exited during start; see results/server-serverload-np12.log
+2026-11-01T16:30:16Z server load 12 sessions: startup failed; skipped
+2026-11-01T16:30:17Z server-only load recorded; inspect aggregate prefill, p50/p90, rereads and clamps
+2026-11-01T16:30:18Z ERROR: the results were not packed: see the list above, and ask the owner how to proceed
+2026-11-01T17:17:51Z vLLM configurations recorded (including failures); inspect <results>/vllm-20261101T163019Z/vllm.md

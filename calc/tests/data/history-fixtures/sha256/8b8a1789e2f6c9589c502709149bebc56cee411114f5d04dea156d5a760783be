@@ -1,0 +1,55 @@
+% Claim: all ten committed CSVs parse in native pgfplots with exact default row counts,
+% and the documented GLM team filter produces a plot. Optional cached-only smoke;
+% this is not a build of the paper or a Python package dependency.
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\pgfplotstableread[col sep=comma]{../out/paper/client_fit_deep.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=32\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE client_fit_deep ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/client_sessions_day.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=24\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE client_sessions_day ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/crossover_explanation.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=9\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE crossover_explanation ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/glm_long_sessions.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 30 rows after adding team 20.
+\ifnum\pgfplotsretval=30\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE glm_long_sessions ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/offload_by_link.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=8\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE offload_by_link ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/person_cost_academic_s100.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 72 rows after adding team 20.
+\ifnum\pgfplotsretval=72\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE person_cost_academic_s100 ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/person_cost_s20.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 72 rows after adding team 20.
+\ifnum\pgfplotsretval=72\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE person_cost_s20 ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/person_cost_s50.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+% R10 claim: this chart has 72 rows after adding team 20.
+\ifnum\pgfplotsretval=72\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE person_cost_s50 ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/remote_rent_buy.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=126\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE remote_rent_buy ROWS \pgfplotsretval}
+\pgfplotstableread[col sep=comma]{../out/paper/traffic_user_month.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=3\relax\else\errmessage{Wrong chart row count}\fi
+\typeout{R5 TABLE traffic_user_month ROWS \pgfplotsretval}
+\begin{tikzpicture}\begin{axis}[xlabel=Tokens,ylabel=USD]
+\addplot[restrict expr to domain={\thisrow{team}}{500:500}] table[x=context,y=hybrid_session,col sep=comma]{../out/paper/glm_long_sessions.csv};
+\end{axis}\end{tikzpicture}
+\end{document}

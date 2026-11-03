@@ -1,0 +1,334 @@
+"""Writer-owned R13 reverse guard, independent of the quote-site registry.
+
+Scope set by the orchestrator (hybrid-e-r2-261101): decimal point/comma;
+comma, {,}, \\, and thin-space thousands; --/en-dash/hyphen ranges;
+percentages, $/rouble, written signs (including sign flips); byte units
+B/KB/MB/GB/KiB/MiB/GiB at printed precision; significant-digit prose
+rounding. Number-words are outside the guard and require the report checklist.
+Every TeX file is scanned, including comments, macros and layout constants:
+unrelated numeric collisions require exact (file,line,token) reasoned waivers.
+
+All numeric keys of every paired export are compared, including JSON leaves,
+all three R13 cases, both R12 design/measured references and derived tables.
+New-only measurement exports have no old value; they are inventoried explicitly.
+The publication formula catalog adds arithmetic results to this raw-key set.
+Matching is deliberately conservative: a numeric collision is not a claim of
+semantic dependency. A waiver records that distinction at the exact site.
+"""
+from history_fixtures import snapshot_read, snapshot_files, extract_snapshot
+import csv
+from decimal import Decimal, InvalidOperation, localcontext
+from functools import lru_cache
+import io
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+import tempfile
+
+from r13_audit import ROOT, OUT, BASELINE
+
+GROUP = r'(?:\\,|\{,\}|[,\u2009\u202f])'
+SCALAR = rf'[+−-]?(?:\d{{1,3}}(?:{GROUP}\d{{3}})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?|[.,]\d+)'
+BYTE_LABEL = r'(?:GiB|MiB|KiB|GB|MB|KB|B|ГиБ|МиБ|КиБ|ГБ|МБ|КБ|Б)'
+NUMBER = re.compile(rf'(?<![\w.]){SCALAR}(?:\s*(?:--|–|-)\s*{SCALAR})?(?:(?={BYTE_LABEL}(?!\w))|(?!\w|\.\d))')
+UNIT = re.compile(r'^(?:~|\s|\\,|\\(?:mathrm|text)\{)*(GiB|MiB|KiB|GB|MB|KB|B|ГиБ|МиБ|КиБ|ГБ|МБ|КБ|Б)(?![A-Za-zА-Яа-я])')
+PERCENT = re.compile(r'^(?:~|\s|\\,)*(?:\\?%|процент[а-яё]*\b)',re.IGNORECASE)
+BYTE_UNITS = dict(B=1,KB=1000,MB=1000**2,GB=1000**3,KiB=1024,MiB=1024**2,GiB=1024**3,
+                  Б=1,КБ=1000,МБ=1000**2,ГБ=1000**3,КиБ=1024,МиБ=1024**2,ГиБ=1024**3)
+
+
+def read_csv(path):
+    return list(csv.DictReader(io.StringIO(path.read_text())))
+
+
+def decimal(value):
+    try:
+        result=Decimal(str(value))
+        return result if result.is_finite() else None
+    except InvalidOperation:
+        return None
+
+
+def scalars(token):
+    """Keep range endpoints signed; a separator never consumes the right sign."""
+    return re.findall(SCALAR, re.sub(r'(?<=\d)\s*(--|–|-)\s*(?=[+−-]?(?:\d|[.,]\d))', ' | ',token))
+
+
+def spellings(token):
+    clean=token.replace('−','-').replace('\\,','').replace('{,}','').replace('\u2009','').replace('\u202f','')
+    # A comma followed by three digits can mean either grouping or decimal.
+    # Both interpretations are checked rather than silently losing a value.
+    variants={clean.replace(',','.')}
+    if re.fullmatch(r'[+-]?\d{1,3}(,\d{3})+(\.\d+)?',clean):variants.add(clean.replace(',',''))
+    return variants
+
+
+def precisions(text):
+    digits=len(text.partition('.')[2]) if '.' in text else 0
+    result={-digits}
+    if '.' not in text and text.rstrip('0').lstrip('+-'):
+        result.add(len(text)-len(text.rstrip('0')))
+    return result
+
+
+def rounded(value, exponent, explicit_plus=False):
+    if value is None:return 'non-numeric'
+    with localcontext() as context:
+        context.prec=100
+        result=value.quantize(Decimal(1).scaleb(exponent))
+    # Negative zero retains the written sign; a sign flip must remain visible.
+    return ('+' if explicit_plus and not result.is_signed() else '')+format(result,'f')
+
+
+def tokens(texts=None):
+    texts=texts if texts is not None else {str(p.relative_to(ROOT)):p.read_text() for p in sorted((ROOT/'paper').rglob('*.tex'))}
+    for name,text in texts.items():
+        for match in NUMBER.finditer(text):
+            suffix=text[match.end():]
+            unit=UNIT.match(suffix)
+            yield (name,text.count('\n',0,match.start())+1,match.group(),unit[1] if unit else '%' if PERCENT.match(suffix) else '')
+
+
+def numeric_leaves(value, prefix=''):
+    if isinstance(value,dict):
+        for key,child in value.items():yield from numeric_leaves(child,prefix+'.'+str(key))
+    elif isinstance(value,list):
+        for i,child in enumerate(value):yield from numeric_leaves(child,prefix+f'[{i}]')
+    elif not isinstance(value,bool) and decimal(value) is not None:
+        yield prefix,str(value)
+
+
+@lru_cache(maxsize=1)
+def old_api_results():
+    """Execute exact local R12 source/inputs, without copying large measurements."""
+    names=sorted(p.stem for p in (OUT/'api-baselines').glob('*.json'))
+    with tempfile.TemporaryDirectory(prefix='r12-api-') as tmp:
+        root=Path(tmp)
+        extract_snapshot('r12-source', root)
+        (root/'data').symlink_to(ROOT/'data',target_is_directory=True)
+        script='''import json
+from hybridcalc.engine import run,load
+results={name:run(name) for name in NAMES}
+_,inputs=load('paper-tables')
+clients=('m3max','m4max','m5max64','m5max','ultra96','ultra256')
+results['__payback_inputs']={inputs.locate('hardware.clients.'+k+'.label'):{'capital':max(0,inputs.get('hardware.clients.'+k+'.purchase_price')-inputs.get('hardware.clients.'+k+'.premium_credit')),'residual':inputs.get('economics.client_residual')} for k in clients}
+print(json.dumps(results,allow_nan=False))
+'''.replace('NAMES',repr(names))
+        return json.loads(subprocess.check_output([sys.executable,'-c',script],cwd=root,text=True))
+
+
+@lru_cache(maxsize=None)
+def unit_for(name,key):
+    # Native units have the same meanings as their engine-schema counterparts.
+    if 'bytes' in key:return 'B'
+    if key.endswith('_mb'):return 'MB'
+    schemas=list((ROOT/'calc/out/paper').glob('*schema.json'))
+    for path in schemas:
+        entry=json.loads(path.read_text()).get(name.removesuffix('.csv'),{})
+        unit=entry.get('columns',{}).get(key,'')
+        if unit:return unit
+    return ''
+
+
+@lru_cache(maxsize=2)
+def export_changes(out=OUT):
+    """All keys, no numeric-column allowlist. Return pairs and file accounting."""
+    pairs=[];accounting=[]
+    def compare(label,before,after,units=None):
+        a=dict(numeric_leaves(before));b=dict(numeric_leaves(after))
+        for key,old in a.items():
+            new=b.get(key)
+            if old!=new:
+                pairs.append(dict(engine_key=label+key,old=old,new=new or 'non-numeric',unit=(units or {}).get(key.rsplit('.',1)[-1],''),source=label))
+        accounting.append(dict(export=label,numeric_old_keys=len(a),changed_keys=sum(a[k]!=b.get(k) for k in a),new_numeric_keys=len(b.keys()-a.keys())))
+    for case in ('base','earlier-run','checkpoints-on'):
+        for path in sorted((out/case).glob('*.csv')):
+            if path.stem.startswith('payback'):continue # Same quantities, normalized below from the source chart rows.
+            for suffix in ('','_measured_server'):
+                before=ROOT/'calc/out/paper'/(path.stem+suffix+'.csv')
+                assert before.exists(),('missing old export',before)
+                a=read_csv(before);b=read_csv(path)
+                assert len(a)==len(b) and a[0].keys()==b[0].keys(),('export identity changed',path)
+                units={k:unit_for(path.name,k) for k in a[0]}
+                compare(str(path.relative_to(ROOT))+' <- '+before.name,a,b,units)
+        # Every metadata numeric key too; changed names are explicitly mapped.
+        for path in sorted((out/case).glob('*.json')):
+            oldname=re.sub(r'^r13_', '',path.name).replace('_'+case.replace('-','_'),'')
+            oldname=re.sub(r'^base_', '',oldname)
+            oldname=re.sub(r'^r([678])_',r'r\1_',oldname)
+            for suffix in ('','_measured_server'):
+                pieces=oldname.rsplit('_',1)
+                oldfile=(pieces[0]+suffix+'_'+pieces[1]) if len(pieces)==2 else suffix.lstrip('_')+'_'+oldname if suffix else oldname
+                before=ROOT/'calc/out/paper'/oldfile
+                assert before.exists(),('missing old metadata',before,path)
+                compare(str(path.relative_to(ROOT))+' <- '+oldfile,json.loads(before.read_text()),json.loads(path.read_text()))
+    # Payback's R12 long-form export vs R13 wide form; compare each metric by
+    # client/share/API identity, with source columns providing all other keys.
+    for case in ('base','earlier-run','checkpoints-on'):
+        for suffix in ('','_conservative'):
+            old=read_csv(ROOT/'calc/out/paper'/('payback'+suffix+'_measured_server.csv'))
+            # The old long-form delta column has no R13 counterpart. Its old
+            # finite values still belong to the reverse set as removed keys.
+            for i,row in enumerate(old):
+                compare(f'payback{suffix}_measured_server.csv[row={i}].removed',{'delta':row['delta']},{})
+            for row in read_csv(out/case/('payback'+suffix+'.csv')):
+                for column,metric in [('cash_months','cash_payback_'),('residual_adjusted_months','residual_adjusted_')]:
+                    match=[r for r in old if r['coordinates'].startswith('share='+row['share']+'; client='+row['client']+';') and r['metric']==metric+row['overflow_api']]
+                    assert len(match)==1,(row,column)
+                    for key in ('r11','measured_server'):
+                        compare(f'{case}/payback{suffix}[{row["client"]},{row["share"]},{row["overflow_api"]}].{column} <- {key}',match[0][key],row[column])
+    # Normalize every R13 payback column, including saving_month, rather than
+    # limiting the reverse set to R12's two long-form payback metrics.
+    for case in ('base','earlier-run','checkpoints-on'):
+        for policy in ('','_conservative'):
+            for row in read_csv(out/case/('payback'+policy+'.csv')):
+                for reference in ('','_measured_server'):
+                    source='person_cost_s'+str(round(float(row['share'])*100))+policy+reference+'.csv'
+                    oldrow=next(r for r in read_csv(ROOT/'calc/out/paper'/source) if
+                                r['client']==row['client'] and r['team']=='50' and r['basis']=='Mac already owned')
+                    saving=float(oldrow['api_'+row['overflow_api']])-float(oldrow['hybrid_'+row['overflow_api']])
+                    baseline=old_api_results()['__payback_inputs'][row['client']]
+                    before=dict(row,capital=baseline['capital'],saving_month=saving,cash_months=baseline['capital']/saving if saving>0 else 'no payback')
+                    before['residual_adjusted_months']=before['cash_months']*(1-baseline['residual']) if saving>0 else 'no payback'
+                    compare(f'{case}/payback{policy}[{row["client"]},{row["share"]},{row["overflow_api"]}] <- '+source,before,row)
+    for path in sorted((out/'paper-derived').glob('*.csv')):
+        before=ROOT/'paper/data'/path.name
+        assert before.exists(),('missing old derived export',before)
+        old_bytes = snapshot_read('r13-derived', str(before.relative_to(ROOT))).decode()
+        compare(str(path.relative_to(ROOT)),list(csv.DictReader(io.StringIO(old_bytes))),read_csv(path))
+    old=old_api_results()
+    for path in sorted((out/'api-baselines').glob('*.json')):
+        after=json.loads(path.read_text())
+        units={k:v for table in after['tables'] for k,v in table['columns'].items()}
+        compare(str(path.relative_to(ROOT)),old[path.stem],after,units)
+    # These exports were introduced by R13: no pre-R13 value exists to replace.
+    for path in sorted((out/'measurements').iterdir()):
+        if path.is_file():accounting.append(dict(export=str(path.relative_to(ROOT)),new_only=True,reason='R13 measurement export has no run12 predecessor'))
+    accounting.append(dict(export='calc/out/run13/INDEX.json',new_only=True,reason='New R13 export inventory, without a run12 predecessor'))
+    return pairs,accounting
+
+
+def changed_values(records,out=OUT):
+    export_pairs,accounting=export_changes(out)
+    pairs=list(export_pairs)
+    # Independent native geometry changes and formula results supplement raw
+    # exports. Removing a ledger row must never remove a value from this set.
+    from r13_ledger import native_changes,paper_numbers,formula_changes
+    from r13_quotes import supplement,traffic_changes
+    pairs.extend(native_changes(paper_numbers()))
+    pairs.extend(formula_changes(out))
+    def add(site,kind,key,old,new,unit,source):
+        if str(old)!=str(new):pairs.append(dict(engine_key=key,old=str(old),new=str(new),unit=unit,source=source))
+    supplement(add,out)
+    traffic_changes(add,out)
+    return pairs,accounting
+
+
+def value_parts(value):
+    if decimal(value) is not None:
+        return [(str(value),'')]
+    return [(part,unit) for _,_,token,unit in tokens({'value':str(value)}) for part in scalars(token)]
+
+
+def witnesses(numbers,pairs):
+    """Match old values at each site's fixed and significant-digit precision."""
+    # Index by requested precision/unit, not by the site's semantic registry.
+    requests={}
+    for _,_,token,unit in numbers:
+        for part in scalars(token):
+            for spelling in spellings(part):
+                for exponent in precisions(spelling):
+                    requests.setdefault((exponent,unit,spelling.startswith('+')),{}).setdefault(
+                        (decimal(spelling),spelling.startswith('-')),[]).append((part,unit))
+    expanded={}
+    for pair in pairs:
+        old=value_parts(pair['old']);new=value_parts(pair['new'])
+        for i,(value,unit) in enumerate(old):
+            newer=new[i][0] if len(new)==len(old) else None
+            sourceunit=unit or pair.get('unit','').split('/')[0]
+            for spelling in spellings(value):
+                a=decimal(spelling);b=decimal(next(iter(spellings(newer)))) if newer is not None else None
+                if a is not None and (a!=b or (b is not None and a.is_signed()!=b.is_signed())):
+                    expanded.setdefault((a,b,sourceunit),pair)
+    index={}
+    for (exponent,unit,plus),wanted in requests.items():
+        for (old,new,sourceunit),pair in expanded.items():
+            scales=(Decimal(1),)
+            if unit in BYTE_UNITS:
+                if sourceunit not in BYTE_UNITS:continue
+                scales=(Decimal(BYTE_UNITS[sourceunit])/Decimal(BYTE_UNITS[unit]),)
+            elif unit=='%' and sourceunit in ('','1') and abs(old)<=1:
+                # Dimensionless fraction keys also print as percentages. Keep
+                # the as-written comparison, including already-percent values.
+                scales+=(Decimal(100),)
+            for scale in scales:
+                before=rounded(old*scale,exponent,plus)
+                key=(decimal(before),before.startswith('-'))
+                if key not in wanted:continue
+                after=rounded(new*scale if new is not None else None,exponent,plus)
+                if before==after:continue
+                for form in wanted[key]:
+                    index.setdefault(form,dict(pair,printed_new=after,round_exponent=exponent))
+    return index
+
+
+def reverse_changes(records,out=OUT,texts=None,pairs=None):
+    numbers=list(tokens(texts))
+    if pairs is None:pairs,_=changed_values(records,out)
+    index=witnesses(numbers,pairs)
+    found=[]
+    for name,line,token,unit in numbers:
+        hits=[index[part,unit] for part in scalars(token) if (part,unit) in index]
+        if hits:
+            hit=hits[0]
+            found.append(dict(paper_site=f'{name}:{line}',kind='reverse-number',engine_key=hit['engine_key'],old=token,
+                              new=hit['printed_new'],unit=unit or 'as printed; numeric collision requires site review',source=hit['source']))
+    return found
+
+
+def check_reverse(records,out=OUT,texts=None):
+    from r13_ledger import NATIVE_COLLISIONS
+    waivers=dict(NATIVE_COLLISIONS)
+    path=ROOT/'calc/tests/data/r13_numeric_waivers.csv'
+    with path.open() as stream:
+        for row in csv.DictReader(stream):
+            site=(row['file'],int(row['line']),row['token'])
+            assert row['reason'].strip() and '\n' not in row['reason'],('missing site waiver reason',site)
+            assert site not in waivers,('duplicate site waiver',site)
+            waivers[site]=row['reason']
+    numbers=list(tokens(texts));coordinates={(n,l,t) for n,l,t,u in numbers}
+    present={n for n,l,t,u in numbers}
+    # A moved/deleted waiver fails closed. Synthetic text controls may supply
+    # only a new file, and do not pretend to validate the rest of the paper.
+    stale={site for site in waivers if site not in NATIVE_COLLISIONS and site[0] in present and site not in coordinates}
+    assert not stale,('unused reverse numeric collision',sorted(stale))
+    exact={(r['paper_site'],r['old']) for r in records if re.search(r':\d+$',r['paper_site'])}
+    changes=reverse_changes(records,out,texts)
+    missing=[r for r in changes if (r['paper_site'],r['old']) not in exact and
+             (r['paper_site'].rsplit(':',1)[0],int(r['paper_site'].rsplit(':',1)[1]),r['old']) not in waivers]
+    if missing:
+        raise AssertionError('unregistered changed old value (changed values without ledger rows): '+repr(missing[:8]))
+    return dict(reverse_occurrences=len(changes),site_waivers=len(waivers))
+
+
+# Numeral inflections and multiplicative/quantity compounds used in this Russian
+# paper. We include scale words and ambiguous singular/ordinal uses for the
+# writer to adjudicate. Numerals in digits remain the automated guard's scope.
+WORD_NUMBER = re.compile(r"(?i)\b(?:нол[ьяюе]\w*|нул\w*|один|одна|одно|одну|одни|одной|одного|одному|одном|одним|одних|одними|един\w*|дв[аеу]\w*|двое|двоих|двоим|оба|обе|обоих|обоим|обоими|вдвое|втрое|вчетверо|впятеро|вшестеро|три|тр[её]х\w*|тр[её]м\w*|тро[еяи]\w*|четыр\w*|четв[её]р\w*|пят[ьи]\w*|пятеро|шест\w*|сем[ьи]\w*|семеро|вос[ье]м\w*|восьм\w*|девят\w*|десят\w*|одиннадцат\w*|двенадцат\w*|тринадцат\w*|четырнадцат\w*|пятнадцат\w*|шестнадцат\w*|семнадцат\w*|восемнадцат\w*|девятнадцат\w*|двадцат\w*|тридцат\w*|сорок\w*|пятьдесят\w*|шестьдесят\w*|семьдесят\w*|восемьдесят\w*|девяност\w*|сто|ста|сот(?:ня|ни|ен|не|ню|ней|нями|нях)|сот[ыоа]\w*|двухсот(?:ня|ни|ен|не|ню|ней|нями|нях)|сот[ыоа]\w*|тр[её]хсот(?:ня|ни|ен|не|ню|ней|нями|нях)|сот[ыоа]\w*|тыс|тысяч\w*|миллион\w*|миллиард\w*|триллион\w*|полмиллион\w*|полуминут\w*|полминут\w*|полгода|полугод\w*|полчас\w*|половин\w*|полутора|полтора|полторы|треть|трети|трет[ьи]\w*|перв\w*|втор\w*|нескольк\w*|zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million|billion|half|double|triple|first|second|third)\b")
+
+
+def number_words(texts=None):
+    texts=texts if texts is not None else {str(p.relative_to(ROOT)):p.read_text() for p in sorted((ROOT/'paper').rglob('*.tex'))}
+    return [(name,text.count('\n',0,m.start())+1,m.group()) for name,text in texts.items() for m in WORD_NUMBER.finditer(text)]
+
+
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--inventory',type=Path,required=True)
+    args=parser.parse_args()
+    pairs,files=export_changes()
+    args.inventory.write_text(json.dumps(dict(baseline=BASELINE,changed_pairs=len(pairs),exports=files,number_words=number_words()),indent=2,ensure_ascii=False)+'\n')
+    print('changed export keys',len(pairs),'export comparisons',len(files),'number-word occurrences',len(number_words()))

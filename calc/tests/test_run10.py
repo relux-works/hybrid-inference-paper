@@ -9,10 +9,10 @@ import os
 import subprocess
 import tarfile
 import tempfile
-from r10_controls import (BASELINE, HISTORY, ROOT, audit_revision, compare, git_blob_id, history_present, records,
+from r10_controls import (BASELINE, HISTORY, ROOT, audit_revision, compare, git_blob_id, records,
                           require_additions_only, revision_csv)
 
-R10 = '1e8f897c4f82092c632507b520515cefa7eecab5'
+R10 = 'r10-paper'
 
 
 class Run10Tests(unittest.TestCase):
@@ -63,14 +63,13 @@ class Run10Tests(unittest.TestCase):
 
 
     # The archived R9/R10 CSVs match their recorded git blob ids and SHA-256, so the audits above run in a public clone
-    # that lacks the authors' history. Where that history is present, the archive also equals git byte for byte.
+    # that lacks the authors' history. The independent archive must equal the content-addressed snapshot.
     def test_history_archive_matches_record_and_git(self):
         for revision in (BASELINE, R10):
             with self.subTest(revision=revision):
                 stored = revision_csv(revision, source='archive')
                 self.assertEqual(len(stored), 42)
-                if history_present(revision):
-                    self.assertEqual(revision_csv(revision, source='git'), stored)
+                self.assertEqual(revision_csv(revision, archive=HISTORY / 'paper-csv-history.tar.gz'), stored)
 
     # Unverified history never reaches the audit: an unknown revision, an altered byte, a missing file and an
     # unexpected member are each refused with their own reason. The intact copy above is the positive control.
@@ -107,6 +106,10 @@ class Run10Tests(unittest.TestCase):
     # source='git' is refused, and the git trace shows no fetch. Full local history is read from git (positive
     # control). The trace detector is itself shown to catch a real lazy fetch in a second clone (instrument control).
     def test_history_reads_never_fetch(self):
+        # Only self-created git objects are used here; author-history auditing is dev-only.
+        import sys
+        sys.path.insert(0, str(ROOT / 'tools/dev'))
+        from history_audit import history_present, revision_csv
         def git(*args, cwd, env=None):
             return subprocess.run(['git', '-c', 'commit.gpgsign=false', '-c', 'user.name=t', '-c', 'user.email=t@t']
                                   + list(args), cwd=cwd, env=env, check=True, capture_output=True, text=True).stdout

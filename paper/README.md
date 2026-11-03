@@ -3,7 +3,7 @@
 Title: «Hybrid Inference with Client–Server Prefill–Decode Disaggregation: Architecture and Economics for Unified-Memory
 Clients». Russian title: «Гибридный инференс с клиент-серверным разнесением prefill и decode: архитектура и экономика
 для клиентов с унифицированной памятью».
-Authors: Ivan Oparin, Alexey Grigoriev (Relux Works).
+Authors: Ivan Oparin, Alexey Grigoriev, Timur Kackan and Sergei Shchepetkov (Relux Works).
 
 | File | What |
 |---|---|

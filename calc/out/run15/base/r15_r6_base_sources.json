@@ -1,0 +1,3849 @@
+{
+  "files": [
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/normalized-results.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "sha256": "d7c7cbc72d5ee69991aafdc3b3579dd13d5cd956cb9d4a99d05a25dac7743fb5"
+    },
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/stats.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+    },
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/depth.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "sha256": "a75b1aefd40df99d96d8a96ff4eac20073b239c39d4d4d4332fa23da1b9acb5b"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "2a38fd74dd83e2a4536a68ba68ede71dc046038028cb0d70344cffd87584cca8"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/RUN-PROVENANCE.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "80c1dfea74d5bd51502a589fbae5613803413176977e6c085bc01bd3b9f26b6b"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/agents-loop-apple-m3-max-128g-q27b-agents128k-20261101T115105.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "6774258c6fa6342b538ebba430ae2f0c0c0dc632b1ac69755d623a46644d616b"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/agents-loop-apple-m3-max-128g-q27b-agents128k-20261101T115105.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "b3e9461db27ef149000eeaec6480e4d9f9e4ec33c9e77396af04c20b5c2f2c97"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/kit.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "ea29703764af21bcdfcc4b4a3ff08af6500eecc06ddfba5cd03526df500ca1b7"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth128k-20261101T090514.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "9737b5dd76eaa68a91ebe64500537efdb8abc991e811503639209d029fee923f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth128k-20261101T090514.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "366d5f40b05f411eeb6db5fcfd7b9219df6f364501136a71a3bbeba94688dcdc"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth64k-20261101T084742.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "61a00ec8dc1d44116e83aedb8a46e8ba6eaefa5e93a96dd02969307525e31b85"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth64k-20261101T084742.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "631e22709939700e9180764eaaf5f29b5a9c2ae561580450b4323c18ae506cbb"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx1040k-20261101T113915.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "873d88e4a7f402430a57840ed820f6f72eca0fd0b3a234b192c492f8dac9aa3f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx1040k-20261101T113915.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "cf6b4a0096bfdf1d6b32c8351a64ebe7a9e1cb7b26eea187e83a7e78bea9922f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx260k-20261101T111317.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "505dfa7708cbe8a267230a19203604b9f741a1f12bd49f3f9b942cfbb21d71a7"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx260k-20261101T111317.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "014a86db7b11c58a1d3641e5daea5558866257e18631e14e23f1b02e271bcefa"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/server-agents-128k-np8.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "525bf987e6381349005689c66f3677edb0a9e29f305cdf2741ecc2652ff9682f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/server-maxctx-1040k-np2.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "13ce2883d02f04e230b0326c1eac4eea9d7b13f1db9573b6d201ae4a7c112adb"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/server-maxctx-260k-np8.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "967f18f51f753544535af449cd7c3fd62a6a78bff0c508f6f7658cdf587fbfd9"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/mac/qwen27b-mac-bench-results-20261101T094816Z.tar.gz::results/system.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+      },
+      "sha256": "47db0bbfa383bc3fad07a302fb7f6db748be1042051c84ae9253a5bed3caba4c"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "6f2c8ac8cf667c6bfad34b0c5e28d4ee32486174729621decd90f20c98468ffc"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/CONTROL128K-ROOT-REVIEW.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "8fb7cc65a7dc1fda09fa5da87d21a5a5374f7d8a57ca431525f0023928663823"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/RUN-PROVENANCE.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "acca4b106283e223691f2eecbd304bab78edd11d2be367cd37e1986855ccdb0f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/agents-loop-apple-m3-max-128g-q27b-agents128k-20261101T115105.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "6774258c6fa6342b538ebba430ae2f0c0c0dc632b1ac69755d623a46644d616b"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/agents-loop-apple-m3-max-128g-q27b-agents128k-20261101T115105.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "b3e9461db27ef149000eeaec6480e4d9f9e4ec33c9e77396af04c20b5c2f2c97"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/kit.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "de51bfb6b16e3e2c88229686eb7a0360ee68eefdf93d1dc418af1ffc531aae11"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth128k-20261101T090514.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "9737b5dd76eaa68a91ebe64500537efdb8abc991e811503639209d029fee923f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth128k-20261101T090514.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "366d5f40b05f411eeb6db5fcfd7b9219df6f364501136a71a3bbeba94688dcdc"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth64k-20261101T084742.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "61a00ec8dc1d44116e83aedb8a46e8ba6eaefa5e93a96dd02969307525e31b85"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-depth64k-20261101T084742.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "631e22709939700e9180764eaaf5f29b5a9c2ae561580450b4323c18ae506cbb"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx1040k-20261101T113915.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "873d88e4a7f402430a57840ed820f6f72eca0fd0b3a234b192c492f8dac9aa3f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx1040k-20261101T113915.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "cf6b4a0096bfdf1d6b32c8351a64ebe7a9e1cb7b26eea187e83a7e78bea9922f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx131k-20261101T135748.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "c1b728adc551085e4a1d09a73a3a4e5ed249b0d7855eef09a7d3761d05c9e360"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx131k-20261101T135748.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "45e5007075a0a6c6a621846fc65c5f01198f31d4a6c11342ac094cb35a96b3db"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx260k-20261101T111317.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "505dfa7708cbe8a267230a19203604b9f741a1f12bd49f3f9b942cfbb21d71a7"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-maxctx260k-20261101T111317.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "014a86db7b11c58a1d3641e5daea5558866257e18631e14e23f1b02e271bcefa"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/server-agents-128k-np8.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "525bf987e6381349005689c66f3677edb0a9e29f305cdf2741ecc2652ff9682f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/server-maxctx-1040k-np2.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "13ce2883d02f04e230b0326c1eac4eea9d7b13f1db9573b6d201ae4a7c112adb"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/server-maxctx-131k-np8.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "8f741be3744cf93f8cea8e8ba609f989470aa802251d28e70d4e1e2252a21729"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/server-maxctx-260k-np8.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "967f18f51f753544535af449cd7c3fd62a6a78bff0c508f6f7658cdf587fbfd9"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/control/qwen27b-mac-bench-results-20261101T100651Z.tar.gz::results/system.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.0",
+        "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+      },
+      "sha256": "47db0bbfa383bc3fad07a302fb7f6db748be1042051c84ae9253a5bed3caba4c"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "c7b4ce09f5a1a56c56a1b80003c85c6a66343380ceb303a338a4276203ebfcbb"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/agents-loop-apple-m5-max-64g-q27b-agents128k-20261101T203345.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "92d54f4de7187af604fa7c3b3b876fe1dd805b3d90a111c417c351cc47b820ec"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/agents-loop-apple-m5-max-64g-q27b-agents128k-20261101T203345.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "3038ceefae95c9a41cbb72cf52b3576784ecefbab131a16bd67ab25076ee3a71"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/build-configure.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "90cbd7958be090c1326e2eadaee0c03a66350fad0e51d2b043810217ce47f621"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/build.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "fe69c45598458e25d3bd2096c707735ad7a7eb5c6907b0439f82342d5b8f3e03"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/conditions-telemetry.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "11d6091395a334f0a1cac163725c818eb0863ea70eb9938811eff72ca0359306"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/hybrid-bench-apple-m5-max-64g-q27b-par4-20261101T200737.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "18a3be01bfbf73598bfe62d16213ab667e44b0f9c1032ffbba59bba9f708ba06"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/hybrid-bench-apple-m5-max-64g-q27b-par4-20261101T200737.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "4e3664429158c060f019fe96130e65a78a904de728391524a2aa3a976bd7055b"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261101T191855.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "35329e386cabf61df8ded5ddc420ab1ebfcc77209d3d1ce0f25b89324a189030"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261101T191855.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "54fc98bd78ff72f6ba1145cf3180a1800a95724661a75df8d30649041da00485"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/hybrid-bench-apple-m5-max-64g-smoke-20261101T191653.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "0c4fce009a9d4940cbf47dd31097608377d436743abb5027f1023e082eb3e005"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/hybrid-bench-apple-m5-max-64g-smoke-20261101T191653.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "ebd8aa66554331198dfa96fd6661742f9b2b88cc4e62e7136de05cdd808e893f"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/kit.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "a42309adabc6e7949664d35802bdd79999ac12639f5903dd0a7d11bf71bf72cc"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/llama-server-version.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "8a6db0a5f176dfccba93aadd9df9aef1bad69785165a1ab01a40ef6df3c94748"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/measurement-review.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "61a5e82c3a33b63bdb04ad5c1ae0dbc564d77bb02c5e218d9acbc03c7f30aca8"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/parallel-depth-apple-m5-max-64g-q27b-depth128k-20261101T201928.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "eb905bb79838dd8b40fd4c5c29ee01349c1a346fc83e5b2c073a84e208965796"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/parallel-depth-apple-m5-max-64g-q27b-depth128k-20261101T201928.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "dd01db583ece04e5021d2e3708471cb539d68e2a55a72855ad074fc297808846"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/parallel-depth-apple-m5-max-64g-q27b-depth64k-20261101T201346.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "99303409e64e41fa839ca11dc9f2d9f32bc7d637d5a333771e573463cc97a520"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/parallel-depth-apple-m5-max-64g-q27b-depth64k-20261101T201346.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "3e6ff29a4d5c57448f3b3176c9c84ee36cb99b127b226f8e2032cbea211d3e38"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/run-conditions.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "abc499b1df1741971bcaeb48cf7e89d67aa4410dc49f88623dd3331bf54f998f"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/server-agents-128k-np4.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "b462d9e6353e9409c0ac5f8f2a5626ea70085ac5a0de9ec23b54191059c4f52f"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/server-depth.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "58fda1246766659796a8c8bbb8bfce851a37df7ababbb4179832bb573a3541ce"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/server-par4.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "319d272c3cf607f6c3afb9751e6dc690c57b766fac608ce8a42830d2cad034ef"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/server-scale-128k-np4.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "5d96ad959bdfeb46a7a4fef690a539f1728889d61884254a4d1a5b6a213fe531"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/server-scale-64k-np8.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "e188e46195aae542e84dadc08f22906511dc2eea33817b751d3d090d21b3834f"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/server-smoke.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "e0faaaa5283ca4d182ee265ac5fbf9957305dee63caba44c19a661c2c6d96a4a"
+    },
+    {
+      "path": "data/measurements/m5max64-2026-11-01/cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz::results/system.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.4.1",
+        "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+      },
+      "sha256": "141df343c0f8dd414d9f5166f01ee08bea9c6fd5b74aab88397c2fccf49a4a95"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "7d5784c97cfca0af5c85f77a5de9a7e7b54c0227cce6c5f395add5a69b331a11"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/build-configure.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "2047e666f9b310a3ff1b72fbfd322eb2bb06079efc1263f1bea0d7304e7cec44"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/build.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "89e15351e180c4b45a3f1bc73607656f8cb9a3d8acbf82b823e70d7cdcf0fd36"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/ctx-checkpoints.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "52f96c26a39ed25108a6db43d6e11c6051eba8a498a5baab1891adfa7ac7c262"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/cuda-architecture.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "46dfe883953c08e1b173f0fccd97850a4249b5ce944ca390270d19644663198a"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "e25bb703dacc5a42d49880afedd0b6a8f3b0a1d1c0a91c5c07e90254f1d3f79f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "acb432c5e40f4992feb69e918fd28492a5551b8e891c826270a55d191e80d6d5"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/hybrid-bench-nvidia-b300-sxm6-ac-269g-smoke-20261101T225010.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "b83d592731b22b3249fb38926802373096b38c8afb35df478300630c8fa9d6ff"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/hybrid-bench-nvidia-b300-sxm6-ac-269g-smoke-20261101T225010.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "75865ec4a3ab0b473ae56368d3a745070f11d0258c68f2c8a9e5cfdfb04916b7"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/kit.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "99c7fb65f988bbb873ff9d7de5af78dc1933681d98cdca854fab4f185e1cc89f"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/llama-server-version.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "c583c3b5f1912867e1b3fef26390d78eb01f89ebdf229258f6b2e9e28f15189d"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/model-geometry.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "00c6db51733ae801d7ed927d5477edd397d196813009325b32a9e3538b319f82"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/server-depth-1.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "2d94514df18ae17bc8359b11d721d842b8d5ce521a070f022e7842c24b6d56c1"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/server-smoke.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "b99be5b116101517f90903fef463c614f5969023086cafc248a25dd0dba7f6ad"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/system.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "ec8336cb83ae9c6def37c644fdfe85ac39157321245a247f990f138fbb172191"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/sweep-20261101T232532Z/sweep-status.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "1ccfa8e9888cf0cc8b3747066c3324a71e44fd21da7c3c93909dc1bdafcd39ba"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/sweep-20261101T232532Z/sweep.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "3bd18920571c9d76df08f69b34cc59675a8f6bc210e2552c41c93e1f856d7919"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-default-A-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "2f03e51af3080e98a4f22b12b152b74eebafbe6f10a10d6ac42996f31e2224f9"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-default-B-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "b25b0652ea5e90d932600ebfc94ab80bd1211a4c84bbb1ee7c47d00636d0c8a7"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-default-raw.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "3a0328ff55d4608effd228bdd597d31ff5bf512709aebe806717b5794f51a960"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-kv-A-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "8e4b091f413cf4e09e9d5b6e46e33dcd07e7313c09d2ec5d2b3a0f4c50f308e4"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-kv-B-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "b404ee3eafaf56a0c4201edf1f73d97ea46d1d67afa66ef2d018bb64fd8348dd"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-kv-raw.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "52f1bb0a2f840306bd94a9739343321933833c90e05fb0dcb6f5eb92a501b3ed"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-large-batch-A-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "6ac3859729e7f4a1daea268982597023f4b0f98f2ece75560fe9a6ef81b53ffd"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-large-batch-B-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "26bbe9ae8647c074a97c563100e8e99fd22eefb1056f33552a134c7a616716ff"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/fp8-large-batch-raw.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "4c4e568b2e56c60649e25dbca02d05f781ca40d57c271219752402436dd845c4"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/gpu-after.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "856f2e7f6c1108af339be6527079999692d5350b92b92effd589337b443212c6"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/gpu-before.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "c43a89fb0d98872d09cd1b78e23782f8f59d88a5856b02b4f47bac7023b5cc26"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/install.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "9bd36d67813b59cb2ba30fe6d1eeededa1c0576deede750782b674699c2f17b6"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/nvfp4-default-A-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "312cd056caf8f5ff86065291e2f8fc16d98693e0970ffed6a3d3af2a911b1a48"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/nvfp4-default-B-server.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "abd68636fdb3cb29618e6d37a4866765765beed5fa020ccb9da5c9e0ce862de6"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/nvfp4-default-raw.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "1dc01163600cc038ebbc557eaf5b1f5e156b3d717099e9ba02b6365b09352fcd"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/pip-freeze.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "2ca1ef0a6490ebac1e2702a4dbf6eb185adaff76ded2957709295c9078ff5096"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/versions.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "dd27f6ed37295e584759576283b05956522f9c1da4044d8553ae37c190016338"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/vllm.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "18305dbe4753f93f4685102f1e04114fd9aa77412203b711fde599c52f94f730"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/b300/qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz::results/vllm-20261101T225502Z/vllm.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-gpu-bench 1.6.5",
+        "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+      },
+      "sha256": "23debae121800a1715397619a360a1abf4e605b22563a132b1705b0a42c86262"
+    },
+    {
+      "path": "calc/hybridcalc/data/run14-r5.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "Owner r5 FACTS snapshot / PR9 CUDA imports; assumptions labelled in data",
+        "sha256": "527788aae1261f77c6999a7bccc14021063dd4872506d544ddc61156c659c91b"
+      },
+      "sha256": "527788aae1261f77c6999a7bccc14021063dd4872506d544ddc61156c659c91b"
+    },
+    {
+      "path": "data/measurements/run14-2026-11-02/pr9/hybrid-bench-r13-27b-cuda-20261101T132757015879Z.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "Owner r5 FACTS snapshot / PR9 CUDA imports; assumptions labelled in data",
+        "sha256": "b88f8fb440db84abbd48b9d5a606e07ec672b3ed11f16b73fef4a66ece82a634"
+      },
+      "sha256": "b88f8fb440db84abbd48b9d5a606e07ec672b3ed11f16b73fef4a66ece82a634"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+    },
+    {
+      "path": "calc/hybridcalc/data/run15-measurements.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "0dacec6e2ca12774f8a2cee61b2efadd6868a4c8dd303cbe983bcf95026e2d9f"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/MANIFEST.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "386c2e9dce51ecdb1f1107cea81ddde315a97729a45f8ed07f881f53e64e750b"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/OPERATOR-READINESS.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "293795af3bc9b7c469748178b1b63b27a3f574018ff7c69a0f686a49244b86fa"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/ctx-checkpoints.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "696351de5a8816b503c359679eb9bd4d6cca2ef6201e40c6b615322bc0367ae2"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/kit.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "4149f004111809d886d860cc6579e50c4db930716e4ae615acc727711eed29fd"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale131072-fill-20261102T122044-1793607644290001000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "f69d4777b7c17b6bd3403f604812ba833207ee2ba2f15e864ec7b3148de7f488"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale131072-fill-20261102T122044-1793607644290001000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "26112d800f9219520ea0f2004741e2da74c7fa459d5bde9b5af44fd315b89fcc"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale131072-largest-np16-20261102T130047-1793610047273349000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "01950f45498d5a1271f11b910ac81c6c69a6424f8393410cb1b31819f598c0ea"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale131072-largest-np16-20261102T130047-1793610047273349000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "851eba2581f48ae65a5315ded579a94b2694a04f7c74ac69053c0452940fc4bc"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale131072-np4-control-np4-20261102T133805-1793612285501613000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "5af1d6c01109245f3871eae2ea5159437f5f822bd029b509de8850224d169188"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale131072-np4-control-np4-20261102T133805-1793612285501613000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "9a454258bd9806c4689725e63cc3f2feb872163157cee5f424df57130f92c414"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale32768-fill-20261102T104621-1793601981904238000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "c74d762ab6d02bf2c1596a3b8a3ea86f5682e67f28ca0c3305608b5e7be240ae"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale32768-fill-20261102T104621-1793601981904238000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "4db11b45910e1dce1d7ecc020ec459d4424fda2a272edc013692f1baa136c12d"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale32768-largest-np32-20261102T105533-1793602533418995000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "dc6dfc6fbca72465fce3dd0756b8fe7932b8f9f6eddff7f3bca8650af23e6a76"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale32768-largest-np32-20261102T105533-1793602533418995000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "e343d2d1002df08044458e13365308198c271f0244a6d3fb922e254f37531edf"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale65536-fill-20261102T112024-1793604024971913000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "e3e71c9fe50fef24ec2d5e044cfdde152ce63276ccb141e7238063eda0d1d027"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale65536-fill-20261102T112024-1793604024971913000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "1cae118edda955ac7d6be882f4bdf4408a25b3c39fafebad51db0cca577a56d8"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale65536-largest-np32-20261102T113832-1793605112923967000.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "ee406fc318b2966cef6cd8f41516c96fba5fe42ed058b37d64bc96e1ef80f07f"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/parallel-depth-apple-m3-max-128g-q27b-scale65536-largest-np32-20261102T113832-1793605112923967000.md",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "b96f5bcd9b7c1682f4ae21ce7037dae29678b2f28feb3152269d027156525d6f"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-131072-20261102T082021Z-6246-after.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "9784c580dc1cc7951547c9cfb9896fce8ab24f6ad2b5df7a8286305e866b5648"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-131072-20261102T082021Z-6246-before.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "bc09817b702faaf6c55a862b6e7226476ef715cf134797abdaa28f1bd51bb8c9"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-32768-20261102T064612Z-6246-after.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "b5cde644bc543eab0be8d841f4915ffe3f3bcb9213555091130cdd683cee7efb"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-32768-20261102T064612Z-6246-before.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "af3fd7f931905f652c6e7eb83434e055b080648e521198c649d64d0564280701"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-65536-20261102T071958Z-6246-after.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "6920db6116be505b1ba1f4febb3c9a7d54b80393322f526c979a3217bf96e00a"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-65536-20261102T071958Z-6246-before.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "aa80b2a9b0236be77dfeffc1c7d3fbc71d00dcac858cca71ef4bc1a643d0ad7c"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/scaling-engine-version.txt",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "82e6c52fe9d9f31e0d4817b09915ea52940d0b71dde4a20538556c16f33639c3"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-131072-fill.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "4fd0c7c4391c0f5abba6cd920f5d0fa36ba12a185333cc187305d58327bb4355"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-131072-np16.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "ea6f8e880d80fe6e6d04f8e1906c55db36922bf76805c504c3b46749d375a1c8"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-131072-np4-control.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "63f4c2dabe77802cd2208d5b88c186565ae4106b6f5091513cdb0fbfa24ed725"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-32768-fill.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "3c454d48af38f0c95d10bc7fd08705b36c9a87ac08d83ae5e17c7ce17680bc83"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-32768-np32.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "5f0d43aa55b6dd326ac6d94efd611674d7ee18bc210fa52781340c6b04b67df6"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-65536-fill.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "02e3d38631b7c380f9513ef90243b5dd8ba76d2533e4ed5ad619f26f078f6bc2"
+    },
+    {
+      "path": "data/measurements/run15-2026-11-02/qwen27-kit166-scaling.tar.gz::results/server-scale-65536-np32.log",
+      "provenance": {
+        "kind": "measured",
+        "package": "qwen27b-mac-bench 1.6.6",
+        "protocol": "Fill once per depth, pause300s, restore before every round; median of all3 valid rounds; largest fitting np32/32/16 base; np4 at128k sensitivity only; q8_0 KV, FA on, kit1.6.6 llama.cpp dde879bc4f954b809892fd0d660515f42536394a",
+        "sha256": "916891bdcf32112bdba069140ef86eb35bf4fbaec8b1f342b2ffd2baa637d618"
+      },
+      "sha256": "7043fff7c3c4301b1d69ae12ff880b06d0b64f87d590863e9f8c9cd4727d2afe"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "analysis.decode_state_passes",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "economics.client_residual",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      },
+      "unit": "1",
+      "value": 0.35
+    },
+    {
+      "path": "economics.hours_month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      },
+      "unit": "h/month",
+      "value": 730
+    },
+    {
+      "path": "economics.pue",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      },
+      "unit": "1",
+      "value": 1.3
+    },
+    {
+      "path": "economics.support",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      },
+      "unit": "1/year",
+      "value": 0.04
+    },
+    {
+      "path": "hardware.clients.m3max.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 400000000000.0
+    },
+    {
+      "path": "hardware.clients.m3max.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline NOTES.md, Пересчёт v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 14000000000000.0
+    },
+    {
+      "path": "hardware.clients.m3max.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 128000000000.0
+    },
+    {
+      "path": "hardware.clients.m3max.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+      },
+      "unit": "kW",
+      "value": 0.1
+    },
+    {
+      "path": "hardware.clients.m3max.premium_credit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+      },
+      "unit": "USD",
+      "value": 2499
+    },
+    {
+      "path": "hardware.clients.m3max.purchase_price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Replacement valuation for a bought M3 Max 128 GB: $6k estimate below the existing $6,699 M5 Max 128 reference. Not a quote or original purchase receipt."
+      },
+      "unit": "USD",
+      "value": 6000
+    },
+    {
+      "path": "hardware.clients.m4max.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "M4 Max 40-core 546 GB/s hardware-envelope estimate; no live source verification."
+      },
+      "unit": "B/s",
+      "value": 546000000000.0
+    },
+    {
+      "path": "hardware.clients.m4max.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Unmeasured M4 Max compute envelope: twice the 14 TFLOP/s M3 reference, explicitly an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 28000000000000.0
+    },
+    {
+      "path": "hardware.clients.m4max.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Chosen M4 Max configuration for comparison; 128 GB memory envelope, no measured package."
+      },
+      "unit": "B",
+      "value": 128000000000.0
+    },
+    {
+      "path": "hardware.clients.m4max.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Reuse 100 W Mac envelope from calc4; estimate."
+      },
+      "unit": "kW",
+      "value": 0.1
+    },
+    {
+      "path": "hardware.clients.m4max.premium_credit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Credit the same baseline laptop as other purchased laptop premiums; estimate."
+      },
+      "unit": "USD",
+      "value": 2499
+    },
+    {
+      "path": "hardware.clients.m4max.purchase_price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Unquoted M4 Max 128 GB replacement budget, rounded near the $6k M3 valuation; estimate."
+      },
+      "unit": "USD",
+      "value": 5999
+    },
+    {
+      "path": "hardware.clients.m5max.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 614000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 128000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+      },
+      "unit": "kW",
+      "value": 0.1
+    },
+    {
+      "path": "hardware.clients.m5max.premium_credit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+      },
+      "unit": "USD",
+      "value": 2499
+    },
+    {
+      "path": "hardware.clients.m5max.purchase_price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+      },
+      "unit": "USD",
+      "value": 6699
+    },
+    {
+      "path": "hardware.clients.m5max64.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 614000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max64.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline NOTES.md, Пересчёт v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 60000000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max64.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 64000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max64.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+      },
+      "unit": "kW",
+      "value": 0.1
+    },
+    {
+      "path": "hardware.clients.m5max64.premium_credit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+      },
+      "unit": "USD",
+      "value": 2499
+    },
+    {
+      "path": "hardware.clients.m5max64.purchase_price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+      },
+      "unit": "USD",
+      "value": 5099
+    },
+    {
+      "path": "hardware.clients.ultra256.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 1228000000000.0
+    },
+    {
+      "path": "hardware.clients.ultra256.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline NOTES.md, Пересчёт v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 140000000000000.0
+    },
+    {
+      "path": "hardware.clients.ultra256.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 256000000000.0
+    },
+    {
+      "path": "hardware.clients.ultra256.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+      },
+      "unit": "kW",
+      "value": 0.1
+    },
+    {
+      "path": "hardware.clients.ultra256.premium_credit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+      },
+      "unit": "USD",
+      "value": 0
+    },
+    {
+      "path": "hardware.clients.ultra256.purchase_price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+      },
+      "unit": "USD",
+      "value": 10799
+    },
+    {
+      "path": "hardware.clients.ultra96.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 1228000000000.0
+    },
+    {
+      "path": "hardware.clients.ultra96.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline NOTES.md, Пересчёт v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 112000000000000.0
+    },
+    {
+      "path": "hardware.clients.ultra96.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 96000000000.0
+    },
+    {
+      "path": "hardware.clients.ultra96.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 100 W average active whole-device draw, not benchmark process power."
+      },
+      "unit": "kW",
+      "value": 0.1
+    },
+    {
+      "path": "hardware.clients.ultra96.premium_credit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Laptop premium credits the existing $2,499 baseline laptop; Studio is additional hardware with zero credit (estimate)."
+      },
+      "unit": "USD",
+      "value": 0
+    },
+    {
+      "path": "hardware.clients.ultra96.purchase_price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 listed configuration price; M3 Max already owned, incremental price zero."
+      },
+      "unit": "USD",
+      "value": 5499
+    },
+    {
+      "path": "hardware.glm_family.m5ultra.efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM working case: 40% effective bandwidth, 4 GB runtime buffers per node, 181.4 GB Q4_K weights."
+      },
+      "unit": "1",
+      "value": 0.4
+    },
+    {
+      "path": "hardware.links.wan.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3 WAN: 90% goodput and scheduling/session-load/RTT overhead 0.4s."
+      },
+      "unit": "bit/s",
+      "value": 1000000000.0
+    },
+    {
+      "path": "hardware.links.wan.goodput",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3 WAN: 90% goodput and scheduling/session-load/RTT overhead 0.4s."
+      },
+      "unit": "1",
+      "value": 0.9
+    },
+    {
+      "path": "hardware.links.wan.latency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3 WAN: 90% goodput and scheduling/session-load/RTT overhead 0.4s."
+      },
+      "unit": "s",
+      "value": 0.4
+    },
+    {
+      "path": "hardware.servers.rtx1.peak",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4. FP8 dense prefill peak per GPU."
+      },
+      "unit": "FLOP/s",
+      "value": 1007600000000000.0
+    },
+    {
+      "path": "hosting.catch_up",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Protocol design: journal local input/output; one reload for the next offload plus one pending-tail catch-up per active session-day. All tokens are still prefilled once. Expected local run=(1-p)/p; pending seconds=(sum local input/output work + sum previous offloaded output work)/offload count. Remove nonwinning offloads monotonically until stable. Day-end flush changes reload/I/O counts, never duplicates compute."
+      },
+      "unit": "catch-up policy",
+      "value": "at_offload"
+    },
+    {
+      "path": "hosting.month_fraction",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Retain the active session population for a full calendar month; not just the active21 days."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "hosting.pcie_bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated sustained PCIe bandwidth per active GPU for cold-prefix reload and spill; not a measured migration rate."
+      },
+      "unit": "B/s",
+      "value": 50000000000.0
+    },
+    {
+      "path": "hosting.retention",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Protocol design: active-window RAM, NVMe otherwise; active fraction uses scenario hours x workdays/calendar hours. One daily promotion is background I/O, not GPU time."
+      },
+      "unit": "retention policy",
+      "value": "tiered"
+    },
+    {
+      "path": "hosting.sessions_per_person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated four retained agent sessions per hybrid user, independently of the116-call normalization group."
+      },
+      "unit": "session/person",
+      "value": 4
+    },
+    {
+      "path": "hosting.tier",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated cold-RAM session pool, retained between calls. Hosting is an incremental budget, not included in compute rental/capex."
+      },
+      "unit": "storage tier",
+      "value": "RAM"
+    },
+    {
+      "path": "hosting.tiers.HBM.price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Incremental HBM storage-pool amortization/operation estimate per decimalGB-month; includes capacity beyond prefill nodes; not a vendor quote."
+      },
+      "unit": "USD/GB/month",
+      "value": 8
+    },
+    {
+      "path": "hosting.tiers.NVMe.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated NVMe storage transfer bandwidth; cold migration bottleneck is min(storage,PCIe). HBM is resident with zero migration."
+      },
+      "unit": "B/s",
+      "value": 7000000000.0
+    },
+    {
+      "path": "hosting.tiers.NVMe.price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Incremental NVMe storage-pool amortization/operation estimate per decimalGB-month; includes capacity beyond prefill nodes; not a vendor quote."
+      },
+      "unit": "USD/GB/month",
+      "value": 0.1
+    },
+    {
+      "path": "hosting.tiers.RAM.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated RAM storage transfer bandwidth; cold migration bottleneck is min(storage,PCIe). HBM is resident with zero migration."
+      },
+      "unit": "B/s",
+      "value": 100000000000.0
+    },
+    {
+      "path": "hosting.tiers.RAM.price",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Incremental RAM storage-pool amortization/operation estimate per decimalGB-month; includes capacity beyond prefill nodes; not a vendor quote."
+      },
+      "unit": "USD/GB/month",
+      "value": 0.5
+    },
+    {
+      "path": "measured.depth.segment.14.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "measured.depth.segment.14.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 62896
+    },
+    {
+      "path": "measured.depth.segment.14.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 49.9
+    },
+    {
+      "path": "measured.depth.segment.2.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 16000
+    },
+    {
+      "path": "measured.depth.segment.2.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 0
+    },
+    {
+      "path": "measured.depth.segment.2.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 173.6
+    },
+    {
+      "path": "measured.depth.segment.20.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 150000
+    },
+    {
+      "path": "measured.depth.segment.20.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 112896
+    },
+    {
+      "path": "measured.depth.segment.20.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 41.2
+    },
+    {
+      "path": "measured.depth.segment.26.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "measured.depth.segment.26.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 162896
+    },
+    {
+      "path": "measured.depth.segment.26.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 27.7
+    },
+    {
+      "path": "measured.depth.segment.32.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 249000
+    },
+    {
+      "path": "measured.depth.segment.32.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 212896
+    },
+    {
+      "path": "measured.depth.segment.32.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 22.2
+    },
+    {
+      "path": "measured.depth.segment.8.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 50000
+    },
+    {
+      "path": "measured.depth.segment.8.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 28896
+    },
+    {
+      "path": "measured.depth.segment.8.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 93.7
+    },
+    {
+      "path": "measured.depth.slot.15.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 3641294784
+    },
+    {
+      "path": "measured.depth.slot.15.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "measured.depth.slot.21.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 5383494784
+    },
+    {
+      "path": "measured.depth.slot.21.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 150000
+    },
+    {
+      "path": "measured.depth.slot.27.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 7125694784
+    },
+    {
+      "path": "measured.depth.slot.27.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "measured.depth.slot.3.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 714398784
+    },
+    {
+      "path": "measured.depth.slot.3.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 16000
+    },
+    {
+      "path": "measured.depth.slot.33.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 8833050784
+    },
+    {
+      "path": "measured.depth.slot.33.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 249000
+    },
+    {
+      "path": "measured.depth.slot.9.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 1899094784
+    },
+    {
+      "path": "measured.depth.slot.9.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 50000
+    },
+    {
+      "path": "measured.normalized.parallel.baseline_native_decode_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 8.440946539830035
+    },
+    {
+      "path": "measured.normalized.parallel.frozen_v11_row.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 32000
+    },
+    {
+      "path": "measured.normalized.parallel.frozen_v11_row.streams",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "stream",
+      "value": 4
+    },
+    {
+      "path": "measured.normalized.parallel.normalized_decode_interval_gain",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "1",
+      "value": 1.665015442445748
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 164437.3
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p10",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 57744.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p25",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 89042.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 135362.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p75",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 190258.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p90",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 250202.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p99",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 826234.9
+    },
+    {
+      "path": "measured.stats.agents.all.first_call_prompt.p25",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 19470.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.100-200k.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 876.7
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.100-200k.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 728595
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.100-200k.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 98.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.200k+.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 729.2
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.200k+.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 324279
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.200k+.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 222.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.50-100k.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 1547.8
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.50-100k.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 359291
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.50-100k.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 197.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.<50k.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 1864.2
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.<50k.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 93596
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.<50k.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 406.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 1066.4
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p10",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 0.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p25",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 32.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 158.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p75",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 805.0
+    },
+    {
+      "path": "measured.stats.agents.all.output_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 511.9
+    },
+    {
+      "path": "measured.stats.agents.all.output_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 229.0
+    },
+    {
+      "path": "measured.stats.agents.all.reasoning_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 207.7
+    },
+    {
+      "path": "measured.stats.agents.all.reasoning_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 27.0
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=10k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.213
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=2k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.756
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=30k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.042
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=5k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.511
+    },
+    {
+      "path": "models.glm.active_experts",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM expert/decode formula."
+      },
+      "unit": "expert",
+      "value": 8
+    },
+    {
+      "path": "models.glm.attention_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token^2",
+      "value": 22528
+    },
+    {
+      "path": "models.glm.base_flop",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token",
+      "value": 35213909504.0
+    },
+    {
+      "path": "models.glm.context_limit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Declared prefill analysis envelope: Qwen long-context extension to 1M as in calc3/4, GLM native 1,048,576. Dense decode/state memory beyond measured depths is an extrapolation, not a validated runtime context."
+      },
+      "unit": "token",
+      "value": 1048576
+    },
+    {
+      "path": "models.glm.decode_fixed",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM expert/decode formula."
+      },
+      "unit": "B",
+      "value": 46137344
+    },
+    {
+      "path": "models.glm.decode_kv_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM expert/decode formula."
+      },
+      "unit": "B/token",
+      "value": 352
+    },
+    {
+      "path": "models.glm.experts",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM expert/decode formula."
+      },
+      "unit": "expert",
+      "value": 288
+    },
+    {
+      "path": "models.glm.routed_bytes",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM expert/decode formula."
+      },
+      "unit": "B",
+      "value": 4758750000.0
+    },
+    {
+      "path": "models.glm.shared_bytes",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 GLM expert/decode formula."
+      },
+      "unit": "B",
+      "value": 4612500000.0
+    },
+    {
+      "path": "models.glm.sparse_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "token",
+      "value": 8192
+    },
+    {
+      "path": "models.glm.sparse_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token^2",
+      "value": 1441792
+    },
+    {
+      "path": "models.glm.wire_state",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4: 71.3 MB bf16 KDA state plus 5 MB convolution, separate from f32 resident state."
+      },
+      "unit": "B",
+      "value": 76300000.0
+    },
+    {
+      "path": "models.qwen27.attention_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token^2",
+      "value": 393216
+    },
+    {
+      "path": "models.qwen27.base_flop",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token",
+      "value": 54000000000.0
+    },
+    {
+      "path": "models.qwen27.context_limit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Declared prefill analysis envelope: Qwen long-context extension to 1M as in calc3/4, GLM native 1,048,576. Dense decode/state memory beyond measured depths is an extrapolation, not a validated runtime context."
+      },
+      "unit": "token",
+      "value": 1000000
+    },
+    {
+      "path": "models.qwen27.prefill_batch",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New roofline memory traffic estimate: weights read once per 512 prefill tokens; compute calibration remains measured. Memory bound = bandwidth/(weights/prefill_batch + KV)."
+      },
+      "unit": "token",
+      "value": 512
+    },
+    {
+      "path": "models.qwen27.sparse_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "token",
+      "value": 8192
+    },
+    {
+      "path": "models.qwen27.sparse_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token^2",
+      "value": 0
+    },
+    {
+      "path": "owners.client_quant",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: Q3 or Q4 client; other representations are outside contract."
+      },
+      "unit": "precision",
+      "value": "Q4"
+    },
+    {
+      "path": "owners.client_reserve",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 12 GB for OS/apps/runtime outside weights and per-session KV/state."
+      },
+      "unit": "B",
+      "value": 12000000000.0
+    },
+    {
+      "path": "owners.days",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 active working days."
+      },
+      "unit": "day/month",
+      "value": 21
+    },
+    {
+      "path": "owners.formats.Q4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+      },
+      "unit": "B/parameter",
+      "value": 0.5625
+    },
+    {
+      "path": "owners.front_month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: front/support/storage allocation per customer-month."
+      },
+      "unit": "USD/person/month",
+      "value": 5
+    },
+    {
+      "path": "owners.hours",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Same eight-hour owner/operator window as owners-paper; no daily demand expansion."
+      },
+      "unit": "h/day",
+      "value": 8
+    },
+    {
+      "path": "owners.load",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Target active-window occupancy; MFU is separate."
+      },
+      "unit": "1",
+      "value": 0.7
+    },
+    {
+      "path": "owners.models.glm.kv",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+      },
+      "unit": "B/token",
+      "value": 5984
+    },
+    {
+      "path": "owners.models.glm.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+      },
+      "unit": "parameter",
+      "value": 328000000000.0
+    },
+    {
+      "path": "owners.models.glm.state",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+      },
+      "unit": "B",
+      "value": 152600000.0
+    },
+    {
+      "path": "owners.models.glm.weights_q4",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "note": "181.4 GB Q4_K from the existing data/research/models-apis-2026-10.md snapshot; no network revalidation.",
+        "url": "https://huggingface.co/ggml-org/GLM-5.3-Flash-GGUF"
+      },
+      "unit": "B",
+      "value": 181400000000.0
+    },
+    {
+      "path": "owners.models.qwen27.kv",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+      },
+      "unit": "B/token",
+      "value": 34816
+    },
+    {
+      "path": "owners.models.qwen27.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+      },
+      "unit": "parameter",
+      "value": 27000000000.0
+    },
+    {
+      "path": "owners.models.qwen27.weights_q4",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 18973870432
+    },
+    {
+      "path": "owners.office_colo",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 office premises assumed already paid; explicit zero colocated-space fee."
+      },
+      "unit": "USD/kW/month",
+      "value": 0
+    },
+    {
+      "path": "owners.office_load",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 office energy duty-factor estimate, separate from service sizing target load."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "owners.office_support",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 office annual support allowance: 2% of acquisition."
+      },
+      "unit": "1/year",
+      "value": 0.02
+    },
+    {
+      "path": "owners.options.b300.location",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+      },
+      "unit": "deployment",
+      "value": "datacenter"
+    },
+    {
+      "path": "owners.options.b300_node.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B/s",
+      "value": 8000000000000.0
+    },
+    {
+      "path": "owners.options.b300_node.capex",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "USD/unit",
+      "value": 660000
+    },
+    {
+      "path": "owners.options.b300_node.gpus",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "GPU",
+      "value": 8
+    },
+    {
+      "path": "owners.options.b300_node.location",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+      },
+      "unit": "deployment",
+      "value": "datacenter"
+    },
+    {
+      "path": "owners.options.b300_node.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B",
+      "value": 288000000000.0
+    },
+    {
+      "path": "owners.options.b300_node.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "kW",
+      "value": 14.5
+    },
+    {
+      "path": "owners.options.b300_node.shard_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "owners.options.rack1.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B/s",
+      "value": 1790000000000.0
+    },
+    {
+      "path": "owners.options.rack1.capex",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate from calc4 Server Edition $23k/GPU plus 13000 USD host allowance; not a purchase quote."
+      },
+      "unit": "USD/unit",
+      "value": 36000
+    },
+    {
+      "path": "owners.options.rack1.fp8_peak",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "FLOP/s",
+      "value": 1007600000000000.0
+    },
+    {
+      "path": "owners.options.rack1.gpus",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner 1–2 GPU small colocated host."
+      },
+      "unit": "GPU",
+      "value": 1
+    },
+    {
+      "path": "owners.options.rack1.location",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Own perimeter rack, run6 policy exception: reuse R4 office electricity, sunk rack-space fee and support rates; owned hardware stays inside the organization. Not a colocation or external provider."
+      },
+      "unit": "deployment",
+      "value": "office"
+    },
+    {
+      "path": "owners.options.rack1.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B",
+      "value": 96000000000.0
+    },
+    {
+      "path": "owners.options.rack1.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 0.9 kW per GPU including host envelope, scaled to the small server."
+      },
+      "unit": "kW",
+      "value": 0.9
+    },
+    {
+      "path": "owners.options.rack1.shard_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Single GPU factor 1; dual GPU 0.9 estimates dense dispatch or MoE sharding overhead. Not qualified."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "owners.options.rack2.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B/s",
+      "value": 1790000000000.0
+    },
+    {
+      "path": "owners.options.rack2.capex",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate from calc4 Server Edition $23k/GPU plus 16000 USD host allowance; not a purchase quote."
+      },
+      "unit": "USD/unit",
+      "value": 62000
+    },
+    {
+      "path": "owners.options.rack2.fp8_peak",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "FLOP/s",
+      "value": 1007600000000000.0
+    },
+    {
+      "path": "owners.options.rack2.gpus",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner 1–2 GPU small colocated host."
+      },
+      "unit": "GPU",
+      "value": 2
+    },
+    {
+      "path": "owners.options.rack2.location",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Own perimeter rack, run6 policy exception: reuse R4 office electricity, sunk rack-space fee and support rates; owned hardware stays inside the organization. Not a colocation or external provider."
+      },
+      "unit": "deployment",
+      "value": "office"
+    },
+    {
+      "path": "owners.options.rack2.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B",
+      "value": 96000000000.0
+    },
+    {
+      "path": "owners.options.rack2.power",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 0.9 kW per GPU including host envelope, scaled to the small server."
+      },
+      "unit": "kW",
+      "value": 1.8
+    },
+    {
+      "path": "owners.options.rack2.shard_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Single GPU factor 1; dual GPU 0.9 estimates dense dispatch or MoE sharding overhead. Not qualified."
+      },
+      "unit": "1",
+      "value": 0.9
+    },
+    {
+      "path": "owners.residual",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Default lower residual scenario; no resale guarantee."
+      },
+      "unit": "1",
+      "value": 0.2
+    },
+    {
+      "path": "owners.server_batch",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 decode batching assumption, not a serving benchmark."
+      },
+      "unit": "stream",
+      "value": 32
+    },
+    {
+      "path": "owners.server_bw_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 sustained decode bandwidth fraction."
+      },
+      "unit": "1",
+      "value": 0.7
+    },
+    {
+      "path": "owners.server_precision",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner decision: quantized server weights, INT8/FP8 tensor arithmetic for Q4/Q6/Q8; dequantization covered by MFU."
+      },
+      "unit": "precision",
+      "value": "Q4"
+    },
+    {
+      "path": "owners.server_stream_rate",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 server per-stream generation target."
+      },
+      "unit": "token/s",
+      "value": 25
+    },
+    {
+      "path": "owners.workspace",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Minimum server runtime buffers per model replica; KV residency modeled separately."
+      },
+      "unit": "B",
+      "value": 8000000000.0
+    },
+    {
+      "path": "owners.years",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: four-year ownership horizon."
+      },
+      "unit": "year",
+      "value": 4
+    },
+    {
+      "path": "paper_tables.decode_scaling",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Aggregate decode = min(single*k**(log(measured_gain)/log(measured_streams)), calibrated_bandwidth*k/(weights+k*state_traffic)). Interpolation one-to-four streams uses measured gain at 32k; depth extrapolation is capped by the memory roofline and monotone in stream capacity."
+      },
+      "unit": "decode law",
+      "value": "measured_power_roofline"
+    },
+    {
+      "path": "paper_tables.glm.moe_prefill_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Calc4 conservative MoE local-prefill efficiency relative to FLOP-scaled Qwen curve; GLM has no local benchmark in the package."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "paper_tables.glm.start_depth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Cold growing sessions: start without a cached prefix; final delta/output is clipped to the requested context."
+      },
+      "unit": "token",
+      "value": 0
+    },
+    {
+      "path": "paper_tables.glm.streams",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Calc4 GLM four-agent estimate, capped by memory at the final context; Qwen measured batching gain is not applied to GLM."
+      },
+      "unit": "stream",
+      "value": 4
+    },
+    {
+      "path": "paper_tables.hours",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner eight-hour operator day for client capacity and owned all-server sizing."
+      },
+      "unit": "h/day",
+      "value": 8
+    },
+    {
+      "path": "paper_tables.streams",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Use the measured four-stream anchor; memory may reduce active streams per call. No extrapolation beyond measured stream count."
+      },
+      "unit": "stream",
+      "value": 4
+    },
+    {
+      "path": "paper_tables.teams.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+      },
+      "unit": "person",
+      "value": 5
+    },
+    {
+      "path": "paper_tables.teams.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+      },
+      "unit": "person",
+      "value": 10
+    },
+    {
+      "path": "paper_tables.teams.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "owner request 2026-10-31, small-team own-server case"
+      },
+      "unit": "person",
+      "value": 20
+    },
+    {
+      "path": "paper_tables.teams.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+      },
+      "unit": "person",
+      "value": 50
+    },
+    {
+      "path": "paper_tables.teams.4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+      },
+      "unit": "person",
+      "value": 500
+    },
+    {
+      "path": "paper_tables.teams.5",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run5 paper chart grid; estimates, not measured demand."
+      },
+      "unit": "person",
+      "value": 5000
+    },
+    {
+      "path": "prices.apis.glm.cache_read",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "note": "Historical values from the existing data/research/models-apis-2026-10.md snapshot, not a current network quote.",
+        "url": "https://docs.z.ai/guides/overview/pricing"
+      },
+      "unit": "USD/Mtoken",
+      "value": 0.03
+    },
+    {
+      "path": "prices.apis.glm.cache_write",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 and NOTES price snapshot, no revalidation. Cache write equals input unless explicitly listed otherwise. Cheapest endpoint quality/cache semantics may differ."
+      },
+      "unit": "USD/Mtoken",
+      "value": 0.15
+    },
+    {
+      "path": "prices.apis.glm.output",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "note": "Historical values from the existing data/research/models-apis-2026-10.md snapshot, not a current network quote.",
+        "url": "https://docs.z.ai/guides/overview/pricing"
+      },
+      "unit": "USD/Mtoken",
+      "value": 0.5
+    },
+    {
+      "path": "prices.colo",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      },
+      "unit": "USD/kW/month",
+      "value": 190
+    },
+    {
+      "path": "prices.egress",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      },
+      "unit": "USD/TB",
+      "value": 5
+    },
+    {
+      "path": "prices.energy_client",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      },
+      "unit": "USD/kWh",
+      "value": 0.15
+    },
+    {
+      "path": "prices.energy_dc",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 inherited economic assumption; rental is B300 per GPU-hour."
+      },
+      "unit": "USD/kWh",
+      "value": 0.093
+    },
+    {
+      "path": "r6.decode.client_quant",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 fixes Qwen27 client Q4 for this table, independent of economic scenario quantization."
+      },
+      "unit": "weight format",
+      "value": "Q4"
+    },
+    {
+      "path": "r6.decode.depths.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 unmeasured depth grid: bandwidth bounds only."
+      },
+      "unit": "token",
+      "value": 64000
+    },
+    {
+      "path": "r6.decode.depths.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 unmeasured depth grid: bandwidth bounds only."
+      },
+      "unit": "token",
+      "value": 128000
+    },
+    {
+      "path": "r6.decode.memories.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 memory configurations; decimal GB, same as R5."
+      },
+      "unit": "B",
+      "value": 64000000000
+    },
+    {
+      "path": "r6.decode.memories.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 memory configurations; decimal GB, same as R5."
+      },
+      "unit": "B",
+      "value": 128000000000
+    },
+    {
+      "path": "r6.decode.state_passes",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Bandwidth formula reads and writes recurrent state each decode step: two state buffers in traffic, one resident buffer in the memory fit."
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "r6.decode.streams.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+      },
+      "unit": "stream",
+      "value": 1
+    },
+    {
+      "path": "r6.decode.streams.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+      },
+      "unit": "stream",
+      "value": 2
+    },
+    {
+      "path": "r6.decode.streams.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+      },
+      "unit": "stream",
+      "value": 4
+    },
+    {
+      "path": "r6.decode.streams.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+      },
+      "unit": "stream",
+      "value": 8
+    },
+    {
+      "path": "r6.decode.streams.4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 K-stream memory/bandwidth bounds only, no measured-efficiency projection."
+      },
+      "unit": "stream",
+      "value": 16
+    },
+    {
+      "path": "r6.perimeter.local_front_month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Existing local agent frontend is a sunk baseline; no external provider charge. Set a positive incremental software budget if needed."
+      },
+      "unit": "USD/person/month",
+      "value": 0
+    },
+    {
+      "path": "r6.perimeter.share",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Closed perimeter owner decision run6: every call uses open models inside owned infrastructure; this is the real use case, not the academic bound."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "r6.utilization.contexts.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 final growing-session contexts; replay measured deltas from zero."
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "r6.utilization.contexts.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 final growing-session contexts; replay measured deltas from zero."
+      },
+      "unit": "token",
+      "value": 1000000
+    },
+    {
+      "path": "r6.utilization.sessions_day.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 per-user active-day demand; fourth mode saturates the actual integer fleet of Studios."
+      },
+      "unit": "session/day",
+      "value": 1
+    },
+    {
+      "path": "r6.utilization.sessions_day.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 per-user active-day demand; fourth mode saturates the actual integer fleet of Studios."
+      },
+      "unit": "session/day",
+      "value": 2
+    },
+    {
+      "path": "r6.utilization.sessions_day.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 per-user active-day demand; fourth mode saturates the actual integer fleet of Studios."
+      },
+      "unit": "session/day",
+      "value": 4
+    },
+    {
+      "path": "r6.utilization.teams.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 utilization chart team grid."
+      },
+      "unit": "person",
+      "value": 50
+    },
+    {
+      "path": "r6.utilization.teams.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 utilization chart team grid."
+      },
+      "unit": "person",
+      "value": 500
+    },
+    {
+      "path": "r6.utilization.teams.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 utilization chart team grid."
+      },
+      "unit": "person",
+      "value": 5000
+    },
+    {
+      "path": "r6.utilization.users_per_studio.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 one user or two users sharing one aggregate Studio capacity. Studios=ceil(team/users_per_Studio)."
+      },
+      "unit": "person/device",
+      "value": 1
+    },
+    {
+      "path": "r6.utilization.users_per_studio.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner run6 one user or two users sharing one aggregate Studio capacity. Studios=ceil(team/users_per_Studio)."
+      },
+      "unit": "person/device",
+      "value": 2
+    },
+    {
+      "path": "sampler.above_p90",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "sampler.above_p99",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "1",
+      "value": 0.01
+    },
+    {
+      "path": "sampler.depth_100k",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "sampler.depth_200k",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "sampler.depth_50k",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "token",
+      "value": 50000
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.25
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.75
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.9
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.5",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.99
+    },
+    {
+      "path": "sampler.fit.iterations",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Bounded IPF/exponential tilt and bisection budget; failed convergence alarms, never substitutes an unfitted distribution."
+      },
+      "unit": "iteration",
+      "value": 160
+    },
+    {
+      "path": "sampler.fit.low_probabilities.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "sampler.fit.low_probabilities.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.25
+    },
+    {
+      "path": "sampler.fit.low_probabilities.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "sampler.fit.low_probabilities.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.75
+    },
+    {
+      "path": "sampler.fit.minimum_calls",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "At least4096 calls required for exact finite-cohort token-band/output/depth mean correction; smaller samples remain valid draws with finite-sample error."
+      },
+      "unit": "call",
+      "value": 4096
+    },
+    {
+      "path": "sampler.fit.representatives.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 3500
+    },
+    {
+      "path": "sampler.fit.representatives.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 7500
+    },
+    {
+      "path": "sampler.fit.representatives.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 20000
+    },
+    {
+      "path": "sampler.fit.representatives.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 40000
+    },
+    {
+      "path": "sampler.fit.thresholds.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 2000
+    },
+    {
+      "path": "sampler.fit.thresholds.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 5000
+    },
+    {
+      "path": "sampler.fit.thresholds.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 10000
+    },
+    {
+      "path": "sampler.fit.thresholds.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 30000
+    },
+    {
+      "path": "sampler.fit.tolerance",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Relative moment tolerance for the aggregate joint probability fit."
+      },
+      "unit": "1",
+      "value": 1e-08
+    },
+    {
+      "path": "sampler.minimum_mean_ratio",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "1",
+      "value": 1.0001
+    },
+    {
+      "path": "sampler.minimum_median",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Explicit calc7 floor for fitting lognormal distributions with a recorded zero median. This is a modeling floor, never a replacement for missing statistics."
+      },
+      "unit": "token",
+      "value": 1
+    },
+    {
+      "path": "sampler.mode",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Run8 review correction: all-agent token-mass tails and depth-conditioned means, hash-checked stats; keep corpus consistent."
+      },
+      "unit": "sampler law",
+      "value": "measured_tail"
+    },
+    {
+      "path": "service.profiles.heavy",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 light/medium/heavy daily profile."
+      },
+      "unit": "call/day",
+      "value": 2500
+    },
+    {
+      "path": "service.profiles.light",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 light/medium/heavy daily profile."
+      },
+      "unit": "call/day",
+      "value": 200
+    },
+    {
+      "path": "service.profiles.medium",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 light/medium/heavy daily profile."
+      },
+      "unit": "call/day",
+      "value": 800
+    },
+    {
+      "path": "workload.input_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "token",
+      "value": 120000
+    },
+    {
+      "path": "workload.output_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "token",
+      "value": 16000
+    },
+    {
+      "path": "workload.reasoning_extra_fraction",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Run11 provider usage evidence supplied by the owner: Codex 126/126 token_count events satisfy total_tokens == input_tokens + output_tokens and reasoning_output_tokens <= output_tokens (e.g. output 94, reasoning 15); Claude Code 4577/4577 usage records have output_tokens_details.thinking_tokens <= output_tokens. tools/agent_session_stats.py stores both counters side by side and notes reasoning is not added to output. Claude and Codex cover 93% of 1528194 calls. Generated tokens are output_per_call alone (mean 511.9); reasoning_per_call (about 207.5) is an informational subset, not an additional decode or API charge. Muse is treated the same way, unverified. Fraction 1 is only the explicitly labelled reasoning-on-top upper bound reproducing the old accounting; it is not a provider billing claim. Joint depth/new-token fitting and random draws are unchanged."
+      },
+      "unit": "1",
+      "value": 0
+    },
+    {
+      "path": "workload.sample_calls",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Exact completed calls in legacy calc7/8: floor(40000/116)*116; same seeded prefix."
+      },
+      "unit": "call",
+      "value": 39904
+    },
+    {
+      "path": "workload.seed",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "1",
+      "value": 5
+    },
+    {
+      "path": "workload.tail_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "token",
+      "value": 1000000
+    },
+    {
+      "path": "workload.tool_median",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "s",
+      "value": 2
+    },
+    {
+      "path": "workload.tool_sigma",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "1",
+      "value": 1
+    }
+  ]
+}

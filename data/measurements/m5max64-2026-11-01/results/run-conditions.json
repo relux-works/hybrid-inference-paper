@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-11-01T15:18:47.701141+00:00",
+  "author_scripts_unmodified": true,
+  "skip_maxctx": true,
+  "desktop_apps_remained_open": true,
+  "other_heavy_work_planned": false,
+  "background_apps_not_automatically_closed": true,
+  "preparation": "Author step 00 passed, exact build 11087 compiled, exact model SHA verified, author smoke passed.",
+  "observation": "Separate read-only sampler: baseline at 0 and 5 seconds, then every 60 seconds and a final snapshot.",
+  "cpu_scope": "Aggregate whole-machine counters, includes benchmark; does not attribute background load.",
+  "gpu_utilization_measured": false,
+  "temperature_or_thermal_throttling_measured": false,
+  "counter_semantics": "VM counters are cumulative; deltas are per observation interval. First CPU percentage is null.",
+  "finished_measurement_at_utc": "2026-11-01T17:16:38.110796+00:00",
+  "completed_steps": [
+    "40-run-depth",
+    "50-run-parallel",
+    "55-run-scaling",
+    "57-run-agents"
+  ],
+  "skipped_steps": [
+    "56-run-maxctx"
+  ],
+  "measurement_state": "collecting",
+  "failed_step": null,
+  "observer_errors": []
+}

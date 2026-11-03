@@ -1,0 +1,68 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "r6.decode.memories.0",
+        "reason": "K complete Q4/q8_0 sessions plus reserve do not fit; bandwidth bound is theoretical only"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 4,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r6.decode.memories.0",
+        "reason": "K complete Q4/q8_0 sessions plus reserve do not fit; bandwidth bound is theoretical only"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 8,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r6.decode.memories.0",
+        "reason": "K complete Q4/q8_0 sessions plus reserve do not fit; bandwidth bound is theoretical only"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 9,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r6.decode.memories.0",
+        "reason": "K complete Q4/q8_0 sessions plus reserve do not fit; bandwidth bound is theoretical only"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 24,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r6.decode.memories.0",
+        "reason": "K complete Q4/q8_0 sessions plus reserve do not fit; bandwidth bound is theoretical only"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 28,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r6.decode.memories.0",
+        "reason": "K complete Q4/q8_0 sessions plus reserve do not fit; bandwidth bound is theoretical only"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 29,
+    "table": "decode_scaling"
+  }
+]

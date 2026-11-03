@@ -1,0 +1,10 @@
+{
+  "name": "server-options-r13",
+  "kind": "measurements_r13",
+  "description": "Measured server-only vLLM FP8 options, llama.cpp sensitivities and M5 admitted rate tables",
+  "inputs": [
+    "hardware.json",
+    "server-measured.json"
+  ],
+  "export_namespace": "r13_measurements"
+}

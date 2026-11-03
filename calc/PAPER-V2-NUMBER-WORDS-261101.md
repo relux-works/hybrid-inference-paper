@@ -1,0 +1,283 @@
+# Manual number-word review for paper v2
+
+Original inventory: the 406 occurrences in ENGINE-REPORT-R13-261101.md, reviewed against their original sentences and run13/FACTS evidence before rewriting. Coordinates below refer to the original text, not current line numbers. Each checked line records human semantic adjudication; scale words, fractions and ordinals are retained in the inventory rather than silently excluded.
+
+- [x] `paper/hybrid-inference.ru.tex:46`: «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/00-abstract.tex:2`: «тысячи», «одному». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/00-abstract.tex:3`: «сотни», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/00-abstract.tex:4`: «тысяч», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/00-abstract.tex:5`: «четырёх», «шести». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/00-abstract.tex:8`: «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:7`: «сотни», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:9`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:10`: «тысяч», «четырёх», «шести». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:12`: «одна». B300 time is now 1.5-1.9 seconds; one card remains the stated input.
+- [x] `paper/sections/01-introduction.tex:14`: «тысячи», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:15`: «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:16`: «миллион», «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:20`: «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:21`: «Третью». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:29`: «четыре», «тысячи», «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:35`: «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:36`: «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:42`: «нескольких», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:43`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:47`: «двух». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:50`: «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/01-introduction.tex:53`: «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:1`: «единица». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:7`: «тысячи», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:8`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:10`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:12`: «тысяч», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:15`: «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:16`: «одного». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:20`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:25`: «одному». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:27`: «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:36`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:37`: «тысяч», «четыре», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:38`: «одного». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:43`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:49`: «тысяч», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/02-workload.tex:50`: «тысяч», «половины», «десятой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:8`: «два», «Шестнадцать». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:10`: «одну». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:11`: «обе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:13`: «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:38`: «два». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:44`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:45`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:68`: «Два». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:75`: «тысячи», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:81`: «одно». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:89`: «одними». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:90`: «одних». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:95`: «двух». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/03-architecture.tex:130`: «обоих». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:5`: «тысячу». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:6`: «полутора», «пятнадцати». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:7`: «вдвое», «оба». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:10`: «Один», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:11`: «тысяч», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:12`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:17`: «одной», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:26`: «тыс», «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:27`: «тыс», «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:28`: «тыс», «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:29`: «тыс», «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:35`: «нуля». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:36`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:41`: «первого». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:49`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:50`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:51`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:56`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:57`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:60`: «вдвое». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:65`: «тысяч», «тысячи», «первого». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:73`: «первого». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:86`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:92`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:109`: «семь». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:115`: «три». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:120`: «третий», «три», «пяти». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:124`: «восьмичасовой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/04-channel.tex:137`: «десятки». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:4`: «нескольких». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:5`: «триллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:6`: «три». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:8`: «миллиардов», «миллиардов», «миллиардов». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:15`: «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:20`: «тыс», «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:35`: «тысяча». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:37`: «одна», «тысяч», «семь», «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:38`: «полмиллиона», «две», «миллион», «тысяч», «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:39`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:50`: «тыс», «тыс», «тыс», «тыс», «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:62`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:63`: «Несколько», «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:64`: «четырёх», «тысячи», «одного». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:71`: «восьмичасовой», «четырьмя», «нескольких». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:72`: «четырёх», «двух», «половиной», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:75`: «четыре». Fourfold estimate replaced by measured Max64-only 2.00-2.86; other M5 variants stay estimated.
+- [x] `paper/sections/05-clients.tex:76`: «вдвое». Removed blanket twofold Ultra claim against the newly measured Max64; variants remain estimated.
+- [x] `paper/sections/05-clients.tex:77`: «треть». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:78`: «миллиардами». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:83`: «восьмичасовой», «четырьмя». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:85`: «одного», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:105`: «несколькими», «первую». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:107`: «десятки», «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05-clients.tex:108`: «обоих». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:4`: «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:5`: «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:6`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:11`: «миллиардов». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:13`: «тысяча». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:15`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:25`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:41`: «тысяча», «тысяча», «втрое». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:47`: «две», «тысячу». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:50`: «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:54`: «три». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:56`: «тысячи», «тысячи», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:58`: «тысячи», «четырёх». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:61`: «одно». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:63`: «один», «первое», «второго». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:64`: «первое». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:65`: «двух». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:67`: «трёх», «тысячу». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:68`: «тысяч», «единице», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:72`: «миллиардами». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:73`: «единицы». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:74`: «единицы». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:75`: «единицы». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:82`: «тысяч», «миллион», «единицы». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:83`: «единицы». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:85`: «десять». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:86`: «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:93`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:94`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:95`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:96`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:97`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:98`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:107`: «одна», «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:109`: «десятки». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:110`: «тысяч», «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:111`: «нескольких». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:115`: «тысячу». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:118`: «двух», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/05b-models.tex:119`: «тысячу», «Первое», «второе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:6`: «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:12`: «одном». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:13`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:19`: «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:22`: «тысячи», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:25`: «одна», «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:27`: «Одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:28`: «одни». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:29`: «одной», «несколько». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/06-server.tex:30`: «десятков», «двум», «десяткам». Two dozen users replaced by approximately thirteen, matching the new curve.
+- [x] `paper/sections/07-economics.tex:6`: «восьмичасовой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:16`: «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:17`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:23`: «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:29`: «нулевой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:38`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:39`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:40`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:41`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:45`: «тыс». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:65`: «восьмичасовой», «четырьмя». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:67`: «два». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:77`: «четырёх», «восьмичасовой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:101`: «три», «четырёх», «полутора». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:104`: «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:113`: «несколько». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:132`: «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:143`: «пять». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:150`: «пяти», «одна», «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:151`: «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:152`: «двадцати», «одна», «четырнадцать», «две». One/fourteen cards replaced by two/sixteen; paired-host assumption retained.
+- [x] `paper/sections/07-economics.tex:191`: «восемь». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:208`: «одной», «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:210`: «обе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:228`: «три». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:229`: «одни». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:231`: «трёх». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:233`: «Одни». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:239`: «оба», «одному». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:241`: «двумя». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:246`: «пяти», «обоих». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:251`: «одних», «восьмичасовой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:252`: «одна», «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:260`: «Одни». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:278`: «полгода». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:284`: «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:309`: «одну». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:319`: «сотнях». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:323`: «оба», «одному». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/07-economics.tex:325`: «полтора». Year and one-and-a-half-year payback replaced by 13 and 21 months.
+- [x] `paper/sections/08-million.tex:1`: «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:2`: «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:6`: «тысяч», «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:7`: «пять». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:9`: «миллиона», «миллиардов». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:10`: «шесть». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:11`: «миллиону», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:12`: «четырёх», «миллион», «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:14`: «две», «миллиону». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:17`: «миллион». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:19`: «тысячу». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:20`: «тысячи», «тысячи». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:21`: «миллионе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:22`: «пяти». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:24`: «Пять». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:29`: «million», «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:30`: «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:31`: «двух». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:35`: «обоих». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:38`: «двух», «треть», «семь». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:39`: «миллиону». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:41`: «Четыре», «двое», «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:63`: «миллиона», «Две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:66`: «million». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:69`: «миллиона», «четырёх». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/08-million.tex:70`: «четыре». Almost four times replaced by exact-export rounded 3.3-3.6; four-session input retained.
+- [x] `paper/sections/08-million.tex:71`: «двух», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:19`: «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:22`: «несколько», «десятков». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:24`: «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:28`: «тысяча», «тысяч». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:29`: «полуминуты». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:34`: «одни», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:35`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:44`: «обоих». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:45`: «первую». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:52`: «два». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:55`: «первый». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/09-security.tex:66`: «первую». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/10-resilience.tex:11`: «одного». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/10-resilience.tex:12`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/11-limitations.tex:4`: «восьмичасовой». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/11-limitations.tex:6`: «втрое». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/11-limitations.tex:14`: «нескольких». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/11-limitations.tex:31`: «одной». One measured machine replaced by M3 and Max64 measured scope.
+- [x] `paper/sections/11-limitations.tex:38`: «восемь». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/11-limitations.tex:39`: «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:6`: «обе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:9`: «обе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:13`: «двух». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:15`: «несколькими», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:17`: «две». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:23`: «одного», «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:24`: «одной». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:26`: «две», «одной», «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/12-related.tex:28`: «одна». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/13-outlook.tex:4`: «Четыре», «Первый». Obsolete future-measurement list replaced by current pending and future-work status.
+- [x] `paper/sections/13-outlook.tex:5`: «тысяч». Obsolete future-measurement list replaced by current pending and future-work status.
+- [x] `paper/sections/13-outlook.tex:6`: «Второй», «Третий». Obsolete future-measurement list replaced by current pending and future-work status.
+- [x] `paper/sections/13-outlook.tex:7`: «нескольких», «Четвёртый». Obsolete future-measurement list replaced by current pending and future-work status.
+- [x] `paper/sections/13-outlook.tex:12`: «одна», «одном». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/13-outlook.tex:13`: «четверти». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/13-outlook.tex:24`: «двух». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/13-outlook.tex:27`: «вдвое». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:6`: «десятки». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:8`: «обоих». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:9`: «три». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:15`: «миллиона». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:18`: «миллион», «пять». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:20`: «оба». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:21`: «одному». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/14-conclusion.tex:30`: «Первая». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:19`: «Первое», «второе». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:29`: «оба». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:30`: «нулю». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:32`: «одного». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:42`: «один». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:45`: «четыре». Retained: scale/unit, named model geometry, declared input, historical anchor or non-result identifier in the original sentence.
+- [x] `paper/sections/90-appendix.tex:52`: «сотен», «тысяч». Historical CPU-only passage replaced by measured CUDA, cross-backend and bounded CPU optimization evidence.
+- [x] `paper/sections/90-appendix.tex:56`: «одним». Historical CPU-only passage replaced by measured CUDA, cross-backend and bounded CPU optimization evidence.
+- [x] `paper/sections/90-appendix.tex:61`: «Пятнадцать». Historical CPU-only passage replaced by measured CUDA, cross-backend and bounded CPU optimization evidence.
+- [x] `paper/sections/90-appendix.tex:62`: «трёх». Historical CPU-only passage replaced by measured CUDA, cross-backend and bounded CPU optimization evidence.

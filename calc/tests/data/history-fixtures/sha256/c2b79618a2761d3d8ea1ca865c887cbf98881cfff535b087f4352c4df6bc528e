@@ -1,0 +1,38 @@
+{
+  "hybrid_calc2": {
+    "module": "v2",
+    "source_sha256": "18445ae81397edb70e3124cd0b602c323efd3e6c497c4a8e80930f63d853fafe"
+  },
+  "hybrid_calc3": {
+    "module": "sessions",
+    "source_sha256": "c7dc3e3658f48aad64fa596db8143078e53748b484c5d89544d0a2da7e971aae"
+  },
+  "hybrid_calc4": {
+    "module": "fleet",
+    "source_sha256": "ee2f5ff9d99f87290f6610eabc25a41b91810750bfd82ca50c3fee531f60cc45"
+  },
+  "hybrid_calc5_equilibrium": {
+    "module": "equilibrium",
+    "source_sha256": "198f3bd5f66d883f9078829d49d47b00852facdbd7dd36db908c89903e3ad6a8"
+  },
+  "hybrid_calc6_edge": {
+    "module": "edge",
+    "source_sha256": "1b43694505a858febecd9b66c12dfb3a3fcf81cab76fb9e879ea1c0e22c42bc5"
+  },
+  "hybrid_calc7_realcalls": {
+    "module": "workload",
+    "source_sha256": "a1a65f1d3c0579dcfeedc6b6ade5861b16c01697f9a8136f29da4dd7d49ddff5"
+  },
+  "hybrid_calc8_business": {
+    "module": "business",
+    "source_sha256": "e3ac6af1b61ba0e505c446ec253c14a532ca061e3e005bf5122396c0529f73a5"
+  },
+  "hybrid_calc9_m3max_measured": {
+    "module": "calibration",
+    "source_sha256": "19091349e165953d127c6b279ed180fc440283483de8d43ee4d1425807989417"
+  },
+  "sensitivity_host_sample": {
+    "module": "sensitivity",
+    "source_sha256": "e9e1370ea1c88b493365d6c3bbf54234e042600fb074739344b800fd72c27c0f"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "phase_a": {
+    "directory": "data/measurements/vast-2026-11-01/r13-phase_a",
+    "archive": "qwen27b-gpu-bench-results-qwen27-161-phaseA-20261101T191633Z.tar.gz",
+    "sha256": "fd0bc08cd310718fadbe10f9badb081abcceb15d8bdb24d0e108305340d76040"
+  },
+  "off": {
+    "directory": "data/measurements/vast-2026-11-01/r13-off",
+    "archive": "qwen27b-gpu-bench-results-ab-ckpt-off-20261101T181253Z.tar.gz",
+    "sha256": "e80d4240b6e35d384e29a31c14269716b430728472a1253220e2235bbd1ab3c2"
+  },
+  "on": {
+    "directory": "data/measurements/vast-2026-11-01/r13-on",
+    "archive": "qwen27b-gpu-bench-results-ab-ckpt-default-20261101T182241Z.tar.gz",
+    "sha256": "92828a6c8e5796042fd7175d2b9281d71de3e9a9522af2d1833b8ddaa48c5d38"
+  },
+  "m5": {
+    "directory": "data/measurements/m5max64-2026-11-01",
+    "archive": "cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz",
+    "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+  }
+}

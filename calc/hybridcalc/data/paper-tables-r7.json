@@ -672,13 +672,13 @@
               }
             },
             "kv_copies": {
-              "value": 1,
+              "value": 2,
               "unit": "1",
               "provenance": {
                 "kind": "fact",
                 "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json",
                 "access_date": "2026-10-30",
-                "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification."
+                "snapshot": "Owner correction 2026-11-01: full-attention KV has separate K and V; 10 layers x 4 heads x 512 x 2 x 34/32 = 43520 B/token."
               }
             }
           },

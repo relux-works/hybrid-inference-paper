@@ -1,0 +1,12 @@
+{
+  "rate": 1520.6365139302072,
+  "source": "<results>/hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T151750.jsonl",
+  "label": "nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv",
+  "total_slots": 1,
+  "depth": 131072,
+  "method": "linear interpolation of seconds/token, \u039410000",
+  "neighbors": [
+    100000,
+    150000
+  ]
+}

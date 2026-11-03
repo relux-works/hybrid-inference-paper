@@ -1,0 +1,159 @@
+{
+  "created_utc": "2026-11-01T02:46:37Z",
+  "kit": "qwen27b-gpu-bench",
+  "kit_version": "1.2.0",
+  "llama_cpp_commit": "c21284cdf5fd833b90ac1f824cdf8065e2700dc4",
+  "model": "ggml-org/Qwen3.8-27B-GGUF@0669b98607d4 Qwen3.8-27B-Q4_K_M.gguf",
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "benchmark_sha256": "c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095",
+  "files": {
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-agents128k-20261101T022648.jsonl": {
+      "bytes": 20607,
+      "sha256": "adde5e4bc51b4e66101924e48d777e83a4a5573da8e85c4e73e5f68d41b7572c"
+    },
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-agents128k-20261101T022648.md": {
+      "bytes": 1222,
+      "sha256": "7bfefc22816b28fa29063e7bfdf92d526d1da566b69b93d802b83969312252b1"
+    },
+    "build-configure.log": {
+      "bytes": 2468,
+      "sha256": "bdd580622fb87b52de81112ccaa4a5b0f277c34a65c04da3a2028fe9f653f3d7"
+    },
+    "build.log": {
+      "bytes": 32085,
+      "sha256": "ac028a5bfc0dfbde8bfea7863ccb46a1ea5779ba5c7a9681adca31a4a9edd960"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-par4-20261101T021456.jsonl": {
+      "bytes": 847,
+      "sha256": "e41486d016a523b8d6823ead77484ce0562dab9905912422f0d413cd95da85a8"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-par4-20261101T021456.md": {
+      "bytes": 154,
+      "sha256": "a25f4adc33caa9467d39b4d149a1ab16aa1e78f58ffdaefbbadd90845cd1796d"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T020831.jsonl": {
+      "bytes": 9247,
+      "sha256": "340f7fde1812828ca8609e71fc762de583ac3e024826cdfbd2f68c4d7e38a3f4"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T020831.md": {
+      "bytes": 886,
+      "sha256": "25fa57cf7145bcc311c326f799cc766ac4f97ef5d34f24e29eebf8509ffe20a7"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-smoke-20261101T010045.jsonl": {
+      "bytes": 2283,
+      "sha256": "9baa95d413defd01991c0e85456582743564e55106a424eb1c82cb26dc4f852a"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-smoke-20261101T010045.md": {
+      "bytes": 240,
+      "sha256": "925c445b05377b3f06c8f27b3d91d925ef9c36147cfed65d9f0f180f3a1518cd"
+    },
+    "kit.log": {
+      "bytes": 5616,
+      "sha256": "181ddfd18c3ce7fb694962abe1927593c284a157db192bd8868ebb4062b2b6bb"
+    },
+    "llama-server-version.txt": {
+      "bytes": 141,
+      "sha256": "67a34f5648756f49bc05b0261cadabb67c449d58d2ee12aad454ec826018c1ba"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-depth128k-20261101T021752.jsonl": {
+      "bytes": 6077,
+      "sha256": "9e80a370ec7df4a1f173283b8e8eaecafcee6dd73eda15a76df7039eb0cfe219"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-depth128k-20261101T021752.md": {
+      "bytes": 717,
+      "sha256": "62709195e65b698a65fd456b19a907d625794b3b8df7703d6b686f00d02c78f8"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-depth260k-20261101T022025.jsonl": {
+      "bytes": 6098,
+      "sha256": "ea327d49c5de48368358a24a221c0fb0c41fc49a003e2ac3ff019422a8ae3caa"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-depth260k-20261101T022025.md": {
+      "bytes": 714,
+      "sha256": "e4dc25715fd2d45429ff4040b94fdbb8b603e8e955c7525190a423cfe13ee4b7"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-depth64k-20261101T021611.jsonl": {
+      "bytes": 10928,
+      "sha256": "0466202899101877ecae6c2ce84b8dda536a2dbc98e89104176d4987a77dedbb"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-depth64k-20261101T021611.md": {
+      "bytes": 755,
+      "sha256": "830c84a78be028ad3828b64a182e6876c35736fab137dd2779efc9e281e17696"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot1040k-20261101T010729.jsonl": {
+      "bytes": 945,
+      "sha256": "e760097bd9be548a80e45839dd1ee2d757e8621dfc96f1c76ff43dde7ccbfccb"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot1040k-20261101T010729.md": {
+      "bytes": 287,
+      "sha256": "d957841cb772340b073ee60a6e85d717995f52b99159cf155562b51a94bfe17b"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot131k-20261101T010052.jsonl": {
+      "bytes": 872,
+      "sha256": "08348288957841a70d2081f1abc86051154ced6dd53a8108a5a66c6ab4965a39"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot131k-20261101T010052.md": {
+      "bytes": 284,
+      "sha256": "e0159c451a9dbf7c62fc4641fc31a7ec5989d38c3b88bd4a0929e2f995bc9322"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot260k-20261101T010228.jsonl": {
+      "bytes": 875,
+      "sha256": "da834e3047a0984f8f13c8b49bb3fbe4c0af0caa7e96d330ffa54b5d612f06b1"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot260k-20261101T010228.md": {
+      "bytes": 283,
+      "sha256": "59413b13a218f8271afd96c224a4409eeb2262064cc99d2f85246364a24ce79d"
+    },
+    "server-agents-128k-np8.log": {
+      "bytes": 146531,
+      "sha256": "69c982aa6b0aff7d1658490c30820a03e90b155641b58bb6388ce482fcc9985b"
+    },
+    "server-depth-1.log": {
+      "bytes": 37577,
+      "sha256": "978da8dfc7b2cb3cfb3fa84ec753f231e11c27d66b697d1912ff65b15b3e055b"
+    },
+    "server-par4.log": {
+      "bytes": 16585,
+      "sha256": "471a1d271fdca62c47975c7b3366a13d8d2c3928f1681dadb7d22641d29c3032"
+    },
+    "server-scale-128k-np16.log": {
+      "bytes": 1367,
+      "sha256": "ee86a97281503f4db9c3ee5a039b2f6931fd365e5c08e5d1cea0622c583857c8"
+    },
+    "server-scale-128k-np8.log": {
+      "bytes": 24621,
+      "sha256": "8c7ebfde36e3b9991a15f6c7ed96ab084fd0e7c017ce4d51d83a154fb2a29b14"
+    },
+    "server-scale-260k-np8.log": {
+      "bytes": 39408,
+      "sha256": "28d69d1315ead83698202c0d09d663b042f787f84bada1d686a0bc4f7c758a12"
+    },
+    "server-scale-64k-np16.log": {
+      "bytes": 34337,
+      "sha256": "dc6b571f077d13caeeb51f73e2dd582f98ae647111b9d808a4add1d9c54adf56"
+    },
+    "server-scale-64k-np32.log": {
+      "bytes": 1367,
+      "sha256": "f8c552000896f5dd0cf309b7910c2452306bf3e464184d9102a934f0d9d7d10d"
+    },
+    "server-slot-1040k.log": {
+      "bytes": 76514,
+      "sha256": "a27471544fb3b913da8aa0a8838f5520157fc0cd72eea55be716c05ef561c357"
+    },
+    "server-slot-131k.log": {
+      "bytes": 10786,
+      "sha256": "8856e06ac58800c3a0103b5b301541d9194c511c0ed410489fd9a3f5f0b30d05"
+    },
+    "server-slot-260k.log": {
+      "bytes": 20176,
+      "sha256": "3fd53044cdf47b9a2d6d8d9f41a69f650b3b30d76ca185cbb895ba87e0a49eda"
+    },
+    "server-smoke.log": {
+      "bytes": 5528,
+      "sha256": "3128cf312f651838d4333ca9e8c329eb047035f47258cc087caf8d1db0383fed"
+    },
+    "system.json": {
+      "bytes": 632,
+      "sha256": "50943b59ca58dfe0b73afc7abd09e5fbb0c59b6dbb94849f6c3fce92c4e05b9d"
+    }
+  }
+}

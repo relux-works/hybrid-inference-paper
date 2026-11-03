@@ -1,0 +1,21 @@
+2026-11-01T18:12:56Z GPU 0: NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 97887 MiB (97249 free), compute 12.0, driver 595.91.07, CUDA 12.8, PCIe gen 4 x16
+2026-11-01T18:12:56Z host: AMD EPYC 7532 32-Core Processor, 64 threads, 251 GB RAM, Ubuntu 24.04.5 LTS, free disk 120 GB; one slot fits 262144 tokens
+2026-11-01T18:12:56Z check passed; results/system.json written
+2026-11-01T18:12:57Z cloning https://github.com/ggml-org/llama.cpp
+2026-11-01T18:13:05Z configuring llama.cpp c21284cdf5fd833b90ac1f824cdf8065e2700dc4 with CUDA for architecture 120a-real
+2026-11-01T18:13:10Z building llama-server and llama-bench (several minutes)
+2026-11-01T18:18:07Z built: 0.00.000.804 I srv  llama_server: initializing ... version: 0.4.1-dev (build 11087, commit c21284cdf) built with GNU 13.3.0 for Linux x86_64 
+2026-11-01T18:18:07Z verifying SHA-256 (about a minute)
+2026-11-01T18:18:21Z model verified: Qwen3.8-27B-Q4_K_M.gguf, 18973870432 bytes, sha256 31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34
+2026-11-01T18:18:22Z GGUF geometry recorded in results/model-geometry.json
+2026-11-01T18:18:24Z llama-server (smoke) started with pid 64274 on GPU 0; arguments: -c 32768 -np 1 (llama-server default context checkpoints)
+2026-11-01T18:18:30Z llama-server ready after 5s; GPU memory used: 19526 MiB
+2026-11-01T18:18:34Z smoke test finished; check results/hybrid-bench-*smoke*.md
+2026-11-01T18:18:35Z llama-server pid 64274 stopped
+2026-11-01T18:18:36Z context planned for the depth run: 262144 tokens
+2026-11-01T18:18:36Z slot save/restore on (119 GB free)
+2026-11-01T18:18:36Z llama-server (depth-1) started with pid 64460 on GPU 0; arguments: -c 262144 -np 1 --slot-save-path <work>/slots (llama-server default context checkpoints)
+2026-11-01T18:18:42Z llama-server ready after 5s; GPU memory used: 28262 MiB
+2026-11-01T18:18:42Z depth run started at context 262144, depths 16k,50k,100k,150k,200k,249k; expect 20 to 60 minutes on a recent GPU
+2026-11-01T18:22:39Z depth run finished
+2026-11-01T18:22:40Z llama-server pid 64460 stopped

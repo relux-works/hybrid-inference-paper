@@ -1,0 +1,22 @@
+{
+  "mac": {
+    "directory": "data/measurements/run14-2026-11-02/mac",
+    "archive": "qwen27b-mac-bench-results-20261101T094816Z.tar.gz",
+    "sha256": "9b7019cd71a2d3df221768b77a91d37babe2fa6c0584d9618b0ead7f4c233ac2"
+  },
+  "control": {
+    "directory": "data/measurements/run14-2026-11-02/control",
+    "archive": "qwen27b-mac-bench-results-20261101T100651Z.tar.gz",
+    "sha256": "409bd7efeca11ec4697b940b6f83d4e4055d3894f49de32bf723d876a235d73e"
+  },
+  "m5": {
+    "directory": "data/measurements/m5max64-2026-11-01",
+    "archive": "cd86d046-qwen27b-mac-bench-results-20261101T181433Z.tar.gz",
+    "sha256": "c7ceab57f8d61b9bd166daf96cae1e8f389d296c0f9789ccb8cc32536d9f6b05"
+  },
+  "b300": {
+    "directory": "data/measurements/run14-2026-11-02/b300",
+    "archive": "qwen27b-gpu-bench-results-b300-20261101T232533Z.tar.gz",
+    "sha256": "1325ae41717945a2c8e14cf2ad5588c7375dd7511361879510fbc4d3523011bc"
+  }
+}

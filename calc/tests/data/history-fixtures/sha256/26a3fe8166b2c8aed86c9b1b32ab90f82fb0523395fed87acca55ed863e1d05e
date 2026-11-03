@@ -1,0 +1,266 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 6,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 6,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 6,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 7,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 7,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 7,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 14,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 14,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 14,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 15,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 15,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 15,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 22,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 22,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 22,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 23,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 23,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 23,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 30,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 30,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 30,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "local_sessions_day",
+    "row": 31,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "hybrid_sessions_day",
+    "row": 31,
+    "table": "decode_sensitivity_conservative"
+  },
+  {
+    "alarms": [
+      {
+        "input": "r7.decode.scales.3",
+        "reason": "requested decode scale exceeds raw bandwidth bound at unchanged Q4/q8_0 byte traffic; capacity not physically computable"
+      }
+    ],
+    "column": "gain",
+    "row": 31,
+    "table": "decode_sensitivity_conservative"
+  }
+]

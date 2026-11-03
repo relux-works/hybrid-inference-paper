@@ -1,0 +1,108 @@
+{
+  "client_depth": {
+    "columns": {
+      "actual_depth": "token",
+      "client": "text",
+      "decode_tok_s": "token/s",
+      "delta": "token",
+      "depth": "token",
+      "phase": "text",
+      "prefill_tok_s": "token/s"
+    },
+    "csv_labels": {},
+    "name": "client_depth",
+    "rows": 36,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "client_parallel": {
+    "columns": {
+      "client": "text",
+      "decode_interval_tok_s": "token/s",
+      "depth": "token",
+      "phase": "text",
+      "reported_tok_s": "token/s (kit counter convention)",
+      "single_tok_s": "token/s (0 means not a single-stream row)",
+      "streams": "stream",
+      "wall_tok_s": "token/s"
+    },
+    "csv_labels": {},
+    "name": "client_parallel",
+    "rows": 8,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "server_bulk": {
+    "columns": {
+      "actual_depth": "token",
+      "case": "text",
+      "delta": "token",
+      "depth": "token",
+      "fitted_seconds_token": "s/token",
+      "fp8_fraction": "fraction of dense FP8 peak",
+      "rate": "token/s",
+      "seconds_token": "s/token"
+    },
+    "csv_labels": {},
+    "name": "server_bulk",
+    "rows": 36,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "server_fits": {
+    "columns": {
+      "a": "s/token",
+      "b": "s/token/depth-token",
+      "case": "text",
+      "max_residual": "fraction"
+    },
+    "csv_labels": {},
+    "name": "server_fits",
+    "rows": 4,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "server_reproduction": {
+    "columns": {
+      "delta": "token",
+      "depth": "token",
+      "relative_difference": "fraction"
+    },
+    "csv_labels": {},
+    "name": "server_reproduction",
+    "rows": 12,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "vllm_cached": {
+    "columns": {
+      "cached": "token",
+      "client_bridge": "bool",
+      "delta": "token",
+      "delta_tok_s": "token/s",
+      "depth": "token",
+      "option": "text",
+      "processed": "token",
+      "processed_tok_s": "token/s",
+      "server_only": "bool",
+      "ttft_s": "s"
+    },
+    "csv_labels": {},
+    "name": "vllm_cached",
+    "rows": 16,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "vllm_cold": {
+    "columns": {
+      "a": "s/token",
+      "b": "s/token/depth-token",
+      "client_bridge": "bool",
+      "depth": "token",
+      "fitted_s": "s",
+      "option": "text",
+      "rate": "token/s",
+      "repetition": "index",
+      "server_only": "bool",
+      "ttft_s": "s"
+    },
+    "csv_labels": {},
+    "name": "vllm_cold",
+    "rows": 16,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  }
+}

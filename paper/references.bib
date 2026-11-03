@@ -293,3 +293,68 @@
   howpublished = {\url{https://github.com/antirez/ds4/pull/401}},
   note = {Opened 12 June 2026, not merged as of 2026-10-30: distributed prefill across nodes, then local decode on the coordinator}
 }
+
+
+@misc{ds4code401,
+  author = {{GitHub user lobanov}},
+  title = {{DS4 PR 401}: token catch-up and transcript rebuild, source at commit 6399c23},
+  year = {2026},
+  howpublished = {\url{https://github.com/lobanov/ds4/blob/6399c23de955917a519cf08a67a24cb62945023e/ds4_distributed.c#L5772}},
+  note = {Functions dist\_session\_flush\_local\_decode\_remote (5772), dist\_coordinator\_rebuild\_from\_transcript (3415), and ds4\_dist\_session\_sync (6500). Accessed 2026-11-02}
+}
+
+@misc{exolabsSpark,
+  author = {{EXO Labs}},
+  title = {{NVIDIA DGX Spark} + {Apple Mac Studio} = 4x Faster {LLM} Inference with {EXO} 1.0},
+  howpublished = {\url{https://blog.exolabs.net/nvidia-dgx-spark/}},
+  note = {Accessed 2026-11-02. Llama-3.1 8B FP16 benchmark: 8,192 prompt tokens, 32 generated tokens, 2.8x versus M3 Ultra}
+}
+@misc{liu2024cachegen,
+  author = {Yuhan Liu and Hanchen Li and Yihua Cheng and Siddhant Ray and Yuyang Huang and Qizheng Zhang and Kuntai Du and Jiayi Yao and Shan Lu and Ganesh Ananthanarayanan and Michael Maire and Henry Hoffmann and Ari Holtzman and Junchen Jiang},
+  title = {{CacheGen}: {KV} Cache Compression and Streaming for Fast Large Language Model Serving},
+  year = {2024},
+  howpublished = {arXiv:2310.07240, SIGCOMM 2024},
+  doi = {10.1145/3651890.3672274}
+}
+
+@misc{lmcacheCachegen,
+  author = {{LMCache Team}},
+  title = {{CacheGen}: Compression in {LMCache}},
+  howpublished = {\url{https://docs.lmcache.ai/kv_cache_optimizations/compression/cachegen.html}; \url{https://docs.lmcache.ai/mp/cachegen.html}},
+  note = {Legacy in-process support; multiprocess implementation pending. Accessed 2026-11-02}
+}
+
+@misc{pan2025marconi,
+  author = {Rui Pan and Zhuang Wang and Zhen Jia and Can Karakus and Luca Zancato and Tri Dao and Yida Wang and Ravi Netravali},
+  title = {{Marconi}: Prefix Caching for the Era of Hybrid {LLMs}},
+  year = {2025},
+  howpublished = {arXiv:2411.19379, MLSys 2025}
+}
+
+@misc{zhang2024edgeshard,
+  author = {Mingjin Zhang and Jiannong Cao and Xiaoming Shen and Zeyang Cui},
+  title = {{EdgeShard}: Efficient {LLM} Inference via Collaborative Edge Computing},
+  year = {2024},
+  howpublished = {arXiv:2405.14371}
+}
+
+@misc{zhang2026picospec,
+  author = {Yida Zhang and Zhiyong Gao and Shuaibing Yue and Jie Li and Rui Wang},
+  title = {A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud {LLM} Inference},
+  year = {2026},
+  howpublished = {arXiv:2603.19133}
+}
+
+@misc{li2026authorizedkv,
+  author = {Cheng Li and Jiexiong Liu and Yixuan Chen and Yi Li},
+  title = {Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models},
+  year = {2026},
+  howpublished = {arXiv:2607.13093v4}
+}
+
+@misc{shkolnikov2026agentmemory,
+  author = {Yakov Pyotr Shkolnikov},
+  title = {Agent Memory Below the Prompt: Persistent {Q4} {KV} Cache for Multi-Agent {LLM} Inference on Edge Devices},
+  year = {2026},
+  howpublished = {arXiv:2603.04428}
+}

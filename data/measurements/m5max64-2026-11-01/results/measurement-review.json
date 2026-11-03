@@ -1,0 +1,88 @@
+{
+  "schema": "post-run-observation-review/v1",
+  "reviewed_at_utc": "2026-11-01T18:14:30.072457+00:00",
+  "run_finished_at_utc": "2026-11-01T17:16:38.312254+00:00",
+  "measurement_protocol_errors": 0,
+  "cache_or_truncation_warnings": 0,
+  "sample_count": 120,
+  "phase_summary": {
+    "baseline": {
+      "samples": 2,
+      "max_swap_used_bytes": 0,
+      "swapins_counter_delta_sum": 0,
+      "swapouts_counter_delta_sum": 0,
+      "pressure_raw_counts": {
+        "1": 2
+      },
+      "sampler_error_samples": 0
+    },
+    "40-run-depth": {
+      "samples": 48,
+      "max_swap_used_bytes": 0,
+      "swapins_counter_delta_sum": 0,
+      "swapouts_counter_delta_sum": 0,
+      "pressure_raw_counts": {
+        "1": 48
+      },
+      "sampler_error_samples": 0
+    },
+    "50-run-parallel": {
+      "samples": 6,
+      "max_swap_used_bytes": 0,
+      "swapins_counter_delta_sum": 0,
+      "swapouts_counter_delta_sum": 0,
+      "pressure_raw_counts": {
+        "1": 6
+      },
+      "sampler_error_samples": 0
+    },
+    "55-run-scaling": {
+      "samples": 20,
+      "max_swap_used_bytes": 0,
+      "swapins_counter_delta_sum": 0,
+      "swapouts_counter_delta_sum": 0,
+      "pressure_raw_counts": {
+        "1": 20
+      },
+      "sampler_error_samples": 0
+    },
+    "57-run-agents": {
+      "samples": 43,
+      "max_swap_used_bytes": 5095754301,
+      "swapins_counter_delta_sum": 28420,
+      "swapouts_counter_delta_sum": 334580,
+      "pressure_raw_counts": {
+        "1": 30,
+        "2": 13
+      },
+      "sampler_error_samples": 0
+    },
+    "collecting": {
+      "samples": 1,
+      "max_swap_used_bytes": 4911204925,
+      "swapins_counter_delta_sum": 6781,
+      "swapouts_counter_delta_sum": 0,
+      "pressure_raw_counts": {
+        "1": 1
+      },
+      "sampler_error_samples": 0
+    }
+  },
+  "all_samples_on_ac": true,
+  "observed_power_mode_values": [
+    "{\"powermode\": 0}"
+  ],
+  "first_nonzero_swap_sample_yerevan": "2026-11-01T20:50:55.432905+04:00",
+  "previous_sample_yerevan": "2026-11-01T20:49:55.398217+04:00",
+  "peak_swap_used_bytes": 5095754301,
+  "peak_swap_sample_yerevan": "2026-11-01T21:14:56.279007+04:00",
+  "interpretation": [
+    "Steps 40, 50 and 55 had zero sampled swap usage and zero positive swapin/swapout counter deltas.",
+    "Step 57 completed with valid rounds and no context rereads, but later parts had memory pressure and active paging. These results should not be presented as uncontended maximum hardware throughput.",
+    "The first nonzero swap observation interval overlaps the end of the one-session round, slot restoration and the beginning of the two-session round. It cannot be attributed solely to two sessions.",
+    "Telemetry is whole-system and sampled every 60 seconds. It cannot identify which processes or pages were swapped, quantify slowdown or justify correcting token rates.",
+    "vm_stat swap counters are page counters, not measured physical SSD byte traffic; compression affects interpretation.",
+    "Desktop apps remained open. GPU utilization and temperature/thermal throttling were not measured.",
+    "Original benchmark measurements and logs are preserved. This supplementary review was added before final collection."
+  ]
+}

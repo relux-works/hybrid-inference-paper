@@ -1,0 +1,63 @@
+{
+  "name": "owners-economics",
+  "kind": "ownership",
+  "description": "Owner economics: open shares, capacity, ownership, fit, small teams and selling price",
+  "inputs": [
+    "hardware.json",
+    "models.json",
+    "prices.json",
+    "workload.json",
+    "sampler.json",
+    "economics.json",
+    "service.json",
+    "ownership.json"
+  ],
+  "overrides": {
+    "workload": {
+      "sample_calls": {
+        "value": 39904,
+        "unit": "call",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Exact completed calls in legacy calc7/8: floor(40000/116)*116; same seeded prefix."
+        }
+      },
+      "reasoning_extra_fraction": {
+        "value": 0,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Run11 provider usage evidence supplied by the owner: Codex 126/126 token_count events satisfy total_tokens == input_tokens + output_tokens and reasoning_output_tokens <= output_tokens (e.g. output 94, reasoning 15); Claude Code 4577/4577 usage records have output_tokens_details.thinking_tokens <= output_tokens. tools/agent_session_stats.py stores both counters side by side and notes reasoning is not added to output. Claude and Codex cover 93% of 1528194 calls. Generated tokens are output_per_call alone (mean 511.9); reasoning_per_call (about 207.5) is an informational subset, not an additional decode or API charge. Muse is treated the same way, unverified. Fraction 1 is only the explicitly labelled reasoning-on-top upper bound reproducing the old accounting; it is not a provider billing claim. Joint depth/new-token fitting and random draws are unchanged."
+        }
+      }
+    }
+  },
+  "summary_option": "l40s",
+  "cluster_option": "b300_node",
+  "small_models": [
+    "qwen27",
+    "glm"
+  ],
+  "benchmark_keys": [
+    "mimo_flash",
+    "chutes_27b",
+    "qwen_flash"
+  ],
+  "option_keys": [
+    "h100",
+    "l40s",
+    "rtx6000",
+    "b300",
+    "h200_pair",
+    "office5090",
+    "office6000",
+    "office4",
+    "b300_node"
+  ],
+  "fit_models": [
+    "qwen27",
+    "flashnext",
+    "glm"
+  ],
+  "owned_hybrid_option": "office5090"
+}

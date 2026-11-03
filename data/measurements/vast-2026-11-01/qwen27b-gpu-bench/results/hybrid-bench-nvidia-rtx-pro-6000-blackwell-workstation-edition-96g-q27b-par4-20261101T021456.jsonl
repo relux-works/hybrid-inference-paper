@@ -1,0 +1,4 @@
+{"kind": "meta", "tool": "hybrid_bench", "version": "1.1", "label": "nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-par4", "notes": "4 streams at 32k, np 4, ctx 140000", "depths": "16k,50k,100k,150k,200k,260k", "deltas": "512,2k,10k", "gen": 128, "smoke": false, "python": "3.12.3", "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39", "machine": "x86_64", "ts": 1793499296.443}
+{"kind": "server", "api": "llama", "n_ctx": 35072, "total_slots": 4, "model_file": "Qwen3.8-27B-Q4_K_M.gguf", "build": "b11087-c21284cdf", "ts": 1793499296.457}
+{"kind": "parallel", "streams": 4, "depth": 32000, "single_decode_tok_s": 49.03, "per_stream_decode_tok_s": [21.58, 21.58, 21.58, 21.58], "aggregate_decode_tok_s": 86.31, "batching_gain": 1.76, "wall_s": 6.89, "ts": 1793499364.025}
+{"kind": "done", "minutes": 1.1, "ts": 1793499364.025}

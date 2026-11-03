@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-11-01T18:14:33Z",
+  "kit": "qwen27b-mac-bench",
+  "kit_version": "1.4.1",
+  "llama_cpp_commit": "c21284cdf5fd833b90ac1f824cdf8065e2700dc4",
+  "model": "ggml-org/Qwen3.8-27B-GGUF@0669b98607d4 Qwen3.8-27B-Q4_K_M.gguf",
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "benchmark_sha256": "c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095",
+  "files": {
+    "agents-loop-apple-m5-max-64g-q27b-agents128k-20261101T203345.jsonl": {
+      "bytes": 10611,
+      "sha256": "92d54f4de7187af604fa7c3b3b876fe1dd805b3d90a111c417c351cc47b820ec"
+    },
+    "agents-loop-apple-m5-max-64g-q27b-agents128k-20261101T203345.md": {
+      "bytes": 1103,
+      "sha256": "3038ceefae95c9a41cbb72cf52b3576784ecefbab131a16bd67ab25076ee3a71"
+    },
+    "build-configure.log": {
+      "bytes": 3777,
+      "sha256": "90cbd7958be090c1326e2eadaee0c03a66350fad0e51d2b043810217ce47f621"
+    },
+    "build.log": {
+      "bytes": 21219,
+      "sha256": "fe69c45598458e25d3bd2096c707735ad7a7eb5c6907b0439f82342d5b8f3e03"
+    },
+    "conditions-telemetry.jsonl": {
+      "bytes": 100452,
+      "sha256": "11d6091395a334f0a1cac163725c818eb0863ea70eb9938811eff72ca0359306"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-par4-20261101T200737.jsonl": {
+      "bytes": 890,
+      "sha256": "18a3be01bfbf73598bfe62d16213ab667e44b0f9c1032ffbba59bba9f708ba06"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-par4-20261101T200737.md": {
+      "bytes": 154,
+      "sha256": "4e3664429158c060f019fe96130e65a78a904de728391524a2aa3a976bd7055b"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261101T191855.jsonl": {
+      "bytes": 9311,
+      "sha256": "35329e386cabf61df8ded5ddc420ab1ebfcc77209d3d1ce0f25b89324a189030"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261101T191855.md": {
+      "bytes": 858,
+      "sha256": "54fc98bd78ff72f6ba1145cf3180a1800a95724661a75df8d30649041da00485"
+    },
+    "hybrid-bench-apple-m5-max-64g-smoke-20261101T191653.jsonl": {
+      "bytes": 2329,
+      "sha256": "0c4fce009a9d4940cbf47dd31097608377d436743abb5027f1023e082eb3e005"
+    },
+    "hybrid-bench-apple-m5-max-64g-smoke-20261101T191653.md": {
+      "bytes": 234,
+      "sha256": "ebd8aa66554331198dfa96fd6661742f9b2b88cc4e62e7136de05cdd808e893f"
+    },
+    "kit.log": {
+      "bytes": 2839,
+      "sha256": "a42309adabc6e7949664d35802bdd79999ac12639f5903dd0a7d11bf71bf72cc"
+    },
+    "llama-server-version.txt": {
+      "bytes": 157,
+      "sha256": "8a6db0a5f176dfccba93aadd9df9aef1bad69785165a1ab01a40ef6df3c94748"
+    },
+    "measurement-review.json": {
+      "bytes": 3218,
+      "sha256": "61a5e82c3a33b63bdb04ad5c1ae0dbc564d77bb02c5e218d9acbc03c7f30aca8"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-depth128k-20261101T201928.jsonl": {
+      "bytes": 3592,
+      "sha256": "eb905bb79838dd8b40fd4c5c29ee01349c1a346fc83e5b2c073a84e208965796"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-depth128k-20261101T201928.md": {
+      "bytes": 641,
+      "sha256": "dd01db583ece04e5021d2e3708471cb539d68e2a55a72855ad074fc297808846"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-depth64k-20261101T201346.jsonl": {
+      "bytes": 6093,
+      "sha256": "99303409e64e41fa839ca11dc9f2d9f32bc7d637d5a333771e573463cc97a520"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-depth64k-20261101T201346.md": {
+      "bytes": 675,
+      "sha256": "3e6ff29a4d5c57448f3b3176c9c84ee36cb99b127b226f8e2032cbea211d3e38"
+    },
+    "run-conditions.json": {
+      "bytes": 1119,
+      "sha256": "abc499b1df1741971bcaeb48cf7e89d67aa4410dc49f88623dd3331bf54f998f"
+    },
+    "server-agents-128k-np4.log": {
+      "bytes": 121481,
+      "sha256": "b462d9e6353e9409c0ac5f8f2a5626ea70085ac5a0de9ec23b54191059c4f52f"
+    },
+    "server-depth.log": {
+      "bytes": 42537,
+      "sha256": "58fda1246766659796a8c8bbb8bfce851a37df7ababbb4179832bb573a3541ce"
+    },
+    "server-par4.log": {
+      "bytes": 18226,
+      "sha256": "319d272c3cf607f6c3afb9751e6dc690c57b766fac608ce8a42830d2cad034ef"
+    },
+    "server-scale-128k-np4.log": {
+      "bytes": 17863,
+      "sha256": "5d96ad959bdfeb46a7a4fef690a539f1728889d61884254a4d1a5b6a213fe531"
+    },
+    "server-scale-64k-np8.log": {
+      "bytes": 21419,
+      "sha256": "e188e46195aae542e84dadc08f22906511dc2eea33817b751d3d090d21b3834f"
+    },
+    "server-smoke.log": {
+      "bytes": 5527,
+      "sha256": "e0faaaa5283ca4d182ee265ac5fbf9957305dee63caba44c19a661c2c6d96a4a"
+    },
+    "system.json": {
+      "bytes": 397,
+      "sha256": "141df343c0f8dd414d9f5166f01ee08bea9c6fd5b74aab88397c2fccf49a4a95"
+    }
+  }
+}

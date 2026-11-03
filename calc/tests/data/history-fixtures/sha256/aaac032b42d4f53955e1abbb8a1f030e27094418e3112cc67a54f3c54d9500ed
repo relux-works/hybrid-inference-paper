@@ -1,0 +1,2272 @@
+{
+  "files": [
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/depth.jsonl",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "sha256": "a75b1aefd40df99d96d8a96ff4eac20073b239c39d4d4d4332fa23da1b9acb5b"
+    },
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/normalized-results.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "sha256": "d7c7cbc72d5ee69991aafdc3b3579dd13d5cd956cb9d4a99d05a25dac7743fb5"
+    },
+    {
+      "path": "data/measurements/ivmbp-2026-10-30/stats.json",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "analysis.decode_state_passes",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "hardware.clients.m3max.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 400000000000.0
+    },
+    {
+      "path": "hardware.clients.m3max.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline NOTES.md, Пересчёт v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 14000000000000.0
+    },
+    {
+      "path": "hardware.clients.m3max.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 128000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max64.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation."
+      },
+      "unit": "B/s",
+      "value": 614000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max64.compute",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline NOTES.md, Пересчёт v4 peak FP16/BF16 envelope. Relative compute scales the measured M3 curve at equal FLOP efficiency, then applies memory roofline; portability is an estimate."
+      },
+      "unit": "FLOP/s",
+      "value": 60000000000000.0
+    },
+    {
+      "path": "hardware.clients.m5max64.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline hardware-2026-10.md and calc4; inherited working assumption, no live validation. Decimal GB convention retained from calc4."
+      },
+      "unit": "B",
+      "value": 64000000000.0
+    },
+    {
+      "path": "hosting.catch_up",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Conservative protocol budget: reload/shadow every client-served call; append-only KV spill, not the defective R8 full-slot rewrite."
+      },
+      "unit": "catch-up policy",
+      "value": "per_call"
+    },
+    {
+      "path": "hosting.pcie_bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated sustained PCIe bandwidth per active GPU for cold-prefix reload and spill; not a measured migration rate."
+      },
+      "unit": "B/s",
+      "value": 50000000000.0
+    },
+    {
+      "path": "hosting.tier",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated cold-RAM session pool, retained between calls. Hosting is an incremental budget, not included in compute rental/capex."
+      },
+      "unit": "storage tier",
+      "value": "RAM"
+    },
+    {
+      "path": "hosting.tiers.RAM.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimated RAM storage transfer bandwidth; cold migration bottleneck is min(storage,PCIe). HBM is resident with zero migration."
+      },
+      "unit": "B/s",
+      "value": 100000000000.0
+    },
+    {
+      "path": "measured.depth.architecture.reference_prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 41.2
+    },
+    {
+      "path": "measured.depth.segment.14.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "measured.depth.segment.14.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 62896
+    },
+    {
+      "path": "measured.depth.segment.14.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 49.9
+    },
+    {
+      "path": "measured.depth.segment.2.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 16000
+    },
+    {
+      "path": "measured.depth.segment.2.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 0
+    },
+    {
+      "path": "measured.depth.segment.2.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 173.6
+    },
+    {
+      "path": "measured.depth.segment.20.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 150000
+    },
+    {
+      "path": "measured.depth.segment.20.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 112896
+    },
+    {
+      "path": "measured.depth.segment.20.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 41.2
+    },
+    {
+      "path": "measured.depth.segment.26.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "measured.depth.segment.26.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 162896
+    },
+    {
+      "path": "measured.depth.segment.26.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 27.7
+    },
+    {
+      "path": "measured.depth.segment.32.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 249000
+    },
+    {
+      "path": "measured.depth.segment.32.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 212896
+    },
+    {
+      "path": "measured.depth.segment.32.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 22.2
+    },
+    {
+      "path": "measured.depth.segment.8.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 50000
+    },
+    {
+      "path": "measured.depth.segment.8.depth_from",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 28896
+    },
+    {
+      "path": "measured.depth.segment.8.prefill_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 93.7
+    },
+    {
+      "path": "measured.depth.slot.15.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 3641294784
+    },
+    {
+      "path": "measured.depth.slot.15.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "measured.depth.slot.21.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 5383494784
+    },
+    {
+      "path": "measured.depth.slot.21.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 150000
+    },
+    {
+      "path": "measured.depth.slot.27.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 7125694784
+    },
+    {
+      "path": "measured.depth.slot.27.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "measured.depth.slot.3.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 714398784
+    },
+    {
+      "path": "measured.depth.slot.3.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 16000
+    },
+    {
+      "path": "measured.depth.slot.33.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 8833050784
+    },
+    {
+      "path": "measured.depth.slot.33.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 249000
+    },
+    {
+      "path": "measured.depth.slot.9.bytes",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 1899094784
+    },
+    {
+      "path": "measured.depth.slot.9.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 50000
+    },
+    {
+      "path": "measured.normalized.parallel.baseline_native_decode_tok_s",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token/s",
+      "value": 8.440946539830035
+    },
+    {
+      "path": "measured.normalized.parallel.frozen_v11_row.depth",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 32000
+    },
+    {
+      "path": "measured.normalized.parallel.frozen_v11_row.streams",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "stream",
+      "value": 4
+    },
+    {
+      "path": "measured.normalized.parallel.normalized_decode_interval_gain",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "1",
+      "value": 1.665015442445748
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 164437.3
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p10",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 57744.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p25",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 89042.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 135362.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p75",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 190258.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p90",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 250202.0
+    },
+    {
+      "path": "measured.stats.agents.all.depth_per_call.p99",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 826234.9
+    },
+    {
+      "path": "measured.stats.agents.all.first_call_prompt.p25",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 19470.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.100-200k.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 876.7
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.100-200k.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 728595
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.100-200k.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 98.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.200k+.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 729.2
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.200k+.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 324279
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.200k+.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 222.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.50-100k.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 1547.8
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.50-100k.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 359291
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.50-100k.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 197.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.<50k.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 1864.2
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.<50k.n",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "call",
+      "value": 93596
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_by_depth.<50k.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 406.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 1066.4
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p10",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 0.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p25",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 32.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 158.0
+    },
+    {
+      "path": "measured.stats.agents.all.new_in_per_call.p75",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 805.0
+    },
+    {
+      "path": "measured.stats.agents.all.output_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 511.9
+    },
+    {
+      "path": "measured.stats.agents.all.output_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 229.0
+    },
+    {
+      "path": "measured.stats.agents.all.reasoning_per_call.mean",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 207.7
+    },
+    {
+      "path": "measured.stats.agents.all.reasoning_per_call.p50",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "token",
+      "value": 27.0
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=10k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.213
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=2k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.756
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=30k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.042
+    },
+    {
+      "path": "measured.stats.agents.all.share_of_new_tokens_in_calls.>=5k",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp full04 historical agent-session usage",
+        "sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7"
+      },
+      "unit": "1",
+      "value": 0.511
+    },
+    {
+      "path": "models.qwen27.attention_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token^2",
+      "value": 393216
+    },
+    {
+      "path": "models.qwen27.base_flop",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token",
+      "value": 54000000000.0
+    },
+    {
+      "path": "models.qwen27.context_limit",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Declared prefill analysis envelope: Qwen long-context extension to 1M as in calc3/4, GLM native 1,048,576. Dense decode/state memory beyond measured depths is an extrapolation, not a validated runtime context."
+      },
+      "unit": "token",
+      "value": 1000000
+    },
+    {
+      "path": "models.qwen27.prefill_batch",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New roofline memory traffic estimate: weights read once per 512 prefill tokens; compute calibration remains measured. Memory bound = bandwidth/(weights/prefill_batch + KV)."
+      },
+      "unit": "token",
+      "value": 512
+    },
+    {
+      "path": "models.qwen27.sparse_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "token",
+      "value": 8192
+    },
+    {
+      "path": "models.qwen27.sparse_slope",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3/4 architecture estimate. F(L)=base_flop + attention_slope*L + sparse_slope*min(L,sparse_cap). GLM base includes recurrent FLOPs; KV is the transferred growing state."
+      },
+      "unit": "FLOP/token^2",
+      "value": 0
+    },
+    {
+      "path": "owners.client_quant",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner: Q3 or Q4 client; other representations are outside contract."
+      },
+      "unit": "precision",
+      "value": "Q4"
+    },
+    {
+      "path": "owners.client_reserve",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New estimate: 12 GB for OS/apps/runtime outside weights and per-session KV/state."
+      },
+      "unit": "B",
+      "value": 12000000000.0
+    },
+    {
+      "path": "owners.formats.Q4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+      },
+      "unit": "B/parameter",
+      "value": 0.5625
+    },
+    {
+      "path": "owners.models.qwen27.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc3/4 architecture and Q4 GGUF sizes; Flash-Next 125B/6B/51B n-gram per owner; Q3 size scales Q4 by declared format ratio."
+      },
+      "unit": "parameter",
+      "value": 27000000000.0
+    },
+    {
+      "path": "owners.models.qwen27.weights_q4",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 18973870432
+    },
+    {
+      "path": "owners.options.b300.bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B/s",
+      "value": 8000000000000.0
+    },
+    {
+      "path": "owners.options.b300.fp8_peak",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "FLOP/s",
+      "value": 4500000000000000.0
+    },
+    {
+      "path": "owners.options.b300.gpus",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "GPU",
+      "value": 1
+    },
+    {
+      "path": "owners.options.b300.location",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 deployment policy: office or datacenter selects explicit energy, support and colocation inputs."
+      },
+      "unit": "deployment",
+      "value": "datacenter"
+    },
+    {
+      "path": "owners.options.b300.memory",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "B",
+      "value": 288000000000.0
+    },
+    {
+      "path": "owners.options.b300.shard_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Offline calc4 hardware/source note snapshot; pair throughput is GPUs*peak*MFU*shard_efficiency (estimate); prices apply to the entire unit. NVFP4 FP4 throughput is engine-dependent and unavailable on non-Blackwell."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "owners.server_precision",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner decision: quantized server weights, INT8/FP8 tensor arithmetic for Q4/Q6/Q8; dequantization covered by MFU."
+      },
+      "unit": "precision",
+      "value": "Q4"
+    },
+    {
+      "path": "owners.workspace",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Minimum server runtime buffers per model replica; KV residency modeled separately."
+      },
+      "unit": "B",
+      "value": 8000000000.0
+    },
+    {
+      "path": "paper_tables.hours",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner eight-hour operator day for client capacity and owned all-server sizing."
+      },
+      "unit": "h/day",
+      "value": 8
+    },
+    {
+      "path": "paper_tables.streams",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Use the measured four-stream anchor; memory may reduce active streams per call. No extrapolation beyond measured stream count."
+      },
+      "unit": "stream",
+      "value": 4
+    },
+    {
+      "path": "r7.arch.comparison_depth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script optional second depth; unsupported contexts alarm where script used None."
+      },
+      "unit": "token",
+      "value": 262144
+    },
+    {
+      "path": "r7.arch.large_portion",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script second transfer delta."
+      },
+      "unit": "token",
+      "value": 10000
+    },
+    {
+      "path": "r7.arch.links.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script line-rate savings links, no server/import/evaluation charge in this architecture-only saving formula."
+      },
+      "unit": "bit/s",
+      "value": 100000000.0
+    },
+    {
+      "path": "r7.arch.links.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script line-rate savings links, no server/import/evaluation charge in this architecture-only saving formula."
+      },
+      "unit": "bit/s",
+      "value": 300000000.0
+    },
+    {
+      "path": "r7.arch.links.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script line-rate savings links, no server/import/evaluation charge in this architecture-only saving formula."
+      },
+      "unit": "bit/s",
+      "value": 1000000000.0
+    },
+    {
+      "path": "r7.arch.models.gemma.context",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 262144
+    },
+    {
+      "path": "r7.arch.models.gemma.full.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 512
+    },
+    {
+      "path": "r7.arch.models.gemma.full.kv_copies",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "r7.arch.models.gemma.full.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 4
+    },
+    {
+      "path": "r7.arch.models.gemma.full.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 10
+    },
+    {
+      "path": "r7.arch.models.gemma.full.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 32
+    },
+    {
+      "path": "r7.arch.models.gemma.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json; not an independent weight census.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "parameter",
+      "value": 30700000000.0
+    },
+    {
+      "path": "r7.arch.models.gemma.sliding.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 256
+    },
+    {
+      "path": "r7.arch.models.gemma.sliding.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 16
+    },
+    {
+      "path": "r7.arch.models.gemma.sliding.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 50
+    },
+    {
+      "path": "r7.arch.models.gemma.sliding.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 32
+    },
+    {
+      "path": "r7.arch.models.gemma.sliding.window",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 1024
+    },
+    {
+      "path": "r7.arch.models.gemma.state",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/google/gemma-4-31B-it/blob/main/config.json"
+      },
+      "unit": "B",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.glimmer.context",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 131072
+    },
+    {
+      "path": "r7.arch.models.glimmer.full.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 128
+    },
+    {
+      "path": "r7.arch.models.glimmer.full.kv_copies",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "r7.arch.models.glimmer.full.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 2
+    },
+    {
+      "path": "r7.arch.models.glimmer.full.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 13
+    },
+    {
+      "path": "r7.arch.models.glimmer.full.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 32
+    },
+    {
+      "path": "r7.arch.models.glimmer.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json; not an independent weight census.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "parameter",
+      "value": 28000000000.0
+    },
+    {
+      "path": "r7.arch.models.glimmer.sliding.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 128
+    },
+    {
+      "path": "r7.arch.models.glimmer.sliding.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 2
+    },
+    {
+      "path": "r7.arch.models.glimmer.sliding.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 39
+    },
+    {
+      "path": "r7.arch.models.glimmer.sliding.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 32
+    },
+    {
+      "path": "r7.arch.models.glimmer.sliding.window",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 2048
+    },
+    {
+      "path": "r7.arch.models.glimmer.state",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/config.json"
+      },
+      "unit": "B",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen27.context",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 262144
+    },
+    {
+      "path": "r7.arch.models.qwen27.full.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 256
+    },
+    {
+      "path": "r7.arch.models.qwen27.full.kv_copies",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "r7.arch.models.qwen27.full.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 4
+    },
+    {
+      "path": "r7.arch.models.qwen27.full.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 16
+    },
+    {
+      "path": "r7.arch.models.qwen27.full.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 24
+    },
+    {
+      "path": "r7.arch.models.qwen27.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json; not an independent weight census.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "parameter",
+      "value": 27800000000.0
+    },
+    {
+      "path": "r7.arch.models.qwen27.sliding.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen27.sliding.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen27.sliding.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen27.sliding.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen27.sliding.window",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen27.state",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030 measured affine state intercept",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "B",
+      "value": 156894784
+    },
+    {
+      "path": "r7.arch.models.qwen3.context",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 40960
+    },
+    {
+      "path": "r7.arch.models.qwen3.full.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 128
+    },
+    {
+      "path": "r7.arch.models.qwen3.full.kv_copies",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "r7.arch.models.qwen3.full.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 8
+    },
+    {
+      "path": "r7.arch.models.qwen3.full.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 64
+    },
+    {
+      "path": "r7.arch.models.qwen3.full.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 64
+    },
+    {
+      "path": "r7.arch.models.qwen3.parameters",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script rounded text parameter count for FLOP estimate, from https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json; not an independent weight census.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "parameter",
+      "value": 32799999999.999996
+    },
+    {
+      "path": "r7.arch.models.qwen3.sliding.dim",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "value",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen3.sliding.kv_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen3.sliding.layers",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "layer",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen3.sliding.q_heads",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "head",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen3.sliding.window",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "token",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.models.qwen3.state",
+      "provenance": {
+        "access_date": "2026-10-30",
+        "kind": "fact",
+        "snapshot": "Owner-attached arch_compare.py config transcription; read offline2026-10-30, no network access or independent URL verification.",
+        "url": "https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json"
+      },
+      "unit": "B",
+      "value": 0
+    },
+    {
+      "path": "r7.arch.portion",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script client prefill/savings comparison portion."
+      },
+      "unit": "token",
+      "value": 1000
+    },
+    {
+      "path": "r7.arch.q8_factor",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script llama.cpp q8_0 block layout:34 bytes per32 quantized values, no slot metadata."
+      },
+      "unit": "B/value",
+      "value": 1.0625
+    },
+    {
+      "path": "r7.arch.reference_depth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached architecture script coordinate; uses measured41.2 segment rate at approximately131k (actual midpoint131448)."
+      },
+      "unit": "token",
+      "value": 131072
+    },
+    {
+      "path": "r7.arch.reference_segment_end",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Select hash-checked segment ending150000, starting112896: measured41.2 tok/s; attached script rounds its midpoint to131k."
+      },
+      "unit": "token",
+      "value": 150000
+    },
+    {
+      "path": "r7.arch.transfer_bandwidth",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Attached script LINK=300e6/8 bytes/s for its transfer_1k_300mbit_s column; explicit separately from the savings grid."
+      },
+      "unit": "bit/s",
+      "value": 300000000
+    },
+    {
+      "path": "r7.context_limit",
+      "provenance": {
+        "kind": "measured",
+        "package": "ivmbp-qwen27b-bench-20261030 server.n_ctx",
+        "sha256": "5c393bdf40052eb582b5c17aac6176a9273a866c4fadde999ee19afa30924439"
+      },
+      "unit": "token",
+      "value": 262144
+    },
+    {
+      "path": "r7.decode.links.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 real-mix sensitivity links."
+      },
+      "unit": "bit/s",
+      "value": 300000000.0
+    },
+    {
+      "path": "r7.decode.links.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 real-mix sensitivity links."
+      },
+      "unit": "bit/s",
+      "value": 1000000000.0
+    },
+    {
+      "path": "r7.decode.scales.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "r7.decode.scales.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+      },
+      "unit": "1",
+      "value": 1.5
+    },
+    {
+      "path": "r7.decode.scales.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+      },
+      "unit": "1",
+      "value": 2
+    },
+    {
+      "path": "r7.decode.scales.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Requested single-stream decode multipliers; >1 hypothetical engine improvements, not measurements. Capacity alarms if unchanged-traffic efficiency exceeds1."
+      },
+      "unit": "1",
+      "value": 3
+    },
+    {
+      "path": "r7.goodput",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Line-rate timing comparison. No protocol-efficiency loss unless explicitly overridden."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "r7.import_copies",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Estimate one serial full payload copy; excludes parsing/dequantization/runtime compatibility overhead."
+      },
+      "unit": "copy",
+      "value": 1
+    },
+    {
+      "path": "r7.import_efficiency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "No isolated delta-import measurement. Estimate one serial memory copy at10% of client nominal bandwidth (M3:40GB/s), distinct from filesystem slot restore."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "r7.import_fixed_s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Explicit optimistic zero fixed import overhead; set a positive measured runtime overhead when available."
+      },
+      "unit": "s",
+      "value": 0
+    },
+    {
+      "path": "r7.integration_step",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Midpoint integration of measured local marginal curve and depth-dependent server FLOPs; refinement is checked."
+      },
+      "unit": "token",
+      "value": 256
+    },
+    {
+      "path": "r7.last_token_tokens",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Conservative extra single-stream decode-equivalent evaluation at final depth, charged after full delta import; no additional resident token is allocated."
+      },
+      "unit": "token",
+      "value": 1
+    },
+    {
+      "path": "r7.latency",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Idealized line-rate chart excludes round-trip latency; separate nonnegative input, not an implicit default."
+      },
+      "unit": "s",
+      "value": 0
+    },
+    {
+      "path": "r7.links.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 decimal line-rate chart grid."
+      },
+      "unit": "bit/s",
+      "value": 50000000.0
+    },
+    {
+      "path": "r7.links.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 decimal line-rate chart grid."
+      },
+      "unit": "bit/s",
+      "value": 100000000.0
+    },
+    {
+      "path": "r7.links.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 decimal line-rate chart grid."
+      },
+      "unit": "bit/s",
+      "value": 200000000.0
+    },
+    {
+      "path": "r7.links.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 decimal line-rate chart grid."
+      },
+      "unit": "bit/s",
+      "value": 300000000.0
+    },
+    {
+      "path": "r7.links.4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 decimal line-rate chart grid."
+      },
+      "unit": "bit/s",
+      "value": 1000000000.0
+    },
+    {
+      "path": "r7.links.5",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 decimal line-rate chart grid."
+      },
+      "unit": "bit/s",
+      "value": 10000000000.0
+    },
+    {
+      "path": "r7.oneshot.contexts.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 cold context loaded from zero; decimal262k, below measured262144 limit."
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "r7.oneshot.contexts.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 cold context loaded from zero; decimal262k, below measured262144 limit."
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "r7.oneshot.contexts.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 cold context loaded from zero; decimal262k, below measured262144 limit."
+      },
+      "unit": "token",
+      "value": 262000
+    },
+    {
+      "path": "r7.states.bf16.factor",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 estimate: recurrent representation at half f32 bytes. Numerics/compatibility and speed are not measured."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "r7.states.f32.factor",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Identity applied to hash-checked measured slot intercept156894784 bytes."
+      },
+      "unit": "1",
+      "value": 1
+    },
+    {
+      "path": "r7.turn.depths.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 existing-context turn depths."
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "r7.turn.depths.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 existing-context turn depths."
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "r7.turn.portions.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 new-token portions, not full context transfers."
+      },
+      "unit": "token",
+      "value": 2000
+    },
+    {
+      "path": "r7.turn.portions.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner R7 new-token portions, not full context transfers."
+      },
+      "unit": "token",
+      "value": 10000
+    },
+    {
+      "path": "sampler.above_p90",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "sampler.above_p99",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "1",
+      "value": 0.01
+    },
+    {
+      "path": "sampler.depth_100k",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "token",
+      "value": 100000
+    },
+    {
+      "path": "sampler.depth_200k",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "token",
+      "value": 200000
+    },
+    {
+      "path": "sampler.depth_50k",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "token",
+      "value": 50000
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.25
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.75
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.4",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.9
+    },
+    {
+      "path": "sampler.fit.depth_probabilities.5",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "CDF coordinates of measured depth p10/p25/p50/p75/p90/p99; preserve these and depth-bin call masses while fitting the mean."
+      },
+      "unit": "1",
+      "value": 0.99
+    },
+    {
+      "path": "sampler.fit.iterations",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Bounded IPF/exponential tilt and bisection budget; failed convergence alarms, never substitutes an unfitted distribution."
+      },
+      "unit": "iteration",
+      "value": 160
+    },
+    {
+      "path": "sampler.fit.low_probabilities.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.1
+    },
+    {
+      "path": "sampler.fit.low_probabilities.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.25
+    },
+    {
+      "path": "sampler.fit.low_probabilities.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.5
+    },
+    {
+      "path": "sampler.fit.low_probabilities.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured p10/p25/p50/p75 CDF coordinates for within-2k shape; power interpolation fits the low-band token mass."
+      },
+      "unit": "1",
+      "value": 0.75
+    },
+    {
+      "path": "sampler.fit.minimum_calls",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "At least4096 calls required for exact finite-cohort token-band/output/depth mean correction; smaller samples remain valid draws with finite-sample error."
+      },
+      "unit": "call",
+      "value": 4096
+    },
+    {
+      "path": "sampler.fit.representatives.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 3500
+    },
+    {
+      "path": "sampler.fit.representatives.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 7500
+    },
+    {
+      "path": "sampler.fit.representatives.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 20000
+    },
+    {
+      "path": "sampler.fit.representatives.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Within-band uniform support centered on this representative; aggregate token-mass shares and depth-conditioned means are calibrated, not inferred chronology."
+      },
+      "unit": "token",
+      "value": 40000
+    },
+    {
+      "path": "sampler.fit.thresholds.0",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 2000
+    },
+    {
+      "path": "sampler.fit.thresholds.1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 5000
+    },
+    {
+      "path": "sampler.fit.thresholds.2",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 10000
+    },
+    {
+      "path": "sampler.fit.thresholds.3",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Measured token-tail thresholds in stats.json agents.all.share_of_new_tokens_in_calls."
+      },
+      "unit": "token",
+      "value": 30000
+    },
+    {
+      "path": "sampler.fit.tolerance",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Relative moment tolerance for the aggregate joint probability fit."
+      },
+      "unit": "1",
+      "value": 1e-08
+    },
+    {
+      "path": "sampler.minimum_mean_ratio",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 depth-bin boundaries and lognormal/tail approximation."
+      },
+      "unit": "1",
+      "value": 1.0001
+    },
+    {
+      "path": "sampler.minimum_median",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Explicit calc7 floor for fitting lognormal distributions with a recorded zero median. This is a modeling floor, never a replacement for missing statistics."
+      },
+      "unit": "token",
+      "value": 1
+    },
+    {
+      "path": "sampler.mode",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Run8 review correction: all-agent token-mass tails and depth-conditioned means, hash-checked stats; keep corpus consistent."
+      },
+      "unit": "sampler law",
+      "value": "measured_tail"
+    },
+    {
+      "path": "service.mfu",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 assumed prefill MFU; separate from active-window load."
+      },
+      "unit": "1",
+      "value": 0.3
+    },
+    {
+      "path": "workload.chunk_calls",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "call/session",
+      "value": 116
+    },
+    {
+      "path": "workload.input_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "token",
+      "value": 120000
+    },
+    {
+      "path": "workload.output_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "token",
+      "value": 16000
+    },
+    {
+      "path": "workload.reasoning_extra_fraction",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Run11 provider usage evidence supplied by the owner: Codex 126/126 token_count events satisfy total_tokens == input_tokens + output_tokens and reasoning_output_tokens <= output_tokens (e.g. output 94, reasoning 15); Claude Code 4577/4577 usage records have output_tokens_details.thinking_tokens <= output_tokens. tools/agent_session_stats.py stores both counters side by side and notes reasoning is not added to output. Claude and Codex cover 93% of 1528194 calls. Generated tokens are output_per_call alone (mean 511.9); reasoning_per_call (about 207.5) is an informational subset, not an additional decode or API charge. Muse is treated the same way, unverified. Fraction 1 is only the explicitly labelled reasoning-on-top upper bound reproducing the old accounting; it is not a provider billing claim. Joint depth/new-token fitting and random draws are unchanged."
+      },
+      "unit": "1",
+      "value": 0
+    },
+    {
+      "path": "workload.sample_calls",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Exact completed calls in legacy calc7/8: floor(40000/116)*116; same seeded prefix."
+      },
+      "unit": "call",
+      "value": 39904
+    },
+    {
+      "path": "workload.seed",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "1",
+      "value": 5
+    },
+    {
+      "path": "workload.tail_cap",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "token",
+      "value": 1000000
+    },
+    {
+      "path": "workload.tool_median",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "s",
+      "value": 2
+    },
+    {
+      "path": "workload.tool_sigma",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc7 sampler; chunk is a normalization group, not reconstructed observed sessions. Reasoning extra fraction zero avoids assuming output and reasoning fields are disjoint, per full04 report. Increase to 1 only for the legacy conservative sum."
+      },
+      "unit": "1",
+      "value": 1
+    }
+  ]
+}

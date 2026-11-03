@@ -1,0 +1,2 @@
+depth,streams,base_np,control_np,base_aggregate_tok_s,control_aggregate_tok_s,ratio,condition,source,round_aggregate_tok_s,payload_sha256,status,alarm_inputs
+131088,4,16,4,14.351284237947793,16.026061151600576,1.1166987487589664,server-shape sensitivity only; base uses largest-np shape,results/parallel-depth-apple-m3-max-128g-q27b-scale131072-np4-control-np4-20261102T133805-1793612285501613000.jsonl,16.305688781984628; 15.846402196036841; 16.026061151600576,5af1d6c01109245f3871eae2ea5159437f5f822bd029b509de8850224d169188,ok,

@@ -1,0 +1,15 @@
+{
+  "model": "qwen27",
+  "architecture": "qwen35",
+  "native_context": 262144,
+  "full_attention_layers": 16,
+  "window_layers": 0,
+  "recurrent_layers": 48,
+  "kv_bytes_per_token": 34816,
+  "window_bytes_per_token": 0,
+  "sliding_window": 0,
+  "sliding_window_bytes": 0,
+  "recurrent_tensor_bytes": 156893184,
+  "state_bytes": 156894784,
+  "slot_fixed_bytes": 156894784
+}

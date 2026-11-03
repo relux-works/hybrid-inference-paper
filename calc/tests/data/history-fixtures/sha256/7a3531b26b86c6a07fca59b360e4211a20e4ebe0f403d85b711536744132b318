@@ -1,0 +1,464 @@
+{
+  "economics": {
+    "years": {
+      "value": 4,
+      "unit": "year",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "days_month": {
+      "value": 21,
+      "unit": "day/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "hours_day": {
+      "value": 8,
+      "unit": "h/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "hours_month": {
+      "value": 730,
+      "unit": "h/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "pue": {
+      "value": 1.3,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "load": {
+      "value": 0.7,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "support": {
+      "value": 0.04,
+      "unit": "1/year",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "server_residual": {
+      "value": 0.2,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "client_residual": {
+      "value": 0.35,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "peak": {
+      "value": 2,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "regions": {
+      "value": 1,
+      "unit": "region",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "calls_day": {
+      "value": 2500,
+      "unit": "call/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "baseline_laptop": {
+      "value": 2499,
+      "unit": "USD",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "usable_memory": {
+      "value": 0.85,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "runtime_buffer": {
+      "value": 4000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "decode_floor": {
+      "value": 10,
+      "unit": "token/s",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "rental_utilization": {
+      "value": 0.7,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 economic working assumption. New client power and energy are explicitly included; amortization is net of residual."
+      }
+    },
+    "active_sessions": {
+      "value": 4,
+      "unit": "session/person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 active sessions per developer in server DRAM."
+      }
+    },
+    "parked_sessions": {
+      "value": 30,
+      "unit": "session/person",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 parked sessions per developer on NVMe."
+      }
+    },
+    "storage_redundancy": {
+      "value": 1.5,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4 parked NVMe redundancy factor."
+      }
+    }
+  },
+  "analysis": {
+    "capacity_depth": {
+      "value": 200000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      }
+    },
+    "rate_depth": {
+      "value": 110000,
+      "unit": "token",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      }
+    },
+    "stream_cap": {
+      "value": 8,
+      "unit": "stream",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      }
+    },
+    "decode_state_passes": {
+      "value": 2,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      }
+    },
+    "prefill_calibration_scale": {
+      "value": 1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      }
+    },
+    "decode_calibration_scale": {
+      "value": 1,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New analysis settings; 200k memory sizing and 110k rate comparison follow calc3/4; use cap and floor jointly. State read/write counts twice. Calibration scale is a sensitivity multiplier."
+      }
+    },
+    "team_grid": [
+      {
+        "value": 5,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 20,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 100,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 200,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 500,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 1000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 5000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      },
+      {
+        "value": 20000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc5 finite team-size grid; crossings hold only on this grid."
+        }
+      }
+    ]
+  },
+  "edge": {
+    "air": {
+      "label": "M5 Air 32 GB / 27B",
+      "memory": {
+        "value": 32000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "bandwidth": {
+        "value": 153000000000.0,
+        "unit": "B/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "compute": {
+        "value": 12440403692307.691,
+        "unit": "FLOP/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "weights": {
+        "value": 18973870432.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "kv": {
+        "value": 34816,
+        "unit": "B/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "state": {
+        "value": 156878784,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "base_flop": {
+        "value": 54000000000.0,
+        "unit": "FLOP/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "attention_slope": {
+        "value": 393216,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "thermal": {
+        "value": 0.6,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "prompt": {
+        "value": 32000,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      }
+    },
+    "phone": {
+      "label": "Phone / Qwen3.5-2B",
+      "memory": {
+        "value": 8000000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "bandwidth": {
+        "value": 68000000000.0,
+        "unit": "B/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "compute": {
+        "value": 11000000000000.0,
+        "unit": "FLOP/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "weights": {
+        "value": 1500000000.0,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "kv": {
+        "value": 6144,
+        "unit": "B/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "state": {
+        "value": 9437184,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "base_flop": {
+        "value": 4000000000.0,
+        "unit": "FLOP/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "attention_slope": {
+        "value": 49152,
+        "unit": "FLOP/token^2",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "thermal": {
+        "value": 0.5,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      },
+      "prompt": {
+        "value": 8192,
+        "unit": "token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc6 scaling estimate; phone memory/bandwidth and quantized weight size are new illustrative assumptions, not device measurements. Air compute derives from 270 tok/s M6 report, scaled by 1/1.3."
+        }
+      }
+    }
+  }
+}

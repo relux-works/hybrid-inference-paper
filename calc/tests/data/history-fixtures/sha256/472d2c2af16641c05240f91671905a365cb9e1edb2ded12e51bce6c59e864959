@@ -1,0 +1,599 @@
+{
+  "service": {
+    "active_hours": {
+      "value": 10,
+      "unit": "h/day",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner sizing note: one shared daily active window."
+      }
+    },
+    "active_days": {
+      "value": 21,
+      "unit": "day/month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc8 working days; active-window assumption."
+      }
+    },
+    "target_load": {
+      "value": 0.7,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner requested 70% target load within the active window; integer headroom is billed."
+      }
+    },
+    "mfu": {
+      "value": 0.3,
+      "unit": "1",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc4/8 assumed prefill MFU; separate from active-window load."
+      }
+    },
+    "egress_price": {
+      "value": 5,
+      "unit": "USD/TB",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Selected egress sensitivity; decimal TB."
+      }
+    },
+    "setup_months": {
+      "value": 12,
+      "unit": "month",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New explicit assumption: amortize setup over 12 paid months. First-month cash is shown separately."
+      }
+    },
+    "server_parameters": {
+      "value": 27000000000.0,
+      "unit": "parameter",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "calc3 dense Qwen3.8-27B parameter count; weights-only memory admission."
+      }
+    },
+    "workspace": {
+      "value": 8000000000.0,
+      "unit": "B",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "New minimum weights/workspace admission estimate: 8 GB buffers, excludes resident full-context KV. This is not full runtime memory qualification."
+      }
+    },
+    "precision": {
+      "value": "Q4",
+      "unit": "precision",
+      "provenance": {
+        "kind": "estimate",
+        "reason": "Owner quantized service default; Q4 weights with INT8/FP8 tensor throughput; MFU absorbs dequantization overhead."
+      }
+    },
+    "bytes_per_parameter": {
+      "FP8": {
+        "value": 1,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "FP8 = 1 byte, BF16 = 2 bytes per parameter; model format definition."
+        }
+      },
+      "BF16": {
+        "value": 2,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "FP8 = 1 byte, BF16 = 2 bytes per parameter; model format definition."
+        }
+      },
+      "Q4": {
+        "value": 0.5625,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "Q6": {
+        "value": 0.8125,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "Q8": {
+        "value": 1.0625,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      },
+      "NVFP4": {
+        "value": 0.5625,
+        "unit": "B/parameter",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "New weights estimate: nominal bits/8 plus block metadata allowance; NVFP4 is engine-dependent on Blackwell. Qwen27/GLM client Q4 uses actual supplied GGUF size."
+        }
+      }
+    },
+    "fx_usd_eur": {
+      "value": 1.113,
+      "unit": "USD/EUR",
+      "provenance": {
+        "kind": "fact",
+        "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+        "access_date": "2026-10-30",
+        "note": "ECB 2026-10-29 USD per EUR as transcribed in the note. Offline note source E1; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+      }
+    },
+    "users": [
+      {
+        "value": 10,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested cohort sizes."
+        }
+      },
+      {
+        "value": 100,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested cohort sizes."
+        }
+      },
+      {
+        "value": 1000,
+        "unit": "person",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested cohort sizes."
+        }
+      }
+    ],
+    "profiles": {
+      "light": {
+        "value": 200,
+        "unit": "call/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc8 light/medium/heavy daily profile."
+        }
+      },
+      "medium": {
+        "value": 800,
+        "unit": "call/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc8 light/medium/heavy daily profile."
+        }
+      },
+      "heavy": {
+        "value": 2500,
+        "unit": "call/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc8 light/medium/heavy daily profile."
+        }
+      },
+      "measured power user": {
+        "value": 6500,
+        "unit": "call/day",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested rounded measured power-user rate 6500/day. Full05 aggregates report 1,528,194 calls on 233 distinct UTC days (~6,559/day); timestamps are partial and this is a profile assumption, not a measured guaranteed arrival rate."
+        }
+      }
+    },
+    "egress_prices": [
+      {
+        "value": 0,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested egress sensitivity."
+        }
+      },
+      {
+        "value": 5,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested egress sensitivity."
+        }
+      },
+      {
+        "value": 50,
+        "unit": "USD/TB",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Owner requested egress sensitivity."
+        }
+      }
+    ],
+    "transfer": {
+      "wire_kv": {
+        "value": 32768,
+        "unit": "B/token",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3 tuned 8-bit growing KV = 16 x 2 x 4 x 256 bytes/token."
+        }
+      },
+      "wire_state": {
+        "value": 78446592,
+        "unit": "B",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3 bf16 recurrent state = 48*(48*128*128 + 10240*3)*2."
+        }
+      },
+      "client_compute": {
+        "value": 19896480000000,
+        "unit": "FLOP/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3 old M3 Max 50 tok/s at 200k: 50*(54e9+393216*200000), times calc4 M5 Max prefill multiplier 3."
+        }
+      },
+      "decision_server_compute": {
+        "value": 1350000000000000.0,
+        "unit": "FLOP/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3/4 reference B300 4.5e15 FP8 x 0.30 MFU; fixes calc8 admission mix when comparing service hardware."
+        }
+      },
+      "bandwidth": {
+        "value": 1000000000.0,
+        "unit": "bit/s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc8 1 Gbit/s link for the reference transfer policy."
+        }
+      },
+      "goodput": {
+        "value": 0.9,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3 payload goodput / nominal link rate."
+        }
+      },
+      "latency": {
+        "value": 0.4,
+        "unit": "s",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "calc3 scheduling, session load and RTT fixed overhead."
+        }
+      }
+    },
+    "options": {
+      "h100_sxm": {
+        "label": "H100 SXM on demand",
+        "billing": "window",
+        "billing_policy": "Warm pool provisioned for the complete active window; no invented per-inference-only or scale-to-zero discount.",
+        "fp8_peak": {
+          "value": 1979000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "H100 SXM dense rate quoted in the owner sizing note."
+          }
+        },
+        "bf16_peak": {
+          "value": 989500000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "H100 SXM dense rate quoted in the owner sizing note."
+          }
+        },
+        "memory": {
+          "value": 80000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Nominal memory of the named GPU, decimal GB; full context/cache admission is outside this weights/workspace lower bound."
+          }
+        },
+        "hourly_usd": {
+          "value": 3.99,
+          "unit": "USD/GPU/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.runpod.io/pricing",
+            "access_date": "2026-10-30",
+            "note": "Section 5 RunPod Secure Cloud tariff. Offline note source R7; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "billing_quantum": {
+          "value": 1,
+          "unit": "s",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://docs.runpod.io/pods/pricing",
+            "access_date": "2026-10-30",
+            "note": "Per-second billing as recorded in section 2/5 of note. Offline note source R8; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "setup_usd": {
+          "value": 0,
+          "unit": "USD/GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Explicit assumption: no separate setup fee for the quoted on-demand/serverless tariff. The offline note lists hourly prices; this can be overridden if a setup charge applies."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "No NVFP4-capable Blackwell option in this service catalogue; unsupported format is an alarm."
+          }
+        }
+      },
+      "h100_pcie": {
+        "label": "H100 PCIe on demand",
+        "billing": "window",
+        "billing_policy": "Warm pool provisioned for the complete active window; no invented per-inference-only or scale-to-zero discount.",
+        "fp8_peak": {
+          "value": 1513000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "H100 PCIe nominal dense estimate (half sparse tensor headline), not numerically verified in supplied note."
+          }
+        },
+        "bf16_peak": {
+          "value": 756500000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "H100 PCIe nominal dense estimate (half sparse tensor headline), not numerically verified in supplied note."
+          }
+        },
+        "memory": {
+          "value": 80000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Nominal memory of the named GPU, decimal GB; full context/cache admission is outside this weights/workspace lower bound."
+          }
+        },
+        "hourly_usd": {
+          "value": 2.89,
+          "unit": "USD/GPU/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.runpod.io/pricing",
+            "access_date": "2026-10-30",
+            "note": "Section 5 RunPod Secure Cloud tariff. Offline note source R7; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "billing_quantum": {
+          "value": 1,
+          "unit": "s",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://docs.runpod.io/pods/pricing",
+            "access_date": "2026-10-30",
+            "note": "Per-second billing as recorded in section 2/5 of note. Offline note source R8; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "setup_usd": {
+          "value": 0,
+          "unit": "USD/GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Explicit assumption: no separate setup fee for the quoted on-demand/serverless tariff. The offline note lists hourly prices; this can be overridden if a setup charge applies."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "No NVFP4-capable Blackwell option in this service catalogue; unsupported format is an alarm."
+          }
+        }
+      },
+      "l40s": {
+        "label": "L40S on demand",
+        "billing": "window",
+        "billing_policy": "Warm pool provisioned for the complete active window; no invented per-inference-only or scale-to-zero discount.",
+        "fp8_peak": {
+          "value": 724000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline note BW2 reports 362 TFLOP/s dense BF16; FP8 estimate is twice that."
+          }
+        },
+        "bf16_peak": {
+          "value": 362000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Offline note BW2 reports 362 TFLOP/s dense BF16; FP8 estimate is twice that."
+          }
+        },
+        "memory": {
+          "value": 48000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Nominal memory of the named GPU, decimal GB; full context/cache admission is outside this weights/workspace lower bound."
+          }
+        },
+        "hourly_usd": {
+          "value": 1.09,
+          "unit": "USD/GPU/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.runpod.io/pricing",
+            "access_date": "2026-10-30",
+            "note": "Section 5 RunPod Secure Cloud tariff. Offline note source R7; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "billing_quantum": {
+          "value": 1,
+          "unit": "s",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://docs.runpod.io/pods/pricing",
+            "access_date": "2026-10-30",
+            "note": "Per-second billing as recorded in section 2/5 of note. Offline note source R8; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "setup_usd": {
+          "value": 0,
+          "unit": "USD/GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Explicit assumption: no separate setup fee for the quoted on-demand/serverless tariff. The offline note lists hourly prices; this can be overridden if a setup charge applies."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "No NVFP4-capable Blackwell option in this service catalogue; unsupported format is an alarm."
+          }
+        }
+      },
+      "koyeb": {
+        "label": "Koyeb H100 warm serverless",
+        "billing": "window",
+        "billing_policy": "Warm pool provisioned for the complete active window; no invented per-inference-only or scale-to-zero discount.",
+        "fp8_peak": {
+          "value": 1979000000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: Koyeb unspecified H100 form factor uses the SXM dense envelope. Rate is not a provider throughput guarantee."
+          }
+        },
+        "bf16_peak": {
+          "value": 989500000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "New estimate: Koyeb unspecified H100 form factor uses the SXM dense envelope. Rate is not a provider throughput guarantee."
+          }
+        },
+        "memory": {
+          "value": 80000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Nominal memory of the named GPU, decimal GB; full context/cache admission is outside this weights/workspace lower bound."
+          }
+        },
+        "hourly_usd": {
+          "value": 2.5,
+          "unit": "USD/GPU/h",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.koyeb.com/pricing",
+            "access_date": "2026-10-30",
+            "note": "Koyeb instance tariff including CPU/RAM/disk in section 2 and 5. Offline note source K1; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "billing_quantum": {
+          "value": 1,
+          "unit": "s",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.koyeb.com/pricing",
+            "access_date": "2026-10-30",
+            "note": "Per-second billing as recorded in section 2/5 of note. Offline note source K1; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "setup_usd": {
+          "value": 0,
+          "unit": "USD/GPU",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Explicit assumption: no separate setup fee for the quoted on-demand/serverless tariff. The offline note lists hourly prices; this can be overridden if a setup charge applies."
+          }
+        },
+        "fp4_peak": {
+          "value": 0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "No NVFP4-capable Blackwell option in this service catalogue; unsupported format is an alarm."
+          }
+        }
+      },
+      "hetzner": {
+        "label": "Hetzner RTX PRO 6000 monthly",
+        "billing": "monthly",
+        "billing_policy": "Whole calendar-month reservation; paid even outside active windows.",
+        "fp8_peak": {
+          "value": 877900000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "RTX PRO 6000 Max-Q dense tensor rates from existing hardware-2026-10.md whitepaper snapshot."
+          }
+        },
+        "bf16_peak": {
+          "value": 438900000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "RTX PRO 6000 Max-Q dense tensor rates from existing hardware-2026-10.md whitepaper snapshot."
+          }
+        },
+        "memory": {
+          "value": 96000000000.0,
+          "unit": "B",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Nominal memory of the named GPU, decimal GB; full context/cache admission is outside this weights/workspace lower bound."
+          }
+        },
+        "monthly_eur": {
+          "value": 999,
+          "unit": "EUR/GPU/month",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.hetzner.com/dedicated-rootserver/matrix-gpu/",
+            "access_date": "2026-10-30",
+            "note": "GEX63 RTX PRO 6000 Max-Q 96 GB, section 5 of note. Offline note source H1; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "setup_eur": {
+          "value": 999,
+          "unit": "EUR/GPU",
+          "provenance": {
+            "kind": "fact",
+            "url": "https://www.hetzner.com/dedicated-rootserver/matrix-gpu/",
+            "access_date": "2026-10-30",
+            "note": "One-time setup per GEX63 in section 5 of note. Offline note source H1; note sha256 c6f80c99361ef7d849e2fad857b6e93011c2166381aa2b620ba50862dd9bccbc"
+          }
+        },
+        "fp4_peak": {
+          "value": 1755800000000000.0,
+          "unit": "FLOP/s",
+          "provenance": {
+            "kind": "estimate",
+            "reason": "Blackwell Max-Q FP4=2*FP8 dense envelope; NVFP4 engine-dependent estimate."
+          }
+        }
+      }
+    }
+  }
+}

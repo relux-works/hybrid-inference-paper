@@ -1,0 +1,513 @@
+{
+  "created_utc": "2026-11-01T19:16:33Z",
+  "kit": "qwen27b-gpu-bench",
+  "kit_version": "1.6.3",
+  "llama_cpp_commit": "c21284cdf5fd833b90ac1f824cdf8065e2700dc4",
+  "ctx_checkpoints": "0",
+  "model": "ggml-org/Qwen3.8-27B-GGUF@0669b98607d4 Qwen3.8-27B-Q4_K_M.gguf",
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "benchmark_sha256": "c9f1b4966b080ba81c2b0df3d001b73fd1732fd67a8891a14c04ef81f106b095",
+  "results_kit_version": "1.6.1",
+  "files": {
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-serverload-np1-20261101T162245.jsonl": {
+      "bytes": 2538,
+      "sha256": "04e42f2d1c4df20a63e0459c21bb98df40e1c5bc8107bae29bb7e1004802aa1a"
+    },
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-serverload-np1-20261101T162245.md": {
+      "bytes": 1108,
+      "sha256": "b0b263bc5bf697d12edc153ef1a02cdae1d006e3ba93c4870be3175cffaf6409"
+    },
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-serverload-np4-20261101T162303.jsonl": {
+      "bytes": 6624,
+      "sha256": "0f44699c66b0de66b36ec8551812767e781b34b45122e97cc453787dee6c04c4"
+    },
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-serverload-np4-20261101T162303.md": {
+      "bytes": 1112,
+      "sha256": "3dcf34e9deae537f2c52667c52033761f72ec8ee239d6a3da52df07303d3a402"
+    },
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-serverload-np8-20261101T162445.jsonl": {
+      "bytes": 12045,
+      "sha256": "a4528e43741067477f0b502f0b48cc020793769351e351bcf666982621222e46"
+    },
+    "agents-loop-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-serverload-np8-20261101T162445.md": {
+      "bytes": 1115,
+      "sha256": "025869ce34f7a12c713c9f822a7df4513b0b5953afe1d7d862a8b755af084d92"
+    },
+    "build-configure.log": {
+      "bytes": 2418,
+      "sha256": "79136c7e8151f9f1b4061b758ad1cc01d33730e77f957763786a6b91dfc56c5a"
+    },
+    "build.log": {
+      "bytes": 32694,
+      "sha256": "873818af09df182a4773c6cb94827971d4b4d77d092466e89a94c6708cd67dbc"
+    },
+    "ctx-checkpoints.log": {
+      "bytes": 18,
+      "sha256": "b001705bffae5bd2f6dac78b083f095d273d2e9eb7e5323395e4f6176a943c3c"
+    },
+    "cuda-architecture.txt": {
+      "bytes": 10,
+      "sha256": "6e92feabd2c4bf697fbf11201911b39c40a96f5106450ab58dd50ac4dc6eb9b0"
+    },
+    "delta-geometry-20261101T152154Z.json": {
+      "bytes": 11916,
+      "sha256": "24997afa9fdc8f76bf27f6d4114758cf744b4215ca421adbc832a5360b8a1b79"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T151750.jsonl": {
+      "bytes": 9251,
+      "sha256": "ef293b6050a9587554fd3fc4c0d3f0110691fe703db8932bcb3ad1465fd5d8a4"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-q4km-q8kv-20261101T151750.md": {
+      "bytes": 895,
+      "sha256": "30dbb1e08e61761fcac6af45c6018c486cb54584651ec924005eecb4646076ba"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-smoke-20261101T151739.jsonl": {
+      "bytes": 2283,
+      "sha256": "f276d081f743c6e7e388b2f1b4ca204596c678cd36a908afc3c227ce6e10e51e"
+    },
+    "hybrid-bench-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-smoke-20261101T151739.md": {
+      "bytes": 240,
+      "sha256": "c08d5f770fabd4a8c8f3e5e989d0dbb45d038ae02b29bc220ff41dcea58aaacf"
+    },
+    "kit.log": {
+      "bytes": 6416,
+      "sha256": "d06581b53eb0ffcceda167e881acb3bfc5fe45b99fd582262ec99174fa44a42a"
+    },
+    "llama-server-version.txt": {
+      "bytes": 141,
+      "sha256": "884422fd1599d1e42c67d27a352b3a2f13e9eba5eeb4ef397cfa4430ac100e6e"
+    },
+    "model-geometry.json": {
+      "bytes": 373,
+      "sha256": "00c6db51733ae801d7ed927d5477edd397d196813009325b32a9e3538b319f82"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot131k-20261101T152240.jsonl": {
+      "bytes": 874,
+      "sha256": "e5c315e3e4a3aa5556d7a3426bbc46738c8c4c9d4b471e8fb217b922ecb8896e"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot131k-20261101T152240.md": {
+      "bytes": 284,
+      "sha256": "3ca2dc42ce4346fea07c97e12111677bcaa129931b893d8e8088b6940986d88d"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot65k-20261101T152208.jsonl": {
+      "bytes": 862,
+      "sha256": "e322686014a024d6bec9a4d97a032b13c8c763671ef65787645d238de1ef457a"
+    },
+    "parallel-depth-nvidia-rtx-pro-6000-blackwell-workstation-edition-96g-q27b-slot65k-20261101T152208.md": {
+      "bytes": 280,
+      "sha256": "c35ba176c33f8e35d9608e28664b9274a10a92398cf83247b95d44b87d89364a"
+    },
+    "server-delta-geometry.log": {
+      "bytes": 2110,
+      "sha256": "d61df9626dda75e2e5cf0e9a9f242833ea590ee0abffd0e20f544c4344bbc060"
+    },
+    "server-depth-1.log": {
+      "bytes": 32191,
+      "sha256": "574268400d3da059b0e7f8ca8353f9e9bec526374a41db2377726a456d5a725e"
+    },
+    "server-serverload-np1.log": {
+      "bytes": 4037,
+      "sha256": "8ac5a0aad38c4a0191cf597f882a5a78d91159db44641afdc840a264de8dadc2"
+    },
+    "server-serverload-np12.log": {
+      "bytes": 1367,
+      "sha256": "f03cf98be9b1c4e30b04efa26ec5fb55ae6858008b33900e829aabf52c7f054f"
+    },
+    "server-serverload-np4.log": {
+      "bytes": 15923,
+      "sha256": "cb58e5ad9d268d254b9d83f6a18791b9e6d8236ffa432f0e929bca69470652fa"
+    },
+    "server-serverload-np8.log": {
+      "bytes": 35588,
+      "sha256": "1cb151b1c531fd712f2f552151c194aff302147c2c962ae28e22e223c394e812"
+    },
+    "server-slot-131k.log": {
+      "bytes": 10345,
+      "sha256": "d7dcf4e00f6144b4e425c1743c45e7afec4db66421c4de18c1cd65cc375edf84"
+    },
+    "server-slot-65k.log": {
+      "bytes": 5637,
+      "sha256": "eab0c0f4932cf63eb8364ae9cbb45cf2b46ae0d7fac2c398cb5fc3597aac44c8"
+    },
+    "server-smoke.log": {
+      "bytes": 5528,
+      "sha256": "e4c916c4cabf74f10bf57eb1cb568743be543e36c0563d09a2e5fd351d51777a"
+    },
+    "serverload-reference.json": {
+      "bytes": 394,
+      "sha256": "d10443853d88e3ac886aeb5bd9e903afc5b4c934208c4cafcd1f57ea6277817c"
+    },
+    "serverload-restream-np12.log": {
+      "bytes": 262,
+      "sha256": "60887ab34e4f7412704d92276af2160f725c819ecd8fc8e83e1240e2226d926d"
+    },
+    "serverload-restream-np4.log": {
+      "bytes": 262,
+      "sha256": "455902a45f08caef38e45495f3dabf851e0c2b3303dcfea01dfc7e74b03e20cb"
+    },
+    "serverload-restream-np8.log": {
+      "bytes": 262,
+      "sha256": "a640fa90e50eb32ceae9f5fe959c17fa5b586c9084709adaa2b0c273d6e72127"
+    },
+    "system.json": {
+      "bytes": 664,
+      "sha256": "5be09d1a3f65af9e989ddf1ed00a71df1857738a8aabb0eeebb9a009316e6bbd"
+    },
+    "sweep-20261101T152345Z/gpu-after.txt": {
+      "bytes": 217,
+      "sha256": "51f4b884ea8c79d542ac9dcd51d409a37de0849d0180e54472f0fa8acb50dac7"
+    },
+    "sweep-20261101T152345Z/gpu-before.txt": {
+      "bytes": 215,
+      "sha256": "e8febc186372344bc09ac2afa17128356184e283b4c48aabd91aeb28f3062dab"
+    },
+    "sweep-20261101T152345Z/new-build-status.json": {
+      "bytes": 70,
+      "sha256": "e97e7ad557664be98748e5e78fc69e97a996be6ed0d45363306c90f9113b756b"
+    },
+    "sweep-20261101T152345Z/new-build.log": {
+      "bytes": 423,
+      "sha256": "0cde3bac8c4b6712e309daa36d430a1d43c5e634ee66a2ad260b5ca51a5d68c0"
+    },
+    "sweep-20261101T152345Z/new-d0-p4096-ub1024,2048-f16.json": {
+      "bytes": 2504,
+      "sha256": "a3a83da02ddeeaf2cb4906cf274dec70b0387454501ffa75c2164613f5fe51ca"
+    },
+    "sweep-20261101T152345Z/new-d0-p4096-ub1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d0-p4096-ub512-q8_0.json": {
+      "bytes": 1253,
+      "sha256": "c4dd49c6be61336babcb545994836bf2215d60954d33e2d1ae4bc6fee58012ca"
+    },
+    "sweep-20261101T152345Z/new-d0-p4096-ub512-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d131072-p4096,512-ub1024,2048-f16.json": {
+      "bytes": 5025,
+      "sha256": "71f36dbc681d29bfa66de0ab21533ca8fa0c377983473902f163fdf5d1432a3a"
+    },
+    "sweep-20261101T152345Z/new-d131072-p4096,512-ub1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d131072-p4096,512-ub512-q8_0.json": {
+      "bytes": 2516,
+      "sha256": "c2c00614f001d937e44312f5d60bc253ea48c9716a48a9d66195028231b41a91"
+    },
+    "sweep-20261101T152345Z/new-d131072-p4096,512-ub512-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d16384-p4096-ub1024,2048-f16.json": {
+      "bytes": 2510,
+      "sha256": "196b831d3370161abcd5f2105f0daade123b9f5570020c06870ffda0bcb09112"
+    },
+    "sweep-20261101T152345Z/new-d16384-p4096-ub1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d16384-p4096-ub512-q8_0.json": {
+      "bytes": 1256,
+      "sha256": "53f10fa35705498d46b39ef2530878e226e6fb65dfc0512d3c44fd46de3f13b8"
+    },
+    "sweep-20261101T152345Z/new-d16384-p4096-ub512-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d249000-p4096-ub1024,2048-f16.json": {
+      "bytes": 2519,
+      "sha256": "6039eab048a91388ce65a95966d261f04de6e08bdac5d76aebf4277562db9e90"
+    },
+    "sweep-20261101T152345Z/new-d249000-p4096-ub1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d249000-p4096-ub512-q8_0.json": {
+      "bytes": 1261,
+      "sha256": "2a0c4286cb3c2e574c7055051b6c8b13ba82b3da2ccc698b9a88d37ef334c609"
+    },
+    "sweep-20261101T152345Z/new-d249000-p4096-ub512-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d65536-p4096-ub1024,2048-f16.json": {
+      "bytes": 2516,
+      "sha256": "34a519fd9f2d490d1440ba26d92eefccad700d357abbd3f75feac0f8772cbf89"
+    },
+    "sweep-20261101T152345Z/new-d65536-p4096-ub1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/new-d65536-p4096-ub512-q8_0.json": {
+      "bytes": 1261,
+      "sha256": "0be6fcf411fa1adb893c9959b7dc53c45f7bb67703c86bd208c0296dc1c1ae4a"
+    },
+    "sweep-20261101T152345Z/new-d65536-p4096-ub512-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub4096-f16.json": {
+      "bytes": 1238,
+      "sha256": "af3d8d3e8e93413c07e81fa1d36ab376aa23fbeb20ba90deb698fdf17a6e6270"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub4096-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub4096-q8_0.json": {
+      "bytes": 1241,
+      "sha256": "9a77ffd6578ade518d2a3cafdcf1a3b4e570c518f226c7203f9c1cb071342a27"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub4096-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub512,1024,2048-f16.json": {
+      "bytes": 3691,
+      "sha256": "3c5a085247ff971b1e010e23728c25d78e05fe626cc8caddc8be6761b5411243"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub512,1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub512,1024,2048-q8_0.json": {
+      "bytes": 3698,
+      "sha256": "287181a1eb15dc7ee2d1b98760118d2b66f32e5f4404f3064718e14dcfafd2d0"
+    },
+    "sweep-20261101T152345Z/pinned-d0-p4096-ub512,1024,2048-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub4096-f16.json": {
+      "bytes": 2478,
+      "sha256": "c6b0090e74000159e07274535a2369bc55de4ff1ecd25fca044c966a58e79bb7"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub4096-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub4096-q8_0.json": {
+      "bytes": 2481,
+      "sha256": "6c7686a177a01b447546580533d50887835d2cf61aea8e862be2cc2b9f62312a"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub4096-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub512,1024,2048-f16.json": {
+      "bytes": 7422,
+      "sha256": "56d9fae8a92158446bb6cf2f9e1f86f0943cef52f34e1cb722c3022253c45e36"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub512,1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub512,1024,2048-q8_0.json": {
+      "bytes": 7434,
+      "sha256": "705fe3ff8073ee5a483b7cd8492d1504e54811924f0b43cf7224b4c7ed8aa337"
+    },
+    "sweep-20261101T152345Z/pinned-d131072-p4096,512-ub512,1024,2048-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub4096-f16.json": {
+      "bytes": 1242,
+      "sha256": "f746c18d0263945f49327826b7d269770e236a1f9d318553c97258c756cb4356"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub4096-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub4096-q8_0.json": {
+      "bytes": 1244,
+      "sha256": "960beec6c00f0b69724bb8b8b36ed06342401aa842ba930a4c8fddfe1b905d50"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub4096-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub512,1024,2048-f16.json": {
+      "bytes": 3710,
+      "sha256": "23dc382d6c59700de0788936ebbe0b58f106a4789811fa47acc103dc327651ec"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub512,1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub512,1024,2048-q8_0.json": {
+      "bytes": 3716,
+      "sha256": "b856e466c6875a4097b04986cc837244310af9a9f4b3c7ab537075c76b77c4a8"
+    },
+    "sweep-20261101T152345Z/pinned-d16384-p4096-ub512,1024,2048-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub4096-f16.json": {
+      "bytes": 1242,
+      "sha256": "34a1bb1712fb2760974ed5c7fe2c62769230de9c177ed3d1e4b0eb35cce21068"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub4096-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub4096-q8_0.json": {
+      "bytes": 1243,
+      "sha256": "35e537a352bf2cd5511e25f977e1a7cc406455c56a685697999c364d58674878"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub4096-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub512,1024,2048-f16.json": {
+      "bytes": 3716,
+      "sha256": "ea1370338719625ff56b2c2fe368ba61de091adc76865ee4ccdacc7a4ddf8be8"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub512,1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub512,1024,2048-q8_0.json": {
+      "bytes": 3721,
+      "sha256": "9dcf2d8bcd739ee18467c9221634e6e37358b52ef3f531af94add9f71d868668"
+    },
+    "sweep-20261101T152345Z/pinned-d249000-p4096-ub512,1024,2048-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub4096-f16.json": {
+      "bytes": 1242,
+      "sha256": "36aea388a075ea48678b68aa04423d598fb3d0ea739586228c455cde467449fb"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub4096-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub4096-q8_0.json": {
+      "bytes": 1243,
+      "sha256": "d362d52367b2512578dc9c62b18c660e9eb3cd1137a18800388679e44ea82af9"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub4096-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub512,1024,2048-f16.json": {
+      "bytes": 3711,
+      "sha256": "b1cf2c64a2ebe67b328cb947085fa0e256d7bd5a3682549ff8c048766369af9c"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub512,1024,2048-f16.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub512,1024,2048-q8_0.json": {
+      "bytes": 3715,
+      "sha256": "6d384e3a1d0b6a505ea3edfe8ca15c1fd4e2b687ed21bd742395bded6bb9762a"
+    },
+    "sweep-20261101T152345Z/pinned-d65536-p4096-ub512,1024,2048-q8_0.log": {
+      "bytes": 176,
+      "sha256": "f2fd62aa4944eeb2deb2ee4e87513a2a716cbbc2652c69fc6b33f93e1d82b8e2"
+    },
+    "sweep-20261101T152345Z/selected.json": {
+      "bytes": 45,
+      "sha256": "aa7919d4a7fee187cca37ea945fc3264f08f4664f6fdb71ed5669db0d0c7c1d2"
+    },
+    "sweep-20261101T152345Z/sweep.json": {
+      "bytes": 48592,
+      "sha256": "974f59573ea96ecc7316dfb4adc6d91e1658addd0ea6c08db1d90368f24382f4"
+    },
+    "sweep-20261101T152345Z/sweep.md": {
+      "bytes": 6900,
+      "sha256": "7571a98eecb3ce9c5e6ad3d176566ed3d5b6c49f025c60843254ab8469e07802"
+    },
+    "sweep-20261101T152345Z/new-build/build-configure.log": {
+      "bytes": 2422,
+      "sha256": "9430ab3a7cf2726ae29b52ef180e3c0f56113b1e506c46326a4534accf494d12"
+    },
+    "sweep-20261101T152345Z/new-build/build.log": {
+      "bytes": 34658,
+      "sha256": "581d1c1adbfeda162df7fae2aefe6466facb952c6eec5f27290910c575bc6b21"
+    },
+    "sweep-20261101T152345Z/new-build/cuda-architecture.txt": {
+      "bytes": 10,
+      "sha256": "6e92feabd2c4bf697fbf11201911b39c40a96f5106450ab58dd50ac4dc6eb9b0"
+    },
+    "sweep-20261101T152345Z/new-build/kit.log": {
+      "bytes": 384,
+      "sha256": "fe6f8556cf9e55bfcefb552a903a31833ee3da47f717729d74673a42627c808a"
+    },
+    "sweep-20261101T152345Z/new-build/llama-server-version.txt": {
+      "bytes": 90,
+      "sha256": "c583c3b5f1912867e1b3fef26390d78eb01f89ebdf229258f6b2e9e28f15189d"
+    },
+    "vllm-20261101T163019Z/fp8-default-A-server.log": {
+      "bytes": 33838,
+      "sha256": "368ec50ba021f890de29b568f782508ab0c9f1f3d393edd2c65760635bf87736"
+    },
+    "vllm-20261101T163019Z/fp8-default-B-server.log": {
+      "bytes": 33220,
+      "sha256": "400c19f9f581d43a477509445589fc5e08e84b273ef94b7804163415817d99e5"
+    },
+    "vllm-20261101T163019Z/fp8-default-raw.json": {
+      "bytes": 69471,
+      "sha256": "e9ecba97064b1e1de96526bb8069f35e4fac841c66e8990cc2674fa41b6783ba"
+    },
+    "vllm-20261101T163019Z/fp8-kv-A-server.log": {
+      "bytes": 39698,
+      "sha256": "6cc0f15ec11e05fadd025b747f268cd34a52300940b5c57f63244b5cc183942f"
+    },
+    "vllm-20261101T163019Z/fp8-kv-B-server.log": {
+      "bytes": 39866,
+      "sha256": "c33b9928849c895d50c6164198315142fbcbfd33c2ef7ce5c1a74982af001035"
+    },
+    "vllm-20261101T163019Z/fp8-large-batch-A-server.log": {
+      "bytes": 31833,
+      "sha256": "d3be7287964dda318e9747ec3de73ece824e2551c661360f3570c17a9b8da898"
+    },
+    "vllm-20261101T163019Z/fp8-large-batch-B-server.log": {
+      "bytes": 32758,
+      "sha256": "2734aafc951481bc101583cfd3906e6118c3a143bc33dd00356831bef5ce4699"
+    },
+    "vllm-20261101T163019Z/fp8-large-batch-raw.json": {
+      "bytes": 69478,
+      "sha256": "8bb68253394ab444db777b5eee72861dcf38fe99953cadfaedd357f8944eca74"
+    },
+    "vllm-20261101T163019Z/gpu-after.txt": {
+      "bytes": 217,
+      "sha256": "9fa15d3924cd33afb74c77d085bb9f0d792084da03d94da6c243bbebabd53a84"
+    },
+    "vllm-20261101T163019Z/gpu-before.txt": {
+      "bytes": 213,
+      "sha256": "2fabfb4faa8eb91ad72872efc5c43532eb588e6e9c8e488bfcbd1a1d5d7b1215"
+    },
+    "vllm-20261101T163019Z/install.log": {
+      "bytes": 81664,
+      "sha256": "3858be5b7a84dba45ff336abf13974987b3f253c39587c2af58aefa002e996ef"
+    },
+    "vllm-20261101T163019Z/nvfp4-default-A-server.log": {
+      "bytes": 53458,
+      "sha256": "9b724b5437eab7afe3122927c501968c10892d008d98f11921ff332bd1b2c8ee"
+    },
+    "vllm-20261101T163019Z/nvfp4-default-B-server.log": {
+      "bytes": 53626,
+      "sha256": "3c56d83fecf4e5d80e378891719ebefe00b6f79f8cf5dbe88bc8c3bdb7d5617a"
+    },
+    "vllm-20261101T163019Z/pip-freeze.txt": {
+      "bytes": 4198,
+      "sha256": "bd323c872c3126b213241360c3cf50102e7af36c1a622224cbd16f8128eea369"
+    },
+    "vllm-20261101T163019Z/versions.json": {
+      "bytes": 169,
+      "sha256": "8b6f3f8f43f26980194df356dda89da3fd6567937b7f59d0ee77dd2423146f9b"
+    },
+    "vllm-20261101T163019Z/vllm.json": {
+      "bytes": 420429,
+      "sha256": "d802ecf7177bd04068dd8db6e2e566bc9bc161cf2493bc9693e4ae47f1d26584"
+    },
+    "vllm-20261101T163019Z/vllm.md": {
+      "bytes": 5405,
+      "sha256": "aab4d160c97a92a647b08ea9e36d527547d3a7639c6f5d37d5156835ecd19989"
+    }
+  }
+}

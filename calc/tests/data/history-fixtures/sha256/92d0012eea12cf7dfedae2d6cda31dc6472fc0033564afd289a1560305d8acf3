@@ -1,0 +1,75 @@
+{
+  "hardware.json": [
+    "hardware"
+  ],
+  "models.json": [
+    "models"
+  ],
+  "prices.json": [
+    "prices"
+  ],
+  "workload.json": [
+    "workload"
+  ],
+  "sampler.json": [
+    "sampler"
+  ],
+  "economics.json": [
+    "economics",
+    "analysis",
+    "edge"
+  ],
+  "measurements.json": [
+    "measurements"
+  ],
+  "service.json": [
+    "service"
+  ],
+  "legacy.json": [
+    "legacy"
+  ],
+  "ownership.json": [
+    "owners"
+  ],
+  "bridge.json": [
+    "bridge"
+  ],
+  "operations.json": [
+    "operations",
+    "owners"
+  ],
+  "paper-tables.json": [
+    "paper_tables",
+    "hardware"
+  ],
+  "paper-tables-r6.json": [
+    "r6",
+    "owners"
+  ],
+  "paper-tables-r7.json": [
+    "r7"
+  ],
+  "hosting.json": [
+    "hosting"
+  ],
+  "paper-tables-r8.json": [
+    "r8",
+    "hardware",
+    "models"
+  ],
+  "hosting-conservative.json": [
+    "hosting"
+  ],
+  "paper-tables-r9.json": [
+    "r9"
+  ],
+  "prices-r12.json": [
+    "prices"
+  ],
+  "paper-tables-r7-r12.json": [
+    "r7"
+  ],
+  "server-measured.json": [
+    "measurements"
+  ]
+}

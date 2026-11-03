@@ -1,0 +1,64 @@
+{
+  "name": "crossover-bridge",
+  "kind": "bridge",
+  "description": "One-assumption attribution of calc5 versus r3 owned-cluster/API equilibrium",
+  "inputs": [
+    "hardware.json",
+    "models.json",
+    "prices.json",
+    "workload.json",
+    "sampler.json",
+    "economics.json",
+    "service.json",
+    "ownership.json",
+    "bridge.json"
+  ],
+  "overrides": {
+    "workload": {
+      "sample_calls": {
+        "value": 39904,
+        "unit": "call",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Exact completed calls in legacy calc7/8: floor(40000/116)*116; same seeded prefix."
+        }
+      },
+      "reasoning_extra_fraction": {
+        "value": 1,
+        "unit": "1",
+        "provenance": {
+          "kind": "estimate",
+          "reason": "Explicit historical conservative sum of output and reasoning to reproduce the calc8 service workload; fields are not proven disjoint."
+        }
+      }
+    }
+  },
+  "summary_option": "l40s",
+  "cluster_option": "b300_node",
+  "small_models": [
+    "qwen27",
+    "glm"
+  ],
+  "benchmark_keys": [
+    "mimo_flash",
+    "chutes_27b",
+    "qwen_flash"
+  ],
+  "option_keys": [
+    "h100",
+    "l40s",
+    "rtx6000",
+    "b300",
+    "h200_pair",
+    "office5090",
+    "office6000",
+    "office4",
+    "b300_node"
+  ],
+  "fit_models": [
+    "qwen27",
+    "flashnext",
+    "glm"
+  ],
+  "owned_hybrid_option": "office5090"
+}

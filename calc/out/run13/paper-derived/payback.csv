@@ -1,0 +1,4 @@
+share,hybrid,api_median,api_cheapest,saving_median,premium_months,whole_months,saving_cheapest,hybrid_cons,premium_months_cons,whole_months_cons,hybrid_median_overflow,premium_months_median_overflow,whole_months_median_overflow
+20,30.07,101.67,14.1,71.59,36.32,71.22,-15.98,39.81,42.04,82.44,31.18,36.89,72.34
+50,53.87,254.17,35.24,200.29,12.98,25.46,-18.63,65.34,13.77,27.0,127.61,20.54,40.29
+100,89.11,508.33,70.48,419.22,6.2,12.16,-18.63,100.59,6.38,12.51,381.77,20.54,40.29

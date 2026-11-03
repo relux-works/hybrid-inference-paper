@@ -1,0 +1,7 @@
+Engine snapshot: engine-r14 commit 2d457aed87d415043a2c0566f7a185607f11487e, calc/out/run14/base/*.csv.
+Measured M3 parallel anchors with labelled modelled-depth/count zones; measured M5 Max family; measured B300 llama.cpp.
+Client import: M3 pre-import-speed-v2 single point; other clients use an uncalibrated portability estimate.
+Symmetric uncapped own fleets use equal retention and mean/p90 prefill budgets, excluding queues.
+vLLM FP8 costs/rates are server-only; bridge and node-adapter end-to-end qualification remain distinct.
+Files without a suffix use protocol hosting; *_conservative.csv use cautious hosting.
+Historical calc/out/paper and calc/out/run13 retain their original bytes.

@@ -21,7 +21,7 @@ def load(name, overrides=()):
     candidate = Path(name)
     path = candidate if candidate.is_file() else DATA / 'scenarios' / (name + '.json')
     scenario = read_json(path)
-    if scenario.get('kind') not in ('legacy', 'paper', 'glm', 'service', 'ownership', 'bridge', 'paper_tables', 'paper_tables_r6', 'paper_tables_r7', 'paper_tables_r8'):
+    if scenario.get('kind') not in ('legacy', 'paper', 'glm', 'service', 'ownership', 'bridge', 'paper_tables', 'paper_tables_r6', 'paper_tables_r7', 'paper_tables_r8', 'measurements_r13', 'measurements_r14'):
         raise InputError('unknown scenario kind: {}'.format(scenario.get('kind')))
     canonical = scenario['kind'] != 'legacy'
     data, failures = {}, {}
@@ -92,12 +92,21 @@ def compatibility(scenario, inputs):
 
 def run(name, overrides=()):
     scenario, inputs = load(name, overrides)
+    if scenario.get('run13') or scenario['kind']=='measurements_r13':
+        from .measurements_r13 import record_packages
+        record_packages(inputs)
     if scenario['kind'] == 'legacy':
         transcript = compatibility(scenario, inputs)
         result = {'scenario': scenario['name'], 'tables': [
             {'name': 'legacy transcript', 'columns': {'line': 'text'},
              'rows': [{'line': line} for line in transcript.splitlines()]}],
             'legacy_text': transcript}
+    elif scenario['kind'] == 'measurements_r14':
+        from .measurements_r14 import calculate
+        result = calculate(scenario, inputs)
+    elif scenario['kind'] == 'measurements_r13':
+        from .measurements_r13 import calculate
+        result = calculate(scenario, inputs)
     elif scenario['kind'] == 'paper_tables_r8':
         from .paper_tables_r8 import calculate
         result = calculate(scenario, inputs)
@@ -131,6 +140,27 @@ def run(name, overrides=()):
         result['alarms'] = unique(a for t in result['tables'] for a in t.get('alarms', []))
         result['computed_metrics'] = sum(type(v) in (int, float) for t in result['tables'] for row in t['rows'] for v in row.values())
         result['export_namespace'] = scenario['export_namespace']
+    if scenario.get('measured_server') and not scenario.get('run13'):
+        for table in result['tables']:
+            table['id'] += '_measured_server'
+            table['name'] += ' / server at the measured llama.cpp rate'
+        result['export_namespace'] = scenario['export_namespace']
+        result['notes'].append('Server at the measured llama.cpp rate: Qwen Q4 RTX time/token OLS a+b*depth; B300 uses the same depth-dependent fraction of dense FP8 peak. GLM uses that compute envelope as an estimate, not a measurement. Beyond249k extrapolates the linear time/token fit. Decode, prices, hosting and policies are unchanged; resulting optimal routing and fleet integers are recomputed. Any inherited constant-MFU timing note is superseded for these RTX/B300 prefill paths. server_compute in timing CSVs is the effective envelope at start_depth/depth.')
+    if scenario.get('run13') and not scenario.get('run14'):
+        result['export_namespace'] = scenario['export_namespace']
+        result['notes'].append('Run13 server case: '+scenario['server_case']+'. Measured M5 Max64 Q4/q8_0 step40/50/55; step57 excluded for swap. Interpolated/extrapolated depths and parallel gains are estimates; other Macs retain their existing estimates. RTX prefill seconds/token is an OLS bulk-turn fit; B300 and GLM portability remain estimates. vLLM is server-only and excluded from these hybrid routes because no client state bridge exists.')
+    if scenario.get('run14'):
+        from .measurements_r14 import record_packages
+        record_packages(inputs)
+        result['export_namespace'] = scenario['export_namespace']
+        result['notes'] = [n for n in result['notes'] if not n.startswith(('Dense decode interpolates','Local prefill = measured M3'))]
+        result['notes'] = [n for n in result['notes'] if not n.startswith(('Own-rack RTX','All-server sizing','Client capacities retain','Hybrid timing is serial'))]
+        result['notes'].append('Run14 r5: M3 same-count measured interpolation; beyond its deepest anchor use the Run13 bandwidth depth-law ratio anchored at that point (modelled beyond measured depth). Holes use the nearest lower measured aggregate conservatively; counts above24 refuse. Zone call/decode-device-time shares can overlap. Bounded subsets retain measured-only lookup and explicit gaps. Client import is fixed plus tokens times measured per-token rate. M3 uses the single point42.4s /39504 tokens, with unidentified fixed overhead assumed0; other Apple clients use that rate as an estimate. CUDA PR9 independently fits1.619s +0.4953ms/token. v2 Mac gate pending. Closed-perimeter fleets compare uncapped hardware and HBM/RAM/NVMe retention at common local-M3 mean/p90 prefill limits; queueing excluded. Storage pools are separately paid, active decode residency charged, tool-idle pool retention not double-charged as GPU work. M5 Max64/128 share measured curves, Ultras scale Max, M3-based sensitivity separate. B300 uses measured Q4 prefill/decode; step70 skipped identical builds. Deep fits and GLM portability remain estimates; vLLM FP8 options remain server-only with bridge qualification pending.')
+    if scenario.get('run15'):
+        from .measurements_r15 import record_package
+        record_package(inputs)
+        result['notes'] = [n.replace('counts above24 refuse', 'counts above32 refuse') for n in result['notes']]
+        result['notes'].append('Run15 supersedes parallel anchors only: cooled kit1.6.6 median of all three restored rounds, largest-np32 at32k/64k and np16 at128k. Step56 260k1/2/4/6/8 remains deepest. Step55, restored128k control and YaRN1.04M are historical sensitivities, excluded from base. The np4 control is a server-shape sensitivity only. Run13 depth law and conservative lower-count lookup remain unchanged; no counts above32. Zone flags overlap; measured excludes shallow, modelled-depth and count-conservative calls.')
     result['sources'] = [{'path': path, **quantity} for path, quantity in sorted(inputs.used.items())]
     result['files'] = list(inputs.files.values())
     return result

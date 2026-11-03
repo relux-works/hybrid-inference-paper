@@ -3,19 +3,17 @@
 
 Scope: the sites listed in SITES and DIRECTION_SITES, the two tables, and a guard over all of paper/sections/*.tex.
 
-Values: each figure in SITES is recomputed from engine/*.csv (run 11), payback.csv and the engine inputs named below,
+Values: each figure in SITES is recomputed from engine/*.csv (run 14), payback.csv and the engine inputs named below,
 rounded the way the text prints it, and must appear at each site SITES lists for it (a paragraph or one sentence, white
 space normalised). The rows of the client table (tab:econ) and the closed-perimeter table (tab:perimeter) are checked
 cell by cell.
 
 Directions: directions() evaluates each comparison in DIRECTION_SITES on the engine rows (which option is cheaper, what
 grows or falls), and each is bound to the wording that states it at each listed site. A comparison the engine no longer
-supports, or a listed site whose wording is missing or flipped, is reported. The closed-perimeter result at 500 people
-and light load is tied to the engine rule it depends on (calc/hybridcalc/data/paper-tables-r6.json): own-rack RTX PRO
-6000 servers are eligible for teams up to small_team_max, B300 nodes from overlap_min; the snapshot's eligible column
-must follow that rule, and the text must state it. Storage of a session copy under the protocol policy follows the
-engine's tiered formula (session_hosting.py) with the same inputs: hosting.json tier prices, paper_tables.hours
-(paper-tables.json), owners.days (ownership.json) and economics.hours_month (economics.json).
+supports, or a listed site whose wording is missing or flipped, is reported. Both routes use all hardware
+at every team size and identical retention and mean/p90 prefill budgets. The former artificial team-cap sites
+now bind those shared constraints; no publication site is dropped. Every storage-tier candidate is checked in
+symmetric_storage_candidates*.csv. Tiered hosting follows the unchanged engine-input formula.
 
 Guard: every distinctive printed form of a checked figure (ranges, dollar amounts, decimals with three or more digits,
 and the word forms in CORE_FORMS) is searched in every section. An occurrence outside the sites registered for a figure
@@ -29,7 +27,6 @@ import csv, json, math, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SECTIONS = os.path.join(HERE, '..', 'sections')
-RULE_FILE = os.path.join(HERE, '..', '..', 'calc', 'hybridcalc', 'data', 'paper-tables-r6.json')
 FILES = ('00-abstract.tex', '02-workload.tex', '07-economics.tex', '08-million.tex', '14-conclusion.tex')
 TEAMS = (50, 500, 5000)
 LIGHT_ENDS = (TEAMS[0], TEAMS[-1])  # light load: the hybrid is cheaper at these team sizes
@@ -48,19 +45,18 @@ def rows(name):
         return list(csv.DictReader(f))
 
 
-def rule():
-    """(small_team_max, overlap_min) of the engine's closed-perimeter eligibility rule."""
-    with open(RULE_FILE, encoding='utf-8') as f:
-        p = json.load(f)['r6']['perimeter']
-    return int(p['small_team_max']['value']), int(p['overlap_min']['value'])
-
-
 def money(v):
     return '\\$' + f'{v:,.0f}'.replace(',', '\\,')
 
 
+def compact_span(values, digits=1):
+    """Identical rounded endpoints print once; precision is unchanged."""
+    low, high = (f'{fn(values):.{digits}f}' for fn in (min, max))
+    return low if low == high else low + '--' + high
+
+
 def span(values, digits=1):
-    return f'{min(values):.{digits}f}--{max(values):.{digits}f}'
+    return compact_span(values, digits)
 
 
 WORDS = {1: 'одна', 2: 'две', 3: 'три', 4: 'четыре', 5: 'пять', 6: 'шесть', 7: 'семь', 8: 'восемь', 9: 'девять',
@@ -110,7 +106,7 @@ def perimeter(name):
             if r['client'] == CLIENT and r['basis'] == OWNED and r['selected'] == '1':
                 sel[(r['profile'], int(r['team']), 'served')] = 100 * float(r['client_served_share'])
             continue
-        key = (r['profile'], int(r['team']), route, r['server'])
+        key = (r['profile'], int(r['team']), route, r['server'], r['storage_tier'])
         opt[key] = dict(cost=float(r['person_month']), eligible=r['eligible'] == '1', selected=r['selected'] == '1',
                         units=int(float(r['units'])) if r['units'] not in ('', 'nan') else 0)
         if r['selected'] == '1':
@@ -119,15 +115,6 @@ def perimeter(name):
             sel[(r['profile'], int(r['team']), kind + '_server')] = r['server']
             sel[(r['profile'], int(r['team']), kind + '_units')] = opt[key]['units']
     return sel, opt
-
-
-def rule_holds(opt, small, overlap):
-    """The snapshot's eligible column follows the stated rule for every option."""
-    for (profile, team, route, server), o in opt.items():
-        want = team >= overlap if server == B300 else team <= small
-        if o['eligible'] != want:
-            return False
-    return True
 
 
 def perimeter_rows(design, cons):
@@ -140,27 +127,53 @@ def perimeter_rows(design, cons):
 TWO_CARD = '2x RTX PRO 6000 Server; own perimeter rack'
 
 
-def outside_rule(dopt, copt):
-    """Light load at 500 people on two-card RTX PRO 6000 servers (ineligible under the rule): the hybrid under both
-    policies, the own cluster on the same servers, and the own cluster on its selected B300 node."""
-    hyb, hyb_c = dopt[('light', 500, 'hybrid', TWO_CARD)]['cost'], copt[('light', 500, 'hybrid', TWO_CARD)]['cost']
-    own_two = dopt[('light', 500, 'all server', TWO_CARD)]['cost']
-    own_b300 = dopt[('light', 500, 'all server', B300)]
-    assert own_b300['selected'], 'the own cluster at 500 people, light load, is no longer the B300 node'
-    return hyb, hyb_c, own_two, own_b300['cost']
+def symmetric_budgets():
+    """Both routes share budgets; every hardware/tier remains an exported candidate."""
+    for name in ('symmetric_storage_candidates.csv', 'symmetric_storage_candidates_conservative.csv'):
+        data = [r for r in rows(name) if r['route'] == 'all server' or
+                (r['route'] == 'hybrid' and r['client'] == CLIENT and r['basis'] == OWNED)]
+        for profile in ('light', 'medium', 'heavy'):
+            for team in (5, 10, 20, 50, 500, 5000):
+                group = [r for r in data if r['profile'] == profile and int(r['team']) == team]
+                for key in ('retention', 'retained_sessions', 'latency_mean_limit_s', 'latency_p90_limit_s'):
+                    if len({r[key] for r in group}) != 1:
+                        return False
+                for route in ('all server', 'hybrid'):
+                    rs = [r for r in group if r['route'] == route]
+                    if {r['storage_tier'] for r in rs} != {'HBM', 'RAM', 'NVMe'}:
+                        return False
+                    if any(r['office_policy'] != 'uncapped cheapest admissible fleet' for r in rs):
+                        return False
+                    for r in rs:
+                        want = (float(r['prefill_mean_s']) <= float(r['latency_mean_limit_s']) and
+                                float(r['prefill_p90_s']) <= float(r['latency_p90_limit_s']))
+                        if (r['eligible'] == '1') != want:
+                            return False
+    return True
 
 
 # ---------------------------------------------------------------- own servers for 5 and 20 people
 
 def own_servers():
+    """Selected fleets plus the unique light-load, one-node B300 reference.
+
+    Run 14 sizes other profiles independently; their costs cannot supply the
+    printed $3,373/$845 amounts. Require row uniqueness, including equal prices.
+    """
     selected, b300 = {}, {}
     for r in rows('perimeter_cost.csv'):
         if r['route'] != 'all server':
             continue
         if r['selected'] == '1':
             selected[(r['profile'], int(r['team']))] = r
-        if r['server'] == B300:
-            b300.setdefault(int(r['team']), set()).add(float(r['person_month']))
+        if r['server'] == B300 and r['profile'] == 'light' and int(r['team']) in (5, 20):
+            b300.setdefault(int(r['team']), []).append(r)
+    for team in (5, 20):
+        candidates = b300.get(team, [])
+        assert len(candidates) == 1, f'B300 light profile: exactly one row for team {team}'
+        row = candidates[0]
+        assert float(row['units']) == 1, f'B300 light profile: one node for team {team}'
+        b300[team] = float(row['person_month'])
     return selected, b300
 
 
@@ -173,8 +186,7 @@ def cards_sentence(selected, team, such):
         return int(float(r['units'])) * per, per
     light, _ = count('light')
     heavy, per = count('heavy')
-    phrase = {1: 'по одной в сервере', 2: 'по две в сервере'}[per]
-    return f'{need_cards(light, such)} при лёгкой нагрузке и {WORDS.get(heavy, str(heavy))}, {phrase}, при тяжёлой'
+    return f'{need_cards(light, such)} при лёгкой нагрузке и {WORDS.get(heavy, str(heavy))} при тяжёлой'
 
 
 # ---------------------------------------------------------------- per-person economics
@@ -242,7 +254,8 @@ def glm():
 
 def refill_hours():
     """M3 Max refill of 1M tokens from the tab:m3max segments (02-workload.tex), linear beyond the last midpoint."""
-    text = open(os.path.join(SECTIONS, '02-workload.tex'), encoding='utf-8').read()
+    with open(os.path.join(SECTIONS, '02-workload.tex'), encoding='utf-8') as stream:
+        text = stream.read()
     nums = lambda prefix: [float(x) for x in re.search(re.escape(prefix) + r'(.*?)\\\\', text).group(1).split('&')[1:]]
     mids = [m * 1e3 for m in nums('Глубина контекста, тыс. токенов')]
     t = [1 / r for r in nums('Prefill, токенов/с')]
@@ -298,7 +311,7 @@ def model():
     """Everything the checks need, computed once."""
     d, dopt = perimeter('perimeter_cost.csv')
     c, copt = perimeter('perimeter_cost_conservative.csv')
-    m = dict(design=d, cons=c, dopt=dopt, copt=copt, rule=rule(),
+    m = dict(design=d, cons=c, dopt=dopt, copt=copt,
              s20=person('person_cost_s20.csv'), s50=person('person_cost_s50.csv'),
              s20c=person('person_cost_s20_conservative.csv'), s50c=person('person_cost_s50_conservative.csv'),
              b20=person('person_cost_s20.csv', BOUGHT), b50=person('person_cost_s50.csv', BOUGHT),
@@ -315,8 +328,7 @@ def values(m):
     ratio = lambda x, p, t: x[(p, t, 'own')] / x[(p, t, 'hybrid')]
     saving = lambda x, p, t: 100 * (1 - x[(p, t, 'hybrid')] / x[(p, t, 'own')])
     med_d, med_c = [ratio(d, 'medium', t) for t in TEAMS], [ratio(c, 'medium', t) for t in TEAMS]
-    small, overlap = m['rule']
-    hyb2, hyb2_c, own2, own_b300 = outside_rule(m['dopt'], m['copt'])
+
     s20, s50, s20c, s50c, b20, b50 = (m[k] for k in ('s20', 's50', 's20c', 's50c', 'b20', 'b50'))
     cheaper = lambda x, keys: [x[k]['api_median'] / x[k]['hybrid_cheapest'] for k in keys]
     dearer = lambda x, keys: [x[k]['hybrid_cheapest'] / x[k]['api_cheapest'] for k in keys]
@@ -325,8 +337,6 @@ def values(m):
     up = m['upper']
     base50, top50, base20, top20 = up[(False, 50)], up[(True, 50)], up[(False, 20)], up[(True, 20)]
     selected, b300 = own_servers()
-    for team in (5, 20):
-        assert len(b300[team]) == 1, ('B300 person_month varies across profiles', team, b300[team])
     own_team = lambda t: [float(r['person_month']) for (p, tt), r in selected.items() if tt == t]
     pay = m['pay']; p20, p50 = pay[20], pay[50]
     n = lambda v: round(v)
@@ -348,13 +358,12 @@ def values(m):
         'light at 50 and 5000, conservative, percent': span([saving(c, 'light', t) for t in LIGHT_ENDS], 0),
         'light at 500, own against hybrid': f'\\${d[("light", 500, "own")]:.0f} на человека в месяц против '
                                             f'\\${d[("light", 500, "hybrid")]:.0f}',
-        'light at 500, outside the rule': f'около \\${hyb2:.0f} (при осторожной политике \\${hyb2_c:.0f}) против '
-                                          f'\\${own2:.0f} у своего кластера на тех же серверах и \\${own_b300:.0f} на узле B300',
+        'light at 500, cautious symmetric comparison': f'При осторожной политике на 500 человек гибрид стоит \\${c[("light", 500, "hybrid")]:.0f} против \\${c[("light", 500, "own")]:.0f} у своего кластера',
         'heavy saving, design': span([saving(d, 'heavy', t) for t in TEAMS], 0),
         'heavy saving, conservative': span([saving(c, 'heavy', t) for t in TEAMS], 0),
-        'rule, RTX PRO 6000 limit': f'для команд до {small} человек',
-        'rule, B300 from (paragraph)': f'узлы B300 начиная с {overlap}',
-        'rule, B300 from (caption)': f'узлы B300 для команд от {overlap}',
+        'symmetric hardware without team cap': 'без ограничения размера команды',
+        'symmetric retention budget': 'одинаковые сроки хранения и число сохраняемых сессий',
+        'symmetric latency budget': 'одинаковые ограничения среднего и p90 времени prefill',
         # own servers for 5 and 20 people
         'own server for five people': '\\$' + span(own_team(5), 0),
         'own server for twenty people': '\\$' + span(own_team(20), 0),
@@ -362,8 +371,8 @@ def values(m):
                                                   f'человека в месяц при лёгкой нагрузке',
         'cards for five people': cards_sentence(selected, 5, True),
         'cards for twenty people': cards_sentence(selected, 20, False),
-        'B300 node per person, five people': money(next(iter(b300[5]))),
-        'B300 node per person, twenty people': money(next(iter(b300[20]))),
+        'B300 node per person, five people': money(b300[5]),
+        'B300 node per person, twenty people': money(b300[20]),
         # per-person economics
         'API per 1000 calls': f'стоят \\${a20["api_median"] / 10.5:.2f}, у самого дешёвого \\${a20["api_cheapest"] / 10.5:.2f}',
         'upper bound, capacity': f'с {base50["capacity_day"]:.0f} до {top50["capacity_day"]:.0f} вызовов в день',
@@ -371,7 +380,7 @@ def values(m):
         'upper bound, s50 against median': f'\\${top50["hybrid_cheapest"]:.0f} против \\${top50["api_median"]:.0f}',
         'upper bound, s50 against cheapest': f'\\${top50["hybrid_cheapest"]:.0f} против \\${top50["api_cheapest"]:.0f} при',
         'upper bound, s20 against cheapest': f'в {top20["hybrid_cheapest"] / top20["api_cheapest"]:.1f} раза при доле 20',
-        'storage against prefill': f'хранение стоит \\${s20[CLIENT]["hosting_month"]:.1f} в месяц, больше, чем сам prefill '
+        'storage against prefill': f'хранение стоит \\${s20[CLIENT]["hosting_month"]:.1f} в месяц, {"меньше" if s20[CLIENT]["hosting_month"] < s20[CLIENT]["compute_month"] else "больше"}, чем сам prefill '
                                    f'(\\${s20[CLIENT]["compute_month"]:.1f})',
         'conservative storage': f'обходится в \\${s20c[CLIENT]["hosting_month"]:.1f}',
         's20 hybrid dollars': '\\$' + span([s20[k]['hybrid_cheapest'] for k in CLIENTS], 0) + ' в месяц',
@@ -418,6 +427,7 @@ def values(m):
         'GLM growth of the session cost': f'сессия дороже в {api1m / m["glm_200k"]:.0f} раз',
         'GLM two sessions, hybrid': f'гибрид обходится в \\${span([g[t]["hybrid_session"] for t in big])} за сессию',
         'GLM two sessions, own cluster': f'свой кластер стоит \\${g[500]["own_cluster_session"]:.2f}',
+        'GLM two sessions, own cluster at 5000': f'на 5000 человек \\${g[5000]["own_cluster_session"]:.2f}',
         'GLM 50 people': f'(\\${g[50]["own_cluster_session"]:.2f}) немного дешевле API (\\${g[50]["api_session"]:.2f}), а '
                          f'гибрид с отдельной Studio на каждого дороже обоих (\\${g[50]["hybrid_session"]:.2f})',
         'GLM Studio utilization at two sessions': ('меньше чем на треть' if max(v['utilization'] for v in two) < 1 / 3
@@ -426,7 +436,8 @@ def values(m):
         'GLM full load, Studio share': f'до \\${full[0]["studio_session"]:.2f} на сессию',
         'GLM full load, hybrid session': '\\$' + span([v['hybrid_session'] for v in full]),
         'GLM full load, below API': span([v['api_session'] / v['hybrid_session'] for v in full]),
-        'GLM full load, below own cluster': span([v['own_cluster_session'] / v['hybrid_session'] for v in full]),
+        'GLM full load, below own cluster': compact_span([v['own_cluster_session'] / v['hybrid_session'] for v in full]),
+        'GLM four sessions, below API': span([v['api_session'] / v['hybrid_session'] for v in four]),
         'GLM four sessions, hybrid': '\\$' + span([v['hybrid_session'] for v in four]) + ', в '
                                      + f'{max(v["own_cluster_session"] / v["hybrid_session"] for v in four):.1f}'
                                      + ' раза дешевле своего кластера',
@@ -456,8 +467,7 @@ def values(m):
 def directions(m):
     """Each comparison the text states, evaluated on the engine rows: name -> True when the rows support it."""
     d, c, dopt, copt = m['design'], m['cons'], m['dopt'], m['copt']
-    small, overlap = m['rule']
-    hyb2, hyb2_c, own2, own_b300 = outside_rule(dopt, copt)
+
     light_saving = [[100 * (1 - x[('light', t, 'hybrid')] / x[('light', t, 'own')]) for t in TEAMS] for x in (d, c)]
     monotone = lambda s: all(a <= b for a, b in zip(s, s[1:])) or all(a >= b for a, b in zip(s, s[1:]))
     both = (d, c)
@@ -473,26 +483,24 @@ def directions(m):
             all(x[('heavy', t, 'hybrid')] < x[('heavy', t, 'own')] for x in both for t in TEAMS),
         'closed: light, hybrid cheaper at 50 and 5000':
             all(x[('light', t, 'hybrid')] < x[('light', t, 'own')] for x in both for t in LIGHT_ENDS),
-        # The 500-person reversal holds under the rule and only because of it: the snapshot follows the rule, RTX PRO
-        # servers are excluded at 500, both routes get one B300 node, the own cluster is cheaper; outside the rule the
-        # hybrid on two-card RTX PRO servers is cheaper than the own cluster.
-        'closed: light at 500, own cluster cheaper under the rule':
-            small < 500 and overlap <= 500 and rule_holds(dopt, small, overlap) and rule_holds(copt, small, overlap)
-            and all(x[('light', 500, 'own')] < x[('light', 500, 'hybrid')]
-                    and x[('light', 500, 'own_server')] == B300 == x[('light', 500, 'hybrid_server')]
-                    and x[('light', 500, 'own_units')] == 1 == x[('light', 500, 'hybrid_units')] for x in both),
-        'closed: light at 500, hybrid cheaper outside the rule': max(hyb2, hyb2_c) < min(own_b300, own2),
+        # Legacy site names are retained for audit continuity; the new claims
+        # explicitly replace the removed artificial team-cap conclusions.
+        'closed: light at 500, hybrid cheaper with uncapped hardware':
+            all(x[('light', 500, 'hybrid')] < x[('light', 500, 'own')] for x in both)
+            and all(any(t == 500 and 'RTX PRO 6000' in server and o['eligible']
+                        for (p, t, route, server, tier), o in opt.items()) for opt in (dopt, copt)),
+        'closed: both routes have equal retention and latency budgets': symmetric_budgets(),
         'closed: the selected option is the cheapest eligible one':
-            all(min((o['cost'] for (p2, t2, r2, _), o in opt.items() if (p2, t2, r2) == (p, t, r) and o['eligible']),
+            all(min((o['cost'] for (p2, t2, r2, _, _), o in opt.items() if (p2, t2, r2) == (p, t, r) and o['eligible']),
                     default=None) == o_sel['cost']
-                for opt in (dopt, copt) for (p, t, r, _), o_sel in opt.items() if o_sel['selected']),
-        'closed: light-load saving is not monotone over 50, 500 and 5000':
-            not any(monotone(s) for s in light_saving),
+                for opt in (dopt, copt) for (p, t, r, _, _), o_sel in opt.items() if o_sel['selected']),
+        'closed: light-load saving grows over 50, 500 and 5000':
+            all(all(a <= b for a,b in zip(s,s[1:])) for s in light_saving),
         'cheapest API cheaper than the hybrid on every client, both shares and policies': cheap_everywhere,
         'at 50% Ultra clients dearer than the cheapest API':
             all(m['s50'][k]['hybrid_cheapest'] > m['s50'][k]['api_cheapest'] for k in ULTRA),
-        'teams: own cluster below the median API at 500, above it at 50, above the cheapest at every size':
-            all(m[t][CLIENT]['own_cluster'] < m[t][CLIENT]['api_median'] for t in ('t20', 't50'))
+        'teams: fixed B300 above both APIs at 500 and50, above cheapest at every size':
+            all(m[t][CLIENT]['own_cluster'] > m[t][CLIENT]['api_median'] for t in ('t20', 't50'))
             and all(m[k][50]['own_cluster'] > m[k][50]['api_median'] for k in ('t20all', 't50all'))
             and all(r['own_cluster'] > r['api_cheapest'] for k in ('t20all', 't50all') for r in m[k].values()),
         'upper bound: capacity falls, API rises, the gap to the cheapest API narrows':
@@ -500,16 +508,16 @@ def directions(m):
             and all(up[(True, s)][k] > up[(False, s)][k] for s in (20, 50) for k in ('api_median', 'api_cheapest'))
             and all(up[(True, s)]['hybrid_cheapest'] / up[(True, s)]['api_cheapest']
                     < up[(False, s)]['hybrid_cheapest'] / up[(False, s)]['api_cheapest'] for s in (20, 50)),
-        'storage dearer than prefill (M5 Max, 20%)': m['s20'][CLIENT]['hosting_month'] > m['s20'][CLIENT]['compute_month'],
+        'storage cheaper than prefill (M5 Max, 20%)': m['s20'][CLIENT]['hosting_month'] < m['s20'][CLIENT]['compute_month'],
         '1M: own cluster cheaper at one and two sessions a day (500, 5000, both policies)':
             all(util[(p, t, 1, f'{s}/day')]['own_cluster_session'] < util[(p, t, 1, f'{s}/day')]['hybrid_session']
                 for p in ('design', 'conservative') for t in big for s in (1, 2)),
         '1M: hybrid cheaper at four sessions a day and at full load (500, 5000, both policies)':
             all(util[(p, t, 1, k)]['hybrid_session'] < util[(p, t, 1, k)]['own_cluster_session']
                 for p in ('design', 'conservative') for t in big for k in ('4/day', 'full')),
-        '1M: four sessions a day almost four times below the API':
-            all(3.5 <= util[('design', t, 1, '4/day')]['api_session'] / util[('design', t, 1, '4/day')]['hybrid_session']
-                < 4 for t in big),
+        '1M: four sessions a day below the API':
+            all(1 < util[('design', t, 1, '4/day')]['api_session'] / util[('design', t, 1, '4/day')]['hybrid_session']
+                for t in big),
         '1M: API cheapest for 10 people and fewer; at 50 own below API below hybrid':
             all(m['glm_long'][t]['api_session'] < min(m['glm_long'][t]['own_cluster_session'],
                                                       m['glm_long'][t]['hybrid_session']) for t in (5, 10))
@@ -554,13 +562,13 @@ SITES = {
     'medium, both cases': [C07, K14C],
     'light at 50 and 5000, design, percent': [P_CLOSED],
     'light at 50 and 5000, conservative, percent': [P_CLOSED],
-    'light at 500, own against hybrid': [('07-economics.tex', 'По этому правилу на 500 человек', 'sentence')],
-    'light at 500, outside the rule': [('07-economics.tex', 'Вне этого правила', 'sentence')],
+    'light at 500, own against hybrid': [('07-economics.tex', 'На 500 человек при лёгкой нагрузке', 'sentence')],
+    'light at 500, cautious symmetric comparison': [('07-economics.tex', 'При осторожной политике на 500 человек', 'sentence')],
     'heavy saving, design': [P_CLOSED, C07],
     'heavy saving, conservative': [P_CLOSED, C07],
-    'rule, RTX PRO 6000 limit': [P_CLOSED, CAP_PER, C07, K14C],
-    'rule, B300 from (paragraph)': [P_CLOSED],
-    'rule, B300 from (caption)': [CAP_PER],
+    'symmetric hardware without team cap': [P_CLOSED, CAP_PER, C07, K14C],
+    'symmetric retention budget': [P_CLOSED],
+    'symmetric latency budget': [CAP_PER],
     # The own-server sentences are checked one by one: the paragraph mentions $3,370 twice.
     'own server for five people': [('07-economics.tex', 'Команде из пяти человек нужн', 'sentence')],
     'own server for five people, light load': [('07-economics.tex', 'пяти человек свой сервер обходится', 'sentence')],
@@ -614,16 +622,18 @@ SITES = {
     'GLM API session to 200k': [M_OPEN],
     'GLM growth of the session cost': [M_OPEN],
     'GLM two sessions, hybrid': [M_COST2],
-    'GLM two sessions, own cluster': [M_COST2],
+    'GLM two sessions, own cluster': [('08-million.tex', 'На 500 человек свой кластер', 'sentence')],
+    'GLM two sessions, own cluster at 5000': [('08-million.tex', 'На 500 человек свой кластер', 'sentence')],
     'GLM 50 people': [M_COST],
     'GLM Studio utilization at two sessions': [M_LOAD],
     'GLM Studio capacity': [M_LOAD],
     'GLM full load, Studio share': [M_LOAD],
     'GLM full load, hybrid session': [M_LOAD],
-    'GLM full load, below API': [M_LOAD, C08, ('14-conclusion.tex', 'Его преимущество растёт')],
-    'GLM full load, below own cluster': [M_LOAD, C08, ('14-conclusion.tex', 'Его преимущество растёт')],
+    'GLM full load, below API': [M_LOAD, C08, ('14-conclusion.tex', 'На глубоком контексте:')],
+    'GLM full load, below own cluster': [M_LOAD, C08, ('14-conclusion.tex', 'На глубоком контексте:')],
     'GLM four sessions, hybrid': [M_LOAD],
     'GLM four sessions, below own cluster': [C08],
+    'GLM four sessions, below API': [M_LOAD, C08],
     'GLM shared Studio': [M_LOAD],
     'GLM two sessions, dearer percent': [C08],
     'GLM one session, dearer factor': [C08],
@@ -649,19 +659,18 @@ DIRECTION_SITES = {
     'closed: light, hybrid cheaper at 50 and 5000': [
         (P_CLOSED, 'Для лёгкой нагрузки на 50 и 5000 человек гибрид дешевле кластера на'),
         (C07, 'а при лёгкой дешевле на 50 и 5000 человек'), (K14C, 'а при лёгкой дешевле на 50 и 5000 человек')],
-    'closed: light at 500, own cluster cheaper under the rule': [
-        (P_CLOSED, 'По этому правилу на 500 человек при лёгкой нагрузке оба варианта получают по одному узлу B300, и свой '
-                   'кластер обходится в'),
-        (C07, 'и дороже на 500: серверы на RTX PRO 6000 мы рассматриваем только для команд до'),
-        (C07, 'на 500 человек оба варианта получают по одному узлу B300'),
-        (K14C, 'и дороже на 500: серверы на RTX PRO 6000 мы рассматриваем только для команд до'),
-        (K14C, 'на 500 человек оба варианта получают по одному узлу B300')],
+    'closed: light at 500, hybrid cheaper with uncapped hardware': [
+        (P_CLOSED, 'На 500 человек при лёгкой нагрузке гибрид дешевле своего кластера'),
+        (C07, 'и дешевле на 500: серверы на RTX PRO 6000 допустимы без ограничения размера команды'),
+        (C07, 'обе схемы имеют одинаковые требования хранения и задержки'),
+        (K14C, 'и дешевле на 500: серверы на RTX PRO 6000 допустимы без ограничения размера команды'),
+        (K14C, 'обе схемы имеют одинаковые требования хранения и задержки')],
     'closed: the selected option is the cheapest eligible one': [
         (P_CLOSED, 'движок выбирает самый дешёвый из допустимых'), (CAP_PER, 'из допустимых вариантов взят самый дешёвый')],
-    'closed: light-load saving is not monotone over 50, 500 and 5000': [
-        (P_CLOSED, 'Экономия немонотонна, потому что серверы и узлы добавляются целиком')],
-    'closed: light at 500, hybrid cheaper outside the rule': [
-        (P_CLOSED, 'Вне этого правила, на серверах с двумя RTX PRO 6000, гибрид на 500 человек стоил бы около')],
+    'closed: light-load saving grows over 50, 500 and 5000': [
+        (P_CLOSED, 'Экономия на лёгкой нагрузке растёт с размером команды')],
+    'closed: both routes have equal retention and latency budgets': [
+        (P_CLOSED, 'Обе схемы имеют одинаковые сроки хранения и число сохраняемых сессий')],
     'cheapest API cheaper than the hybrid on every client, both shares and policies': [
         (C07, 'Самый дешёвый поставщик API дешевле гибрида на всех рассмотренных клиентах и при обеих долях'),
         (('07-economics.tex', 'Как это будет меняться'), 'самый дешёвый поставщик обходится дешевле гибрида на всех '
@@ -672,22 +681,23 @@ DIRECTION_SITES = {
         (CAP_PAY, 'Против самого дешёвого поставщика гибрид дороже')],
     'at 50% Ultra clients dearer than the cheapest API': [
         (P_S50, 'дороже самого дешёвого API при хранении по политике протокола')],
-    'teams: own cluster below the median API at 500, above it at 50, above the cheapest at every size': [
-        (P_TEAMS, 'на 500 человек свой кластер уже дешевле медианного поставщика API при обеих долях'),
-        (P_TEAMS, 'на 50 человек ещё дороже'),
+    'teams: fixed B300 above both APIs at 500 and50, above cheapest at every size': [
+        (P_TEAMS, 'на 500 человек фиксированный кластер B300 дороже медианного поставщика API при обеих долях'),
+        (P_TEAMS, 'на 50 человек кластер B300 тоже дороже'),
         (P_TEAMS, 'Самого дешёвого поставщика API свой кластер не догоняет ни при каком размере команды до 5000')],
     'upper bound: capacity falls, API rises, the gap to the cheapest API narrows': [
         (P_OPEN, 'ёмкость M5 Max падает'), (P_OPEN, 'API дорожает на'), (P_OPEN, 'разрыв с самым дешёвым сокращается')],
-    'storage dearer than prefill (M5 Max, 20%)': [(P_HOST, 'в месяц, больше, чем сам prefill')],
+    'storage cheaper than prefill (M5 Max, 20%)': [(P_HOST, 'в месяц, меньше, чем сам prefill')],
     '1M: own cluster cheaper at one and two sessions a day (500, 5000, both policies)': [
-        (M_COST2, 'свой кластер стоит'), (M_COST2, 'и дешевле гибрида'),
+        (('08-million.tex', 'На 500 человек свой кластер', 'sentence'), 'свой кластер стоит'),
+        (('08-million.tex', 'На 500 человек свой кластер', 'sentence'), 'и дешевле гибрида'),
         (C08, 'При двух сессиях в день гибрид дороже своего кластера на')],
     '1M: hybrid cheaper at four sessions a day and at full load (500, 5000, both policies)': [
-        (M_LOAD, 'раза дешевле своего кластера; если Studio делят'),
+        (M_LOAD, 'раза дешевле своего кластера и в'),
         (M_LOAD, 'раза дешевле API и в'), (M_LOAD, 'раза дешевле своего кластера.'),
-        (C08, 'раза дешевле своего кластера и почти в четыре раза дешевле API, при полной загрузке в'),
-        (('14-conclusion.tex', 'Его преимущество растёт'), 'раза дешевле своего кластера.')],
-    '1M: four sessions a day almost four times below the API': [(C08, 'почти в четыре раза дешевле API')],
+        (C08, 'раза дешевле своего кластера и в'),
+        (('14-conclusion.tex', 'На глубоком контексте:'), 'раза дешевле своего кластера.')],
+    '1M: four sessions a day below the API': [(site, 'раза дешевле API') for site in (M_LOAD, C08)],
     '1M: API cheapest for 10 people and fewer; at 50 own below API below hybrid': [
         (M_COST, 'Команде из 10 человек и меньше выделенный сервер не окупается, и дешевле всего остаётся API'),
         (M_COST, 'немного дешевле API'), (M_COST, 'дороже обоих')],
@@ -727,6 +737,31 @@ def norm(t):
     return ' '.join(t.split())
 
 
+def value_at(key, site, expected):
+    """Bind a scalar repeated within a paragraph to its own comparison."""
+    value = expected[key]
+    if key == 'heavy saving, design':
+        return ('при тяжёлой на ' if site == C07 else 'гибрид дешевле кластера на ') + value + '\\%'
+    if key == 'heavy saving, conservative':
+        return ('при осторожной политике на ' if site == C07 else 'при осторожной политике хранения на ') + value + '\\%'
+    if key == 'medium, both cases' and site == C07:
+        return 'при средней нагрузке гибрид в ' + value + ' раза'
+    if key == 's50 below median, Max clients' and site == C07:
+        return 'при доле 50\\% в ' + value + ' раза'
+    if key == 'payback s50, overflow to median, whole':
+        return ('Мак ' + value + '. Против' if site == P_BUY else 'машина ' + value + '.')
+    if key == 'GLM full load, below own cluster':
+        return ('при полной загрузке в ' + value + ' и' if site == C08
+                else 'в ' + value + ' раза дешевле своего кластера.')
+    return value
+
+
+def direction_wording(key, wording, expected):
+    if key == '1M: four sessions a day below the API':
+        return expected['GLM four sessions, below API'] + ' ' + wording
+    return wording
+
+
 def check(texts, m=None):
     """Return (item, file) pairs for values, table rows and direction wording that the text does not carry, and the
     names of directions the engine rows no longer support, as (name, 'engine')."""
@@ -735,7 +770,7 @@ def check(texts, m=None):
     missing = []
     for k, sites in SITES.items():
         for site in sites:
-            if norm(expected[k]) not in norm(scope(texts, site)):
+            if norm(value_at(k, site, expected)) not in norm(scope(texts, site)):
                 missing.append((k, site[0]))
     for kind, rws in (('client table row', econ_rows(m['s20'], m['s50'], m['b50'])),
                       ('closed-perimeter table row', perimeter_rows(m['design'], m['cons']))):
@@ -747,7 +782,7 @@ def check(texts, m=None):
         if not holds[k]:
             missing.append((k, 'engine'))
         for site, wording in sites:
-            if norm(wording) not in norm(scope(texts, site)):
+            if norm(direction_wording(k, wording, expected)) not in norm(scope(texts, site)):
                 missing.append((f'direction wording: {k}', site[0]))
     return missing + guard(texts, m, expected)
 
@@ -766,24 +801,40 @@ CORE_FORMS = {
     'restore, traffic': ('18 центов',),
     'GLM growth of the session cost': ('в 21 раз',),
     'GLM Studio capacity': ('семь сессий',),
-    'GLM four sessions, below own cluster': ('в 1.4 раза',),
-    'GLM four sessions, hybrid': ('в 1.4 раза',),
-    'upper bound, s20 against cheapest': ('в 1.5 раза',),
+    'GLM four sessions, below own cluster': (),
+    'GLM four sessions, hybrid': (),
+    'upper bound, s20 against cheapest': (),
 }
 # Occurrences of a checked figure's printed form that publish a different quantity, each with its reason. An entry is
 # (file, form, a substring of the source line that holds it, reason); an entry that matches nothing is reported.
 ALLOW = (
-    ('05-clients.tex', '25.9', '& 25.9 &', 'tab:clients: generation rate of the M5 Ultra in tokens per second'),
-    ('07-economics.tex', '\\$34', '\\$34 (2)', 'tab:rentbuy: buying at 50% residual for 50 people, 10 h a day'),
-    ('07-economics.tex', '\\$59', '\\$59 (1)', 'tab:rentbuy: buying at 80% residual for 10 people, 24 h'),
+    ('04-channel.tex', '\\$150', '\\$150 против', 'R15 egress at 90 USD/TB; separately snapshot-bound by offload traffic guard'),
+    ('07-economics.tex', '28.2', 'бюджет среднего prefill равен 28.2', 'shared snapshot mean-latency budget; unrelated to28.2-hour refill'),
+    ('04-channel.tex', '25.9', 'Состояние в 32 битах: доля вызовов', 'R14 offload share at100Mbit/s; unrelated to25.9-hour refill'),
+    ('05-clients.tex', '36.6', '& 36.6 &', 'tab:clients: generation rate of the M5 Ultra in tokens per second'),
+    ('07-economics.tex', '\\$48', '50 человек, 10 ч в день &', 'tab:rentbuy: buying at 50% residual for 50 people, 10 h a day'),
+    ('07-economics.tex', '\\$59', '10 человек, 24 ч &', 'tab:rentbuy: buying at 80% residual for 10 people, 24 h'),
+    ('07-economics.tex', '\\$35', '50 человек, 10 ч в день &', 'tab:rentbuy: buying at 80% residual for 50 people, 10 h a day'),
+    ('07-economics.tex', '\\$38', '50 человек, 24 ч &', 'tab:rentbuy: buying at 50% residual for 50 people, 24 h'),
+    ('07-economics.tex', '\\$29', '50 человек, 24 ч &', 'tab:rentbuy: buying at 80% residual for 50 people, 24 h'),
+    ('07-economics.tex', '\\$35', 'остаточной стоимости 80\\% (\\$35)', 'rent/buy prose, 50 people, 80% residual'),
+    ('07-economics.tex', '4.8--5.1', 'Не выше на стандартном усилии рассуждения &', 'historical owner API bill in thousands of USD'),
+    ('06-server.tex', '15--30', 'генерация была на 15--30', 'earlier-run measured decode slowdown, not GLM cost'),
 )
 
 
 def guard_forms(k, v):
     """Distinctive printed forms of a value: ranges, dollar amounts, decimals with three or more digits, word forms."""
     forms = set(CORE_FORMS.get(k, ()))
+    if k in ('GLM four sessions, hybrid', 'GLM four sessions, below own cluster', 'upper bound, s20 against cheapest'):
+        match = re.search(r'в [0-9.]+ раза', v)
+        if match:
+            forms.add(match.group())
+    if k == 'GLM full load, below own cluster':
+        forms.add('в ' + v + ' раза')
     for m in re.finditer(r'\\\$\d[\d\\,.]*\d(?:--\d[\d.]*\d)?|\\\$\d|\d+(?:\.\d+)?--\d+(?:\.\d+)?|\d+\.\d{2,}|\d{2,}\.\d', v):
         forms.add(m.group(0))
+    forms.update(re.findall(r'\d+(?:\.\d+)?--\d+(?:\.\d+)?', v))
     return forms
 
 
@@ -814,7 +865,7 @@ def guard(texts, m, expected):
                     spans.setdefault((site[0], form), []).append(s)
     table_rows = econ_rows(m['s20'], m['s50'], m['b50']) + perimeter_rows(m['design'], m['cons'])
     used, found = set(), []
-    forms = sorted({f for k in SITES for f in guard_forms(k, expected[k])})
+    forms = sorted({f for k in SITES for f in guard_forms(k, expected[k])} | {a[1] for a in ALLOW})
     for name, text in texts.items():
         for form in forms:
             for pos in occurrences(text, form):
@@ -867,24 +918,63 @@ def plant(texts, site, old, new):
 
 
 def self_test(texts):
+    from unittest.mock import patch
     m = model()
     expected = values(m)
     controls, failed = 0, []
+    # Duplicate scoped rows (even equal prices) and non-single-node fleets must
+    # reject by the intended assertion; the untouched rows remain valid.
+    original_rows = rows
+    clean = rows('perimeter_cost.csv')
+    for team in (5, 20):
+        row = next(r for r in clean if r['route'] == 'all server' and r['server'] == B300 and
+                   r['profile'] == 'light' and r['team'] == str(team))
+        for data, reason in ((clean + [dict(row)], 'exactly one row'),
+                             ([dict(r, units='2') if r is row else r for r in clean], 'one node')):
+            message = f'B300 light profile: {reason} for team {team}'
+            with patch.dict(globals(), rows=lambda name: data if name == 'perimeter_cost.csv' else original_rows(name)):
+                try:
+                    own_servers()
+                except AssertionError as error:
+                    assert str(error) == message, (message, str(error))
+                else:
+                    raise AssertionError('plant survived: ' + message)
+            assert own_servers()[1][team] == float(row['person_month'])
+            print(f'negative engine control: {message}: rejected; clean control: pass')
     # One negative control per value site: a stale value planted at that site alone must be reported there.
     for k, sites in SITES.items():
         for site in sites:
-            got = check(plant(texts, site, expected[k], perturb(expected[k])), m)
+            value = value_at(k, site, expected)
+            got = check(plant(texts, site, value, perturb(value)), m)
             if (k, site[0]) not in got:
                 failed.append(('stale value not reported', k, site))
+            print(f'negative value control: {k} at {site}: rejected by {k}')
             controls += 1
     # One negative control per direction site: the flipped wording must be reported there.
     for k, sites in DIRECTION_SITES.items():
         for site, wording in sites:
+            wording = direction_wording(k, wording, expected)
             got = check(plant(texts, site, wording, flip(wording)), m)
             if (f'direction wording: {k}', site[0]) not in got:
                 failed.append(('flipped wording not reported', k, site))
+            print(f'negative direction control: {k} at {site}: rejected by direction wording: {k}')
             controls += 1
     assert not failed, failed
+    for key, site, old, new in (
+        ('storage cheaper than prefill (M5 Max, 20%)', P_HOST,
+         'в месяц, меньше, чем сам prefill', 'в месяц, больше, чем сам prefill'),
+        ('1M: four sessions a day below the API', C08,
+         expected['GLM four sessions, below API'] + ' раза дешевле API', 'почти в четыре раза дешевле API'),
+    ):
+        bad = plant(texts, site, old, new)
+        assert bad != texts
+        # The obsolete phrase must lose its named numeric/direction check.
+        name = ('direction wording: ' + key if site == P_HOST else 'GLM four sessions, below API')
+        assert (name, site[0]) in check(bad, m), (key, 'old direction survived')
+        print(f'old-claim regression: {key}: rejected by {name}')
+    storage = m['s20'][CLIENT]
+    bad_storage = dict(m['s20'], **{CLIENT: dict(storage, hosting_month=storage['compute_month'] + 1)})
+    assert ('storage cheaper than prefill (M5 Max, 20%)', 'engine') in check(texts, dict(m, s20=bad_storage))
     # Named regression controls for review r5b: N3 (restore minutes in the conclusion) and D5 (refill longer than a day).
     n3 = check(plant(texts, K14R, 'примерно за пять минут и дольше', 'примерно за две минуты и дольше'), m)
     assert ('restore, minutes (conclusion)', '14-conclusion.tex') in n3, 'r5b N3 not reported'
@@ -899,30 +989,40 @@ def self_test(texts):
     # whose occurrence is gone.
     outlook = texts['13-outlook.tex'] + '\nСервер возвращает сессию за пять минут.\n'
     assert ('unregistered occurrence of пять минут', '13-outlook.tex') in check(dict(texts, **{'13-outlook.tex': outlook}), m)
-    related = texts['12-related.tex'] + '\nСессия гибрида стоит \\$4.2--4.6.\n'
-    assert ('unregistered occurrence of \\$4.2--4.6', '12-related.tex') in check(dict(texts, **{'12-related.tex': related}), m)
-    economics = texts['07-economics.tex'].replace('\\$59 (1)', '\\$58 (1)', 1)
-    assert any(k.startswith('unused ALLOW entry \\$59') for k, _ in check(dict(texts, **{'07-economics.tex': economics}), m))
+    form = next(f for f in guard_forms('GLM two sessions, hybrid', expected['GLM two sessions, hybrid']) if f.startswith('\\$'))
+    related = texts['12-related.tex'] + '\nСессия гибрида стоит ' + form + '.\n'
+    assert ('unregistered occurrence of ' + form, '12-related.tex') in check(dict(texts, **{'12-related.tex': related}), m)
+    economics = texts['07-economics.tex'].replace('\\$38 (2)', '\\$39 (2)', 1)
+    assert any(k.startswith('unused ALLOW entry \\$38') for k, _ in check(dict(texts, **{'07-economics.tex': economics}), m))
+    # Every original collision site remains mandatory even when its new value
+    # no longer coincides with a checked formula. No ALLOW entry can go unused.
+    for file, form, marker, reason in ALLOW:
+        lines = texts[file].splitlines(keepends=True)
+        changed = ''.join(line.replace(form, perturb(form)) if marker in line and form in line else line
+                          for line in lines)
+        bad = dict(texts, **{file: changed})
+        assert bad != texts
+        assert any(k.startswith('unused ALLOW entry ' + form) for k, _ in check(bad, m)), reason
+        print(f'negative collision control: {reason}: rejected by unused ALLOW entry {form}')
     # Table rows: a stale cell in each table must be reported.
     row = econ_rows(m['s20'], m['s50'], m['b50'])[2]
     assert any(k.startswith('client table row') for k, _ in check(dict(texts, **{'07-economics.tex': texts[
-        '07-economics.tex'].replace(row, row.replace('883', '637'), 1)}), m)), 'stale client row'
+        '07-economics.tex'].replace(row, perturb(row), 1)}), m)), 'stale client row'
     row = perimeter_rows(m['design'], m['cons'])[1]
     assert any(k.startswith('closed-perimeter table row') for k, _ in check(dict(texts, **{'07-economics.tex': texts[
-        '07-economics.tex'].replace(row, row.replace('\\$34', '\\$67'), 1)}), m)), 'stale perimeter row'
+        '07-economics.tex'].replace(row, perturb(row), 1)}), m)), 'stale perimeter row'
     # Engine directions: rows changed so that a stated direction no longer holds must be reported.
     def flipped(**changes):
         return check(texts, dict(m, **changes))
     d = m['design']
     assert ('closed: light, hybrid cheaper at 50 and 5000', 'engine') in flipped(
         design={**d, ('light', 50, 'hybrid'): d[('light', 50, 'own')] + 1})
-    assert ('closed: light at 500, own cluster cheaper under the rule', 'engine') in flipped(rule=(500, 50)), \
-        'RTX PRO allowed at 500 not reported'
     dopt = dict(m['dopt'])
-    key = ('light', 500, 'hybrid', '2x RTX PRO 6000 Server; own perimeter rack')
-    dopt[key] = dict(dopt[key], eligible=True)
-    assert ('closed: light at 500, own cluster cheaper under the rule', 'engine') in flipped(dopt=dopt), \
-        'eligibility against the rule not reported'
+    for key, option in list(dopt.items()):
+        if key[1] == 500 and 'RTX PRO 6000' in key[3]:
+            dopt[key] = dict(option, eligible=False)
+    assert ('closed: light at 500, hybrid cheaper with uncapped hardware', 'engine') in flipped(dopt=dopt), \
+        'artificial large-team RTX exclusion not reported'
     s50 = m['s50']
     ultra = dict(s50, **{ULTRA[1]: dict(s50[ULTRA[1]], hybrid_cheapest=s50[ULTRA[1]]['api_cheapest'] - 1)})
     assert ('cheapest API cheaper than the hybrid on every client, both shares and policies', 'engine') in flipped(s50=ultra)
@@ -943,6 +1043,7 @@ def self_test(texts):
     assert months(12) == 'месяцев' and months(24) == 'месяца' and months(21) == 'месяц' and months(35) == 'месяцев'
     # Positive control: the current text and the engine rows pass.
     assert not check(texts, m), check(texts, m)
+    print('positive control: all values, directions, occurrences and table rows: pass')
     print(f'self-test ok: {controls} site controls, table and engine-direction controls passed')
     return 0
 

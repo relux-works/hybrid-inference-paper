@@ -1,0 +1,21 @@
+% Claim: pgfplots parses all four R8 charts at their default row counts and plots the people/GPU curve.
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\pgfplotstableread[col sep=comma]{../out/paper/reasoning_on_top_sensitivity.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=16\relax\else\errmessage{Wrong R8 sensitivity row count}\fi
+\pgfplotstableread[col sep=comma]{../out/paper/people_per_gpu.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=6\relax\else\errmessage{Wrong R8 GPU row count}\fi
+\pgfplotstableread[col sep=comma]{../out/paper/transcript_example.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=6\relax\else\errmessage{Wrong R8 transcript row count}\fi
+\pgfplotstableread[col sep=comma]{../out/paper/flop_per_byte.csv}\paperdata
+\pgfplotstablegetrowsof{\paperdata}
+\ifnum\pgfplotsretval=432\relax\else\errmessage{Wrong R8 intensity row count}\fi
+\begin{tikzpicture}\begin{axis}[xlabel=Open model share,ylabel=Heavy users per GPU]
+\addplot table[x=share,y=people_with_hosting,col sep=comma,row sep=newline]{../out/paper/people_per_gpu.csv};
+\end{axis}\end{tikzpicture}
+\end{document}
