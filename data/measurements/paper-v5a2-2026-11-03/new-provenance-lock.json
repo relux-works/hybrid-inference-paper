@@ -1,0 +1,183 @@
+{
+  "documents": [
+    {
+      "id": "pg1342",
+      "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+      "size": 772386,
+      "token_sha256": "ea6958537306e31855a492baf143ceb0a1b642633bccdb3062d0e3a9d01e718d",
+      "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt"
+    },
+    {
+      "id": "pg2701",
+      "sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+      "size": 1276315,
+      "token_sha256": "c3c3ad654da0ad7cd35c2ec51ec2af88fe2acb19c8d4257ac52bb83475ba997d",
+      "url": "https://www.gutenberg.org/cache/epub/2701/pg2701.txt"
+    },
+    {
+      "id": "pg2600",
+      "sha256": "2d5bb2ad5f422765e714617e21fa31bbaf8958aa79682c86fca6660fcc5d1b2b",
+      "size": 3359610,
+      "token_sha256": "5d05fb0c9e70ce754e503f9ba4dcc5285a5acafe363e686fb3d7b0173a914cff",
+      "url": "https://www.gutenberg.org/cache/epub/2600/pg2600.txt"
+    },
+    {
+      "id": "pg1400",
+      "sha256": "9a637118af8e953e9764ec603d9b0a032883384d465acac2e27966a80cf1c6f8",
+      "size": 1058204,
+      "token_sha256": "a0604561e95284c80e2f335bb3d4a80055ece2979bf3f69337370d53c03177a6",
+      "url": "https://www.gutenberg.org/cache/epub/1400/pg1400.txt"
+    },
+    {
+      "id": "pg1260",
+      "sha256": "13414dee2951c3ee731d76d2ffd822016b2479c892162760c5d0eb2aa5fa7631",
+      "size": 1084803,
+      "token_sha256": "ba15d5d0b497db96da147926d203479bd5d68eb02d5fb2f1ca8ef8ac8050b28a",
+      "url": "https://www.gutenberg.org/cache/epub/1260/pg1260.txt"
+    },
+    {
+      "id": "pg766",
+      "sha256": "51650d348820a64ca4d4233da035f804819d2231801b59373db4e1279a1985e0",
+      "size": 2033321,
+      "token_sha256": "24e5f11a6a141da23789faeeeb5ee8090d0f22f8bf3719b9e4942d97f61fd4c4",
+      "url": "https://www.gutenberg.org/cache/epub/766/pg766.txt"
+    },
+    {
+      "id": "pg768",
+      "sha256": "e533fe750589f0421d5d744576315f5c2b9b0d69e981179ea0551bbf134c5e02",
+      "size": 693819,
+      "token_sha256": "6148ab241879ce385c33184d00442cbad57067d71a4565cdc2b2f0ba7565b230",
+      "url": "https://www.gutenberg.org/cache/epub/768/pg768.txt"
+    },
+    {
+      "id": "pg730",
+      "sha256": "6c37f41a8a253e95eba0f990f61cf60ac2e6d625c306c13027672d67885a6b6a",
+      "size": 955858,
+      "token_sha256": "8d06b9d337a0ed152645753e13b0ae99e1f7038c00a2379ee57732d1d38110c5",
+      "url": "https://www.gutenberg.org/cache/epub/730/pg730.txt"
+    },
+    {
+      "id": "pg98",
+      "sha256": "d54c2b80d40a40b982cd88852c6180bb944d95acdb028af3d0e01a1750681784",
+      "size": 807197,
+      "token_sha256": "f9bc615943c4a40e84017ceb6de66f9edb0d87e7310c109843ceb7aa79334a97",
+      "url": "https://www.gutenberg.org/cache/epub/98/pg98.txt"
+    },
+    {
+      "id": "pg345",
+      "sha256": "96cd16eacdbfebae8fdda5591f66e0cc8ee76be18e0cd1aca02bc00615782d28",
+      "size": 890348,
+      "token_sha256": "3052d0bb8aa58b09eaa2076c7b32541859bbb3c179bdfa6ba828969a1724399f",
+      "url": "https://www.gutenberg.org/cache/epub/345/pg345.txt"
+    },
+    {
+      "id": "pg84",
+      "sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+      "size": 448885,
+      "token_sha256": "5ff5dd1eb6b37b059795d6046ca8153627198bb3ca3917cc25252c2dbcc38306",
+      "url": "https://www.gutenberg.org/cache/epub/84/pg84.txt"
+    },
+    {
+      "id": "pg135",
+      "sha256": "6cf3b9d6fc5e6f733737425267d3af296d7f99f9b9fd1d255a3ab7689a6346ab",
+      "size": 3369207,
+      "token_sha256": "0de279bd0d7307ff09972c1ececd1929061e62e3be1e0da55c267da466a6eee4",
+      "url": "https://www.gutenberg.org/cache/epub/135/pg135.txt"
+    },
+    {
+      "id": "pg1184",
+      "sha256": "99245b8f3f6b637a3670d37305bb1ba52003f05797b6638571562999fd623f9c",
+      "size": 2785469,
+      "token_sha256": "be596caeebd77ab6b2b117002a3f582006f2f3e5cb87351e097a6f5a59f109b6",
+      "url": "https://www.gutenberg.org/cache/epub/1184/pg1184.txt"
+    },
+    {
+      "id": "pg215",
+      "sha256": "30f569c5671bba7bbc4a92ab6d8ee01a0d3be00f994819c77da62c28041eb8a2",
+      "size": 199757,
+      "token_sha256": "d48c7e5c81d0beb80838558a62f34489cc119990e3acd7ee3e70989ead938904",
+      "url": "https://www.gutenberg.org/cache/epub/215/pg215.txt"
+    },
+    {
+      "id": "pg28054",
+      "sha256": "2e75c187cb750df3f7c910fa90970b264b9a4fee212be2a73c6bb507d9ad22fe",
+      "size": 2039141,
+      "token_sha256": "2174fbf6db25776b6205bd5e9579dff9087a4aed8abfeb3497f29f249bcaedd3",
+      "url": "https://www.gutenberg.org/cache/epub/28054/pg28054.txt"
+    },
+    {
+      "id": "pg1399",
+      "sha256": "a3e29e08c15c63bb22069f4256316c2ebebd422ecb5c33462ddc00ae00b27571",
+      "size": 2067952,
+      "token_sha256": "5b7203887dc338f0551192f5fee0e36bdc110035171d4a76167d36dc4647dfdb",
+      "url": "https://www.gutenberg.org/cache/epub/1399/pg1399.txt"
+    },
+    {
+      "id": "pg16328",
+      "sha256": "8909085dc48daf123d29c40ecbb3837b16ba7f96bf0cbb9fe72de133a2d35348",
+      "size": 300462,
+      "token_sha256": "87568abf056005f208cb2b9bd47f092c3d15b75b928936ff944020fbf1a0e8f7",
+      "url": "https://www.gutenberg.org/cache/epub/16328/pg16328.txt"
+    },
+    {
+      "id": "pg36",
+      "sha256": "8417469e3ab664749f7b36ebb85799075818207b0380b54c27d07d592a44117d",
+      "size": 366624,
+      "token_sha256": "39a7862ecdc844bd4cedeef86e4764ab5a9bdca49fed66e3d2a723fe779b86dd",
+      "url": "https://www.gutenberg.org/cache/epub/36/pg36.txt"
+    },
+    {
+      "id": "pg74",
+      "sha256": "74d77384b123a6360db9ab58463cff8b38df8525fbdc6000c81ee388e1f3cf10",
+      "size": 434357,
+      "token_sha256": "f20b7e0595ec321ad764dc6b090944e7433ef0262d91d2341d019be6dee08682",
+      "url": "https://www.gutenberg.org/cache/epub/74/pg74.txt"
+    },
+    {
+      "id": "pg76",
+      "sha256": "d617a37aa7ae1e1a93dcde2634db2bccb86824e31e29a55230bdbf77d6872d59",
+      "size": 622460,
+      "token_sha256": "7078596a115c252ab16e9aa725d7e53bcfb101b729feaa4ae8828076ec4a43a9",
+      "url": "https://www.gutenberg.org/cache/epub/76/pg76.txt"
+    }
+  ],
+  "historical_report_sha256": "5dbae885ae6ee1d0941ce42155743db10669664d6443431c4e7e47b44741da53",
+  "models": {
+    "bf16": {
+      "files": [
+        {
+          "name": "Qwen3.8-27B-BF16.gguf",
+          "sha256": "5a3eedc837bcbd1365cdbf5b71e698df3122e76586ba872f07ce3ed4a9bfa97e",
+          "size": 53808281952
+        }
+      ],
+      "primary": "Qwen3.8-27B-BF16.gguf",
+      "repo": "ggml-org/Qwen3.8-27B-GGUF",
+      "revision": "0669b98607d47046c7c2b3f801011d54a08cfccf"
+    },
+    "q4": {
+      "files": [
+        {
+          "name": "Qwen3.8-27B-Q4_K_M.gguf",
+          "sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+          "size": 18973870432
+        }
+      ],
+      "primary": "Qwen3.8-27B-Q4_K_M.gguf",
+      "repo": "ggml-org/Qwen3.8-27B-GGUF",
+      "revision": "0669b98607d47046c7c2b3f801011d54a08cfccf"
+    }
+  },
+  "provenance": {
+    "kind": "newly-pinned-study",
+    "source": "Fresh pinned-model tokenization of Gutenberg bytes; not recovered stage-2 inputs."
+  },
+  "settings": {
+    "d": 20,
+    "m": 2048,
+    "n": 32768,
+    "score_batch": 32,
+    "seed": 42
+  },
+  "version": 1
+}

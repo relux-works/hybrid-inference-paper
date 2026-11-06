@@ -1,0 +1,122 @@
+[
+  {
+    "name": "R24 cadence cohorts and thin minimum",
+    "file": "07-economics.tex",
+    "marker": "\\textbf{Измеренные точки и ритм",
+    "phrase": "\\textbf{Измеренные точки и ритм вызовов.} v1 чередует глубины с долгими паузами; основное расписание дополнения использует короткие промежутки, включая помеченные возобновлённые ячейки. Наборы Qwen v1, GLM v1 и GLM с короткими промежутками содержат 11/15, 15/33 и 10/33 оценимых/допущенных записей. У Qwen v1 измеренный минимум Ionstream 3.604 опирается на одно тёплое наблюдение и остаётся описательным; медиана DeepInfra равна 12.550. У GLM v1 минимум OpenInference 3.008, медиана Phala 7.830; при коротких промежутках минимум GMICloud 2.021, медиана CoreWeave 4.539. GLM здесь служит ценовым ориентиром API, измерение гибридного исполнения GLM не заявляется."
+  },
+  {
+    "name": "R24 bought measured median crossing",
+    "file": "07-economics.tex",
+    "marker": "\\textbf{Пересечения при измеренном",
+    "phrase": "\\textbf{Пересечения при измеренном кэше v1 с долгими паузами.} На уже имеющемся M5 Max 64~ГБ, выделенном офисном PRO 6000 с vLLM FP8 и предполагаемым каналом 125~МБ/с, RTT 1~мс, bf16 и доле открытой модели 20\\% гибрид дешевле медианного Qwen API при тяжёлой нагрузке с 5 человек; контроль снимка при условных 98.1\\% давал 45. Для измеренного кэша Qwen v1 с долгими паузами при лёгкой и средней нагрузке пересечений с медианой до 500 человек нет; с самым дешёвым оценимым API этой измеренной точки пересечений нет ни при одной нагрузке. У команды 50 при тяжёлой нагрузке отношение цены медианного API к гибриду равно 2.326, занятость выделенного сервера 45.17\\% рабочего и 10.40\\% календарного времени."
+  },
+  {
+    "name": "R24 rented and local-only Claude",
+    "file": "07-economics.tex",
+    "marker": "При измеренном кэше Qwen v1 с долгими паузами и тяжёлой нагрузке арендованный",
+    "phrase": "При измеренном кэше Qwen v1 с долгими паузами и тяжёлой нагрузке арендованный PRO 6000, канал 112.5~МБ/с и RTT 400~мс, пересекает медиану с 443 человек в объединённом профиле и с 60 в профиле Claude. При измеренном кэше Qwen v1 с долгими паузами купленный офисный сервер в профиле Claude пересекает медиану с 5 человек, контроль снимка при условных 98.1\\% давал 30. Профиль Claude не выполняет оффлоад, занятость сервера 0.00\\%; его пересечения описывают локальную работу. Новая точка меняет одновременно кэш, доступность, тарифы и оценимый набор; разность пересечений не выделяет причинный эффект одного кэша. Для Qwen с короткими промежутками пересечение не определено: допущенная ценовая точка отсутствует."
+  },
+  {
+    "name": "R24 attempted admission versus snapshot fallback",
+    "file": "07-economics.tex",
+    "marker": "Текущее измеренное окно применяется",
+    "phrase": "Текущее измеренное окно применяется к опробованным поставщикам: доступность ниже 95\\% исключает запись. Для поставщиков без попыток сохранён явно обозначенный суточный снимок; отсутствующая доступность непроверена. Старое исследовательское резюме GLM не сохранило деклараций кэша и доступности, его тарифы не служат заменой измерений."
+  },
+  {
+    "name": "tab:r24-api-points row11",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "Qwen, v1 & 0\\% & 5.145 & 8.681 & 15/15 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row12",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "Qwen, v1 & 98.1\\% & 1.213 & 5.917 & 15/15 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row13",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "Qwen, v1 & измеренный & 3.604 & 12.550 & 11/15 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row14",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "Qwen, короткий & 0\\% & 5.505 & 8.681 & 15/15 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row15",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "Qwen, короткий & 98.1\\% & 1.213 & 4.805 & 15/15 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row16",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "Qwen, короткий & измеренный & неизвестно & неизвестно & 0/15 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row17",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "GLM, v1 & 0\\% & 4.249 & 19.005 & 15/33 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row18",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "GLM, v1 & 98.1\\% & 2.532 & 4.291 & 15/33 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row19",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "GLM, v1 & измеренный & 3.008 & 7.830 & 15/33 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row20",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "GLM, короткий & 0\\% & 3.837 & 14.254 & 10/33 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row21",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "GLM, короткий & 98.1\\% & 2.146 & 3.219 & 10/33 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points row22",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "GLM, короткий & измеренный & 2.021 & 4.539 & 10/33 \\\\"
+  },
+  {
+    "name": "tab:r24-api-points caption",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:r24-api-points}",
+    "phrase": "\\caption{Три точки кэша по каждому расписанию, доллары за тысячу одинаковых форм вызовов статьи. 0\\% и 98.1\\% являются сценариями; измеренные доли перенесены между глубинами расчётно. Минимум и верхняя срединная запись относятся к оценимой части набора. Qwen с короткими промежутками не имеет допущенной измеренной точки.}"
+  },
+  {
+    "name": "R24 excluded near-ai/fp8",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "GLM & near-ai/fp8 & 0.636 \\\\"
+  },
+  {
+    "name": "R24 excluded nextbit/fp4",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "GLM & nextbit/fp4 & 0.773 \\\\"
+  },
+  {
+    "name": "R24 excluded sail-research/us",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "GLM & sail-research/us & 0.773 \\\\"
+  }
+]

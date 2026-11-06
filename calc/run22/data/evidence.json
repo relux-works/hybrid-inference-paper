@@ -1,0 +1,57 @@
+{
+  "qwen": {
+    "archive": "qwen27b-mac-bench-results-20261103T171250Z.tar.gz",
+    "archive_sha256": "1d0d04a372d56ef553565292d12ae10dd58357fad71d53f9f7ccd28e0d44704c",
+    "files": {
+      "qwen/MANIFEST.json": "cb0303ea4df7b2227c8f754fd8f458c3b83e91af81bcd6e17c2639d1014b0528",
+      "qwen/OPERATOR-READINESS.json": "1f0fb556d787c5c7736b42bf682b15d3cfbcf585aa090223be584aea2ec139c9",
+      "qwen/agents-loop-apple-m5-max-64g-q27b-agents128k-20261103T203928.jsonl": "3e14a2b645b3f18a53abd2a51da9c5bc8240dc2ad9317d34eeea1b31abb2f5e0",
+      "qwen/hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261103T190306.jsonl": "bbab8c3108f92da9f1d50c1a3d09207a93da5584750a416319b75a852ea72d1a",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-maxctx260k-20261103T201655-1793722615556975000.jsonl": "3b033ff0d0ca2428acb98bc523e1fa0176c6951f1c5015509e5feb07aa4ad1c9",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale131072-fill-20261103T195521-1793721321944572000.jsonl": "48dc76c5124b87adca5e30ace6e44edfb75635ada0453eb524d720dd4e66fa97",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale131072-largest-np4-20261103T200757-1793722077583167000.jsonl": "a78697c3b3242bd9616deb48de2937e626beca24e1a857560c0e93ca8100863a",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale131072-np4-control-np4-20261103T201538-1793722538210614000.jsonl": "44535a62bf59b295026edf72e5d552bacbad5dae51d7a80da7230b3660775936",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale32768-fill-20261103T193224-1793719944465975000.jsonl": "f0154dc87ec31b9a05036b5c5b54e694d1e47923f4cdbeb046e01b4d461ae005",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale32768-largest-np16-20261103T193840-1793720320256759000.jsonl": "e8353b1e024611efad44ccce0619aee4c567f1e75b43846909be0688a13b2743",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale65536-fill-20261103T194412-1793720652163544000.jsonl": "039aaeedc10b912b7fc8146d5f68d4078a90352e6c92c86ff83305b4309d58c9",
+      "qwen/parallel-depth-apple-m5-max-64g-q27b-scale65536-largest-np8-20261103T195211-1793721131067040000.jsonl": "5e01e97d2fe1b1d82b53e0c30f1084c3af3a4b8786444ef6d10a6fa5347f49e8"
+    }
+  },
+  "glimmer": {
+    "archive": "glimmer30-mac-bench-results-20261103T183326Z.tar.gz",
+    "archive_sha256": "89211edd6348d026724769bc0de46933f582856b6c36bf33a04d4454b2709f9f",
+    "files": {
+      "glimmer/MANIFEST.json": "7d9986825f8627671bce97d199e2154f7b650e233bc5d336989d9f93ca47b696",
+      "glimmer/OPERATOR-READINESS.json": "bcb01462c473887dcd76636ce0f0e7f19610e59aa3bb6e887b53d1470b709dd1",
+      "glimmer/agents-loop-apple-m5-max-64g-glimmer30-agents64k-20261103T220442.jsonl": "cbbcf5eea70c20f5ebb8f290af8317c6246b3b4ef0470f768d2be256de267a69",
+      "glimmer/hybrid-bench-apple-m5-max-64g-glimmer30-q4km-q8kv-20261103T211343.jsonl": "26f56225fd70c03517c0fea34517275ce1aaf3633e991fe95df8cd3e8af1f5bf",
+      "glimmer/parallel-depth-apple-m5-max-64g-glimmer30-maxctx129k-20261103T215743-1793728663001892000.jsonl": "80be63abe84fb9694fd546cfbe9e20d72855a41f12ac1ce4822904c2cfdcbc07",
+      "glimmer/parallel-depth-apple-m5-max-64g-glimmer30-scale32768-fill-20261103T212505-1793726705739474000.jsonl": "b46df9e9ebb6d5286dc492b301e513e3e2f0d4b68528be49adc1e4ae7bf57a0d",
+      "glimmer/parallel-depth-apple-m5-max-64g-glimmer30-scale32768-largest-np32-20261103T213114-1793727074860383000.jsonl": "f71bf4f7569d583432fd2c83e4df32122581ac55e39b54731448bbe89a1a85e8",
+      "glimmer/parallel-depth-apple-m5-max-64g-glimmer30-scale65536-fill-20261103T213930-1793727570435471000.jsonl": "65ae50719b80ff300561cc2565ec4c9ac85b950ebd2436249a3d152c681c4cea",
+      "glimmer/parallel-depth-apple-m5-max-64g-glimmer30-scale65536-largest-np32-20261103T214658-1793728018854113000.jsonl": "998041800975160b35b4c7426c6660f9fdbab638ef7a1ccb9a0d03e4e6baf356"
+    }
+  },
+  "facts": {
+    "path": "FACTS-excerpts.md",
+    "sha256": "240f2ebf5672f94e09d7b4989b2d8afb5aa818211edbfdca063e7842b9020c43",
+    "original_path": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+    "original_sha256": "e3736bcf0f5eddf79de6d850008a7c8067d212a805e3fc2bcf61f69268d43cfd"
+  },
+  "bf16_ruler": {
+    "path": "bf16-RULER-FACTS.md",
+    "sha256": "8a6b5133fd80b8cc43314235fff3c862df44636662376bd39c12e1bc177204c4",
+    "facts_sha256": "4497164ef0835d6a36d18717940f4dd609d81b69e24fef212d35d44d9e715485",
+    "analyses": {
+      "bf16-8192-analysis.json": "8a8965bd4f55133bdd008d69c732510de8de222247b7202286de601eec05af00",
+      "bf16-32768-analysis.json": "aa96f2b97d404ec6b4fa03620b0257efd6758ddec98a91339fe48aa0b241d866"
+    }
+  },
+  "pro6000_decode": {
+    "path": "pro6000-decode-16384.json",
+    "sha256": "444525ab6af6f49e4efadeb65a775acd0708d0f84a3e00cdf16a6d3e54caf596",
+    "facts_path": "PRO6000-DECODE-FACTS.md",
+    "facts_sha256": "340678a243b818f51e79ab14e48bbb4b5e74a41ec4a9a30c31576c9eeda32450",
+    "review": "Muse r7ar ACCEPT, kit1.6.9 924a72af;16k only; deeper rerun1.6.11 pending"
+  }
+}

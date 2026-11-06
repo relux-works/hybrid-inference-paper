@@ -1,0 +1,202 @@
+[
+  {
+    "file": "00-abstract.tex",
+    "body": "размеры",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "расчёт ожидается",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled depth/batch gain, not measured"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидаются",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "размеры",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "репетиция GPU и запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS5 plus owner r21e A1: bounded CUDA KL and completed bf16 RULER8k/32k close only those studies; GPU rehearsal and Mac quality/speed remain pending."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "06-server.tex",
+    "body": "ожидается",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled gain; measured batching pending"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "размеры",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "экономика гибрида по размеру команды, нагрузке и альтернативе ожидает принятого прогона движка 22.",
+    "source": "Owner r21e B7: one visible central economics notice; all26 raw R20 sites unchanged, accepted engine22 still pending."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "пересчитываются",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/paper_claims.csv; light/medium/heavy; unconditional_claim; no5090-server rows"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "измеренная доля попаданий OpenRouter и окончательный допуск поставщиков.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "доля",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "цена",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидается",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; server/profile/share/client/basis; cost columns after accepted merge"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидаются",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; each profile; reference=own_cluster; sustained finite scan"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидается",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/paper_claims.csv; PRO6000 only; compare own_cluster/API; full-workload alarm retained"
+  },
+  {
+    "file": "08-million.tex",
+    "body": "импорт, проверка логитов, генерация и добавочный prefill Mac на 524\\,288 и 1\\,040\\,000 токенах.",
+    "source": "FACTS section3 slot fill/download blocks plus owner r21e A2: useful Mac download complete; incident-lane import/logit gate/decode/delta prefill not measured."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "репетиция GPU и запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS5 plus owner r21e A1: bounded CUDA KL and completed bf16 RULER8k/32k close only those studies; GPU rehearsal and Mac quality/speed remain pending."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "ожидаются до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "размеры",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21d: keep legacy R20 body/export selector pending for accepted engine22; Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах и первичный анализ этих глубин до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS5 RULER entry15:40Z plus owner r21e C: bf168k/32k complete and Glimmer32k stop supersede those waits; Qwen64k/128k and primary analysis remain pending until data cut-off."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "полная параллельная кривая M3 при PRI~31 и нормальный приоритет Gemma требуют свободного Mac; Glimmer при PRI~31 измерен; обновление опор движка и многопоточный прогон 16b ожидаются. Пакетная генерация vLLM на PRO 6000 при 16 тысячах измерена; большие глубины и B300, Mac на миллионе, качества на глубине и проверка кэша OpenRouter выполняются по отдельной программе. Мост vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "FACTS5 plus accepted normal-priority Glimmer/M5 and owner r21e C: PRO6000 decode batching measured16k only; deeper PRO6000/B300, full M3/Gemma/16b, Mac1M follow-ups, depth quality, cache admission, bridge and Bonsai remain pending."
+  }
+]

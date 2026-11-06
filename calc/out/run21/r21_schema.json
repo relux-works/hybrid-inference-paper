@@ -1,0 +1,413 @@
+{
+  "api_admission": {
+    "columns": {
+      "admitted": "bool",
+      "availability_basis": "text",
+      "cache_basis": "text",
+      "cache_hit_fraction": "1",
+      "context_limit": "token",
+      "extension_basis": "text",
+      "mean_input_tokens": "token",
+      "mean_output_tokens": "token",
+      "model": "text",
+      "profile": "text",
+      "provider": "text",
+      "reasons": "text",
+      "role": "text",
+      "tag": "text",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "workload_scope": "text"
+    },
+    "csv_labels": {},
+    "name": "api_admission",
+    "rows": 123,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "decode_ceiling": {
+    "columns": {
+      "basis": "text",
+      "ceiling_over_measured": "1",
+      "ceiling_tok_s": "token/s",
+      "client": "text",
+      "depth": "token",
+      "measured_decode_tok_s": "token/s",
+      "measured_depth": "token",
+      "priority": "text"
+    },
+    "csv_labels": {},
+    "name": "decode_ceiling",
+    "rows": 1,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "decode_scaling": {
+    "columns": {
+      "aggregate_tok_s": "token/s",
+      "basis": "text",
+      "batch": "1",
+      "context_basis": "text",
+      "depth": "token",
+      "gain": "1",
+      "model": "text",
+      "requested_streams": "1",
+      "server": "text",
+      "session_bytes": "B",
+      "single_tok_s": "token/s"
+    },
+    "csv_labels": {},
+    "name": "decode_scaling",
+    "rows": 45,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "glm_decode_scaling": {
+    "columns": {
+      "aggregate_tok_s": "token/s",
+      "basis": "text",
+      "batch": "1",
+      "depth": "token",
+      "gain": "1",
+      "model": "text",
+      "replica_gpus": "1",
+      "requested_streams": "1",
+      "session_bytes": "B",
+      "single_tok_s": "token/s",
+      "weights_bytes": "B"
+    },
+    "csv_labels": {
+      "basis": {
+        "modelled expert union + full per-session KV/state; ideal two-GPU bandwidth sum; communication omitted; no GLM vLLM measurement": "modelled expert union + full per-session KV/state; ideal two-GPU bandwidth sum, communication omitted; no GLM vLLM measurement"
+      }
+    },
+    "name": "glm_decode_scaling",
+    "rows": 15,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "main_economics": {
+    "columns": {
+      "api_cheapest_person_month": "USD/person-month (open-model component)",
+      "api_median_person_month": "USD/person-month (open-model component)",
+      "basis": "text",
+      "billing": "text",
+      "boxes": "box",
+      "cheapest_over_hybrid": "1",
+      "client": "text",
+      "client_capacity_day": "call/person/day",
+      "client_energy_month": "USD/person-month (open-model component)",
+      "decode_overflow_gpu_s_day": "GPU s/person/day",
+      "device_month": "USD/person-month (open-model component)",
+      "front_month": "USD/person-month (open-model component)",
+      "load": "text",
+      "median_over_hybrid": "1",
+      "offload_share": "1",
+      "own_cluster_person_month": "USD/person-month (open-model component)",
+      "own_cluster_server": "text",
+      "pending_s_offload": "s",
+      "person_month": "USD/person-month (open-model component)",
+      "prefill_gpu_s_day": "GPU s/person/day",
+      "profile": "text",
+      "rate_basis": "text",
+      "served_day": "call/person/day",
+      "server": "text",
+      "server_decode_overflow_day": "call/person/day",
+      "server_person_month": "USD/person-month (open-model component)",
+      "share": "1",
+      "spill_share": "1",
+      "storage_person_month": "USD/person-month (open-model component)",
+      "team": "person",
+      "unit_month": "USD/node-month",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "workload_scope": "text"
+    },
+    "csv_labels": {
+      "workload_scope": {
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal"
+      }
+    },
+    "name": "main_economics",
+    "rows": 864,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "million_economics": {
+    "columns": {
+      "api_cheapest_person_month": "USD/person-month (open-model component)",
+      "api_median_person_month": "USD/person-month (open-model component)",
+      "basis": "text",
+      "batch": "1",
+      "batch_gain": "1",
+      "client_basis": "text",
+      "client_month": "USD/person-month (open-model component)",
+      "delta": "token",
+      "depth": "token",
+      "extension_basis": "text",
+      "hybrid_work_person_month": "USD/person-month (open-model component)",
+      "hybrid_work_usd_per_1000_calls": "USD/1000 conditional calls",
+      "link": "text",
+      "load": "text",
+      "model": "text",
+      "offload": "bool",
+      "output_tokens": "token",
+      "own_cluster_boxes": "box",
+      "own_cluster_person_month": "USD/person-month (open-model component)",
+      "own_decode_s_call": "s/call",
+      "own_spill_share": "1",
+      "own_total_streams": "1",
+      "prefill_s": "s",
+      "profile": "text",
+      "served_local_day": "call/person/day",
+      "server_decode_overflow_day": "call/person/day",
+      "team": "person",
+      "warm_rental_floor_node_month": "USD/node-month",
+      "wire_bytes": "B"
+    },
+    "csv_labels": {
+      "basis": {
+        "GLM B300 prefill carried from Qwen by architecture FLOP ratio; unmeasured; Studio1M in57min is estimate; cold average reused as delta sensitivity; resident shared-work allocation lower bound; dedicated calendar floor separate; no replica communication/persistence/startup guarantee; GLM import uses Mac Qwen proxy": "GLM B300 prefill carried from Qwen by architecture FLOP ratio; unmeasured; Studio1M in57min is estimate, cold average reused as delta sensitivity; resident shared-work allocation lower bound; dedicated calendar floor separate; no replica communication/persistence/startup guarantee; GLM import uses Mac Qwen proxy"
+      },
+      "client_basis": {
+        "already owned M3 Max;1.67tok/s measured at1.04M background priority; reused at1M": "already owned M3 Max;1.67tok/s measured at1.04M background priority, reused at1M",
+        "unmeasured M5 Ultra256GB:819.2GB/s*40%;181.4GB Q4 weights; $8000 new device estimate": "unmeasured M5 Ultra256GB:819.2GB/s*40%,181.4GB Q4 weights; $8000 new device estimate"
+      },
+      "extension_basis": {
+        "native1048576 NoPE; architecture estimate; no YaRN required": "native1048576 NoPE; architecture estimate, no YaRN required"
+      }
+    },
+    "name": "million_economics",
+    "rows": 30,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "million_link_thresholds": {
+    "columns": {
+      "bytes_s": "B/s",
+      "client": "text",
+      "delta": "token",
+      "depth": "token",
+      "extension_basis": "text",
+      "import_s": "s",
+      "link": "text",
+      "link_basis": "text",
+      "local_prefill_s": "s",
+      "offload": "bool",
+      "rate_basis": "text",
+      "remote_s": "s",
+      "server": "text",
+      "server_prefill_s": "s",
+      "threshold_MB_s": "MB/s (decimal)",
+      "transfer_s": "s",
+      "wire_bytes": "B"
+    },
+    "csv_labels": {},
+    "name": "million_link_thresholds",
+    "rows": 60,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "profile_model_check": {
+    "columns": {
+      "basis": "text",
+      "metric": "text",
+      "model_mean": "s for gap_seconds; token otherwise",
+      "model_p50": "s for gap_seconds; token otherwise",
+      "model_p90": "s for gap_seconds; token otherwise",
+      "profile": "text",
+      "source_mean": "s for gap_seconds; token otherwise",
+      "source_p50": "s for gap_seconds; token otherwise",
+      "source_p90": "s for gap_seconds; token otherwise"
+    },
+    "csv_labels": {
+      "basis": {
+        "quantile+mean calibrated; conditional depth-bin delta mean; permuted ranks; active gap cap300s estimated; raw idle gap mean333s": "quantile+mean calibrated; conditional depth-bin delta mean; permuted ranks; active gap cap300s estimated, raw idle gap mean333s"
+      }
+    },
+    "name": "profile_model_check",
+    "rows": 8,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "r19_rented_prefill_corrected": {
+    "columns": {
+      "api_cheapest_usd_person_month": "USD/person-month",
+      "api_median_usd_person_month": "USD/person-month",
+      "basis": "text",
+      "billed_hours_month": "GPU-machine hours/month",
+      "billing": "text",
+      "boxes": "box",
+      "calls": "1",
+      "client": "text",
+      "compute_boxes": "box",
+      "egress_usd_month": "USD",
+      "gpu_s_call": "s/call",
+      "host_bytes": "B",
+      "hourly_usd": "USD/hour",
+      "link": "text",
+      "local_prefill_s_call": "s/call",
+      "migration_s_call": "s/call",
+      "node": "text",
+      "offload_calls": "1",
+      "offload_share": "1",
+      "pending_s_offload": "s",
+      "prefill_wait_s_call": "s/call",
+      "resident_only_boxes": "box",
+      "resident_slots_box": "1",
+      "retained_sessions": "1",
+      "spill_share": "1",
+      "storage_usd_month": "USD",
+      "tier": "text",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "usd_person_month": "USD/person-month",
+      "wire_bytes_call": "B/call"
+    },
+    "csv_labels": {},
+    "name": "r19_rented_prefill_corrected",
+    "rows": 48,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "small_team_cost": {
+    "columns": {
+      "api_cheapest_person_month": "USD/person-month (open-model component)",
+      "api_median_person_month": "USD/person-month (open-model component)",
+      "basis": "text",
+      "billing": "text",
+      "boxes": "box",
+      "cheapest_over_hybrid": "1",
+      "client": "text",
+      "client_capacity_day": "call/person/day",
+      "client_energy_month": "USD/person-month (open-model component)",
+      "decode_overflow_gpu_s_day": "GPU s/person/day",
+      "device_month": "USD/person-month (open-model component)",
+      "front_month": "USD/person-month (open-model component)",
+      "load": "text",
+      "median_over_hybrid": "1",
+      "offload_share": "1",
+      "own_cluster_person_month": "USD/person-month (open-model component)",
+      "own_cluster_server": "text",
+      "pending_s_offload": "s",
+      "person_month": "USD/person-month (open-model component)",
+      "prefill_gpu_s_day": "GPU s/person/day",
+      "profile": "text",
+      "rate_basis": "text",
+      "served_day": "call/person/day",
+      "server": "text",
+      "server_decode_overflow_day": "call/person/day",
+      "server_person_month": "USD/person-month (open-model component)",
+      "share": "1",
+      "spill_share": "1",
+      "storage_person_month": "USD/person-month (open-model component)",
+      "team": "person",
+      "unit_month": "USD/node-month",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "workload_scope": "text"
+    },
+    "csv_labels": {
+      "workload_scope": {
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal"
+      }
+    },
+    "name": "small_team_cost",
+    "rows": 1728,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "team_break_even": {
+    "columns": {
+      "any_counterexample": "bool",
+      "basis": "text",
+      "billing": "text",
+      "client": "text",
+      "from_people": "person",
+      "load": "text",
+      "profile": "text",
+      "reference": "text",
+      "scan_max": "person",
+      "server": "text",
+      "share": "1",
+      "statement": "text",
+      "workload_scope": "text"
+    },
+    "csv_labels": {
+      "workload_scope": {
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "claude_deep: conditional reconstructed/fitted calls 985/1000 (98.50%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 10500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 16800 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 2100 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 26250 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 3360 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 4200 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 52500 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 840 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal",
+        "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet; not minimal": "existing_combined: conditional reconstructed/fitted calls 39788/39904 (99.71%); normalized to 8400 calls/person-month; full original workload unsupported; deep rates extrapolated; sufficient hybrid fleet, not minimal"
+      }
+    },
+    "name": "team_break_even",
+    "rows": 1296,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "workload_coverage": {
+    "columns": {
+      "common_calls": "1",
+      "common_fraction": "1",
+      "existing_profile_sha256": "text",
+      "full_workload_cost": "1",
+      "max_end_depth": "token",
+      "profile": "text",
+      "reservation_depth": "token",
+      "sampler_basis": "text",
+      "source_calls": "1"
+    },
+    "csv_labels": {},
+    "name": "workload_coverage",
+    "rows": 2,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "workload_profiles": {
+    "columns": {
+      "basis": "text",
+      "metric": "text",
+      "profile": "text",
+      "statistic": "text",
+      "value": "mixed; see value_unit",
+      "value_unit": "text"
+    },
+    "csv_labels": {},
+    "name": "workload_profiles",
+    "rows": 66,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  }
+}

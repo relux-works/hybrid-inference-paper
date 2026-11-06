@@ -1,0 +1,7 @@
+depth,decode_tok_s,source,background_priority_interim,capacity_status,status,alarm_inputs
+18641,80.5490424103294,results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+52641,67.46329575065566,results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+102641,55.43232449389855,results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+152641,46.77571010461315,results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+202641,40.32978420729761,results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+251641,35.63134143927793,results/hybrid-bench-nvidia-b300-sxm6-ac-269g-q27b-q4km-q8kv-20261101T225021.jsonl,True,interim; normal-priority M3 parallel remeasurement pending,ok,

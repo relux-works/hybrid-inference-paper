@@ -1,0 +1,549 @@
+[
+  {
+    "id": 1,
+    "old": {
+      "file": "00-abstract.tex",
+      "body": "размеры",
+      "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/team_break_even.csv"
+    ],
+    "successor_sites": [
+      "r22-crossings row10",
+      "r22-crossings row11",
+      "r22-crossings row12",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 2,
+    "old": {
+      "file": "00-abstract.tex",
+      "body": "вызовов в день",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "abstract dedicated",
+      "abstract crossings"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 3,
+    "old": {
+      "file": "00-abstract.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "abstract dedicated",
+      "abstract crossings"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 4,
+    "old": {
+      "file": "00-abstract.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "abstract dedicated",
+      "abstract crossings"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 5,
+    "old": {
+      "file": "00-abstract.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "abstract dedicated",
+      "abstract crossings"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 6,
+    "old": {
+      "file": "01-introduction.tex",
+      "body": "расчёт ожидается",
+      "export": "calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled depth/batch gain, not measured"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/decode_scaling.csv",
+      "calc/out/run22/server_decode_measured.csv"
+    ],
+    "successor_sites": [
+      "r22-decode-model row10",
+      "r22-decode-model row11",
+      "r22-decode-model row12",
+      "r22-decode-model row13",
+      "r22-decode-model row14",
+      "r22-decode-model row15",
+      "r22-decode-model row16",
+      "r22-decode-model row17",
+      "coverage model"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 7,
+    "old": {
+      "file": "01-introduction.tex",
+      "body": "размеры",
+      "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/team_break_even.csv"
+    ],
+    "successor_sites": [
+      "r22-crossings row10",
+      "r22-crossings row11",
+      "r22-crossings row12",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 8,
+    "old": {
+      "file": "01-introduction.tex",
+      "body": "вызовов в день",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 01-introduction.tex",
+      "audience exclusions 01-introduction.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 9,
+    "old": {
+      "file": "01-introduction.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 01-introduction.tex",
+      "audience exclusions 01-introduction.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 10,
+    "old": {
+      "file": "01-introduction.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 01-introduction.tex",
+      "audience exclusions 01-introduction.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 11,
+    "old": {
+      "file": "01-introduction.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 01-introduction.tex",
+      "audience exclusions 01-introduction.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 12,
+    "old": {
+      "file": "06-server.tex",
+      "body": "ожидается",
+      "export": "calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled gain; measured batching pending"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/decode_scaling.csv",
+      "calc/out/run22/server_decode_measured.csv"
+    ],
+    "successor_sites": [
+      "r22-decode-model row10",
+      "r22-decode-model row11",
+      "r22-decode-model row12",
+      "r22-decode-model row13",
+      "r22-decode-model row14",
+      "r22-decode-model row15",
+      "r22-decode-model row16",
+      "r22-decode-model row17",
+      "coverage model"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 13,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "размеры",
+      "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/team_break_even.csv"
+    ],
+    "successor_sites": [
+      "r22-crossings row10",
+      "r22-crossings row11",
+      "r22-crossings row12",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 14,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "вызовов в день",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "dedicated basis",
+      "occupancy definition",
+      "r22-dedicated50 row10",
+      "r22-dedicated50 row11",
+      "r22-dedicated50 row12"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 15,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "dedicated basis",
+      "occupancy definition",
+      "r22-dedicated50 row10",
+      "r22-dedicated50 row11",
+      "r22-dedicated50 row12"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 16,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "dedicated basis",
+      "occupancy definition",
+      "r22-dedicated50 row10",
+      "r22-dedicated50 row11",
+      "r22-dedicated50 row12"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 17,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "dedicated basis",
+      "occupancy definition",
+      "r22-dedicated50 row10",
+      "r22-dedicated50 row11",
+      "r22-dedicated50 row12"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 18,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "пересчитываются",
+      "export": "calc/out/run20/paper_claims.csv; light/medium/heavy; unconditional_claim; no5090-server rows"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/paper_claims.csv",
+      "calc/out/run22/workload_coverage.csv"
+    ],
+    "successor_sites": [
+      "coverage model",
+      "Claude local only",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 19,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "ожидается",
+      "export": "calc/out/run20/small_team_cost.csv; server/profile/share/client/basis; cost columns after accepted merge"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "dedicated basis",
+      "occupancy definition",
+      "r22-dedicated50 row10",
+      "r22-dedicated50 row11",
+      "r22-dedicated50 row12"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 20,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "ожидаются",
+      "export": "calc/out/run20/team_break_even.csv; PRO6000 only; each profile; reference=own_cluster; sustained finite scan"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/team_break_even.csv"
+    ],
+    "successor_sites": [
+      "r22-crossings row10",
+      "r22-crossings row11",
+      "r22-crossings row12",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 21,
+    "old": {
+      "file": "07-economics.tex",
+      "body": "ожидается",
+      "export": "calc/out/run20/paper_claims.csv; PRO6000 only; compare own_cluster/API; full-workload alarm retained"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/paper_claims.csv",
+      "calc/out/run22/workload_coverage.csv"
+    ],
+    "successor_sites": [
+      "coverage model",
+      "Claude local only",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 22,
+    "old": {
+      "file": "14-conclusion.tex",
+      "body": "размеры",
+      "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/team_break_even.csv"
+    ],
+    "successor_sites": [
+      "r22-crossings row10",
+      "r22-crossings row11",
+      "r22-crossings row12",
+      "crossing conditions"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 23,
+    "old": {
+      "file": "14-conclusion.tex",
+      "body": "вызовов в день",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 14-conclusion.tex",
+      "audience exclusions 14-conclusion.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 24,
+    "old": {
+      "file": "14-conclusion.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 14-conclusion.tex",
+      "audience exclusions 14-conclusion.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 25,
+    "old": {
+      "file": "14-conclusion.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 14-conclusion.tex",
+      "audience exclusions 14-conclusion.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  },
+  {
+    "id": 26,
+    "old": {
+      "file": "14-conclusion.tex",
+      "body": "соотношение цен",
+      "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+    },
+    "status": "filled from accepted run22",
+    "accepted_engine": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+    "source_exports": [
+      "calc/out/run22/paper/small_team_cost.csv",
+      "calc/out/run22/paper/dedicated_multiples.csv",
+      "calc/out/run22/paper/shared_multiples.csv"
+    ],
+    "successor_sites": [
+      "audience benefits 14-conclusion.tex",
+      "audience exclusions 14-conclusion.tex"
+    ],
+    "measurement_limit": "Server decode remains modelled in all economics rows; actual deeper measurements stay pending separately."
+  }
+]

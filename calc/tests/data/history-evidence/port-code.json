@@ -1,0 +1,19 @@
+{
+  "basis": "explicit provenance adapters and r22d portable-test migrations; computation/input files have no exception",
+  "files": {
+    "calc/run22/README.md": "b75ac6196dbe65630e422e50d15568c3c39484101677061a5f4e5a57adcfefdc",
+    "calc/run23/README.md": "015078009bf8120638a2b74d300bef78b12628a750c6514b70e6436d663ae749",
+    "calc/tests/test_run12.py": "99e8fd3f28003048354e3128c3bc7bfb5bb03ba9189db70579d525af35505aa8",
+    "bench/tests/test_mac_import.py": "930ba6e82ef7b931706b549ff3f8a33f5ba9e2efe21ddd3166d696483a1698ce",
+    "bench/tests/test_restream.py": "3b5b79ec3a235346c408d226b096082e98a5196a4795613ff924aa832ae4d1c7",
+    "calc/run25/export.py": "ebdde921b6dd0bd4350a5d19d7d71c1bf7120c5f5b7861dd577343e56630772a",
+    "calc/run25/finish.py": "ac844502f06b17339142deb18659169a151188d7d041fc126afc51904ca75698",
+    "calc/run26/export.py": "f0bed9e8fdb88dee371a256159b0a497a12077fa2515de7ab43c046e6a0e37ed",
+    "calc/run22/export.py": "20d34883ec0af42aaf4073f1bcba1e5151893ae37a786da0008d59f91d75a841",
+    "calc/run23/export.py": "d3a970d1f4b8a60f09e9cae72d849bce40d71f5f6e6292774da1203fd8bbf7dc",
+    "calc/run24/export.py": "87c370faa00e7bb7d8c92c7ebe11ff814c0605fc52b52f67dc6e6e840ac7a809",
+    "calc/run24/curves.py": "d552c6dd6788a7b80dd0161eef1121c8c98b47a2c7bd2330672ff0fba2ece630",
+    "calc/tests/r14_publication.py": "ef73f0c68eb0221da0722de787966ec7817a5e0705ec02c538879b4623736188",
+    "calc/tests/r15_sentences.py": "1a152cae2f08381c92acaead14f212f1f7daa6aae2de3750e29d1878123bacae"
+  }
+}

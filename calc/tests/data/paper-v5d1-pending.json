@@ -1,0 +1,82 @@
+[
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидает измерения: аренда не запустила контейнер",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "пересчёт цен API по измеренным долям и окну доступности в движке, прогон 24",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "поставщик и цена",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "поставщик и цена",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "экономическая точка API с измеренным кэшем и новым общим окном доступности, пересчёт движка в прогоне 24.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "доля",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "цена",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "пересчёт миллионного сценария API по измеренным долям кэша и доступности в движке, прогон 24.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "результаты не собраны: арендованные узлы остановлены по решению владельца 2026-11-04; граница приёма данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах и первичный анализ: результаты не собраны до остановки арендованных узлов по решению владельца 2026-11-04; граница приёма данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "перенос измеренной ограниченной кривой M3 в новые опоры движка и прогон 16b; Gemma при обычном приоритете; пакетная генерация B300, аренда не запустила контейнер; экономическая точка API по измеренному кэшу и доступности, прогон 24; калибровка моста vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "FACTS section5 with completed M3 capped/bf16 rehearsal/API blocks and owner r21h. Remaining: unmerged engine24 economic use; RULER64/128 not collected before owner stop2026-11-04; unchanged Mac bf16, model-anchor, calibration, B300 and future-work waits."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "candidate": "ec28e37c58f49e7109178d1c23334c4c7e0aad38",
+  "verdict": "ACCEPT",
+  "reviewer": "Muse r5x9",
+  "source": "/home/agent/Werkstatt/hybrid-review/paper/.temp/REVIEW-engine-r25-muse.md",
+  "sha256": "95b9342f08421bdd1d568ad184851f171eabe8cf37a2f9a3c1adcc7c30f6fd31",
+  "read_at": "2026-11-05",
+  "blocking_findings": [],
+  "notes_carried": [
+    "off-GPU sensitivity counts54/node, inherited control54+3GPU; conservative minimum4 unchanged",
+    "TMPDIR remains inside checkout for parent run16 tests",
+    "zero-offload prices are retention/local compute savings; true positive offload shares remain explicit"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "facts_sha256": "5a936414bbb8a9c5ab4457049dd74ef75573caa436fcf78e1b2afb1f7b613f64",
+  "timing_source": "data/measurements/paper-v4c-2026-11-03/TIMING-EXTRACT.json.gz",
+  "timing_sha256": "d0d3f02115b4d87f4218ec97e235356a63aa2bd59f80fd2bc1888439db7941dd",
+  "turns": 40,
+  "offloads": 2,
+  "catchup_total_s": 134.87947212770814,
+  "catchup_calls": 32,
+  "offload_catchup_fields_s": 7.087738708942197,
+  "snapshot_subtracted_total_s": 2765.6000000000004,
+  "arithmetic_only": true,
+  "old_main_history_moves": [],
+  "workload_source": "paper/data/year-bill-summary.json",
+  "workload_source_sha256": "f2151d2fffc9152697d930e715aef61434f9f2a9d0355d0aee7c647a65978a72",
+  "workload_class_call_fraction": 0.1699839097324887,
+  "workload_class_bill_fraction_low": 0.048246795461253614,
+  "workload_class_bill_fraction_high": 0.046060687302453024,
+  "free_prefill_scope": "Only light840calls: client2.52+front5=7.52 exceeds measured Qwenv1 3.604082737*840/1000=3.0274; not a universal free-prefill impossibility proof.",
+  "archived_served_source": "calc/out/run16/base/perimeter_cost_medium.csv",
+  "archived_unserved_percent": 2.406528191464821
+}

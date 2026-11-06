@@ -1,0 +1,7 @@
+model,depth,full_kv_bytes_token,window_bytes_position,window_positions,window_bytes,recurrent_bytes,estimated_tensor_bytes,sequence_metadata_bytes,predicted_sequence_bytes,measured_sequence_bytes,residual_bytes,allocated_slot_fixed_bytes,basis,status,alarm_inputs
+glimmer30,16000,7072,21216,2048,43450368,0,156602368,281900,156884268,156884268,0,54312960,Full sequence save reconciliation; not measured prototype delta transport,ok,
+glimmer30,40000,7072,21216,2048,43450368,0,326330368,665900,326996268,326996268,0,54312960,Full sequence save reconciliation; not measured prototype delta transport,ok,
+glimmer30,64000,7072,21216,2048,43450368,0,496058368,1049900,497108268,497108268,0,54312960,Full sequence save reconciliation; not measured prototype delta transport,ok,
+gemma31,16000,43520,435200,1024,445644800,0,1141964800,269804,1142234604,1142234604,0,668467200,Full sequence save reconciliation; not measured prototype delta transport,ok,
+gemma31,40000,43520,435200,1024,445644800,0,2186444800,653804,2187098604,2187098604,0,668467200,Full sequence save reconciliation; not measured prototype delta transport,ok,
+gemma31,64000,43520,435200,1024,445644800,0,3230924800,1037804,3231962604,3231962604,0,668467200,Full sequence save reconciliation; not measured prototype delta transport,ok,

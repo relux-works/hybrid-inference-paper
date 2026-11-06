@@ -1,0 +1,9 @@
+input,status,effect
+GLM Studio prefill/decode,pending; never a measured result,all Ultra/GLM timings and crossings conditional on Max-to-Ultra and model portability
+GLM B300 prefill/decode,pending; never a measured result,failed rental; Qwen FLOP portability x1/x2 and expert-union bandwidth projection only
+GLM slot/import/transport quality,pending; never a measured result,"MLA layout derived, linear state estimated; bf16 wire and Qwen import/bridge reuse unqualified"
+2.4T multi-node throughput and storage,pending; never a measured result,"cloud reference and common large cost are capacity-cost floors, extra service/storage unknown"
+task success share,pending; never a measured result,s20/50/100 input scenario; no equal-quality or completed-work price claim
+Ultra performance,pending; never a measured result,"2x measured M5 Max compute and inferred bandwidth extrapolation, no Studio benchmark"
+Studio purchase cost,pending; never a measured result,sourced US reported list-price proxy; actual tax/availability/quote pending
+joint raw-call trace,pending; never a measured result,aggregate fitted/reconstructed shapes; no observed token/work coverage or peak scheduler qualification

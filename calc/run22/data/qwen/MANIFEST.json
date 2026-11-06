@@ -1,0 +1,215 @@
+{
+  "created_utc": "2026-11-03T17:12:50Z",
+  "kit": "qwen27b-mac-bench",
+  "kit_version": "1.6.7",
+  "llama_cpp_commit": "dde879bc4f954b809892fd0d660515f42536394a",
+  "ctx_checkpoints": "0",
+  "model": "ggml-org/Qwen3.8-27B-GGUF@0669b98607d4 Qwen3.8-27B-Q4_K_M.gguf",
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "benchmark_sha256": "df33696ec94e6c76fe585b891fb2673aae1b6a90731d8dd91bbb486aab39a6ad",
+  "results_kit_version": "1.6.7",
+  "priority_override_used": false,
+  "normal_priority": true,
+  "files": {
+    "OPERATOR-READINESS.json": {
+      "bytes": 163103,
+      "sha256": "1f0fb556d787c5c7736b42bf682b15d3cfbcf585aa090223be584aea2ec139c9"
+    },
+    "agents-loop-apple-m5-max-64g-q27b-agents128k-20261103T203928.jsonl": {
+      "bytes": 12117,
+      "sha256": "3e14a2b645b3f18a53abd2a51da9c5bc8240dc2ad9317d34eeea1b31abb2f5e0"
+    },
+    "agents-loop-apple-m5-max-64g-q27b-agents128k-20261103T203928.md": {
+      "bytes": 1103,
+      "sha256": "e57a1c2f7d695425461f0ffdb5dfb672e8003512cc924c507839cb747212fd73"
+    },
+    "build-configure.log": {
+      "bytes": 1512,
+      "sha256": "3250ede00e9cdaab01b54c67a2fbf0cbee13c0cef00341412b510004ea386641"
+    },
+    "build.log": {
+      "bytes": 646,
+      "sha256": "d8dd8d84bf99d6259629fe9bc2f50e89f169efc017ea5b7d83debf5a4313930d"
+    },
+    "ctx-checkpoints.log": {
+      "bytes": 24,
+      "sha256": "f7db4361a098963dd8d7a9f015ce6d22113175e68c738fd6300347f6b0b8614c"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-par4-20261103T192732.jsonl": {
+      "bytes": 896,
+      "sha256": "9a25c9e43d1cf659778c938ae1e3d5fa03272a4752624a7c7282eff8c10c313e"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-par4-20261103T192732.md": {
+      "bytes": 154,
+      "sha256": "2d47573175c01cc5fac1d3a7a52fc52a1b639bd89ad5cc2634342824ba85635d"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261103T190306.jsonl": {
+      "bytes": 10215,
+      "sha256": "bbab8c3108f92da9f1d50c1a3d09207a93da5584750a416319b75a852ea72d1a"
+    },
+    "hybrid-bench-apple-m5-max-64g-q27b-q4km-q8kv-20261103T190306.md": {
+      "bytes": 870,
+      "sha256": "926afd5ec2548fbf9e6c2871a9ed354434e50f268de39bc9187028978e1f45cc"
+    },
+    "hybrid-bench-apple-m5-max-64g-smoke-20261103T190253.jsonl": {
+      "bytes": 2549,
+      "sha256": "b78dd45245f0f1f2f57055588cea11f8a6eb8c225d4498aea0426af45d58044c"
+    },
+    "hybrid-bench-apple-m5-max-64g-smoke-20261103T190253.md": {
+      "bytes": 234,
+      "sha256": "4af43dd295848ef19967c558270cca341d04ad62afa34482dea50db2cf60cd75"
+    },
+    "kit.log": {
+      "bytes": 8385,
+      "sha256": "4a06dc603b31355cfca134c625aa963d20794f51852dd4970f72110136266dc6"
+    },
+    "llama-server-version.txt": {
+      "bytes": 106,
+      "sha256": "82e6c52fe9d9f31e0d4817b09915ea52940d0b71dde4a20538556c16f33639c3"
+    },
+    "model-geometry.json": {
+      "bytes": 373,
+      "sha256": "00c6db51733ae801d7ed927d5477edd397d196813009325b32a9e3538b319f82"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-maxctx260k-20261103T201655-1793722615556975000.jsonl": {
+      "bytes": 3553,
+      "sha256": "3b033ff0d0ca2428acb98bc523e1fa0176c6951f1c5015509e5feb07aa4ad1c9"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-maxctx260k-20261103T201655-1793722615556975000.md": {
+      "bytes": 887,
+      "sha256": "c126f1284a8430aa012902f0240ec6eb23272969c68deb1b2748868d61051d93"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale131072-fill-20261103T195521-1793721321944572000.jsonl": {
+      "bytes": 1015,
+      "sha256": "48dc76c5124b87adca5e30ace6e44edfb75635ada0453eb524d720dd4e66fa97"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale131072-fill-20261103T195521-1793721321944572000.md": {
+      "bytes": 330,
+      "sha256": "d56c0dd699b1d80f88338aa35fb1d8351e86a6f2be88d74ca79d8ddd1928db75"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale131072-largest-np4-20261103T200757-1793722077583167000.jsonl": {
+      "bytes": 18517,
+      "sha256": "a78697c3b3242bd9616deb48de2937e626beca24e1a857560c0e93ca8100863a"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale131072-largest-np4-20261103T200757-1793722077583167000.md": {
+      "bytes": 6261,
+      "sha256": "ee662764ab2020d605342ad7c78b4ce1e2c33157288eb89f58004c93ddd71d6b"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale131072-np4-control-np4-20261103T201538-1793722538210614000.jsonl": {
+      "bytes": 11748,
+      "sha256": "44535a62bf59b295026edf72e5d552bacbad5dae51d7a80da7230b3660775936"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale131072-np4-control-np4-20261103T201538-1793722538210614000.md": {
+      "bytes": 6032,
+      "sha256": "8919635ecda892722bf258882a7059c98bde9397e3bed6f400204f55f4293cd5"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale32768-fill-20261103T193224-1793719944465975000.jsonl": {
+      "bytes": 1001,
+      "sha256": "f0154dc87ec31b9a05036b5c5b54e694d1e47923f4cdbeb046e01b4d461ae005"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale32768-fill-20261103T193224-1793719944465975000.md": {
+      "bytes": 324,
+      "sha256": "918d368b136b1b627332f5405b01d38acbf1f5bb36059f65b089b251323cec9d"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale32768-largest-np16-20261103T193840-1793720320256759000.jsonl": {
+      "bytes": 69485,
+      "sha256": "e8353b1e024611efad44ccce0619aee4c567f1e75b43846909be0688a13b2743"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale32768-largest-np16-20261103T193840-1793720320256759000.md": {
+      "bytes": 7463,
+      "sha256": "c8bed7e1f5f770ae9d667764dd38f07bcfdfd35ccafed80a9409d963799ab225"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale65536-fill-20261103T194412-1793720652163544000.jsonl": {
+      "bytes": 1006,
+      "sha256": "039aaeedc10b912b7fc8146d5f68d4078a90352e6c92c86ff83305b4309d58c9"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale65536-fill-20261103T194412-1793720652163544000.md": {
+      "bytes": 324,
+      "sha256": "477b2e11c8539bcf08cf66ac622fad26511071b99c83fb0c9ea06ea8f62e8026"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale65536-largest-np8-20261103T195211-1793721131067040000.jsonl": {
+      "bytes": 30186,
+      "sha256": "5e01e97d2fe1b1d82b53e0c30f1084c3af3a4b8786444ef6d10a6fa5347f49e8"
+    },
+    "parallel-depth-apple-m5-max-64g-q27b-scale65536-largest-np8-20261103T195211-1793721131067040000.md": {
+      "bytes": 6543,
+      "sha256": "4b414f6f1eb84d6f1ae8dc3629c9478e9b1614b3f86dfffb6d9f7e426bae0eb8"
+    },
+    "scaling-131072-20261103T155519Z-14559-after.json": {
+      "bytes": 2294,
+      "sha256": "f7f1d2415e5d8d1cf5a4365860ef713d945007cb9b1e5c0b288c0bced22cb249"
+    },
+    "scaling-131072-20261103T155519Z-14559-before.json": {
+      "bytes": 2294,
+      "sha256": "1ae63991a2913e096dce6dc865c78d106621db1e355fb956be783b8864641a44"
+    },
+    "scaling-32768-20261103T153223Z-14559-after.json": {
+      "bytes": 2294,
+      "sha256": "9ab77292e8f7ea25d4918d1073f5160636ec18af1419285f53375de9ba45cab3"
+    },
+    "scaling-32768-20261103T153223Z-14559-before.json": {
+      "bytes": 2294,
+      "sha256": "e525ab72a346f8f2973eda53dfbddbcfc53f61e29cad129da607b974261de257"
+    },
+    "scaling-65536-20261103T154409Z-14559-after.json": {
+      "bytes": 2294,
+      "sha256": "0ce35411837f0177338a7ae38f925cf55e22dc983c81f9d4820b97ae62d258cf"
+    },
+    "scaling-65536-20261103T154409Z-14559-before.json": {
+      "bytes": 2294,
+      "sha256": "2ec5494dd648bb58c290169f2a4ee7302783e1efb6956ead5e876d2f9381498c"
+    },
+    "server-agents-128k-np4.log": {
+      "bytes": 119117,
+      "sha256": "789d6558dbe827fe484a021bfe5098b4fc3b09e0d39966308dadf16fa902cd95"
+    },
+    "server-depth.log": {
+      "bytes": 40661,
+      "sha256": "44d6523ead34d5ba82be771e1ea740ffb2dc3a3fa0f0ab90c07c47d835043832"
+    },
+    "server-maxctx-260k-np2.log": {
+      "bytes": 23422,
+      "sha256": "c73f5bdad07f0a8bdc7437fd8696ab61edb6ea00f129238a5a097143c1c52f38"
+    },
+    "server-par4.log": {
+      "bytes": 17633,
+      "sha256": "03aaed9aace1090930cd52e497b44e12076d5add614ac77ef1be21699925a6e6"
+    },
+    "server-scale-131072-fill.log": {
+      "bytes": 10835,
+      "sha256": "7ffe1967f4f761074479dbcc8e8bcbaa100234c668ebc04ae1e436204b6f48b9"
+    },
+    "server-scale-131072-np4-control.log": {
+      "bytes": 13945,
+      "sha256": "744cd59e49b9e0627684d1695950bf4a9fadd656c84021c036861a50c57a5178"
+    },
+    "server-scale-131072-np4.log": {
+      "bytes": 23130,
+      "sha256": "652c002d66606950a9e33e343e8eae61ed408ffc6b6396c30ff210c49b651c2c"
+    },
+    "server-scale-32768-fill.log": {
+      "bytes": 3823,
+      "sha256": "ebf0ecc95943f6e09e8b5de073f4c9ee206a5db98b2be99a2f880deee34385e6"
+    },
+    "server-scale-32768-np16.log": {
+      "bytes": 145692,
+      "sha256": "da9fbe59197257633cfdeb273d942e594d9ecee1bad45f668ecd3f182ee1a8ae"
+    },
+    "server-scale-65536-fill.log": {
+      "bytes": 6159,
+      "sha256": "d16a3fe1ef7ecf49737888edbefcef750702b30fd7489330719af3fea96f3e28"
+    },
+    "server-scale-65536-np8.log": {
+      "bytes": 49298,
+      "sha256": "1ff3ce39e3bb60ebc6e12e0d0f6fff375892415a36d65dd1c82bbf0a0e304955"
+    },
+    "server-smoke.log": {
+      "bytes": 6136,
+      "sha256": "66007b41cf6e9af5857841006c024bfad990a59bc322226e71bdc81bd91d1e28"
+    },
+    "system.json": {
+      "bytes": 176434,
+      "sha256": "b0c4065b14d62843299afe9a07c5d53990bf1c82f43165f3820e08247c628d14"
+    }
+  }
+}

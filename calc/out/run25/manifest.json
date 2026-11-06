@@ -1,0 +1,199 @@
+{
+  "csv_bytes": 17792462,
+  "disk_writes": [
+    {
+      "bytes": 598564,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32381792256,
+      "free_before": 32381661184,
+      "path": "calc/out/run25/fleet_summary.csv"
+    },
+    {
+      "bytes": 6292307,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382595072,
+      "free_before": 32381792256,
+      "path": "calc/out/run25/comparisons.csv"
+    },
+    {
+      "bytes": 6791803,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382590976,
+      "free_before": 32382595072,
+      "path": "calc/out/run25/crossings.csv"
+    },
+    {
+      "bytes": 18422,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382595072,
+      "free_before": 32382590976,
+      "path": "calc/out/run25/closed_contour.csv"
+    },
+    {
+      "bytes": 1992,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382595072,
+      "free_before": 32382595072,
+      "path": "calc/out/run25/coverage.csv"
+    },
+    {
+      "bytes": 2253,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382595072,
+      "free_before": 32382595072,
+      "path": "calc/out/run25/storage_by_depth.csv"
+    },
+    {
+      "bytes": 69511,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382599168,
+      "free_before": 32382595072,
+      "path": "calc/out/run25/coverage_sensitivity.csv"
+    },
+    {
+      "bytes": 29507,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32382607360,
+      "free_before": 32382599168,
+      "path": "calc/ENGINE-REPORT-R25-261105.md"
+    },
+    {
+      "bytes": 2968551,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32381542400,
+      "free_before": 32381546496,
+      "path": "calc/out/run25/changed_crossings.csv"
+    },
+    {
+      "bytes": 749552,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32381644800,
+      "free_before": 32381792256,
+      "path": "calc/out/run25/fleet_summary.csv"
+    },
+    {
+      "bytes": 7100708,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32380837888,
+      "free_before": 32381644800,
+      "path": "calc/out/run25/comparisons.csv"
+    },
+    {
+      "bytes": 21198,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32380833792,
+      "free_before": 32380837888,
+      "path": "calc/out/run25/closed_contour.csv"
+    },
+    {
+      "bytes": 70034,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32380829696,
+      "free_before": 32380833792,
+      "path": "calc/out/run25/coverage_sensitivity.csv"
+    },
+    {
+      "bytes": 40716,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32380821504,
+      "free_before": 32380829696,
+      "path": "calc/ENGINE-REPORT-R25-261105.md"
+    },
+    {
+      "bytes": 86371,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32636928000,
+      "free_before": 32636928000,
+      "path": "calc/out/run25/paired_retention.csv"
+    },
+    {
+      "bytes": 64717,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32342650880,
+      "free_before": 32342716416,
+      "path": "calc/R25-VALIDATION-261105.json"
+    },
+    {
+      "bytes": 42956,
+      "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       31G  90% /\n",
+      "free_after": 32342646784,
+      "free_before": 32342650880,
+      "path": "calc/ENGINE-REPORT-R25-261105.md"
+    }
+  ],
+  "files": {
+    "calc/ENGINE-REPORT-R25-261105.md": "b1da4c2ff8255d21ad2aee3d4e546e4cad11e3fd0b189f5292df7f74eb1b5b55",
+    "calc/R25-VALIDATION-261105.json": "76ab92b57e97f09160f1c16dc8387466fb9e5b3a538cda6cee44479b7483f1c4",
+    "calc/out/run25/changed_crossings.csv": "a61685c5cf558a271d7f9e2e34fef103bf85b455b6686e4e2eff871c75a0ff4d",
+    "calc/out/run25/closed_contour.csv": "4b962e6c3a9bebbd980317408e990d60b5775f690cbc4bd228ac6314660e4eb3",
+    "calc/out/run25/comparisons.csv": "a1f111518dbe19cbd1bc409036d3ac317e790ff881b616ddd6c5e690b69a5a3c",
+    "calc/out/run25/coverage.csv": "96836e68418c7ab65bd2ffd07cf883ab3b553eea938c9e122660accc8d565806",
+    "calc/out/run25/coverage_sensitivity.csv": "b5cc4dcc44a8cd18331e78d182f60bb6f4eb7e4af7a282c5f748e040d267ec48",
+    "calc/out/run25/crossings.csv": "814dbb4cf9360d9074b44043963df53173384f6c526008b963e0f78ea858f027",
+    "calc/out/run25/fleet_summary.csv": "0b2f2cb7ac001abf5f3cadcba4c26bd3deff93145d888cc260faabe9b8d7e203",
+    "calc/out/run25/paired_retention.csv": "cd66320a992f893c7b0820b719808db82181de0eceb48cd049f6af8186249d60",
+    "calc/out/run25/storage_by_depth.csv": "3f7c93dab1299a9759326172eb370624d39a561750a7b1b5c81fafc58c0a7f91"
+  },
+  "frozen": {
+    "all_parent_bytes_identical": true,
+    "historical_output_files": 1062,
+    "parent": "ca7f228acd789380bf46016fd87acc33e1b07aef",
+    "parent_tracked_files": 1963
+  },
+  "gates": "see calc/R25-VALIDATION-261105.json for actual standalone test receipts; producer output alone is not independent acceptance",
+  "provenance": {
+    "config": "calc/run25/config.json",
+    "log_limits": "data/measurements/ivmbp-2026-10-30/REPORT.md",
+    "restore_context": "calc/run23/data/MAC-FACTS.md",
+    "stats": "data/measurements/ivmbp-2026-10-30/stats.json"
+  },
+  "publication_calculation_cells_preserved": {
+    "closed_contour": {
+      "cells": 744,
+      "sha256": "44eba76dbd213cce7c781ed7226cfbc30c33639140998d0398f8dd3e55369870"
+    },
+    "comparisons": {
+      "cells": 248832,
+      "sha256": "a9dfb0aa3d921f32665d69a42ee9cf0e654d3e15853277d498a96c262b12c792"
+    },
+    "coverage_sensitivity": {
+      "cells": 2520,
+      "sha256": "68dec7e24ff71e3e9715b29c27724dd1adf95f15ef7bc192bd9371d42c0b76f0"
+    },
+    "fleet_summary": {
+      "cells": 40896,
+      "sha256": "b7adab89a6d2a2610173fed1416e0708cfc31c587ebb9f9b5bd486184f4d63d8"
+    }
+  },
+  "sources": {
+    "calc/run25/README.md": "0ff1b9d438bd9f5aa4d707f7c4cdd4c28add9379f00693c870d13fe0314cf311",
+    "calc/run25/UNRESOLVED_QUESTIONS.md": "73571a901fda22e2f01c63a0dcfa56d87427de7a20ad5bba1a019b907ac478b5",
+    "calc/run25/__init__.py": "f2827310334564cef6a09937fafa17279668b2f01717e7d1fd2bcf3b85f468a7",
+    "calc/run25/config.json": "59062687ad5b724746e3d277eea177be0113553bab55bd5316c23016ca39e39a",
+    "calc/run25/engine.py": "5dd30fcde5c8ea5ae81df123eac94f1ac0f33ff0de88e9db8006f387b465d977",
+    "calc/run25/export.py": "88bdc9ce3532e5b1ded81ccecc3108bebc309eea4c540dcf4f2edd5818c0af57",
+    "calc/run25/finish.py": "503cd69219277214ed57af86c93dae2295bcb4f68499a57e67be04cf24cce744",
+    "calc/run25/model.py": "b6d09347ced955bae150ea725b8b41309e4c4eca9d9b7c2786c7ab945f871008",
+    "calc/run25/paired.py": "2c0b0d511dfd4813a7390f238d1b340f7acde800514f5f9509f75de5cccf572a",
+    "calc/run25/publication.py": "6aef201784c6460d5d741cc21667b99f66f98fa714a95bd9e025fffb69ae0847",
+    "calc/tests/test_run25.py": "c82cf331b9e379ecb52880b48b8c3659eb4b4b26dd2bfb556ce3d2def61be828",
+    "calc/tests/test_run25_export.py": "5b690e2aa233294e0c5e1a0097143231f811e08fb69d5f31d52e30cc727843ed"
+  }
+}

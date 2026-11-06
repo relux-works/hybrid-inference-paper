@@ -1,0 +1,20 @@
+{
+  "b300_decode": "pending; rental failed to start2026-11-04T00:36Z",
+  "facts_original": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+  "facts_original_sha256": "64b4d2d761b07157ad1a0146869e4984722d79511006b433fdda7f732aa8d830",
+  "files": {
+    "MAC-FACTS.md": "d973884f6e44cd410c001ceb30658e2186699d195a0503af84b6473e0b134570",
+    "PRO-FACTS.md": "cc21080e95ab65fd10034fd5d336b1bea38e92c513451fd8b2654715875db899",
+    "bridge-receipt.json": "7b71ab95383a9d97c5e75b70c6fb6dc36e0bc93c219c485b496977e3f561c686",
+    "mac_direct.csv": "76e8b9a3c49e0c18dbae6786939f70c636c34a9a4585d3d2b1866fc42110c954",
+    "pro-decode-receipt.json": "141915e33fa1611464642c5d1de1470fc80c22f9bddb898f20c999a15f59967d",
+    "pro-million-refusal.json": "b487209c27804449f46ad7ad4b715c2ed964e1315cb6c7630508c486020c8ee9",
+    "server_decode.csv": "26385aa0ca5a61d934b2635e89398330b4e24c664d454ee97929fcfa9c479afb"
+  },
+  "gpu_archive": "/home/agent/lanes/hybrid/.temp/evidence/vllm-pro-g1611-261103/g1611.tar.gz",
+  "gpu_archive_members": 102,
+  "gpu_archive_sha256": "8a58f122af021136721e720232a6cc4c081ed3674391bdf13714e6d63d24efe0",
+  "mac_archive_bytes": 1069117,
+  "mac_archive_sha256_abbreviated": "90723f8c...be43",
+  "mac_archive_status": "FACTS-accepted transcription; strict archive not in this checkout; no claim of re-verifying its full sha256"
+}

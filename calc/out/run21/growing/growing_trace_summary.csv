@@ -1,0 +1,13 @@
+profile,model,server,target_depth,calls,new_tokens,output_tokens,end_depth,client_prefill_s,basis,status,alarm_inputs
+existing_combined,qwen,b300_fp8,200000,117,140405.30000000002,59594.69999999968,200000.0,2005.3733680659207,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+existing_combined,qwen,b300_fp8_kv,200000,117,140405.30000000002,59594.69999999968,200000.0,2005.3733680659207,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+existing_combined,glm,glm_two_b300,200000,117,140405.30000000002,59594.69999999968,200000.0,402.96978614068325,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+existing_combined,qwen,b300_fp8,1000000,762,610444.1000000131,389555.89999999997,1000000.0,33060.964094922136,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+existing_combined,qwen,b300_fp8_kv,1000000,762,610444.1000000131,389555.89999999997,1000000.0,33060.964094922136,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+existing_combined,glm,glm_two_b300,1000000,762,610444.1000000131,389555.89999999997,1000000.0,2074.0467057303963,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+claude_deep,qwen,b300_fp8,200000,89,132943.9999999999,67056.0,200000.0,1910.39650584989,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+claude_deep,qwen,b300_fp8_kv,200000,89,132943.9999999999,67056.0,200000.0,1910.39650584989,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+claude_deep,glm,glm_two_b300,200000,89,132943.9999999999,67056.0,200000.0,381.6937829220161,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+claude_deep,qwen,b300_fp8,1000000,640,513082.00000001263,486918.0,1000000.0,27044.96403743096,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+claude_deep,qwen,b300_fp8_kv,1000000,640,513082.00000001263,486918.0,1000000.0,27044.96403743096,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,
+claude_deep,glm,glm_two_b300,1000000,640,513082.00000001263,486918.0,1000000.0,1733.0910225837638,synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster,ok,

@@ -1,0 +1,146 @@
+| scope | arm | other | document | metric | score_batch | count | mean | median | p90 | p99 | max | ci_low | ci_high |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| positions | state-Q4-local |  |  | kl_nats | 32 | 40960 | 0.05425268173669255 | 0.011659668112799563 | 0.1353720862429924 | 0.6838291433366214 | 3.45440496936304 |  |  |
+| documents | state-Q4-local |  |  | kl_nats | 32 | 20 | 0.05425268173669255 |  |  |  |  | 0.030386308825661935 | 0.08108160908455246 |
+| document | state-Q4-local |  | pg1342 | kl_nats | 32 | 2048 | 0.1269530797641215 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg2701 | kl_nats | 32 | 2048 | 0.16279005197711846 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg2600 | kl_nats | 32 | 2048 | 0.014333883153290176 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1400 | kl_nats | 32 | 2048 | 0.015424158028335517 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1260 | kl_nats | 32 | 2048 | 0.017521990538987463 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg766 | kl_nats | 32 | 2048 | 0.01477951765375072 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg768 | kl_nats | 32 | 2048 | 0.015594118103778403 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg730 | kl_nats | 32 | 2048 | 0.015051664903999902 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg98 | kl_nats | 32 | 2048 | 0.1132584132448114 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg345 | kl_nats | 32 | 2048 | 0.05946136872861409 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg84 | kl_nats | 32 | 2048 | 0.16974683855695633 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg135 | kl_nats | 32 | 2048 | 0.01111788932107641 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1184 | kl_nats | 32 | 2048 | 0.011059627947043372 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg215 | kl_nats | 32 | 2048 | 0.013178796169385 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg28054 | kl_nats | 32 | 2048 | 0.015485551604954725 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1399 | kl_nats | 32 | 2048 | 0.010555280945559915 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg16328 | kl_nats | 32 | 2048 | 0.01827276403799257 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg36 | kl_nats | 32 | 2048 | 0.013589118733662664 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg74 | kl_nats | 32 | 2048 | 0.14004621263903713 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg76 | kl_nats | 32 | 2048 | 0.12683330868137538 |  |  |  |  |  |  |
+| schedule_probes | state-Q4-local |  |  | kl_nats | 32 | 60 | 0.003882915892624259 | 0.0008865380921048165 | 0.009287194675552966 | 0.04232240141061479 | 0.04360070042518181 |  |  |
+| positions | state-Q4-local |  |  | top1 | 32 | 40960 | 0.9115234375 | 1.0 | 1.0 | 1.0 | True |  |  |
+| documents | state-Q4-local |  |  | top1 | 32 | 20 | 0.9115234375 |  |  |  |  | 0.892431640625 | 0.9285894775390625 |
+| document | state-Q4-local |  | pg1342 | top1 | 32 | 2048 | 0.880859375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg2701 | top1 | 32 | 2048 | 0.85107421875 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg2600 | top1 | 32 | 2048 | 0.94384765625 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1400 | top1 | 32 | 2048 | 0.9404296875 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1260 | top1 | 32 | 2048 | 0.93115234375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg766 | top1 | 32 | 2048 | 0.94580078125 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg768 | top1 | 32 | 2048 | 0.93212890625 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg730 | top1 | 32 | 2048 | 0.939453125 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg98 | top1 | 32 | 2048 | 0.85546875 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg345 | top1 | 32 | 2048 | 0.87451171875 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg84 | top1 | 32 | 2048 | 0.86083984375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg135 | top1 | 32 | 2048 | 0.95166015625 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1184 | top1 | 32 | 2048 | 0.9521484375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg215 | top1 | 32 | 2048 | 0.95068359375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg28054 | top1 | 32 | 2048 | 0.935546875 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg1399 | top1 | 32 | 2048 | 0.94873046875 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg16328 | top1 | 32 | 2048 | 0.9287109375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg36 | top1 | 32 | 2048 | 0.92822265625 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg74 | top1 | 32 | 2048 | 0.8359375 |  |  |  |  |  |  |
+| document | state-Q4-local |  | pg76 | top1 | 32 | 2048 | 0.84326171875 |  |  |  |  |  |  |
+| schedule_probes | state-Q4-local |  |  | top1 | 32 | 60 | 1.0 | 1.0 | 1.0 | 1.0 | True |  |  |
+| positions | state-f32 |  |  | kl_nats | 32 | 40960 | 0.05425268173669255 | 0.011659668112799563 | 0.1353720862429924 | 0.6838291433366214 | 3.45440496936304 |  |  |
+| documents | state-f32 |  |  | kl_nats | 32 | 20 | 0.05425268173669255 |  |  |  |  | 0.030386308825661935 | 0.08108160908455246 |
+| document | state-f32 |  | pg1342 | kl_nats | 32 | 2048 | 0.1269530797641215 |  |  |  |  |  |  |
+| document | state-f32 |  | pg2701 | kl_nats | 32 | 2048 | 0.16279005197711846 |  |  |  |  |  |  |
+| document | state-f32 |  | pg2600 | kl_nats | 32 | 2048 | 0.014333883153290176 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1400 | kl_nats | 32 | 2048 | 0.015424158028335517 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1260 | kl_nats | 32 | 2048 | 0.017521990538987463 |  |  |  |  |  |  |
+| document | state-f32 |  | pg766 | kl_nats | 32 | 2048 | 0.01477951765375072 |  |  |  |  |  |  |
+| document | state-f32 |  | pg768 | kl_nats | 32 | 2048 | 0.015594118103778403 |  |  |  |  |  |  |
+| document | state-f32 |  | pg730 | kl_nats | 32 | 2048 | 0.015051664903999902 |  |  |  |  |  |  |
+| document | state-f32 |  | pg98 | kl_nats | 32 | 2048 | 0.1132584132448114 |  |  |  |  |  |  |
+| document | state-f32 |  | pg345 | kl_nats | 32 | 2048 | 0.05946136872861409 |  |  |  |  |  |  |
+| document | state-f32 |  | pg84 | kl_nats | 32 | 2048 | 0.16974683855695633 |  |  |  |  |  |  |
+| document | state-f32 |  | pg135 | kl_nats | 32 | 2048 | 0.01111788932107641 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1184 | kl_nats | 32 | 2048 | 0.011059627947043372 |  |  |  |  |  |  |
+| document | state-f32 |  | pg215 | kl_nats | 32 | 2048 | 0.013178796169385 |  |  |  |  |  |  |
+| document | state-f32 |  | pg28054 | kl_nats | 32 | 2048 | 0.015485551604954725 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1399 | kl_nats | 32 | 2048 | 0.010555280945559915 |  |  |  |  |  |  |
+| document | state-f32 |  | pg16328 | kl_nats | 32 | 2048 | 0.01827276403799257 |  |  |  |  |  |  |
+| document | state-f32 |  | pg36 | kl_nats | 32 | 2048 | 0.013589118733662664 |  |  |  |  |  |  |
+| document | state-f32 |  | pg74 | kl_nats | 32 | 2048 | 0.14004621263903713 |  |  |  |  |  |  |
+| document | state-f32 |  | pg76 | kl_nats | 32 | 2048 | 0.12683330868137538 |  |  |  |  |  |  |
+| schedule_probes | state-f32 |  |  | kl_nats | 32 | 60 | 0.004476150233911608 | 0.00020103862015025006 | 0.008263775331216118 | 0.06652911948146795 | 0.10040556162206082 |  |  |
+| positions | state-f32 |  |  | top1 | 32 | 40960 | 0.9115234375 | 1.0 | 1.0 | 1.0 | True |  |  |
+| documents | state-f32 |  |  | top1 | 32 | 20 | 0.9115234375 |  |  |  |  | 0.892431640625 | 0.9285894775390625 |
+| document | state-f32 |  | pg1342 | top1 | 32 | 2048 | 0.880859375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg2701 | top1 | 32 | 2048 | 0.85107421875 |  |  |  |  |  |  |
+| document | state-f32 |  | pg2600 | top1 | 32 | 2048 | 0.94384765625 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1400 | top1 | 32 | 2048 | 0.9404296875 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1260 | top1 | 32 | 2048 | 0.93115234375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg766 | top1 | 32 | 2048 | 0.94580078125 |  |  |  |  |  |  |
+| document | state-f32 |  | pg768 | top1 | 32 | 2048 | 0.93212890625 |  |  |  |  |  |  |
+| document | state-f32 |  | pg730 | top1 | 32 | 2048 | 0.939453125 |  |  |  |  |  |  |
+| document | state-f32 |  | pg98 | top1 | 32 | 2048 | 0.85546875 |  |  |  |  |  |  |
+| document | state-f32 |  | pg345 | top1 | 32 | 2048 | 0.87451171875 |  |  |  |  |  |  |
+| document | state-f32 |  | pg84 | top1 | 32 | 2048 | 0.86083984375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg135 | top1 | 32 | 2048 | 0.95166015625 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1184 | top1 | 32 | 2048 | 0.9521484375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg215 | top1 | 32 | 2048 | 0.95068359375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg28054 | top1 | 32 | 2048 | 0.935546875 |  |  |  |  |  |  |
+| document | state-f32 |  | pg1399 | top1 | 32 | 2048 | 0.94873046875 |  |  |  |  |  |  |
+| document | state-f32 |  | pg16328 | top1 | 32 | 2048 | 0.9287109375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg36 | top1 | 32 | 2048 | 0.92822265625 |  |  |  |  |  |  |
+| document | state-f32 |  | pg74 | top1 | 32 | 2048 | 0.8359375 |  |  |  |  |  |  |
+| document | state-f32 |  | pg76 | top1 | 32 | 2048 | 0.84326171875 |  |  |  |  |  |  |
+| schedule_probes | state-f32 |  |  | top1 | 32 | 60 | 0.9833333333333333 | 1.0 | 1.0 | 1.0 | True |  |  |
+| positions | state-bf16 |  |  | kl_nats | 32 | 40960 | 0.053954874871206704 | 0.011640835309279639 | 0.13517854991924508 | 0.6734979633267665 | 3.4261902903270025 |  |  |
+| documents | state-bf16 |  |  | kl_nats | 32 | 20 | 0.053954874871206704 |  |  |  |  | 0.03034941621242228 | 0.08044104597483501 |
+| document | state-bf16 |  | pg1342 | kl_nats | 32 | 2048 | 0.12837282637450337 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg2701 | kl_nats | 32 | 2048 | 0.15730940285130987 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg2600 | kl_nats | 32 | 2048 | 0.014313594562002966 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1400 | kl_nats | 32 | 2048 | 0.015538943235390203 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1260 | kl_nats | 32 | 2048 | 0.017104959998848118 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg766 | kl_nats | 32 | 2048 | 0.014606449523590413 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg768 | kl_nats | 32 | 2048 | 0.015700754198340678 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg730 | kl_nats | 32 | 2048 | 0.015066659841879071 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg98 | kl_nats | 32 | 2048 | 0.11672599540057248 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg345 | kl_nats | 32 | 2048 | 0.05952792605536807 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg84 | kl_nats | 32 | 2048 | 0.1663836304216947 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg135 | kl_nats | 32 | 2048 | 0.011111720813502573 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1184 | kl_nats | 32 | 2048 | 0.011500019902847342 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg215 | kl_nats | 32 | 2048 | 0.013283201552554694 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg28054 | kl_nats | 32 | 2048 | 0.015274735655430813 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1399 | kl_nats | 32 | 2048 | 0.010596094166285909 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg16328 | kl_nats | 32 | 2048 | 0.017730477216003737 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg36 | kl_nats | 32 | 2048 | 0.01361813501738138 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg74 | kl_nats | 32 | 2048 | 0.1392932713735918 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg76 | kl_nats | 32 | 2048 | 0.1260386992630359 |  |  |  |  |  |  |
+| schedule_probes | state-bf16 |  |  | kl_nats | 32 | 60 | 0.002118175354843774 | 0.0002102862864397864 | 0.0037012479036223084 | 0.029886828350166962 | 0.03112709214959184 |  |  |
+| positions | state-bf16 |  |  | top1 | 32 | 40960 | 0.9121826171875 | 1.0 | 1.0 | 1.0 | True |  |  |
+| documents | state-bf16 |  |  | top1 | 32 | 20 | 0.9121826171875 |  |  |  |  | 0.8937738037109375 | 0.9290289306640626 |
+| document | state-bf16 |  | pg1342 | top1 | 32 | 2048 | 0.8818359375 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg2701 | top1 | 32 | 2048 | 0.8564453125 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg2600 | top1 | 32 | 2048 | 0.9443359375 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1400 | top1 | 32 | 2048 | 0.93505859375 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1260 | top1 | 32 | 2048 | 0.94287109375 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg766 | top1 | 32 | 2048 | 0.9453125 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg768 | top1 | 32 | 2048 | 0.93359375 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg730 | top1 | 32 | 2048 | 0.93603515625 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg98 | top1 | 32 | 2048 | 0.8525390625 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg345 | top1 | 32 | 2048 | 0.87646484375 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg84 | top1 | 32 | 2048 | 0.86328125 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg135 | top1 | 32 | 2048 | 0.95263671875 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1184 | top1 | 32 | 2048 | 0.94873046875 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg215 | top1 | 32 | 2048 | 0.94921875 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg28054 | top1 | 32 | 2048 | 0.9404296875 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg1399 | top1 | 32 | 2048 | 0.947265625 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg16328 | top1 | 32 | 2048 | 0.92822265625 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg36 | top1 | 32 | 2048 | 0.923828125 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg74 | top1 | 32 | 2048 | 0.83544921875 |  |  |  |  |  |  |
+| document | state-bf16 |  | pg76 | top1 | 32 | 2048 | 0.85009765625 |  |  |  |  |  |  |
+| schedule_probes | state-bf16 |  |  | top1 | 32 | 60 | 1.0 | 1.0 | 1.0 | 1.0 | True |  |  |
+| paired | state-f32 | state-Q4-local |  | kl_nats | 32 | 20 | 0.0 |  |  |  |  | 0.0 | 0.0 |
+| paired | state-f32 | state-Q4-local |  | top1 | 32 | 20 | 0.0 |  |  |  |  | 0.0 | 0.0 |
+| paired | state-bf16 | state-Q4-local |  | kl_nats | 32 | 20 | -0.0002978068654858522 |  |  |  |  | -0.001076060599410106 | 0.00039042628553954327 |
+| paired | state-bf16 | state-Q4-local |  | top1 | 32 | 20 | 0.0006591796875 |  |  |  |  | -0.0010009765625 | 0.002490234375 |
+| paired | state-bf16 | state-f32 |  | kl_nats | 32 | 20 | -0.0002978068654858522 |  |  |  |  | -0.001076060599410106 | 0.00039042628553954327 |
+| paired | state-bf16 | state-f32 |  | top1 | 32 | 20 | 0.0006591796875 |  |  |  |  | -0.0010009765625 | 0.002490234375 |

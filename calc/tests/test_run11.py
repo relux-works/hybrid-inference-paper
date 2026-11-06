@@ -14,7 +14,7 @@ class Run11Tests(unittest.TestCase):
     # reproduces historical accounting. Measurement-only reductions have no workload.
     def test_base_scenario_accounting(self):
         for scenario in scenarios():
-            if scenario['kind'] in ('legacy', 'bridge', 'measurements_r13', 'measurements_r14'):
+            if scenario['kind'] in ('legacy', 'bridge', 'measurements_r13', 'measurements_r14', 'measurements_r17', 'measurements_r18'):
                 continue
             with self.subTest(scenario=scenario['name']):
                 _, inputs = load(scenario['name'])

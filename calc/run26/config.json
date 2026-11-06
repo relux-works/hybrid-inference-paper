@@ -1,0 +1,19 @@
+{
+ "parent":"ec28e37c58f49e7109178d1c23334c4c7e0aad38",
+ "team":50,"scan_max":500,"shares":[0.2,0.5,1.0],
+ "ultra_compute_scale":2,"ultra_bandwidth_scale":2,
+ "ultra_power_kw":0.25,
+ "studio_price_proxy_usd":{"ultra256":10799,"ultra512":22299},
+ "studio_price_basis":"Reported US Apple list prices, top36CPU/80GPU M5 Ultra 1TB; sourced purchase-cost proxy, not a quote; Apple specs confirm256/512GB; performance unmeasured",
+ "client_reserve_bytes":4000000000,"client_usable_fraction":0.9,
+ "glm_client_weights_bytes":181400000000,"glm_server_weights_bytes":328000000000,
+ "glm_total_parameters":320000000000,"glm_active_parameters":18000000000,
+ "glm_prefill_slowdowns":[1,2],"glm_server_bandwidth_efficiency":0.7,
+ "glm_server_bridge_basis":"UNMEASURED GLM bridge/import: Qwen measured per-token envelope/import reused; no GLM runtime qualification",
+ "large_fp8_weight_bytes":2400000000000,
+ "large_workspace_bytes_per_gpu":8000000000,
+ "large_context":262144,"large_retained_sessions_per_person":4,
+ "large_hbm_bytes_per_gpu":288000000000,"large_gpus_per_node":8,
+ "large_residency_fraction":0.9,
+ "output_limit_bytes":50000000,"free_floor_bytes":30064771072
+}

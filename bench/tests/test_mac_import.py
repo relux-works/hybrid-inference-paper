@@ -6,16 +6,24 @@ import subprocess
 import tempfile
 import unittest
 
-from test_restream import fixture, large_fixture, wait_for_copy
+from test_restream import fixture, large_fixture
+from copy_barrier import barrier, wait_for_copy
 from test_kitlib import kitlib
 
 ROOT = Path(__file__).resolve().parents[2]
 COMMON = ROOT/'bench/mac/scripts/common.sh'
 
 
+def reset_child_signals():
+    # Bash cannot trap a signal ignored on entry. Restore the child before exec;
+    # this test harness is single-threaded and does not change its parent's handler.
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+    signal.signal(signal.SIGTERM, signal.SIG_DFL)
+
+
 class MacImport(unittest.TestCase):
     def exercise(self, step, mode='fallback', streams='1,2,4,8', external=False):
-        with tempfile.TemporaryDirectory() as d:
+        with tempfile.TemporaryDirectory() as d, barrier() as (hook, fds, ready, release):
             d = Path(d)
             work, results = d/'work', d/'results'
             imported = d/'external imports' if external else work/'slots-import'
@@ -68,6 +76,8 @@ run_child() {
     */kitlib.py)
        if [ "$TEST_MODE" = disk-race ]; then
          real_run_child python3 -c 'import importlib.util,sys; from unittest.mock import patch; spec=importlib.util.spec_from_file_location("kitlib",sys.argv[1]); k=importlib.util.module_from_spec(spec); spec.loader.exec_module(k); sys.argv=sys.argv[1:]; disk=type("Disk",(),{"free":0})(); p=patch.object(k.shutil,"disk_usage",return_value=disk); p.start(); sys.exit(k.main())' "${@:2}"
+       elif [ "$TEST_MODE" = term-copy ] || [ "$TEST_MODE" = int-copy ]; then
+         real_run_child "$1" "$COPY_BARRIER" "${@:2}"
        else real_run_child "$@"; fi ;;
     *) echo benchmark >> "$RESULTS/events"
        case "$TEST_MODE" in error) return 1 ;; signal) kill -TERM $$ ;; esac ;;
@@ -86,7 +96,7 @@ run_child() {
                     f.write('mac_usable_bytes() { echo 2000000000; }\n')
             path = d/'step.sh'
             path.write_text(script)
-            env = dict(os.environ, WORK=str(work), RESULTS=str(results), TEST_COMMON=str(harness),
+            env = dict(os.environ, **hook, COPY_BARRIER=str(Path(__file__).with_name('copy_barrier.py')), WORK=str(work), RESULTS=str(results), TEST_COMMON=str(harness),
                        REAL_COMMON=str(COMMON), TEST_STREAMS=streams, TEST_MODE=mode,
                        MAXCTX_DEPTHS='4', AGENTS_DEPTH='4', AGENT_TURNS='1',
                        PATH=str(bin_dir)+os.pathsep+os.environ['PATH'], PYTHONDONTWRITEBYTECODE='1')
@@ -94,9 +104,10 @@ run_child() {
                 env['SLOT_FROM'] = str(imported)
             if mode in ('term-copy', 'int-copy'):
                 p = subprocess.Popen(['bash', str(path)], env=env, stdout=subprocess.PIPE,
-                                     stderr=subprocess.PIPE, text=True)
+                                     stderr=subprocess.PIPE, text=True, pass_fds=fds,
+                                     preexec_fn=reset_child_signals)
                 try:
-                    partial = wait_for_copy(p, work/'slots-restream')
+                    partial = wait_for_copy(p, ready)
                     self.assertLess(partial.stat().st_size, src.stat().st_size)
                     p.send_signal(signal.SIGTERM if mode == 'term-copy' else signal.SIGINT)
                     out, err = p.communicate(timeout=20)
@@ -106,7 +117,8 @@ run_child() {
                         p.terminate()
                     p.communicate(timeout=20)
             else:
-                r = subprocess.run(['bash', str(path)], env=env, capture_output=True, text=True)
+                r = subprocess.run(['bash', str(path)], env=env, capture_output=True, text=True,
+                                   preexec_fn=reset_child_signals)
             events = (results/'events').read_text() if (results/'events').exists() else ''
             log = (results/'kit.log').read_text()
             self.assertEqual(kitlib.sha256_file(src), original_hash)
@@ -157,6 +169,29 @@ run_child() {
                     r, events, _, _ = self.exercise(step, mode=mode)
                     self.assertEqual(r.returncode, code, r.stderr)
                     self.assertEqual(events, '')
+
+    # Claim: an ignored parent SIGINT (noninteractive background-launch shape)
+    # still yields 130 during each barrier-held copy, with the same cleanup and
+    # original-hash assertions; the parent's original disposition is restored.
+    def test_signal_during_restream_with_parent_sigint_ignored(self):
+        previous = signal.signal(signal.SIGINT, signal.SIG_IGN)
+        try:
+            self.test_signal_during_restream()
+            self.assertEqual(signal.getsignal(signal.SIGINT), signal.SIG_IGN)
+        finally:
+            signal.signal(signal.SIGINT, previous)
+
+    # Claim: ignored parent SIGTERM still yields 143 during either barrier-held
+    # copy and the neighbouring benchmark abort, retaining the original cleanup/
+    # hash checks and parent disposition.
+    def test_signal_during_restream_with_parent_sigterm_ignored(self):
+        previous = signal.signal(signal.SIGTERM, signal.SIG_IGN)
+        try:
+            self.test_signal_during_restream()
+            self.test_disk_error_signal()
+            self.assertEqual(signal.getsignal(signal.SIGTERM), signal.SIG_IGN)
+        finally:
+            signal.signal(signal.SIGTERM, previous)
 
     # Claim: one-stream servers use the original import directory directly and do
     # not produce restream output or require disk for a second copy.

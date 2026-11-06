@@ -1,0 +1,121 @@
+{
+  "source": "calc/out/run24/api_prices.csv",
+  "source_sha256": "38f4928f8c04d08b70ccf6f88f0458ad6a45a6b5f52522d192080b06afe7b3bc",
+  "median_rule": "upper middle sorted by cost, exactly as calc/run24/api.py ranked()",
+  "cadence": "v1_long_pause",
+  "cohorts": {
+    "no_cache_all15": {
+      "providers": [
+        "darkbloom/fp4",
+        "chutes/fp8",
+        "near-ai/fp8",
+        "ionstream/fp8",
+        "reka/fp8",
+        "modal",
+        "dekallm",
+        "wafer/fp8",
+        "deepinfra/bf16",
+        "tenstorrent/fp4",
+        "modelrun/fp4",
+        "akashml/fp8",
+        "parasail/fp8",
+        "coreweave/fp8",
+        "cloudflare"
+      ],
+      "costs": [
+        5.145157653634089,
+        5.516671197979875,
+        5.6930322411100835,
+        6.001275897887055,
+        6.12971075487746,
+        6.181084697673622,
+        6.283832583265945,
+        8.68082670435457,
+        19.711326477535152,
+        19.77554390603035,
+        26.281768636713537,
+        29.139301642524682,
+        31.127130821686947,
+        51.53605841750383,
+        57.88816131979853
+      ],
+      "median_provider": "wafer/fp8",
+      "median": 8.68082670435457
+    },
+    "no_cache_same11": {
+      "providers": [
+        "darkbloom/fp4",
+        "ionstream/fp8",
+        "modal",
+        "dekallm",
+        "wafer/fp8",
+        "deepinfra/bf16",
+        "tenstorrent/fp4",
+        "modelrun/fp4",
+        "parasail/fp8",
+        "coreweave/fp8",
+        "cloudflare"
+      ],
+      "costs": [
+        5.145157653634089,
+        6.001275897887055,
+        6.181084697673622,
+        6.283832583265945,
+        8.68082670435457,
+        19.711326477535152,
+        19.77554390603035,
+        26.281768636713537,
+        31.127130821686947,
+        51.53605841750383,
+        57.88816131979853
+      ],
+      "median_provider": "deepinfra/bf16",
+      "median": 19.711326477535152
+    },
+    "measured_same11": {
+      "providers": [
+        "ionstream/fp8",
+        "darkbloom/fp4",
+        "dekallm",
+        "modal",
+        "wafer/fp8",
+        "deepinfra/bf16",
+        "tenstorrent/fp4",
+        "parasail/fp8",
+        "modelrun/fp4",
+        "coreweave/fp8",
+        "cloudflare"
+      ],
+      "costs": [
+        3.604082737144948,
+        5.115376113781972,
+        5.157348157283371,
+        6.181084697673622,
+        8.633121438429518,
+        12.549870329346795,
+        18.019400091630217,
+        20.935880467305942,
+        22.356340787382127,
+        27.87233623090084,
+        57.88816131979853
+      ],
+      "median_provider": "deepinfra/bf16",
+      "median": 12.549870329346795
+    }
+  },
+  "bandwidth": {
+    "kv_bytes_per_token": 34816,
+    "depth": 1040000,
+    "recurrent_f32_bytes": 156893184,
+    "peak_bytes_per_s": 400000000000,
+    "kv_bytes": 36208640000,
+    "ceiling_tok_s": 7.22812270937358,
+    "measured_tok_s": 1.6638,
+    "ceiling_to_measured": 4.344345900573134,
+    "answer512_seconds": 307.7292943863445,
+    "Apple_source": "https://support.apple.com/en-gb/117737",
+    "weights_source": "data/measurements/ivmbp-2026-10-30/qwen27b-bench/normalized-results.json:model_bytes",
+    "measurement": "calc/run23/data/mac_direct.csv",
+    "weights_bytes": 18973870432
+  }
+}

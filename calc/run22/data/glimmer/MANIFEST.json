@@ -1,0 +1,179 @@
+{
+  "created_utc": "2026-11-03T18:33:26Z",
+  "kit": "glimmer30-mac-bench",
+  "kit_version": "1.6.7",
+  "llama_cpp_commit": "dde879bc4f954b809892fd0d660515f42536394a",
+  "ctx_checkpoints": "0",
+  "model": "meta-models/Muse-Glimmer-30B-GGUF@b44f1072cf75e918a1b82a3a17b45c4389b076e7 Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf",
+  "model_sha256": "4cc57c0f51040a226e5a72cc47b7613f7772950e460a665f7083de89f183f60e",
+  "benchmark_sha256": "df33696ec94e6c76fe585b891fb2673aae1b6a90731d8dd91bbb486aab39a6ad",
+  "results_kit_version": "1.6.7",
+  "priority_override_used": false,
+  "normal_priority": true,
+  "files": {
+    "OPERATOR-READINESS.json": {
+      "bytes": 136990,
+      "sha256": "bcb01462c473887dcd76636ce0f0e7f19610e59aa3bb6e887b53d1470b709dd1"
+    },
+    "agents-loop-apple-m5-max-64g-glimmer30-agents64k-20261103T220442.jsonl": {
+      "bytes": 23467,
+      "sha256": "cbbcf5eea70c20f5ebb8f290af8317c6246b3b4ef0470f768d2be256de267a69"
+    },
+    "agents-loop-apple-m5-max-64g-glimmer30-agents64k-20261103T220442.md": {
+      "bytes": 1203,
+      "sha256": "3c972ab626a504945a8010635870b14f3af55923522529e18b737a4066b4833b"
+    },
+    "build-configure.log": {
+      "bytes": 1512,
+      "sha256": "3250ede00e9cdaab01b54c67a2fbf0cbee13c0cef00341412b510004ea386641"
+    },
+    "build.log": {
+      "bytes": 646,
+      "sha256": "f5b5e2aad285de09683c07ca0afd304d2a3c0c4d6e919cc4cbd84869818d7d2d"
+    },
+    "ctx-checkpoints.log": {
+      "bytes": 20,
+      "sha256": "bb1ad350d4a9708d010c2b31d96f014921895bb63f6ebb9a3378d985cafe7e64"
+    },
+    "delta-geometry-20261103T183103Z.json": {
+      "bytes": 15213,
+      "sha256": "ed139edd08be15363357c4375c8ca49155ab0440aa75aadfdc0aecdc66e248d6"
+    },
+    "hybrid-bench-apple-m5-max-64g-glimmer30-par4-20261103T212032.jsonl": {
+      "bytes": 915,
+      "sha256": "49b330621c0bf1fcf7affd19e36bef8696b578eab65dd074101348a302e6c359"
+    },
+    "hybrid-bench-apple-m5-max-64g-glimmer30-par4-20261103T212032.md": {
+      "bytes": 153,
+      "sha256": "5bb7a50773f913dbe99d7f3fdf9e8fbf71f50726245c6517d392e06af75f9260"
+    },
+    "hybrid-bench-apple-m5-max-64g-glimmer30-q4km-q8kv-20261103T211343.jsonl": {
+      "bytes": 7017,
+      "sha256": "26f56225fd70c03517c0fea34517275ce1aaf3633e991fe95df8cd3e8af1f5bf"
+    },
+    "hybrid-bench-apple-m5-max-64g-glimmer30-q4km-q8kv-20261103T211343.md": {
+      "bytes": 619,
+      "sha256": "30c5887368467e272da1dd8c9db186cec77f20196843ca8418ed0d8ba1654aff"
+    },
+    "hybrid-bench-apple-m5-max-64g-smoke-20261103T211331.jsonl": {
+      "bytes": 1769,
+      "sha256": "22c7e363af318b845237c91e2965f5d6ed851b4f09fee68432b8e5bcc9e2baaa"
+    },
+    "hybrid-bench-apple-m5-max-64g-smoke-20261103T211331.md": {
+      "bytes": 180,
+      "sha256": "86dc25ec482fde1a81032066151313a2a6a3eb6ce6177dfb500169e0e1bfde8d"
+    },
+    "kit.log": {
+      "bytes": 6428,
+      "sha256": "8b807d9c7b32fcdbe542191292be70bebe69543a8eaceb16da1f640ae4327c2d"
+    },
+    "llama-server-version.txt": {
+      "bytes": 106,
+      "sha256": "82e6c52fe9d9f31e0d4817b09915ea52940d0b71dde4a20538556c16f33639c3"
+    },
+    "model-geometry.json": {
+      "bytes": 378,
+      "sha256": "9b54f4bc66b44fd8aaf42f0aa836c635a37ff8ae7e08617768fa02bc7299460d"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-maxctx129k-20261103T215743-1793728663001892000.jsonl": {
+      "bytes": 12767,
+      "sha256": "80be63abe84fb9694fd546cfbe9e20d72855a41f12ac1ce4822904c2cfdcbc07"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-maxctx129k-20261103T215743-1793728663001892000.md": {
+      "bytes": 1317,
+      "sha256": "07a1da9246f5d9a72ff64a9ccb07b48b7ca8a9c07afbc09492aff2aabb9704d3"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale32768-fill-20261103T212505-1793726705739474000.jsonl": {
+      "bytes": 1024,
+      "sha256": "b46df9e9ebb6d5286dc492b301e513e3e2f0d4b68528be49adc1e4ae7bf57a0d"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale32768-fill-20261103T212505-1793726705739474000.md": {
+      "bytes": 346,
+      "sha256": "036c277896cb17ec6833515760a4743602c9322faa7b6363af635519ab250def"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale32768-largest-np32-20261103T213114-1793727074860383000.jsonl": {
+      "bytes": 145463,
+      "sha256": "f71bf4f7569d583432fd2c83e4df32122581ac55e39b54731448bbe89a1a85e8"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale32768-largest-np32-20261103T213114-1793727074860383000.md": {
+      "bytes": 9236,
+      "sha256": "139a9bc3c77d2c8c4d44c4f771f6e712b415fa76bec42bcb2b997c6d852b8551"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale65536-fill-20261103T213930-1793727570435471000.jsonl": {
+      "bytes": 1024,
+      "sha256": "65ae50719b80ff300561cc2565ec4c9ac85b950ebd2436249a3d152c681c4cea"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale65536-fill-20261103T213930-1793727570435471000.md": {
+      "bytes": 346,
+      "sha256": "3f92a09c41144ebad5784a4815af9458e6313ac070dcd4d0a91ab7267631c4ef"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale65536-largest-np32-20261103T214658-1793728018854113000.jsonl": {
+      "bytes": 145310,
+      "sha256": "998041800975160b35b4c7426c6660f9fdbab638ef7a1ccb9a0d03e4e6baf356"
+    },
+    "parallel-depth-apple-m5-max-64g-glimmer30-scale65536-largest-np32-20261103T214658-1793728018854113000.md": {
+      "bytes": 9103,
+      "sha256": "2ca1c4c0e74c9e0288f60a1b008a3ca62042ce9a893dcde96b6f442fdc205d2d"
+    },
+    "scaling-32768-20261103T172504Z-22021-after.json": {
+      "bytes": 2309,
+      "sha256": "3536dae94d9d1d7fb00e2040c4e8089f0a2173ae7f774e5504ba6b4ac2b26547"
+    },
+    "scaling-32768-20261103T172504Z-22021-before.json": {
+      "bytes": 2294,
+      "sha256": "8c9c446726db6b84d7f674fe0157e12c9156f06d3c19826e5d3005cb1982258e"
+    },
+    "scaling-65536-20261103T173929Z-22021-after.json": {
+      "bytes": 2294,
+      "sha256": "a4df7816ad195d72270fdee146347f427669b4b9ebdcbdd2d61e494cfb3f8be1"
+    },
+    "scaling-65536-20261103T173929Z-22021-before.json": {
+      "bytes": 2294,
+      "sha256": "aa145f5fa5cb18a0bb77cffb27655b00808b0baec5ce1f5050822b864e2b8655"
+    },
+    "server-agents-64k-np8.log": {
+      "bytes": 162548,
+      "sha256": "f95a511b604b50e6288c86a4af01b211a3add39a4342f9cb55c690a4e4be00f2"
+    },
+    "server-delta-geometry.log": {
+      "bytes": 7869,
+      "sha256": "a3cca060c555692927eb09f8e8e75b24513eb1ccc218f01feb9a414ef63c6e4e"
+    },
+    "server-depth.log": {
+      "bytes": 24219,
+      "sha256": "d70417a792625b556c7479895b2ac4ce8fc446e5390ce4f0e70ca842cda1623e"
+    },
+    "server-maxctx-129k-np8.log": {
+      "bytes": 33529,
+      "sha256": "8f91031b487a52b70bf3d9851d18764aed0ce5c8fda9b43e9a1f1a52717fe7a5"
+    },
+    "server-par4.log": {
+      "bytes": 17864,
+      "sha256": "a87a790dc2f957c5922f21e16673995d7faa99ba1bfa2f66317e1868fc3b2420"
+    },
+    "server-scale-32768-fill.log": {
+      "bytes": 4054,
+      "sha256": "e685571f8140ebe245d25d728852be344b0a7811f16219ca3868dea26a127a3f"
+    },
+    "server-scale-32768-np32.log": {
+      "bytes": 352671,
+      "sha256": "14020a4a550672374e012a65b095d548495c394ae53e3f6923811d3ca2990eff"
+    },
+    "server-scale-65536-fill.log": {
+      "bytes": 6390,
+      "sha256": "40927796af3a8a55c9db9ec2d1d1f6f970f9429221d9c9685ddcdd0911dcce22"
+    },
+    "server-scale-65536-np32.log": {
+      "bytes": 363183,
+      "sha256": "84653f6545251dc7a47614dd9e93434b8ac50d80d401b32ea2a0ccc9cf837d1e"
+    },
+    "server-smoke.log": {
+      "bytes": 3748,
+      "sha256": "7f4f360b53e0997351c33cc3725eb12551c05ec5becaf3d74d325147ea18c1ad"
+    },
+    "system.json": {
+      "bytes": 148253,
+      "sha256": "03c9c03b85501c35dca2d49a52632f2be5d13bd7be6400292eddde32ca013cea"
+    }
+  }
+}

@@ -7,7 +7,7 @@ from .inputs import InputGap
 from .metrics import Graph,nonempty,unique
 from .ownership import fit_sessions,selected
 from .paper import policy,throughput
-from .performance import flop,payload,roofline_prefill,transfer
+from .performance import flop,payload,roofline_prefill,transfer,local_rate_at
 from .session_hosting import Hosting,policy_with_reload
 from .server_prefill import compute_at,scale_compute,mean_seconds,measured_compute
 
@@ -77,7 +77,7 @@ def overflow_cost(requested,served,indices,prices,days):
 
 def offload_stats(calls,local,model,compute,link,migration,client_import=None):
     steps=policy_with_reload(calls,model,compute,link,local,migration,client_import)
-    saving=[max(0,n/local(d)-step[0]) if step[3] else 0.0 for (d,n,o,t),step in zip(calls,steps)]
+    saving=[max(0,n/local_rate_at(local,d,n)-step[0]) if step[3] else 0.0 for (d,n,o,t),step in zip(calls,steps)]
     wins=sum(x>0 for x in saving)
     return {'share':wins/len(saving),'saved':sum(saving)/len(saving),'wins':wins,'total':sum(saving)}
 
@@ -109,6 +109,12 @@ class Context:
         if scenario.get('run13'):
             from .measurements_r13 import MeasuredM5
             self.measured_m5=MeasuredM5()
+        if scenario.get('run16'):
+            from .measurements_r16 import configure_context
+            configure_context(self)
+        if scenario.get('run17'):
+            from .measurements_r17 import configure_context
+            configure_context(self)
     def add(self,name,refs,fn):return self.g.add('pt.'+name,refs,fn)
     def label(self,name,value):return self.g.constant('pt.'+name,value)
     def positions(self,path):
@@ -196,6 +202,12 @@ class Context:
     def local_rate(self,key,m):
         p='hardware.clients.'+key;name='local.'+m['key']+'.'+key
         if name in self.cache:return self.cache[name]
+        if self.scenario.get('run16') and key=='m3max' and m['key']=='qwen27':
+            def measured(q):
+                if q!='Q4':raise InputGap('owners.client_quant','PRI31 anchors require Q4/q8_0')
+                return self.r16_single
+            self.cache[name]=self.add(name,['owners.client_quant'],measured)
+            return self.cache[name]
         measured_family=self.scenario.get('run14') and not self.scenario.get('m5_m3_sensitivity') and key in ('m5max','ultra96','ultra256')
         if self.measured_m5 and (key=='m5max64' or measured_family) and m['key']=='qwen27':
             if key in ('m5max64','m5max'):
@@ -232,6 +244,11 @@ class Context:
                 p['normalized_decode_interval_gain'],p['frozen_v11_row']['streams'],self.inputs.get('analysis.decode_state_passes'))
         return self.cache['r14.depth_law'](streams,depth)
     def client_import(self,key='m3max'):
+        if self.scenario.get('run16'):
+            from .measurements_r16 import ClientImport
+            cache='r16.import.'+self.scenario.get('import_variant','prototype_depth')
+            if cache not in self.cache:self.cache[cache]=ClientImport(self.scenario.get('import_variant','prototype_depth'))
+            return self.cache[cache]
         if not self.scenario.get('run14'):return None
         from .run14_r5 import import_seconds
         # Other Apple devices use the single-point M3 token rate as a
@@ -273,14 +290,14 @@ class Context:
         # Client eligibility is independent of server prices/admission.
         eligibility=self.add(cache+'.eligible',[self.valid,memory],supported)
         matched=self.add(cache+'.matched',[self.valid,eligibility],lambda rows,idx:nonempty([rows[i] for i in idx]))
-        model=self.add(cache+'.wire',[m['flop'],'owners.models.qwen27.kv',m['state']],lambda fm,k,s:dict(fm,kv=k,wire_state=s))
+        model=self.add(cache+'.wire',[m['flop'],'owners.models.qwen27.kv',getattr(self,'wire_state',m['state'])],lambda fm,k,s:dict(fm,kv=k,wire_state=s))
         wire=self.add(cache+'.link',[link,'hardware.links.wan.goodput','hardware.links.wan.latency'],lambda b,g,l:dict(bandwidth=b,goodput=g,latency=l))
         migration=self.hosting.vector(cache,matched,m['kv'],m['state'])
         def hybrid_steps(rows,m,c,l,r,free,state,migration):
             if any((d+n+o)*m['kv']+state>free for d,n,o,t in rows):raise InputGap(srv['prefix']+'.memory','full context does not fit the server replica; hybrid admission unavailable')
             return policy_with_reload(rows,m,c,l,r,migration,self.client_import(key))
         steps=self.add(cache+'.steps',[matched,model,srv['compute'],wire,local,srv['free'],m['state'],migration],hybrid_steps)
-        local_steps=self.add(cache+'.local_steps',[matched,local],lambda rows,r:[(n/r(d),n/r(d),0,False) for d,n,o,t in rows])
+        local_steps=self.add(cache+'.local_steps',[matched,local],lambda rows,r:[(n/local_rate_at(r,d,n),n/local_rate_at(r,d,n),0,False) for d,n,o,t in rows])
         bounded=self.add(cache+'.end_memory',[matched,memory],end_memory)
         cap=self.add(cache+'.capacity',[matched,steps,streams,bounded,decoder,'paper_tables.hours'],throughput)
         localcap=self.add(cache+'.local_capacity',[matched,local_steps,streams,bounded,decoder,'paper_tables.hours'],throughput)
@@ -625,4 +642,7 @@ def calculate(scenario,inputs):
         from .measurements_r14 import append_parallel_tables,append_hardware_tables
         append_parallel_tables(result,c)
         append_hardware_tables(result,c)
+        if scenario.get('run16'):
+            from .measurements_r16 import append_evidence
+            append_evidence(result,c)
     return result

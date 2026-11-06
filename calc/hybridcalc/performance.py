@@ -11,6 +11,18 @@ def positive(value, name, zero=False):
     return value
 
 
+def local_rate_at(rate, depth, delta):
+    """A measured delta surface may specialize the historical depth-only API."""
+    return rate.for_delta(depth, delta) if hasattr(rate, 'for_delta') else rate(depth)
+
+
+def import_at(importer, tokens, depth):
+    """Pass conditioning depth only to import models that declare that input."""
+    if importer is None:
+        return 0.0
+    return importer.at_depth(tokens, depth) if hasattr(importer, 'at_depth') else importer(tokens)
+
+
 def flop(model, depth):
     positive(depth, 'depth', zero=True)
     if depth > model['context_limit']:

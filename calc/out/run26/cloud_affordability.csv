@@ -1,0 +1,5 @@
+billing,retention_basis,criterion,first_affordable,affordable_team_intervals,team50_person_month,service_cost_pending,scan_max
+bought,weights_only_floor,"capacity cost <=1000 USD/person-month; declared budget, not successful-work cost or service certification",34,"[[34, 500]]",674.0323420000001,True,500
+bought,all_resident_sessions,"capacity cost <=1000 USD/person-month; declared budget, not successful-work cost or service certification",135,"[[135, 135], [152, 155], [169, 175], [186, 194], [203, 214], [220, 234], [236, 500]]",1348.0646840000002,True,500
+rented,weights_only_floor,"capacity cost <=1000 USD/person-month; declared budget, not successful-work cost or service certification",111,"[[111, 500]]",2219.2,True,500
+rented,all_resident_sessions,"capacity cost <=1000 USD/person-month; declared budget, not successful-work cost or service certification",,[],4438.4,True,500

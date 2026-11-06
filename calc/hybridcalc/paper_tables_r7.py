@@ -5,7 +5,7 @@ from .inputs import InputGap
 from .metrics import field,nonempty
 from .paper import throughput
 from .paper_tables import Context,end_memory,measured_rate,supported
-from .performance import flop,payload,transfer
+from .performance import flop,payload,transfer,local_rate_at,import_at
 from .session_hosting import route
 
 
@@ -91,7 +91,9 @@ class R7:
             rate=self.add(n+'.parallel_rate',['owners.client_quant'],self.c.m3_decoder)
         self.clients[n]=dict(prefix=p,local=local,memory=memory,rate=rate,state=s)
         return self.clients[n]
-    def import_node(self,name,size,client):
+    def import_node(self,name,size,client,depth=None):
+        if self.c.scenario.get('run16'):
+            return self.add(name,[size,client['state'],self.c.kv,depth],lambda b,s,k,d:import_at(self.c.client_import(),(b-s)/k,d))
         if self.c.scenario.get('run14'):
             return self.add(name,[size,client['state'],self.c.kv],lambda b,s,k:self.c.client_import()((b-s)/k))
         return self.add(name,[size,client['prefix']+'.bandwidth','r7.import_efficiency','r7.import_copies','r7.import_fixed_s'],import_time)
@@ -112,10 +114,10 @@ class R7:
         one=self.add(name+'.one',[depth,portion],lambda d,n:[(d,n,0,0)])
         migration=self.c.hosting.vector('r7.'+name,one,self.c.kv,client['state'])
         reload_s=self.add(name+'.reload',[migration],lambda rows:rows[0][0])
-        local=self.add(name+'.local',[depth,portion,client['local'],'r7.integration_step',client_final],lambda d,n,r,step,ready:integrate_span(lambda x:1/r(x),d,n,step))
+        local=self.add(name+'.local',[depth,portion,client['local'],'r7.integration_step',client_final],lambda d,n,r,step,ready:integrate_span(lambda x:1/(r.cold(x) if hasattr(r,'cold') and d==0 else local_rate_at(r,x,n)),d,n,step))
         server=self.add(name+'.server',[depth,portion,m['flop'],self.compute,'r7.integration_step',server_final],lambda d,n,m,c,step,ready:integrate_span(lambda x:flop(m,x)/compute_at(c,x),d,n,step))
         size=self.add(name+'.payload',[portion,self.c.kv,client['state']],payload)
-        imp=self.import_node(name+'.import',size,client)
+        imp=self.import_node(name+'.import',size,client,depth)
         last=self.add(name+'.last',[client['rate'],client_final,'r7.last_token_tokens'],lambda r,d,n:n/r(1,d))
         return dict(reload=reload_s,local=local,server=server,size=size,import_s=imp,last=last,state=client['state'],final=final)
 
@@ -162,7 +164,7 @@ def sensitivity_table(r):
             streams=r.add(name+'.streams',['paper_tables.streams',cl['memory'],r.c.normalized],choose)
             bounded=r.add(name+'.end_memory',[calls,cl['memory']],end_memory)
             migration=r.c.hosting.vector(name,calls,r.c.kv,cl['state'])
-            localsteps=r.add(name+'.localsteps',[calls,cl['local']],lambda rows,rate:[(n/rate(d),n/rate(d),0,False) for d,n,o,t in rows])
+            localsteps=r.add(name+'.localsteps',[calls,cl['local']],lambda rows,rate:[(n/local_rate_at(rate,d,n),n/local_rate_at(rate,d,n),0,False) for d,n,o,t in rows])
             fraction=r.add(name+'.fit_share',[idx,r.c.valid],lambda idx,all:len(idx)/len(nonempty(all)))
             minimum=r.add(name+'.min_streams',[calls,cl['memory'],streams],lambda rows,mem,k:min(min(k,mem(d+n+o)) for d,n,o,t in rows))
             maximum=r.add(name+'.max_streams',[calls,cl['memory'],streams],lambda rows,mem,k:max(min(k,mem(d+n+o)) for d,n,o,t in rows))
@@ -189,8 +191,8 @@ def sensitivity_table(r):
                         own=[];remote_times=[];shadow=[];outputs=[];wires=[];foreground=[]
                         for (d,delta,o,t),(reload_s,spill) in zip(rows,migration):
                             if (d+delta+o)*kv+state>free:raise InputGap(r.server['prefix']+'.memory','complete context does not fit B300 replica')
-                            local_s=delta/local(d)
-                            imp=(r.c.client_import()(delta) if r.c.scenario.get('run14') else import_time(payload(delta,kv,state),bandwidth,eff,copies,fixed));evaluation=last/rate(1,d+delta)
+                            local_s=delta/local_rate_at(local,d,delta)
+                            imp=(import_at(r.c.client_import(),delta,d) if r.c.scenario.get('run14') else import_time(payload(delta,kv,state),bandwidth,eff,copies,fixed));evaluation=last/rate(1,d+delta)
                             remote=hybrid_time(reload_s+delta*flop(model,d)/compute_at(compute,d),transfer(delta,kv,state,link),imp,evaluation)
                             own.append(local_s);remote_times.append(remote);shadow.append((delta+o)*flop(model,d)/compute_at(compute,d));outputs.append(o*flop(model,d)/compute_at(compute,d));wires.append(payload(delta,kv,state));foreground.append(imp+evaluation)
                         return route(own,remote_times,shadow,outputs,wires,foreground,migration.catch_up)
@@ -225,10 +227,13 @@ def architecture_table(r):
         if type(rate) not in (float,int) or not math.isfinite(rate) or rate<=0:raise InputGap('measurements.depth','positive finite architecture reference rate required')
         return r.c.inputs.measured_value('depth','architecture.reference_prefill_tok_s',rate,'token/s')
     ref_rate=r.add('arch.reference_rate',[r.c.depth,'r7.arch.reference_segment_end',r.q4],reference)
+    if r.c.scenario.get('run16'):
+        ref_rate=r.add('arch.pri31_reference_rate',['r7.arch.reference_depth','r7.arch.portion',r.q4],lambda d,n,q:r.c.r16_single.for_delta(d,n))
     for key,(p,full,sliding,geometry,flops,window) in configs.items():
         for state in r.c.scenario['state_keys']:
             n='arch.'+key+'.'+state
-            fixed=r.add(n+'.state',[p+'.state','r7.states.'+state+'.factor'],lambda s,f:s*f)
+            state_base=r.c.state if r.c.scenario.get('run16') and key=='qwen27' else p+'.state'
+            fixed=r.add(n+'.state',[state_base,'r7.states.'+state+'.factor'],lambda s,f:s*f)
             small=r.add(n+'.small',[geometry,window,fixed,'r7.arch.portion'],arch_delta)
             large=r.add(n+'.large',[geometry,window,fixed,'r7.arch.large_portion'],arch_delta)
             local=r.add(n+'.local',['r7.arch.portion',ref_rate,configs['qwen27'][4],flops],lambda n,rate,ref,f:n/(rate*ref/f))

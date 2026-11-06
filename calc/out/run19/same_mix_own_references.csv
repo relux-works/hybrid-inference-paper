@@ -1,0 +1,7 @@
+option,team,boxes,usd_person_month,usd_per_1000_calls,basis,status,alarm_inputs
+office6000,5,4,491.246,9.357066666666666,existing fully-local own_seconds incl output decode/residence; same conditional calls; no client purchase,ok,
+office6000,50,32,392.9968,7.4856533333333335,existing fully-local own_seconds incl output decode/residence; same conditional calls; no client purchase,ok,
+office6000,500,318,390.54057,7.438868,existing fully-local own_seconds incl output decode/residence; same conditional calls; no client purchase,ok,
+b300_node,5,1,3370.1617100000003,64.19355638095239,existing fully-local own_seconds incl output decode/residence; same conditional calls; no client purchase,ok,
+b300_node,50,10,3370.1617100000003,64.19355638095239,existing fully-local own_seconds incl output decode/residence; same conditional calls; no client purchase,ok,
+b300_node,500,96,3235.3552416,61.625814125714285,existing fully-local own_seconds incl output decode/residence; same conditional calls; no client purchase,ok,

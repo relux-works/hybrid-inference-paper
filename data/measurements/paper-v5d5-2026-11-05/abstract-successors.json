@@ -1,0 +1,171 @@
+{
+  "rc3 review2 abstract paired plan": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "граница выбрана после результатов, 8k требует дополнительных интервалов; эквивалентность текста не установлена."
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "граница выбрана после результатов"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v4b abstract link": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "На канале 5.19~МБ/с политика оставила все ходы локальными; при 2343 токенах на 100 тысячах порог f32 равен 7.905~МБ/с."
+    ],
+    "to": [
+      "11-limitations.tex",
+      "\\textbf{Граница канала.}",
+      "порог исключает догоняющий prefill и очереди."
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v4b abstract growing": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "40 ходов CUDA и Metal прошли при 9.75~МБ/с, включая обрыв и пересинхронизацию; ускорения длинной сессии опыт не показал:"
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Сессия из 40 ходов между CUDA и Metal прошла обрыв и пересинхронизацию, но ускорения не показала:"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5a abstract division": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Общий сервер выполняет prefill, машина пользователя генерирует по собственному контексту."
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Предлагаем разделение труда: общий сервер выполняет prefill новых токенов, машина пользователя хранит сессию и генерирует."
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5a abstract measured modelled": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "на одной GPU при 512 тысячах и 1.04 миллиона логиты совпали с локальными в пяти случаях."
+    ],
+    "to": [
+      "11-limitations.tex",
+      "% checker-site: v5d5-retained-deep-summary",
+      "На одной GPU при 512 тысячах и 1.04 миллиона f32-оффлоад точно совпал с локальным по логитам в пяти случаях."
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5a2 abstract score basis": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Оценки RULER Qwen эквивалентны в пределах ±2 п.п. на 8 и 32 тысячах;"
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "оценки RULER эквивалентны локальным в пределах ±2 п.п. на 8 и 32 тысячах"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5a3 abstract profile": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "На B300 в диапазоне профиля 131--181 тысяча измеренные опоры дают расчётное отношение vLLM FP8 к llama.cpp Q4 10.1--10.8 раза по prefill."
+    ],
+    "to": [
+      "06-server.tex",
+      "% checker-site: v5d5-retained-profile-summary",
+      "На B300 в диапазоне профиля 131--181 тысяча измеренные опоры дают расчётное отношение vLLM FP8 к llama.cpp Q4 10.1--10.8 раза по prefill."
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5a3 abstract f32": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Импорт f32 дал нулевые парные разности KL и top-1 во всех 20 документах;"
+    ],
+    "to": [
+      "11-limitations.tex",
+      "% checker-site: v5d5-retained-f32-summary",
+      "Импорт f32 дал нулевые парные разности KL и top-1 во всех 20 документах."
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5a3 abstract bf16": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "bf16 округляет состояние; влияния на KL не найдено: −0.000298 нат, 95\\%-й интервал [−0.001076,+0.000390],"
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "bf16 округляет и вдвое сокращает рекуррентное состояние без измеримого эффекта на KL"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5b abstract dedicated": {
+    "from": [
+      "00-abstract.tex",
+      "Схема адресована локальным автономным агентам на уже имеющемся железе и работе внутри своего контура.",
+      "В расчёте для имеющегося M5 Max и выделенного PRO 6000 гибрид не дешевле самого дешёвого допущенного API ни в одной оценимой измеренной точке Qwen;"
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "при имеющихся M5 Max, выделенном офисном PRO 6000, bf16 и доле 20\\%"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5b abstract crossings": {
+    "from": [
+      "00-abstract.tex",
+      "Схема адресована локальным автономным агентам",
+      "наборы неполны, доли кэша перенесены на профиль расчётно."
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Наборы цен неполны, перенос долей кэша на профиль есть допущение."
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5c abstract batching": {
+    "from": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "Пакет decode измерен с обеих сторон."
+    ],
+    "to": [
+      "06-server.tex",
+      "% checker-site: v5d5-retained-batching-summary",
+      "Пакет decode измерен с обеих сторон;"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  },
+  "v5d4 abstract honest session": {
+    "from": [
+      "00-abstract.tex",
+      "\\begin{quote}\\small",
+      "удалённо выполнено 2 хода из 40, на критическом пути стояли снимки и хэширование."
+    ],
+    "to": [
+      "00-abstract.tex",
+      "\\textbf{Аннотация.}",
+      "удалённо выполнено 2 хода, на критическом пути стояли диагностические снимки и хэширование;"
+    ],
+    "reason": "Owner r21l analyst abstract; retained body source and finite applicability boundaries."
+  }
+}

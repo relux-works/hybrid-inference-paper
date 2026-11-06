@@ -11,6 +11,7 @@ import tempfile
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from hybridcalc.engine import load,run
+from regeneration import compare_csv,reference_float_cells
 from hybridcalc.export import write_tables
 from hybridcalc.inputs import InputGap
 from hybridcalc.paper_tables import Context
@@ -18,6 +19,29 @@ from hybridcalc.server_prefill import fit,compute_at,mean_seconds
 from hybridcalc.performance import flop
 from r11_audit import CASES
 from r12_audit import check_frozen,ROOT,PUBLISHED
+
+
+def scratch_directory():
+    # The standalone test may be the first command in a fresh checkout. Keep its
+    # repository output root available, but put temporary CSVs in the chosen TMPDIR.
+    (ROOT/'.temp').mkdir(exist_ok=True)
+    return tempfile.TemporaryDirectory()
+
+
+class Run12ScratchTests(unittest.TestCase):
+    # Claim: standalone regeneration creates a missing repository scratch root;
+    # temporary data use TMPDIR and are cleaned without removing that output root.
+    def test_standalone_creates_missing_temp_root(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertFalse((root/'.temp').exists())
+            with patch.dict(scratch_directory.__globals__, ROOT=root):
+                with scratch_directory() as scratch:
+                    self.assertTrue((root/'.temp').is_dir())
+                    self.assertEqual(Path(scratch).parent, Path(tempfile.gettempdir()))
+                self.assertFalse(Path(scratch).exists())
+            self.assertTrue((root/'.temp').is_dir())
 
 
 class Run12Tests(unittest.TestCase):
@@ -123,22 +147,24 @@ class Run12Tests(unittest.TestCase):
             for key in original:
                 if key not in ('name','description','inputs','export_namespace'):self.assertEqual(original[key],sensitive[key])
 
-    # Recomputing all eight design scenarios reproduces all42 CSVs byte-for-byte.
+    # Claim: all42 design CSVs retain reference bytes on CPython3.14.4; other
+    # interpreters retain every non-float byte and floats within two binary64 steps.
     # Run11 artifacts retain a57db67; every current v2 publication byte is independently pinned.
     def test_all_design_csv_bytes_unchanged(self):
         check_frozen();count=0
-        with tempfile.TemporaryDirectory(dir=ROOT/'.temp') as directory:
+        with scratch_directory() as directory:
             for name,_ in CASES:
                 manifest=write_tables(run(name),directory)
                 for table,file in manifest['tables'].items():
-                    self.assertEqual((Path(directory)/file).read_bytes(),(PUBLISHED/file).read_bytes(),file);count+=1
+                    expected=(PUBLISHED/file).read_bytes()
+                    compare_csv((Path(directory)/file).read_bytes(),expected,reference_float_cells(expected,file),file);count+=1
         self.assertEqual(count,42);check_frozen()
 
     # Exporting sensitivity into a directory containing every original artifact preserves their bytes.
     # Published measured sibling hashes and comparison coverage are verified separately by r12_audit.
     def test_measured_export_cannot_overwrite_run11(self):
         before=check_frozen()
-        with tempfile.TemporaryDirectory(dir=ROOT/'.temp') as directory:
+        with scratch_directory() as directory:
             target=Path(directory)
             for p in PUBLISHED.iterdir():
                 if p.is_file() and '_measured_server' not in p.name:(target/p.name).write_bytes(p.read_bytes())

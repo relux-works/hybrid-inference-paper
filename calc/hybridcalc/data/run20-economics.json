@@ -1,0 +1,97 @@
+{
+  "base": "3a1eed0dbb7962bca082e5941e0853122ae70a5e",
+  "base_review": "R19 exact-head review pending at branching",
+  "servers": {
+    "b300_fp8": {
+      "host": "b300",
+      "variant": "fp8-default",
+      "engine": "vllm",
+      "weights_bytes": 27000000000.0,
+      "kv_bytes_token": 65536,
+      "memory_bytes": 288000000000.0,
+      "workspace_bytes": 8000000000.0,
+      "bandwidth_bytes_s": 8000000000000.0,
+      "hourly_usd": 76
+    },
+    "b300_fp8_kv": {
+      "host": "b300",
+      "variant": "fp8-kv",
+      "engine": "vllm",
+      "weights_bytes": 27000000000.0,
+      "kv_bytes_token": 32768,
+      "memory_bytes": 288000000000.0,
+      "workspace_bytes": 8000000000.0,
+      "bandwidth_bytes_s": 8000000000000.0,
+      "hourly_usd": 76
+    },
+    "pro6000_fp8": {
+      "host": "pro6000",
+      "variant": "fp8-default",
+      "engine": "vllm",
+      "weights_bytes": 27000000000.0,
+      "kv_bytes_token": 65536,
+      "memory_bytes": 96000000000.0,
+      "workspace_bytes": 8000000000.0,
+      "bandwidth_bytes_s": 1790000000000.0,
+      "hourly_usd": 2.2
+    },
+    "llama_b300": {
+      "host": "b300",
+      "variant": "Q4/q8_0",
+      "engine": "llama_cpp",
+      "weights_bytes": 18970000000.0,
+      "kv_bytes_token": 34816,
+      "memory_bytes": 288000000000.0,
+      "workspace_bytes": 8000000000.0,
+      "bandwidth_bytes_s": 8000000000000.0,
+      "hourly_usd": 76
+    },
+    "llama_pro6000": {
+      "host": "pro6000",
+      "variant": "Q4/q8_0",
+      "engine": "llama_cpp",
+      "weights_bytes": 18970000000.0,
+      "kv_bytes_token": 34816,
+      "memory_bytes": 96000000000.0,
+      "workspace_bytes": 8000000000.0,
+      "bandwidth_bytes_s": 1790000000000.0,
+      "hourly_usd": 2.2
+    },
+    "rtx5090": {
+      "host": "rtx5090",
+      "variant": "Q4/q8_0",
+      "engine": "llama_cpp",
+      "weights_bytes": 18970000000.0,
+      "kv_bytes_token": 34816,
+      "memory_bytes": 32000000000.0,
+      "workspace_bytes": 30000000.0,
+      "bandwidth_bytes_s": 1792000000000.0,
+      "hourly_usd": 0.522
+    }
+  },
+  "bandwidth_efficiency": 0.7,
+  "state_passes": 1,
+  "owner_cache_fraction": 0.981,
+  "provider_cache_hits": {
+    "measurements": []
+  },
+  "server_decode": {
+    "measurements": []
+  },
+  "teams": [
+    3,
+    5,
+    10,
+    20
+  ],
+  "shares": [
+    0.2,
+    0.5,
+    1.0
+  ],
+  "scan_team_max": 500,
+  "host_nvme_bytes": 900000000000.0,
+  "reservation_depth": 249000,
+  "engine_basis": "vLLM FP8 main; llama.cpp Q4 labelled sensitivity; FP8 weights27GB/workspace8GB estimates; bf16 default KV65536B/token and FP8 KV32768B/token; no PRO FP8 KV startup",
+  "rental_basis": "calendar730h dedicated node; PRO6000/B300 inherited hourly estimates;5090 observed Vast upper offer0.522USD/h, not market rate"
+}

@@ -18,7 +18,7 @@ class PaperR14Tests(unittest.TestCase):
         offload = module('r5j_traffic_subject', ROOT/'paper/data/offload_bound.py')
         texts = {p.name: p.read_text() for p in offload.SECTIONS.glob('*.tex')}
         self.assertFalse(offload.missing(texts))
-        name = '04-channel.tex'
+        name = '90-appendix.tex'
         clean = 'За восьмичасовой день клиент успевает обслужить'
         bad = texts[name].replace(clean, 'За восьмичасовой день он успевает обслужить', 1)
         self.assertNotEqual(bad, texts[name])
@@ -68,7 +68,7 @@ class PaperR14Tests(unittest.TestCase):
         offload = module('r5j_economics_wording', ROOT/'paper/data/offload_bound.py')
         texts = {p.name: p.read_text() for p in offload.SECTIONS.glob('*.tex')}
         self.assertFalse(offload.missing(texts))
-        name = '07-economics.tex'
+        name = '91-calculation-history.tex'
         for key in ('B300 light reference five', 'B300 light reference five comparison',
                     'B300 light reference twenty comparison', 'economics M5 measured basis'):
             key = 'run14 ' + key
@@ -99,7 +99,7 @@ class PaperR14Tests(unittest.TestCase):
                 else:
                     self.assertEqual((ROOT/name).read_bytes(), data)
         self.assertEqual(set(delta), {name for name,data in files.items() if (ROOT/name).read_bytes()!=data})
-        source = ROOT/'calc/out/run15/base'
+        source = ROOT/'calc/out/run16/base'
         embedded = ROOT/'paper/data/engine'
         self.assertEqual({p.name for p in source.glob('*.csv')}, {p.name for p in embedded.glob('*.csv')})
         for p in source.glob('*.csv'):
@@ -111,7 +111,8 @@ class PaperR14Tests(unittest.TestCase):
         migration = json.loads((ROOT/'calc/tests/data/paper-r14-migration.json').read_text())
         ranges = module('r14_ranges_inventory', ROOT/'paper/data/check_ranges.py')
         offload = module('r14_offload_inventory', ROOT/'paper/data/offload_bound.py')
-        renamed = migration['range_renames']
+        renamed = dict(migration['range_renames'])
+        renamed['1M: refill of a million tokens on M3 Max takes longer than a day'] = '1M: refill of a million tokens on M3 Max takes less than a day'
         for key, count in migration['range_values'].items():
             self.assertEqual(len(ranges.SITES[renamed.get(key, key)]), count, key)
         for key, count in migration['range_directions'].items():
@@ -144,7 +145,7 @@ class PaperR14Tests(unittest.TestCase):
             with (ROOT/name).open() as stream:
                 return list(csv.DictReader(stream))
         chart = read('paper/data/team-perimeter.csv')
-        source = read('calc/out/run14/base/perimeter_cost.csv')
+        source = read('calc/out/run16/base/perimeter_cost.csv')
         self.assertEqual([int(r['team']) for r in chart], [5, 10, 20, 50, 500, 5000])
         for row in chart:
             for profile in ('light', 'medium', 'heavy'):
@@ -154,7 +155,7 @@ class PaperR14Tests(unittest.TestCase):
                         (r['client'] == 'M5 Max 64 GB' and r['basis'] == 'Mac already owned'))]
                     self.assertEqual(len(options), 1)
                     self.assertEqual(float(row[profile+'_'+suffix]), round(float(options[0]['person_month']), 2))
-        text = (ROOT/'paper/sections/07-economics.tex').read_text()
+        text = (ROOT/'paper/sections/91-calculation-history.tex').read_text()
         figure = text[text.index('\\begin{figure}', text.index('Команды от 5')):]
         figure = figure[:figure.index('\\end{figure}')]
         self.assertIn('data/team-perimeter.csv', figure)
@@ -178,9 +179,9 @@ class PaperR14Tests(unittest.TestCase):
         self.assertLess(float(admitted['price_usd_mtoken']), .016)
         check_publication()
         texts = read_texts()
-        name = 'paper/sections/07-economics.tex'
+        name = 'paper/sections/91-calculation-history.tex'
         for old, bad in [('накладные расходы даже при бесплатном prefill', 'цена prefill'),
-                         ('server-only', 'qualified hybrid'), ('0.016', '0.160')]:
+                         ('server-only', 'qualified hybrid'), ('0.226', '0.622')]:
             planted = texts[name].replace(old, bad, 1)
             self.assertNotEqual(planted, texts[name])
             with self.subTest(plant=old), self.assertRaises(AssertionError):

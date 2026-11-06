@@ -1,0 +1,1575 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 291,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 291,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 297,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 297,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 300,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 300,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 306,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 306,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 309,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 309,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 312,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 312,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 315,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 315,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 318,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 318,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 321,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 321,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 324,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 324,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 327,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 327,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 330,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 330,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 333,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 333,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 336,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 336,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 339,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 339,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 342,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 342,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 345,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 345,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 348,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 348,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 351,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 351,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 354,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 354,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 357,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 357,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 360,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 360,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 363,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 363,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 366,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 366,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 369,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 369,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 372,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 372,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 375,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 375,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 378,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 378,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 381,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 381,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 384,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 384,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 387,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 387,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 390,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 390,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 393,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 393,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 396,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 396,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 399,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 399,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 402,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 402,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 426,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 426,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 435,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 435,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 441,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 441,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 444,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 444,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 447,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 447,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 450,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 450,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 453,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 453,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 456,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 456,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 459,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 459,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 462,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 462,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 465,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 465,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 468,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 468,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 471,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 471,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 474,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 474,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 477,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 477,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 480,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 480,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 483,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 483,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 486,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 486,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 489,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 489,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 492,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 492,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 495,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 495,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 498,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 498,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 501,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 501,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 504,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 504,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 507,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 507,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 510,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 510,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 513,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 513,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 516,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 516,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 519,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 519,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 522,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 522,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 525,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 525,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 528,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 528,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 531,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 531,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 534,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 534,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 537,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite winning downstream rate"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 537,
+    "table": "node_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run19.workload",
+        "reason": "unconditioned mix exceeds measured depth/delta and configured session limits"
+      }
+    ],
+    "column": "full_workload_office_cost",
+    "row": 0,
+    "table": "workload_coverage"
+  }
+]

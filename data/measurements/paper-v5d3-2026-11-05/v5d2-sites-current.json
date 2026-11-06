@@ -1,0 +1,134 @@
+[
+  {
+    "name": "RULER partial scope",
+    "file": "11-limitations.tex",
+    "marker": "\\textbf{Промежуточные сохранённые",
+    "phrase": "\\textbf{Промежуточные сохранённые строки Qwen на 64 и 128 тысячах.} Таблица~\\ref{tab:ruler-interim} описывает неполные последовательные префиксы задач, сохранённые до остановки узлов по решению владельца 2026-11-04. Это промежуточные результаты с числом пар из 390, без зарегистрированного вердикта; Сохранённые строки не являются случайной подвыборкой. В первичном анализе обе глубины остаются ожидающими с $p=1$."
+  },
+  {
+    "name": "RULER intervals and missing tasks",
+    "file": "11-limitations.tex",
+    "marker": "На 64 тысячах интервалы Уилсона",
+    "phrase": "На 64 тысячах интервалы Уилсона для изменённого текста равны 5.32--10.78\\% у оффлоада и 6.23--12.02\\% у другой разбивки; на 128 тысячах 3.08--9.09\\% в обеих парах. Макнемар по полностью верным ответам равен 1 отдельно для оффлоада с локальным и разбивки с локальным. На 64 тысячах отсутствуют 22 примера \\texttt{qa\\_2}; на 128 тысячах сохранены только ранние задачи поиска иголок, отсутствуют 165 примеров, включая все \\texttt{vt/cwe/fwe/QA}. Эти префиксы не устанавливают зарегистрированную эквивалентность."
+  },
+  {
+    "name": "RULER resumption identity",
+    "file": "11-limitations.tex",
+    "marker": "Исходные узлы поставлены",
+    "phrase": "Исходные узлы поставлены в очередь на перезапуск; завершение требует восстановления замороженных спецификаций и отдельной идентичности сборки и среды каждой глубины. Модель, набор данных, seed и исходный коммит совпадают, но манифесты различаются по 64 хэшам нативных бинарных файлов. Одних сохранённых строк недостаточно для автоматического продолжения."
+  },
+  {
+    "name": "Qwen provider exclusion scope",
+    "file": "08-million.tex",
+    "marker": "\\textbf{Измеренный Qwen",
+    "phrase": "\\textbf{Измеренный Qwen на миллионе: поставщики не допущены.} В окне 2026-11-03 14:39:44--2026-11-04 07:22:22 UTC все три измеренных поставщика Qwen не достигли правила доступности 95\\% за всё окно (таблица~\\ref{tab:qwen-million-measured-excluded}). Измерения показаны описательно; в минимум и медиану допущенных поставщиков эти строки не входят."
+  },
+  {
+    "name": "Qwen historical cohort fence",
+    "file": "08-million.tex",
+    "marker": "Измеренного допущенного поставщика",
+    "phrase": "Измеренного допущенного поставщика Qwen на миллионе нет. Сценарии с условной долей 98.1\\% в таблице~\\ref{tab:r22-million-api} относятся к прежним отдельным окнам; новые наблюдения их набор не расширяют. В объединённом расписании первой фазы и коротких промежутков GLM даёт 60.354821 доллара за тысячу вызовов по 15 допущенным поставщикам, одинаково с Alibaba и без него; это среднее исходной смеси глубин, не цена профиля Qwen из таблицы~\\ref{tab:r24-api-points}."
+  },
+  {
+    "name": "Private data snapshot follows RC4",
+    "file": "90-appendix.tex",
+    "marker": "Код прототипа открыт:",
+    "phrase": "Код прототипа открыт: \\url{https://github.com/relux-works/hybrid-inference}. Полный снимок свидетельств будет размещён после RC4 в существующем закрытом репозитории \\url{https://github.com/relux-works/hybrid-inference-data}; сейчас этот снимок ещё не опубликован."
+  },
+  {
+    "name": "tab:ruler-interim row8",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Показатель & 64 тыс. & 128 тыс. \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row10",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Сохранено пар из 390 & 368 & 225 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row11",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Оценка каждого варианта, \\% & 98.91 & 100.00 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row12",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Полностью верно в каждом варианте & 364/368 & 225/225 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row13",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Макнемар по полностью верным ответам & 1 & 1 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row14",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Изменён текст: оффлоад & 28 (7.61\\%) & 12 (5.33\\%) \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row15",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Изменён текст: другая разбивка & 32 (8.70\\%) & 12 (5.33\\%) \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row16",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Только оффлоад / только разбивка & 12/16 & 7/7 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row17",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Макнемар по изменению текста & 0.5716 & 1 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row18",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "Избыток изменений, п.п. & -1.09 & 0.00 \\\\"
+  },
+  {
+    "name": "tab:ruler-interim row19",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "95\\%-й интервал избытка, п.п. & [-5.83, +3.69] & [-5.72, +5.72] \\\\"
+  },
+  {
+    "name": "tab:qwen-million-measured-excluded row11",
+    "file": "08-million.tex",
+    "marker": "\\label{tab:qwen-million-measured-excluded}",
+    "phrase": "Phala & 0.987 & 54.2087 & 0.875 & исключён \\\\"
+  },
+  {
+    "name": "tab:qwen-million-measured-excluded row12",
+    "file": "08-million.tex",
+    "marker": "\\label{tab:qwen-million-measured-excluded}",
+    "phrase": "Novita & 0.731 & 421.536 & 0.452 & исключён \\\\"
+  },
+  {
+    "name": "tab:qwen-million-measured-excluded row13",
+    "file": "08-million.tex",
+    "marker": "\\label{tab:qwen-million-measured-excluded}",
+    "phrase": "Alibaba & неизвестна & неизвестна & 0.846 & исключён \\\\"
+  },
+  {
+    "name": "tab:ruler-interim caption",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:ruler-interim}",
+    "phrase": "\\caption{Qwen RULER: промежуточные сохранённые пары из 390, отдельно от первичного анализа. Во всех трёх вариантах оценка и число полностью верных ответов совпали на сохранённых парах.}"
+  },
+  {
+    "name": "tab:qwen-million-measured-excluded caption",
+    "file": "08-million.tex",
+    "marker": "\\label{tab:qwen-million-measured-excluded}",
+    "phrase": "\\caption{Qwen, миллион токенов: измерено, но не допущено по доступности ниже 95\\%. Кэш относится к основному расписанию с короткими промежутками; стоимость в долларах за тысячу вызовов. Для Alibaba цена неизвестна, отмечен один вызов анализа кэша.}"
+  }
+]

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="510" viewBox="0 0 880 510">
+<rect width="880" height="510" fill="white"/>
+<g font-family="sans-serif" fill="#222">
+<text x="70" y="30" font-size="19">Server decode batching gain (modelled; requested batch 32)</text>
+<text x="70" y="52" font-size="12">Weights read once per batch; each session reads its KV. Batch is limited by VRAM.</text>
+<path d="M80 390.000 H730" stroke="#ddd"/><text x="40" y="394.000">1×</text>
+<path d="M80 324.737 H730" stroke="#ddd"/><text x="40" y="328.737">5×</text>
+<path d="M80 243.158 H730" stroke="#ddd"/><text x="40" y="247.158">10×</text>
+<path d="M80 161.579 H730" stroke="#ddd"/><text x="40" y="165.579">15×</text>
+<path d="M80 80.000 H730" stroke="#ddd"/><text x="40" y="84.000">20×</text>
+<path d="M80.000 80 V390" stroke="#eee"/><text x="67.000" y="415">16k</text>
+<path d="M297.909 80 V390" stroke="#eee"/><text x="284.909" y="415">64k</text>
+<path d="M445.821 80 V390" stroke="#eee"/><text x="432.821" y="415">164k</text>
+<path d="M730.000 80 V390" stroke="#eee"/><text x="717.000" y="415">1M</text>
+<polyline points="80.000,181.745 297.909,307.851 445.821,355.114 730.000,386.068" fill="none" stroke="#1565c0" stroke-width="2.5"/>
+<circle cx="80.000" cy="181.745" r="4" fill="#1565c0"/><text x="85.000" y="174.745" font-size="11">13.76×; B=32</text>
+<circle cx="297.909" cy="307.851" r="4" fill="#1565c0"/><text x="302.909" y="300.851" font-size="11">6.03×; B=32</text>
+<circle cx="445.821" cy="355.114" r="4" fill="#1565c0"/><text x="450.821" y="348.114" font-size="11">3.14×; B=23</text>
+<circle cx="730.000" cy="386.068" r="4" fill="#1565c0"/><text x="735.000" y="379.068" font-size="11">1.24×; B=3</text>
+<text x="80" y="455" fill="#1565c0" font-size="13">b300_fp8</text>
+<polyline points="80.000,110.145 297.909,252.238 445.821,323.053 730.000,379.734" fill="none" stroke="#00897b" stroke-width="2.5"/>
+<circle cx="80.000" cy="110.145" r="4" fill="#00897b"/><text x="85.000" y="103.145" font-size="11">18.15×; B=32</text>
+<circle cx="297.909" cy="252.238" r="4" fill="#00897b"/><text x="302.909" y="245.238" font-size="11">9.44×; B=32</text>
+<circle cx="445.821" cy="323.053" r="4" fill="#00897b"/><text x="450.821" y="316.053" font-size="11">5.10×; B=32</text>
+<circle cx="730.000" cy="379.734" r="4" fill="#00897b"/><text x="735.000" y="372.734" font-size="11">1.63×; B=7</text>
+<text x="305" y="455" fill="#00897b" font-size="13">b300_fp8_kv</text>
+<polyline points="80.000,181.745 297.909,324.861 445.821,368.385" fill="none" stroke="#c62828" stroke-width="2.5"/>
+<circle cx="80.000" cy="181.745" r="4" fill="#c62828"/><text x="85.000" y="174.745" font-size="11">13.76×; B=32</text>
+<circle cx="297.909" cy="324.861" r="4" fill="#c62828"/><text x="302.909" y="317.861" font-size="11">4.99×; B=14</text>
+<circle cx="445.821" cy="368.385" r="4" fill="#c62828"/><text x="450.821" y="361.385" font-size="11">2.32×; B=5</text>
+<text x="530" y="455" fill="#c62828" font-size="13">pro6000_fp8</text>
+<text x="650" y="370" fill="#c62828" font-size="11">PRO 1M: does not fit</text>
+<text x="290" y="435" font-size="13">Context depth (log scale)</text>
+<text x="70" y="487" font-size="12">1M is an architecture/bandwidth extrapolation, not a measured vLLM context claim.</text></g></svg>

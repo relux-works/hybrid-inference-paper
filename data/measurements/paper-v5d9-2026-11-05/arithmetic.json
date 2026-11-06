@@ -1,0 +1,28 @@
+{
+  "qwen_bytes": 3795386368,
+  "glimmer_bytes": 881001472,
+  "exchanges": 4,
+  "new_positions": 100000,
+  "traffic_seconds": {
+    "125": {
+      "qwen": 30.363090944,
+      "glimmer": 7.048011775999999
+    },
+    "20": {
+      "qwen": 189.7693184,
+      "glimmer": 44.050073600000005
+    },
+    "5": {
+      "qwen": 759.0772736,
+      "glimmer": 176.20029440000002
+    }
+  },
+  "gpu_seconds": 17.51292596232,
+  "glimmer_gpu_seconds": 24.834542307995505,
+  "link_contexts_day": {
+    "qwen": 2845.560096610433,
+    "glimmer": 12258.77633947926,
+    "glimmer_rounded_point9": 12000.0,
+    "glimmer_conservative1": 10800.0
+  }
+}

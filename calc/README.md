@@ -2,8 +2,8 @@
 
 > Run11 supersedes earlier numerical base examples: current nonlegacy bases use output alone; fraction1 is the labelled reasoning-on-top upper bound. See [Run11](#run-11-output-already-includes-reasoning) and the regenerated publication CSVs. Historical bridge/legacy reproductions retain their dated inputs.
 
-`hybridcalc/` consolidates the paper's calculations. It uses only the Python 3.9+
-standard library. No installation, API access or network is needed. The current
+`hybridcalc/` consolidates the paper's calculations. It uses only the Python standard library. The reference interpreter is
+CPython 3.14.4; native compatibility qualifications are stated below. No installation, API access or network is needed. The current
 paper defaults and paired conservative CSVs are described in the run-9 section;
 its append-only hosting supersedes the historical run-8 equations below. Run from the
 repository root (the small `hybridcalc.py` entry point locates the package), or
@@ -1074,7 +1074,7 @@ python3 calc/tests/r12_controls.py old_mfu
 The audit exports all42 chart siblings plus2 payback comparisons, preserves the
 89 frozen run11 publication/paper files, and writes the complete numeric delta,
 quote, direction-change and fit residual ledgers next to the prior runs. The old
-MFU plant is expected red(exit1), killed by
+MFU plant is expected red(exit 1), killed by
 `test_measured_server_timing_replaces_mfu`; a setup error is not a killed mutant.
 The positive path requires<2% per bulk-turn residual and<15% on each held-out
 fill. Exact commands, scope and qualifications are in
@@ -1131,7 +1131,7 @@ Each server case also has `payback.csv` and `payback_conservative.csv` covering
 all six clients, both open shares and both same-API overflow comparisons.
 `paper-derived/payback.csv` is the separate published plot definition, with
 cheapest-API overflow. The root `INDEX.json` hashes all 251 payloads. A bounded
-accounting-child control is `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 calc/tests/r13_controls.py unmeasured_child`: expected exit1 is the named
+accounting-child control is `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-b-r32-261101/tmp" python3 calc/tests/r13_controls.py unmeasured_child`: expected exit 1 is the named
 `test_accounting_child_retains_measured_m5` AssertionError, never a setup error.
 
 ## Run 14: measured parallel, M5 and B300
@@ -1216,7 +1216,7 @@ R5 bounded fault controls run with
 `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I calc/tests/r14_r5_controls.py control`.
 Replace `control` with `flat_depth`, `upper_count`, `zero_foreground`,
 `free_reload`, `ignore_latency`, `unchecked_cuda` or `erase_reread` for the
-named expected-red cases (actual exit1). Logs stay in the task directory.
+named expected-red cases (actual exit 1). Logs stay in the task directory.
 The isolated import attribution is exported as
 `calc/R14-R5-IMPORT-EFFECT-261102.csv`; it holds the R5 depth law fixed while
 setting only import to zero.
@@ -1251,7 +1251,7 @@ commercial invoices or a qualified client bridge.
 The export command above includes this table. The narrow price gate is
 `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r5-261102/tmp" python3 -I -m unittest discover -s calc/tests -p test_prefill_price_r14.py -v`.
 The control driver also accepts `negative_price`, `missing_option`,
-`zero_price_floor` and `double_catchup` (expected actual exit1).
+`zero_price_floor` and `double_catchup` (expected actual exit 1).
 
 ## Run 15: cooled parallel anchors
 
@@ -1295,3 +1295,607 @@ payload hash. `parallel_historical_sensitivity.csv` and
 `parallel_server_shape_sensitivity.csv` label observations excluded from base.
 The16-agent full row has44.7524% measured calls /25.7257% measured decode-device
 time. Zone flags overlap; the whole row remains an estimate.
+
+## Run 16: priority-qualified single streams and prototype depth import
+
+Run16 is opt-in. `paper-tables-r16`, its r6/r7/r8 and conservative families
+write only `calc/out/run16/base/`. The corresponding `-bounded-undo` scenarios
+write `calc/out/run16/bounded_undo/`. Historical, R13, R14 and R15 exports stay
+byte-identical. The old R15 manifest checker now binds to accepted source
+`04755721`, rather than demanding that a frozen manifest equal later code.
+
+The M3 single-stream surface uses the verified kit1.6.7 step40 PRI31 archive:
+512/2000/10000-token prefill probes at six nominal depths, linear interpolation
+in rates between depth/delta anchors, endpoint holds outside the delta grid,
+and the existing FLOP-law extrapolation beyond249k. Cold ingest integrates the
+new segment midpoints. Decode averages the three raw single-turn rates at each
+nominal depth. Actual sequential probe depths remain in `m3_pri31_depth.csv`.
+The architecture comparison also reads this surface; its old41.2tok/s scalar
+is historical. Save/restore times on the external SSD are excluded.
+
+M3 multi-stream anchors retain the background-priority cooled sweep, flagged
+`background_priority_interim`. Every inherited mixed table has a conservative
+table-level qualifier, including independent cells in that table. These
+agents/day figures are interim. M5 uses all13 cooled medians at np16/8/4 and
+retains the original owner-reported priority label in its frozen exports. The later owner answer (FACTS, 2026-11-03 09:11 UTC) supersedes that label for current paper prose: priority was not recorded; the launching process showed PRI 31 when checked afterwards. The second np4 run is
+a same-configuration spread control, never the base.
+
+`run16-measurements.json -> m3_parallel` is the R16b admission interface. Change
+its mode from `r15_interim` to `verified_sweep`, supply the new archive `path`
+and `sha256`, set `priority_basis=recorded_normal_priority_PRI31` and
+`background_priority_interim=false`, and update its data-defined grids if
+needed. The verified archive must contain recorded normal-priority/no-override
+manifest and readiness evidence, PRI31 server samples, the M3 device identity,
+and all three restored rounds after300s cooling at each declared shape.
+The loader and calculation sources need no edits. Outputs depending on new
+measurements will change; unrelated historical files remain frozen. The
+synthetic drop-in test exercises the interface only, not a real R16b result.
+
+The depth probes fit `import_s = 0.25905208 + 0.0000487*delta +
+0.000034644154*prefix_depth`. The token coefficient is retained from the old
+weak marginal fit (`1.498s + 48.7us/token`, R²0.12); the four539-token probes
+identify the conditional intercept/depth slope, not that token coefficient.
+Reusing1.498s and adding the slope would double-count the average depth cost.
+Bounded undo removes the depth term from the conditional fit; it is an
+unimplemented sensitivity. Full-slot recovery save is the diagnosed cause.
+Other Apple clients inherit this import law as an estimate.
+
+`state_link_threshold.csv` has all36 combinations of depth100k/140k/200k,
+delta512/2343/10000, f32 state157MB/bf1678.5MB, and both import models. MB is
+decimal. Threshold = `(state + 34816*delta) / (local - server - import - RTT)`;
+nonpositive budgets refuse a finite solution. Server is measured B300 Q4;
+ideal downstream goodput excludes catch-up and extra protocol overhead.
+The old prototype's approximately8.45MB/s entry threshold additionally
+requires `remote < 0.85*local` (margin0.1 + hysteresis0.05); it differs from
+simple economic equality. `measured_preflight_check.csv` reproduces this from
+both preserved plans and source-backed constants. Wi-Fi still has zero
+connected offloads. `growing_5g_validation.csv` shows predictions against the
+43.1/35.3/483.3s arithmetic residuals after synchronous snapshot downloads;
+these are not production TTFT measurements, and numerical fidelity remains
+unmeasured. The report includes model errors, not a fitted acceptance claim.
+
+Run16 tools and evidence (Python standard library and local Git only):
+
+| Tool / purpose | Exact entry point from repository root | Outputs |
+| --- | --- | --- |
+| Full16-scenario export and quote audit | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r8-261103/tmp" python3 -B -I calc/tests/r16_audit.py` | `calc/out/run16/{base,bounded_undo}/`, `INDEX.json`, `calc/ENGINE-QUOTES-R16-261103.csv` |
+| Verify frozen608 files, current generator, payloads, qualifiers and changed-cell coverage | Same command with `--audit-only` | Verified export bytes; deterministic quote/index refresh |
+| Run16 positive/negative tests | `PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r8-261103/tmp" python3 -B -I -m unittest discover -s calc/tests -p test_run16.py -v` | Standalone gate log under `.temp/hybrid-e-r8-261103/` |
+| Full engine / kit regressions | Same environment, `python3 -B -I -m unittest discover -s calc/tests -v` / `python3 -B -I -m unittest discover -s bench/tests -v` | Gate logs and real exits recorded by task-local runner |
+
+Create the on-disk TMPDIR before running. Source archives, FACTS, timing
+extracts and the base prototype policy transcription are retained under
+`data/measurements/run16-2026-11-03/` with full hashes in the input config.
+See `ENGINE-REPORT-R16-261103.md` for numeric tables, finite controls and limits.
+
+
+## Run 17: sliding-window architectures and bf16 wire economics
+
+`architectures-r17` exports the measured geometry reconciliation, model rate
+probes, 36 link thresholds, 15 architecture extrapolations and 54 transfer/egress
+sensitivities. `paper-tables-r17` and `paper-tables-r17-bf16` recompute the client
+and economics tables with exact Qwen wire tensors (156,893,184 or 78,446,592 B).
+Resident state, decode, import and the R16 economics server portfolio stay fixed
+between those two cases. The separate threshold grid uses kit1.6.5 PRO6000
+server rates. See `ENGINE-REPORT-R17-261103.md` for assumptions and limits.
+
+For a live prefix of `d` tokens and `delta` new tokens, the estimated ideal
+payload is `K*delta + Wbytes*min(window,d+delta) + recurrent_tensors`.
+This sends the complete live sliding window and the new full-attention KV only.
+It excludes protocol framing and sequence-save metadata. The measured files
+named `delta-geometry` contain full sequence saves, reconciled separately;
+they are not measurements of the prototype's wire format.
+
+SWA import uses the named assumption `r16_qwen_token_depth_portability`:
+`0.25905207981118364 + 0.0000487*delta + 0.00003464415395787945*d` seconds.
+The Qwen fit has not been measured for either sliding-window architecture;
+window bytes affect transfer only in this assumption. Link thresholds use the
+same serial model and 0.140589104 s RTT as R16. Rates interpolate linearly on
+nominal depth and delta, within measured bounds. Here32k/64k mean32,000/64,000.
+
+The R16b interface remains `run16-measurements.json -> m3_parallel`. It is read
+by the Run17 contexts, with unchanged hash, priority and cooled-round gates.
+R16 exports are now audited against accepted `e51942d3`, independently of future
+configuration updates. Re-export updated data into Run17 directories only.
+For each of Glimmer and Gemma, `run17-measurements.json -> mac.<model>` selects a
+`sources` key. To replace the interim Mac rates using data alone:
+
+1. Add a new archive under `data/measurements/` and a `sources` entry with its
+   repository-relative `path` and complete `sha256`.
+2. Set `source` to that key, `mode=verified_pri31`,
+   `priority_basis=recorded_normal_priority_PRI31`, and
+   `background_priority_interim=false` for that model.
+3. Require a hash/manifest-verified archive, recorded normal-priority/no-override
+   readiness with PRI31 server samples, M3 Max identity and the complete exact
+   reused delta grid. Re-run the exporter and suites. No loader/calculation
+   source edits are needed. Synthetic interface tests are not actual PRI31 data.
+
+Until then both SWA models keep `background_priority_interim=true`; Qwen single
+rates are PRI31. bf16 rows state `pending measured quality of dev-a r38`.
+The extrapolation grid holds Qwen rates and import time fixed while varying
+`S` in decimal MB and `K` in binary KiB/token; it makes no model-quality or speed
+claim about a specific architecture.
+
+### Run17 tools
+
+Run these standalone commands from the repository root with on-disk scratch:
+
+```bash
+mkdir -p .temp/hybrid-e-r9-261103/tmp
+export PYTHONDONTWRITEBYTECODE=1
+export TMPDIR="$PWD/.temp/hybrid-e-r9-261103/tmp"
+python3 -B -I calc/tests/r17_audit.py
+python3 -B -I calc/tests/r17_audit.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p test_run17.py -v
+python3 -B -I -m unittest discover -s calc/tests -v
+python3 -B -I -m unittest discover -s bench/tests -v
+```
+
+The exporter uses the existing `hybridcalc.engine.run` and atomic `write_tables`
+interfaces. It writes only `calc/out/run17/{architectures,f32,bf16}/`, its
+`INDEX.json`, and `calc/ENGINE-QUOTES-R17-261103.csv`. Audit-only checks accepted
+historical bytes, current generator/source identities, all manifests/index and
+every changed quote cell without rewriting files. Gate logs and scratch
+extracts live in `.temp/hybrid-e-r9-261103/`. Standard-library Python and local
+git are sufficient; no downloads, installation, native builds or accelerators.
+
+
+## Run18: discrete GPU clients and ephemeral rentals
+
+`discrete-clients-r18` exports all four RTX3090/5090 Qwen/Glimmer client classes,
+exact-shape parallel observations, hard context boundaries, Run17-format link
+thresholds and one Qwen task-rental comparator. See `ENGINE-REPORT-R18-261103.md`.
+The canonical FACTS5090 Qwen checksum suffix was corrected to...e3e8 before
+admission; strict checksum/manifest gates remain enabled with no override.
+
+3090 Qwen capacity is99328 tokens including prefix+delta+output; rates stop86k.
+Physically fitting deeper sessions keep a rate gap. Parallel np/context/count/
+depth are exact coordinates. GPU normal priority is recorded Linux TS/nice0,
+independent of macOS PRI31. Import uses the joint PR9 CUDA delta/depth fit with its intercept refitted;
+Mac slopes refuse. Native full-slot file save/restore timings are diagnostics,
+not imported-delta endpoint timings, so the CUDA-only fallback is used.
+Portability to these cards and Glimmer remains unmeasured.
+
+Rental costs use one116-call normalization group/rental, fresh Qwen fetch
+(185s5090,1029s3090), cold prefix and local work/tool wall time. There is no
+persistence across rentals; partial rentals pay too. Observed offers/rents are
+dated2026-11-03, not market rates. Prorated hourly quotes and whole-hour rounding
+are separate; no Vast billing quantum is asserted. All alternatives share a
+23.3661% common measured-capacity subset of the fitted mix. Full workload is
+unsupported; no truncation/API fallback is hidden in the rental quote. The group
+is an economic assumption, not a chronological growing-task reconstruction.
+Aggregate GPU hours can require concurrent rentals. No Glimmer fetch/API tariff
+or concurrent-offer availability is invented.
+
+### Run18 tools and outputs
+
+```bash
+mkdir -p .temp/hybrid-e-r10c-261103/tmp
+export PYTHONDONTWRITEBYTECODE=1
+export TMPDIR="$PWD/.temp/hybrid-e-r10c-261103/tmp"
+python3 -B -I calc/tests/r18_audit.py
+python3 -B -I calc/tests/r18_audit.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p test_run18.py -v
+python3 -B -I -m unittest discover -s calc/tests -v
+python3 -B -I -m unittest discover -s bench/tests -v
+```
+
+The exporter writes only `calc/out/run18/`, manifests/index and
+`calc/ENGINE-QUOTES-R18-261103.csv`. Audit-only verifies generator identities,
+all hashes, coordinate coverage and907 frozen export bytes without rewriting.
+Logs, resource samples and scratch evidence go under `.temp/hybrid-e-r10c-261103/`.
+Python standard library/local git suffice; no downloads/native builds. R16b and
+Glimmer/Gemma PRI31 data-only interfaces remain unchanged. Frozen Run17 audits
+bind to accepted714fe721; updated measurements are exported in Run18 only.
+
+
+The CUDA rework ledger also binds every changed cell to its actual old value
+at `12f0c042`; removing a change or forging its old value refuses. Rates,
+parallel, capacity coverage and the rental CSV stay byte-identical to that head.
+Named reviewer regressions are in `test_r18_cuda_import_depth.py`.
+With the same environment, `python3 -B -I calc/tests/r18_cuda_controls.py control`
+must exit 0. Replacing `control` by `mac_slope`, `allow_mac` or
+`marginal_intercept` must exit 1 at the named regression assertions. These
+bounded faults modify only their own process, never files. Actual gate logs
+and the host-slot evidence table are linked from the R18 report.
+
+
+## Run19: RTX5090 office and rented prefill nodes
+
+`prefill-nodes-r19` reuses measured5090 client-kit prefill as an assumed
+hybrid-node path. Read [the R19 report](ENGINE-REPORT-R19-261103.md) before
+using the costs: physical KV, configured context and rate-coverage limits
+are distinct; the matched10885-call subset is27.28% of the original mix and
+is normalized to52500 conditional calls/month. An unconditioned closed-
+perimeter quote remains an alarm. API price vectors keep original cache
+groups. Mac import stays on R16, independently of native node file swap.
+
+The resident set includes a recurrent state per session. Overflow either
+swaps to finite RAM/NVMe capacity or refuses; integer fleets recheck routed
+demand after changes in residency. Office host RAM/SSD are included in the
+separate estimated host capex, with no duplicate storage rental. The sourced
+card price is a sold-out list price, not a purchasable complete-box offer.
+Rented-node GPU-work allocations and whole warm-calendar leases are distinct.
+
+### Run19 tools and outputs
+
+```bash
+mkdir -p .temp/hybrid-e-r11-261103/tmp
+export PYTHONDONTWRITEBYTECODE=1
+export TMPDIR="$PWD/.temp/hybrid-e-r11-261103/tmp"
+python3 -B -I calc/tests/r19_audit.py
+python3 -B -I calc/tests/r19_audit.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p test_run19.py -v
+python3 -B -I -m unittest discover -s calc/tests -v
+python3 -B -I -m unittest discover -s bench/tests -v
+python3 -B -I calc/tests/r19_controls.py control
+```
+
+The standard-library exporter writes nine CSVs and four metadata payloads
+plus INDEX under `calc/out/run19/`, and `ENGINE-QUOTES-R19-261103.csv`. It
+checks917 prior export bytes, current hashes/generator and quote coverage.
+Logs, disk samples, independent live recomputation and scratch controls live
+in `.temp/hybrid-e-r11-261103/`. Public price sources/excerpts are under
+`data/measurements/run19-2026-11-03/`. No native builds or model downloads.
+
+The fault driver changes only its own process. `control` must exit 0;
+`omit_state`, `free_swap`, `ignore_capacity`, `ignore_catchup`, `unpriced_box`,
+`pool_retention` and `time_units` each must exit 1 at the named assertions in the report.
+A setup error is not a killed fault. The R18 auditor now verifies its frozen
+f7aeef95 generator, matching the established R17 historical-audit behavior.
+R16b and both SWA PRI31 data-only engine interfaces remain intact.
+
+## Run20: vLLM economics, admitted APIs and small teams
+
+[Report](ENGINE-REPORT-R20-261103.md),
+[quotes](ENGINE-QUOTES-R20-261103.csv), and
+[outputs](out/run20/INDEX.json) isolate the new calculations. Runs13–19 stay
+byte-identical. The predecessor is signed3a1eed0d; its review was pending at
+branching. All comparisons use the same10885/39904 measured-envelope calls,
+reweighted to each demand. These are conditional open-model component costs;
+the other commercial-model share is a common omitted addend.
+
+The main server cases are measured vLLM FP8 B300/default-KV, B300/FP8-KV and
+PRO6000/default-KV. Failed PRO FP8 KV is refused. llama.cpp cases are labelled
+sensitivities. Cached elapsed TTFT includes the unaligned block tail; delta
+below2000 and shallow interpolation are estimates. The bridge envelope uses
+actual PR16 smoke server-prefill timing including conversion, with explicit
+geometry portability assumptions. `none` is a zero-extra-bridge lower bound.
+The smoke's heterogeneous checker exit 5 is not quality qualification.
+
+`decode_scaling.csv` and [batching_gain.svg](out/run20/batching_gain.svg) use
+weights once per batch, KV/state per stream and per-GPU capacity. The1M rows
+are bandwidth/capacity extrapolations, not measured context support. A full
+PRO6000 BF16-KV1M session refuses. Own-cluster batches also respect the
+four-concurrent-sessions/person assumption. Its integer fleet search is
+minimal for the stated monotone residency/rebuild model; hybrid fleets use
+the inherited sufficient provision policy, not a minimum-fleet proof.
+
+### Run20 tools and data-only interfaces
+
+Python3 standard library implements the calculation, SVG plot, audits and
+fault controls. No package install, downloads, native build or GPU required.
+From the repository root:
+
+```bash
+mkdir -p .temp/hybrid-e-r12-261103/tmp
+export PYTHONDONTWRITEBYTECODE=1
+export TMPDIR="$PWD/.temp/hybrid-e-r12-261103/tmp"
+python3 -B -I calc/tests/r20_audit.py
+python3 -B -I calc/tests/r20_audit.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p test_run20.py -v
+python3 -B -I -m unittest discover -s calc/tests -v
+python3 -B -I -m unittest discover -s bench/tests -v
+python3 -B -I calc/tests/r20_controls.py control
+```
+
+The auditor exports ten CSVs, metadata, an independently hash-bound SVG,
+INDEX and a cell-coordinate quotes ledger. Scratch gate results and disk
+observations are in `.temp/hybrid-e-r12-261103/`. Existing local bridge
+archives were SHA256 checked; admitted source excerpts/raw JSONL live under
+`data/measurements/run20-2026-11-03/`.
+
+Edit only `calc/hybridcalc/data/run20-economics.json` for new observations:
+
+- `provider_cache_hits.measurements`: `{tag, profile, model, observed_at,
+  source, input_tokens, cached_tokens}`. Profile is `main` or `million`, model
+  `qwen/qwen3.8-27b`, tag an existing snapshot endpoint. Token counts must be
+  integers, `0 <= cached <= input`, input positive. Duplicate coordinates,
+  wrong model and missing provenance refuse. Effective price and rankings
+  update automatically. Empty means the sourced98.1% commercial aggregate
+  scenario, with OpenRouter cache behaviour explicitly unverified.
+- `server_decode.measurements`: `{server, streams, depth, aggregate_tok_s,
+  engine, observed_at, source}`. Engine must be `vllm`; streams1/8/32,
+  depths16000/64000/164000. Sparse curves are allowed with a single-stream
+  reference spanning parallel observations. Every stream must fit its own
+  KV/state. Unsupported or impossible grid coordinates refuse. Exact admitted
+  stream curves interpolate only within their observed depth range; other
+  coordinates retain the explicitly modelled law. Own-cluster economics
+  consumes these curves.32 streams at164k cannot fit default-KV B300 or PRO;
+  use a capacity-admitted configuration such as B300 FP8 KV.
+
+Inherited R16b and Glimmer/Gemma PRI31 data-only interfaces remain available.
+The R19 auditor now checks its frozen predecessor generator, leaving those
+export bytes untouched. The R20 control driver runs process-only faults;
+`shared_kv`, `pooled_memory`, `unvetted_api`, `free_cache_misses`, `free_bridge`,
+`free_retention`, `first_crossing`, `duplicate_concurrency`, `double_catchup`,
+`nonminimal_own` and `rental_missing_scope` must exit 1 by named assertion;
+`control` must exit 0. Failures/errors in setup do not count as killed faults.
+
+R19 review F1 later requested a rental coverage label; no numeric error was
+found. R20 leaves the frozen R19 bytes alone. Every new monthly cost and
+threshold row has `workload_scope` with common counts/fraction, exact monthly
+normalization and the unsupported-full-workload flag. Its named regression
+and `rental_missing_scope` narrowing fault prevent repeating that omission.
+
+## Run21 tools and data-only interfaces
+
+Use Python3 and standard-library unittest, with bytecode disabled and TMPDIR
+inside the checkout on disk. No network, native compilation or model inference
+is needed. The exporter writes only `calc/out/run21/` and its quote ledger:
+
+```sh
+mkdir -p .temp/hybrid-e-r13-261103/tmp
+export TMPDIR="$PWD/.temp/hybrid-e-r13-261103/tmp"
+export PYTHONDONTWRITEBYTECODE=1
+python3 -B -I calc/tests/r21_audit.py
+python3 -B -I calc/tests/r21_audit.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p test_run21.py -v
+python3 -B -I -m unittest discover -s calc/tests -v
+python3 -B -I -m unittest discover -s bench/tests -v
+python3 -B -I calc/tests/r21_controls.py control
+```
+
+`r21_controls.py MODE` applies one bounded in-process fault, exits 1 at the
+named assertion, and never edits live source or data. See the report for the
+fault/test map. The control run exits 0. Logs and readiness/resource receipts
+are under `.temp/hybrid-e-r13-261103/`; they are not publication artifacts.
+
+Edit only `calc/hybridcalc/data/run21-deep.json` for future data:
+
+- `server_decode.measurements`: `server` (`b300_fp8`, `b300_fp8_kv`, or
+  `pro6000_fp8`), `depth` (16000/64000/164000/512000/1000000), `streams`
+  (1/8/32), `aggregate_tok_s`, `engine=vllm`, `source`, `observed_at`.
+  Above262144 also record `extension=yarn_factor4`. Include a single-stream
+  reference spanning every parallel observation. Impossible stream counts
+  refuse; observations cannot override capacity. Sparse measured curves only
+  interpolate within their measured span. Modelled values fill other cells.
+- `provider_cache_hits.measurements`: exact `model`, provider `tag`, `profile`
+  (`existing_combined`, `claude_deep`, `million`), `input_tokens`,
+  `cached_tokens`, `source`, `observed_at`. Duplicate coordinates, unknown
+  model/provider, missing provenance or counts exceeding input refuse.
+- `glm_endpoints.endpoints`: replacement endpoint snapshot rows, including
+  context/prices and actual cache declarations/recorded availability. Current
+  entries transcribe the local research table and lack cache declarations;
+  they cannot be admitted from cache prices alone. The grouped research row
+  lacks exact endpoint metadata and remains a declared coverage gap.
+- `active_gap_cap_s`: estimated active-window cap for the reconstructed deep
+  profile. Raw aggregate pauses are exported separately. This cap does not
+  alter any historical workload or its sampler inputs.
+
+The R16b parallel and run17 Glimmer/Gemma PRI31 interfaces retain their
+original files and validators. Run20's data interface remains available on its
+frozen reference identity. Recompute only the new run21 outputs when updating
+run21 data; do not regenerate historical snapshots with the current generator.
+The source R19 F1 fix is carried forward; its corrected rental view and quote
+old/new basis cells are under run21 to preserve the requested historical bytes.
+
+The growing-task companion rebuilds200k/1M tasks for both source populations:
+`python3 -B -I calc/tests/r21_growth_audit.py` writes
+`calc/out/run21/growing/` and `calc/ENGINE-QUOTES-R21-GROWING-261103.csv`.
+`python3 -B -I calc/tests/r21_growth_audit.py --audit-only` verifies that
+namespace; `python3 -B -I calc/tests/r21_growth_controls.py control` runs its
+positive controls. The complete focused suite is
+`python3 -B -I -m unittest discover -s calc/tests -p 'test_run21*.py' -v`.
+
+The companion initially extends the main manifest's conservative global
+identity with its unused new module, only after proving every old numeric
+source/payload unchanged. It refuses a changed existing source before writing.
+Its measured-base growing projections keep all unmeasured GLM/Studio rates and
+unknown API context-extension/cache behaviour explicitly labelled. Both main
+and growing manifests/quote ledgers must pass; their numbers are separate
+stationary-call and growing-task scenarios.
+
+Run20 review r5x's API coverage/missing-window findings are corrected for the
+new R21 publications by `calc/tests/r21_export_labels.py`. Every API price row
+names original/common counts and1000-call normalization, and lists recorded
+and missing5m/30m/1d availability windows. Prices and admission decisions are
+unchanged. `publication_labels` binds this presentation source hash; the core
+result hash remains the calculation before label enrichment. Both auditors
+require the published labels and hash. R14 now authorizes R20 label-only republication; its original numerical cells stay frozen.
+
+## R14 publication tools
+
+CPU-only stdlib publisher `calc/tests/r14_publication.py` corrects R20 labels
+and creates `calc/out/run{20,21}/paper/`. It checks original non-label cells
+against signed producer objects, binds policies and source hashes, and writes
+`ENGINE-QUOTES-R{20,21}-PAPER-261103.csv`. R20's changed archival quote values
+are also enumerated individually in `paper/label_changes.csv`. The original
+R20 quote ledger is refreshed for the corrected full tables. R21's original
+API disclosures and numerical CSVs remain unchanged.
+
+Run from the repository root, after checking at least28.2GB free space:
+
+```sh
+mkdir -p .temp/hybrid-e-r14-261103/tmp
+export PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r14-261103/tmp"
+python3 -B -I calc/tests/r14_publication.py                 # publish labels and paper projections
+python3 -B -I calc/tests/r14_publication.py --audit-only    # read-only custody/quote checks
+python3 -B -I calc/tests/r20_audit.py --audit-only
+python3 -B -I calc/tests/r21_audit.py --audit-only
+python3 -B -I calc/tests/r21_growth_audit.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p test_r14_publication.py
+python3 -B -I calc/tests/r14_controls.py control
+python3 -B -I calc/tests/r14_controls.py omit_api_scope      # expected exit 1, named assertion
+python3 -B -I -m unittest discover -s calc/tests
+python3 -B -I -m unittest discover -s bench/tests
+```
+
+`r14_controls.py` also accepts hide_windows, native_bridge, admit_5090,
+numeric_change, missing_basis and drop_quote; each is an expected-red
+process-only fault, with no product or shared-state mutation. Gate logs and
+real exit receipts live in `.temp/hybrid-e-r14-261103/`.
+The archival R20 numerical generator remains pinned to b6ac5abc; use the
+publication command above for this label-only re-export, not a numerical
+recalculation under a later engine identity. R16b and Mac-rate replacement
+interfaces continue to use their existing commands. Shared paper rows evaluate
+the existing resident-work equation for each profile/load; they are lower
+bounds without calendar/residency-miss charges, and can keep calls local.
+
+## R15 sentence tools
+
+`calc/tests/r15_sentences.py` reuses the reviewed paper cells from a706732f
+and regenerates sentence columns and report quotations without recalculating
+costs. It records old/new sentence cells in
+`ENGINE-SENTENCE-DIFF-R15-261103.csv`, refreshes the two paper quote ledgers
+and source/file hash metadata, and parses every exported sentence.
+All other CSV cells, column sets and row counts remain identical, including
+run21/growing. `ENGINE-QUOTES-R15-261103.csv` is the task's old/new report-text
+ledger, compared against the same signed predecessor.
+
+From the repository root, first check `df -BG .`: the floor is28GiB; hold
+below28.5GiB (30601641984B), waiting at most20minutes or stop.
+
+```sh
+mkdir -p .temp/hybrid-e-r15-261103/tmp
+export PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r15-261103/tmp"
+python3 -B -I calc/tests/r15_sentences.py
+python3 -B -I calc/tests/r15_sentences.py --audit-only
+python3 -B -I -m unittest discover -s calc/tests -p 'test_r1[45]*.py'
+python3 -B -I calc/tests/r14_controls.py control
+python3 -B -I calc/tests/r14_controls.py infer_missing_link # expected assertion exit 1
+python3 -B -I calc/tests/r14_controls.py drop_quote         # actual missing ledger row, expected exit 1
+python3 -B -I -m unittest discover -s calc/tests
+python3 -B -I -m unittest discover -s bench/tests
+```
+
+The canonical clauses are human-readable and parsed individually. Tests remove
+each required clause and reject wrong billing/rate/RTT/location even when
+a sentence contains all keywords. Link choices are checked against the actual
+engine profiles. Capacity-alarm sentences disclose source status/alarm_inputs
+while retaining their original nan numeric cells. Logs, source identities and
+actual command exit receipts live in `.temp/hybrid-e-r15-261103/`.
+
+## Run22: RC4 dedicated basis and bf16 default
+
+Run `python3 -B -I calc/run22/export.py` from the repository root. The independent
+[run22 entry point](run22/README.md) imports the reviewed accounting code while
+keeping historical generator identities and all run13–21 exports unchanged.
+Outputs and paper projections are under `calc/out/run22/`; the report is
+`calc/ENGINE-REPORT-R22-261103.md`. bf16 is the transport default, f32 a control;
+dedicated bought/rented costs lead, with service and calendar utilization.
+The five provenance CSV interfaces, accepted PRO6000 16k decode point and audit/test commands
+are documented in the run22 README. No download or native build is required.
+
+After the numerical export, `python3 -B -I calc/r22_report.py` generates the
+report and `calc/ENGINE-REPORT-QUOTES-R22-261103.csv`; `--audit-only` verifies
+their exact source coordinates and publication manifest. Validation receipts
+are retained in `calc/R22-VALIDATION-261103.json`. This separate publication
+stage does not rewrite the numerical CSVs or their producer identity.
+
+## Run23: measured deep Mac and PRO decode
+
+The [run23 commands and measurement contracts](run23/README.md) document the
+CPU-only exporter, report publisher, tests and provenance CSV interfaces.
+Outputs are under `calc/out/run23/`; the report is
+`calc/ENGINE-REPORT-R23-261104.md`. `changed_against_run22.csv` provides exact
+coordinate differences and `abstract_bound_changes.csv` includes unchanged
+headline values. `python3 -B -I calc/run23/export.py --audit-only` checks
+historical bytes, semantic comparisons and quotes;
+`python3 -B -I calc/r23_report.py --audit-only` checks the report separately.
+Validation receipts use `calc/R23-VALIDATION-261104.json`.
+
+Run23 keeps native Mac `measurement_status` separate from export-health
+`status`. Its manifest retains the completed calculation identity when a bounded
+metadata re-export changes those labels: every other payload and every original
+Mac cell stays identical; mathematical source/data changes refuse reuse.
+
+## Run24: final API evidence for RC4
+
+See [run24 commands and contracts](run24/README.md). Data-only CSVs retain
+v1/core cadence, exact final-window availability and native study prices beside
+paper-workload normalization. `calc/out/run24/` and its `paper/` folder contain
+API ranks and dedicated/shared comparisons; accepted run23 hardware controls
+remain unchanged. The report is `calc/ENGINE-REPORT-R24-261105.md`; its publication
+manifest and coordinate quotes are separate from the numerical export manifest.
+
+## Portable regeneration
+
+CPython **3.14.4** is the reference for published CSV bytes and uses exact
+`bytes` regeneration. Other CPython versions use declared `ulp` mode, bounded
+by two `binary64` steps in reference-typed finite float fields. Release-candidate
+proofs run from fresh public clones on 3.14.4 and 3.12.3 with default signals,
+and on 3.14.4 with SIGINT and SIGTERM ignored. Each proof clears `PYTHONOPTIMIZE` and checks exactly 42 distinct automatic
+filenames in announcements of the resolved mode and zero of the opposite mode in the engine log.
+Versions 3.9–3.11 and 3.13 have not been runtime-qualified; 3.9 syntax is checked.
+No interpreter other than 3.14.4 is yet declared byte-equivalent.
+
+`calc/tests/regeneration.py` prints the comparison mode. On reference 3.14.4,
+regeneration requires exact bytes. On other interpreters, finite float cells
+listed by the pinned reference schema may differ by at most two adjacent
+binary64 representable values; every non-float byte and CSV structure remains
+exact. Integer lexemes, zero sign/spelling, nonfinite cells and textual labels
+are never relaxed. Frozen export SHA256 checks remain exact everywhere.
+
+The source is mixed float/integer `sum()` in `paper_tables.py` (person base cost)
+and `paper_tables_r6.py` (perimeter total). CPython 3.12 adds an integer directly
+to the running float; 3.14 compensates that addition too. See
+[CPython issue 122234](https://github.com/python/cpython/issues/122234),
+[3.12.3 code](https://github.com/python/cpython/blob/v3.12.3/Python/bltinmodule.c#L2623-L2631)
+and [3.14.4 code](https://github.com/python/cpython/blob/v3.14.4/Python/bltinmodule.c#L2893-L2897).
+The computation and all published outputs are unchanged.
+
+```bash
+# Full suite, automatically selected reference-byte or portable-ulp mode:
+PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s calc/tests
+# Both comparison modes, valid controls and named narrowing negatives:
+python3 -B -m unittest discover -s calc/tests -p test_regeneration.py
+# Rebuild the type schema with the reference interpreter only:
+python3.14 -B .scripts/generate-regeneration-schema.py
+# Real-copy signal barriers and their successful-release control:
+python3 -B -m unittest discover -s bench/tests
+```
+
+The schema generator writes `calc/tests/data/regeneration-floats.json` and its
+SHA256 pin in the comparator. Test logs and cross-version diagnostics belong in
+`.temp/`. The restream barrier lives only in `bench/tests/copy_barrier.py`; the
+production import scripts and measurement-kit bytes are unchanged.
+
+### RC4 portability regression controls
+
+Every CSV comparison prints its filename, whether mode selection was automatic,
+resolved mode and interpreter. CPython 3.14.4 announces exact CSV bytes; other
+supported interpreters announce the maximum two-ulp bound. Tolerance requires
+canonical `repr(float)` spelling; CSV structure and all non-float bytes remain exact.
+The default-mode tests exercise actual resolution after explicit controls, including
+an alternative Python implementation at the reference version.
+
+The Mac import tests hold a real partial copy at a pipe barrier and restore default
+SIGINT and SIGTERM in the child before Bash starts. Named ignored-parent
+variants retain exit 130/143, cleanup and source-hash assertions under inherited
+ignored signals. Each parent disposition is restored afterwards. The pipe
+barrier holds an observed partial copy; it does not reset signal dispositions.
+
+Run `python3 -B -m unittest discover -s calc/tests -p test_regeneration.py` and
+`python3 -B -m unittest discover -s bench/tests -p test_mac_import.py`.
+Standalone `test_run12.py` creates a missing `.temp` output root and uses the
+selected TMPDIR for temporary CSVs. No published output or calculation changed.
+
+## Compressed accepted quote ledgers
+
+Only the two quote ledgers for engine runs 22 and 23 use deterministic single-member
+gzip (level 9, no filename, timestamp zero). Their accepted decompressed sizes and
+SHA256 values, original revision/blob provenance and committed gzip SHA256 values
+are pinned in `calc/ledger-storage.json`. Every reader uses `calc/ledger_storage.py`;
+`python3 -B .scripts/generate-ledger-storage.py --check` checks the transform and
+cross-checks accepted Git originals when available. Without `--check`, the generator
+rebuilds gzip from local accepted Git objects; no fetch is performed. Regeneration
+compares accepted decompressed bytes, retaining an existing authenticated gzip to
+avoid interpreter/zlib-dependent compressed-byte comparisons. Other CSVs keep their
+existing representation. The release proof checks every introduced blob, including
+intermediate commits: at least 100 MiB fails; over 50 MiB prints a warning.
+
+Historical custody and the current manifest authenticate the exact committed gzip.
+Exporter text reads and fresh regeneration compare accepted decompressed content,
+including when no prior gzip exists; valid compressor-byte differences never
+relax the independent committed-blob custody check.

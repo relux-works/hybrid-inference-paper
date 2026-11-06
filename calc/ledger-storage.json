@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "compression": "gzip, level 9, no filename, mtime 0, one member",
+  "files": {
+    "calc/ENGINE-QUOTES-R22-261103.csv": {
+      "transform": "accepted-csv-to-single-gzip-v1",
+      "source_revision": "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0",
+      "source_path": "calc/ENGINE-QUOTES-R22-261103.csv",
+      "source_blob": "a07733762d8070cb9db2323818e8ebf32b480ea0",
+      "content_bytes": 193921511,
+      "content_sha256": "1a30e9259704cbba6690c5c7f4f0d0894d9eae25811bc438ea45a0a7ad1ec1d8",
+      "stored_path": "calc/ENGINE-QUOTES-R22-261103.csv.gz",
+      "gzip_sha256": "d54ee98d1350fef614ff6e799f5d04d85df97e0682494784487fbd7d8b41e96a",
+      "gzip_bytes": 3414681
+    },
+    "calc/ENGINE-QUOTES-R23-261104.csv": {
+      "transform": "accepted-csv-to-single-gzip-v1",
+      "source_revision": "9064701a9a07bd2726f76cefb6a05aa6aa428c0d",
+      "source_path": "calc/ENGINE-QUOTES-R23-261104.csv",
+      "source_blob": "d411ae34395e2fbe594e4708d12e61586ffe26d7",
+      "content_bytes": 214481624,
+      "content_sha256": "4d4e570c333a4a95087c5e9b1a543a65abe52d8a3d5b3becadbee2368a7cb295",
+      "stored_path": "calc/ENGINE-QUOTES-R23-261104.csv.gz",
+      "gzip_sha256": "13d290a0e464aa65615abd9021658411e00ba95d019c8209d781ad7c797171ae",
+      "gzip_bytes": 3771334
+    }
+  }
+}

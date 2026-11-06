@@ -1,0 +1,47 @@
+{
+  "base": "f7aeef958fc3e61a178ce345daa163c769545cbb",
+  "base_review": "r10c review pending at branching",
+  "nodes": {
+    "rtx5090": {
+      "session_budget_bytes": 13000000000,
+      "rate_basis": "client_kit_same_llama_cpp_hybrid_binary_assumption"
+    },
+    "pro6000": {
+      "session_budget_bytes": 69030000000,
+      "rate_basis": "kit1.6.5 PRO6000 same-weight prefill measured; hybrid-binary portability"
+    }
+  },
+  "office": {
+    "card_usd": 1999.99,
+    "host_usd": 1500,
+    "box_kw": 0.75,
+    "price_basis": "sold_out_list_price_plus_estimated_host",
+    "host_basis": "unpriced allowance for CPU,128GB RAM,1TB NVMe,PSU,10GbE/chassis; sensitivity, not a vendor quote"
+  },
+  "rental": {
+    "observed_hourly_usd": [
+      0.448,
+      0.522
+    ],
+    "observed_date": "2026-11-03",
+    "price_basis": "observed Vast offers; not market rates"
+  },
+  "reservation_depth": 249000,
+  "pcie_bytes_s": 50000000000.0,
+  "tiers": {
+    "RAM": {
+      "bandwidth_bytes_s": 100000000000.0,
+      "capacity_bytes": 96000000000.0,
+      "capacity_basis": "128GB host less32GB model/OS reserve; estimated usable cache"
+    },
+    "NVMe": {
+      "bandwidth_bytes_s": 7000000000.0,
+      "capacity_bytes": 900000000000.0,
+      "capacity_basis": "1TB host less100GB model/OS/headroom; estimated usable cache"
+    }
+  },
+  "price_evidence": {
+    "path": "data/measurements/run19-2026-11-03/price-evidence.json",
+    "sha256": "8aba2bd55bf0bdbd7439fefca46e81300ec5073b48b411cf2d6a026f60c98338"
+  }
+}

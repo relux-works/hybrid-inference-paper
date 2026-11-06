@@ -1,0 +1,7 @@
+depth,depth_from,prefill_tok_s,priority_basis,background_priority_interim,basis,capacity_status,status,alarm_inputs
+16000,0,173.6,historical_background_priority_throttled,True,kit1.6.0 c21284cd; measured at background priority and throttled; historical only,interim; normal-priority M3 parallel remeasurement pending,ok,
+50000,28896,93.7,historical_background_priority_throttled,True,kit1.6.0 c21284cd; measured at background priority and throttled; historical only,interim; normal-priority M3 parallel remeasurement pending,ok,
+100000,62896,49.9,historical_background_priority_throttled,True,kit1.6.0 c21284cd; measured at background priority and throttled; historical only,interim; normal-priority M3 parallel remeasurement pending,ok,
+150000,112896,41.2,historical_background_priority_throttled,True,kit1.6.0 c21284cd; measured at background priority and throttled; historical only,interim; normal-priority M3 parallel remeasurement pending,ok,
+200000,162896,27.7,historical_background_priority_throttled,True,kit1.6.0 c21284cd; measured at background priority and throttled; historical only,interim; normal-priority M3 parallel remeasurement pending,ok,
+249000,212896,22.2,historical_background_priority_throttled,True,kit1.6.0 c21284cd; measured at background priority and throttled; historical only,interim; normal-priority M3 parallel remeasurement pending,ok,

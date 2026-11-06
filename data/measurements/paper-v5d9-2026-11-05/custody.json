@@ -1,0 +1,51 @@
+[
+  {
+    "compressed": "facts-calibration.md.gz",
+    "sha256": "585f3ff9360a40c910d34220df8227493c2d894e73f04c12722e1503044ff1c9",
+    "bytes": 1527,
+    "compressed_sha256": "0ef66186d43ca7924116371107a0ef6077969c5bd817af3bacf57d3365588e2c",
+    "origin": "FACTS.md: Mac partition-noise calibration"
+  },
+  {
+    "compressed": "facts-forecast.md.gz",
+    "sha256": "260445c9bd9c1019f3623533aa9ebcba1d6ccb4617f55ca6ffac396bd4faa01b",
+    "bytes": 899,
+    "compressed_sha256": "d9e05c3cff65caeaca32bab0a0c6645102d70241d826d090e1a1fdcd694f4b1d",
+    "origin": "FACTS.md: Stage-1 time prediction"
+  },
+  {
+    "compressed": "facts-vllm.md.gz",
+    "sha256": "fc3df80a916a5acfebf6562724afc64a5080c514fbf41bb85f6ae04f2f253ae0",
+    "bytes": 4968,
+    "compressed_sha256": "77c420d7cafff806420d90fb769fe0e8102e878c2b481b127ad95881640ebe7e",
+    "origin": "FACTS.md: vLLM long-session node"
+  },
+  {
+    "compressed": "facts-m5.md.gz",
+    "sha256": "f496c858aab614e5b8e06d032bbec28aa607034752e06c69a6512b4b28406fd3",
+    "bytes": 3723,
+    "compressed_sha256": "1097ced4381c01f95fff21e198a81fe0e44a23a115e126b2c9865a1fc9d6c199",
+    "origin": "FACTS.md: Apple M5 Max 64 GB at recorded normal priority"
+  },
+  {
+    "compressed": "facts-pro-server.md.gz",
+    "sha256": "dc6d5319eea9b84c7a90a280ae23d9d5fa21f067926be767f7fe24887c883964",
+    "bytes": 5475,
+    "compressed_sha256": "c0c61b9500dae5ade6381ded324e49084234b00811fda04eb1d535b933ff4e47",
+    "origin": "FACTS.md sections1 and1a, complete"
+  },
+  {
+    "compressed": "facts-architecture.md.gz",
+    "sha256": "ea7e67561e3fc532330eda40a104b867936f30822b4e4df6e7b5dd4173808639",
+    "bytes": 485,
+    "compressed_sha256": "bc9ab2ba5d4c2a9e2defb8fc4252abe71d01c2ca33ddae5800ac9eaeef357849",
+    "origin": "FACTS.md architecture clauses only; near-tie outcomes outside this pass"
+  },
+  {
+    "compressed": "accepted-sliding-geometry.csv.gz",
+    "sha256": "2be1be493e25505de3eafa396f5fda3f48fa8d673ffba17e1f655d55a485dcb8",
+    "bytes": 1295,
+    "compressed_sha256": "f5d84ca53b44e8e6ed7bd396cc36fd5cee7f6c611d087640f44255d722cfb469",
+    "origin": "Accepted engine17 calc/out/run17/architectures/sliding_geometry.csv"
+  }
+]

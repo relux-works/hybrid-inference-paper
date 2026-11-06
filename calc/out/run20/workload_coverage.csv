@@ -1,0 +1,2 @@
+original_calls,common_calls,common_fraction,max_end_depth,delta_min,delta_max,owner_cache_fraction,source,full_workload_cost,status,alarm_inputs
+39904,10885,0.2727796712109062,249000,512,10000,0.981,data/measurements/run20-2026-11-03/owner-cache-notes-excerpt.txt,nan,alarm,run20

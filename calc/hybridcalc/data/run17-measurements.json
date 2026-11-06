@@ -1,0 +1,40 @@
+{
+  "sources": {
+    "qwen27_server": {
+      "path": "data/measurements/run17-2026-11-03/qwen27b-gpu-bench-results-20261102T030926Z.tar.gz",
+      "sha256": "3364b8a1ceb5a2a7521f73b051da01075ddd6d2e322f625e02abe99b1b8b2fe5"
+    },
+    "glimmer30_server": {
+      "path": "data/measurements/run17-2026-11-03/glimmer30-gpu-bench-results-20261102T024947Z.tar.gz",
+      "sha256": "a9c8887e1e5b24347802ca8049439aa04313d0a397f6e0ea1200aaf542f9606c"
+    },
+    "glimmer30_mac": {
+      "path": "data/measurements/run17-2026-11-03/glimmer30-mac-bench-results-20261102T102823Z.tar.gz",
+      "sha256": "188f97901325c464a8054d02dd305afb1d7622b33ff5df4f4686361e1a76a065"
+    },
+    "gemma31_server": {
+      "path": "data/measurements/run17-2026-11-03/gemma31-gpu-bench-results-20261102T030127Z.tar.gz",
+      "sha256": "a8b38efbeff4f26aa9f5215345c9791f100a7939ef59ba39eff240c0c9edc602"
+    },
+    "gemma31_mac": {
+      "path": "data/measurements/run17-2026-11-03/gemma31-mac-bench-results-20261102T035935Z.tar.gz",
+      "sha256": "c9ad47e8142ed8a8fc66ad3171329815dcd1a3c36761e1a558e1cf9ef6985272"
+    }
+  },
+  "mac": {
+    "glimmer30": {
+      "source": "glimmer30_mac",
+      "mode": "background_interim",
+      "background_priority_interim": true,
+      "priority_basis": "historical_background_priority_throttled"
+    },
+    "gemma31": {
+      "source": "gemma31_mac",
+      "mode": "background_interim",
+      "background_priority_interim": true,
+      "priority_basis": "historical_background_priority_throttled"
+    }
+  },
+  "import_assumption": "r16_qwen_token_depth_portability: same conditional intercept, 48.7us per transferred full-KV token and prefix-depth slope; estimated for SWA, not measured; window bytes affect wire only",
+  "qwen_state_bytes": 156893184
+}

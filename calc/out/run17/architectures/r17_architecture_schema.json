@@ -1,0 +1,107 @@
+{
+  "architecture_extrapolation": {
+    "columns": {
+      "basis": "text",
+      "break_even_downstream_mb_s": "MB/s",
+      "delta": "token",
+      "depth": "token",
+      "fixed_mb": "MB (1000000 B)",
+      "import_s": "s",
+      "kv_kib_token": "KiB/token (1024 B/KiB)",
+      "local_prefill_s": "s",
+      "rtt_s": "s",
+      "server_prefill_s": "s",
+      "wire_bytes": "B"
+    },
+    "csv_labels": {},
+    "name": "architecture_extrapolation",
+    "rows": 15,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "architecture_link_threshold": {
+    "columns": {
+      "background_priority_interim": "bool",
+      "basis": "text",
+      "break_even_downstream_mb_s": "MB/s",
+      "break_even_downstream_mbit_s": "Mbit/s",
+      "delta": "token",
+      "depth": "token",
+      "import_assumption": "text",
+      "import_s": "s",
+      "local_prefill_s": "s",
+      "model": "text",
+      "rtt_s": "s",
+      "server_prefill_s": "s",
+      "state_format": "text",
+      "state_quality": "text",
+      "wire_bytes": "B"
+    },
+    "csv_labels": {
+      "import_assumption": {
+        "r16_qwen_token_depth_portability: same conditional intercept; 48.7us per transferred full-KV token and prefix-depth slope; estimated for SWA; not measured; window bytes affect wire only": "r16_qwen_token_depth_portability: same conditional intercept, 48.7us per transferred full-KV token and prefix-depth slope; estimated for SWA, not measured; window bytes affect wire only"
+      }
+    },
+    "name": "architecture_link_threshold",
+    "rows": 36,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "bf16_transfer_egress": {
+    "columns": {
+      "basis": "text",
+      "delta": "token",
+      "depth": "token",
+      "downstream_mb_s": "MB/s",
+      "egress_usd": "USD",
+      "egress_usd_per_gb": "USD/GB (1000000000 B)",
+      "state_format": "text",
+      "state_quality": "text",
+      "transfer_s": "s",
+      "wire_bytes": "B"
+    },
+    "csv_labels": {},
+    "name": "bf16_transfer_egress",
+    "rows": 54,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "measured_model_rates": {
+    "columns": {
+      "actual_depth": "token",
+      "background_priority_interim": "bool",
+      "basis": "text",
+      "decode_tok_s": "s",
+      "delta": "token",
+      "depth": "token",
+      "model": "text",
+      "prefill_tok_s": "s",
+      "prompt_n": "token",
+      "role": "text",
+      "source": "text"
+    },
+    "csv_labels": {},
+    "name": "measured_model_rates",
+    "rows": 78,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "sliding_geometry": {
+    "columns": {
+      "allocated_slot_fixed_bytes": "B",
+      "basis": "text",
+      "depth": "token",
+      "estimated_tensor_bytes": "B",
+      "full_kv_bytes_token": "B/token",
+      "measured_sequence_bytes": "B",
+      "model": "text",
+      "predicted_sequence_bytes": "B",
+      "recurrent_bytes": "B",
+      "residual_bytes": "B",
+      "sequence_metadata_bytes": "B",
+      "window_bytes": "B",
+      "window_bytes_position": "B/position",
+      "window_positions": "position"
+    },
+    "csv_labels": {},
+    "name": "sliding_geometry",
+    "rows": 6,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  }
+}

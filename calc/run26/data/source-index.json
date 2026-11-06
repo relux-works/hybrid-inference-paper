@@ -1,0 +1,45 @@
+[
+  {
+    "path": "apple-studio.html",
+    "url": "https://www.apple.com/shop/buy-mac/mac-studio",
+    "sha256": "a461510dfa895cf14a8c08823e31fe03d6ec5ad855631b1fbbc357cf3c66ba9a",
+    "access_date": "2026-11-05",
+    "kind": "public model card/configuration or price webpage; no model weights"
+  },
+  {
+    "path": "apple-specs.html",
+    "url": "https://www.apple.com/mac-studio/specs/",
+    "sha256": "cb92e945a6d7684ae96d13c185c91cac4fb9aee153705930e398425749dedd78",
+    "access_date": "2026-11-05",
+    "kind": "public model card/configuration or price webpage; no model weights"
+  },
+  {
+    "path": "glm-config.json",
+    "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/config.json",
+    "sha256": "bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f",
+    "access_date": "2026-11-05",
+    "kind": "public model card/configuration or price webpage; no model weights"
+  },
+  {
+    "path": "glm-card.md",
+    "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/raw/main/README.md",
+    "sha256": "e6c5d41400e28f5a89418a0d15b09b9c113314a7553d40d7d4a8a72fcdb87d02",
+    "access_date": "2026-11-05",
+    "kind": "public model card/configuration or price webpage; no model weights"
+  },
+  {
+    "path": "qwen-cloud-card.md",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/raw/main/README.md",
+    "sha256": "7690c680c2d6eb284179ef5dd4db63260d248531cae9087b09b2c2200230f331",
+    "access_date": "2026-11-05",
+    "kind": "public model card/configuration or price webpage; no model weights"
+  },
+  {
+    "path": "FACTS-run21-excerpt.md",
+    "source": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+    "source_sha256": "10391ae70ee0604c4987be1e1bada31ba714d64b5aca22d5b4da02a2932e3b94",
+    "sha256": "5785444edea92f889c30801de4f71ee41b47c36a2595eabd972859302c60005d",
+    "access_date": "2026-11-05",
+    "kind": "owner accepted prior GLM projection/two-B300 sizing; not new GLM measurements"
+  }
+]

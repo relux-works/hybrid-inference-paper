@@ -1,0 +1,6 @@
+{
+  "name": "architectures-r17",
+  "kind": "measurements_r17",
+  "description": "Run17 SWA geometry, thresholds, extrapolation and bf16 wire economics",
+  "inputs": []
+}

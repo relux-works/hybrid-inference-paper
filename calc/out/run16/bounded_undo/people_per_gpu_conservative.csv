@@ -1,0 +1,7 @@
+gpu,server_precision,share,hours,load,calls_user_day,shadow_gpu_s_call,migration_gpu_s_call,storage_user_month,people_compute_only,people_with_hosting,background_priority_interim,capacity_status,status,alarm_inputs
+RTX PRO 6000 hourly,Q4,0.2,8,0.7,500.0,1.1407753987008646,0.121972951328,11.8832951328,35,31,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+RTX PRO 6000 hourly,Q4,0.5,8,0.7,1250.0,1.1407753987008646,0.121972951328,11.8832951328,14,12,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+RTX PRO 6000 hourly,Q4,1,8,0.7,2500,1.1407753987008646,0.121972951328,11.8832951328,7,6,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+B300 288 GB hourly,Q4,0.2,8,0.7,500.0,1.397091678464554,0.121972951328,11.8832951328,28,26,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+B300 288 GB hourly,Q4,0.5,8,0.7,1250.0,1.397091678464554,0.121972951328,11.8832951328,11,10,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+B300 288 GB hourly,Q4,1,8,0.7,2500,1.397091678464554,0.121972951328,11.8832951328,5,5,True,interim; normal-priority M3 parallel remeasurement pending,ok,

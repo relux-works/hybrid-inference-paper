@@ -1,4 +1,5 @@
-Engine run 15, exact signed source 04755721ca9f08141b8fcff792e74dfc52cd1fc6.
-CSV payloads copied byte-for-byte from calc/out/run15/base/.
-Authority: calc/ENGINE-REPORT-R15-261102.md and calc/ENGINE-QUOTES-R15-261102.csv.
-The six-agent row is retained, qualified, and excluded from capacity trends.
+Engine run 16, exact accepted signed source e51942d331e274833f97f934a750d780c9bea9b0.
+CSV payloads copied byte-for-byte from calc/out/run16/base/.
+Authority: calc/ENGINE-REPORT-R16-261103.md and calc/ENGINE-QUOTES-R16-261103.csv.
+M3 single-stream anchors: recorded PRI31. Multi-stream: background_priority_interim.
+M5 cooled sweep: owner-reported normal priority, not recorded. Bounded undo: future-work sensitivity.

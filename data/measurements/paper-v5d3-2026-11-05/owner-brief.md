@@ -1,0 +1,3 @@
+# Owner r21j: RC4 last paper pass
+
+Accepted engine24 ca7f228a, Muse r5x6 ACCEPT. Measured Qwen v1 long-pause3.604/12.550, one warm observation at minimum; core unknown. GLM v1 3.008/7.830, core2.021/4.539. Partial priceable cohorts; hit fractions transferred to paper shapes by assumption. Dedicated ownedM5/boughtPRO median heavy crossing45->5, no light/medium or cheapest crossing; rented heavy443 combined/60 Claude, bought Claude30->5 local-only. Each measured sentence names cadence/cache point.10 attempted endpoints below95% excluded. RC4 data status2026-11-05 12:00Z, pending completed RULER64/128/B300 decode/admitted Qwen1M; private evidence snapshot follows. No push/tag/version change. All16 gates fresh with exit codes, counts and signed coauthored commits.

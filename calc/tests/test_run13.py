@@ -291,7 +291,8 @@ class Run13Tests(unittest.TestCase):
                 self.assertEqual(a[key],b[key],key+': accounting child must retain measured M5 calibration')
 
     # Separate K and V double Gemma full KV; the sliding component is unchanged.
-    # The native paper formula and R13 engine independently agree at 1k and10k.
+    # R13 retains its original partial-window formula; current paper geometry
+    # uses the complete live R17 window. Both keep separate K and V.
     def test_gemma_geometry_recomputation(self):
         result=run('paper-tables-r7-r13',['workload.sample_calls=1'])
         gemma=[r for t in result['tables'] if t['id']=='arch_compare' for r in t['rows'] if r['model']=='Gemma 4 31B']
@@ -301,7 +302,8 @@ class Run13Tests(unittest.TestCase):
             self.assertEqual(r['kv_full_bytes_token'],10*4*512*2*34/32)
             for k,n in [('delta_1k_mb',1000),('delta_10k_mb',10000)]:
                 expected=round((n*43520+min(n,1024)*435200)/1e6,1)
-                self.assertEqual(r[k],expected);self.assertEqual(float(native[k]),expected)
+                self.assertEqual(r[k],expected)
+                self.assertEqual(float(native[k]),(n*43520+1024*435200)/1e6)
         self.assertEqual(float(native['kv_full_bytes_token']),43520)
 
     # Execute today's actual native script in isolation; every emitted CSV byte
@@ -310,6 +312,10 @@ class Run13Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             script=Path(tmp)/'arch_compare.py'
             script.write_bytes((ROOT/'paper/data/arch_compare.py').read_bytes())
+            (Path(tmp)/'engine').mkdir()
+            (Path(tmp)/'engine/arch_compare.csv').write_bytes((ROOT/'paper/data/engine/arch_compare.csv').read_bytes())
+            (Path(tmp)/'engine17').mkdir()
+            (Path(tmp)/'engine17/sliding_geometry.csv').write_bytes((ROOT/'paper/data/engine17/sliding_geometry.csv').read_bytes())
             result=subprocess.run([sys.executable,str(script)],cwd=tmp,capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stderr)
             self.assertEqual((Path(tmp)/'arch-compare.csv').read_bytes(),(ROOT/'paper/data/arch-compare.csv').read_bytes())
@@ -319,18 +325,19 @@ class Run13Tests(unittest.TestCase):
     def test_paper_ledger_covers_changed_exports_and_printed_numbers(self):
         from publication_v2 import check_publication,records
         summary=check_publication()
-        self.assertTrue(any(r['file']=='paper/sections/05b-models.tex' and r['token']=='19--21' for r in records()))
+        self.assertTrue(any(r['file']=='paper/sections/05b-models.tex' and r['token']=='13--14' for r in records()))
         self.assertGreater(summary['scanned_numbers'],0)
 
     # Removing a current coordinate, moving its file/line, or adding an old
     # publication value fails the exact site guard. A clean v2 control passes.
+    # The retained891.6-second transcript now lives in the methods appendix.
     def test_paper_ledger_omission_controls(self):
         from publication_v2 import check_publication,records,read_texts
         check_publication()
         sites=records()
-        for file,token in (('paper/sections/05b-models.tex','19--21'),
-                           ('paper/sections/07-economics.tex','6.4'),
-                           ('paper/sections/04-channel.tex','179.5')):
+        for file,token in (('paper/sections/05b-models.tex','13--14'),
+                           ('paper/sections/91-calculation-history.tex','5.6'),
+                           ('paper/sections/90-appendix.tex','891.6')):
             target=next(r for r in sites if r['file']==file and r['token']==token)
             with self.subTest(file=file,token=token):
                 with self.assertRaisesRegex(AssertionError,'unregistered v2 numeric site'):

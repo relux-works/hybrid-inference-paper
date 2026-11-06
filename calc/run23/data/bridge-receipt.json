@@ -1,0 +1,92 @@
+{
+  "source_path": "/home/agent/lanes/hybrid/.temp/evidence/vllm-pro-g1611-261103/stage-pro6000-1611/bridge/timing/bridge-timing.json",
+  "source_sha256": "3b14f5100262433a80b0e0c566cd63d96278b9ce559f7ad68756de0a2ef53249",
+  "client_backend": "cuda",
+  "transport": "loopback",
+  "rows": [
+    {
+      "depth": 16384,
+      "delta": 2343,
+      "status": "measured",
+      "median": {
+        "ttft_ms": 1710.6167238671333,
+        "server_prefill_ms": 335.073214257136,
+        "export_ms": 72.57260382175446,
+        "conversion_ms": 570.200129179284,
+        "transfer_ms": 39.51027803122997,
+        "import_ms": 349.02931191027164,
+        "other_and_local_tail_ms": 315.8645760267973
+      }
+    },
+    {
+      "depth": 16384,
+      "delta": 10000,
+      "status": "measured",
+      "median": {
+        "ttft_ms": 4741.652854951099,
+        "server_prefill_ms": 1616.2241867277771,
+        "export_ms": 226.5913370065391,
+        "conversion_ms": 1606.508816126734,
+        "transfer_ms": 89.46166699752212,
+        "import_ms": 771.4191512204707,
+        "other_and_local_tail_ms": 435.5086989235133
+      }
+    },
+    {
+      "depth": 65536,
+      "delta": 2343,
+      "status": "measured",
+      "median": {
+        "ttft_ms": 1974.6907111257315,
+        "server_prefill_ms": 534.3330889008939,
+        "export_ms": 81.16626809351146,
+        "conversion_ms": 558.9643509592861,
+        "transfer_ms": 41.10209899954498,
+        "import_ms": 366.7090318631381,
+        "other_and_local_tail_ms": 383.8810692541301
+      }
+    },
+    {
+      "depth": 65536,
+      "delta": 10000,
+      "status": "measured",
+      "median": {
+        "ttft_ms": 5715.686667012051,
+        "server_prefill_ms": 2451.301023364067,
+        "export_ms": 247.22143611870706,
+        "conversion_ms": 1646.0392121225595,
+        "transfer_ms": 90.73965391144156,
+        "import_ms": 788.8005541171879,
+        "other_and_local_tail_ms": 474.32838403619826
+      }
+    },
+    {
+      "depth": 131072,
+      "delta": 2343,
+      "status": "measured",
+      "median": {
+        "ttft_ms": 2261.4241437986493,
+        "server_prefill_ms": 796.5605000499636,
+        "export_ms": 93.40435592457652,
+        "conversion_ms": 589.33748700656,
+        "transfer_ms": 43.09728089720011,
+        "import_ms": 395.66686819307506,
+        "other_and_local_tail_ms": 332.959737861529
+      }
+    },
+    {
+      "depth": 131072,
+      "delta": 10000,
+      "status": "measured",
+      "median": {
+        "ttft_ms": 6623.697503004223,
+        "server_prefill_ms": 3319.3823860492557,
+        "export_ms": 261.00546098314226,
+        "conversion_ms": 1338.8459351845086,
+        "transfer_ms": 90.02162399701774,
+        "import_ms": 792.3568168189377,
+        "other_and_local_tail_ms": 817.8384508937597
+      }
+    }
+  ]
+}

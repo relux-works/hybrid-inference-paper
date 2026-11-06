@@ -1,0 +1,58 @@
+[
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "waits": [
+      "Timing-only Mac/node runs without snapshot/evidence hashing, with separate stage spans"
+    ],
+    "source": "Owner r20c input 3; time-accounting-r13.md instrumentation section"
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "ожидается",
+    "waits": [
+      "Mac checkpoint 10"
+    ],
+    "source": "data/measurements/paper-v4b-2026-11-03/FACTS.md#5-pending-state-as-pending-with-the-expected-date"
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "влияние передачи bf16 на качество и скорость на GPU и Mac.",
+    "waits": [
+      "bf16 quality and speed on GPU and Mac"
+    ],
+    "source": "Owner r20c input 1; CPU-only bf16 report 64dc3c69; GPU/Mac measurements pending"
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "ожидаются",
+    "waits": [
+      "RULER 32k",
+      "RULER 64k/128k"
+    ],
+    "source": "data/measurements/paper-v4b-2026-11-03/FACTS.md#5-pending-state-as-pending-with-the-expected-date"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "растущая сессия CUDA и Metal на M3 Max: повторная проверка checkpoint 10. Первая попытка повтора остановлена предварительной проверкой RAM до запуска сверки.",
+    "waits": [
+      "Mac checkpoint 10"
+    ],
+    "source": "data/measurements/paper-v4b-2026-11-03/FACTS.md#5-pending-state-as-pending-with-the-expected-date"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER 32 тысячи: запуск начат 2026-11-03 07:32 UTC, ожидается около шести часов; 64 и 128 тысяч: после решения владельца о бюджете. Полная параллельная кривая M3 при PRI~31, Gemma 4 и Glimmer при PRI~31: после выделения свободного Mac; затем обновление движка 16b. Калибровка CUDA и Metal к BF16 требует Mac. Мост vLLM на GPU: после переработки. Лестница Bonsai 2 2B/4B/9B: позднее.",
+    "waits": [
+      "RULER 32k",
+      "RULER 64k/128k",
+      "PRI31 M3 full parallel curve",
+      "PRI31 Gemma/Glimmer",
+      "engine 16b",
+      "CUDA/Metal BF16 calibration",
+      "GPU vLLM bridge",
+      "Bonsai 2 ladder"
+    ],
+    "source": "data/measurements/paper-v4b-2026-11-03/FACTS.md#5-pending-state-as-pending-with-the-expected-date"
+  }
+]

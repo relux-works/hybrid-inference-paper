@@ -1,0 +1,8 @@
+{
+  "facts_path": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+  "facts_sha256": "9a4efc07a1b4ad21f0ed602638056848634348633bbb440272f2285b5009b4c6",
+  "interim_report_path": "/home/agent/Werkstatt/hybrid-d/llama.cpp/.temp/hybrid-d-r16d-261105/RULER-INTERIM.md",
+  "interim_report_sha256": "b6479fe49dfbe5301066e2a546c507a170c5b71f3d89bf5249d9a8e319e040c0",
+  "bundle_sha256": "fe2195aaae4e098a3a206a0e60fe925fa19293d59c62c8103fbb6160c7e7d48b",
+  "scope": "Accepted descriptive report and saved analysis files only. No hardware rerun or independent raw model/native/archive rehash claimed. Serial task prefixes remain separate from unchanged registered primary analysis. Engine24 not imported."
+}

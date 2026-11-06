@@ -1,0 +1,1459 @@
+table,row,column,old,new
+api_admission.csv,0,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=96.1538%/1d=97.3533%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,0,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,1,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.9306%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,1,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,2,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,2,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,3,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=98.3001%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,3,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,4,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=98.6111%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,4,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,5,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,5,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,6,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.4326%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,6,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,7,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,7,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,8,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.8485%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,8,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,9,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,9,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,10,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 30m=95.6522%/1d=95.0172%; missing windows: 5m; admission checks recorded windows only; missing availability unverified
+api_admission.csv,10,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,11,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,11,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,12,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.8611%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,12,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,13,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,13,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,14,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.9283%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,14,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,15,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=98.9228%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,15,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,16,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 30m=100%/1d=100%; missing windows: 5m; admission checks recorded windows only; missing availability unverified
+api_admission.csv,16,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,17,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=87.4642%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,17,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,18,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 1d=96.7419%; missing windows: 5m/30m; admission checks recorded windows only; missing availability unverified
+api_admission.csv,18,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,19,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,19,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,20,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,20,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,21,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=96.1538%/1d=97.3533%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,21,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,22,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.9306%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,22,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,23,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,23,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,24,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=98.3001%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,24,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,25,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=98.6111%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,25,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,26,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,26,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,27,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.4326%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,27,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,28,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,28,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,29,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.8485%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,29,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,30,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,30,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,31,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 30m=95.6522%/1d=95.0172%; missing windows: 5m; admission checks recorded windows only; missing availability unverified
+api_admission.csv,31,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,32,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,32,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,33,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.8611%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,33,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,34,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,34,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,35,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=99.9283%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,35,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,36,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=98.9228%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,36,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,37,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 30m=100%/1d=100%; missing windows: 5m; admission checks recorded windows only; missing availability unverified
+api_admission.csv,37,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,38,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=87.4642%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,38,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,39,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 1d=96.7419%; missing windows: 5m/30m; admission checks recorded windows only; missing availability unverified
+api_admission.csv,39,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,40,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,40,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+api_admission.csv,41,availability_basis,minimum of every recorded5m/30m/1d window,recorded windows: 5m=100%/30m=100%/1d=100%; missing windows: none; admission checks recorded windows only; missing availability unverified
+api_admission.csv,41,workload_scope,<absent>,conditional common measured subset 10885/39904 (27.28%); billed means from this subset; normalized to1000 same-scenario calls; full workload unsupported; million profile rescales context within the same conditional output mix
+decode_scaling.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,3,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,4,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,5,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,6,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,7,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,8,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,9,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,10,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,11,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,12,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,13,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,14,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,15,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,16,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,17,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,18,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,19,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,20,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,21,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,22,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,23,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,24,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,25,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,26,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,27,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,28,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,29,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,30,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,31,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,32,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,33,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,34,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,35,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,36,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,37,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,38,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,39,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,40,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,41,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,42,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,43,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,44,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,45,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,46,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,47,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,48,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,49,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,50,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,51,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,52,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,53,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,54,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,55,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,56,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,57,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,58,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,59,paper_use,<absent>,eligible server; quote the scoped paper projections
+decode_scaling.csv,60,paper_use,<absent>,not used in the paper
+decode_scaling.csv,61,paper_use,<absent>,not used in the paper
+decode_scaling.csv,62,paper_use,<absent>,not used in the paper
+decode_scaling.csv,63,paper_use,<absent>,not used in the paper
+decode_scaling.csv,64,paper_use,<absent>,not used in the paper
+decode_scaling.csv,65,paper_use,<absent>,not used in the paper
+decode_scaling.csv,66,paper_use,<absent>,not used in the paper
+decode_scaling.csv,67,paper_use,<absent>,not used in the paper
+decode_scaling.csv,68,paper_use,<absent>,not used in the paper
+decode_scaling.csv,69,paper_use,<absent>,not used in the paper
+decode_scaling.csv,70,paper_use,<absent>,not used in the paper
+decode_scaling.csv,71,paper_use,<absent>,not used in the paper
+engine_sensitivity.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,3,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,4,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,5,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,6,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,7,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,8,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,9,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,10,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,11,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,12,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,13,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,14,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,15,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,16,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,17,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,18,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,18,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,19,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,19,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,20,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,20,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,21,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,21,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,22,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,22,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,23,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,23,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,24,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,24,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,25,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,25,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,26,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,26,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,27,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,27,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,28,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,28,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,29,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,29,paper_use,<absent>,eligible server; quote the scoped paper projections
+engine_sensitivity.csv,30,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,30,paper_use,<absent>,not used in the paper
+engine_sensitivity.csv,31,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,31,paper_use,<absent>,not used in the paper
+engine_sensitivity.csv,32,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,32,paper_use,<absent>,not used in the paper
+engine_sensitivity.csv,33,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,33,paper_use,<absent>,not used in the paper
+engine_sensitivity.csv,34,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,34,paper_use,<absent>,not used in the paper
+engine_sensitivity.csv,35,basis,integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload,"integer fleet; own minimal monotone search; hybrid sufficient R19 provision policy; resident_work is shared work-price lower bound; conditional workload; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+engine_sensitivity.csv,35,paper_use,<absent>,not used in the paper
+paper_claims.csv,0,paper_use,<absent>,archival mixed-server statement; not used in the paper; use paper/paper_claims.csv
+paper_claims.csv,1,paper_use,<absent>,archival mixed-server statement; not used in the paper; use paper/paper_claims.csv
+paper_claims.csv,2,paper_use,<absent>,archival mixed-server statement; not used in the paper; use paper/paper_claims.csv
+rented_vllm_prefill.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,3,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,4,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,5,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,6,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,7,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,8,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,9,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,10,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,11,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,12,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,13,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,14,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,15,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,16,paper_use,<absent>,eligible server; quote the scoped paper projections
+rented_vllm_prefill.csv,17,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,3,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,4,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,5,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,6,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,7,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,8,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,9,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,10,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,11,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,12,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,13,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,14,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,15,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,16,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,17,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,18,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,19,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,20,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,21,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,22,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,23,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,24,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,25,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,26,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,27,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,28,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,29,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,30,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,31,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,32,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,33,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,34,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,35,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,36,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,37,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,38,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,39,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,40,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,41,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,42,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,43,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,44,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,45,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,46,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,47,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,48,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,49,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,50,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,51,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,52,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,53,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,54,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,55,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,56,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,57,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,58,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,59,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,60,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,61,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,62,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,63,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,64,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,65,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,66,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,67,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,68,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,69,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,70,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,71,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,72,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,72,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,73,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,73,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,74,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,74,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,75,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,75,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,76,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,76,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,77,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,77,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,78,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,78,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,79,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,79,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,80,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,80,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,81,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,81,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,82,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,82,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,83,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,83,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,84,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,84,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,85,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,85,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,86,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,86,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,87,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,87,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,88,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,88,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,89,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,89,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,90,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,90,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,91,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,91,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,92,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,92,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,93,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,93,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,94,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,94,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,95,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,95,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,96,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,96,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,97,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,97,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,98,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,98,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,99,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,99,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,100,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,100,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,101,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,101,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,102,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,102,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,103,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,103,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,104,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,104,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,105,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,105,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,106,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,106,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,107,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,107,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,108,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,108,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,109,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,109,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,110,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,110,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,111,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,111,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,112,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,112,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,113,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,113,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,114,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,114,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,115,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,115,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,116,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,116,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,117,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,117,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,118,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,118,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,119,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,119,paper_use,<absent>,eligible server; quote the scoped paper projections
+server_prefill.csv,120,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,120,paper_use,<absent>,not used in the paper
+server_prefill.csv,121,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,121,paper_use,<absent>,not used in the paper
+server_prefill.csv,122,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,122,paper_use,<absent>,not used in the paper
+server_prefill.csv,123,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,123,paper_use,<absent>,not used in the paper
+server_prefill.csv,124,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,124,paper_use,<absent>,not used in the paper
+server_prefill.csv,125,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,125,paper_use,<absent>,not used in the paper
+server_prefill.csv,126,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,126,paper_use,<absent>,not used in the paper
+server_prefill.csv,127,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,127,paper_use,<absent>,not used in the paper
+server_prefill.csv,128,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,128,paper_use,<absent>,not used in the paper
+server_prefill.csv,129,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,129,paper_use,<absent>,not used in the paper
+server_prefill.csv,130,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,130,paper_use,<absent>,not used in the paper
+server_prefill.csv,131,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,131,paper_use,<absent>,not used in the paper
+server_prefill.csv,132,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,132,paper_use,<absent>,not used in the paper
+server_prefill.csv,133,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,133,paper_use,<absent>,not used in the paper
+server_prefill.csv,134,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,134,paper_use,<absent>,not used in the paper
+server_prefill.csv,135,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,135,paper_use,<absent>,not used in the paper
+server_prefill.csv,136,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,136,paper_use,<absent>,not used in the paper
+server_prefill.csv,137,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,137,paper_use,<absent>,not used in the paper
+server_prefill.csv,138,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,138,paper_use,<absent>,not used in the paper
+server_prefill.csv,139,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,139,paper_use,<absent>,not used in the paper
+server_prefill.csv,140,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,140,paper_use,<absent>,not used in the paper
+server_prefill.csv,141,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,141,paper_use,<absent>,not used in the paper
+server_prefill.csv,142,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,142,paper_use,<absent>,not used in the paper
+server_prefill.csv,143,basis,R19/14 llama.cpp sensitivity,"R19/14 llama.cpp sensitivity; native llama.cpp; vLLM-to-llama bridge not applicable; bridge enum is a duplicate sensitivity, not a measured bridge effect"
+server_prefill.csv,143,paper_use,<absent>,not used in the paper
+small_team_cost.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,3,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,4,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,5,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,6,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,7,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,8,paper_use,<absent>,not used in the paper
+small_team_cost.csv,9,paper_use,<absent>,not used in the paper
+small_team_cost.csv,10,paper_use,<absent>,not used in the paper
+small_team_cost.csv,11,paper_use,<absent>,not used in the paper
+small_team_cost.csv,12,paper_use,<absent>,not used in the paper
+small_team_cost.csv,13,paper_use,<absent>,not used in the paper
+small_team_cost.csv,14,paper_use,<absent>,not used in the paper
+small_team_cost.csv,15,paper_use,<absent>,not used in the paper
+small_team_cost.csv,16,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,17,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,18,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,19,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,20,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,21,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,22,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,23,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,24,paper_use,<absent>,not used in the paper
+small_team_cost.csv,25,paper_use,<absent>,not used in the paper
+small_team_cost.csv,26,paper_use,<absent>,not used in the paper
+small_team_cost.csv,27,paper_use,<absent>,not used in the paper
+small_team_cost.csv,28,paper_use,<absent>,not used in the paper
+small_team_cost.csv,29,paper_use,<absent>,not used in the paper
+small_team_cost.csv,30,paper_use,<absent>,not used in the paper
+small_team_cost.csv,31,paper_use,<absent>,not used in the paper
+small_team_cost.csv,32,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,33,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,34,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,35,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,36,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,37,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,38,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,39,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,40,paper_use,<absent>,not used in the paper
+small_team_cost.csv,41,paper_use,<absent>,not used in the paper
+small_team_cost.csv,42,paper_use,<absent>,not used in the paper
+small_team_cost.csv,43,paper_use,<absent>,not used in the paper
+small_team_cost.csv,44,paper_use,<absent>,not used in the paper
+small_team_cost.csv,45,paper_use,<absent>,not used in the paper
+small_team_cost.csv,46,paper_use,<absent>,not used in the paper
+small_team_cost.csv,47,paper_use,<absent>,not used in the paper
+small_team_cost.csv,48,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,49,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,50,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,51,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,52,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,53,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,54,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,55,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,56,paper_use,<absent>,not used in the paper
+small_team_cost.csv,57,paper_use,<absent>,not used in the paper
+small_team_cost.csv,58,paper_use,<absent>,not used in the paper
+small_team_cost.csv,59,paper_use,<absent>,not used in the paper
+small_team_cost.csv,60,paper_use,<absent>,not used in the paper
+small_team_cost.csv,61,paper_use,<absent>,not used in the paper
+small_team_cost.csv,62,paper_use,<absent>,not used in the paper
+small_team_cost.csv,63,paper_use,<absent>,not used in the paper
+small_team_cost.csv,64,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,65,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,66,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,67,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,68,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,69,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,70,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,71,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,72,paper_use,<absent>,not used in the paper
+small_team_cost.csv,73,paper_use,<absent>,not used in the paper
+small_team_cost.csv,74,paper_use,<absent>,not used in the paper
+small_team_cost.csv,75,paper_use,<absent>,not used in the paper
+small_team_cost.csv,76,paper_use,<absent>,not used in the paper
+small_team_cost.csv,77,paper_use,<absent>,not used in the paper
+small_team_cost.csv,78,paper_use,<absent>,not used in the paper
+small_team_cost.csv,79,paper_use,<absent>,not used in the paper
+small_team_cost.csv,80,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,81,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,82,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,83,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,84,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,85,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,86,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,87,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,88,paper_use,<absent>,not used in the paper
+small_team_cost.csv,89,paper_use,<absent>,not used in the paper
+small_team_cost.csv,90,paper_use,<absent>,not used in the paper
+small_team_cost.csv,91,paper_use,<absent>,not used in the paper
+small_team_cost.csv,92,paper_use,<absent>,not used in the paper
+small_team_cost.csv,93,paper_use,<absent>,not used in the paper
+small_team_cost.csv,94,paper_use,<absent>,not used in the paper
+small_team_cost.csv,95,paper_use,<absent>,not used in the paper
+small_team_cost.csv,96,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,97,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,98,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,99,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,100,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,101,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,102,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,103,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,104,paper_use,<absent>,not used in the paper
+small_team_cost.csv,105,paper_use,<absent>,not used in the paper
+small_team_cost.csv,106,paper_use,<absent>,not used in the paper
+small_team_cost.csv,107,paper_use,<absent>,not used in the paper
+small_team_cost.csv,108,paper_use,<absent>,not used in the paper
+small_team_cost.csv,109,paper_use,<absent>,not used in the paper
+small_team_cost.csv,110,paper_use,<absent>,not used in the paper
+small_team_cost.csv,111,paper_use,<absent>,not used in the paper
+small_team_cost.csv,112,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,113,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,114,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,115,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,116,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,117,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,118,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,119,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,120,paper_use,<absent>,not used in the paper
+small_team_cost.csv,121,paper_use,<absent>,not used in the paper
+small_team_cost.csv,122,paper_use,<absent>,not used in the paper
+small_team_cost.csv,123,paper_use,<absent>,not used in the paper
+small_team_cost.csv,124,paper_use,<absent>,not used in the paper
+small_team_cost.csv,125,paper_use,<absent>,not used in the paper
+small_team_cost.csv,126,paper_use,<absent>,not used in the paper
+small_team_cost.csv,127,paper_use,<absent>,not used in the paper
+small_team_cost.csv,128,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,129,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,130,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,131,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,132,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,133,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,134,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,135,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,136,paper_use,<absent>,not used in the paper
+small_team_cost.csv,137,paper_use,<absent>,not used in the paper
+small_team_cost.csv,138,paper_use,<absent>,not used in the paper
+small_team_cost.csv,139,paper_use,<absent>,not used in the paper
+small_team_cost.csv,140,paper_use,<absent>,not used in the paper
+small_team_cost.csv,141,paper_use,<absent>,not used in the paper
+small_team_cost.csv,142,paper_use,<absent>,not used in the paper
+small_team_cost.csv,143,paper_use,<absent>,not used in the paper
+small_team_cost.csv,144,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,145,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,146,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,147,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,148,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,149,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,150,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,151,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,152,paper_use,<absent>,not used in the paper
+small_team_cost.csv,153,paper_use,<absent>,not used in the paper
+small_team_cost.csv,154,paper_use,<absent>,not used in the paper
+small_team_cost.csv,155,paper_use,<absent>,not used in the paper
+small_team_cost.csv,156,paper_use,<absent>,not used in the paper
+small_team_cost.csv,157,paper_use,<absent>,not used in the paper
+small_team_cost.csv,158,paper_use,<absent>,not used in the paper
+small_team_cost.csv,159,paper_use,<absent>,not used in the paper
+small_team_cost.csv,160,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,161,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,162,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,163,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,164,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,165,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,166,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,167,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,168,paper_use,<absent>,not used in the paper
+small_team_cost.csv,169,paper_use,<absent>,not used in the paper
+small_team_cost.csv,170,paper_use,<absent>,not used in the paper
+small_team_cost.csv,171,paper_use,<absent>,not used in the paper
+small_team_cost.csv,172,paper_use,<absent>,not used in the paper
+small_team_cost.csv,173,paper_use,<absent>,not used in the paper
+small_team_cost.csv,174,paper_use,<absent>,not used in the paper
+small_team_cost.csv,175,paper_use,<absent>,not used in the paper
+small_team_cost.csv,176,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,177,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,178,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,179,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,180,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,181,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,182,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,183,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,184,paper_use,<absent>,not used in the paper
+small_team_cost.csv,185,paper_use,<absent>,not used in the paper
+small_team_cost.csv,186,paper_use,<absent>,not used in the paper
+small_team_cost.csv,187,paper_use,<absent>,not used in the paper
+small_team_cost.csv,188,paper_use,<absent>,not used in the paper
+small_team_cost.csv,189,paper_use,<absent>,not used in the paper
+small_team_cost.csv,190,paper_use,<absent>,not used in the paper
+small_team_cost.csv,191,paper_use,<absent>,not used in the paper
+small_team_cost.csv,192,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,193,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,194,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,195,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,196,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,197,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,198,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,199,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,200,paper_use,<absent>,not used in the paper
+small_team_cost.csv,201,paper_use,<absent>,not used in the paper
+small_team_cost.csv,202,paper_use,<absent>,not used in the paper
+small_team_cost.csv,203,paper_use,<absent>,not used in the paper
+small_team_cost.csv,204,paper_use,<absent>,not used in the paper
+small_team_cost.csv,205,paper_use,<absent>,not used in the paper
+small_team_cost.csv,206,paper_use,<absent>,not used in the paper
+small_team_cost.csv,207,paper_use,<absent>,not used in the paper
+small_team_cost.csv,208,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,209,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,210,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,211,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,212,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,213,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,214,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,215,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,216,paper_use,<absent>,not used in the paper
+small_team_cost.csv,217,paper_use,<absent>,not used in the paper
+small_team_cost.csv,218,paper_use,<absent>,not used in the paper
+small_team_cost.csv,219,paper_use,<absent>,not used in the paper
+small_team_cost.csv,220,paper_use,<absent>,not used in the paper
+small_team_cost.csv,221,paper_use,<absent>,not used in the paper
+small_team_cost.csv,222,paper_use,<absent>,not used in the paper
+small_team_cost.csv,223,paper_use,<absent>,not used in the paper
+small_team_cost.csv,224,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,225,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,226,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,227,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,228,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,229,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,230,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,231,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,232,paper_use,<absent>,not used in the paper
+small_team_cost.csv,233,paper_use,<absent>,not used in the paper
+small_team_cost.csv,234,paper_use,<absent>,not used in the paper
+small_team_cost.csv,235,paper_use,<absent>,not used in the paper
+small_team_cost.csv,236,paper_use,<absent>,not used in the paper
+small_team_cost.csv,237,paper_use,<absent>,not used in the paper
+small_team_cost.csv,238,paper_use,<absent>,not used in the paper
+small_team_cost.csv,239,paper_use,<absent>,not used in the paper
+small_team_cost.csv,240,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,241,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,242,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,243,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,244,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,245,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,246,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,247,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,248,paper_use,<absent>,not used in the paper
+small_team_cost.csv,249,paper_use,<absent>,not used in the paper
+small_team_cost.csv,250,paper_use,<absent>,not used in the paper
+small_team_cost.csv,251,paper_use,<absent>,not used in the paper
+small_team_cost.csv,252,paper_use,<absent>,not used in the paper
+small_team_cost.csv,253,paper_use,<absent>,not used in the paper
+small_team_cost.csv,254,paper_use,<absent>,not used in the paper
+small_team_cost.csv,255,paper_use,<absent>,not used in the paper
+small_team_cost.csv,256,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,257,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,258,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,259,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,260,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,261,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,262,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,263,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,264,paper_use,<absent>,not used in the paper
+small_team_cost.csv,265,paper_use,<absent>,not used in the paper
+small_team_cost.csv,266,paper_use,<absent>,not used in the paper
+small_team_cost.csv,267,paper_use,<absent>,not used in the paper
+small_team_cost.csv,268,paper_use,<absent>,not used in the paper
+small_team_cost.csv,269,paper_use,<absent>,not used in the paper
+small_team_cost.csv,270,paper_use,<absent>,not used in the paper
+small_team_cost.csv,271,paper_use,<absent>,not used in the paper
+small_team_cost.csv,272,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,273,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,274,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,275,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,276,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,277,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,278,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,279,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,280,paper_use,<absent>,not used in the paper
+small_team_cost.csv,281,paper_use,<absent>,not used in the paper
+small_team_cost.csv,282,paper_use,<absent>,not used in the paper
+small_team_cost.csv,283,paper_use,<absent>,not used in the paper
+small_team_cost.csv,284,paper_use,<absent>,not used in the paper
+small_team_cost.csv,285,paper_use,<absent>,not used in the paper
+small_team_cost.csv,286,paper_use,<absent>,not used in the paper
+small_team_cost.csv,287,paper_use,<absent>,not used in the paper
+small_team_cost.csv,288,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,289,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,290,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,291,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,292,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,293,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,294,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,295,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,296,paper_use,<absent>,not used in the paper
+small_team_cost.csv,297,paper_use,<absent>,not used in the paper
+small_team_cost.csv,298,paper_use,<absent>,not used in the paper
+small_team_cost.csv,299,paper_use,<absent>,not used in the paper
+small_team_cost.csv,300,paper_use,<absent>,not used in the paper
+small_team_cost.csv,301,paper_use,<absent>,not used in the paper
+small_team_cost.csv,302,paper_use,<absent>,not used in the paper
+small_team_cost.csv,303,paper_use,<absent>,not used in the paper
+small_team_cost.csv,304,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,305,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,306,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,307,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,308,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,309,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,310,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,311,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,312,paper_use,<absent>,not used in the paper
+small_team_cost.csv,313,paper_use,<absent>,not used in the paper
+small_team_cost.csv,314,paper_use,<absent>,not used in the paper
+small_team_cost.csv,315,paper_use,<absent>,not used in the paper
+small_team_cost.csv,316,paper_use,<absent>,not used in the paper
+small_team_cost.csv,317,paper_use,<absent>,not used in the paper
+small_team_cost.csv,318,paper_use,<absent>,not used in the paper
+small_team_cost.csv,319,paper_use,<absent>,not used in the paper
+small_team_cost.csv,320,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,321,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,322,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,323,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,324,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,325,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,326,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,327,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,328,paper_use,<absent>,not used in the paper
+small_team_cost.csv,329,paper_use,<absent>,not used in the paper
+small_team_cost.csv,330,paper_use,<absent>,not used in the paper
+small_team_cost.csv,331,paper_use,<absent>,not used in the paper
+small_team_cost.csv,332,paper_use,<absent>,not used in the paper
+small_team_cost.csv,333,paper_use,<absent>,not used in the paper
+small_team_cost.csv,334,paper_use,<absent>,not used in the paper
+small_team_cost.csv,335,paper_use,<absent>,not used in the paper
+small_team_cost.csv,336,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,337,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,338,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,339,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,340,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,341,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,342,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,343,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,344,paper_use,<absent>,not used in the paper
+small_team_cost.csv,345,paper_use,<absent>,not used in the paper
+small_team_cost.csv,346,paper_use,<absent>,not used in the paper
+small_team_cost.csv,347,paper_use,<absent>,not used in the paper
+small_team_cost.csv,348,paper_use,<absent>,not used in the paper
+small_team_cost.csv,349,paper_use,<absent>,not used in the paper
+small_team_cost.csv,350,paper_use,<absent>,not used in the paper
+small_team_cost.csv,351,paper_use,<absent>,not used in the paper
+small_team_cost.csv,352,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,353,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,354,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,355,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,356,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,357,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,358,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,359,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,360,paper_use,<absent>,not used in the paper
+small_team_cost.csv,361,paper_use,<absent>,not used in the paper
+small_team_cost.csv,362,paper_use,<absent>,not used in the paper
+small_team_cost.csv,363,paper_use,<absent>,not used in the paper
+small_team_cost.csv,364,paper_use,<absent>,not used in the paper
+small_team_cost.csv,365,paper_use,<absent>,not used in the paper
+small_team_cost.csv,366,paper_use,<absent>,not used in the paper
+small_team_cost.csv,367,paper_use,<absent>,not used in the paper
+small_team_cost.csv,368,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,369,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,370,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,371,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,372,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,373,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,374,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,375,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,376,paper_use,<absent>,not used in the paper
+small_team_cost.csv,377,paper_use,<absent>,not used in the paper
+small_team_cost.csv,378,paper_use,<absent>,not used in the paper
+small_team_cost.csv,379,paper_use,<absent>,not used in the paper
+small_team_cost.csv,380,paper_use,<absent>,not used in the paper
+small_team_cost.csv,381,paper_use,<absent>,not used in the paper
+small_team_cost.csv,382,paper_use,<absent>,not used in the paper
+small_team_cost.csv,383,paper_use,<absent>,not used in the paper
+small_team_cost.csv,384,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,385,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,386,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,387,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,388,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,389,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,390,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,391,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,392,paper_use,<absent>,not used in the paper
+small_team_cost.csv,393,paper_use,<absent>,not used in the paper
+small_team_cost.csv,394,paper_use,<absent>,not used in the paper
+small_team_cost.csv,395,paper_use,<absent>,not used in the paper
+small_team_cost.csv,396,paper_use,<absent>,not used in the paper
+small_team_cost.csv,397,paper_use,<absent>,not used in the paper
+small_team_cost.csv,398,paper_use,<absent>,not used in the paper
+small_team_cost.csv,399,paper_use,<absent>,not used in the paper
+small_team_cost.csv,400,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,401,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,402,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,403,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,404,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,405,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,406,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,407,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,408,paper_use,<absent>,not used in the paper
+small_team_cost.csv,409,paper_use,<absent>,not used in the paper
+small_team_cost.csv,410,paper_use,<absent>,not used in the paper
+small_team_cost.csv,411,paper_use,<absent>,not used in the paper
+small_team_cost.csv,412,paper_use,<absent>,not used in the paper
+small_team_cost.csv,413,paper_use,<absent>,not used in the paper
+small_team_cost.csv,414,paper_use,<absent>,not used in the paper
+small_team_cost.csv,415,paper_use,<absent>,not used in the paper
+small_team_cost.csv,416,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,417,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,418,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,419,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,420,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,421,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,422,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,423,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,424,paper_use,<absent>,not used in the paper
+small_team_cost.csv,425,paper_use,<absent>,not used in the paper
+small_team_cost.csv,426,paper_use,<absent>,not used in the paper
+small_team_cost.csv,427,paper_use,<absent>,not used in the paper
+small_team_cost.csv,428,paper_use,<absent>,not used in the paper
+small_team_cost.csv,429,paper_use,<absent>,not used in the paper
+small_team_cost.csv,430,paper_use,<absent>,not used in the paper
+small_team_cost.csv,431,paper_use,<absent>,not used in the paper
+small_team_cost.csv,432,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,433,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,434,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,435,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,436,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,437,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,438,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,439,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,440,paper_use,<absent>,not used in the paper
+small_team_cost.csv,441,paper_use,<absent>,not used in the paper
+small_team_cost.csv,442,paper_use,<absent>,not used in the paper
+small_team_cost.csv,443,paper_use,<absent>,not used in the paper
+small_team_cost.csv,444,paper_use,<absent>,not used in the paper
+small_team_cost.csv,445,paper_use,<absent>,not used in the paper
+small_team_cost.csv,446,paper_use,<absent>,not used in the paper
+small_team_cost.csv,447,paper_use,<absent>,not used in the paper
+small_team_cost.csv,448,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,449,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,450,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,451,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,452,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,453,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,454,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,455,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,456,paper_use,<absent>,not used in the paper
+small_team_cost.csv,457,paper_use,<absent>,not used in the paper
+small_team_cost.csv,458,paper_use,<absent>,not used in the paper
+small_team_cost.csv,459,paper_use,<absent>,not used in the paper
+small_team_cost.csv,460,paper_use,<absent>,not used in the paper
+small_team_cost.csv,461,paper_use,<absent>,not used in the paper
+small_team_cost.csv,462,paper_use,<absent>,not used in the paper
+small_team_cost.csv,463,paper_use,<absent>,not used in the paper
+small_team_cost.csv,464,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,465,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,466,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,467,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,468,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,469,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,470,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,471,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,472,paper_use,<absent>,not used in the paper
+small_team_cost.csv,473,paper_use,<absent>,not used in the paper
+small_team_cost.csv,474,paper_use,<absent>,not used in the paper
+small_team_cost.csv,475,paper_use,<absent>,not used in the paper
+small_team_cost.csv,476,paper_use,<absent>,not used in the paper
+small_team_cost.csv,477,paper_use,<absent>,not used in the paper
+small_team_cost.csv,478,paper_use,<absent>,not used in the paper
+small_team_cost.csv,479,paper_use,<absent>,not used in the paper
+small_team_cost.csv,480,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,481,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,482,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,483,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,484,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,485,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,486,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,487,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,488,paper_use,<absent>,not used in the paper
+small_team_cost.csv,489,paper_use,<absent>,not used in the paper
+small_team_cost.csv,490,paper_use,<absent>,not used in the paper
+small_team_cost.csv,491,paper_use,<absent>,not used in the paper
+small_team_cost.csv,492,paper_use,<absent>,not used in the paper
+small_team_cost.csv,493,paper_use,<absent>,not used in the paper
+small_team_cost.csv,494,paper_use,<absent>,not used in the paper
+small_team_cost.csv,495,paper_use,<absent>,not used in the paper
+small_team_cost.csv,496,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,497,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,498,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,499,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,500,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,501,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,502,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,503,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,504,paper_use,<absent>,not used in the paper
+small_team_cost.csv,505,paper_use,<absent>,not used in the paper
+small_team_cost.csv,506,paper_use,<absent>,not used in the paper
+small_team_cost.csv,507,paper_use,<absent>,not used in the paper
+small_team_cost.csv,508,paper_use,<absent>,not used in the paper
+small_team_cost.csv,509,paper_use,<absent>,not used in the paper
+small_team_cost.csv,510,paper_use,<absent>,not used in the paper
+small_team_cost.csv,511,paper_use,<absent>,not used in the paper
+small_team_cost.csv,512,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,513,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,514,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,515,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,516,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,517,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,518,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,519,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,520,paper_use,<absent>,not used in the paper
+small_team_cost.csv,521,paper_use,<absent>,not used in the paper
+small_team_cost.csv,522,paper_use,<absent>,not used in the paper
+small_team_cost.csv,523,paper_use,<absent>,not used in the paper
+small_team_cost.csv,524,paper_use,<absent>,not used in the paper
+small_team_cost.csv,525,paper_use,<absent>,not used in the paper
+small_team_cost.csv,526,paper_use,<absent>,not used in the paper
+small_team_cost.csv,527,paper_use,<absent>,not used in the paper
+small_team_cost.csv,528,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,529,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,530,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,531,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,532,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,533,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,534,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,535,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,536,paper_use,<absent>,not used in the paper
+small_team_cost.csv,537,paper_use,<absent>,not used in the paper
+small_team_cost.csv,538,paper_use,<absent>,not used in the paper
+small_team_cost.csv,539,paper_use,<absent>,not used in the paper
+small_team_cost.csv,540,paper_use,<absent>,not used in the paper
+small_team_cost.csv,541,paper_use,<absent>,not used in the paper
+small_team_cost.csv,542,paper_use,<absent>,not used in the paper
+small_team_cost.csv,543,paper_use,<absent>,not used in the paper
+small_team_cost.csv,544,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,545,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,546,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,547,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,548,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,549,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,550,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,551,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,552,paper_use,<absent>,not used in the paper
+small_team_cost.csv,553,paper_use,<absent>,not used in the paper
+small_team_cost.csv,554,paper_use,<absent>,not used in the paper
+small_team_cost.csv,555,paper_use,<absent>,not used in the paper
+small_team_cost.csv,556,paper_use,<absent>,not used in the paper
+small_team_cost.csv,557,paper_use,<absent>,not used in the paper
+small_team_cost.csv,558,paper_use,<absent>,not used in the paper
+small_team_cost.csv,559,paper_use,<absent>,not used in the paper
+small_team_cost.csv,560,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,561,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,562,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,563,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,564,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,565,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,566,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,567,paper_use,<absent>,eligible server; quote the scoped paper projections
+small_team_cost.csv,568,paper_use,<absent>,not used in the paper
+small_team_cost.csv,569,paper_use,<absent>,not used in the paper
+small_team_cost.csv,570,paper_use,<absent>,not used in the paper
+small_team_cost.csv,571,paper_use,<absent>,not used in the paper
+small_team_cost.csv,572,paper_use,<absent>,not used in the paper
+small_team_cost.csv,573,paper_use,<absent>,not used in the paper
+small_team_cost.csv,574,paper_use,<absent>,not used in the paper
+small_team_cost.csv,575,paper_use,<absent>,not used in the paper
+team_break_even.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,3,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,4,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,5,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,6,paper_use,<absent>,not used in the paper
+team_break_even.csv,7,paper_use,<absent>,not used in the paper
+team_break_even.csv,8,paper_use,<absent>,not used in the paper
+team_break_even.csv,9,paper_use,<absent>,not used in the paper
+team_break_even.csv,10,paper_use,<absent>,not used in the paper
+team_break_even.csv,11,paper_use,<absent>,not used in the paper
+team_break_even.csv,12,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,13,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,14,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,15,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,16,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,17,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,18,paper_use,<absent>,not used in the paper
+team_break_even.csv,19,paper_use,<absent>,not used in the paper
+team_break_even.csv,20,paper_use,<absent>,not used in the paper
+team_break_even.csv,21,paper_use,<absent>,not used in the paper
+team_break_even.csv,22,paper_use,<absent>,not used in the paper
+team_break_even.csv,23,paper_use,<absent>,not used in the paper
+team_break_even.csv,24,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,25,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,26,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,27,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,28,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,29,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,30,paper_use,<absent>,not used in the paper
+team_break_even.csv,31,paper_use,<absent>,not used in the paper
+team_break_even.csv,32,paper_use,<absent>,not used in the paper
+team_break_even.csv,33,paper_use,<absent>,not used in the paper
+team_break_even.csv,34,paper_use,<absent>,not used in the paper
+team_break_even.csv,35,paper_use,<absent>,not used in the paper
+team_break_even.csv,36,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,37,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,38,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,39,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,40,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,41,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,42,paper_use,<absent>,not used in the paper
+team_break_even.csv,43,paper_use,<absent>,not used in the paper
+team_break_even.csv,44,paper_use,<absent>,not used in the paper
+team_break_even.csv,45,paper_use,<absent>,not used in the paper
+team_break_even.csv,46,paper_use,<absent>,not used in the paper
+team_break_even.csv,47,paper_use,<absent>,not used in the paper
+team_break_even.csv,48,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,49,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,50,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,51,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,52,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,53,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,54,paper_use,<absent>,not used in the paper
+team_break_even.csv,55,paper_use,<absent>,not used in the paper
+team_break_even.csv,56,paper_use,<absent>,not used in the paper
+team_break_even.csv,57,paper_use,<absent>,not used in the paper
+team_break_even.csv,58,paper_use,<absent>,not used in the paper
+team_break_even.csv,59,paper_use,<absent>,not used in the paper
+team_break_even.csv,60,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,61,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,62,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,63,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,64,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,65,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,66,paper_use,<absent>,not used in the paper
+team_break_even.csv,67,paper_use,<absent>,not used in the paper
+team_break_even.csv,68,paper_use,<absent>,not used in the paper
+team_break_even.csv,69,paper_use,<absent>,not used in the paper
+team_break_even.csv,70,paper_use,<absent>,not used in the paper
+team_break_even.csv,71,paper_use,<absent>,not used in the paper
+team_break_even.csv,72,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,73,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,74,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,75,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,76,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,77,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,78,paper_use,<absent>,not used in the paper
+team_break_even.csv,79,paper_use,<absent>,not used in the paper
+team_break_even.csv,80,paper_use,<absent>,not used in the paper
+team_break_even.csv,81,paper_use,<absent>,not used in the paper
+team_break_even.csv,82,paper_use,<absent>,not used in the paper
+team_break_even.csv,83,paper_use,<absent>,not used in the paper
+team_break_even.csv,84,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,85,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,86,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,87,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,88,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,89,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,90,paper_use,<absent>,not used in the paper
+team_break_even.csv,91,paper_use,<absent>,not used in the paper
+team_break_even.csv,92,paper_use,<absent>,not used in the paper
+team_break_even.csv,93,paper_use,<absent>,not used in the paper
+team_break_even.csv,94,paper_use,<absent>,not used in the paper
+team_break_even.csv,95,paper_use,<absent>,not used in the paper
+team_break_even.csv,96,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,97,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,98,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,99,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,100,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,101,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,102,paper_use,<absent>,not used in the paper
+team_break_even.csv,103,paper_use,<absent>,not used in the paper
+team_break_even.csv,104,paper_use,<absent>,not used in the paper
+team_break_even.csv,105,paper_use,<absent>,not used in the paper
+team_break_even.csv,106,paper_use,<absent>,not used in the paper
+team_break_even.csv,107,paper_use,<absent>,not used in the paper
+team_break_even.csv,108,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,109,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,110,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,111,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,112,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,113,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,114,paper_use,<absent>,not used in the paper
+team_break_even.csv,115,paper_use,<absent>,not used in the paper
+team_break_even.csv,116,paper_use,<absent>,not used in the paper
+team_break_even.csv,117,paper_use,<absent>,not used in the paper
+team_break_even.csv,118,paper_use,<absent>,not used in the paper
+team_break_even.csv,119,paper_use,<absent>,not used in the paper
+team_break_even.csv,120,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,121,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,122,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,123,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,124,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,125,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,126,paper_use,<absent>,not used in the paper
+team_break_even.csv,127,paper_use,<absent>,not used in the paper
+team_break_even.csv,128,paper_use,<absent>,not used in the paper
+team_break_even.csv,129,paper_use,<absent>,not used in the paper
+team_break_even.csv,130,paper_use,<absent>,not used in the paper
+team_break_even.csv,131,paper_use,<absent>,not used in the paper
+team_break_even.csv,132,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,133,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,134,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,135,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,136,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,137,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,138,paper_use,<absent>,not used in the paper
+team_break_even.csv,139,paper_use,<absent>,not used in the paper
+team_break_even.csv,140,paper_use,<absent>,not used in the paper
+team_break_even.csv,141,paper_use,<absent>,not used in the paper
+team_break_even.csv,142,paper_use,<absent>,not used in the paper
+team_break_even.csv,143,paper_use,<absent>,not used in the paper
+team_break_even.csv,144,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,145,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,146,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,147,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,148,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,149,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,150,paper_use,<absent>,not used in the paper
+team_break_even.csv,151,paper_use,<absent>,not used in the paper
+team_break_even.csv,152,paper_use,<absent>,not used in the paper
+team_break_even.csv,153,paper_use,<absent>,not used in the paper
+team_break_even.csv,154,paper_use,<absent>,not used in the paper
+team_break_even.csv,155,paper_use,<absent>,not used in the paper
+team_break_even.csv,156,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,157,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,158,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,159,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,160,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,161,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,162,paper_use,<absent>,not used in the paper
+team_break_even.csv,163,paper_use,<absent>,not used in the paper
+team_break_even.csv,164,paper_use,<absent>,not used in the paper
+team_break_even.csv,165,paper_use,<absent>,not used in the paper
+team_break_even.csv,166,paper_use,<absent>,not used in the paper
+team_break_even.csv,167,paper_use,<absent>,not used in the paper
+team_break_even.csv,168,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,169,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,170,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,171,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,172,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,173,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,174,paper_use,<absent>,not used in the paper
+team_break_even.csv,175,paper_use,<absent>,not used in the paper
+team_break_even.csv,176,paper_use,<absent>,not used in the paper
+team_break_even.csv,177,paper_use,<absent>,not used in the paper
+team_break_even.csv,178,paper_use,<absent>,not used in the paper
+team_break_even.csv,179,paper_use,<absent>,not used in the paper
+team_break_even.csv,180,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,181,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,182,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,183,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,184,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,185,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,186,paper_use,<absent>,not used in the paper
+team_break_even.csv,187,paper_use,<absent>,not used in the paper
+team_break_even.csv,188,paper_use,<absent>,not used in the paper
+team_break_even.csv,189,paper_use,<absent>,not used in the paper
+team_break_even.csv,190,paper_use,<absent>,not used in the paper
+team_break_even.csv,191,paper_use,<absent>,not used in the paper
+team_break_even.csv,192,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,193,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,194,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,195,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,196,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,197,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,198,paper_use,<absent>,not used in the paper
+team_break_even.csv,199,paper_use,<absent>,not used in the paper
+team_break_even.csv,200,paper_use,<absent>,not used in the paper
+team_break_even.csv,201,paper_use,<absent>,not used in the paper
+team_break_even.csv,202,paper_use,<absent>,not used in the paper
+team_break_even.csv,203,paper_use,<absent>,not used in the paper
+team_break_even.csv,204,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,205,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,206,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,207,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,208,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,209,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,210,paper_use,<absent>,not used in the paper
+team_break_even.csv,211,paper_use,<absent>,not used in the paper
+team_break_even.csv,212,paper_use,<absent>,not used in the paper
+team_break_even.csv,213,paper_use,<absent>,not used in the paper
+team_break_even.csv,214,paper_use,<absent>,not used in the paper
+team_break_even.csv,215,paper_use,<absent>,not used in the paper
+team_break_even.csv,216,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,217,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,218,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,219,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,220,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,221,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,222,paper_use,<absent>,not used in the paper
+team_break_even.csv,223,paper_use,<absent>,not used in the paper
+team_break_even.csv,224,paper_use,<absent>,not used in the paper
+team_break_even.csv,225,paper_use,<absent>,not used in the paper
+team_break_even.csv,226,paper_use,<absent>,not used in the paper
+team_break_even.csv,227,paper_use,<absent>,not used in the paper
+team_break_even.csv,228,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,229,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,230,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,231,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,232,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,233,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,234,paper_use,<absent>,not used in the paper
+team_break_even.csv,235,paper_use,<absent>,not used in the paper
+team_break_even.csv,236,paper_use,<absent>,not used in the paper
+team_break_even.csv,237,paper_use,<absent>,not used in the paper
+team_break_even.csv,238,paper_use,<absent>,not used in the paper
+team_break_even.csv,239,paper_use,<absent>,not used in the paper
+team_break_even.csv,240,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,241,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,242,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,243,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,244,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,245,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,246,paper_use,<absent>,not used in the paper
+team_break_even.csv,247,paper_use,<absent>,not used in the paper
+team_break_even.csv,248,paper_use,<absent>,not used in the paper
+team_break_even.csv,249,paper_use,<absent>,not used in the paper
+team_break_even.csv,250,paper_use,<absent>,not used in the paper
+team_break_even.csv,251,paper_use,<absent>,not used in the paper
+team_break_even.csv,252,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,253,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,254,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,255,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,256,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,257,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,258,paper_use,<absent>,not used in the paper
+team_break_even.csv,259,paper_use,<absent>,not used in the paper
+team_break_even.csv,260,paper_use,<absent>,not used in the paper
+team_break_even.csv,261,paper_use,<absent>,not used in the paper
+team_break_even.csv,262,paper_use,<absent>,not used in the paper
+team_break_even.csv,263,paper_use,<absent>,not used in the paper
+team_break_even.csv,264,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,265,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,266,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,267,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,268,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,269,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,270,paper_use,<absent>,not used in the paper
+team_break_even.csv,271,paper_use,<absent>,not used in the paper
+team_break_even.csv,272,paper_use,<absent>,not used in the paper
+team_break_even.csv,273,paper_use,<absent>,not used in the paper
+team_break_even.csv,274,paper_use,<absent>,not used in the paper
+team_break_even.csv,275,paper_use,<absent>,not used in the paper
+team_break_even.csv,276,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,277,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,278,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,279,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,280,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,281,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,282,paper_use,<absent>,not used in the paper
+team_break_even.csv,283,paper_use,<absent>,not used in the paper
+team_break_even.csv,284,paper_use,<absent>,not used in the paper
+team_break_even.csv,285,paper_use,<absent>,not used in the paper
+team_break_even.csv,286,paper_use,<absent>,not used in the paper
+team_break_even.csv,287,paper_use,<absent>,not used in the paper
+team_break_even.csv,288,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,289,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,290,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,291,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,292,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,293,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,294,paper_use,<absent>,not used in the paper
+team_break_even.csv,295,paper_use,<absent>,not used in the paper
+team_break_even.csv,296,paper_use,<absent>,not used in the paper
+team_break_even.csv,297,paper_use,<absent>,not used in the paper
+team_break_even.csv,298,paper_use,<absent>,not used in the paper
+team_break_even.csv,299,paper_use,<absent>,not used in the paper
+team_break_even.csv,300,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,301,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,302,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,303,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,304,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,305,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,306,paper_use,<absent>,not used in the paper
+team_break_even.csv,307,paper_use,<absent>,not used in the paper
+team_break_even.csv,308,paper_use,<absent>,not used in the paper
+team_break_even.csv,309,paper_use,<absent>,not used in the paper
+team_break_even.csv,310,paper_use,<absent>,not used in the paper
+team_break_even.csv,311,paper_use,<absent>,not used in the paper
+team_break_even.csv,312,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,313,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,314,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,315,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,316,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,317,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,318,paper_use,<absent>,not used in the paper
+team_break_even.csv,319,paper_use,<absent>,not used in the paper
+team_break_even.csv,320,paper_use,<absent>,not used in the paper
+team_break_even.csv,321,paper_use,<absent>,not used in the paper
+team_break_even.csv,322,paper_use,<absent>,not used in the paper
+team_break_even.csv,323,paper_use,<absent>,not used in the paper
+team_break_even.csv,324,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,325,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,326,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,327,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,328,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,329,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,330,paper_use,<absent>,not used in the paper
+team_break_even.csv,331,paper_use,<absent>,not used in the paper
+team_break_even.csv,332,paper_use,<absent>,not used in the paper
+team_break_even.csv,333,paper_use,<absent>,not used in the paper
+team_break_even.csv,334,paper_use,<absent>,not used in the paper
+team_break_even.csv,335,paper_use,<absent>,not used in the paper
+team_break_even.csv,336,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,337,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,338,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,339,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,340,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,341,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,342,paper_use,<absent>,not used in the paper
+team_break_even.csv,343,paper_use,<absent>,not used in the paper
+team_break_even.csv,344,paper_use,<absent>,not used in the paper
+team_break_even.csv,345,paper_use,<absent>,not used in the paper
+team_break_even.csv,346,paper_use,<absent>,not used in the paper
+team_break_even.csv,347,paper_use,<absent>,not used in the paper
+team_break_even.csv,348,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,349,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,350,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,351,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,352,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,353,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,354,paper_use,<absent>,not used in the paper
+team_break_even.csv,355,paper_use,<absent>,not used in the paper
+team_break_even.csv,356,paper_use,<absent>,not used in the paper
+team_break_even.csv,357,paper_use,<absent>,not used in the paper
+team_break_even.csv,358,paper_use,<absent>,not used in the paper
+team_break_even.csv,359,paper_use,<absent>,not used in the paper
+team_break_even.csv,360,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,361,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,362,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,363,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,364,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,365,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,366,paper_use,<absent>,not used in the paper
+team_break_even.csv,367,paper_use,<absent>,not used in the paper
+team_break_even.csv,368,paper_use,<absent>,not used in the paper
+team_break_even.csv,369,paper_use,<absent>,not used in the paper
+team_break_even.csv,370,paper_use,<absent>,not used in the paper
+team_break_even.csv,371,paper_use,<absent>,not used in the paper
+team_break_even.csv,372,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,373,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,374,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,375,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,376,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,377,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,378,paper_use,<absent>,not used in the paper
+team_break_even.csv,379,paper_use,<absent>,not used in the paper
+team_break_even.csv,380,paper_use,<absent>,not used in the paper
+team_break_even.csv,381,paper_use,<absent>,not used in the paper
+team_break_even.csv,382,paper_use,<absent>,not used in the paper
+team_break_even.csv,383,paper_use,<absent>,not used in the paper
+team_break_even.csv,384,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,385,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,386,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,387,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,388,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,389,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,390,paper_use,<absent>,not used in the paper
+team_break_even.csv,391,paper_use,<absent>,not used in the paper
+team_break_even.csv,392,paper_use,<absent>,not used in the paper
+team_break_even.csv,393,paper_use,<absent>,not used in the paper
+team_break_even.csv,394,paper_use,<absent>,not used in the paper
+team_break_even.csv,395,paper_use,<absent>,not used in the paper
+team_break_even.csv,396,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,397,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,398,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,399,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,400,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,401,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,402,paper_use,<absent>,not used in the paper
+team_break_even.csv,403,paper_use,<absent>,not used in the paper
+team_break_even.csv,404,paper_use,<absent>,not used in the paper
+team_break_even.csv,405,paper_use,<absent>,not used in the paper
+team_break_even.csv,406,paper_use,<absent>,not used in the paper
+team_break_even.csv,407,paper_use,<absent>,not used in the paper
+team_break_even.csv,408,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,409,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,410,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,411,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,412,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,413,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,414,paper_use,<absent>,not used in the paper
+team_break_even.csv,415,paper_use,<absent>,not used in the paper
+team_break_even.csv,416,paper_use,<absent>,not used in the paper
+team_break_even.csv,417,paper_use,<absent>,not used in the paper
+team_break_even.csv,418,paper_use,<absent>,not used in the paper
+team_break_even.csv,419,paper_use,<absent>,not used in the paper
+team_break_even.csv,420,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,421,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,422,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,423,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,424,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,425,paper_use,<absent>,eligible server; quote the scoped paper projections
+team_break_even.csv,426,paper_use,<absent>,not used in the paper
+team_break_even.csv,427,paper_use,<absent>,not used in the paper
+team_break_even.csv,428,paper_use,<absent>,not used in the paper
+team_break_even.csv,429,paper_use,<absent>,not used in the paper
+team_break_even.csv,430,paper_use,<absent>,not used in the paper
+team_break_even.csv,431,paper_use,<absent>,not used in the paper
+vllm_bridge_evidence.csv,0,paper_use,<absent>,eligible server; quote the scoped paper projections
+vllm_bridge_evidence.csv,1,paper_use,<absent>,eligible server; quote the scoped paper projections
+vllm_bridge_evidence.csv,2,paper_use,<absent>,eligible server; quote the scoped paper projections

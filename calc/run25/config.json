@@ -1,0 +1,26 @@
+{
+  "parent": "ca7f228acd789380bf46016fd87acc33e1b07aef",
+  "team": 50,
+  "scan_max": 500,
+  "server": "pro6000_fp8",
+  "client": "m5max64",
+  "transport": "bf16",
+  "shares": [0.2, 1.0],
+  "fleets": [1, 2, 4],
+  "queue_budgets_s": [0, 0.05, 0.1, 0.25, 0.5, 1, 2, 3, 4, 5],
+  "max_mean_queue_s": 5,
+  "max_service_occupancy": 0.7,
+  "admission_fallback": "If no remote-offload queue point certifies, keep prefill local and certify local capacity plus all server decode overflow. Never drop excess generation. Overflow catches up the local journal; offload-only pending is an upper bound where p>0, and p=0 uses local work per overflow refresh capped by full existing-prefix cold-work bound. Full-depth restore bytes are a conservative checkpoint-size reservation, not a claim that an unreplayed checkpoint is current.",
+  "arrival_basis": "UNMEASURED homogeneous Poisson arrivals, uniform random node assignment; rates from accepted calls/day divided by8h, independent Bernoulli offload thinning. Accepted engine has exchangeable opportunities, not measured timestamps or a queue process.",
+  "queue_basis": "Per-node M/G/1 Pollaczek-Khinchine mean; sequential node reservation includes read, prefill, checkpoint write and response wire; GPU decode overflow uses accepted equivalent batched work, not a measured vLLM scheduler. Smallest certified queue-budget grid point; no tail-latency guarantee.",
+  "read_write_policy": "All retained checkpoints off GPU; full server-format copy restored before each offload/overflow, full checkpoint written back after it. Network and checkpoint IO serialized per node conservatively. No implicit GPU cache hits or fresh-prefix rebuild charge.",
+  "storage_cases": [
+    {"name": "inherited_nvme", "tier": "NVMe", "ram_bytes": 256000000000, "nvme_bytes": 900000000000, "read_bytes_s": 7000000000, "write_bytes_s": 7000000000, "extra_capex_usd": 0, "basis": "UNMEASURED server restore proxy; inherited900GB usable NVMe and7GB/s tier bandwidth;256GB RAM declared, not credited as a cache"},
+    {"name": "expanded_nvme", "tier": "NVMe", "ram_bytes": 256000000000, "nvme_bytes": 3600000000000, "read_bytes_s": 7000000000, "write_bytes_s": 7000000000, "extra_capex_usd": 400, "basis": "UNMEASURED capacity/price/restore proxy:3.6TB usable NVMe,256GB RAM not credited,7GB/s full read/write;400USD extra capex per box is a declared scenario, not a sourced offer"},
+    {"name": "all_ram_warm", "tier": "RAM", "ram_bytes": 3600000000000, "nvme_bytes": 900000000000, "read_bytes_s": 50000000000, "write_bytes_s": 50000000000, "extra_capex_usd": 10000, "basis": "UNMEASURED all-copy warm RAM proxy:3.6TB usable RAM, min(100GB/s RAM,50GB/s PCIe);10000USD additional capex per box declared, not a market quote; volatile retention, no cold persistence guarantee"}
+  ],
+  "speed_factors": [1, 2],
+  "output_limit_bytes": 50000000,
+  "free_floor_bytes": 30064771072,
+  "source_gap": "Delivered owner log package explicitly excludes per-call CSV/transcripts. Exact joint subset input/output/work shares and arrival correlations are unidentified. Fitted-profile shares and delta/output reweighting are estimates, not observed log fractions."
+}

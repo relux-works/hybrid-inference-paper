@@ -6,7 +6,7 @@ from .inputs import InputGap
 from .metrics import field,nonempty
 from .paper import policy,throughput
 from .paper_tables import Context,api_vector,end_memory,growing_calls
-from .performance import flop
+from .performance import flop,local_rate_at
 from .server_prefill import compute_at,mean_seconds
 from .session_hosting import policy_with_reload
 
@@ -96,7 +96,7 @@ def perimeter_table(c):
                 if cn not in c.cache:
                     fraction=c.add(cn+'.fraction',[cl['indices'],c.valid],lambda idx,all:len(idx)/len(nonempty(all)))
                     energy=c.add(cn+'.energy',[p+'.power','owners.hours','owners.days','prices.energy_client'],lambda p,h,d,e:p*h*d*e)
-                    localsteps=c.add(cn+'.localsteps',[cl['matched'],cl['local']],lambda rows,rate:[(n/rate(d),n/rate(d),0,False) for d,n,o,t in rows])
+                    localsteps=c.add(cn+'.localsteps',[cl['matched'],cl['local']],lambda rows,rate:[(n/local_rate_at(rate,d,n),n/local_rate_at(rate,d,n),0,False) for d,n,o,t in rows])
                     localwait=c.add(cn+'.localwait',[localsteps],wait_stats)
                     bounded=c.add(cn+'.local_end_memory',[cl['matched'],cl['memory']],end_memory)
                     localcap=c.add(cn+'.localcap',[cl['matched'],localsteps,cl['streams'],bounded,cl['decoder'],'owners.hours'],throughput)

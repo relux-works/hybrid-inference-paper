@@ -1,0 +1,278 @@
+{
+  "base": "b6ac5abcdf60b72582be87c7ad075ee460e7cc78",
+  "base_review": "run20 review pending at branching",
+  "stats_sha256": "8c5f1f2c44e344b78d32d0b4c216d0ebdf2ecdae3cde0f1a983cb329e488e2a7",
+  "owner_cache_fraction": 0.981,
+  "quadrature_points": 1000,
+  "reservation_depth": 900000,
+  "provider_cache_hits": {
+    "measurements": []
+  },
+  "server_decode": {
+    "measurements": []
+  },
+  "scan_team_max": 500,
+  "mac_1M_local_s_estimate": 120,
+  "mac_1M_decode_measured": 1.67,
+  "mac_1M_decode_depth": 1040000,
+  "mac_1M_decode_priority": "background_priority_interim",
+  "glm_endpoints": {
+    "basis": "local2026-10-30 research-note transcription; endpoint caching declaration and uptime not retained; cannot admit from price alone",
+    "source": "data/research/models-apis-2026-10.md",
+    "endpoints": [
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Relace",
+        "tag": "relace",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "4.77e-08",
+          "completion": "7.01e-08",
+          "input_cache_read": "3e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Wafer (nvfp4)",
+        "tag": "wafer_(nvfp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "5.4e-08",
+          "completion": "2.0000000000000002e-07",
+          "input_cache_read": "5.3e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "OpenInference (fp4)",
+        "tag": "openinference_(fp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "6.39e-08",
+          "completion": "6.87e-08",
+          "input_cache_read": "5.81e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Darkbloom (fp4)",
+        "tag": "darkbloom_(fp4)",
+        "context_length": 262144,
+        "pricing": {
+          "prompt": "6.5e-08",
+          "completion": "1.8e-07",
+          "input_cache_read": "1.2e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Wafer (us)",
+        "tag": "wafer_(us)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "7e-08",
+          "completion": "2.0000000000000002e-07",
+          "input_cache_read": "6.900000000000001e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "GMICloud (fp8)",
+        "tag": "gmicloud_(fp8)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "7.5e-08",
+          "completion": "2.5e-07",
+          "input_cache_read": "1.5e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Sail Research (us / fp4)",
+        "tag": "sail_research_(us_/_fp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "7.835e-08",
+          "completion": "2.5e-07",
+          "input_cache_read": "2.6100000000000002e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Near AI (fp8)",
+        "tag": "near_ai_(fp8)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "8e-08",
+          "completion": "5e-07",
+          "input_cache_read": "1.2e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Novita (fp8)",
+        "tag": "novita_(fp8)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "8.400000000000001e-08",
+          "completion": "2.8e-07",
+          "input_cache_read": "1.6799999999999998e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "StreamLake (fp8)",
+        "tag": "streamlake_(fp8)",
+        "context_length": 1024000,
+        "pricing": {
+          "prompt": "8.849999999999999e-08",
+          "completion": "2.95e-07",
+          "input_cache_read": "1.77e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "InferenceNet (us / fp4)",
+        "tag": "inferencenet_(us_/_fp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.08e-07",
+          "completion": "3.5e-07",
+          "input_cache_read": "3.2e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "DigitalOcean",
+        "tag": "digitalocean",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.1250000000000001e-07",
+          "completion": "3.75e-07",
+          "input_cache_read": "3e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Reka",
+        "tag": "reka",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.2e-07",
+          "completion": "3e-07",
+          "input_cache_read": "3e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "CoreWeave (nvfp4)",
+        "tag": "coreweave_(nvfp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.2e-07",
+          "completion": "3.8e-07",
+          "input_cache_read": "2e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "NextBit (fp4)",
+        "tag": "nextbit_(fp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.2e-07",
+          "completion": "4.8e-07",
+          "input_cache_read": "4e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Phala (nvfp4)",
+        "tag": "phala_(nvfp4)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.275e-07",
+          "completion": "4.25e-07",
+          "input_cache_read": "2.5499999999999997e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Morph (fp8)",
+        "tag": "morph_(fp8)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.3800000000000002e-07",
+          "completion": "2.26e-07",
+          "input_cache_read": "5.0000000000000004e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Makora",
+        "tag": "makora",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.4e-07",
+          "completion": "4.6999999999999995e-07",
+          "input_cache_read": "2.4e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Inceptron (fp8)",
+        "tag": "inceptron_(fp8)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "1.7000000000000001e-07",
+          "completion": "6e-07",
+          "input_cache_read": "6e-08"
+        }
+      },
+      {
+        "model_id": "z-ai/glm-5.3-flash",
+        "provider_name": "Fireworks (us)",
+        "tag": "fireworks_(us)",
+        "context_length": 1048576,
+        "pricing": {
+          "prompt": "2.2500000000000002e-07",
+          "completion": "7.5e-07",
+          "input_cache_read": "4.5e-08"
+        }
+      }
+    ]
+  },
+  "links": [
+    {
+      "key": "historical_home_wifi",
+      "bytes_s": 5190000.0,
+      "rtt_s": 0.126,
+      "basis": "rounded historical measured goodput"
+    },
+    {
+      "key": "historical_5g",
+      "bytes_s": 9750000.0,
+      "rtt_s": 0.126,
+      "basis": "rounded historical measured goodput"
+    },
+    {
+      "key": "today_wifi",
+      "bytes_s": 800000.0,
+      "rtt_s": 0.126,
+      "basis": "owner-reported measurement; raw trace not supplied"
+    },
+    {
+      "key": "today_wan",
+      "bytes_s": 2800000.0,
+      "rtt_s": 0.126,
+      "basis": "owner-reported measurement; raw trace not supplied"
+    },
+    {
+      "key": "fullslot_e2e",
+      "bytes_s": 5180000.0,
+      "rtt_s": 0.126,
+      "basis": "36.4GB full-slot end-to-end average; delta-path portability assumption"
+    }
+  ],
+  "active_gap_cap_s": 300
+}

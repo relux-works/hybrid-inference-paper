@@ -1,0 +1,24 @@
+{
+  "pro6000": {
+    "archive": "/home/agent/lanes/hybrid/.temp/node-smoke-pro6000/node3-results.tar.gz",
+    "archive_sha256": "839911233bc550f5ea8a1d998d09377dcd8c13f030b4f4b04dc3d628d4f2a9c4",
+    "member": "hybrid-bench-vllm-pro6000-r11-q4-20261102T103100552067Z.jsonl",
+    "path": "data/measurements/run20-2026-11-03/pro6000-bridge-smoke.jsonl",
+    "sha256": "433784f9967be913ba8f3f2291c67598a8e42b82fa15a7b5a765d28afb5597dd",
+    "basis": "PR16 same-GPU functional smoke; heterogeneous checker exit5; not a production latency or quality qualification"
+  },
+  "b300": {
+    "archive": "/home/agent/lanes/hybrid/.temp/node-smoke-b300/b300-bridge-node-evidence.tar.gz",
+    "archive_sha256": "3f48838ae8e3f5e8dc7a860e2a383b9f31b1bd4b2c27addba15e8f98ea01d1ff",
+    "member": "src/.temp/hybrid-d-r8-b300/results/hybrid-bench-vllm-b300-q4-20261102T032436234406Z.jsonl",
+    "path": "data/measurements/run20-2026-11-03/b300-bridge-smoke.jsonl",
+    "sha256": "33df27840894ae9fb53bfd95a025c640f9543b06e6b041735ac3b8ecb042a00f",
+    "basis": "PR16 same-GPU functional smoke; heterogeneous checker exit5; not a production latency or quality qualification"
+  },
+  "owner_cache": {
+    "path": "data/measurements/run20-2026-11-03/owner-cache-notes-excerpt.txt",
+    "sha256": "d753ed478017188885ea8940abc495490930eeb0c562eae05f8507e15c3b8d81",
+    "hit_fraction": 0.981,
+    "basis": "aggregate commercial-agent input-token share; not a measured OpenRouter provider hit rate"
+  }
+}

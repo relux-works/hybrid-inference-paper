@@ -1,0 +1,9 @@
+state_bits,state_bytes,link_mbit,share_calls,saved_seconds_call,saved_seconds_offloaded,background_priority_interim,capacity_status,status,alarm_inputs
+32,157000000.0,100.0,0.18188652766639934,10.21840562340975,56.18011270274768,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+32,157000000.0,300.0,0.2889935846030473,13.862806117174648,47.969252107157224,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+32,157000000.0,1000.0,0.34936347233360066,15.443047650985527,44.203383793481564,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+32,157000000.0,2500.0,0.36730653568564553,15.882227236886717,43.23970769330201,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+16,78500000.0,100.0,0.2411537690457097,11.528796042840717,47.80682503309944,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+16,78500000.0,300.0,0.32680934242181237,14.506613862057314,44.388614335674795,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+16,78500000.0,1000.0,0.3627957097032879,15.666483574503939,43.182659429232935,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+16,78500000.0,2500.0,0.3730703688853248,15.975205079646432,42.82088960154573,True,interim; normal-priority M3 parallel remeasurement pending,ok,

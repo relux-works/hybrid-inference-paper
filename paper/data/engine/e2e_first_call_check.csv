@@ -1,7 +1,7 @@
-component,predicted_s,measured_s,error_s,error_fraction,basis,status,alarm_inputs
-server_prefill,11.69486569291432,10.6,1.0948656929143201,0.10328921631267174,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
-transfer,125.36981305521472,123.2,2.1698130552147177,0.017612118954664968,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
-client_import,42.4,42.4,0.0,0.0,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
-total,179.46467874812905,201.7,-22.235321251870943,-0.11023956991507655,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
-local,289.38775917895293,271.5,17.887759178952933,0.06588493251916372,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
-unallocated,0.0,25.5,-25.5,-1.0,same PRO6000/M3; old four-state-copy wire; no fitted residual,ok,
+component,predicted_s,measured_s,error_s,error_fraction,basis,background_priority_interim,capacity_status,status,alarm_inputs
+server_prefill,11.69486569291432,10.6,1.0948656929143201,0.10328921631267174,same PRO6000/M3; old four-state-copy wire; no fitted residual,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+transfer,125.36981305521472,123.2,2.1698130552147177,0.017612118954664968,same PRO6000/M3; old four-state-copy wire; no fitted residual,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+client_import,2.1828968798111834,42.4,-40.21710312018882,-0.9485165830233211,same PRO6000/M3; old four-state-copy wire; no fitted residual,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+total,139.24757562794022,201.7,-62.45242437205977,-0.30963026461110443,same PRO6000/M3; old four-state-copy wire; no fitted residual,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+local,241.11833687623937,271.5,-30.38166312376063,-0.11190299493097844,same PRO6000/M3; old four-state-copy wire; no fitted residual,True,interim; normal-priority M3 parallel remeasurement pending,ok,
+unallocated,0.0,25.5,-25.5,-1.0,same PRO6000/M3; old four-state-copy wire; no fitted residual,True,interim; normal-priority M3 parallel remeasurement pending,ok,

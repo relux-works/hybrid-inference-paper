@@ -1,0 +1,152 @@
+[
+  {
+    "name": "early call conditions",
+    "file": "04-channel.tex",
+    "marker": "\\textbf{Измеренные сквозные результаты.} Первый вызов со свежим контекстом 39\\,504 токена",
+    "phrase": "Первый вызов со свежим контекстом 39\\,504 токена"
+  },
+  {
+    "name": "early TTFT scope",
+    "file": "04-channel.tex",
+    "marker": "\\textbf{Измеренные сквозные результаты.}",
+    "phrase": "Этот результат относится к одному вызову;"
+  },
+  {
+    "name": "turn totals exclude base",
+    "file": "04-channel.tex",
+    "marker": "В растущей сессии CUDA и Metal на M3 Max при обычном приоритете оба варианта прошли 40 ходов",
+    "phrase": "Полное время 40 ходов без подготовки базы составило 3646.4 секунды в гибриде против 2736.8 локально."
+  },
+  {
+    "name": "long session not sped up",
+    "file": "04-channel.tex",
+    "marker": "В растущей сессии CUDA и Metal на M3 Max при обычном приоритете оба варианта прошли 40 ходов",
+    "phrase": "\\textbf{Ускорение длинной автономной сессии этим опытом не показано.}"
+  },
+  {
+    "name": "subtraction arithmetic",
+    "file": "04-channel.tex",
+    "marker": "Вычитание загрузок снимков двух удалённых ходов даёт",
+    "phrase": "$3646.4-425.6-455.2=2765.6$ секунды"
+  },
+  {
+    "name": "subtraction is not production",
+    "file": "04-channel.tex",
+    "marker": "Вычитание загрузок снимков двух удалённых ходов даёт",
+    "phrase": "производственное время таким вычитанием не измерено."
+  },
+  {
+    "name": "catchup is aggregate",
+    "file": "04-channel.tex",
+    "marker": "При f32 на канале 9.75~МБ/с перенос окупается для крупных порций; большинство ходов остались локальными.",
+    "phrase": "эта сумма не является задержкой только двух оффлоадов."
+  },
+  {
+    "name": "next timing experiment",
+    "file": "04-channel.tex",
+    "marker": "Нужен опыт с той же последовательностью задач, без снимков и хэширования на критическом пути,",
+    "phrase": "с отдельным временем холодного старта и последующих ходов."
+  },
+  {
+    "name": "limited free prefill floor",
+    "file": "07-economics.tex",
+    "marker": "\\textbf{Две границы сравнения.} Решающее сравнение относится к самому дешёвому допущенному API",
+    "phrase": "на уже имеющемся M5 Max это $2.52+5=7.52$ доллара на человека в месяц."
+  },
+  {
+    "name": "free prefill light bound",
+    "file": "07-economics.tex",
+    "marker": "\\textbf{Две границы сравнения.} Решающее сравнение относится к самому дешёвому допущенному API",
+    "phrase": "вывод ограничен указанной лёгкой нагрузкой"
+  },
+  {
+    "name": "cost per task",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "Цена вызова не является ценой выполненной работы."
+  },
+  {
+    "name": "workload classes not tasks",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "Классификация по индексу не измеряет, какие задачи Qwen выполнит успешно."
+  },
+  {
+    "name": "quality metal checkpoint",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:depth-quality-boundaries}",
+    "phrase": "CUDA и Metal, checkpoint 10 & 109591 & Top-1 64/64, средний KL 7.7296e-5 нат; межплатформенный допуск не калиброван."
+  },
+  {
+    "name": "quality Mac gates",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:depth-quality-boundaries}",
+    "phrase": "Прямые ворота Mac & 524288 и 1040000 & Top-1 64/64 и 63/64;"
+  },
+  {
+    "name": "quality same device",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:depth-quality-boundaries}",
+    "phrase": "Пять случаев: KL 0, top-1 1, максимум разности логитов 0, иголки 16/16; одна карта, описательная проверка."
+  },
+  {
+    "name": "quality bf16 CUDA design",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:depth-quality-boundaries}",
+    "phrase": "Четыре точки top-1 64/64; журнал токенов и границы маршрутизации f32 фиксированы."
+  },
+  {
+    "name": "quality task gap",
+    "file": "11-limitations.tex",
+    "marker": "\\textbf{Цена вызова и качество задачи.} 1.5 миллиона вызовов описывают нагрузку, без оценки доли задач",
+    "phrase": "пока не проведена. Наличие логитов и перенесённого состояния этого опыта не заменяет."
+  },
+  {
+    "name": "EXO scope",
+    "file": "12-related.tex",
+    "marker": "DistServe и Splitwise разделяют prefill и генерацию между GPU внутри дата-центра",
+    "phrase": "заявлено 2.8 раза; 4x в заголовке относится к отношению вычислительных возможностей. Дата страницы не указана"
+  },
+  {
+    "name": "PPD v1 scope",
+    "file": "12-related.tex",
+    "marker": "DistServe и Splitwise разделяют prefill и генерацию между GPU внутри дата-центра",
+    "phrase": "примерно на 68\\% меньший TTFT этих ходов (v1 от 2026-03-09)"
+  },
+  {
+    "name": "audit future",
+    "file": "13-outlook.tex",
+    "marker": "\\textbf{Аудит состояния, отдельное исследование.} Предложенная сверка с эталоном не входит в производственный маршрут.",
+    "phrase": "Предложенная сверка с эталоном не входит в производственный маршрут."
+  },
+  {
+    "name": "planned task measurement",
+    "file": "13-outlook.tex",
+    "marker": "Сравниваются четыре группы: только локальная работа; гибрид с догоняющим prefill при оффлоаде;",
+    "phrase": "Измеряются полное время задачи с отдельным холодным стартом, успешность задачи, трафик и стоимость;"
+  },
+  {
+    "name": "background catchup plan",
+    "file": "13-outlook.tex",
+    "marker": "Сравниваются четыре группы: только локальная работа; гибрид с догоняющим prefill при оффлоаде;",
+    "phrase": "узел читает их, пока Mac генерирует следующий ответ или работает инструмент."
+  },
+  {
+    "name": "archived served consistency",
+    "file": "91-calculation-history.tex",
+    "marker": "Одни клиентские машины почти ничего не стоят, но пользователю с 800 вызовами в день",
+    "phrase": "не отвечают на $800-780.7478=19.2522$ вызова, то есть $19.2522/800=2.41\\%$;"
+  },
+  {
+    "name": "abstract honest session",
+    "file": "00-abstract.tex",
+    "marker": "\\begin{quote}\\small",
+    "phrase": "удалённо выполнено 2 хода из 40, на критическом пути стояли снимки и хэширование."
+  },
+  {
+    "name": "conclusion honest session",
+    "file": "14-conclusion.tex",
+    "marker": "Первый вызов со свежим контекстом 39\\,504 токена на M3 Max через канал 16.0~МБ/с, RTT 110~мс,",
+    "phrase": "ускорения длинной сессии этот опыт не показал: удалённо выполнено 2 хода из 40,"
+  }
+]

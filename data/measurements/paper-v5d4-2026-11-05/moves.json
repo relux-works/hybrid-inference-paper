@@ -1,0 +1,50 @@
+[
+  {
+    "file": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "label": "app:e2e-methods",
+    "text_sha256": "7077be8970cefa8c661fbe7dde0408bb29220ed9aab50b669d82f7387baac7df"
+  },
+  {
+    "file": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "label": "app:client-methods",
+    "text_sha256": "5a69e546023cfc0dced8d886c70c01356fb885eaeb70900d56c3a391b95bf75f"
+  },
+  {
+    "file": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "label": "app:client-capacity-history",
+    "text_sha256": "24225c93015e9d59bbce007480db5c62f89f37af992f86d7a06ae4655edbb167"
+  },
+  {
+    "file": "06-server.tex",
+    "to": "90-appendix.tex",
+    "label": "app:server-methods",
+    "text_sha256": "d61c2e9249e1fd7c6850571b1f7575073d93d9000b7fec9f2133135b5243e073"
+  },
+  {
+    "file": "06-server.tex",
+    "to": "90-appendix.tex",
+    "label": "app:server-first-batch",
+    "text_sha256": "3c97958a4d7fdb89dcf734b33cdc9f705ddf6d042c16b1b7f6d53d95d628764d"
+  },
+  {
+    "file": "11-limitations.tex",
+    "to": "91-calculation-history.tex",
+    "label": "app:calculation-history",
+    "text_sha256": "3cf7a388d1cd331b48f7a63a5a41b4f7cff0729c04919e83a8aaeac8d459be8b"
+  },
+  {
+    "file": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "label": "app:channel-model-history",
+    "sha256": "7d0fd90b8ea7818c2b4bd3822b1b34e173bd36041489ed08a4fdbc8f3d4985ec"
+  },
+  {
+    "file": "06-server.tex",
+    "to": "90-appendix.tex",
+    "label": "app:storage-model-history",
+    "sha256": "367c3a6091b84219bdb07fcda8a125855dbbf9d12c13af28edc86475af8a9230"
+  }
+]

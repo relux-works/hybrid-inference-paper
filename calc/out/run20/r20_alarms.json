@@ -1,0 +1,4094 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 10,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "cache read price not declared"
+      }
+    ],
+    "column": "cache_read_usd_million",
+    "row": 10,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 17,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 19,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "cache read price not declared"
+      }
+    ],
+    "column": "cache_read_usd_million",
+    "row": 19,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 20,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 21,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 22,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 23,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 24,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 25,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 26,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 27,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 28,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 29,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 30,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 31,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "cache read price not declared"
+      }
+    ],
+    "column": "cache_read_usd_million",
+    "row": 31,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 32,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 34,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 35,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 36,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 38,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 39,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 40,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "cache read price not declared"
+      }
+    ],
+    "column": "cache_read_usd_million",
+    "row": 40,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "API excluded by admission"
+      }
+    ],
+    "column": "effective_usd_per_1000_calls",
+    "row": 41,
+    "table": "api_admission"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "batch",
+    "row": 33,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "single_tok_s",
+    "row": 33,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 33,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "gain",
+    "row": 33,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "batch",
+    "row": 34,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "single_tok_s",
+    "row": 34,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 34,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "gain",
+    "row": 34,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "batch",
+    "row": 35,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "single_tok_s",
+    "row": 35,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 35,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "gain",
+    "row": 35,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "batch",
+    "row": 69,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "single_tok_s",
+    "row": 69,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 69,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "gain",
+    "row": 69,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "batch",
+    "row": 70,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "single_tok_s",
+    "row": 70,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 70,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "gain",
+    "row": 70,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "batch",
+    "row": 71,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "single_tok_s",
+    "row": 71,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "aggregate_tok_s",
+    "row": 71,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "run20.capacity: one complete session does not fit a GPU replica"
+      }
+    ],
+    "column": "gain",
+    "row": 71,
+    "table": "decode_scaling"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 0,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 1,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 2,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 3,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 4,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 5,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 6,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 7,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 9,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 10,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 12,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 13,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 14,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 15,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 16,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 17,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 18,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 19,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 20,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 21,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 22,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 23,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 24,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 25,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 26,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 27,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 28,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 29,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 30,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 31,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 33,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 34,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 36,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 37,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 38,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 39,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 40,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 41,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 42,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 43,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 44,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 45,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 46,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 47,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 48,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 49,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 51,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 52,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 53,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 54,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 57,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 58,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 60,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 61,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 62,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 63,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 64,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 65,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 66,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 67,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 69,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 70,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 71,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 72,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 73,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 75,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 76,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 77,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 78,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 81,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 82,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 84,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 85,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 86,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 87,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 88,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 89,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 90,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 91,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 92,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 93,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 94,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 95,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 96,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 97,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 99,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 100,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 102,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 105,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 106,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 108,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 109,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 111,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 112,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 113,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 114,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 115,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 117,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 118,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 120,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 121,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 123,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 124,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 126,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 129,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 130,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 132,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 133,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 135,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 136,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 137,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 138,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 139,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 141,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 142,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 144,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 145,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 147,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 148,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 150,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 153,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 154,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 156,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 157,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 159,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 160,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 161,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 162,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 163,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 165,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 166,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 168,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 169,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 171,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 172,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 174,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 177,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 178,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 180,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 181,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 182,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 183,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 184,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 185,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 186,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 187,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 189,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 190,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 192,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 193,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 195,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 196,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 197,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 198,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 201,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 204,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 205,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 207,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 208,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 209,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 210,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 211,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 213,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 214,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 216,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 217,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 219,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 220,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 221,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 222,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 225,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 228,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 229,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 231,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 232,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 233,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 234,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 235,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 237,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 238,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 240,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 241,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 243,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 244,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 245,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 246,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 249,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 252,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 253,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 254,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 255,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 256,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 257,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 258,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 261,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 262,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 264,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 265,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 267,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 268,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 269,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 270,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 273,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 276,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 277,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 278,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 279,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 280,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 281,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 282,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 283,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 285,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 286,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 288,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 289,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 291,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 292,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 293,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 294,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 297,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 300,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 301,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 303,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 304,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 305,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 306,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 307,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 309,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 310,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 312,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 313,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 315,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 316,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 317,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 318,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 321,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 324,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 325,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 326,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 327,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 328,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 329,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 330,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 331,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 333,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 334,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 336,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 337,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 338,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 339,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 340,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 341,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 342,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 345,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 348,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 349,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 350,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 351,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 352,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 353,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 354,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 357,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 358,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 360,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 361,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 362,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 363,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 364,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 365,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 366,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 369,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 372,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 373,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 374,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 375,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 376,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 377,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 378,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 381,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 382,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 384,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 385,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 386,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 387,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 388,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 389,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 390,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 393,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 394,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 395,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 396,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 397,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 398,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 399,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 400,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 401,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 402,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 405,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 406,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 407,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 408,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 409,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 410,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 411,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 412,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 413,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 414,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 417,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 418,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 419,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 420,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 421,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 422,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 423,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 424,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 425,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 426,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 429,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 430,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "no sustained crossing within scanned team sizes"
+      }
+    ],
+    "column": "from_people",
+    "row": 431,
+    "table": "team_break_even"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run20",
+        "reason": "unconditioned mix exceeds measured server envelope; no silent coverage expansion"
+      }
+    ],
+    "column": "full_workload_cost",
+    "row": 0,
+    "table": "workload_coverage"
+  }
+]

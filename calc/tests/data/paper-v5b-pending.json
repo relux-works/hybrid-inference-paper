@@ -1,0 +1,77 @@
+[
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидаются",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "репетиция GPU и запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "поставщик и цена",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "поставщик и цена",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "измеренная доля кэша по допущенным поставщикам и общий измеренный интервал доступности.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "доля",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "цена",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "импорт, проверка логитов, генерация и добавочный prefill Mac на 524\\,288 и 1\\,040\\,000 токенах.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "репетиция GPU и запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "ожидаются до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах и первичный анализ этих глубин до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "полная параллельная кривая M3 при PRI~31 и нормальный приоритет Gemma требуют свободного Mac; Glimmer при PRI~31 измерен; обновление опор движка и многопоточный прогон 16b ожидаются. Пакетная генерация vLLM на PRO 6000 при 16 тысячах измерена; большие глубины и B300, Mac на миллионе, качества на глубине и проверка кэша OpenRouter выполняются по отдельной программе. Мост vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "FACTS5, superseded by accepted named blocks through r21e; owner r21f and accepted run22: provider cache/common-window availability, deeper server decode, direct Mac1M and remaining physical measurement waits stay open."
+  }
+]

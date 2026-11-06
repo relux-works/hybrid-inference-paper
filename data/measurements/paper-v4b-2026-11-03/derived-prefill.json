@@ -1,0 +1,7 @@
+{
+  "calls": 39904,
+  "mean": 19.903153598585593,
+  "median": 2.7564977892004943,
+  "p90": 54.306946114421486,
+  "formula": "n / PRI31 local rate at depth d; all calls including zero-input calls, same reference as run14_r5.perimeter_table"
+}

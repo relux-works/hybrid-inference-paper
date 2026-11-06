@@ -1,0 +1,209 @@
+{
+  "base": "f33c5df3d650e2f09dd6c498d44711eb393331eb",
+  "revisions": {
+    "04755721ca9f08141b8fcff792e74dfc52cd1fc6": {
+      "aliases": [
+        "04755721"
+      ],
+      "used_by": [
+        "calc/tests/r15_audit.py",
+        "calc/tests/r16_audit.py"
+      ]
+    },
+    "12f0c042bfdfbb12206ff83e30c223920f3ca372": {
+      "aliases": [
+        "12f0c042bfdfbb12206ff83e30c223920f3ca372"
+      ],
+      "used_by": [
+        "calc/tests/r18_audit.py"
+      ]
+    },
+    "2d457aed87d415043a2c0566f7a185607f11487e": {
+      "aliases": [
+        "2d457aed87d415043a2c0566f7a185607f11487e"
+      ],
+      "used_by": [
+        "calc/tests/r15_audit.py"
+      ]
+    },
+    "3a1eed0dbb7962bca082e5941e0853122ae70a5e": {
+      "aliases": [
+        "3a1eed0dbb7962bca082e5941e0853122ae70a5e"
+      ],
+      "used_by": [
+        "calc/tests/r19_audit.py",
+        "calc/tests/r20_audit.py"
+      ]
+    },
+    "3bc587529e305ab48a21284badaa6043d225e900": {
+      "aliases": [
+        "3bc587529e305ab48a21284badaa6043d225e900"
+      ],
+      "used_by": [
+        "calc/tests/r14_publication.py"
+      ]
+    },
+    "5f9846f319c8f5f222979bcb017ad9ae65d6206e": {
+      "aliases": [
+        "5f9846f319c8f5f222979bcb017ad9ae65d6206e"
+      ],
+      "used_by": [
+        "calc/tests/publication_v2.py"
+      ]
+    },
+    "714fe72135819ededd7c270dd661c1359acfa6c3": {
+      "aliases": [
+        "714fe72135819ededd7c270dd661c1359acfa6c3"
+      ],
+      "used_by": [
+        "calc/tests/publication_v2.py",
+        "calc/tests/r17_audit.py",
+        "calc/tests/r18_audit.py"
+      ]
+    },
+    "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0": {
+      "aliases": [
+        "9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0"
+      ],
+      "used_by": [
+        "calc/run23/export.py",
+        "calc/tests/publication_v2.py",
+        "calc/tests/test_paper_v5b.py"
+      ]
+    },
+    "9064701a9a07bd2726f76cefb6a05aa6aa428c0d": {
+      "aliases": [
+        "9064701a9a07bd2726f76cefb6a05aa6aa428c0d"
+      ],
+      "used_by": [
+        "calc/run24/export.py",
+        "calc/tests/publication_v2.py",
+        "calc/tests/test_paper_v5c.py"
+      ]
+    },
+    "a706732f1530df51d7e94050802ef4429daeac33": {
+      "aliases": [
+        "a706732f1530df51d7e94050802ef4429daeac33"
+      ],
+      "used_by": [
+        "calc/tests/r15_sentences.py"
+      ]
+    },
+    "ad21d3b2727f9de1392ca001e530201b69f431ce": {
+      "aliases": [
+        "ad21d3b2727f9de1392ca001e530201b69f431ce"
+      ],
+      "used_by": [
+        "calc/tests/test_paper_v5d5.py"
+      ]
+    },
+    "ae9645d359b40626b0008ffd54a6e9acd7d77bf1": {
+      "aliases": [
+        "ae9645d359b40626b0008ffd54a6e9acd7d77bf1"
+      ],
+      "used_by": [
+        "calc/tests/test_paper_v5d1.py"
+      ]
+    },
+    "b543c026b859850bbd53b2af352b9a3514ff1539": {
+      "aliases": [
+        "b543c026b859850bbd53b2af352b9a3514ff1539"
+      ],
+      "used_by": [
+        "calc/tests/test_paper_v5a4.py"
+      ]
+    },
+    "b6316e8a12c47526c9815cc08ebc6de78eec162b": {
+      "aliases": [
+        "b6316e8a12c47526c9815cc08ebc6de78eec162b"
+      ],
+      "used_by": [
+        "calc/run22/export.py"
+      ]
+    },
+    "b6ac5abcdf60b72582be87c7ad075ee460e7cc78": {
+      "aliases": [
+        "b6ac5abc",
+        "b6ac5abcdf60b72582be87c7ad075ee460e7cc78"
+      ],
+      "used_by": [
+        "calc/tests/r14_publication.py",
+        "calc/tests/r20_audit.py",
+        "calc/tests/r21_audit.py",
+        "calc/tests/r21_growth_audit.py",
+        "calc/tests/test_paper_v5b.py"
+      ]
+    },
+    "ca7f228acd789380bf46016fd87acc33e1b07aef": {
+      "aliases": [
+        "ca7f228acd789380bf46016fd87acc33e1b07aef"
+      ],
+      "used_by": [
+        "calc/tests/publication_v2.py",
+        "calc/tests/test_paper_v5d1.py",
+        "calc/tests/test_paper_v5d2.py",
+        "calc/tests/test_paper_v5d3.py"
+      ]
+    },
+    "e51942d331e274833f97f934a750d780c9bea9b0": {
+      "aliases": [
+        "e51942d3",
+        "e51942d331e274833f97f934a750d780c9bea9b0"
+      ],
+      "used_by": [
+        "calc/tests/publication_v2.py",
+        "calc/tests/r16_audit.py",
+        "calc/tests/r17_audit.py"
+      ]
+    },
+    "f33c5df3d650e2f09dd6c498d44711eb393331eb": {
+      "aliases": [
+        "f33c5df3d650e2f09dd6c498d44711eb393331eb"
+      ],
+      "used_by": [
+        "accepted historical publisher identity"
+      ]
+    },
+    "f7aeef958fc3e61a178ce345daa163c769545cbb": {
+      "aliases": [
+        "f7aeef958fc3e61a178ce345daa163c769545cbb"
+      ],
+      "used_by": [
+        "calc/tests/r18_audit.py",
+        "calc/tests/r19_audit.py"
+      ]
+    },
+    "fcd44c26967c560b9ca3e179ab2e3d3c19509a19": {
+      "aliases": [
+        "fcd44c26967c560b9ca3e179ab2e3d3c19509a19"
+      ],
+      "used_by": [
+        "calc/tests/test_paper_v5d2.py"
+      ]
+    },
+    "ec28e37c58f49e7109178d1c23334c4c7e0aad38": {
+      "aliases": [
+        "ec28e37c"
+      ],
+      "used_by": [
+        "calc/run25/export.py"
+      ]
+    },
+    "397432dda9ebca88207c260e2bc5b0ce38b023cb": {
+      "aliases": [
+        "397432dd"
+      ],
+      "used_by": [
+        "calc/run26/export.py"
+      ]
+    },
+    "04c3e8dec803f6583383e32c18785a51cc6f7e4b": {
+      "aliases": [
+        "04c3e8de"
+      ],
+      "used_by": [
+        "accepted paper migration baseline"
+      ]
+    }
+  }
+}

@@ -313,7 +313,7 @@ def append_hardware_tables(result,c):
     raw_table(result,'m5_family_rates',rates,dict(client='text',depth='token',prefill_tok_s='token/s',single_tok_s='token/s',aggregate4_tok_s='token/s',basis='text'))
     append_b300_tables(result,c.b300)
     segments=[]
-    for client,rows_ in (('M3 Max',rows(c.inputs.measured('depth'))),('M5 Max',c.measured_m5.depth)):
+    for client,rows_ in (('M3 Max',c.r16_single.records if c.scenario.get('run16') else rows(c.inputs.measured('depth'))),('M5 Max',c.measured_m5.depth)):
         for r in rows_:
             if r['kind']=='segment':
                 segments.append(dict(client=client,depth_from=r['depth_from'],depth=r['depth'],prefill_tok_s=r['prefill_tok_s']))
@@ -333,12 +333,14 @@ def latency_examples(result,c):
                              ('large tool output',131072,10000),('large tool output',249000,10000),
                              ('first fill',131072,131072),('first fill',249000,249000)):
         if kind=='first fill':
-            ls=integrate(lambda d:1/local(d),delta,512)
+            ls=integrate(lambda d:1/(local.cold(d) if hasattr(local,'cold') else local(d)),delta,512)
             server=c.b300.a*delta+c.b300.b*delta*delta/2
         else:
-            ls=delta/local(depth)
+            from .performance import local_rate_at
+            ls=delta/local_rate_at(local,depth,delta)
             server=delta*(c.b300.a+c.b300.b*depth)
-        imp=c.client_import()(delta)
+        from .performance import import_at
+        imp=import_at(c.client_import(),delta,0 if kind=='first fill' else depth)
         remote=server+transfer(delta,kv,state,wire)+imp
         records.append(dict(kind=kind,depth=0 if kind=='first fill' else depth,delta=delta,link_mbit=1000,
                             local_prefill_s=ls,server_prefill_s=server,transfer_s=remote-server-imp,import_s=imp,

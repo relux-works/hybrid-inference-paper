@@ -1,0 +1,46 @@
+{
+  "revision": "8dd0577b2df18685c54095b0bab22e882ac19eb8",
+  "path": "tools/hybrid-eval/RULER-EQUIVALENCE-RESULTS.md",
+  "blob": "8195afe38c3b0b876218d32047b0379956908f86",
+  "source_sha256": "550feaf7c70a3c2b52f4cf7c2d39e03b9132ae9ab604d11b8437cf311e21940f",
+  "source_bytes": 60391,
+  "source_paragraph": "At 128k, the three nonzero paired-score differences, identical for offload-local and partition-local, are fwe index 12 (+1/3; local 2/3 versus the other arm 1), qa_2 index 13 (+1; local 0 versus the other arm 1), and qa_2 index 14 (-1; local 1 versus the other arm 0); the first two sorted training pairs are cwe indices 0 and 1, both with zero difference. The frozen range guard counts three departures among the remaining 388 pairs, giving the [-2.2429,+2.2429] pp sidecar. The binary score==1 sidecar passes alone, but both sidecars are required. None of the bootstrap intervals triggers the near-margin sensitivity diagnostic, so no extra-seed result is generated. Finite bootstrap p resolution remains 1/10000.",
+  "pairs": [
+    "offload-local",
+    "local_partition-local"
+  ],
+  "departures": [
+    {
+      "task": "fwe",
+      "index": 12,
+      "difference": "+1/3",
+      "local": "2/3",
+      "other": "1"
+    },
+    {
+      "task": "qa_2",
+      "index": 13,
+      "difference": "+1",
+      "local": "0",
+      "other": "1"
+    },
+    {
+      "task": "qa_2",
+      "index": 14,
+      "difference": "-1",
+      "local": "1",
+      "other": "0"
+    }
+  ],
+  "training_pairs": [
+    {
+      "task": "cwe",
+      "index": 0
+    },
+    {
+      "task": "cwe",
+      "index": 1
+    }
+  ],
+  "remaining_pairs": 388
+}

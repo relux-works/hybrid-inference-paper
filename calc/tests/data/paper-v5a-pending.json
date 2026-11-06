@@ -1,0 +1,192 @@
+[
+  {
+    "file": "00-abstract.tex",
+    "body": "размеры",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "расчёт ожидается",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled depth/batch gain, not measured"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидаются",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "размеры",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "влияние передачи bf16 на качество и скорость на GPU и Mac.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "нормальный приоритет Mac для Glimmer выполняется; Gemma ожидает свободного Mac.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "06-server.tex",
+    "body": "ожидается",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled gain; measured batching pending"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "размеры",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "пересчитываются",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/paper_claims.csv; light/medium/heavy; unconditional_claim; no5090-server rows"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "измеренная доля попаданий OpenRouter и окончательный допуск поставщиков.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "доля",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "цена",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидается",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; server/profile/share/client/basis; cost columns after accepted merge"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидаются",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; each profile; reference=own_cluster; sustained finite scan"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидается",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/paper_claims.csv; PRO6000 only; compare own_cluster/API; full-workload alarm retained"
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "первичный парный анализ оценок по зарегистрированному критерию.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "ожидаются до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "размеры",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "вызовов в день",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "source": "Owner r21 task2; unmerged b6ac5abc; calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах, варианты bf16 на 8 и 32 тысячах; Glimmer на 32, 64 и 122\\,880 токенах. Первичный парный анализ по зарегистрированному критерию реализуется. Состояние на 2026-11-03 15:40 UTC: bf16 на 8 и 32 тысячах начат в 14:24, затем идёт глубина 64 тысячи; Qwen на 128 тысячах начат в 14:29, оценка 32--36 часов, до 2026-11-05 00:00--02:00 UTC. Программа Glimmer на четырёх глубинах оценена в 33--50 часов. Данные принимаются до 2026-11-05 12:00 UTC; неизмеренные пункты остаются помеченными, срок выпуска сохраняется.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "полная параллельная кривая M3 при PRI~31 и нормальный приоритет Gemma требуют свободного Mac; Glimmer при PRI~31 выполняется, затем обновление движка 16b. Измерения пакетной генерации vLLM на PRO 6000 и B300, Mac на миллионе, качества на глубине и проверка кэша OpenRouter выполняются по отдельной программе. Мост vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "FACTS section5 (RULER updated15:40Z) plus explicit owner r21 tasks1/5/7/9; no completion inferred"
+  }
+]

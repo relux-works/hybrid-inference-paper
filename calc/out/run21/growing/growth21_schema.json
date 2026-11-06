@@ -1,0 +1,95 @@
+{
+  "growing_api_admission": {
+    "columns": {
+      "admitted": "bool",
+      "availability_basis": "text",
+      "cache_basis": "text",
+      "cache_hit_fraction": "1",
+      "context_limit": "token",
+      "extension_basis": "text",
+      "growing_profile": "text",
+      "mean_input_tokens": "token",
+      "mean_output_tokens": "token",
+      "model": "text",
+      "profile": "text",
+      "provider": "text",
+      "reasons": "text",
+      "role": "text",
+      "tag": "text",
+      "target_depth": "token",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "workload_scope": "text"
+    },
+    "csv_labels": {},
+    "name": "growing_api_admission",
+    "rows": 164,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "growing_task_economics": {
+    "columns": {
+      "api_cheapest_person_month": "USD/person-month (open-model component)",
+      "api_median_person_month": "USD/person-month (open-model component)",
+      "basis": "text",
+      "billing": "text",
+      "boxes": "box",
+      "calls_per_task": "call/task",
+      "client_basis": "text",
+      "client_capacity_day": "call/person/day",
+      "client_energy_month": "USD/person-month (open-model component)",
+      "decode_overflow_gpu_s_day": "GPU s/person/day",
+      "device_month": "USD/person-month (open-model component)",
+      "front_month": "USD/person-month (open-model component)",
+      "link": "text",
+      "median_over_hybrid": "1",
+      "model": "text",
+      "offload_share": "1",
+      "own_cluster_boxes": "box",
+      "own_cluster_person_month": "USD/person-month (open-model component)",
+      "pending_s_offload": "s",
+      "person_month": "USD/person-month (open-model component)",
+      "prefill_gpu_s_day": "GPU s/person/day",
+      "profile": "text",
+      "served_day": "call/person/day",
+      "server": "text",
+      "server_decode_overflow_day": "call/person/day",
+      "server_person_month": "USD/person-month (open-model component)",
+      "spill_share": "1",
+      "storage_person_month": "USD/person-month (open-model component)",
+      "target_depth": "token",
+      "tasks_day": "task/person/day",
+      "team": "person",
+      "unit_month": "USD/node-month",
+      "usd_per_task": "USD/task"
+    },
+    "csv_labels": {
+      "basis": {
+        "same synthetic growing task; R20 integer node/residency/finite-team bounds; hybrid fleet sufficient not minimal; GLM all rates and Qwen deep prefill/decode/import projections unmeasured/mixed priority; YaRN4 on hybrid Qwen; API extension unknown; no persistence guarantee": "same synthetic growing task; R20 integer node/residency/finite-team bounds; hybrid fleet sufficient not minimal; GLM all rates and Qwen deep prefill/decode/import projections unmeasured/mixed priority; YaRN4 on hybrid Qwen, API extension unknown; no persistence guarantee"
+      }
+    },
+    "name": "growing_task_economics",
+    "rows": 864,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "growing_trace_summary": {
+    "columns": {
+      "basis": "text",
+      "calls": "1",
+      "client_prefill_s": "s",
+      "end_depth": "token",
+      "model": "text",
+      "new_tokens": "token",
+      "output_tokens": "token",
+      "profile": "text",
+      "server": "text",
+      "target_depth": "token"
+    },
+    "csv_labels": {
+      "basis": {
+        "synthetic growing mean-delta/mean-output task; not raw log replay; same task for hybrid/API/cluster": "synthetic growing mean-delta/mean-output task, not raw log replay; same task for hybrid/API/cluster"
+      }
+    },
+    "name": "growing_trace_summary",
+    "rows": 12,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  }
+}

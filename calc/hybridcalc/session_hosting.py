@@ -39,14 +39,14 @@ def route(own,remote,shadow,output,wire,foreground,mode):
 
 
 def policy_with_reload(calls,model,compute,link,local,vector,client_import=None):
-    from .performance import flop,payload,transfer
+    from .performance import flop,payload,transfer,local_rate_at,import_at
     own=[];remote=[];shadow=[];output=[];wire=[];foreground=[]
     for (d,n,o,t),(reload_s,spill) in zip(nonempty(calls),vector):
         f=flop(model,d)/compute_at(compute,d)
         size=payload(n,model['kv'],model['wire_state'])
-        imp=client_import(n) if client_import else 0.0
+        imp=import_at(client_import,n,d)
         foreground.append(imp)
-        own.append(n/local(d));remote.append(reload_s+n*f+transfer(n,model['kv'],model['wire_state'],link)+imp)
+        own.append(n/local_rate_at(local,d,n));remote.append(reload_s+n*f+transfer(n,model['kv'],model['wire_state'],link)+imp)
         shadow.append((n+o)*f);output.append(o*f);wire.append(payload(n,model['kv'],model['wire_state']))
     return route(own,remote,shadow,output,wire,foreground,vector.catch_up)
 

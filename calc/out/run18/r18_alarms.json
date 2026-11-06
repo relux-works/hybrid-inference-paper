@@ -1,0 +1,1234 @@
+[
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 0,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 0,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 1,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 1,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 2,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 2,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 3,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 3,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 4,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 4,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 6,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 6,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 7,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 7,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 9,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 9,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 10,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 10,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 12,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 12,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 13,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 13,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "local_prefill_s",
+    "row": 15,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "budget_s",
+    "row": 15,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 15,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 15,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "local_prefill_s",
+    "row": 16,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "budget_s",
+    "row": 16,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 16,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 16,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "local_prefill_s",
+    "row": 17,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "budget_s",
+    "row": 17,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 17,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 17,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 18,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 18,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 19,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 19,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 21,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 21,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 22,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 22,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "local_prefill_s",
+    "row": 24,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "budget_s",
+    "row": 24,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 24,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 24,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "local_prefill_s",
+    "row": 25,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "budget_s",
+    "row": 25,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 25,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 25,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "local_prefill_s",
+    "row": 26,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "budget_s",
+    "row": 26,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 26,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "session exceeds hard context capacity 99328"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 26,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 27,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 27,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 28,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 28,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 29,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 29,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 30,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 30,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 31,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 31,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 32,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 32,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 33,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 33,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 34,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 34,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 35,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 35,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 36,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 36,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 37,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 37,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 38,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 38,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 39,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 39,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 40,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 40,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 41,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 41,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 42,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 42,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 43,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 43,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 44,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 44,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 45,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 45,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 46,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 46,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 47,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 47,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 48,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 48,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 49,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 49,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 50,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 50,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 51,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 51,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 52,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 52,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mb_s",
+    "row": 53,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "downstream",
+        "reason": "no finite downstream rate can beat local prefill"
+      }
+    ],
+    "column": "break_even_downstream_mbit_s",
+    "row": 53,
+    "table": "gpu_link_threshold"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "full fitted workload exceeds hard client capacity; no fully-local quote"
+      }
+    ],
+    "column": "full_workload_rental_cost",
+    "row": 0,
+    "table": "gpu_capacity_coverage"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "full fitted workload exceeds hard client capacity; no fully-local quote"
+      }
+    ],
+    "column": "full_workload_rental_cost",
+    "row": 1,
+    "table": "gpu_capacity_coverage"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "full fitted workload exceeds hard client capacity; no fully-local quote"
+      }
+    ],
+    "column": "full_workload_rental_cost",
+    "row": 2,
+    "table": "gpu_capacity_coverage"
+  },
+  {
+    "alarms": [
+      {
+        "input": "run18.capacity",
+        "reason": "full fitted workload exceeds hard client capacity; no fully-local quote"
+      }
+    ],
+    "column": "full_workload_rental_cost",
+    "row": 3,
+    "table": "gpu_capacity_coverage"
+  }
+]

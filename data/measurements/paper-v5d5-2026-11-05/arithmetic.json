@@ -1,0 +1,31 @@
+{
+  "facts_sha256": "2f2fa817439f9d24b6154695a6ae53f23ca2b135dde592ad52d99fd401ae8e0d",
+  "source": "paper/data/year-bill-summary.json",
+  "source_sha256": "f2151d2fffc9152697d930e715aef61434f9f2a9d0355d0aee7c647a65978a72",
+  "qwen_tier_calls": 260201,
+  "all_calls": 1530739,
+  "qwen_tier_call_percent": 16.998390973248867,
+  "tier_bill_low": 5429.87486917,
+  "tier_bill_high": 5732.84863209,
+  "tier_bill_percent_low_bound": 4.824679546125361,
+  "tier_bill_percent_high_bound": 4.606068730245302,
+  "frontier": {
+    "calls": 1248111,
+    "priced_calls": 1248111,
+    "low": 106836.71732294,
+    "high": 118452.94377719601,
+    "qwen_low": 15061.07082815,
+    "qwen_high": 24456.49167515
+  },
+  "frontier_call_percent": 81.53649969067229,
+  "prefill_seconds": 225.22522522522524,
+  "f32_state_bytes": 156893184,
+  "bf16_state_bytes": 78446592,
+  "early_ttft_percent_lower": 25.7255985267035,
+  "ruler_score_depths": [
+    8192,
+    32768
+  ],
+  "ruler_deeper": "interim only; registered verdict remains pending",
+  "task_substitution": "not measured"
+}

@@ -1,0 +1,13 @@
+profile,depth,server_copy_bytes,client_copy_bytes,wire_state_bytes,basis
+existing_combined,16000,1205469184,713949184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+existing_combined,32000,2254045184,1271005184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+existing_combined,64000,4351197184,2385117184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+existing_combined,100000,6710493184,3638493184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+existing_combined,164000,10904797184,5866717184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+existing_combined,249000,16475357184,8826077184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+claude_deep,16000,1205469184,713949184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+claude_deep,32000,2254045184,1271005184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+claude_deep,64000,4351197184,2385117184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+claude_deep,100000,6710493184,3638493184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+claude_deep,164000,10904797184,5866717184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot
+claude_deep,249000,16475357184,8826077184,78446592,server bf16-default KV65536B/token + f32 resident recurrent state; client q8_0 KV34816; bf16 transport is not half the full slot

@@ -63,10 +63,10 @@ def transcript_table(r):
             if d*kv+state>free:raise InputGap(r.server['prefix']+'.memory','transcript does not fit one server replica')
             return d
         server_ok=r.add(n+'.server_fit',[final,r.server['free'],c.kv,c.state],server_fit)
-        local=r.add(n+'.local',['r8.transcript.tokens',cl['local'],'r7.integration_step',admitted],lambda n,rate,step,ok:integrate_span(lambda d:1/rate(d),0,n,step))
+        local=r.add(n+'.local',['r8.transcript.tokens',cl['local'],'r7.integration_step',admitted],lambda n,rate,step,ok:integrate_span(lambda d:1/(rate.cold(d) if hasattr(rate,'cold') else rate(d)),0,n,step))
         server=r.add(n+'.server',['r8.transcript.tokens',m['flop'],r.compute,'r7.integration_step',server_ok],lambda n,m,c,step,ok:integrate_span(lambda d:flop(m,d)/compute_at(c,d),0,n,step))
         size=r.add(n+'.size',['r8.transcript.tokens',c.kv,c.state],payload)
-        imp=r.import_node(n+'.import',size,cl)
+        imp=r.import_node(n+'.import',size,cl,r.label(n+'.old_depth',0))
         last=r.add(n+'.last',[cl['rate'],'r8.transcript.tokens','r7.last_token_tokens',admitted],lambda rate,d,n,ok:n/rate(1,d))
         decode=r.add(n+'.decode',['r8.transcript.tokens','r8.transcript.summary',cl['rate'],'r7.integration_step',admitted],lambda d,n,rate,step,ok:integrate_span(lambda x:1/rate(1,x),d,n,step))
         apis={}

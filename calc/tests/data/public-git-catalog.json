@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "scope": "explicitly reviewed Git-bearing modules; unknown or changed Git access fails closed",
+  "files": {
+    ".scripts/generate-history-evidence.py": {
+      "sha256": "0cf4f23da66c529e3b7c7fa2573b09721e2abe7ea3959c4dd89240830aed2aea",
+      "reason": "verified evidence gateway; private object reads only cross-check pinned in-tree evidence"
+    },
+    ".scripts/release-check.sh": {
+      "sha256": "425b6c822b5a4451a616dfe2339bf1a6cf8da9dee3944c07371286605108759c",
+      "reason": "HEAD/public release refs, or isolated synthetic release fixture"
+    },
+    ".scripts/simulate-public-layout.py": {
+      "sha256": "5af64fdedbde0e8fe0247d7aacb01e3216f9e09317b6cc300a14f0d6e136cd54",
+      "reason": "isolated real Git metadata: only public ancestor commits and current trees; no private producer objects"
+    },
+    ".scripts/test-release-signatures.sh": {
+      "sha256": "9c9f4eb9a4ee062a9ac4a07e26f090068fe846f5b4d09905f096a790e8726d65",
+      "reason": "HEAD/public release refs, or isolated synthetic release fixture"
+    },
+    ".scripts/test-release.sh": {
+      "sha256": "e8d00e67f0a9d832abfcd6fc97f481837fb76c65c75e27cf88a7b9d21802ef1d",
+      "reason": "HEAD/public release refs, or isolated synthetic release fixture"
+    },
+    ".scripts/version.sh": {
+      "sha256": "42fc96edf185b9d67b3725858639953132e02bdc01756dff8aba7d7e8c5fe427",
+      "reason": "HEAD/public release refs, or isolated synthetic release fixture"
+    },
+    "calc/history_evidence.py": {
+      "sha256": "2fd36cf521ae1cc8a74f10da8a225e149b649eaec5fa44f97b1afe55900bffde",
+      "reason": "verified evidence gateway; private object reads only cross-check pinned in-tree evidence"
+    },
+    "calc/tests/publication_v2.py": {
+      "sha256": "e744f3fcaf38c494a89fa16215ec4f0de25b0a07b5c55edeb224fb2760a9630a",
+      "reason": "tracked working-tree file enumeration only, no revision lookup"
+    },
+    "calc/tests/test_run10.py": {
+      "sha256": "ca22b3300c465b4d357d7a28ec3bac6ae1e6f72d5878992a5ed24117c37fee5b",
+      "reason": "explicit local/temporary Git fixture and existing public snapshot mode; no private producer revision"
+    },
+    "calc/tests/test_introduced_blobs.py": {
+      "sha256": "5031a2d169c093e13d2ecb252751345f1bceaf1b3b47146b0ea9b239dcd04906",
+      "reason": "Public revision range metadata inspection or isolated synthetic object fixture"
+    },
+    ".scripts/check-introduced-blobs.py": {
+      "sha256": "3bcecb228e34467ac754583ac145a8ea4fec52778e58df57765daf84496cef26",
+      "reason": "Public revision range metadata inspection or isolated synthetic object fixture"
+    },
+    ".scripts/generate-ledger-storage.py": {
+      "sha256": "901b88d2166da1e2863e33e6ec4439149c0c056aebb10b94853e3cbc8de108b3",
+      "reason": "Authoring-only deterministic transform from accepted local Git originals; check mode uses authenticated fixtures with optional Git cross-check"
+    }
+  }
+}

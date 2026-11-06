@@ -1,0 +1,52 @@
+[
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидает измерения: аренда не запустила контейнер",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "ожидает допущенного поставщика с доступностью не ниже 95\\%.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "полные 390 пар и первичный анализ на 64 и 128 тысячах; узлы остановлены по решению владельца 2026-11-04, строки сохранены до остановки; исходные узлы поставлены в очередь на перезапуск. Граница приёма данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах: сохранены неполные строки, полные 390 пар и первичный анализ ожидаются. Узлы остановлены по решению владельца 2026-11-04, исходные узлы поставлены в очередь на перезапуск; граница приёма данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "перенос измеренной ограниченной кривой M3 в новые опоры движка и прогон 16b; Gemma при обычном приоритете; пакетная генерация B300, аренда не запустила контейнер; калибровка моста vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "FACTS5 superseded by completed measurements and accepted engine24; RC4 registered64k/128k completion, B300 decode, admitted Qwen1M point and unchanged qualified future/model/calibration waits."
+  }
+]

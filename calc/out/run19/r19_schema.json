@@ -1,0 +1,220 @@
+{
+  "node_capacity": {
+    "columns": {
+      "basis": "text",
+      "configured_context_limit": "token",
+      "depth": "token",
+      "measured_rate_depth_limit": "token",
+      "node": "text",
+      "physical_one_session_tokens": "token",
+      "resident_slots": "1",
+      "session_budget_bytes": "B",
+      "session_bytes": "B"
+    },
+    "csv_labels": {},
+    "name": "node_capacity",
+    "rows": 10,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "node_link_profiles": {
+    "columns": {
+      "basis": "text",
+      "bytes_s": "B/s",
+      "key": "text",
+      "rental": "bool",
+      "rtt_s": "s"
+    },
+    "csv_labels": {
+      "basis": {
+        "measured Wi-Fi plus WAN/SSH path; replay; not office-LAN measurement": "measured Wi-Fi plus WAN/SSH path; replay, not office-LAN measurement"
+      }
+    },
+    "name": "node_link_profiles",
+    "rows": 5,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "node_link_threshold": {
+    "columns": {
+      "basis": "text",
+      "break_even_downstream_mb_s": "MB/s (decimal)",
+      "break_even_downstream_mbit_s": "Mbit/s",
+      "budget_s": "s",
+      "client": "text",
+      "client_import_s": "s",
+      "delta": "token",
+      "depth": "token",
+      "link": "text",
+      "link_mb_s": "MB/s (decimal)",
+      "local_prefill_s": "s",
+      "node": "text",
+      "node_prefill_s": "s",
+      "offload_at_link": "bool",
+      "rtt_s": "s",
+      "swap_s": "s",
+      "threshold_status": "text",
+      "tier": "text",
+      "wire_bytes": "B"
+    },
+    "csv_labels": {},
+    "name": "node_link_threshold",
+    "rows": 540,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "node_routing": {
+    "columns": {
+      "basis": "text",
+      "calls": "1",
+      "client": "text",
+      "gpu_s_call": "s/call",
+      "link": "text",
+      "local_prefill_s_call": "s/call",
+      "migration_s_call": "s/call",
+      "node": "text",
+      "offload_calls": "1",
+      "offload_share": "1",
+      "pending_s_offload": "s",
+      "prefill_wait_s_call": "s/call",
+      "tier": "text",
+      "wire_bytes_call": "B/call"
+    },
+    "csv_labels": {},
+    "name": "node_routing",
+    "rows": 60,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "node_swap_evidence": {
+    "columns": {
+      "basis": "text",
+      "bytes": "B",
+      "depth": "token",
+      "kind": "text",
+      "node": "text",
+      "seconds": "s"
+    },
+    "csv_labels": {},
+    "name": "node_swap_evidence",
+    "rows": 24,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "office_node_economics": {
+    "columns": {
+      "api_cheapest_usd_person_month": "USD/person-month",
+      "api_median_usd_person_month": "USD/person-month",
+      "basis": "text",
+      "box_capex_usd": "USD",
+      "box_month_usd": "USD",
+      "boxes": "box",
+      "calls": "1",
+      "client": "text",
+      "compute_boxes": "box",
+      "gpu_s_call": "s/call",
+      "host_bytes": "B",
+      "host_storage_month_usd": "USD",
+      "link": "text",
+      "local_prefill_s_call": "s/call",
+      "migration_s_call": "s/call",
+      "node": "text",
+      "offload_calls": "1",
+      "offload_share": "1",
+      "own_b300_usd_person_month": "USD/person-month",
+      "own_pro6000_usd_person_month": "USD/person-month",
+      "pending_s_offload": "s",
+      "prefill_wait_s_call": "s/call",
+      "resident_only_boxes": "box",
+      "resident_slots_box": "1",
+      "retained_sessions": "1",
+      "spill_share": "1",
+      "team": "1",
+      "tier": "text",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "usd_person_month": "USD/person-month",
+      "wire_bytes_call": "B/call"
+    },
+    "csv_labels": {
+      "basis": {
+        "same conditional mix; Mac already owned; backend cost only; owned cache included in host capex; monotone sufficient box count; not proved minimal; uniform session popularity": "same conditional mix; Mac already owned; backend cost only; owned cache included in host capex; monotone sufficient box count, not proved minimal; uniform session popularity"
+      }
+    },
+    "name": "office_node_economics",
+    "rows": 180,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "rented_prefill_node": {
+    "columns": {
+      "api_cheapest_usd_person_month": "USD/person-month",
+      "api_median_usd_person_month": "USD/person-month",
+      "basis": "text",
+      "billed_hours_month": "GPU-machine hours/month",
+      "billing": "text",
+      "boxes": "box",
+      "calls": "1",
+      "client": "text",
+      "compute_boxes": "box",
+      "egress_usd_month": "USD",
+      "gpu_s_call": "s/call",
+      "host_bytes": "B",
+      "hourly_usd": "USD/hour",
+      "link": "text",
+      "local_prefill_s_call": "s/call",
+      "migration_s_call": "s/call",
+      "node": "text",
+      "offload_calls": "1",
+      "offload_share": "1",
+      "pending_s_offload": "s",
+      "prefill_wait_s_call": "s/call",
+      "resident_only_boxes": "box",
+      "resident_slots_box": "1",
+      "retained_sessions": "1",
+      "spill_share": "1",
+      "storage_usd_month": "USD",
+      "tier": "text",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "usd_person_month": "USD/person-month",
+      "wire_bytes_call": "B/call"
+    },
+    "csv_labels": {
+      "basis": {
+        "observed Vast offers2026-11-03; not market rates; warm inference excludes first model fetch/startup; no persistence across lease ends; work price is a lower bound; calendar node pays idle": "observed Vast offers2026-11-03, not market rates; warm inference excludes first model fetch/startup; no persistence across lease ends; work price is a lower bound, calendar node pays idle"
+      }
+    },
+    "name": "rented_prefill_node",
+    "rows": 48,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "same_mix_own_references": {
+    "columns": {
+      "basis": "text",
+      "boxes": "box",
+      "option": "text",
+      "team": "1",
+      "usd_per_1000_calls": "USD/1000 conditional calls",
+      "usd_person_month": "USD/person-month"
+    },
+    "csv_labels": {},
+    "name": "same_mix_own_references",
+    "rows": 6,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  },
+  "workload_coverage": {
+    "columns": {
+      "basis": "text",
+      "common_calls": "1",
+      "common_share": "1",
+      "delta_max": "token",
+      "delta_min": "token",
+      "full_workload_office_cost": "1",
+      "full_workload_supported": "bool",
+      "max_end_depth": "token",
+      "normalized_calls_person_month": "call/person-month",
+      "original_calls": "1"
+    },
+    "csv_labels": {
+      "basis": {
+        "all alternatives use the same indices; original API cache-group prices selected without resetting boundaries; conditional mix normalized to a whole person-month; not full-workload claim": "all alternatives use the same indices; original API cache-group prices selected without resetting boundaries; conditional mix normalized to a whole person-month, not full-workload claim"
+      }
+    },
+    "name": "workload_coverage",
+    "rows": 1,
+    "status": "ok or alarm; nan represents a noncomputable cell, never a numeric zero"
+  }
+}

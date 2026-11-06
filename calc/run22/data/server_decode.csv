@@ -1,0 +1,5 @@
+server,depth,streams,aggregate_tok_s,resident_limit,ttft_median_s,engine,extension,observed_at,source
+pro6000_fp8,16384,1,48.7166723842491,39,0.11094897286966443,vllm,native,2026-11-03T19:35:00Z,calc/run22/data/pro6000-decode-16384.json#streams=1; private-prefix three-round common-window median; default KV; r7ar ACCEPT
+pro6000_fp8,16384,8,302.9805555126111,39,0.7249282724224031,vllm,native,2026-11-03T19:35:00Z,calc/run22/data/pro6000-decode-16384.json#streams=8; private-prefix three-round common-window median; default KV; r7ar ACCEPT
+pro6000_fp8,16384,32,686.7991215323314,39,2.4306811350397766,vllm,native,2026-11-03T19:35:00Z,calc/run22/data/pro6000-decode-16384.json#streams=32; private-prefix three-round common-window median; default KV; r7ar ACCEPT
+pro6000_fp8,16384,39,738.101276255454,39,2.5201259509194642,vllm,native,2026-11-03T19:35:00Z,calc/run22/data/pro6000-decode-16384.json#streams=39; private-prefix three-round common-window median; default KV; r7ar ACCEPT

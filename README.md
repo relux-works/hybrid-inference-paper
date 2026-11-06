@@ -1,14 +1,6 @@
 # Hybrid inference: architecture and economics (working repository)
 
-Engine run15 replaces M3 parallel anchors with the cooled kit 1.6.6 three-round
-medians at the largest-np shape, retaining step56's 260k deepest anchors.
-Historical, run13 and run14 exports are preserved. See
-[`calc/README.md`](calc/README.md#run-15-cooled-parallel-anchors) for CPU-only
-commands and the [R15 report](calc/ENGINE-REPORT-R15-261102.md) for agent-count
-capacity, measurement shares and the old/new paper quote ledger.
-The r7 correction gives all 8,301 changed counterpart-table cells unique ledger
-keys, preserves every R15 export byte, and records the six-agent paper footnote
-and its exclusion from trend and capacity-gain comparisons.
+The `0.1.0-rc.4` source candidate contains reviewed paper `v5d12` and accepted engine runs through 26. Measurements and declared scenarios bound applicability. Qwen RULER scores are equivalent at 8k/32k/64k; at 128k the frozen guard withholds equivalence. The forty-turn CUDA/Metal run showed no long-session speedup. See [the current gap and correction map](calc/PAPER-V5D11-GAPS-261106.md). Owner-signed publication remains with the incident lane.
 
 Working repository for the paper «Hybrid Inference with Client–Server Prefill–Decode Disaggregation: Architecture and
 Economics for Unified-Memory Clients». Authors: Ivan Oparin, Alexey Grigoriev, Timur Kackan and Sergei Shchepetkov (Relux Works).
@@ -17,15 +9,13 @@ The idea: a GPU server prefills an agent session and ships the model state (atte
 fixed recurrent state) to a unified-memory client such as a Mac, which decodes locally.
 
 Status: a draft heading for version 0.1.0 (versions `0.y.z` are drafts; see below). The Russian text, the calculation
-engine (`calc/`, runs 1–15) and the data behind every number of the paper are in place. Version 0.1.0 is released
+engine (`calc/`, runs 1–26) and the data behind every number of the paper are in place. Version 0.1.0 is released
 after the scheme has been checked on GPU hardware. The prototype lives in a separate repository,
 [`relux-works/hybrid-inference`](https://github.com/relux-works/hybrid-inference).
 
-The `0.1.0-rc.3` candidate contains reviewed paper v3 and engine run 15; see
-[`CHANGELOG.md`](CHANGELOG.md#010-rc3---2026-11-02). It supersedes rc.2, which was prepared but never published.
-The growing-session CUDA-to-Metal result, the Mac priority re-check, engine run 16 with M5 Max anchors and
-CUDA-to-Metal calibration remain pending. Mac timings so far came from a background-priority agent context and
-are under re-check. The incident lane publishes the candidate under the owner's identity after its release gates pass.
+The `0.1.0-rc.4` candidate supersedes published rc.3; see
+[`CHANGELOG.md`](CHANGELOG.md#010-rc4---2026-11-06). Data cut-off: 2026-11-06 06:00 UTC.
+Clean end-to-end replay, long-session vLLM qualification, the unexplained 1.04M Mac tolerance, B300 decode, an admitted Qwen 1M API provider, Mac bf16, timing-only calibration and the declared model/hardware follow-ups remain pending. The source lane creates no public commit or tag. The incident lane verifies the streamed git bundle, creates the owner commit, lands the reviewed PR, signs the tag and rebuilds the assets.
 
 Licences: everything in this repository is licensed under MIT (`LICENSE`), except the paper and its materials, which
 are licensed under CC BY 4.0 (`paper/LICENSE`): the text, figures and data under `paper/` other than the scripts in
@@ -98,7 +88,7 @@ Actions artifact storage.
 | `CHANGELOG.md` | What changed in each released version of the paper |
 | `.scripts/`, `Makefile` | PDF build and release scripts; see "Building the PDF" |
 | `.github/workflows/paper.yml` | CI: builds the PDF and publishes releases |
-| `calc/` | Data-driven calculation engine and exact legacy wrappers, Python 3.9+ standard library only; see [`calc/README.md`](calc/README.md) |
+| `calc/` | Data-driven calculation engine and exact legacy wrappers, Python standard library only; reference CPython 3.14.4; see [`calc/README.md`](calc/README.md) |
 | `data/research/` | Source notes from October 2026, each item tagged [fact] with URL and quote, [estimate] or [unverified] |
 | `data/measurements/ivmbp-2026-10-30/` | Aggregate statistics of the agent sessions behind the workload model (Claude Code, Codex, Muse), as delivered: no transcripts |
 | `bench/` | Measurement kits for contributors: Mac and NVIDIA GPU long-context benchmarks, agent-session statistics with consent; start with [`bench/AGENT_PROMPT.md`](bench/AGENT_PROMPT.md) |
@@ -484,3 +474,475 @@ Run `PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=calc/tests python3 -B -m unittest test
 for named claim-removal, source/cell corruption and quality-overclaim controls; the engine suite includes them.
 `python3 paper/data/offload_bound.py --self-test` includes the new source-transcribed and measurement-summary sites.
 The source-verification record and CPU-only package receipts are under `.temp/hybrid-c-r19-261102/delivery/`.
+## Engine run 16
+
+The opt-in run16 calibration replaces M3 Max single-stream anchors with the
+recorded PRI 31 step40 run, adds Sergey's cooled M5 sweep (priority
+not recorded; the launching process was PRI 31 when checked afterwards), and models the prototype's depth-dependent
+client import. Existing M3 parallel results remain explicitly interim because
+they were measured in a background-priority context. Both the fitted prototype
+and unimplemented bounded-undo sensitivity are exported; earlier exports stay
+frozen.
+
+Tool: Python 3 standard library with local Git. From the repository root:
+
+```bash
+mkdir -p .temp/hybrid-e-r8-261103/tmp
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r8-261103/tmp" python3 -B -I calc/tests/r16_audit.py
+PYTHONDONTWRITEBYTECODE=1 TMPDIR="$PWD/.temp/hybrid-e-r8-261103/tmp" python3 -B -I -m unittest discover -s calc/tests -p test_run16.py -v
+```
+
+Outputs: `calc/out/run16/{base,bounded_undo}/`, `INDEX.json`, the old/new
+`calc/ENGINE-QUOTES-R16-261103.csv`, and
+[`calc/ENGINE-REPORT-R16-261103.md`](calc/ENGINE-REPORT-R16-261103.md).
+`r16_audit.py --audit-only` checks source/output identities, all 608 frozen
+files, priority qualification and quote coverage. See
+[`calc/README.md`](calc/README.md#run-16-priority-qualified-single-streams-and-prototype-depth-import)
+for the data-only R16b sweep interface, threshold semantics and validation.
+
+## Paper v4 validation and counts
+
+Run the CPU-only engine suite with `python3 -B -m unittest discover -s calc/tests`,
+the kit suite with `python3 -B -m unittest discover -s bench/tests`, and the two
+publication checkers with `python3 paper/data/check_ranges.py` and
+`python3 paper/data/offload_bound.py`, each also with `--self-test`.
+Run `python3 calc/tests/publication_v2.py`, `python3 calc/tests/r13_ledger.py`,
+`python3 .scripts/publication_spacing.py`, `bash .scripts/test-release.sh` and
+`bash .scripts/test-release-signatures.sh`. The v4 regression tests are in
+`calc/tests/test_paper_v4.py`; old reviewer test names remain present.
+
+The exact engine snapshot is `calc/out/run16/base/`; `paper/data/arch_compare.py`
+projects its f32 architecture rows into the existing native CSV format, while
+`python3 paper/data/derive_charts.py` rebuilds the five chart inputs. The bounded
+undo case stays in `calc/out/run16/bounded_undo/` as future-work sensitivity.
+Source facts are pinned in `data/measurements/paper-v4-2026-11-03/FACTS.md`.
+The gap map and complete numeric delta inventory are
+`calc/PAPER-V4-GAPS-261103.md` and `calc/PAPER-V4-NUMBERS-261103.csv`.
+
+Use disk-backed `TMPDIR` and `PYTHONDONTWRITEBYTECODE=1`; logs, gate receipts,
+the before/after lexical counter and its counting definition are under
+`.temp/hybrid-c-r20-261103/`. The cache-only build is
+`make pdf TECTONIC="$PWD/.temp/paper-v2-261101/tectonic-cached"`, followed by
+`make manifest`. Build outputs stay in `build/` and `dist/`; the owner copy is
+`.temp/hybrid-c-r20-261103/hybrid-inference-v4-draft.ru.pdf`.
+
+## Paper v4b owner follow-up
+
+The owner revoked the length/no-growth target; title, thesis, authors and release version stay unchanged.
+Every non-superseded result is retained. The restoration audit, four pending sites, character-count definition,
+source-row arithmetic and validation receipts are in `calc/PAPER-V4B-GAPS-261103.md`.
+Current FACTS (including Sergey's priority answer) and the independently recomputed prefill distribution are in
+`data/measurements/paper-v4b-2026-11-03/`. Accepted R16 exports, quotes and historical fixtures remain unchanged;
+the newer priority answer supersedes their owner-reported-priority label in current paper prose.
+
+Tool: `python3 -B -m unittest discover -s calc/tests -p test_paper_v4b.py` checks the 1920/1921 character boundary,
+source-selected per-team light-load directions, geometry/time accounting, priority qualifications and every pending site.
+The same full v4 gates listed above apply. Logs, the unchanged lexical counter, counting receipts and the cache-only
+owner PDF are under `.temp/hybrid-c-r20b-261103/`; PDF filename: `hybrid-inference-v4b-draft.ru.pdf`.
+The abstract character count includes spaces in the plain body, excluding the typeset label; a separate conservative
+TeX-body count includes source escapes. Both must stay within 1920.
+
+Engine run17 adds measured sliding-window geometry for Glimmer 30B and Gemma 4
+31B, finite link thresholds, a labelled architecture extrapolation and paired
+Qwen bf16 wire economics. See [the R17 report](calc/ENGINE-REPORT-R17-261103.md)
+and [Run17 tools](calc/README.md#run17-tools). CPU exporter:
+`python3 -B -I calc/tests/r17_audit.py`; outputs stay under `calc/out/run17/`.
+Use an on-disk `TMPDIR` and `PYTHONDONTWRITEBYTECODE=1`. Prior exports remain
+frozen. Mac SWA rates remain `background_priority_interim`. The accepted dev-a r38 CPU bf16
+transport evidence is archived below; GPU/Mac quality and speed remain pending.
+
+## Paper v4c validation and source boundaries
+
+Accepted engine 17 `714fe72135819ededd7c270dd661c1359acfa6c3` is merged with signing.
+Main R16 diagnostic/economic snapshots keep their named calibration; five byte-exact architecture inputs from
+`calc/out/run17/architectures/` are also pinned in `paper/data/engine17/`. The paired economics sensitivity uses
+the frozen `calc/out/run17/{f32,bf16}/` cases. SWA thresholds remain background-priority interim with the named
+Qwen-import portability estimate. The architecture S/K table is an extrapolation, not a real-model claim.
+`python3 paper/data/arch_compare.py` now carries the complete live window and writes `paper/data/arch-compare.csv`;
+its operation-scaled rates remain explicit estimates, separate from measured-rate thresholds.
+
+Tool: `python3 -B -m unittest discover -s calc/tests -p test_paper_v4c.py` verifies raw accounting/chunk sums,
+full-window geometry, depth-dependent comparisons, loss/measurement boundaries and the six pending sites.
+The required full engine/kit/checker/self-test/publication/release/PDF/manifest commands remain listed above.
+No prototype model/native build is run: accepted CPU evidence at `64dc3c69` is archived with the precise
+time-accounting report, its raw local inputs and current FACTS in `data/measurements/paper-v4c-2026-11-03/`.
+Pending GPU/Mac bf16 measurements and timing-only runs are explicitly owner-requested additions to FACTS 5 waits.
+
+The word counter is corrected to retain escaped currency signs: the older regex treated `\$` as math delimiters.
+Both r20b base and v4c are recounted with the same corrected definition; legacy counts are disclosed separately.
+Counts, old/new/source numbers, gates, pending map and finite limitations: `calc/PAPER-V4C-GAPS-261103.md`.
+Logs/counters/receipts are in `.temp/hybrid-c-r20c-261103/`; the owner PDF is
+`.temp/hybrid-c-r20c-261103/hybrid-inference-v4c-draft.ru.pdf`. Title, thesis, authors and release version stay unchanged;
+no whole-paper length target, push or tag.
+
+
+## Paper v5a validation and deferred costs
+
+The accepted base is `paper-v4` at `4ee9a9a52a39b29d084a5c384d5f6445ec33adfd`.
+R16/R17 exports, historical fixtures and kit code remain unchanged. R20 `b6ac5abc` is read-only;
+`calc/tests/data/paper-v5a-r20-sites.json` binds every `% R20:` amount to its future export and scope.
+No R20 output is merged or presented as an accepted result. RTX 5090 is a client only.
+
+Tool: `python3 -B -m unittest discover -s calc/tests -p 'test_paper_v5a*.py'` checks raw RULER analyses,
+FACTS client rows, rate/cache arithmetic, current pending/deferred sites, semantic TTFT labels and the six r5u notes, the r5y finding/notes and accepted second-pass data. The technology guard now includes only the current `[Unreleased]` changelog section; new negative controls plant each forbidden label there while retaining released history.
+`python3 -B paper/data/check_ranges.py --self-test` keeps the 156 numeric/direction controls at their moved historical sites;
+`python3 -B paper/data/offload_bound.py --self-test` checks old and new named measurement/qualification sites.
+`python3 -B calc/tests/publication_v2.py` pins the exact current paper and `paper-v5a4-migration.json` binds authorized
+historical deltas without modifying original fixtures. All full gates are rerun at one frozen signed head; older receipts are not reused.
+
+Current inputs and source identities: `data/measurements/paper-v5a3-2026-11-03/` and retained `paper-v5a2-2026-11-03/`, extending the retained `paper-v5a-2026-11-03/` snapshot. `test_paper_v5a2.py` recomputes primary-result cells from accepted producer JSON, reads paired document KL intervals, checks literal PRI 31 cells, interpolation and server rebuild arithmetic. Every new semantic site has an applied omission control. The current finite pending inventory is `calc/tests/data/paper-v5a4-pending.json`; the 26 R20 bindings are unchanged.
+Gap, relocation, six-note and pending maps: `calc/PAPER-V5A-GAPS-261103.md`.
+Run receipts, PID/exit logs, disk `df` probes, counters and addressed-summary readback:
+`.temp/hybrid-c-r21d-261103/`. Requested owner PDF:
+`.temp/hybrid-c-r21d-261103/hybrid-inference-v5a3-draft.ru.pdf`.
+CPU only, no downloads/native builds/push/tag; disk TMPDIR and `PYTHONDONTWRITEBYTECODE=1`.
+The third-pass guard records `df -BG` and exact bytes, waits up to 20 minutes below 28.5 GiB (30,601,641,984 bytes), checks every two minutes, and keeps a 28 GiB floor; no foreign scratch is deleted.
+
+The third-pass `test_paper_v5a3.py` checks the exact `18d3f114` runbook, full M5 FACTS ladders/batching and source arithmetic, post-result margin scope, exploratory Glimmer, lossy-bf16 boundaries and excluded cache-probe controls. Current M5 measurements record PRI 31; the retained run16 daily-capacity/economics still use their original M5 inputs and are explicitly historical, awaiting accepted engine run 22. No new engine output is merged. Outputs and negative-control receipts stay in the task directory above.
+
+## Paper `v5a4` owner review
+
+Current evidence and current semantic views: `data/measurements/paper-v5a4-2026-11-03/`.
+Tool: `python3 -B -m unittest discover -s calc/tests -p test_paper_v5a4.py` checks
+completed bf16/Glimmer RULER scope, warm restore, useful download arithmetic,
+RTX 5090 boundaries, M4 archival scope, finite-depth measured server batching,
+abstract budgets, raw R20 custody and consolidated rendered notices. Each new
+finite claim has a named applied negative control. Earlier test names remain.
+English arXiv text: `paper/abstract.en.txt` (at most 1650 characters); rendered
+Russian abstract at most 1670 characters, leaving at least 250 under arXiv 1920.
+The full required gate commands above are rerun against one frozen signed head.
+All command exits and disk preflights: `.temp/hybrid-c-r21e-261103/`;
+owner PDF: `.temp/hybrid-c-r21e-261103/hybrid-inference-v5a4-draft.ru.pdf`.
+Raw inventory contains 40 macro sites, including 20 inactive repeated amount hooks;
+20 sites remain visible. All 26 R20 export/body signatures are unchanged.
+One central notice replaces four repeated applicability paragraphs; no deferred
+engine run 22 amount is filled. The counted abstract/words skip the explicit inactive
+hook blocks. Complete run14 million-token modelling is preserved in appendix C.
+
+Engine run18 adds RTX 3090/5090 Qwen/Glimmer clients, hard context limits,
+link thresholds and one ephemeral Qwen rental comparator. See the
+[R18 report](calc/ENGINE-REPORT-R18-261103.md) and
+[Run18 tools](calc/README.md#run18-tools-and-outputs). Exporter:
+`python3 -B -I calc/tests/r18_audit.py`, with disk `TMPDIR` and
+`PYTHONDONTWRITEBYTECODE=1`. Outputs stay in `calc/out/run18/`; prior exports
+remain frozen. Conditional workload coverage and repeated fetch/cold costs are
+explicit; no persistence or current market-rate claim is assumed. CUDA import
+now uses a joint PR 9 delta/depth fit with a refitted intercept; native full-slot
+file timings remain diagnostics. The report explains that fallback and the
+changed link thresholds.
+
+Run18 CUDA rework validation: 404 engine tests, 26 focused tests and 24 kit tests
+pass; the reviewer’s original two-test reproduction passes. All 907 historical
+export files and the rental comparator retain exact bytes. Resource-floor
+breaches and interrupted attempts remain disclosed in the R18 report; the
+successful rework retry sampled at least 29.533 GB free, while the overall
+rework minimum was 27.867 GB.
+
+
+Engine run19 adds an RTX 5090 prefill node for office and rental scenarios,
+measured-rate thresholds versus PRO6000, bounded residency/swapping, and
+same-mix backend costs for 5/50/500 staff. See the
+[R19 report](calc/ENGINE-REPORT-R19-261103.md) and
+[Run19 tools](calc/README.md#run19-tools-and-outputs). The r10c base review
+was pending at branching. Prices distinguish a sold-out card listing from an
+estimated host allowance. Costs cover the explicitly conditioned measured
+workload, not an unsupported full-mix closed perimeter. Export with
+`python3 -B -I calc/tests/r19_audit.py`, using disk TMPDIR and
+PYTHONDONTWRITEBYTECODE=1; prior exports stay frozen.
+
+Run19 validation passes 420 engine tests, 16 focused tests and 24 kit tests.
+All 917 historical export files remain byte-identical; live recomputation
+matches 13 published payloads. The observed run19 disk minimum is 28.856 GB.
+
+Engine run20 adds measured vLLM server economics, memory-limited decode
+batching, small teams and admitted API snapshot baselines. See the
+[report](calc/ENGINE-REPORT-R20-261103.md),
+[standalone batching figure](calc/out/run20/batching_gain.svg), and
+[tools/data-only interfaces](calc/README.md#run20-tools-and-data-only-interfaces).
+Historical runs 13–19 are frozen. Costs are conditional on the shared measured
+workload; provider cache behaviour, bridge portability and future decode
+measurements remain explicit qualifications. The run's shared-disk 28 GB-floor
+breach is preserved in its report.
+
+Engine run21 adds a Claude-only deep workload reconstruction alongside the
+unchanged combined profile, and a million-token scenario on the run20 vLLM
+bases. See the [R21 report](calc/ENGINE-REPORT-R21-261103.md) and
+[commands and data interfaces](calc/README.md#run21-tools-and-data-only-interfaces).
+Only PRO6000 and B300 servers enter the new comparisons; historical run20
+5090 server rows are not used in the paper. Runs 13–19 remain immutable; R14 authorizes label-only R20 republication. The
+run19 rental coverage correction is published as a successor view under run21
+and in the generator source, with every numeric cell preserved.
+
+The r5x publication rework adds scoped, 5090-free paper projections for both
+[R20](calc/out/run20/paper/) and [R21](calc/out/run21/paper/).
+Use those for quotations; full R20 numerical cells are preserved, with archival
+5090 server rows labelled not used in the paper. See the reports for PRO
+small-team costs, per-load crossings and separately named shared/dedicated
+multiples, and [publication commands](calc/README.md#r14-publication-tools).
+
+The `r5x2` sentence rework makes all paper conclusions self-contained: billing,
+server link/rate/RTT/location, client, s, cache allowance, load and coverage
+travel with each sentence. The [R15 cell diff](calc/ENGINE-SENTENCE-DIFF-R15-261103.csv)
+contains only sentence changes; numerical cells are preserved.
+[Commands and checks](calc/README.md#r15-sentence-tools) use the 28 GiB disk floor.
+
+Run22 RC 4 economics use the [CPU-only run22 exporter](calc/run22/README.md):
+`python3 -B -I calc/run22/export.py` writes `calc/out/run22/` and its paper
+projections; `--audit-only` verifies sources, historical bytes and quotations.
+It keeps bf16 transport as the default and the dedicated team server as the
+primary economic basis. See `calc/ENGINE-REPORT-R22-261103.md` for results.
+
+## Paper v5b economics
+
+Accepted engine run 22 `9053089eb54fcbdf1e39efba9e5fc6b9de42d1b0` is integrated by a signed local merge,
+including unchanged run 18 through 21 dependencies and historical exports. Current quotations use
+`calc/out/run22/paper/`; the accepted exporter, report and complete ledger remain byte-identical.
+Tool: `python3 -B -m unittest discover -s calc/tests -p test_paper_v5b.py` checks row selection,
+dedicated costs and both occupancy denominators, sustained finite crossings, API cache points/windows,
+1M client-specific estimates, the empty direct-Mac interface, and all 26 deferred-site dispositions.
+Narrowing controls and finite limits: `calc/PAPER-V5B-GAPS-261103.md`.
+Current pending inventory: `calc/tests/data/paper-v5b-pending.json`; former R20 bindings remain immutable
+historical evidence, with every accepted successor in `data/measurements/paper-v5b-2026-11-03/r20-migration.json`.
+The publication guard pins accepted engine source/output identity in addition to every current paper byte/number.
+Russian abstract limit 1920 characters, English `paper/abstract.en.txt` limit 1800; the earlier temporary
+250-character reserve is superseded by the accepted economic sentences.
+Fresh exact-head gate exits, disk probes, counters and delivery receipts: `.temp/hybrid-c-r21f-261103/`.
+Owner PDF: `.temp/hybrid-c-r21f-261103/hybrid-inference-v5b-draft.ru.pdf`.
+Historical v5b whitespace evidence used three exact verbatim FACTS excerpts. The current `v5d8`/`v5d9`
+check covers the entire paper/provenance content delta after accepted engine merges. A raw whole-base
+`git diff --check` exits 2 on five byte-identical accepted run26 vendor/source snapshots; the failed
+receipt is retained. Native-byte audits verify those snapshots against accepted engine 26; no engine
+input, computation or output is reformatted to satisfy a whitespace check.
+
+No downloads, native builds, push or tag. Disk TMPDIR and `PYTHONDONTWRITEBYTECODE=1`; every gate checks
+`df -BG` and exact bytes, waiting up to 20 minutes below 28.5 GiB, with a 28 GiB hard floor.
+Run23 replaces the deep Mac timing and PRO6000 decode estimates with the
+[accepted night inputs](calc/run23/README.md). `python3 -B -I calc/run23/export.py`
+writes `calc/out/run23/` and its paper projections;
+`python3 -B -I calc/r23_report.py` publishes the report and quotation audit.
+All run13–22 exports remain byte-identical.
+
+
+## Paper v5c measurements and run 23
+
+Signed integration of accepted `9064701a9a07bd2726f76cefb6a05aa6aa428c0d` preserves prior engine exports.
+Current paper quotes `calc/out/run23/paper/` and the named FACTS blocks archived in
+`data/measurements/paper-v5c-2026-11-04/`. Direct Mac native timings, finite same-GPU depth quality,
+measured PRO decode/interpolation and model/proxy limits are checked with
+`python3 -B -m unittest discover -s calc/tests -p test_paper_v5c.py`.
+The publication guard additionally pins the accepted run 23 source/output identity; earlier source pins remain.
+Current wait inventory: `calc/tests/data/paper-v5c-pending.json`.
+Source/coverage/mutation boundaries: `calc/PAPER-V5C-GAPS-261104.md`.
+Fresh gate logs and source/count receipts: `.temp/hybrid-c-r21g-261104/`.
+Owner PDF: `.temp/hybrid-c-r21g-261104/hybrid-inference-v5c-draft.ru.pdf`.
+The Russian/English abstract budgets remain 1920/1800 characters; no length cuts.
+CPU only, cache-only build, checkout TMPDIR, no downloads/native builds/push/tag; disk launch threshold 28.5 GiB.
+
+
+## Paper v5d part 1 measurement update
+
+Current source archive and wording contracts: `data/measurements/paper-v5d1-2026-11-05/`.
+The capped ordinary-priority M3 grid, fixed-journal bf16 rehearsal and descriptive final API study are checked with
+`python3 -B -m unittest discover -s calc/tests -p test_paper_v5d1.py`.
+Native accepted engine run 23 source/outputs remain exact; run 24 and measured-cache economics are deferred to part 2.
+Scope, stopped RULER reason and narrowing controls: `calc/PAPER-V5D1-GAPS-261105.md`.
+Current macro inventory: `calc/tests/data/paper-v5d1-pending.json`.
+Fresh exact-head gate/disk/count receipts: `.temp/hybrid-c-r21h-261105/`.
+Owner PDF: `.temp/hybrid-c-r21h-261105/hybrid-inference-v5d1-draft.ru.pdf`.
+Russian/English abstract limits remain 1920/1800 characters. No length cuts, downloads, native builds, push or tag.
+
+## Paper v5d part 2: partial RULER and nonadmitted measured API
+
+Current evidence and successor wording contracts: `data/measurements/paper-v5d2-2026-11-05/`.
+Saved Qwen RULER serial prefixes (368/390 and 225/390) stay separate from registered analysis; both depths entered as pending at p=1 in that superseded snapshot. All measured Qwen 1M providers fail the 95% whole-window rule; descriptive prices are not admitted economic figures. Engine run24 economic use is deferred.
+The existing private repository is `relux-works/hybrid-inference-data`; the full evidence snapshot will be uploaded after RC 4.
+
+Tool: `python3 -B -m unittest discover -s calc/tests -p 'test_paper_v5d2.py'` checks source custody, incomplete-depth fences, task gaps, availability admission and snapshot status.
+Current pending inventory: `calc/tests/data/paper-v5d2-pending.json`; gap/negative-control map: `calc/PAPER-V5D2-GAPS-261105.md`.
+All earlier data archives, native engine outputs and reviewer test names are retained. Exact-head receipts, counts and owner PDF are under `.temp/hybrid-c-r21i-261105/`.
+
+Run24 adds the [final measured API cache/availability points](calc/run24/README.md)
+on the accepted run23 costs. `python3 -B -I calc/run24/export.py` writes
+`calc/out/run24/`; `python3 -B -I calc/r24_report.py` publishes the report and
+quotes. Historical run13–23 exports stay byte-identical.
+
+## Paper v5d part 3: RC 4 measured-cache economics
+
+Accepted engine run 24 is integrated without rewriting any previous export. Three API cache points stay separate by cadence and priceable cohort. Qwen core remains unavailable; the descriptive Ionstream minimum has one warm observation. Source hit fractions are transferred to the paper workload by assumption. All ten attempted endpoints below 95% whole-window availability are excluded.
+
+Current source/wording contracts: `data/measurements/paper-v5d3-2026-11-05/`.
+Tool: `python3 -B -m unittest discover -s calc/tests -p 'test_paper_v5d3.py'` checks exported prices/crossings, cadence/cohort scope, availability and current completion status. Existing native `calc/run24/export.py` and `calc/r24_report.py` tools are documented above and in `calc/run24/README.md`. Publication guard now pins accepted run 24 while retaining all prior authority checks.
+Current pending inventory: `calc/tests/data/paper-v5d3-pending.json`; gap/mutation map: `calc/PAPER-V5D3-GAPS-261105.md`. Exact-head gates, counts and owner PDF are under `.temp/hybrid-c-r21j-261105/`. The original owner-set data cut-off was 2026-11-05 12:00Z; the RULER waits in this historical section are superseded by the completed analysis below. Remaining headline items include B300 decode and an admitted measured Qwen 1M point. Private `relux-works/hybrid-inference-data` exists; full evidence snapshot follows RC 4. No push or tag.
+
+### RC 4 review precision pass
+
+The v5d part-4 scope and pending map are in `calc/PAPER-V5D4-GAPS-261105.md`.
+Run its publication regressions with `PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s calc/tests -p test_paper_v5d4.py`.
+The existing checkers also enforce explicit claim relocations from `data/measurements/paper-v5d4-2026-11-05/`;
+older evidence snapshots stay immutable. Run logs, disk preflights, counts and the owner PDF go to
+`.temp/hybrid-c-r21k-261105/`; no provider or device remeasurement is implied by these CPU checks.
+
+### RC 4 analyst abstract and workload-class pass
+
+Current scope: `calc/PAPER-V5D5-GAPS-261105.md`. Sources and exact abstract successors:
+`data/measurements/paper-v5d5-2026-11-05/`. Run the focused checks with
+`PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s calc/tests -p test_paper_v5d5.py`.
+Logs, counts and the owner PDF go to `.temp/hybrid-c-r21l-261105/`.
+These CPU publication checks preserve the accepted native engine and earlier measurement archives.
+
+
+## Public release provenance tools
+
+The public owner recommits each release as one commit. Private engine/paper
+commits are therefore evidence identifiers rather than public ancestors.
+`calc/history_evidence.py` authenticates the in-tree historical content and
+SHA256/blob/mode/path inventory in `calc/tests/data/history-evidence/`.
+When original objects exist, every requested value is checked against Git;
+otherwise the checker explicitly prints fixture mode. No fetch or skip is used.
+Historical producer identities remain distinct from the nine exact pinned
+verification adapters; numerical functions and accepted exports are unchanged.
+
+- `python3 -B calc/tests/check_history_evidence.py` verifies the complete archive
+  and cross-checks all available original revisions.
+- `python3 -B .scripts/generate-history-evidence.py --check` reproduces the
+  fixture from local private history; omit `--check` to regenerate it.
+- `python3 -B calc/tests/public_history_guard.py` rejects unreviewed direct Git
+  accesses in test/checker scopes. The regression suite plants a private
+  `git show` and requires this same guard to reject the plant.
+- `python3 -B .scripts/generate-public-git-catalog.py` updates the explicit
+  reviewed Git-access catalogue after a deliberate provenance-tool review.
+- `python3 -B .scripts/simulate-public-layout.py .temp/public-layout` builds
+  isolated public ancestry/tree/index metadata, reusing this physical worktree.
+  It copies no blobs, uses no alternates and excludes all private commits;
+  the resulting `environment.json` selects this metadata for source-repo Git
+  operations while temporary test repositories retain their own real Git.
+- `python3 -B -m unittest discover -s calc/tests -p test_history_evidence.py`
+  checks fixture corruption, original-object comparisons, adapter boundaries
+  and the private-lookup negative. Full engine and kit commands stay unchanged.
+
+Generators require original objects only when explicitly rebuilding fixtures.
+Runtime tests and release proof require Python's standard library and Git;
+release-signature fixtures also require Bash, OpenSSH `ssh-keygen` and SHA256
+utilities. No Python dependency installation is needed. Logs and transport
+proof artifacts belong in the task's `.temp/` delivery directory.
+
+### RC 4 analyst and external-review corrections
+
+Sources and exact publication successors: `data/measurements/paper-v5d6-2026-11-05/`.
+Pending scope: `calc/PAPER-V5D6-GAPS-261105.md`.
+Run `PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s calc/tests -p test_paper_v5d6.py`.
+Full CPU gates, counts and owner PDF are recorded in `.temp/hybrid-c-r21m-261105/`.
+No native engine output or historical measurement fixture changes in this pass.
+
+The finite overlapping checker-control ledger is regenerated explicitly with
+`PYTHONDONTWRITEBYTECODE=1 python3 -B .scripts/generate-paper-self-test-couplings.py`.
+It writes the current `data/measurements/paper-v5d8-2026-11-05/self-test-couplings.json` and its checker hash pin.
+The generator uses declared literal paragraphs, never the checker verdicts; `offload_bound.py --self-test`
+still requires every exact diagnostic and rejects missing or additional ones.
+
+### Conditional closed-perimeter model map
+
+Source decisions and finite successors: `data/measurements/paper-v5d7-2026-11-05/`.
+Run `PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s calc/tests -p test_paper_v5d7.py`.
+Full CPU gates and PDF/count artifacts: `.temp/hybrid-c-r21n-261105/`.
+Current pending and old/new scope map: `calc/PAPER-V5D7-GAPS-261105.md`.
+
+### Accepted engines and lifecycle methods
+
+Current sources, explicit claim successors and pending scope: `data/measurements/paper-v5d8-2026-11-05/`
+and `calc/PAPER-V5D8-GAPS-261105.md`. Run
+`PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s calc/tests -p test_paper_v5d8.py`.
+Fresh CPU gates, the owner PDF and counts live in `.temp/hybrid-c-r21o-261105/`.
+
+New engine parent audits authenticate original snapshots plus exact intentional paper migrations.
+`python3 -B .scripts/generate-engine-parent-migrations.py` rebuilds
+`calc/tests/data/history-evidence/engine-parent-migrations.json` and its gateway pin.
+Run this explicit authoring step after an authorized paper or release-version change, before
+`make manifest`; the current manifest independently verifies every tracked path and content hash.
+It cannot authorize changes to calculation code. Original run-25/26 audit code is retained in the
+history fixture; three live provenance adapters have their own exact hash pins.
+
+## Paper `v5d9` post-review evidence and arithmetic
+
+Current evidence: `data/measurements/paper-v5d9-2026-11-05/`, with content custody, finite successors,
+architecture/start-capacity arithmetic and the partial Mac calibration. `python3 -B -m unittest discover -s calc/tests -p test_paper_v5d9.py` checks these contracts. Current pending inventory:
+`calc/tests/data/paper-v5d9-pending.json`; limits/corrections: `calc/PAPER-V5D9-GAPS-261105.md`.
+Export/codec/append controls exclude the earlier vLLM append localization; long sessions remain
+unqualified, with a one-document natural-text diagnostic measured. The pre-probe stage 1 prediction is committed,
+not an inference result; a second commitment follows the qualified actual probe before inference.
+Glimmer save-size ratios include SWA; traffic separates global KV and a live window for every exchange.
+At 0.9 GB the ideal 125 MB/s daily link budget is 12,000 contexts, not 11,000; 11,000 uses the conservative 1 GB point.
+CPU/cache-only gates, exact argv/head/exit codes, owner PDF and counts: `.temp/hybrid-c-r21p-261105/`.
+
+## Paper `v5d10` near-ties, dates and natural-text attempt
+
+Current evidence and arithmetic: `data/measurements/paper-v5d10-2026-11-06/`. Current pending
+inventory: `calc/tests/data/paper-v5d10-pending.json`; scope and review notes:
+`calc/PAPER-V5D10-GAPS-261106.md`. Run `python3 -B -m unittest discover -s calc/tests -p test_paper_v5d10.py`.
+Run-16 scratch-path portability: `python3 -B -m unittest discover -s calc/tests -p test_r16_audit_paths.py`.
+The logical changed-cell sources stay identical, including when exports are outside the stand-in root.
+Greedy near-ties explain numerical answer changes; the verified content-flip rule only gives a lower bound.
+The natural-text workload amendment preceded attempt 5; its fourth turn refuses the unchanged top-1
+criterion. The same-format llama.cpp path remains qualified. Pending softcap tests require exact
+prompt reconstruction or a separately declared new dataset. All 128k passages remain unchanged.
+Fresh CPU/cache-only receipts and owner PDF: `.temp/hybrid-c-r21q-261106/`.
+
+## Paper `v5d11`: completed RULER
+
+Current RULER evidence is `data/measurements/paper-v5d11-2026-11-06/`; current pending inventory
+is `calc/tests/data/paper-v5d11-pending.json`, with scope in `calc/PAPER-V5D11-GAPS-261106.md`.
+Earlier dated RULER pending/registration statements are historical snapshots superseded here.
+The release data cut-off is 2026-11-06 06:00 UTC, after both deep completions and natural-text
+vLLM attempt 5. Score equivalence at the frozen two-point margin is supported at 8k/32k/64k;
+the 128k claim is withheld by the conservative guard. Text equivalence fails at every measured depth.
+bf16 score claims cover 8k/32k only; 64k/128k bf16 was never measured.
+Run `python3 -B -m unittest discover -s calc/tests -p test_paper_v5d11.py`.
+Exact-head CPU/cache-only gates, PDF and counts: `.temp/hybrid-c-r21r-261106/`.
+
+### Interpreter and reproduction contract
+
+The reference interpreter for published calculation bytes is **CPython 3.14.4**,
+which uses exact `bytes` regeneration mode. Other CPython versions use declared
+`ulp` mode with at most two `binary64` steps in reference-typed finite float cells.
+The signal-test child resets SIGINT and SIGTERM before Bash starts, retaining
+exit 130/143 and cleanup assertions under inherited ignored signals.
+A release candidate is proven from fresh public clones in three launch shapes:
+reference CPython 3.14.4 with default signals, CPython 3.12.3 with default signals,
+and reference CPython 3.14.4 with SIGINT and SIGTERM ignored. The proof clears `PYTHONOPTIMIZE` and requires 42 distinct automatic
+filenames in announcements of the resolved mode and none of the opposite mode in the engine log.
+Python 3.9 syntax is checked; native 3.9–3.11 and 3.13 are unqualified.
+No third-party Python package is required by the paper suites.
+
+Fresh CSV regeneration compares every byte on the reference interpreter. Other
+interpreters use an announced comparison with at most **two `binary64` steps** in
+canonically spelled finite float fields from the pinned reference schema. Every other field byte,
+header, order, delimiter and newline remains exact. Published export hashes,
+provenance fixtures, same-interpreter serialization round trips and historical
+formatted transcripts remain byte-exact on every interpreter. See
+[`calc/README.md`](calc/README.md#portable-regeneration) for commands and limits.
+
+## Compressed accepted quote ledgers
+
+Only the two quote ledgers for engine runs 22 and 23 use deterministic single-member
+gzip (level 9, no filename, timestamp zero). Their accepted decompressed sizes and
+SHA256 values, original revision/blob provenance and committed gzip SHA256 values
+are pinned in `calc/ledger-storage.json`. Every reader uses `calc/ledger_storage.py`;
+`python3 -B .scripts/generate-ledger-storage.py --check` checks the transform and
+cross-checks accepted Git originals when available. Without `--check`, the generator
+rebuilds gzip from local accepted Git objects; no fetch is performed. Regeneration
+compares accepted decompressed bytes, retaining an existing authenticated gzip to
+avoid interpreter/zlib-dependent compressed-byte comparisons. Other CSVs keep their
+existing representation. The release proof checks every introduced blob, including
+intermediate commits: at least 100 MiB fails; over 50 MiB prints a warning.
+
+Historical custody and the current manifest authenticate the exact committed gzip.
+Exporter text reads and fresh regeneration compare accepted decompressed content,
+including when no prior gzip exists; valid compressor-byte differences never
+relax the independent committed-blob custody check.
+
+## RC 4 incident-lane rebuild
+
+Release source follows accepted `v5d12`, including the corrected 128k departure identities.
+The public-parent signed transport contains only the release tree and the public rc.3 ancestry; no private producer commits are transported. The git bundle is streamed twice for repeatable digest/size and never stored on `agents1`. Verified in-tree evidence retains private provenance without runtime access to private history; `.scripts/generate-history-evidence.py --check` authenticates available originals, and `.scripts/simulate-public-layout.py DIR` exercises public-only metadata with no blob copies or alternates.
+
+Native `.scripts/version.sh` and the owner signer/ancestry checks are unchanged. The untagged source PDF is diagnostic; the correctly labelled release PDF and SHA256SUMS must be rebuilt after the owner recommit and signed tag. No source-lane push or tag is performed.

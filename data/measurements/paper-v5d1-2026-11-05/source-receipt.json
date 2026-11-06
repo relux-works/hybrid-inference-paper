@@ -1,0 +1,11 @@
+{
+  "facts_sha256": "8aeb0944ed6109be2404f6269ba94d1a4fa7af659a749d269b2c301b59682d96",
+  "api_report_sha256": "2485e7f2dd8c961deeeca95a36eac88a95b71b2c56f9760e40e99a129160d9f6",
+  "api_report_path": "/home/agent/Werkstatt/hybrid-d/llama.cpp/.temp/hybrid-d-r15m-261104/audit-end/API-CACHE-REPORT.md",
+  "additional_excluded_endpoint_variants_from_FACTS_evidence": [
+    "z-ai/glm-5.3-flash / near-ai/fp8",
+    "z-ai/glm-5.3-flash / nextbit/fp4",
+    "z-ai/glm-5.3-flash / sail-research/us"
+  ],
+  "bound": "Only names/classification used for these additional exclusions; no numeric rate absent from FACTS enters the paper. Full raw archives not fetched or claimed reverified."
+}

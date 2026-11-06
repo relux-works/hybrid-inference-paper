@@ -21,6 +21,8 @@ BASE = '2d457aed87d415043a2c0566f7a185607f11487e'
 from history_fixtures import snapshot_files
 
 
+import history_evidence as history
+
 def frozen():
     counts = {}
     for directory, expected in (('calc/out/paper',150),('calc/out/run13',252),('calc/out/run14',110)):
@@ -181,7 +183,12 @@ def verify_quote_coverage(records):
 
 
 def verify_tables():
-    identity=generator_identity()
+    # R15 is immutable after acceptance. Bind its generator to the reviewed
+    # source tree, independently of the manifest and later opt-in scenarios.
+    accepted='04755721'
+    paths=history.snapshot_paths(accepted,'hybridcalc.py','calc/hybridcalc')
+    paths=[p for p in paths if p.endswith('.py') or p.startswith('calc/hybridcalc/data/') and p.endswith('.json')]
+    identity={p:hashlib.sha256(history.snapshot_object(accepted+':'+p)).hexdigest() for p in paths}
     files=set()
     for name,_ in CASES:
         scenario=name+'-r15'

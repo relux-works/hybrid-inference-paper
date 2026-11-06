@@ -1,0 +1,7 @@
+{
+  "engine": "ca7f228acd789380bf46016fd87acc33e1b07aef",
+  "facts_sha256": "5a936414bbb8a9c5ab4457049dd74ef75573caa436fcf78e1b2afb1f7b613f64",
+  "analysis_sha256": "2b15799b150b6924e5909ce06766bfb0d6baccb7d97f22248992a77996819937",
+  "report_sha256": "6435243fc5c53212a9b0c34fb4deabb00cf5363c80e915f2907abd66424a3504",
+  "scope": "Accepted run24 exported paper rows only; no API requests or hardware rerun. Preserve prior archives and all native engine outputs."
+}

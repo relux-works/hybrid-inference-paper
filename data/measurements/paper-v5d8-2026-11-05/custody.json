@@ -1,0 +1,114 @@
+[
+  {
+    "compressed": "FACTS-1.md.gz",
+    "bytes": 2566,
+    "sha256": "31656092bd2bb39b91be5f1e27d8201a0f55fd3fd8b3552756e8a14b3548bf11",
+    "compressed_sha256": "81e73884eec096eaf439f69d2d3a6f92473ed56ec15ac79f4c11a9e2bae9d1b0",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block Engine run 25 ("
+  },
+  {
+    "compressed": "FACTS-2.md.gz",
+    "bytes": 2479,
+    "sha256": "cf27ac676c3352dcf805130cdbe4f6efc3466a1469335810658b100cddfa5f45",
+    "compressed_sha256": "c334de2f3b139ce31c158c551ece455bb4d065f9d552eb0556a2211c05734590",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block Engine run 26,"
+  },
+  {
+    "compressed": "FACTS-3.md.gz",
+    "bytes": 1737,
+    "sha256": "c03ac7b813df4274ed9af83b42371e1b6bb8226bf5c303e0cf2181300b70523f",
+    "compressed_sha256": "9bbf7999572c0af8787e262616165aa0180d7978f6f3156612753b8fdf119ad4",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block Portion size by depth"
+  },
+  {
+    "compressed": "FACTS-4.md.gz",
+    "bytes": 1284,
+    "sha256": "9824e52d23a7ccb7aee82dd40491e02269fdb1d19731c838039b638b9956a24d",
+    "compressed_sha256": "90a330247c910fff860623e966113459f56962bcca3bb56486649f0cb002a173",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block Owner-log provenance for the quantile"
+  },
+  {
+    "compressed": "FACTS-5.md.gz",
+    "bytes": 1082,
+    "sha256": "4cc9e6e20e8bce2f733a5e67b714673d658f469270dc8e588d0fcad9d8f3dc62",
+    "compressed_sha256": "f8c9b730065a88323695988f56cb4f98a3394f7b70ce9cc407c6882850c6908c",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block End-to-end transport, preregistered"
+  },
+  {
+    "compressed": "FACTS-6.md.gz",
+    "bytes": 1164,
+    "sha256": "89be6a089089aa1c847753c1e1a1051768d1966fd3d3c7370dfb74f2824f9981",
+    "compressed_sha256": "46990e748cef06d63e0c693630d0b8d8786e346236c5f7a8bb345afa61ce71ea",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block End-to-end transport, tc/netem"
+  },
+  {
+    "compressed": "FACTS-7.md.gz",
+    "bytes": 1552,
+    "sha256": "127d850945f5b2e73e676e4a2e55a00eabde8e51bf21c53d1a40c250294e5cab",
+    "compressed_sha256": "270708d282e03c069cf8ab70b7eaf91461b341b426f33bd0760b7813a311f57d",
+    "origin": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md block vLLM long-session node,"
+  },
+  {
+    "compressed": "OWNER-BRIEF.md.gz",
+    "bytes": 6992,
+    "sha256": "b5c6045d56281e7c48d8eac5b33d36424fa415c22190d8256a20fd9c7db62f8b",
+    "compressed_sha256": "5b2fdf8b73a04c27ae88dfbdf5665ced5f44345a3f39152fee4c031c6fd936aa",
+    "origin": "Owner r21o; source of the forwarded0/112 tensor diagnostic pending FACTS transcription."
+  },
+  {
+    "compressed": "r49g-QUANTILE-PROVENANCE.md.gz",
+    "bytes": 9175,
+    "sha256": "577ff0d19e62dac45b10921a445e7fbc67ea8c4dea5ddf1f1844c4361ba86c78",
+    "compressed_sha256": "1e95d7c81dc5062d8a2056664fe5b011eadc3fb5bda0cce0b872cb2d9f5997c8",
+    "origin": "8432f75da05eb4338e5975ea27259af22fc7c721:tools/hybrid-bench/packets/r49g/QUANTILE-PROVENANCE.md"
+  },
+  {
+    "compressed": "r49g-QUANTILE-PROVENANCE.json.gz",
+    "bytes": 25368,
+    "sha256": "5a507ca9ef11f0440b493a11772a57dc5751c8916f520b943690a321d5b411b9",
+    "compressed_sha256": "e1caff1cd8a1d329395aecb404c00c6ba0fab7bdd07fd829fe470ae25b20814f",
+    "origin": "8432f75da05eb4338e5975ea27259af22fc7c721:tools/hybrid-bench/packets/r49g/QUANTILE-PROVENANCE.json"
+  },
+  {
+    "compressed": "r49g-PREDICTION-INTERFACE.md.gz",
+    "bytes": 7491,
+    "sha256": "7a529a83ddae6545cd9d02ba5519cf687952e316719e69e393b67315795ebf44",
+    "compressed_sha256": "1a84f9dbe28d2133b5ebf55a8364e2ed73ab7ba37031f9326d508c1d99342bb7",
+    "origin": "8432f75da05eb4338e5975ea27259af22fc7c721:tools/hybrid-bench/packets/r49g/PREDICTION-INTERFACE.md"
+  },
+  {
+    "compressed": "r49g-MAC-BUDGET.json.gz",
+    "bytes": 4464,
+    "sha256": "3495f8867b10ba56dc839d22653f63757503ad4d6c1b3f1cf031caf7edc61011",
+    "compressed_sha256": "b8fdca22b1b038433732529e83bc4c877ad07ffa9a5a0d066532e16941133c4c",
+    "origin": "8432f75da05eb4338e5975ea27259af22fc7c721:tools/hybrid-bench/packets/r49g/MAC-BUDGET.json"
+  },
+  {
+    "compressed": "r49g-lifecycle-session.json.gz.gz",
+    "bytes": 246146,
+    "sha256": "4a2c4b723bd2e2494495037121e0b1dee1dce212860348df31a6281fec9f3cd7",
+    "compressed_sha256": "3fc85f9aba61953be0d7f8d571cebe62712ef16f139866b233180d5f7824a2cf",
+    "origin": "8432f75da05eb4338e5975ea27259af22fc7c721:tools/hybrid-bench/packets/r49g/lifecycle-session.json.gz"
+  },
+  {
+    "compressed": "r49g-SHA256SUMS.gz",
+    "bytes": 775,
+    "sha256": "ade73cbd02efcb0a2fcea58f48a79c570f24dea7771ffb40e166fd6bc760cb80",
+    "compressed_sha256": "1f2a42f7a9ed02d4a57860c249176820c45c54cfb7b48b9c7d9924bd8b45ee6c",
+    "origin": "8432f75da05eb4338e5975ea27259af22fc7c721:tools/hybrid-bench/packets/r49g/SHA256SUMS"
+  },
+  {
+    "compressed": "engine25-review.md.gz",
+    "bytes": 7491,
+    "sha256": "95b9342f08421bdd1d568ad184851f171eabe8cf37a2f9a3c1adcc7c30f6fd31",
+    "compressed_sha256": "0a9b76ab612315d02751ed0b227074943b0e7a70212ff0117f9933085a2105eb",
+    "origin": "Muse accepted engine25 review"
+  },
+  {
+    "compressed": "engine26-review.md.gz",
+    "bytes": 16446,
+    "sha256": "ecc01351236c260d4c648757c06cd63b875e88364df70fdf940fe22acca48f1f",
+    "compressed_sha256": "abe3668cb94fca365a00e1b478093e5b2ea5855160abd944fbfd8b8b34722b1f",
+    "origin": "Muse accepted engine26 review"
+  }
+]

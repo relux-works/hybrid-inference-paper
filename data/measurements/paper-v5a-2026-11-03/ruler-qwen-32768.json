@@ -1,0 +1,731 @@
+[
+  {
+    "depth": 32768,
+    "task": "ALL",
+    "n": 390,
+    "both_false": 341,
+    "left_only": 20,
+    "right_only": 16,
+    "both_true": 13,
+    "mcnemar_p": 0.617719317029696,
+    "offload_changed": 33,
+    "partition_changed": 29,
+    "offload_rate": 0.08461538461538462,
+    "partition_rate": 0.07435897435897436,
+    "offload_wilson95": [
+      0.060883818908328835,
+      0.11645012411997774
+    ],
+    "partition_wilson95": [
+      0.05226962687436999,
+      0.10475157400648737
+    ],
+    "excess": 0.010256410256410256,
+    "excess_conservative95": [
+      -0.04022358692077467,
+      0.060472508619041215
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 0.9743589743589743,
+      "offload": 0.9743589743589743,
+      "local_partition": 0.9717948717948718
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 10,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 380,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 10,
+        "left_only": 0,
+        "right_only": 1,
+        "both_true": 379,
+        "mcnemar_p": 1.0
+      }
+    },
+    "mcnemar_bonferroni_four_depths": 1.0
+  },
+  {
+    "depth": 32768,
+    "task": "cwe",
+    "n": 30,
+    "both_false": 12,
+    "left_only": 8,
+    "right_only": 6,
+    "both_true": 4,
+    "mcnemar_p": 0.79052734375,
+    "offload_changed": 12,
+    "partition_changed": 10,
+    "offload_rate": 0.4,
+    "partition_rate": 0.3333333333333333,
+    "offload_wilson95": [
+      0.24590628116801852,
+      0.5767963974667752
+    ],
+    "partition_wilson95": [
+      0.19230498083676134,
+      0.5121994835545616
+    ],
+    "excess": 0.06666666666666667,
+    "excess_conservative95": [
+      -0.3031632500258151,
+      0.41872528408910714
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "fwe",
+    "n": 30,
+    "both_false": 23,
+    "left_only": 2,
+    "right_only": 2,
+    "both_true": 3,
+    "mcnemar_p": 1.0,
+    "offload_changed": 5,
+    "partition_changed": 5,
+    "offload_rate": 0.16666666666666666,
+    "partition_rate": 0.16666666666666666,
+    "offload_wilson95": [
+      0.0733654237184855,
+      0.3356435050641603
+    ],
+    "partition_wilson95": [
+      0.0733654237184855,
+      0.3356435050641603
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.23888026197811674,
+      0.23888026197811674
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multikey_1",
+    "n": 30,
+    "both_false": 30,
+    "left_only": 0,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 0,
+    "offload_rate": 0.0,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.13590067257572858,
+      0.13590067257572858
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multikey_2",
+    "n": 30,
+    "both_false": 26,
+    "left_only": 2,
+    "right_only": 0,
+    "both_true": 2,
+    "mcnemar_p": 0.5,
+    "offload_changed": 4,
+    "partition_changed": 2,
+    "offload_rate": 0.13333333333333333,
+    "partition_rate": 0.06666666666666667,
+    "offload_wilson95": [
+      0.053096554840547455,
+      0.296813266820363
+    ],
+    "partition_wilson95": [
+      0.018477023791270378,
+      0.2132345836261692
+    ],
+    "excess": 0.06666666666666667,
+    "excess_conservative95": [
+      -0.1302512305631075,
+      0.2445297039907378
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multikey_3",
+    "n": 30,
+    "both_false": 30,
+    "left_only": 0,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 0,
+    "offload_rate": 0.0,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.13590067257572858,
+      0.13590067257572858
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multiquery",
+    "n": 30,
+    "both_false": 30,
+    "left_only": 0,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 0,
+    "offload_rate": 0.0,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.13590067257572858,
+      0.13590067257572858
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multivalue",
+    "n": 30,
+    "both_false": 16,
+    "left_only": 4,
+    "right_only": 6,
+    "both_true": 4,
+    "mcnemar_p": 0.75390625,
+    "offload_changed": 8,
+    "partition_changed": 10,
+    "offload_rate": 0.26666666666666666,
+    "partition_rate": 0.3333333333333333,
+    "offload_wilson95": [
+      0.14182663319596317,
+      0.4444796169518888
+    ],
+    "partition_wilson95": [
+      0.19230498083676134,
+      0.5121994835545616
+    ],
+    "excess": -0.06666666666666667,
+    "excess_conservative95": [
+      -0.3811866243752121,
+      0.26645700593210614
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_single_1",
+    "n": 30,
+    "both_false": 30,
+    "left_only": 0,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 0,
+    "offload_rate": 0.0,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.13590067257572858,
+      0.13590067257572858
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_single_2",
+    "n": 30,
+    "both_false": 30,
+    "left_only": 0,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 0,
+    "offload_rate": 0.0,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.13590067257572858,
+      0.13590067257572858
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_single_3",
+    "n": 30,
+    "both_false": 26,
+    "left_only": 3,
+    "right_only": 1,
+    "both_true": 0,
+    "mcnemar_p": 0.625,
+    "offload_changed": 3,
+    "partition_changed": 1,
+    "offload_rate": 0.1,
+    "partition_rate": 0.03333333333333333,
+    "offload_wilson95": [
+      0.03459988874733419,
+      0.25621082579184085
+    ],
+    "partition_wilson95": [
+      0.005908590381612455,
+      0.16670390991409173
+    ],
+    "excess": 0.06666666666666667,
+    "excess_conservative95": [
+      -0.17836425744835974,
+      0.28959110381042397
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "qa_1",
+    "n": 30,
+    "both_false": 29,
+    "left_only": 1,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 1,
+    "partition_changed": 0,
+    "offload_rate": 0.03333333333333333,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.005908590381612455,
+      0.16670390991409173
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.03333333333333333,
+    "excess_conservative95": [
+      -0.13548146772641656,
+      0.19458672080029896
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 0.9666666666666667,
+      "offload": 0.9666666666666667,
+      "local_partition": 0.9666666666666667
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 1,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 29,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 1,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 29,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "qa_2",
+    "n": 30,
+    "both_false": 29,
+    "left_only": 0,
+    "right_only": 1,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 1,
+    "offload_rate": 0.0,
+    "partition_rate": 0.03333333333333333,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.005908590381612455,
+      0.16670390991409173
+    ],
+    "excess": -0.03333333333333333,
+    "excess_conservative95": [
+      -0.19458672080029896,
+      0.13548146772641656
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 0.7,
+      "offload": 0.7,
+      "local_partition": 0.6666666666666666
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 9,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 21,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 9,
+        "left_only": 0,
+        "right_only": 1,
+        "both_true": 20,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "vt",
+    "n": 30,
+    "both_false": 30,
+    "left_only": 0,
+    "right_only": 0,
+    "both_true": 0,
+    "mcnemar_p": 1.0,
+    "offload_changed": 0,
+    "partition_changed": 0,
+    "offload_rate": 0.0,
+    "partition_rate": 0.0,
+    "offload_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "partition_wilson95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "excess": 0.0,
+    "excess_conservative95": [
+      -0.13590067257572858,
+      0.13590067257572858
+    ],
+    "margin": 0.02,
+    "strict_no_more_changes": false,
+    "noninferior_at_margin": false,
+    "equivalent_at_margin": false,
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0
+    },
+    "accuracy_pairs": {
+      "offload": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      },
+      "local_partition": {
+        "both_false": 0,
+        "left_only": 0,
+        "right_only": 0,
+        "both_true": 30,
+        "mcnemar_p": 1.0
+      }
+    }
+  }
+]

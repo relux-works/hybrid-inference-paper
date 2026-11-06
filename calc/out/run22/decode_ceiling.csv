@@ -1,0 +1,2 @@
+client,depth,ceiling_tok_s,measured_decode_tok_s,measured_depth,priority,basis,status,alarm_inputs
+m3max,1000000,7.415249282896157,1.67,1040000,background_priority_interim,memory bandwidth ceiling; PRI31 Mac1M decode CSV pending; gap remains open,ok,

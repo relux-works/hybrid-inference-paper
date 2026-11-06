@@ -1,0 +1,52 @@
+[
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидает измерения: аренда не запустила контейнер",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "ожидает допущенного поставщика с доступностью не ниже 95\\%.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "полные 390 пар и первичный анализ на 64 и 128 тысячах; узлы остановлены по решению владельца 2026-11-04, строки сохранены до остановки; исходные узлы поставлены в очередь на перезапуск. Граница приёма данных 2026-11-05 12:00 UTC.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах: сохранены неполные строки, полные 390 пар и первичный анализ ожидаются. Узлы остановлены по решению владельца 2026-11-04, исходные узлы поставлены в очередь на перезапуск; граница приёма данных 2026-11-05 12:00 UTC.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "перенос измеренной ограниченной кривой M3 в новые опоры движка и прогон 16b; Gemma при обычном приоритете; пакетная генерация B300, аренда не запустила контейнер; калибровка моста vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "Accepted FACTS section5 and owner r21k timing-only/task-quality boundary; laboratory relocation only."
+  }
+]

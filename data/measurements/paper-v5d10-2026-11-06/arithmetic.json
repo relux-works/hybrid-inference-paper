@@ -1,0 +1,11 @@
+{
+  "content_flip_percent": {
+    "glimmer": 8.541666666666666,
+    "qwen": 0.5319148936170213
+  },
+  "frozen_wait_percent": {
+    "A": 25.62997064945298,
+    "C28": 28.443893226530573
+  },
+  "qwen_people_link": 280.0
+}

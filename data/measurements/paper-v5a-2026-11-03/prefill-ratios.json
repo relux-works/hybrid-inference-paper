@@ -1,0 +1,24 @@
+{
+  "source": "FACTS1b/1c; marginal cold vLLM versus finite-delta llama; engine/precision differ",
+  "formula": "linear interpolation of seconds/token between measured depth anchors; ratios at profile depths are estimates, not measured",
+  "rows": [
+    {
+      "depth": 131000,
+      "vllm": 12823.179871198729,
+      "llama": 1184.6409867358427,
+      "ratio": 10.82452828728448
+    },
+    {
+      "depth": 164000,
+      "vllm": 11309.687885205081,
+      "llama": 1094.292447407748,
+      "ratio": 10.335160323911968
+    },
+    {
+      "depth": 181000,
+      "vllm": 10661.448257416085,
+      "llama": 1052.8008700300456,
+      "ratio": 10.12674719494848
+    }
+  ]
+}

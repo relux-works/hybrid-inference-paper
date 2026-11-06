@@ -1,0 +1,21 @@
+{
+  "access_date": "2026-11-03",
+  "currency": "USD",
+  "sources": [
+    {
+      "url": "https://www.bestbuy.com/product/nvidia-geforce-rtx-5090-32gb-gddr7-founders-edition-graphics-card/6614151",
+      "title": "Best Buy RTX5090 Founders Edition SKU6614151",
+      "price_usd": 1999.99,
+      "availability": "Sold Out",
+      "basis": "displayed list price, not an available offer",
+      "excerpt": "$1,999.99; Sold Out"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics",
+      "title": "NVIDIA launch announcement2025-01-06",
+      "price_usd": 1999,
+      "basis": "historical launch MSRP, cross-check only",
+      "excerpt": "will be available on Jan. 30 at $1,999"
+    }
+  ]
+}

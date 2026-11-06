@@ -1,0 +1,132 @@
+[
+  {
+    "file": "00-abstract.tex",
+    "body": "размеры",
+    "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "вызовов в день",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "00-abstract.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "расчёт ожидается",
+    "export": "calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled depth/batch gain, not measured"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "размеры",
+    "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "вызовов в день",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "06-server.tex",
+    "body": "ожидается",
+    "export": "calc/out/run20/decode_scaling.csv; PRO6000/B300; modelled gain; measured batching pending"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "размеры",
+    "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "вызовов в день",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "пересчитываются",
+    "export": "calc/out/run20/paper_claims.csv; light/medium/heavy; unconditional_claim; no5090-server rows"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидается",
+    "export": "calc/out/run20/small_team_cost.csv; server/profile/share/client/basis; cost columns after accepted merge"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидаются",
+    "export": "calc/out/run20/team_break_even.csv; PRO6000 only; each profile; reference=own_cluster; sustained finite scan"
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "ожидается",
+    "export": "calc/out/run20/paper_claims.csv; PRO6000 only; compare own_cluster/API; full-workload alarm retained"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "размеры",
+    "export": "calc/out/run20/team_break_even.csv; PRO6000 only; owned/new64/128; load/share; sustained finite scan"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "вызовов в день",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; profile/share/client/basis; requested_day"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; median_over_hybrid"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; cheapest_over_hybrid; measured cache admission pending"
+  },
+  {
+    "file": "14-conclusion.tex",
+    "body": "соотношение цен",
+    "export": "calc/out/run20/small_team_cost.csv; PRO6000 only; own_cluster_person_month/person_month"
+  }
+]

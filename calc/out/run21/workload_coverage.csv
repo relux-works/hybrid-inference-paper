@@ -1,0 +1,3 @@
+profile,source_calls,common_calls,common_fraction,max_end_depth,reservation_depth,sampler_basis,existing_profile_sha256,full_workload_cost,status,alarm_inputs
+existing_combined,39904,39788,0.997093023255814,928392.1328125,927497.6299821506,unchanged seeded existing calls,7b25fc05f30eda967f56e9e2d3239c8d67de76ef25c72588d89ac0e111f3ef3d,nan,alarm,run20
+claude_deep,1000,985,0.985,928392.1328125,925605.354894808,aggregate quantile reconstruction; estimated joint law,7b25fc05f30eda967f56e9e2d3239c8d67de76ef25c72588d89ac0e111f3ef3d,nan,alarm,run20

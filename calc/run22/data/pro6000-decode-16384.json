@@ -1,0 +1,102 @@
+{
+  "source_path": "/home/agent/lanes/hybrid/.temp/evidence/vllm-pro-g169-261103/vllm-20261103T184010Z/decode.json",
+  "source_sha256": "3dcc68fdbca164a9ab72dcd0969168a852d4934e70a1df596d6504d33c23ae90",
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "method": "private-prefix-prime; no cross-stream KV sharing; common decode window",
+  "tokens": 256,
+  "kv": "auto/default",
+  "depth": 16384,
+  "resident_limit": 39,
+  "first_no_fit": 40,
+  "shapes": [
+    {
+      "streams": 1,
+      "status": "measured",
+      "median": {
+        "aggregate_tok_s": 48.7166723842491,
+        "per_stream_mean_tok_s": 48.7166723842491,
+        "common_window_s": 5.234347657999024,
+        "ttft_s": 0.11094897286966443,
+        "cold_prime_ttft_s": 1.7996676659677178
+      },
+      "batching_gain": 1.0,
+      "aggregate_tok_s_rounds": [
+        48.717634265623055,
+        48.7166723842491,
+        48.715908047715395
+      ],
+      "common_window_s_rounds": [
+        5.234244310995564,
+        5.234347657999024,
+        5.234429783187807
+      ]
+    },
+    {
+      "streams": 8,
+      "status": "measured",
+      "median": {
+        "aggregate_tok_s": 302.9805555126111,
+        "per_stream_mean_tok_s": 37.872569439076386,
+        "common_window_s": 6.6802966829854995,
+        "ttft_s": 0.7249282724224031,
+        "cold_prime_ttft_s": 1.8002630789997056
+      },
+      "batching_gain": 6.21923749477129,
+      "aggregate_tok_s_rounds": [
+        302.3051844360057,
+        303.0409627248719,
+        302.9805555126111
+      ],
+      "common_window_s_rounds": [
+        6.678681358927861,
+        6.682264938019216,
+        6.6802966829854995
+      ]
+    },
+    {
+      "streams": 32,
+      "status": "measured",
+      "median": {
+        "aggregate_tok_s": 686.7991215323314,
+        "per_stream_mean_tok_s": 21.462472547885355,
+        "common_window_s": 11.69628752884455,
+        "ttft_s": 2.4306811350397766,
+        "cold_prime_ttft_s": 1.8178251954959705
+      },
+      "batching_gain": 14.097824993366846,
+      "aggregate_tok_s_rounds": [
+        686.7991215323314,
+        687.0223739347049,
+        686.7664562374216
+      ],
+      "common_window_s_rounds": [
+        11.69628752884455,
+        11.692486743908376,
+        11.696843849960715
+      ]
+    },
+    {
+      "streams": 39,
+      "status": "measured",
+      "median": {
+        "aggregate_tok_s": 738.101276255454,
+        "per_stream_mean_tok_s": 18.925673750139847,
+        "common_window_s": 13.210924183018506,
+        "ttft_s": 2.5201259509194642,
+        "cold_prime_ttft_s": 1.8275689370930195
+      },
+      "batching_gain": 15.150896810720885,
+      "aggregate_tok_s_rounds": [
+        738.2635514878468,
+        738.101276255454,
+        737.8943215902133
+      ],
+      "common_window_s_rounds": [
+        13.208020334132016,
+        13.210924183018506,
+        13.21462940517813
+      ]
+    }
+  ]
+}

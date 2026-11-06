@@ -1,0 +1,42 @@
+[
+  {
+    "path": "calc/out/run26/mixed_scheme.csv",
+    "bytes": 4463893,
+    "free_before": 31969046528,
+    "free_after": 31968890880,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/paper/words_ready.csv",
+    "bytes": 82701,
+    "free_before": 31968886784,
+    "free_after": 31968878592,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/moe_verdict.csv",
+    "bytes": 6690,
+    "free_before": 31968882688,
+    "free_after": 31968882688,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n"
+  },
+  {
+    "path": "calc/ENGINE-REPORT-R26-261105.md",
+    "bytes": 19551,
+    "free_before": 31968878592,
+    "free_after": 31968878592,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/quotes.csv",
+    "bytes": 184553,
+    "free_before": 31968878592,
+    "free_after": 31968878592,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  261G       30G  90% /\n"
+  }
+]

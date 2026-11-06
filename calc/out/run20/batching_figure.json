@@ -1,0 +1,6 @@
+{
+  "basis": "modelled bandwidth/capacity; 1M extrapolation",
+  "source": "decode_scaling.csv",
+  "source_sha256": "e9903dac8691c61d95cbf3463ae055676cf39cf6e52cffcaddbb7497e59d5044",
+  "svg_sha256": "3451f385ca237ed2452103c6238840faa8374dc12b4eb28c0ada56ce37c22dcb"
+}

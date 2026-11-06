@@ -7,7 +7,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from .inputs import InputGap
-from .performance import flop, payload, transfer
+from .performance import flop, payload, transfer, import_at, local_rate_at
 from .server_prefill import compute_at, mean_seconds
 
 
@@ -49,7 +49,7 @@ def first_call_check(c):
     size=n*e['kv_bytes_token']+e['chunks']*e['state_bytes']
     prediction=dict(server_prefill=integrate(lambda d:flop(c.g.resolve(m['flop']).value,d)/compute_at(compute,d),n,512),
                     transfer=e['rtt_s']+size/e['down_bytes_s']+n*4/e['up_bytes_s'],
-                    client_import=import_seconds(n),local=integrate(lambda d:1/local(d),n,512))
+                    client_import=import_at(c.client_import(),n,0),local=integrate(lambda d:1/(local.cold(d) if hasattr(local,'cold') else local(d)),n,512))
     prediction['total']=sum(prediction[k] for k in ('server_prefill','transfer','client_import'))
     prediction['unallocated']=0.0
     measured=dict(e['measured']);measured['unallocated']=measured['total']-sum(measured[k] for k in ('server_prefill','transfer','client_import'))
@@ -82,7 +82,7 @@ def step57_check(c, records=None):
                 len(trace)!=summary['calls'] or any(r['reread'] or r['new']<0 or r['gen']<=0 for r in trace)):
             raise InputGap('measurements.step57','invalid held-out trace or reread')
         calls=[(r['depth_before'],r['new'],r['gen'],0) for r in trace]
-        steps=[(n/local(d),n/local(d),0,False) for d,n,o,t in calls]
+        steps=[(n/local_rate_at(local,d,n),n/local_rate_at(local,d,n),0,False) for d,n,o,t in calls]
         bounds=day_bounds(calls,steps,count,lambda d:count,c.parallel,1)
         predicted=len(calls)*3600/bounds['calls_day']
         # The existing server model uses a declared batch32 bandwidth bound,

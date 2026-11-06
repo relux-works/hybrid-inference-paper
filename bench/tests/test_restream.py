@@ -10,11 +10,11 @@ import signal
 import subprocess
 import sys
 import tempfile
-import time
 import unittest
 from unittest.mock import patch
 
 from test_kitlib import kitlib, run
+from copy_barrier import barrier, wait_for_copy
 
 
 def u32(*values):
@@ -67,19 +67,6 @@ def large_fixture(path):
         f.write(struct.pack('<Q', row_bytes))
         f.seek(4 * row_bytes, 1)
         f.write(data[off['values']-12:])
-
-
-def wait_for_copy(process, directory):
-    """Wait for actual partial-copy bytes, not a timing-only signal guess."""
-    deadline = time.monotonic() + 20
-    while time.monotonic() < deadline:
-        for path in directory.glob('**/.restream-*'):
-            if path.stat().st_size >= 8 * 1024 * 1024:
-                return path
-        if process.poll() is not None:
-            raise AssertionError('restream exited before a partial copy was observed')
-        time.sleep(.005)
-    raise AssertionError('restream never produced partial-copy bytes')
 
 
 class Restream(unittest.TestCase):
@@ -160,19 +147,20 @@ class Restream(unittest.TestCase):
             self.assertEqual(list(Path(d).iterdir()), [src])
             self.assertEqual(src.read_bytes(), original)
 
-    # Claim: TERM during the real CLI's large-file copy unwinds Python's finally,
+    # Claim: TERM at a pipe barrier inside the real CLI's partial write unwinds Python's finally,
     # removes its hidden temporary file, publishes no OUT, and leaves IN unchanged.
     def test_term_during_copy(self):
-        with tempfile.TemporaryDirectory() as d:
+        with tempfile.TemporaryDirectory() as d, barrier() as (hook, fds, ready, release):
             d = Path(d)
             src, dst = d/'in', d/'out'
             large_fixture(src)
             before = kitlib.sha256_file(src)
-            p = subprocess.Popen([sys.executable, str(Path(kitlib.__file__)), 'restream-slot',
+            p = subprocess.Popen([sys.executable, str(Path(__file__).with_name('copy_barrier.py')), str(Path(kitlib.__file__)), 'restream-slot',
                                   str(src), str(dst), '--streams', '4'],
-                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+                                 env=dict(os.environ, **hook), pass_fds=fds)
             try:
-                partial = wait_for_copy(p, d)
+                partial = wait_for_copy(p, ready)
                 self.assertLess(partial.stat().st_size, src.stat().st_size)
                 p.send_signal(signal.SIGTERM)
                 stdout, stderr = p.communicate(timeout=20)
@@ -182,6 +170,34 @@ class Restream(unittest.TestCase):
             finally:
                 if p.poll() is None:
                     p.terminate()
+                p.communicate(timeout=20)
+
+    # Claim: the same real-copy barrier can be released to publish a byte-exact
+    # valid output; signal controls do not succeed by rejecting every invocation.
+    def test_copy_barrier_release_positive_control(self):
+        with tempfile.TemporaryDirectory() as d, barrier() as (hook, fds, ready, release):
+            src, dst = Path(d)/'in', Path(d)/'out'
+            original, off = fixture()
+            src.write_bytes(original)
+            p = subprocess.Popen([sys.executable, str(Path(__file__).with_name('copy_barrier.py')),
+                                  str(Path(kitlib.__file__)), 'restream-slot', str(src), str(dst), '--streams', '4'],
+                                 env=dict(os.environ, **hook), pass_fds=fds,
+                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            try:
+                partial = wait_for_copy(p, ready)
+                self.assertLess(partial.stat().st_size, src.stat().st_size)
+                self.assertFalse(dst.exists())
+                os.write(release, b'R')
+                stdout, stderr = p.communicate(timeout=20)
+                self.assertEqual(p.returncode, 0, stdout+stderr)
+                expected = (original[:off['streams']] + u32(4)
+                            + original[off['streams']+4:off['insertion']]
+                            + u32(0,0,0) + original[off['insertion']:])
+                self.assertEqual(dst.read_bytes(), expected)
+                self.assertEqual(src.read_bytes(), original)
+                self.assertEqual(set(Path(d).iterdir()), {src,dst})
+            finally:
+                if p.poll() is None: p.terminate()
                 p.communicate(timeout=20)
 
     # Claim: malformed header/count/meta/layout/size fields, trailing data, multiple

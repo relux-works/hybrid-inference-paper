@@ -1,0 +1,149 @@
+{
+  "source_revision": "b6ac5abcdf60b72582be87c7ad075ee460e7cc78",
+  "local_repository": "/home/agent/Werkstatt/hybrid-calc/paper",
+  "merge_authorized": false,
+  "note": "Read-only export identities for deferred % R20 sites; no run20 results admitted in v5a. RTX5090 server rows are excluded by owner direction.",
+  "files": {
+    "paper_claims.csv": {
+      "sha256": "fd7300c6273b74ea0e0c44c609061a495137e188a29b40d0dbd087c787790ce7",
+      "rows": 3,
+      "fields": [
+        "profile",
+        "previous_claim",
+        "scope",
+        "statement",
+        "unconditional_claim",
+        "counterexample_in_scan",
+        "status",
+        "alarm_inputs"
+      ]
+    },
+    "api_admission.csv": {
+      "sha256": "9c412311dbebf381850d0545110badce142b4efe176a9fe13df3884e13db7e01",
+      "rows": 42,
+      "fields": [
+        "profile",
+        "provider",
+        "tag",
+        "context_limit",
+        "admitted",
+        "reasons",
+        "availability_basis",
+        "cache_hit_fraction",
+        "cache_basis",
+        "effective_usd_per_1000_calls",
+        "prompt_usd_million",
+        "output_usd_million",
+        "cache_read_usd_million",
+        "mean_input_tokens",
+        "mean_output_tokens",
+        "role",
+        "status",
+        "alarm_inputs"
+      ]
+    },
+    "small_team_cost.csv": {
+      "sha256": "f7df2c647b28810f9d57c68dfa08d8f0436a545d2ddc287ab51496e1b246174a",
+      "rows": 576,
+      "fields": [
+        "profile",
+        "share",
+        "client",
+        "basis",
+        "server",
+        "billing",
+        "team",
+        "bridge",
+        "requested_day",
+        "api_cheapest_person_month",
+        "api_median_person_month",
+        "own_cluster_person_month",
+        "own_cluster_server",
+        "own_cluster_boxes",
+        "person_month",
+        "boxes",
+        "unit_month",
+        "device_month",
+        "client_energy_month",
+        "front_month",
+        "server_person_month",
+        "storage_person_month",
+        "served_day",
+        "server_decode_overflow_day",
+        "spill_share",
+        "offload_share",
+        "client_capacity_day",
+        "prefill_gpu_s_day",
+        "decode_overflow_gpu_s_day",
+        "pending_s_offload",
+        "median_over_hybrid",
+        "cheapest_over_hybrid",
+        "usd_per_1000_calls",
+        "workload_scope",
+        "status",
+        "alarm_inputs"
+      ]
+    },
+    "team_break_even.csv": {
+      "sha256": "989e9e479a86570bde4992a98d1662f521fa3f0366873aab3e7f09bf42f7108b",
+      "rows": 432,
+      "fields": [
+        "profile",
+        "share",
+        "client",
+        "basis",
+        "server",
+        "billing",
+        "reference",
+        "from_people",
+        "statement",
+        "any_counterexample",
+        "scan_max",
+        "workload_scope",
+        "status",
+        "alarm_inputs"
+      ]
+    },
+    "decode_scaling.csv": {
+      "sha256": "fe2538d1ceecbdcea729e98ce6c2a68f727fcb995a35e36d224d9ef81a6bb594",
+      "rows": 72,
+      "fields": [
+        "server",
+        "engine",
+        "depth",
+        "requested_streams",
+        "batch",
+        "single_tok_s",
+        "aggregate_tok_s",
+        "gain",
+        "basis",
+        "weights_bytes",
+        "kv_bytes_token",
+        "state_bytes",
+        "session_bytes",
+        "memory_bytes",
+        "workspace_bytes",
+        "context_basis",
+        "status",
+        "alarm_inputs"
+      ]
+    },
+    "server_prefill.csv": {
+      "sha256": "e5e2436dbe1f64602aebaf91eed3e0698dbfda7513f610ef62b8942e021d01a2",
+      "rows": 144,
+      "fields": [
+        "server",
+        "engine",
+        "depth",
+        "delta",
+        "bridge",
+        "prefill_s",
+        "delta_tok_s",
+        "prefill_usd_million",
+        "basis",
+        "status",
+        "alarm_inputs"
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "sources": {
+    "rtx3090_glimmer30": {
+      "path": "data/measurements/run18-2026-11-03/glimmer30-rtx3090-20261103T110225Z.tar.gz",
+      "sha256": "7b90ef56035de389a57a13254335f7c77a2cad355bc008ffef86714e4e3971d8",
+      "facts_prefix": "7b90ef56",
+      "facts_suffix": "71d8"
+    },
+    "rtx3090_qwen27": {
+      "path": "data/measurements/run18-2026-11-03/qwen27-rtx3090-20261103T101828Z.tar.gz",
+      "sha256": "3d8827833823eb03428ba281b77c563902c27486468fae237fa8cb0c7f4b6004",
+      "facts_prefix": "3d882783",
+      "facts_suffix": "6004"
+    },
+    "rtx5090_qwen27": {
+      "path": "data/measurements/run18-2026-11-03/qwen27-rtx5090-20261103T100641Z.tar.gz",
+      "sha256": "b10541aa8957930e096a2316c5c74e28a87511d1fb5494fac002067cebf4e3e8",
+      "facts_prefix": "b10541aa",
+      "facts_suffix": "e3e8",
+      "facts_previous_abbreviation": "b10541aa...16b"
+    },
+    "rtx5090_glimmer30": {
+      "path": "data/measurements/run18-2026-11-03/glimmer30-rtx5090-20261103T102603Z.tar.gz",
+      "sha256": "3f3f0506882c9d4950e20fc664ce1926e293b41ea914c5d829d0e793f48bd16b",
+      "facts_prefix": "3f3f0506",
+      "facts_suffix": "bd16b"
+    }
+  },
+  "clients": {
+    "rtx3090_glimmer30": {
+      "card": "rtx3090",
+      "model": "glimmer30",
+      "source": "rtx3090_glimmer30",
+      "context_limit": 131072,
+      "depths": [
+        16000,
+        50000,
+        100000,
+        118000
+      ]
+    },
+    "rtx3090_qwen27": {
+      "card": "rtx3090",
+      "model": "qwen27",
+      "source": "rtx3090_qwen27",
+      "context_limit": 99328,
+      "depths": [
+        16000,
+        50000,
+        86000
+      ]
+    },
+    "rtx5090_qwen27": {
+      "card": "rtx5090",
+      "model": "qwen27",
+      "source": "rtx5090_qwen27",
+      "context_limit": 262144,
+      "depths": [
+        16000,
+        50000,
+        100000,
+        150000,
+        200000,
+        249000
+      ]
+    },
+    "rtx5090_glimmer30": {
+      "card": "rtx5090",
+      "model": "glimmer30",
+      "source": "rtx5090_glimmer30",
+      "context_limit": 131072,
+      "depths": [
+        16000,
+        50000,
+        100000,
+        118000
+      ]
+    }
+  },
+  "rental": {
+    "model": "qwen27",
+    "calls_per_rental": 116,
+    "billing": "ceil_hour_assumption",
+    "observed_date": "2026-11-03",
+    "prices": {
+      "rtx3090": {
+        "search_low": 0.122,
+        "search_high": 0.162,
+        "rented": 0.153,
+        "download_s": 1029
+      },
+      "rtx5090": {
+        "search_low": 0.448,
+        "search_high": 0.522,
+        "rented": 0.55,
+        "download_s": 185
+      }
+    },
+    "price_basis": "observed Vast offers and rentals; not market rates",
+    "rental_boundary": "Declared estimate: one116-call normalization group per rental; one fresh model fetch and cold prefix per rental; no persistence. This is not a chronological task reconstruction."
+  },
+  "facts": {
+    "path": "data/measurements/run18-2026-11-03/FACTS-261103.md",
+    "sha256": "7e6fd64305ba3ef212e584bee742470f7a20a461c3b63c4094a98c47af2a6188"
+  }
+}

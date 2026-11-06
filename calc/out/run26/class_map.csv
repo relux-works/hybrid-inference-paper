@@ -1,0 +1,4 @@
+model_class,model,inside_contour,hybrid_applies,client,basis
+cloud,Qwen3.8-2.4T-A95B FP8,multi-node internal cluster,False,none; weights alone exceed512GB,"model-card2.4T/95B;2.4TB FP8 weights; at least two8xB300 weight-capacity nodes, service pending"
+middle dense,Qwen3.8-27B,own vLLM PRO/B300 or prefill-only hybrid,True,M5 Max64/128GB owned/new,PRI31 measured64GB;128GB same-SoC portability; bf16 transport; finite client decode capacity
+middle MoE,GLM-5.3-Flash,two-B300/replica own cluster or projected prefill-only hybrid,True,EXTRAPOLATED M5 Ultra256/512GB owned/new,"all GLM/Ultra performance UNMEASURED, client Q4/GLM KV layout unqualified; scenario applicability, no runtime certification"

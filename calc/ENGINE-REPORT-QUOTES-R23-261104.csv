@@ -1,0 +1,1418 @@
+site,source,row,column,source_value,rendered
+report quote 1,calc/out/run23/mac_direct_measurements.csv,0,depth,524288,524288
+report quote 2,calc/out/run23/mac_direct_measurements.csv,0,delta,690,690
+report quote 3,calc/out/run23/mac_direct_measurements.csv,0,prefill_s,48.255,48.255
+report quote 4,calc/out/run23/mac_direct_measurements.csv,0,restore_first_s,20.523,20.523
+report quote 5,calc/out/run23/mac_direct_measurements.csv,0,restore_warm_s,2.965,2.965
+report quote 6,calc/out/run23/mac_direct_measurements.csv,0,decode_tok_s,3.8409,3.841
+report quote 7,calc/out/run23/mac_direct_measurements.csv,0,measurement_status,measured,measured
+report quote 8,calc/out/run23/mac_direct_measurements.csv,1,depth,524288,524288
+report quote 9,calc/out/run23/mac_direct_measurements.csv,1,delta,2000,2000
+report quote 10,calc/out/run23/mac_direct_measurements.csv,1,prefill_s,161.768,161.768
+report quote 11,calc/out/run23/mac_direct_measurements.csv,1,restore_first_s,20.523,20.523
+report quote 12,calc/out/run23/mac_direct_measurements.csv,1,restore_warm_s,2.965,2.965
+report quote 13,calc/out/run23/mac_direct_measurements.csv,1,decode_tok_s,3.8409,3.841
+report quote 14,calc/out/run23/mac_direct_measurements.csv,1,measurement_status,measured,measured
+report quote 15,calc/out/run23/mac_direct_measurements.csv,2,depth,524288,524288
+report quote 16,calc/out/run23/mac_direct_measurements.csv,2,delta,10000,10000
+report quote 17,calc/out/run23/mac_direct_measurements.csv,2,prefill_s,843.26,843.260
+report quote 18,calc/out/run23/mac_direct_measurements.csv,2,restore_first_s,20.523,20.523
+report quote 19,calc/out/run23/mac_direct_measurements.csv,2,restore_warm_s,2.965,2.965
+report quote 20,calc/out/run23/mac_direct_measurements.csv,2,decode_tok_s,3.8409,3.841
+report quote 21,calc/out/run23/mac_direct_measurements.csv,2,measurement_status,measured,measured
+report quote 22,calc/out/run23/mac_direct_measurements.csv,3,depth,1040000,1040000
+report quote 23,calc/out/run23/mac_direct_measurements.csv,3,delta,690,690
+report quote 24,calc/out/run23/mac_direct_measurements.csv,3,prefill_s,72.408,72.408
+report quote 25,calc/out/run23/mac_direct_measurements.csv,3,restore_first_s,40.465,40.465
+report quote 26,calc/out/run23/mac_direct_measurements.csv,3,restore_warm_s,40.479,40.479
+report quote 27,calc/out/run23/mac_direct_measurements.csv,3,decode_tok_s,1.6638,1.664
+report quote 28,calc/out/run23/mac_direct_measurements.csv,3,measurement_status,measured,measured
+report quote 29,calc/out/run23/mac_direct_measurements.csv,4,depth,1040000,1040000
+report quote 30,calc/out/run23/mac_direct_measurements.csv,4,delta,2000,2000
+report quote 31,calc/out/run23/mac_direct_measurements.csv,4,prefill_s,296.966,296.966
+report quote 32,calc/out/run23/mac_direct_measurements.csv,4,restore_first_s,40.465,40.465
+report quote 33,calc/out/run23/mac_direct_measurements.csv,4,restore_warm_s,40.479,40.479
+report quote 34,calc/out/run23/mac_direct_measurements.csv,4,decode_tok_s,1.6638,1.664
+report quote 35,calc/out/run23/mac_direct_measurements.csv,4,measurement_status,measured,measured
+report quote 36,calc/out/run23/mac_direct_measurements.csv,5,depth,1040000,1040000
+report quote 37,calc/out/run23/mac_direct_measurements.csv,5,delta,10000,10000
+report quote 38,calc/out/run23/mac_direct_measurements.csv,5,prefill_s,,—
+report quote 39,calc/out/run23/mac_direct_measurements.csv,5,restore_first_s,40.465,40.465
+report quote 40,calc/out/run23/mac_direct_measurements.csv,5,restore_warm_s,40.479,40.479
+report quote 41,calc/out/run23/mac_direct_measurements.csv,5,decode_tok_s,1.6638,1.664
+report quote 42,calc/out/run23/mac_direct_measurements.csv,5,measurement_status,refused_context,refused_context
+report quote 43,calc/out/run23/link_thresholds.csv,1880,measurement_depth,1040000,1040000
+report quote 44,calc/out/run23/link_thresholds.csv,1880,local_prefill_s,72.408,72.408
+report quote 45,calc/out/run23/link_thresholds.csv,1880,recovery_s,40.479,40.479
+report quote 46,calc/out/run23/link_thresholds.csv,1880,threshold_MB_s,3.3560174190919807,3.356
+report quote 47,calc/out/run23/link_thresholds.csv,1880,offload,True,True
+report quote 48,calc/out/run23/link_thresholds.csv,1900,measurement_depth,1040000,1040000
+report quote 49,calc/out/run23/link_thresholds.csv,1900,local_prefill_s,72.408,72.408
+report quote 50,calc/out/run23/link_thresholds.csv,1900,recovery_s,40.479,40.479
+report quote 51,calc/out/run23/link_thresholds.csv,1900,threshold_MB_s,5.9252481666016585,5.925
+report quote 52,calc/out/run23/link_thresholds.csv,1900,offload,False,False
+report quote 53,calc/out/run23/link_thresholds.csv,1920,measurement_depth,1040000,1040000
+report quote 54,calc/out/run23/link_thresholds.csv,1920,local_prefill_s,296.966,296.966
+report quote 55,calc/out/run23/link_thresholds.csv,1920,recovery_s,40.479,40.479
+report quote 56,calc/out/run23/link_thresholds.csv,1920,threshold_MB_s,0.5811410107029079,0.581
+report quote 57,calc/out/run23/link_thresholds.csv,1920,offload,True,True
+report quote 58,calc/out/run23/link_thresholds.csv,1940,measurement_depth,1040000,1040000
+report quote 59,calc/out/run23/link_thresholds.csv,1940,local_prefill_s,296.966,296.966
+report quote 60,calc/out/run23/link_thresholds.csv,1940,recovery_s,40.479,40.479
+report quote 61,calc/out/run23/link_thresholds.csv,1940,threshold_MB_s,0.8890081449411822,0.889
+report quote 62,calc/out/run23/link_thresholds.csv,1940,offload,True,True
+report quote 63,calc/out/run23/link_thresholds.csv,1960,measurement_depth,1040000,1040000
+report quote 64,calc/out/run23/link_thresholds.csv,1960,local_prefill_s,,—
+report quote 65,calc/out/run23/link_thresholds.csv,1960,recovery_s,40.479,40.479
+report quote 66,calc/out/run23/link_thresholds.csv,1960,threshold_MB_s,,—
+report quote 67,calc/out/run23/link_thresholds.csv,1960,offload,False,False
+report quote 68,calc/out/run23/link_thresholds.csv,1970,measurement_depth,1040000,1040000
+report quote 69,calc/out/run23/link_thresholds.csv,1970,local_prefill_s,,—
+report quote 70,calc/out/run23/link_thresholds.csv,1970,recovery_s,40.479,40.479
+report quote 71,calc/out/run23/link_thresholds.csv,1970,threshold_MB_s,,—
+report quote 72,calc/out/run23/link_thresholds.csv,1970,offload,False,False
+report quote 73,calc/out/run23/link_thresholds.csv,1410,measurement_depth,1040000,1040000
+report quote 74,calc/out/run23/link_thresholds.csv,1410,local_prefill_s,72.408,72.408
+report quote 75,calc/out/run23/link_thresholds.csv,1410,recovery_s,40.479,40.479
+report quote 76,calc/out/run23/link_thresholds.csv,1410,threshold_MB_s,3.3508235827379265,3.351
+report quote 77,calc/out/run23/link_thresholds.csv,1410,offload,True,True
+report quote 78,calc/out/run23/link_thresholds.csv,1520,measurement_depth,1040000,1040000
+report quote 79,calc/out/run23/link_thresholds.csv,1520,local_prefill_s,72.408,72.408
+report quote 80,calc/out/run23/link_thresholds.csv,1520,recovery_s,40.479,40.479
+report quote 81,calc/out/run23/link_thresholds.csv,1520,threshold_MB_s,5.9160781399029245,5.916
+report quote 82,calc/out/run23/link_thresholds.csv,1520,offload,False,False
+report quote 83,calc/out/run23/link_thresholds.csv,1420,measurement_depth,1040000,1040000
+report quote 84,calc/out/run23/link_thresholds.csv,1420,local_prefill_s,120,120.000
+report quote 85,calc/out/run23/link_thresholds.csv,1420,recovery_s,40.479,40.479
+report quote 86,calc/out/run23/link_thresholds.csv,1420,threshold_MB_s,1.3108154583198801,1.311
+report quote 87,calc/out/run23/link_thresholds.csv,1420,offload,True,True
+report quote 88,calc/out/run23/link_thresholds.csv,1530,measurement_depth,1040000,1040000
+report quote 89,calc/out/run23/link_thresholds.csv,1530,local_prefill_s,120,120.000
+report quote 90,calc/out/run23/link_thresholds.csv,1530,recovery_s,40.479,40.479
+report quote 91,calc/out/run23/link_thresholds.csv,1530,threshold_MB_s,2.3143225797869764,2.314
+report quote 92,calc/out/run23/link_thresholds.csv,1530,offload,True,True
+report quote 93,calc/out/run23/link_thresholds.csv,1880,bytes_s,5190000.0,5.19
+report quote 94,calc/out/run23/link_thresholds.csv,1880,rtt_s,0.126,0.126
+report quote 95,calc/out/run23/link_thresholds.csv,1880,remote_s,61.61856212322789,61.619
+report quote 96,calc/out/run23/link_thresholds.csv,1880,offload,True,True
+report quote 97,calc/out/run23/link_thresholds.csv,1900,remote_s,76.73351241224523,76.734
+report quote 98,calc/out/run23/link_thresholds.csv,1900,offload,False,False
+report quote 99,calc/out/run23/link_thresholds.csv,1881,bytes_s,9750000.0,9.75
+report quote 100,calc/out/run23/link_thresholds.csv,1881,rtt_s,0.126,0.126
+report quote 101,calc/out/run23/link_thresholds.csv,1881,remote_s,52.38460091735861,52.385
+report quote 102,calc/out/run23/link_thresholds.csv,1881,offload,True,True
+report quote 103,calc/out/run23/link_thresholds.csv,1901,remote_s,60.43040522505092,60.430
+report quote 104,calc/out/run23/link_thresholds.csv,1901,offload,True,True
+report quote 105,calc/out/run23/link_thresholds.csv,1882,bytes_s,800000.0,0.80
+report quote 106,calc/out/run23/link_thresholds.csv,1882,rtt_s,0.126,0.126
+report quote 107,calc/out/run23/link_thresholds.csv,1882,remote_s,169.96193507120478,169.962
+report quote 108,calc/out/run23/link_thresholds.csv,1882,offload,False,False
+report quote 109,calc/out/run23/link_thresholds.csv,1902,remote_s,268.0201750712048,268.020
+report quote 110,calc/out/run23/link_thresholds.csv,1902,offload,False,False
+report quote 111,calc/out/run23/link_thresholds.csv,1883,bytes_s,2800000.0,2.80
+report quote 112,calc/out/run23/link_thresholds.csv,1883,rtt_s,0.126,0.126
+report quote 113,calc/out/run23/link_thresholds.csv,1883,remote_s,78.47119221406192,78.471
+report quote 114,calc/out/run23/link_thresholds.csv,1883,offload,False,False
+report quote 115,calc/out/run23/link_thresholds.csv,1903,remote_s,106.48783221406191,106.488
+report quote 116,calc/out/run23/link_thresholds.csv,1903,offload,False,False
+report quote 117,calc/out/run23/link_thresholds.csv,1884,bytes_s,5180000.0,5.18
+report quote 118,calc/out/run23/link_thresholds.csv,1884,rtt_s,0.126,0.126
+report quote 119,calc/out/run23/link_thresholds.csv,1884,remote_s,61.65667731058701,61.657
+report quote 120,calc/out/run23/link_thresholds.csv,1884,offload,True,True
+report quote 121,calc/out/run23/link_thresholds.csv,1904,remote_s,76.80080704031674,76.801
+report quote 122,calc/out/run23/link_thresholds.csv,1904,offload,False,False
+report quote 123,calc/out/run23/server_decode_measured.csv,0,depth,16384,16384
+report quote 124,calc/out/run23/server_decode_measured.csv,0,streams,1,1
+report quote 125,calc/out/run23/server_decode_measured.csv,0,resident_limit,39,39
+report quote 126,calc/out/run23/server_decode_measured.csv,0,aggregate_tok_s,48.70453006338683,48.705
+report quote 127,calc/out/run23/server_decode_measured.csv,0,gain,1.0,1.000
+report quote 128,calc/out/run23/server_decode_measured.csv,1,depth,16384,16384
+report quote 129,calc/out/run23/server_decode_measured.csv,1,streams,8,8
+report quote 130,calc/out/run23/server_decode_measured.csv,1,resident_limit,39,39
+report quote 131,calc/out/run23/server_decode_measured.csv,1,aggregate_tok_s,302.59977133502423,302.600
+report quote 132,calc/out/run23/server_decode_measured.csv,1,gain,6.212969736925986,6.213
+report quote 133,calc/out/run23/server_decode_measured.csv,2,depth,16384,16384
+report quote 134,calc/out/run23/server_decode_measured.csv,2,streams,32,32
+report quote 135,calc/out/run23/server_decode_measured.csv,2,resident_limit,39,39
+report quote 136,calc/out/run23/server_decode_measured.csv,2,aggregate_tok_s,686.816953541619,686.817
+report quote 137,calc/out/run23/server_decode_measured.csv,2,gain,14.101705788922645,14.102
+report quote 138,calc/out/run23/server_decode_measured.csv,3,depth,16384,16384
+report quote 139,calc/out/run23/server_decode_measured.csv,3,streams,39,39
+report quote 140,calc/out/run23/server_decode_measured.csv,3,resident_limit,39,39
+report quote 141,calc/out/run23/server_decode_measured.csv,3,aggregate_tok_s,737.9342485617974,737.934
+report quote 142,calc/out/run23/server_decode_measured.csv,3,gain,15.151244609103262,15.151
+report quote 143,calc/out/run23/server_decode_measured.csv,4,depth,65536,65536
+report quote 144,calc/out/run23/server_decode_measured.csv,4,streams,1,1
+report quote 145,calc/out/run23/server_decode_measured.csv,4,resident_limit,12,12
+report quote 146,calc/out/run23/server_decode_measured.csv,4,aggregate_tok_s,44.46371230817621,44.464
+report quote 147,calc/out/run23/server_decode_measured.csv,4,gain,1.0,1.000
+report quote 148,calc/out/run23/server_decode_measured.csv,5,depth,65536,65536
+report quote 149,calc/out/run23/server_decode_measured.csv,5,streams,8,8
+report quote 150,calc/out/run23/server_decode_measured.csv,5,resident_limit,12,12
+report quote 151,calc/out/run23/server_decode_measured.csv,5,aggregate_tok_s,190.28855418503053,190.289
+report quote 152,calc/out/run23/server_decode_measured.csv,5,gain,4.279637131199216,4.280
+report quote 153,calc/out/run23/server_decode_measured.csv,6,depth,65536,65536
+report quote 154,calc/out/run23/server_decode_measured.csv,6,streams,12,12
+report quote 155,calc/out/run23/server_decode_measured.csv,6,resident_limit,12,12
+report quote 156,calc/out/run23/server_decode_measured.csv,6,aggregate_tok_s,225.3503227512157,225.350
+report quote 157,calc/out/run23/server_decode_measured.csv,6,gain,5.068185067169417,5.068
+report quote 158,calc/out/run23/server_decode_measured.csv,7,depth,164000,164000
+report quote 159,calc/out/run23/server_decode_measured.csv,7,streams,1,1
+report quote 160,calc/out/run23/server_decode_measured.csv,7,resident_limit,5,5
+report quote 161,calc/out/run23/server_decode_measured.csv,7,aggregate_tok_s,38.10525905280442,38.105
+report quote 162,calc/out/run23/server_decode_measured.csv,7,gain,1.0,1.000
+report quote 163,calc/out/run23/server_decode_measured.csv,8,depth,164000,164000
+report quote 164,calc/out/run23/server_decode_measured.csv,8,streams,5,5
+report quote 165,calc/out/run23/server_decode_measured.csv,8,resident_limit,5,5
+report quote 166,calc/out/run23/server_decode_measured.csv,8,aggregate_tok_s,84.22156690471468,84.222
+report quote 167,calc/out/run23/server_decode_measured.csv,8,gain,2.2102347287025266,2.210
+report quote 168,calc/out/run23/server_decode_measured.csv,9,depth,256000,256000
+report quote 169,calc/out/run23/server_decode_measured.csv,9,streams,1,1
+report quote 170,calc/out/run23/server_decode_measured.csv,9,resident_limit,3,3
+report quote 171,calc/out/run23/server_decode_measured.csv,9,aggregate_tok_s,33.06693239348491,33.067
+report quote 172,calc/out/run23/server_decode_measured.csv,9,gain,1.0,1.000
+report quote 173,calc/out/run23/server_decode_measured.csv,10,depth,256000,256000
+report quote 174,calc/out/run23/server_decode_measured.csv,10,streams,3,3
+report quote 175,calc/out/run23/server_decode_measured.csv,10,resident_limit,3,3
+report quote 176,calc/out/run23/server_decode_measured.csv,10,aggregate_tok_s,57.73022155558607,57.730
+report quote 177,calc/out/run23/server_decode_measured.csv,10,gain,1.7458596058629405,1.746
+report quote 178,calc/out/run22/main_economics.csv,0,own_cluster_person_month,49.1246,49.12
+report quote 179,calc/out/run23/main_economics.csv,0,own_cluster_person_month,49.1246,49.12
+report quote 180,calc/out/run22/main_economics.csv,0,own_cluster_boxes,4,4
+report quote 181,calc/out/run23/main_economics.csv,0,own_cluster_boxes,4,4
+report quote 182,calc/out/run22/main_economics.csv,0,own_service_utilization,0.5006890415314837,50.07%
+report quote 183,calc/out/run22/main_economics.csv,0,own_calendar_utilization,0.11522706709217709,11.52%
+report quote 184,calc/out/run23/main_economics.csv,0,own_service_utilization,0.5006925215581746,50.07%
+report quote 185,calc/out/run23/main_economics.csv,0,own_calendar_utilization,0.11522786797503196,11.52%
+report quote 186,calc/out/run23/main_economics.csv,0,person_month,56.644600000000004,56.64
+report quote 187,calc/out/run23/main_economics.csv,0,service_utilization,0.036139896849339874,3.61%
+report quote 188,calc/out/run23/main_economics.csv,0,calendar_utilization,0.00831712694614945,0.83%
+report quote 189,calc/out/run22/dedicated_multiples.csv,0,api_median_over_hybrid,0.08775148201614674,0.088
+report quote 190,calc/out/run23/dedicated_multiples.csv,0,api_median_over_hybrid,0.08775148201614674,0.088
+report quote 191,calc/out/run22/main_economics.csv,144,own_cluster_person_month,135.09265,135.09
+report quote 192,calc/out/run23/main_economics.csv,144,own_cluster_person_month,135.09265,135.09
+report quote 193,calc/out/run22/main_economics.csv,144,own_cluster_boxes,11,11
+report quote 194,calc/out/run23/main_economics.csv,144,own_cluster_boxes,11,11
+report quote 195,calc/out/run22/main_economics.csv,144,own_service_utilization,0.6647059200060812,66.47%
+report quote 196,calc/out/run22/main_economics.csv,144,own_calendar_utilization,0.15297341720687896,15.30%
+report quote 197,calc/out/run23/main_economics.csv,144,own_service_utilization,0.6645872526264603,66.46%
+report quote 198,calc/out/run23/main_economics.csv,144,own_calendar_utilization,0.15294610745376072,15.29%
+report quote 199,calc/out/run23/main_economics.csv,144,person_month,56.644600000000004,56.64
+report quote 200,calc/out/run23/main_economics.csv,144,service_utilization,0.1445595873973595,14.46%
+report quote 201,calc/out/run23/main_economics.csv,144,calendar_utilization,0.0332685077845978,3.33%
+report quote 202,calc/out/run22/dedicated_multiples.csv,144,api_median_over_hybrid,0.35100592806458697,0.351
+report quote 203,calc/out/run23/dedicated_multiples.csv,144,api_median_over_hybrid,0.35100592806458697,0.351
+report quote 204,calc/out/run22/main_economics.csv,288,own_cluster_person_month,331.59105000000005,331.59
+report quote 205,calc/out/run23/main_economics.csv,288,own_cluster_person_month,331.59105000000005,331.59
+report quote 206,calc/out/run22/main_economics.csv,288,own_cluster_boxes,27,27
+report quote 207,calc/out/run23/main_economics.csv,288,own_cluster_boxes,27,27
+report quote 208,calc/out/run22/main_economics.csv,288,own_service_utilization,0.6686852189494326,66.87%
+report quote 209,calc/out/run22/main_economics.csv,288,own_calendar_utilization,0.15388920107329407,15.39%
+report quote 210,calc/out/run23/main_economics.csv,288,own_service_utilization,0.6661002179537654,66.61%
+report quote 211,calc/out/run23/main_economics.csv,288,own_calendar_utilization,0.1532942967345652,15.33%
+report quote 212,calc/out/run23/main_economics.csv,288,person_month,56.644600000000004,56.64
+report quote 213,calc/out/run23/main_economics.csv,288,service_utilization,0.45174871061674843,45.17%
+report quote 214,calc/out/run23/main_economics.csv,288,calendar_utilization,0.10396408682686811,10.40%
+report quote 215,calc/out/run22/dedicated_multiples.csv,288,api_median_over_hybrid,1.0968935252018344,1.097
+report quote 216,calc/out/run23/dedicated_multiples.csv,288,api_median_over_hybrid,1.0968935252018344,1.097
+report quote 217,calc/out/run22/main_economics.csv,1728,own_cluster_person_month,61.40575,61.41
+report quote 218,calc/out/run23/main_economics.csv,1728,own_cluster_person_month,61.40575,61.41
+report quote 219,calc/out/run22/main_economics.csv,1728,own_cluster_boxes,5,5
+report quote 220,calc/out/run23/main_economics.csv,1728,own_cluster_boxes,5,5
+report quote 221,calc/out/run22/main_economics.csv,1728,own_service_utilization,0.5606028324196739,56.06%
+report quote 222,calc/out/run22/main_economics.csv,1728,own_calendar_utilization,0.12901544636507564,12.90%
+report quote 223,calc/out/run23/main_economics.csv,1728,own_service_utilization,0.5756359510681642,57.56%
+report quote 224,calc/out/run23/main_economics.csv,1728,own_calendar_utilization,0.13247512298555011,13.25%
+report quote 225,calc/out/run23/main_economics.csv,1728,person_month,56.644600000000004,56.64
+report quote 226,calc/out/run23/main_economics.csv,1728,service_utilization,0.0,0.00%
+report quote 227,calc/out/run23/main_economics.csv,1728,calendar_utilization,0.0,0.00%
+report quote 228,calc/out/run22/dedicated_multiples.csv,1728,api_median_over_hybrid,0.09932548534106023,0.099
+report quote 229,calc/out/run23/dedicated_multiples.csv,1728,api_median_over_hybrid,0.09932548534106023,0.099
+report quote 230,calc/out/run22/main_economics.csv,1872,own_cluster_person_month,184.21724999999998,184.22
+report quote 231,calc/out/run23/main_economics.csv,1872,own_cluster_person_month,184.21724999999998,184.22
+report quote 232,calc/out/run22/main_economics.csv,1872,own_cluster_boxes,15,15
+report quote 233,calc/out/run23/main_economics.csv,1872,own_cluster_boxes,15,15
+report quote 234,calc/out/run22/main_economics.csv,1872,own_service_utilization,0.6698139038315682,66.98%
+report quote 235,calc/out/run22/main_economics.csv,1872,own_calendar_utilization,0.1541489532105527,15.41%
+report quote 236,calc/out/run23/main_economics.csv,1872,own_service_utilization,0.6894513525015387,68.95%
+report quote 237,calc/out/run23/main_economics.csv,1872,own_calendar_utilization,0.15866825646610752,15.87%
+report quote 238,calc/out/run23/main_economics.csv,1872,person_month,56.644600000000004,56.64
+report quote 239,calc/out/run23/main_economics.csv,1872,service_utilization,0.0,0.00%
+report quote 240,calc/out/run23/main_economics.csv,1872,calendar_utilization,0.0,0.00%
+report quote 241,calc/out/run22/dedicated_multiples.csv,1872,api_median_over_hybrid,0.3973019413642409,0.397
+report quote 242,calc/out/run23/dedicated_multiples.csv,1872,api_median_over_hybrid,0.3973019413642409,0.397
+report quote 243,calc/out/run22/main_economics.csv,2016,own_cluster_person_month,454.40254999999996,454.40
+report quote 244,calc/out/run23/main_economics.csv,2016,own_cluster_person_month,454.40254999999996,454.40
+report quote 245,calc/out/run22/main_economics.csv,2016,own_cluster_boxes,37,37
+report quote 246,calc/out/run23/main_economics.csv,2016,own_cluster_boxes,37,37
+report quote 247,calc/out/run22/main_economics.csv,2016,own_service_utilization,0.6805491898453234,68.05%
+report quote 248,calc/out/run22/main_economics.csv,2016,own_calendar_utilization,0.15661953958084154,15.66%
+report quote 249,calc/out/run23/main_economics.csv,2016,own_service_utilization,0.6917311035852256,69.17%
+report quote 250,calc/out/run23/main_economics.csv,2016,own_calendar_utilization,0.15919291151002452,15.92%
+report quote 251,calc/out/run23/main_economics.csv,2016,person_month,56.644600000000004,56.64
+report quote 252,calc/out/run23/main_economics.csv,2016,service_utilization,0.0,0.00%
+report quote 253,calc/out/run23/main_economics.csv,2016,calendar_utilization,0.0,0.00%
+report quote 254,calc/out/run22/dedicated_multiples.csv,2016,api_median_over_hybrid,1.2415685667632528,1.242
+report quote 255,calc/out/run23/dedicated_multiples.csv,2016,api_median_over_hybrid,1.2415685667632528,1.242
+report quote 256,calc/out/run22/heavy_sensitivity.csv,0,move_generation_person_month,331.59105000000005,331.59
+report quote 257,calc/out/run23/heavy_sensitivity.csv,0,move_generation_person_month,331.59105000000005,331.59
+report quote 258,calc/out/run22/heavy_sensitivity.csv,0,service_utilization,0.6686852189494326,66.87%
+report quote 259,calc/out/run22/heavy_sensitivity.csv,0,calendar_utilization,0.15388920107329407,15.39%
+report quote 260,calc/out/run23/heavy_sensitivity.csv,0,service_utilization,0.6661002179537654,66.61%
+report quote 261,calc/out/run23/heavy_sensitivity.csv,0,calendar_utilization,0.1532942967345652,15.33%
+report quote 262,calc/out/run22/heavy_sensitivity.csv,1,move_generation_person_month,454.40254999999996,454.40
+report quote 263,calc/out/run23/heavy_sensitivity.csv,1,move_generation_person_month,454.40254999999996,454.40
+report quote 264,calc/out/run22/heavy_sensitivity.csv,1,service_utilization,0.6805491898453234,68.05%
+report quote 265,calc/out/run22/heavy_sensitivity.csv,1,calendar_utilization,0.15661953958084154,15.66%
+report quote 266,calc/out/run23/heavy_sensitivity.csv,1,service_utilization,0.6917311035852256,69.17%
+report quote 267,calc/out/run23/heavy_sensitivity.csv,1,calendar_utilization,0.15919291151002452,15.92%
+report quote 268,calc/out/run23/paper/team_break_even.csv,0,short_sentence,"Combined-agent measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 10885/39904 (27.28%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 10885/39904 (27.28%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 269,calc/out/run23/paper/team_break_even.csv,4,short_sentence,"Combined-agent measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 10885/39904 (27.28%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 10885/39904 (27.28%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 270,calc/out/run23/paper/team_break_even.csv,3,short_sentence,"Combined-agent measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 10885/39904 (27.28%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 10885/39904 (27.28%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 271,calc/out/run23/paper/team_break_even.csv,360,short_sentence,"Combined-agent measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 5 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 10885/39904 (27.28%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 5 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 10885/39904 (27.28%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 272,calc/out/run23/paper/team_break_even.csv,364,short_sentence,"Combined-agent measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 10885/39904 (27.28%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 10885/39904 (27.28%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 273,calc/out/run23/paper/team_break_even.csv,363,short_sentence,"Combined-agent measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 10885/39904 (27.28%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 10885/39904 (27.28%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 274,calc/out/run23/paper/team_break_even.csv,720,short_sentence,"Combined-agent measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 2 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 10885/39904 (27.28%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 2 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 10885/39904 (27.28%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 275,calc/out/run23/paper/team_break_even.csv,724,short_sentence,"Combined-agent measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 45 people through 500 scanned people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 10885/39904 (27.28%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 45 people through 500 scanned people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 10885/39904 (27.28%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 276,calc/out/run23/paper/team_break_even.csv,723,short_sentence,"Combined-agent measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 10885/39904 (27.28%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. ","Combined-agent measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 10885/39904 (27.28%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled."
+report quote 277,calc/out/run23/paper/team_break_even.csv,4320,short_sentence,"Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 278,calc/out/run23/paper/team_break_even.csv,4324,short_sentence,"Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 279,calc/out/run23/paper/team_break_even.csv,4323,short_sentence,"Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 280,calc/out/run23/paper/team_break_even.csv,4680,short_sentence,"Claude Code reconstructed measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 4 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 554/1000 (55.40%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 4 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 554/1000 (55.40%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 281,calc/out/run23/paper/team_break_even.csv,4684,short_sentence,"Claude Code reconstructed measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 554/1000 (55.40%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 554/1000 (55.40%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 282,calc/out/run23/paper/team_break_even.csv,4683,short_sentence,"Claude Code reconstructed measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 554/1000 (55.40%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, medium load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 800 calls/day (typical medium load); call shapes inside measured ladder 554/1000 (55.40%) at 3360 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 283,calc/out/run23/paper/team_break_even.csv,5040,short_sentence,"Claude Code reconstructed measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 2 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 554/1000 (55.40%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 2 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 554/1000 (55.40%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 284,calc/out/run23/paper/team_break_even.csv,5044,short_sentence,"Claude Code reconstructed measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 30 people through 500 scanned people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 554/1000 (55.40%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 30 people through 500 scanned people versus median admitted API (deepinfra/bf16). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 554/1000 (55.40%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 285,calc/out/run23/paper/team_break_even.csv,5043,short_sentence,"Claude Code reconstructed measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 554/1000 (55.40%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, heavy load: RTX PRO 6000 vLLM FP8 hybrid: no sustained crossing through 500 people versus cheapest admitted API (chutes/fp8). Bought office server (125 MB/s, RTT 1 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 2500 calls/day (owner intensity2500 calls/day, atypical; light/medium are typical); call shapes inside measured ladder 554/1000 (55.40%) at 10500 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 286,calc/out/run23/paper/team_break_even.csv,4330,short_sentence,"Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 73 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Rented WAN server (112.5 MB/s, RTT 400 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain.","Claude Code reconstructed measured-shape subset, light load: RTX PRO 6000 vLLM FP8 hybrid: cheaper from 73 people through 500 scanned people versus own vLLM cluster on the same server and billing basis. Rented WAN server (112.5 MB/s, RTT 400 ms); M5 Max 64 GB owned; s=0.2; 98.1% cache allowance (1.9% misses billed, provider unverified); 200 calls/day (typical light load); call shapes inside measured ladder 554/1000 (55.40%) at 840 calls/person-month, full unconditioned mix unsupported; bf16 default transport; dedicated fleet sufficient, not minimal. API: snapshot29 Oct last1d, >=95% (exact window endpoints unknown). PRI31 Mac anchors, interpolation; deep rates/import estimated; PRO decode measured/interpolated 16384–256000, beyond modelled. Zero prefill offload; local-client work plus idle residency and any stated server generation overflow; not a prefill-offload gain."
+report quote 287,calc/out/run23/abstract_bound_changes.csv,0,old,390,390
+report quote 288,calc/out/run23/abstract_bound_changes.csv,0,new,390,390
+report quote 289,calc/out/run23/abstract_bound_changes.csv,0,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 290,calc/out/run23/abstract_bound_changes.csv,1,old,28,28
+report quote 291,calc/out/run23/abstract_bound_changes.csv,1,new,28,28
+report quote 292,calc/out/run23/abstract_bound_changes.csv,1,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 293,calc/out/run23/abstract_bound_changes.csv,2,old,390,390
+report quote 294,calc/out/run23/abstract_bound_changes.csv,2,new,390,390
+report quote 295,calc/out/run23/abstract_bound_changes.csv,2,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 296,calc/out/run23/abstract_bound_changes.csv,3,old,33,33
+report quote 297,calc/out/run23/abstract_bound_changes.csv,3,new,33,33
+report quote 298,calc/out/run23/abstract_bound_changes.csv,3,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 299,calc/out/run23/abstract_bound_changes.csv,4,old,102469632,102469632
+report quote 300,calc/out/run23/abstract_bound_changes.csv,4,new,102469632,102469632
+report quote 301,calc/out/run23/abstract_bound_changes.csv,4,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 302,calc/out/run23/abstract_bound_changes.csv,5,old,19.74366705202312,19.74366705202312
+report quote 303,calc/out/run23/abstract_bound_changes.csv,5,new,19.74366705202312,19.74366705202312
+report quote 304,calc/out/run23/abstract_bound_changes.csv,5,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 305,calc/out/run23/abstract_bound_changes.csv,6,old,2.9923562566180237,2.9923562566180237
+report quote 306,calc/out/run23/abstract_bound_changes.csv,6,new,3.3508235827379265,3.3508235827379265
+report quote 307,calc/out/run23/abstract_bound_changes.csv,6,why,"M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible","M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible"
+report quote 308,calc/out/run23/abstract_bound_changes.csv,7,old,True,True
+report quote 309,calc/out/run23/abstract_bound_changes.csv,7,new,True,True
+report quote 310,calc/out/run23/abstract_bound_changes.csv,7,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 311,calc/out/run23/abstract_bound_changes.csv,8,old,102469632,102469632
+report quote 312,calc/out/run23/abstract_bound_changes.csv,8,new,102469632,102469632
+report quote 313,calc/out/run23/abstract_bound_changes.csv,8,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 314,calc/out/run23/abstract_bound_changes.csv,9,old,19.74366705202312,19.74366705202312
+report quote 315,calc/out/run23/abstract_bound_changes.csv,9,new,19.74366705202312,19.74366705202312
+report quote 316,calc/out/run23/abstract_bound_changes.csv,9,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 317,calc/out/run23/abstract_bound_changes.csv,10,old,1.2240350447215587,1.2240350447215587
+report quote 318,calc/out/run23/abstract_bound_changes.csv,10,new,1.3108154583198801,1.3108154583198801
+report quote 319,calc/out/run23/abstract_bound_changes.csv,10,why,"M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible","M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible"
+report quote 320,calc/out/run23/abstract_bound_changes.csv,11,old,True,True
+report quote 321,calc/out/run23/abstract_bound_changes.csv,11,new,True,True
+report quote 322,calc/out/run23/abstract_bound_changes.csv,11,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 323,calc/out/run23/abstract_bound_changes.csv,12,old,180916224,180916224
+report quote 324,calc/out/run23/abstract_bound_changes.csv,12,new,180916224,180916224
+report quote 325,calc/out/run23/abstract_bound_changes.csv,12,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 326,calc/out/run23/abstract_bound_changes.csv,13,old,34.858617341040464,34.858617341040464
+report quote 327,calc/out/run23/abstract_bound_changes.csv,13,new,34.858617341040464,34.858617341040464
+report quote 328,calc/out/run23/abstract_bound_changes.csv,13,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 329,calc/out/run23/abstract_bound_changes.csv,14,old,5.283182775655014,5.283182775655014
+report quote 330,calc/out/run23/abstract_bound_changes.csv,14,new,5.9160781399029245,5.9160781399029245
+report quote 331,calc/out/run23/abstract_bound_changes.csv,14,why,"M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible","M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible"
+report quote 332,calc/out/run23/abstract_bound_changes.csv,15,old,False,False
+report quote 333,calc/out/run23/abstract_bound_changes.csv,15,new,False,False
+report quote 334,calc/out/run23/abstract_bound_changes.csv,15,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 335,calc/out/run23/abstract_bound_changes.csv,16,old,180916224,180916224
+report quote 336,calc/out/run23/abstract_bound_changes.csv,16,new,180916224,180916224
+report quote 337,calc/out/run23/abstract_bound_changes.csv,16,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 338,calc/out/run23/abstract_bound_changes.csv,17,old,34.858617341040464,34.858617341040464
+report quote 339,calc/out/run23/abstract_bound_changes.csv,17,new,34.858617341040464,34.858617341040464
+report quote 340,calc/out/run23/abstract_bound_changes.csv,17,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 341,calc/out/run23/abstract_bound_changes.csv,18,old,2.1611066031221378,2.1611066031221378
+report quote 342,calc/out/run23/abstract_bound_changes.csv,18,new,2.3143225797869764,2.3143225797869764
+report quote 343,calc/out/run23/abstract_bound_changes.csv,18,why,"M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible","M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible"
+report quote 344,calc/out/run23/abstract_bound_changes.csv,19,old,True,True
+report quote 345,calc/out/run23/abstract_bound_changes.csv,19,new,True,True
+report quote 346,calc/out/run23/abstract_bound_changes.csv,19,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 347,calc/out/run23/abstract_bound_changes.csv,20,old,10885,10885
+report quote 348,calc/out/run23/abstract_bound_changes.csv,20,new,10885,10885
+report quote 349,calc/out/run23/abstract_bound_changes.csv,20,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 350,calc/out/run23/abstract_bound_changes.csv,21,old,39904,39904
+report quote 351,calc/out/run23/abstract_bound_changes.csv,21,new,39904,39904
+report quote 352,calc/out/run23/abstract_bound_changes.csv,21,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 353,calc/out/run23/abstract_bound_changes.csv,22,old,0.2727796712109062,0.2727796712109062
+report quote 354,calc/out/run23/abstract_bound_changes.csv,22,new,0.2727796712109062,0.2727796712109062
+report quote 355,calc/out/run23/abstract_bound_changes.csv,22,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 356,calc/out/run23/abstract_bound_changes.csv,23,old,10885,10885
+report quote 357,calc/out/run23/abstract_bound_changes.csv,23,new,10885,10885
+report quote 358,calc/out/run23/abstract_bound_changes.csv,23,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 359,calc/out/run23/abstract_bound_changes.csv,24,old,0.2727796712109062,0.2727796712109062
+report quote 360,calc/out/run23/abstract_bound_changes.csv,24,new,0.2727796712109062,0.2727796712109062
+report quote 361,calc/out/run23/abstract_bound_changes.csv,24,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 362,calc/out/run23/abstract_bound_changes.csv,25,old,10885,10885
+report quote 363,calc/out/run23/abstract_bound_changes.csv,25,new,10885,10885
+report quote 364,calc/out/run23/abstract_bound_changes.csv,25,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 365,calc/out/run23/abstract_bound_changes.csv,26,old,39904,39904
+report quote 366,calc/out/run23/abstract_bound_changes.csv,26,new,39904,39904
+report quote 367,calc/out/run23/abstract_bound_changes.csv,26,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 368,calc/out/run23/abstract_bound_changes.csv,27,old,0.2727796712109062,0.2727796712109062
+report quote 369,calc/out/run23/abstract_bound_changes.csv,27,new,0.2727796712109062,0.2727796712109062
+report quote 370,calc/out/run23/abstract_bound_changes.csv,27,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 371,calc/out/run23/abstract_bound_changes.csv,28,old,39788,39788
+report quote 372,calc/out/run23/abstract_bound_changes.csv,28,new,39788,39788
+report quote 373,calc/out/run23/abstract_bound_changes.csv,28,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 374,calc/out/run23/abstract_bound_changes.csv,29,old,0.997093023255814,0.997093023255814
+report quote 375,calc/out/run23/abstract_bound_changes.csv,29,new,0.997093023255814,0.997093023255814
+report quote 376,calc/out/run23/abstract_bound_changes.csv,29,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 377,calc/out/run23/abstract_bound_changes.csv,30,old,554,554
+report quote 378,calc/out/run23/abstract_bound_changes.csv,30,new,554,554
+report quote 379,calc/out/run23/abstract_bound_changes.csv,30,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 380,calc/out/run23/abstract_bound_changes.csv,31,old,1000,1000
+report quote 381,calc/out/run23/abstract_bound_changes.csv,31,new,1000,1000
+report quote 382,calc/out/run23/abstract_bound_changes.csv,31,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 383,calc/out/run23/abstract_bound_changes.csv,32,old,0.554,0.554
+report quote 384,calc/out/run23/abstract_bound_changes.csv,32,new,0.554,0.554
+report quote 385,calc/out/run23/abstract_bound_changes.csv,32,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 386,calc/out/run23/abstract_bound_changes.csv,33,old,554,554
+report quote 387,calc/out/run23/abstract_bound_changes.csv,33,new,554,554
+report quote 388,calc/out/run23/abstract_bound_changes.csv,33,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 389,calc/out/run23/abstract_bound_changes.csv,34,old,0.554,0.554
+report quote 390,calc/out/run23/abstract_bound_changes.csv,34,new,0.554,0.554
+report quote 391,calc/out/run23/abstract_bound_changes.csv,34,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 392,calc/out/run23/abstract_bound_changes.csv,35,old,554,554
+report quote 393,calc/out/run23/abstract_bound_changes.csv,35,new,554,554
+report quote 394,calc/out/run23/abstract_bound_changes.csv,35,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 395,calc/out/run23/abstract_bound_changes.csv,36,old,1000,1000
+report quote 396,calc/out/run23/abstract_bound_changes.csv,36,new,1000,1000
+report quote 397,calc/out/run23/abstract_bound_changes.csv,36,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 398,calc/out/run23/abstract_bound_changes.csv,37,old,0.554,0.554
+report quote 399,calc/out/run23/abstract_bound_changes.csv,37,new,0.554,0.554
+report quote 400,calc/out/run23/abstract_bound_changes.csv,37,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 401,calc/out/run23/abstract_bound_changes.csv,38,old,985,985
+report quote 402,calc/out/run23/abstract_bound_changes.csv,38,new,985,985
+report quote 403,calc/out/run23/abstract_bound_changes.csv,38,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 404,calc/out/run23/abstract_bound_changes.csv,39,old,0.985,0.985
+report quote 405,calc/out/run23/abstract_bound_changes.csv,39,new,0.985,0.985
+report quote 406,calc/out/run23/abstract_bound_changes.csv,39,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 407,calc/out/run23/abstract_bound_changes.csv,40,old,212.20583333333335,212.20583333333335
+report quote 408,calc/out/run23/abstract_bound_changes.csv,40,new,212.20583333333335,212.20583333333335
+report quote 409,calc/out/run23/abstract_bound_changes.csv,40,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 410,calc/out/run23/abstract_bound_changes.csv,41,old,0.00977081682601338,0.00977081682601338
+report quote 411,calc/out/run23/abstract_bound_changes.csv,41,new,0.00977081682601338,0.00977081682601338
+report quote 412,calc/out/run23/abstract_bound_changes.csv,41,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 413,calc/out/run23/abstract_bound_changes.csv,42,old,0.0022486263380414357,0.0022486263380414357
+report quote 414,calc/out/run23/abstract_bound_changes.csv,42,new,0.0022486263380414357,0.0022486263380414357
+report quote 415,calc/out/run23/abstract_bound_changes.csv,42,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 416,calc/out/run23/abstract_bound_changes.csv,43,old,204.68583333333333,204.68583333333333
+report quote 417,calc/out/run23/abstract_bound_changes.csv,43,new,204.68583333333333,204.68583333333333
+report quote 418,calc/out/run23/abstract_bound_changes.csv,43,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 419,calc/out/run23/abstract_bound_changes.csv,44,old,0.10132144835987375,0.10132144835987375
+report quote 420,calc/out/run23/abstract_bound_changes.csv,44,new,0.10123165492577184,0.10123165492577184
+report quote 421,calc/out/run23/abstract_bound_changes.csv,44,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 422,calc/out/run23/abstract_bound_changes.csv,45,old,0.023317812773231222,0.023317812773231222
+report quote 423,calc/out/run23/abstract_bound_changes.csv,45,new,0.023297147982917352,0.023297147982917352
+report quote 424,calc/out/run23/abstract_bound_changes.csv,45,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 425,calc/out/run23/abstract_bound_changes.csv,46,old,130.3315,130.3315
+report quote 426,calc/out/run23/abstract_bound_changes.csv,46,new,130.3315,130.3315
+report quote 427,calc/out/run23/abstract_bound_changes.csv,46,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 428,calc/out/run23/abstract_bound_changes.csv,47,old,0.015469427748311244,0.015469427748311244
+report quote 429,calc/out/run23/abstract_bound_changes.csv,47,new,0.015469427748311244,0.015469427748311244
+report quote 430,calc/out/run23/abstract_bound_changes.csv,47,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 431,calc/out/run23/abstract_bound_changes.csv,48,old,0.0035600874818031356,0.0035600874818031356
+report quote 432,calc/out/run23/abstract_bound_changes.csv,48,new,0.0035600874818031356,0.0035600874818031356
+report quote 433,calc/out/run23/abstract_bound_changes.csv,48,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 434,calc/out/run23/abstract_bound_changes.csv,49,old,122.8115,122.8115
+report quote 435,calc/out/run23/abstract_bound_changes.csv,49,new,122.8115,122.8115
+report quote 436,calc/out/run23/abstract_bound_changes.csv,49,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 437,calc/out/run23/abstract_bound_changes.csv,50,old,0.18527868748121845,0.18527868748121845
+report quote 438,calc/out/run23/abstract_bound_changes.csv,50,new,0.18525364921198129,0.18525364921198129
+report quote 439,calc/out/run23/abstract_bound_changes.csv,50,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 440,calc/out/run23/abstract_bound_changes.csv,51,old,0.042639478762800956,0.042639478762800956
+report quote 441,calc/out/run23/abstract_bound_changes.csv,51,new,0.042633716530976515,0.042633716530976515
+report quote 442,calc/out/run23/abstract_bound_changes.csv,51,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 443,calc/out/run23/abstract_bound_changes.csv,52,old,68.92575,68.92575
+report quote 444,calc/out/run23/abstract_bound_changes.csv,52,new,68.92575,68.92575
+report quote 445,calc/out/run23/abstract_bound_changes.csv,52,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 446,calc/out/run23/abstract_bound_changes.csv,53,old,0.029319732533488702,0.029319732533488702
+report quote 447,calc/out/run23/abstract_bound_changes.csv,53,new,0.029319732533488702,0.029319732533488702
+report quote 448,calc/out/run23/abstract_bound_changes.csv,53,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 449,calc/out/run23/abstract_bound_changes.csv,54,old,0.006747554884419318,0.006747554884419318
+report quote 450,calc/out/run23/abstract_bound_changes.csv,54,new,0.006747554884419318,0.006747554884419318
+report quote 451,calc/out/run23/abstract_bound_changes.csv,54,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 452,calc/out/run23/abstract_bound_changes.csv,55,old,61.40575,61.40575
+report quote 453,calc/out/run23/abstract_bound_changes.csv,55,new,61.40575,61.40575
+report quote 454,calc/out/run23/abstract_bound_changes.csv,55,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 455,calc/out/run23/abstract_bound_changes.csv,56,old,0.39553450486382286,0.39553450486382286
+report quote 456,calc/out/run23/abstract_bound_changes.csv,56,new,0.3955372888851754,0.3955372888851754
+report quote 457,calc/out/run23/abstract_bound_changes.csv,56,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 458,calc/out/run23/abstract_bound_changes.csv,57,old,0.09102711892756471,0.09102711892756471
+report quote 459,calc/out/run23/abstract_bound_changes.csv,57,new,0.09102775963384858,0.09102775963384858
+report quote 460,calc/out/run23/abstract_bound_changes.csv,57,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 461,calc/out/run23/abstract_bound_changes.csv,58,old,68.92575,68.92575
+report quote 462,calc/out/run23/abstract_bound_changes.csv,58,new,68.92575,68.92575
+report quote 463,calc/out/run23/abstract_bound_changes.csv,58,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 464,calc/out/run23/abstract_bound_changes.csv,59,old,0.029319732533488702,0.029319732533488702
+report quote 465,calc/out/run23/abstract_bound_changes.csv,59,new,0.029319732533488702,0.029319732533488702
+report quote 466,calc/out/run23/abstract_bound_changes.csv,59,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 467,calc/out/run23/abstract_bound_changes.csv,60,old,0.006747554884419318,0.006747554884419318
+report quote 468,calc/out/run23/abstract_bound_changes.csv,60,new,0.006747554884419318,0.006747554884419318
+report quote 469,calc/out/run23/abstract_bound_changes.csv,60,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 470,calc/out/run23/abstract_bound_changes.csv,61,old,61.40575,61.40575
+report quote 471,calc/out/run23/abstract_bound_changes.csv,61,new,61.40575,61.40575
+report quote 472,calc/out/run23/abstract_bound_changes.csv,61,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 473,calc/out/run23/abstract_bound_changes.csv,62,old,0.39553450486382286,0.39553450486382286
+report quote 474,calc/out/run23/abstract_bound_changes.csv,62,new,0.3955372888851754,0.3955372888851754
+report quote 475,calc/out/run23/abstract_bound_changes.csv,62,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 476,calc/out/run23/abstract_bound_changes.csv,63,old,0.09102711892756471,0.09102711892756471
+report quote 477,calc/out/run23/abstract_bound_changes.csv,63,new,0.09102775963384858,0.09102775963384858
+report quote 478,calc/out/run23/abstract_bound_changes.csv,63,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 479,calc/out/run23/abstract_bound_changes.csv,64,old,212.20583333333335,212.20583333333335
+report quote 480,calc/out/run23/abstract_bound_changes.csv,64,new,212.20583333333335,212.20583333333335
+report quote 481,calc/out/run23/abstract_bound_changes.csv,64,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 482,calc/out/run23/abstract_bound_changes.csv,65,old,0.03908326730405352,0.03908326730405352
+report quote 483,calc/out/run23/abstract_bound_changes.csv,65,new,0.03908326730405352,0.03908326730405352
+report quote 484,calc/out/run23/abstract_bound_changes.csv,65,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 485,calc/out/run23/abstract_bound_changes.csv,66,old,0.008994505352165743,0.008994505352165743
+report quote 486,calc/out/run23/abstract_bound_changes.csv,66,new,0.008994505352165743,0.008994505352165743
+report quote 487,calc/out/run23/abstract_bound_changes.csv,66,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 488,calc/out/run23/abstract_bound_changes.csv,67,old,204.68583333333333,204.68583333333333
+report quote 489,calc/out/run23/abstract_bound_changes.csv,67,new,204.68583333333333,204.68583333333333
+report quote 490,calc/out/run23/abstract_bound_changes.csv,67,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 491,calc/out/run23/abstract_bound_changes.csv,68,old,0.405285793439495,0.405285793439495
+report quote 492,calc/out/run23/abstract_bound_changes.csv,68,new,0.40492661970308735,0.40492661970308735
+report quote 493,calc/out/run23/abstract_bound_changes.csv,68,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 494,calc/out/run23/abstract_bound_changes.csv,69,old,0.09327125109292489,0.09327125109292489
+report quote 495,calc/out/run23/abstract_bound_changes.csv,69,new,0.09318859193166941,0.09318859193166941
+report quote 496,calc/out/run23/abstract_bound_changes.csv,69,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 497,calc/out/run23/abstract_bound_changes.csv,70,old,130.3315,130.3315
+report quote 498,calc/out/run23/abstract_bound_changes.csv,70,new,130.3315,130.3315
+report quote 499,calc/out/run23/abstract_bound_changes.csv,70,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 500,calc/out/run23/abstract_bound_changes.csv,71,old,0.061877710993244975,0.061877710993244975
+report quote 501,calc/out/run23/abstract_bound_changes.csv,71,new,0.061877710993244975,0.061877710993244975
+report quote 502,calc/out/run23/abstract_bound_changes.csv,71,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 503,calc/out/run23/abstract_bound_changes.csv,72,old,0.014240349927212542,0.014240349927212542
+report quote 504,calc/out/run23/abstract_bound_changes.csv,72,new,0.014240349927212542,0.014240349927212542
+report quote 505,calc/out/run23/abstract_bound_changes.csv,72,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 506,calc/out/run23/abstract_bound_changes.csv,73,old,245.623,245.623
+report quote 507,calc/out/run23/abstract_bound_changes.csv,73,new,245.623,245.623
+report quote 508,calc/out/run23/abstract_bound_changes.csv,73,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 509,calc/out/run23/abstract_bound_changes.csv,74,old,0.3217008618488369,0.3217008618488369
+report quote 510,calc/out/run23/abstract_bound_changes.csv,74,new,0.3212011823959272,0.3212011823959272
+report quote 511,calc/out/run23/abstract_bound_changes.csv,74,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 512,calc/out/run23/abstract_bound_changes.csv,75,old,0.07403526683644465,0.07403526683644465
+report quote 513,calc/out/run23/abstract_bound_changes.csv,75,new,0.0739202721130353,0.0739202721130353
+report quote 514,calc/out/run23/abstract_bound_changes.csv,75,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 515,calc/out/run23/abstract_bound_changes.csv,76,old,68.92575,68.92575
+report quote 516,calc/out/run23/abstract_bound_changes.csv,76,new,68.92575,68.92575
+report quote 517,calc/out/run23/abstract_bound_changes.csv,76,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 518,calc/out/run23/abstract_bound_changes.csv,77,old,0.11727893013395481,0.11727893013395481
+report quote 519,calc/out/run23/abstract_bound_changes.csv,77,new,0.11727893013395481,0.11727893013395481
+report quote 520,calc/out/run23/abstract_bound_changes.csv,77,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 521,calc/out/run23/abstract_bound_changes.csv,78,old,0.026990219537677274,0.026990219537677274
+report quote 522,calc/out/run23/abstract_bound_changes.csv,78,new,0.026990219537677274,0.026990219537677274
+report quote 523,calc/out/run23/abstract_bound_changes.csv,78,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 524,calc/out/run23/abstract_bound_changes.csv,79,old,184.21725,184.21725
+report quote 525,calc/out/run23/abstract_bound_changes.csv,79,new,184.21725,184.21725
+report quote 526,calc/out/run23/abstract_bound_changes.csv,79,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 527,calc/out/run23/abstract_bound_changes.csv,80,old,0.4611329189802121,0.4611329189802121
+report quote 528,calc/out/run23/abstract_bound_changes.csv,80,new,0.46087739542139816,0.46087739542139816
+report quote 529,calc/out/run23/abstract_bound_changes.csv,80,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 530,calc/out/run23/abstract_bound_changes.csv,81,old,0.10612374025845978,0.10612374025845978
+report quote 531,calc/out/run23/abstract_bound_changes.csv,81,new,0.10606493483670533,0.10606493483670533
+report quote 532,calc/out/run23/abstract_bound_changes.csv,81,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 533,calc/out/run23/abstract_bound_changes.csv,82,old,68.92575,68.92575
+report quote 534,calc/out/run23/abstract_bound_changes.csv,82,new,68.92575,68.92575
+report quote 535,calc/out/run23/abstract_bound_changes.csv,82,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 536,calc/out/run23/abstract_bound_changes.csv,83,old,0.11727893013395481,0.11727893013395481
+report quote 537,calc/out/run23/abstract_bound_changes.csv,83,new,0.11727893013395481,0.11727893013395481
+report quote 538,calc/out/run23/abstract_bound_changes.csv,83,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 539,calc/out/run23/abstract_bound_changes.csv,84,old,0.026990219537677274,0.026990219537677274
+report quote 540,calc/out/run23/abstract_bound_changes.csv,84,new,0.026990219537677274,0.026990219537677274
+report quote 541,calc/out/run23/abstract_bound_changes.csv,84,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 542,calc/out/run23/abstract_bound_changes.csv,85,old,153.514375,153.514375
+report quote 543,calc/out/run23/abstract_bound_changes.csv,85,new,153.514375,153.514375
+report quote 544,calc/out/run23/abstract_bound_changes.csv,85,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 545,calc/out/run23/abstract_bound_changes.csv,86,old,0.5730381315062181,0.5730381315062181
+report quote 546,calc/out/run23/abstract_bound_changes.csv,86,new,0.5728941771994857,0.5728941771994857
+report quote 547,calc/out/run23/abstract_bound_changes.csv,86,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 548,calc/out/run23/abstract_bound_changes.csv,87,old,0.13187726862060908,0.13187726862060908
+report quote 549,calc/out/run23/abstract_bound_changes.csv,87,new,0.13184413941029258,0.13184413941029258
+report quote 550,calc/out/run23/abstract_bound_changes.csv,87,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 551,calc/out/run23/abstract_bound_changes.csv,88,old,212.20583333333335,212.20583333333335
+report quote 552,calc/out/run23/abstract_bound_changes.csv,88,new,212.20583333333335,212.20583333333335
+report quote 553,calc/out/run23/abstract_bound_changes.csv,88,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 554,calc/out/run23/abstract_bound_changes.csv,89,old,0.12213521032516726,0.12213521032516726
+report quote 555,calc/out/run23/abstract_bound_changes.csv,89,new,0.12213521032516726,0.12213521032516726
+report quote 556,calc/out/run23/abstract_bound_changes.csv,89,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 557,calc/out/run23/abstract_bound_changes.csv,90,old,0.028107829225517945,0.028107829225517945
+report quote 558,calc/out/run23/abstract_bound_changes.csv,90,new,0.028107829225517945,0.028107829225517945
+report quote 559,calc/out/run23/abstract_bound_changes.csv,90,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 560,calc/out/run23/abstract_bound_changes.csv,91,old,409.37166666666667,409.37166666666667
+report quote 561,calc/out/run23/abstract_bound_changes.csv,91,new,409.37166666666667,409.37166666666667
+report quote 562,calc/out/run23/abstract_bound_changes.csv,91,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 563,calc/out/run23/abstract_bound_changes.csv,92,old,0.4877948780992937,0.4877948780992937
+report quote 564,calc/out/run23/abstract_bound_changes.csv,92,new,0.4843480540539637,0.4843480540539637
+report quote 565,calc/out/run23/abstract_bound_changes.csv,92,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 566,calc/out/run23/abstract_bound_changes.csv,93,old,0.11225964317901554,0.11225964317901554
+report quote 567,calc/out/run23/abstract_bound_changes.csv,93,new,0.11146640148091219,0.11146640148091219
+report quote 568,calc/out/run23/abstract_bound_changes.csv,93,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 569,calc/out/run23/abstract_bound_changes.csv,94,old,130.3315,130.3315
+report quote 570,calc/out/run23/abstract_bound_changes.csv,94,new,130.3315,130.3315
+report quote 571,calc/out/run23/abstract_bound_changes.csv,94,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 572,calc/out/run23/abstract_bound_changes.csv,95,old,0.19336784685389052,0.19336784685389052
+report quote 573,calc/out/run23/abstract_bound_changes.csv,95,new,0.19336784685389052,0.19336784685389052
+report quote 574,calc/out/run23/abstract_bound_changes.csv,95,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 575,calc/out/run23/abstract_bound_changes.csv,96,old,0.04450109352253919,0.04450109352253919
+report quote 576,calc/out/run23/abstract_bound_changes.csv,96,new,0.04450109352253919,0.04450109352253919
+report quote 577,calc/out/run23/abstract_bound_changes.csv,96,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 578,calc/out/run23/abstract_bound_changes.csv,97,old,368.4345,368.4345
+report quote 579,calc/out/run23/abstract_bound_changes.csv,97,new,368.4345,368.4345
+report quote 580,calc/out/run23/abstract_bound_changes.csv,97,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 581,calc/out/run23/abstract_bound_changes.csv,98,old,0.5733639443236279,0.5733639443236279
+report quote 582,calc/out/run23/abstract_bound_changes.csv,98,new,0.5702883547514748,0.5702883547514748
+report quote 583,calc/out/run23/abstract_bound_changes.csv,98,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 584,calc/out/run23/abstract_bound_changes.csv,99,old,0.13195225020050616,0.13195225020050616
+report quote 585,calc/out/run23/abstract_bound_changes.csv,99,new,0.1312444432852709,0.1312444432852709
+report quote 586,calc/out/run23/abstract_bound_changes.csv,99,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 587,calc/out/run23/abstract_bound_changes.csv,100,old,68.92575,68.92575
+report quote 588,calc/out/run23/abstract_bound_changes.csv,100,new,68.92575,68.92575
+report quote 589,calc/out/run23/abstract_bound_changes.csv,100,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 590,calc/out/run23/abstract_bound_changes.csv,101,old,0.3664966566686088,0.3664966566686088
+report quote 591,calc/out/run23/abstract_bound_changes.csv,101,new,0.3664966566686088,0.3664966566686088
+report quote 592,calc/out/run23/abstract_bound_changes.csv,101,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 593,calc/out/run23/abstract_bound_changes.csv,102,old,0.08434443605524149,0.08434443605524149
+report quote 594,calc/out/run23/abstract_bound_changes.csv,102,new,0.08434443605524149,0.08434443605524149
+report quote 595,calc/out/run23/abstract_bound_changes.csv,102,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 596,calc/out/run23/abstract_bound_changes.csv,103,old,368.4345,368.4345
+report quote 597,calc/out/run23/abstract_bound_changes.csv,103,new,368.4345,368.4345
+report quote 598,calc/out/run23/abstract_bound_changes.csv,103,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 599,calc/out/run23/abstract_bound_changes.csv,104,old,0.5733639443236279,0.5733639443236279
+report quote 600,calc/out/run23/abstract_bound_changes.csv,104,new,0.5702883547514748,0.5702883547514748
+report quote 601,calc/out/run23/abstract_bound_changes.csv,104,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 602,calc/out/run23/abstract_bound_changes.csv,105,old,0.13195225020050616,0.13195225020050616
+report quote 603,calc/out/run23/abstract_bound_changes.csv,105,new,0.1312444432852709,0.1312444432852709
+report quote 604,calc/out/run23/abstract_bound_changes.csv,105,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 605,calc/out/run23/abstract_bound_changes.csv,106,old,68.92575,68.92575
+report quote 606,calc/out/run23/abstract_bound_changes.csv,106,new,68.92575,68.92575
+report quote 607,calc/out/run23/abstract_bound_changes.csv,106,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 608,calc/out/run23/abstract_bound_changes.csv,107,old,0.3664966566686088,0.3664966566686088
+report quote 609,calc/out/run23/abstract_bound_changes.csv,107,new,0.3664966566686088,0.3664966566686088
+report quote 610,calc/out/run23/abstract_bound_changes.csv,107,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 611,calc/out/run23/abstract_bound_changes.csv,108,old,0.08434443605524149,0.08434443605524149
+report quote 612,calc/out/run23/abstract_bound_changes.csv,108,new,0.08434443605524149,0.08434443605524149
+report quote 613,calc/out/run23/abstract_bound_changes.csv,108,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 614,calc/out/run23/abstract_bound_changes.csv,109,old,337.731625,337.731625
+report quote 615,calc/out/run23/abstract_bound_changes.csv,109,new,337.731625,337.731625
+report quote 616,calc/out/run23/abstract_bound_changes.csv,109,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 617,calc/out/run23/abstract_bound_changes.csv,110,old,0.6512914738781933,0.6512914738781933
+report quote 618,calc/out/run23/abstract_bound_changes.csv,110,new,0.6486127379929402,0.6486127379929402
+report quote 619,calc/out/run23/abstract_bound_changes.csv,110,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 620,calc/out/run23/abstract_bound_changes.csv,111,old,0.14988625700210476,0.14988625700210476
+report quote 621,calc/out/run23/abstract_bound_changes.csv,111,new,0.14926978079837527,0.14926978079837527
+report quote 622,calc/out/run23/abstract_bound_changes.csv,111,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 623,calc/out/run23/abstract_bound_changes.csv,112,old,56.644600000000004,56.644600000000004
+report quote 624,calc/out/run23/abstract_bound_changes.csv,112,new,56.644600000000004,56.644600000000004
+report quote 625,calc/out/run23/abstract_bound_changes.csv,112,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 626,calc/out/run23/abstract_bound_changes.csv,113,old,0.036139896849339874,0.036139896849339874
+report quote 627,calc/out/run23/abstract_bound_changes.csv,113,new,0.036139896849339874,0.036139896849339874
+report quote 628,calc/out/run23/abstract_bound_changes.csv,113,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 629,calc/out/run23/abstract_bound_changes.csv,114,old,0.00831712694614945,0.00831712694614945
+report quote 630,calc/out/run23/abstract_bound_changes.csv,114,new,0.00831712694614945,0.00831712694614945
+report quote 631,calc/out/run23/abstract_bound_changes.csv,114,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 632,calc/out/run23/abstract_bound_changes.csv,115,old,0.08775148201614674,0.08775148201614674
+report quote 633,calc/out/run23/abstract_bound_changes.csv,115,new,0.08775148201614674,0.08775148201614674
+report quote 634,calc/out/run23/abstract_bound_changes.csv,115,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 635,calc/out/run23/abstract_bound_changes.csv,116,old,15.903889624105993,15.903889624105993
+report quote 636,calc/out/run23/abstract_bound_changes.csv,116,new,15.903889624105993,15.903889624105993
+report quote 637,calc/out/run23/abstract_bound_changes.csv,116,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 638,calc/out/run23/abstract_bound_changes.csv,117,old,0.31254288829304183,0.31254288829304183
+report quote 639,calc/out/run23/abstract_bound_changes.csv,117,new,0.31254288829304183,0.31254288829304183
+report quote 640,calc/out/run23/abstract_bound_changes.csv,117,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 641,calc/out/run23/abstract_bound_changes.csv,118,old,56.644600000000004,56.644600000000004
+report quote 642,calc/out/run23/abstract_bound_changes.csv,118,new,56.644600000000004,56.644600000000004
+report quote 643,calc/out/run23/abstract_bound_changes.csv,118,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 644,calc/out/run23/abstract_bound_changes.csv,119,old,0.1445595873973595,0.1445595873973595
+report quote 645,calc/out/run23/abstract_bound_changes.csv,119,new,0.1445595873973595,0.1445595873973595
+report quote 646,calc/out/run23/abstract_bound_changes.csv,119,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 647,calc/out/run23/abstract_bound_changes.csv,120,old,0.0332685077845978,0.0332685077845978
+report quote 648,calc/out/run23/abstract_bound_changes.csv,120,new,0.0332685077845978,0.0332685077845978
+report quote 649,calc/out/run23/abstract_bound_changes.csv,120,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 650,calc/out/run23/abstract_bound_changes.csv,121,old,0.35100592806458697,0.35100592806458697
+report quote 651,calc/out/run23/abstract_bound_changes.csv,121,new,0.35100592806458697,0.35100592806458697
+report quote 652,calc/out/run23/abstract_bound_changes.csv,121,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 653,calc/out/run23/abstract_bound_changes.csv,122,old,21.285129875623976,21.285129875623976
+report quote 654,calc/out/run23/abstract_bound_changes.csv,122,new,21.285129875623976,21.285129875623976
+report quote 655,calc/out/run23/abstract_bound_changes.csv,122,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 656,calc/out/run23/abstract_bound_changes.csv,123,old,0.9341070742357612,0.9341070742357612
+report quote 657,calc/out/run23/abstract_bound_changes.csv,123,new,0.9341070742357612,0.9341070742357612
+report quote 658,calc/out/run23/abstract_bound_changes.csv,123,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 659,calc/out/run23/abstract_bound_changes.csv,124,old,56.644600000000004,56.644600000000004
+report quote 660,calc/out/run23/abstract_bound_changes.csv,124,new,56.644600000000004,56.644600000000004
+report quote 661,calc/out/run23/abstract_bound_changes.csv,124,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 662,calc/out/run23/abstract_bound_changes.csv,125,old,0.45174871061674843,0.45174871061674843
+report quote 663,calc/out/run23/abstract_bound_changes.csv,125,new,0.45174871061674843,0.45174871061674843
+report quote 664,calc/out/run23/abstract_bound_changes.csv,125,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 665,calc/out/run23/abstract_bound_changes.csv,126,old,0.10396408682686811,0.10396408682686811
+report quote 666,calc/out/run23/abstract_bound_changes.csv,126,new,0.10396408682686811,0.10396408682686811
+report quote 667,calc/out/run23/abstract_bound_changes.csv,126,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 668,calc/out/run23/abstract_bound_changes.csv,127,old,1.0968935252018344,1.0968935252018344
+report quote 669,calc/out/run23/abstract_bound_changes.csv,127,new,1.0968935252018344,1.0968935252018344
+report quote 670,calc/out/run23/abstract_bound_changes.csv,127,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 671,calc/out/run23/abstract_bound_changes.csv,128,old,36.531977254924925,36.531977254924925
+report quote 672,calc/out/run23/abstract_bound_changes.csv,128,new,36.531977254924925,36.531977254924925
+report quote 673,calc/out/run23/abstract_bound_changes.csv,128,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 674,calc/out/run23/abstract_bound_changes.csv,129,old,1.7007865340568606,1.7007865340568606
+report quote 675,calc/out/run23/abstract_bound_changes.csv,129,new,1.7007865340568606,1.7007865340568606
+report quote 676,calc/out/run23/abstract_bound_changes.csv,129,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 677,calc/out/run23/abstract_bound_changes.csv,130,old,56.644600000000004,56.644600000000004
+report quote 678,calc/out/run23/abstract_bound_changes.csv,130,new,56.644600000000004,56.644600000000004
+report quote 679,calc/out/run23/abstract_bound_changes.csv,130,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 680,calc/out/run23/abstract_bound_changes.csv,131,old,0.0,0.0
+report quote 681,calc/out/run23/abstract_bound_changes.csv,131,new,0.0,0.0
+report quote 682,calc/out/run23/abstract_bound_changes.csv,131,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 683,calc/out/run23/abstract_bound_changes.csv,132,old,0.0,0.0
+report quote 684,calc/out/run23/abstract_bound_changes.csv,132,new,0.0,0.0
+report quote 685,calc/out/run23/abstract_bound_changes.csv,132,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 686,calc/out/run23/abstract_bound_changes.csv,133,old,0.09932548534106023,0.09932548534106023
+report quote 687,calc/out/run23/abstract_bound_changes.csv,133,new,0.09932548534106023,0.09932548534106023
+report quote 688,calc/out/run23/abstract_bound_changes.csv,133,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 689,calc/out/run23/abstract_bound_changes.csv,134,old,14.110142873600001,14.110142873600001
+report quote 690,calc/out/run23/abstract_bound_changes.csv,134,new,14.110142873600001,14.110142873600001
+report quote 691,calc/out/run23/abstract_bound_changes.csv,134,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 692,calc/out/run23/abstract_bound_changes.csv,135,old,0.3987381585963178,0.3987381585963178
+report quote 693,calc/out/run23/abstract_bound_changes.csv,135,new,0.3987381585963178,0.3987381585963178
+report quote 694,calc/out/run23/abstract_bound_changes.csv,135,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 695,calc/out/run23/abstract_bound_changes.csv,136,old,56.644600000000004,56.644600000000004
+report quote 696,calc/out/run23/abstract_bound_changes.csv,136,new,56.644600000000004,56.644600000000004
+report quote 697,calc/out/run23/abstract_bound_changes.csv,136,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 698,calc/out/run23/abstract_bound_changes.csv,137,old,0.0,0.0
+report quote 699,calc/out/run23/abstract_bound_changes.csv,137,new,0.0,0.0
+report quote 700,calc/out/run23/abstract_bound_changes.csv,137,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 701,calc/out/run23/abstract_bound_changes.csv,138,old,0.0,0.0
+report quote 702,calc/out/run23/abstract_bound_changes.csv,138,new,0.0,0.0
+report quote 703,calc/out/run23/abstract_bound_changes.csv,138,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 704,calc/out/run23/abstract_bound_changes.csv,139,old,0.3973019413642409,0.3973019413642409
+report quote 705,calc/out/run23/abstract_bound_changes.csv,139,new,0.3973019413642409,0.3973019413642409
+report quote 706,calc/out/run23/abstract_bound_changes.csv,139,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 707,calc/out/run23/abstract_bound_changes.csv,140,old,14.110142873600001,14.110142873600001
+report quote 708,calc/out/run23/abstract_bound_changes.csv,140,new,14.110142873600001,14.110142873600001
+report quote 709,calc/out/run23/abstract_bound_changes.csv,140,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 710,calc/out/run23/abstract_bound_changes.csv,141,old,1.5949526343852711,1.5949526343852711
+report quote 711,calc/out/run23/abstract_bound_changes.csv,141,new,1.5949526343852711,1.5949526343852711
+report quote 712,calc/out/run23/abstract_bound_changes.csv,141,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 713,calc/out/run23/abstract_bound_changes.csv,142,old,56.644600000000004,56.644600000000004
+report quote 714,calc/out/run23/abstract_bound_changes.csv,142,new,56.644600000000004,56.644600000000004
+report quote 715,calc/out/run23/abstract_bound_changes.csv,142,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 716,calc/out/run23/abstract_bound_changes.csv,143,old,0.0,0.0
+report quote 717,calc/out/run23/abstract_bound_changes.csv,143,new,0.0,0.0
+report quote 718,calc/out/run23/abstract_bound_changes.csv,143,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 719,calc/out/run23/abstract_bound_changes.csv,144,old,0.0,0.0
+report quote 720,calc/out/run23/abstract_bound_changes.csv,144,new,0.0,0.0
+report quote 721,calc/out/run23/abstract_bound_changes.csv,144,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 722,calc/out/run23/abstract_bound_changes.csv,145,old,1.2415685667632528,1.2415685667632528
+report quote 723,calc/out/run23/abstract_bound_changes.csv,145,new,1.2415685667632528,1.2415685667632528
+report quote 724,calc/out/run23/abstract_bound_changes.csv,145,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 725,calc/out/run23/abstract_bound_changes.csv,146,old,14.110142873600001,14.110142873600001
+report quote 726,calc/out/run23/abstract_bound_changes.csv,146,new,14.110142873600001,14.110142873600001
+report quote 727,calc/out/run23/abstract_bound_changes.csv,146,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 728,calc/out/run23/abstract_bound_changes.csv,147,old,4.984226982453973,4.984226982453973
+report quote 729,calc/out/run23/abstract_bound_changes.csv,147,new,4.984226982453973,4.984226982453973
+report quote 730,calc/out/run23/abstract_bound_changes.csv,147,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 731,calc/out/run23/abstract_bound_changes.csv,148,old,5.504775253207224,5.504775253207224
+report quote 732,calc/out/run23/abstract_bound_changes.csv,148,new,5.504775253207224,5.504775253207224
+report quote 733,calc/out/run23/abstract_bound_changes.csv,148,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 734,calc/out/run23/abstract_bound_changes.csv,149,old,19.51867419204954,19.51867419204954
+report quote 735,calc/out/run23/abstract_bound_changes.csv,149,new,19.51867419204954,19.51867419204954
+report quote 736,calc/out/run23/abstract_bound_changes.csv,149,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 737,calc/out/run23/abstract_bound_changes.csv,150,old,1.2129778734675853,1.2129778734675853
+report quote 738,calc/out/run23/abstract_bound_changes.csv,150,new,1.2129778734675853,1.2129778734675853
+report quote 739,calc/out/run23/abstract_bound_changes.csv,150,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 740,calc/out/run23/abstract_bound_changes.csv,151,old,5.917437616918841,5.917437616918841
+report quote 741,calc/out/run23/abstract_bound_changes.csv,151,new,5.917437616918841,5.917437616918841
+report quote 742,calc/out/run23/abstract_bound_changes.csv,151,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 743,calc/out/run23/abstract_bound_changes.csv,152,old,54.7147283,54.7147283
+report quote 744,calc/out/run23/abstract_bound_changes.csv,152,new,54.7147283,54.7147283
+report quote 745,calc/out/run23/abstract_bound_changes.csv,152,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 746,calc/out/run23/abstract_bound_changes.csv,153,old,93.58137986999999,93.58137986999999
+report quote 747,calc/out/run23/abstract_bound_changes.csv,153,new,93.58137986999999,93.58137986999999
+report quote 748,calc/out/run23/abstract_bound_changes.csv,153,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 749,calc/out/run23/abstract_bound_changes.csv,154,old,93.58137986999999,93.58137986999999
+report quote 750,calc/out/run23/abstract_bound_changes.csv,154,new,93.58137986999999,93.58137986999999
+report quote 751,calc/out/run23/abstract_bound_changes.csv,154,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 752,calc/out/run23/abstract_bound_changes.csv,155,old,95.3506191925,95.3506191925
+report quote 753,calc/out/run23/abstract_bound_changes.csv,155,new,95.3506191925,95.3506191925
+report quote 754,calc/out/run23/abstract_bound_changes.csv,155,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 755,calc/out/run23/abstract_bound_changes.csv,156,old,93.58137986999999,93.58137986999999
+report quote 756,calc/out/run23/abstract_bound_changes.csv,156,new,93.58137986999999,93.58137986999999
+report quote 757,calc/out/run23/abstract_bound_changes.csv,156,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 758,calc/out/run23/abstract_bound_changes.csv,157,old,1,1
+report quote 759,calc/out/run23/abstract_bound_changes.csv,157,new,1,1
+report quote 760,calc/out/run23/abstract_bound_changes.csv,157,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 761,calc/out/run23/abstract_bound_changes.csv,158,old,48.7166723842491,48.7166723842491
+report quote 762,calc/out/run23/abstract_bound_changes.csv,158,new,48.70453006338683,48.70453006338683
+report quote 763,calc/out/run23/abstract_bound_changes.csv,158,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 764,calc/out/run23/abstract_bound_changes.csv,159,old,1.0,1.0
+report quote 765,calc/out/run23/abstract_bound_changes.csv,159,new,1.0,1.0
+report quote 766,calc/out/run23/abstract_bound_changes.csv,159,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 767,calc/out/run23/abstract_bound_changes.csv,160,old,8,8
+report quote 768,calc/out/run23/abstract_bound_changes.csv,160,new,8,8
+report quote 769,calc/out/run23/abstract_bound_changes.csv,160,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 770,calc/out/run23/abstract_bound_changes.csv,161,old,302.9805555126111,302.9805555126111
+report quote 771,calc/out/run23/abstract_bound_changes.csv,161,new,302.59977133502423,302.59977133502423
+report quote 772,calc/out/run23/abstract_bound_changes.csv,161,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 773,calc/out/run23/abstract_bound_changes.csv,162,old,6.21923749477129,6.21923749477129
+report quote 774,calc/out/run23/abstract_bound_changes.csv,162,new,6.212969736925986,6.212969736925986
+report quote 775,calc/out/run23/abstract_bound_changes.csv,162,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 776,calc/out/run23/abstract_bound_changes.csv,163,old,32,32
+report quote 777,calc/out/run23/abstract_bound_changes.csv,163,new,32,32
+report quote 778,calc/out/run23/abstract_bound_changes.csv,163,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 779,calc/out/run23/abstract_bound_changes.csv,164,old,686.7991215323314,686.7991215323314
+report quote 780,calc/out/run23/abstract_bound_changes.csv,164,new,686.816953541619,686.816953541619
+report quote 781,calc/out/run23/abstract_bound_changes.csv,164,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 782,calc/out/run23/abstract_bound_changes.csv,165,old,14.097824993366846,14.097824993366846
+report quote 783,calc/out/run23/abstract_bound_changes.csv,165,new,14.101705788922645,14.101705788922645
+report quote 784,calc/out/run23/abstract_bound_changes.csv,165,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 785,calc/out/run23/abstract_bound_changes.csv,166,old,39,39
+report quote 786,calc/out/run23/abstract_bound_changes.csv,166,new,39,39
+report quote 787,calc/out/run23/abstract_bound_changes.csv,166,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 788,calc/out/run23/abstract_bound_changes.csv,167,old,738.101276255454,738.101276255454
+report quote 789,calc/out/run23/abstract_bound_changes.csv,167,new,737.9342485617974,737.9342485617974
+report quote 790,calc/out/run23/abstract_bound_changes.csv,167,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 791,calc/out/run23/abstract_bound_changes.csv,168,old,15.150896810720885,15.150896810720885
+report quote 792,calc/out/run23/abstract_bound_changes.csv,168,new,15.151244609103262,15.151244609103262
+report quote 793,calc/out/run23/abstract_bound_changes.csv,168,why,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled,PRO multi-depth decode/residency measurements and stated interpolation replace sparse/modelled points; B300 remains modelled
+report quote 794,calc/out/run23/abstract_bound_changes.csv,169,old,70.52917150992289,70.52917150992289
+report quote 795,calc/out/run23/abstract_bound_changes.csv,169,new,72.408,72.408
+report quote 796,calc/out/run23/abstract_bound_changes.csv,169,why,"M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible","M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible"
+report quote 797,calc/out/run23/abstract_bound_changes.csv,170,old,34.93680903769063,34.93680903769063
+report quote 798,calc/out/run23/abstract_bound_changes.csv,170,new,40.479,40.479
+report quote 799,calc/out/run23/abstract_bound_changes.csv,170,why,"M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible","M3 deep local time measured at1.04M; full-slot warm LaCie recovery charged as explicit proxy, not delta-import measurement; PRO1M impossible"
+report quote 800,calc/out/run23/abstract_bound_changes.csv,171,old,1.67,1.67
+report quote 801,calc/out/run23/abstract_bound_changes.csv,171,new,1.6638,1.6638
+report quote 802,calc/out/run23/abstract_bound_changes.csv,171,why,normal-priority1.04M decode replaces background-priority1.67; actual measured depth retained,normal-priority1.04M decode replaces background-priority1.67; actual measured depth retained
+report quote 803,calc/out/run23/abstract_bound_changes.csv,172,old,7.415249282896157,7.415249282896157
+report quote 804,calc/out/run23/abstract_bound_changes.csv,172,new,7.415249282896157,7.415249282896157
+report quote 805,calc/out/run23/abstract_bound_changes.csv,172,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 806,calc/out/run23/abstract_bound_changes.csv,173,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 807,calc/out/run23/abstract_bound_changes.csv,173,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 808,calc/out/run23/abstract_bound_changes.csv,173,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 809,calc/out/run23/abstract_bound_changes.csv,174,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 810,calc/out/run23/abstract_bound_changes.csv,174,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 811,calc/out/run23/abstract_bound_changes.csv,174,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 812,calc/out/run23/abstract_bound_changes.csv,175,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 813,calc/out/run23/abstract_bound_changes.csv,175,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 814,calc/out/run23/abstract_bound_changes.csv,175,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 815,calc/out/run23/abstract_bound_changes.csv,176,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 816,calc/out/run23/abstract_bound_changes.csv,176,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 817,calc/out/run23/abstract_bound_changes.csv,176,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 818,calc/out/run23/abstract_bound_changes.csv,177,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 819,calc/out/run23/abstract_bound_changes.csv,177,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 820,calc/out/run23/abstract_bound_changes.csv,177,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 821,calc/out/run23/abstract_bound_changes.csv,178,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 822,calc/out/run23/abstract_bound_changes.csv,178,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 823,calc/out/run23/abstract_bound_changes.csv,178,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 824,calc/out/run23/abstract_bound_changes.csv,179,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 825,calc/out/run23/abstract_bound_changes.csv,179,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 826,calc/out/run23/abstract_bound_changes.csv,179,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 827,calc/out/run23/abstract_bound_changes.csv,180,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 828,calc/out/run23/abstract_bound_changes.csv,180,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 829,calc/out/run23/abstract_bound_changes.csv,180,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 830,calc/out/run23/abstract_bound_changes.csv,181,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 831,calc/out/run23/abstract_bound_changes.csv,181,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 832,calc/out/run23/abstract_bound_changes.csv,181,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 833,calc/out/run23/abstract_bound_changes.csv,182,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 834,calc/out/run23/abstract_bound_changes.csv,182,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 835,calc/out/run23/abstract_bound_changes.csv,182,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 836,calc/out/run23/abstract_bound_changes.csv,183,old,cheaper from 5 people through 500 scanned people,cheaper from 5 people through 500 scanned people
+report quote 837,calc/out/run23/abstract_bound_changes.csv,183,new,cheaper from 5 people through 500 scanned people,cheaper from 5 people through 500 scanned people
+report quote 838,calc/out/run23/abstract_bound_changes.csv,183,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 839,calc/out/run23/abstract_bound_changes.csv,184,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 840,calc/out/run23/abstract_bound_changes.csv,184,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 841,calc/out/run23/abstract_bound_changes.csv,184,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 842,calc/out/run23/abstract_bound_changes.csv,185,old,cheaper from 32 people through 500 scanned people,cheaper from 32 people through 500 scanned people
+report quote 843,calc/out/run23/abstract_bound_changes.csv,185,new,cheaper from 32 people through 500 scanned people,cheaper from 32 people through 500 scanned people
+report quote 844,calc/out/run23/abstract_bound_changes.csv,185,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 845,calc/out/run23/abstract_bound_changes.csv,186,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 846,calc/out/run23/abstract_bound_changes.csv,186,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 847,calc/out/run23/abstract_bound_changes.csv,186,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 848,calc/out/run23/abstract_bound_changes.csv,187,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 849,calc/out/run23/abstract_bound_changes.csv,187,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 850,calc/out/run23/abstract_bound_changes.csv,187,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 851,calc/out/run23/abstract_bound_changes.csv,188,old,cheaper from 5 people through 500 scanned people,cheaper from 5 people through 500 scanned people
+report quote 852,calc/out/run23/abstract_bound_changes.csv,188,new,cheaper from 5 people through 500 scanned people,cheaper from 5 people through 500 scanned people
+report quote 853,calc/out/run23/abstract_bound_changes.csv,188,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 854,calc/out/run23/abstract_bound_changes.csv,189,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 855,calc/out/run23/abstract_bound_changes.csv,189,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 856,calc/out/run23/abstract_bound_changes.csv,189,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 857,calc/out/run23/abstract_bound_changes.csv,190,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 858,calc/out/run23/abstract_bound_changes.csv,190,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 859,calc/out/run23/abstract_bound_changes.csv,190,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 860,calc/out/run23/abstract_bound_changes.csv,191,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 861,calc/out/run23/abstract_bound_changes.csv,191,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 862,calc/out/run23/abstract_bound_changes.csv,191,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 863,calc/out/run23/abstract_bound_changes.csv,192,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 864,calc/out/run23/abstract_bound_changes.csv,192,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 865,calc/out/run23/abstract_bound_changes.csv,192,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 866,calc/out/run23/abstract_bound_changes.csv,193,old,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 867,calc/out/run23/abstract_bound_changes.csv,193,new,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 868,calc/out/run23/abstract_bound_changes.csv,193,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 869,calc/out/run23/abstract_bound_changes.csv,194,old,cheaper from 74 people through 500 scanned people,cheaper from 74 people through 500 scanned people
+report quote 870,calc/out/run23/abstract_bound_changes.csv,194,new,cheaper from 74 people through 500 scanned people,cheaper from 74 people through 500 scanned people
+report quote 871,calc/out/run23/abstract_bound_changes.csv,194,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 872,calc/out/run23/abstract_bound_changes.csv,195,old,cheaper from 4 people through 500 scanned people,cheaper from 4 people through 500 scanned people
+report quote 873,calc/out/run23/abstract_bound_changes.csv,195,new,cheaper from 4 people through 500 scanned people,cheaper from 4 people through 500 scanned people
+report quote 874,calc/out/run23/abstract_bound_changes.csv,195,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 875,calc/out/run23/abstract_bound_changes.csv,196,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 876,calc/out/run23/abstract_bound_changes.csv,196,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 877,calc/out/run23/abstract_bound_changes.csv,196,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 878,calc/out/run23/abstract_bound_changes.csv,197,old,cheaper from 45 people through 500 scanned people,cheaper from 45 people through 500 scanned people
+report quote 879,calc/out/run23/abstract_bound_changes.csv,197,new,cheaper from 45 people through 500 scanned people,cheaper from 45 people through 500 scanned people
+report quote 880,calc/out/run23/abstract_bound_changes.csv,197,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 881,calc/out/run23/abstract_bound_changes.csv,198,old,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 882,calc/out/run23/abstract_bound_changes.csv,198,new,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 883,calc/out/run23/abstract_bound_changes.csv,198,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 884,calc/out/run23/abstract_bound_changes.csv,199,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 885,calc/out/run23/abstract_bound_changes.csv,199,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 886,calc/out/run23/abstract_bound_changes.csv,199,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 887,calc/out/run23/abstract_bound_changes.csv,200,old,cheaper from 17 people through 500 scanned people,cheaper from 17 people through 500 scanned people
+report quote 888,calc/out/run23/abstract_bound_changes.csv,200,new,cheaper from 17 people through 500 scanned people,cheaper from 17 people through 500 scanned people
+report quote 889,calc/out/run23/abstract_bound_changes.csv,200,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 890,calc/out/run23/abstract_bound_changes.csv,201,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 891,calc/out/run23/abstract_bound_changes.csv,201,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 892,calc/out/run23/abstract_bound_changes.csv,201,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 893,calc/out/run23/abstract_bound_changes.csv,202,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 894,calc/out/run23/abstract_bound_changes.csv,202,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 895,calc/out/run23/abstract_bound_changes.csv,202,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 896,calc/out/run23/abstract_bound_changes.csv,203,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 897,calc/out/run23/abstract_bound_changes.csv,203,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 898,calc/out/run23/abstract_bound_changes.csv,203,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 899,calc/out/run23/abstract_bound_changes.csv,204,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 900,calc/out/run23/abstract_bound_changes.csv,204,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 901,calc/out/run23/abstract_bound_changes.csv,204,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 902,calc/out/run23/abstract_bound_changes.csv,205,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 903,calc/out/run23/abstract_bound_changes.csv,205,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 904,calc/out/run23/abstract_bound_changes.csv,205,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 905,calc/out/run23/abstract_bound_changes.csv,206,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 906,calc/out/run23/abstract_bound_changes.csv,206,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 907,calc/out/run23/abstract_bound_changes.csv,206,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 908,calc/out/run23/abstract_bound_changes.csv,207,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 909,calc/out/run23/abstract_bound_changes.csv,207,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 910,calc/out/run23/abstract_bound_changes.csv,207,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 911,calc/out/run23/abstract_bound_changes.csv,208,old,cheaper from 87 people through 500 scanned people,cheaper from 87 people through 500 scanned people
+report quote 912,calc/out/run23/abstract_bound_changes.csv,208,new,cheaper from 73 people through 500 scanned people,cheaper from 73 people through 500 scanned people
+report quote 913,calc/out/run23/abstract_bound_changes.csv,208,why,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged,measured/interpolated PRO decode and resident batch limits change own-cluster/generation/fleet economics; other policies unchanged
+report quote 914,calc/out/run23/abstract_bound_changes.csv,209,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 915,calc/out/run23/abstract_bound_changes.csv,209,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 916,calc/out/run23/abstract_bound_changes.csv,209,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 917,calc/out/run23/abstract_bound_changes.csv,210,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 918,calc/out/run23/abstract_bound_changes.csv,210,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 919,calc/out/run23/abstract_bound_changes.csv,210,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 920,calc/out/run23/abstract_bound_changes.csv,211,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 921,calc/out/run23/abstract_bound_changes.csv,211,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 922,calc/out/run23/abstract_bound_changes.csv,211,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 923,calc/out/run23/abstract_bound_changes.csv,212,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 924,calc/out/run23/abstract_bound_changes.csv,212,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 925,calc/out/run23/abstract_bound_changes.csv,212,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 926,calc/out/run23/abstract_bound_changes.csv,213,old,cheaper from 4 people through 500 scanned people,cheaper from 4 people through 500 scanned people
+report quote 927,calc/out/run23/abstract_bound_changes.csv,213,new,cheaper from 4 people through 500 scanned people,cheaper from 4 people through 500 scanned people
+report quote 928,calc/out/run23/abstract_bound_changes.csv,213,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 929,calc/out/run23/abstract_bound_changes.csv,214,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 930,calc/out/run23/abstract_bound_changes.csv,214,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 931,calc/out/run23/abstract_bound_changes.csv,214,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 932,calc/out/run23/abstract_bound_changes.csv,215,old,cheaper from 19 people through 500 scanned people,cheaper from 19 people through 500 scanned people
+report quote 933,calc/out/run23/abstract_bound_changes.csv,215,new,cheaper from 19 people through 500 scanned people,cheaper from 19 people through 500 scanned people
+report quote 934,calc/out/run23/abstract_bound_changes.csv,215,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 935,calc/out/run23/abstract_bound_changes.csv,216,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 936,calc/out/run23/abstract_bound_changes.csv,216,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 937,calc/out/run23/abstract_bound_changes.csv,216,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 938,calc/out/run23/abstract_bound_changes.csv,217,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 939,calc/out/run23/abstract_bound_changes.csv,217,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 940,calc/out/run23/abstract_bound_changes.csv,217,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 941,calc/out/run23/abstract_bound_changes.csv,218,old,cheaper from 4 people through 500 scanned people,cheaper from 4 people through 500 scanned people
+report quote 942,calc/out/run23/abstract_bound_changes.csv,218,new,cheaper from 4 people through 500 scanned people,cheaper from 4 people through 500 scanned people
+report quote 943,calc/out/run23/abstract_bound_changes.csv,218,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 944,calc/out/run23/abstract_bound_changes.csv,219,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 945,calc/out/run23/abstract_bound_changes.csv,219,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 946,calc/out/run23/abstract_bound_changes.csv,219,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 947,calc/out/run23/abstract_bound_changes.csv,220,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 948,calc/out/run23/abstract_bound_changes.csv,220,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 949,calc/out/run23/abstract_bound_changes.csv,220,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 950,calc/out/run23/abstract_bound_changes.csv,221,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 951,calc/out/run23/abstract_bound_changes.csv,221,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 952,calc/out/run23/abstract_bound_changes.csv,221,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 953,calc/out/run23/abstract_bound_changes.csv,222,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 954,calc/out/run23/abstract_bound_changes.csv,222,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 955,calc/out/run23/abstract_bound_changes.csv,222,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 956,calc/out/run23/abstract_bound_changes.csv,223,old,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 957,calc/out/run23/abstract_bound_changes.csv,223,new,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 958,calc/out/run23/abstract_bound_changes.csv,223,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 959,calc/out/run23/abstract_bound_changes.csv,224,old,cheaper from 32 people through 500 scanned people,cheaper from 32 people through 500 scanned people
+report quote 960,calc/out/run23/abstract_bound_changes.csv,224,new,cheaper from 32 people through 500 scanned people,cheaper from 32 people through 500 scanned people
+report quote 961,calc/out/run23/abstract_bound_changes.csv,224,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 962,calc/out/run23/abstract_bound_changes.csv,225,old,cheaper from 3 people through 500 scanned people,cheaper from 3 people through 500 scanned people
+report quote 963,calc/out/run23/abstract_bound_changes.csv,225,new,cheaper from 3 people through 500 scanned people,cheaper from 3 people through 500 scanned people
+report quote 964,calc/out/run23/abstract_bound_changes.csv,225,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 965,calc/out/run23/abstract_bound_changes.csv,226,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 966,calc/out/run23/abstract_bound_changes.csv,226,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 967,calc/out/run23/abstract_bound_changes.csv,226,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 968,calc/out/run23/abstract_bound_changes.csv,227,old,cheaper from 30 people through 500 scanned people,cheaper from 30 people through 500 scanned people
+report quote 969,calc/out/run23/abstract_bound_changes.csv,227,new,cheaper from 30 people through 500 scanned people,cheaper from 30 people through 500 scanned people
+report quote 970,calc/out/run23/abstract_bound_changes.csv,227,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 971,calc/out/run23/abstract_bound_changes.csv,228,old,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 972,calc/out/run23/abstract_bound_changes.csv,228,new,cheaper from 2 people through 500 scanned people,cheaper from 2 people through 500 scanned people
+report quote 973,calc/out/run23/abstract_bound_changes.csv,228,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 974,calc/out/run23/abstract_bound_changes.csv,229,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 975,calc/out/run23/abstract_bound_changes.csv,229,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 976,calc/out/run23/abstract_bound_changes.csv,229,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 977,calc/out/run23/abstract_bound_changes.csv,230,old,cheaper from 8 people through 500 scanned people,cheaper from 8 people through 500 scanned people
+report quote 978,calc/out/run23/abstract_bound_changes.csv,230,new,cheaper from 8 people through 500 scanned people,cheaper from 8 people through 500 scanned people
+report quote 979,calc/out/run23/abstract_bound_changes.csv,230,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 980,calc/out/run23/abstract_bound_changes.csv,231,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 981,calc/out/run23/abstract_bound_changes.csv,231,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 982,calc/out/run23/abstract_bound_changes.csv,231,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 983,calc/out/run23/abstract_bound_changes.csv,232,old,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 984,calc/out/run23/abstract_bound_changes.csv,232,new,no sustained crossing through 500 people,no sustained crossing through 500 people
+report quote 985,calc/out/run23/abstract_bound_changes.csv,232,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 986,calc/out/run23/abstract_bound_changes.csv,233,old,0.00039,0.00039
+report quote 987,calc/out/run23/abstract_bound_changes.csv,233,new,0.00039,0.00039
+report quote 988,calc/out/run23/abstract_bound_changes.csv,233,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 989,calc/out/run23/abstract_bound_changes.csv,234,old,-0.001076,-0.001076
+report quote 990,calc/out/run23/abstract_bound_changes.csv,234,new,-0.001076,-0.001076
+report quote 991,calc/out/run23/abstract_bound_changes.csv,234,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 992,calc/out/run23/abstract_bound_changes.csv,235,old,0.054253,0.054253
+report quote 993,calc/out/run23/abstract_bound_changes.csv,235,new,0.054253,0.054253
+report quote 994,calc/out/run23/abstract_bound_changes.csv,235,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 995,calc/out/run23/abstract_bound_changes.csv,236,old,-0.000298,-0.000298
+report quote 996,calc/out/run23/abstract_bound_changes.csv,236,new,-0.000298,-0.000298
+report quote 997,calc/out/run23/abstract_bound_changes.csv,236,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 998,calc/out/run23/abstract_bound_changes.csv,237,old,57744.0,57744.0
+report quote 999,calc/out/run23/abstract_bound_changes.csv,237,new,57744.0,57744.0
+report quote 1000,calc/out/run23/abstract_bound_changes.csv,237,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1001,calc/out/run23/abstract_bound_changes.csv,238,old,89042.0,89042.0
+report quote 1002,calc/out/run23/abstract_bound_changes.csv,238,new,89042.0,89042.0
+report quote 1003,calc/out/run23/abstract_bound_changes.csv,238,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1004,calc/out/run23/abstract_bound_changes.csv,239,old,135362.0,135362.0
+report quote 1005,calc/out/run23/abstract_bound_changes.csv,239,new,135362.0,135362.0
+report quote 1006,calc/out/run23/abstract_bound_changes.csv,239,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1007,calc/out/run23/abstract_bound_changes.csv,240,old,190258.0,190258.0
+report quote 1008,calc/out/run23/abstract_bound_changes.csv,240,new,190258.0,190258.0
+report quote 1009,calc/out/run23/abstract_bound_changes.csv,240,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1010,calc/out/run23/abstract_bound_changes.csv,241,old,250202.0,250202.0
+report quote 1011,calc/out/run23/abstract_bound_changes.csv,241,new,250202.0,250202.0
+report quote 1012,calc/out/run23/abstract_bound_changes.csv,241,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1013,calc/out/run23/abstract_bound_changes.csv,242,old,826234.9,826234.9
+report quote 1014,calc/out/run23/abstract_bound_changes.csv,242,new,826234.9,826234.9
+report quote 1015,calc/out/run23/abstract_bound_changes.csv,242,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1016,calc/out/run23/abstract_bound_changes.csv,243,old,164437.3,164437.3
+report quote 1017,calc/out/run23/abstract_bound_changes.csv,243,new,164437.3,164437.3
+report quote 1018,calc/out/run23/abstract_bound_changes.csv,243,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1019,calc/out/run23/abstract_bound_changes.csv,244,old,1524671,1524671
+report quote 1020,calc/out/run23/abstract_bound_changes.csv,244,new,1524671,1524671
+report quote 1021,calc/out/run23/abstract_bound_changes.csv,244,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1022,calc/out/run23/abstract_bound_changes.csv,245,old,0.0,0.0
+report quote 1023,calc/out/run23/abstract_bound_changes.csv,245,new,0.0,0.0
+report quote 1024,calc/out/run23/abstract_bound_changes.csv,245,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1025,calc/out/run23/abstract_bound_changes.csv,246,old,32.0,32.0
+report quote 1026,calc/out/run23/abstract_bound_changes.csv,246,new,32.0,32.0
+report quote 1027,calc/out/run23/abstract_bound_changes.csv,246,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1028,calc/out/run23/abstract_bound_changes.csv,247,old,158.0,158.0
+report quote 1029,calc/out/run23/abstract_bound_changes.csv,247,new,158.0,158.0
+report quote 1030,calc/out/run23/abstract_bound_changes.csv,247,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1031,calc/out/run23/abstract_bound_changes.csv,248,old,805.0,805.0
+report quote 1032,calc/out/run23/abstract_bound_changes.csv,248,new,805.0,805.0
+report quote 1033,calc/out/run23/abstract_bound_changes.csv,248,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1034,calc/out/run23/abstract_bound_changes.csv,249,old,3052.0,3052.0
+report quote 1035,calc/out/run23/abstract_bound_changes.csv,249,new,3052.0,3052.0
+report quote 1036,calc/out/run23/abstract_bound_changes.csv,249,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1037,calc/out/run23/abstract_bound_changes.csv,250,old,10879.0,10879.0
+report quote 1038,calc/out/run23/abstract_bound_changes.csv,250,new,10879.0,10879.0
+report quote 1039,calc/out/run23/abstract_bound_changes.csv,250,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1040,calc/out/run23/abstract_bound_changes.csv,251,old,1066.4,1066.4
+report quote 1041,calc/out/run23/abstract_bound_changes.csv,251,new,1066.4,1066.4
+report quote 1042,calc/out/run23/abstract_bound_changes.csv,251,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1043,calc/out/run23/abstract_bound_changes.csv,252,old,1505761,1505761
+report quote 1044,calc/out/run23/abstract_bound_changes.csv,252,new,1505761,1505761
+report quote 1045,calc/out/run23/abstract_bound_changes.csv,252,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1046,calc/out/run23/abstract_bound_changes.csv,253,old,54.0,54.0
+report quote 1047,calc/out/run23/abstract_bound_changes.csv,253,new,54.0,54.0
+report quote 1048,calc/out/run23/abstract_bound_changes.csv,253,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1049,calc/out/run23/abstract_bound_changes.csv,254,old,113.0,113.0
+report quote 1050,calc/out/run23/abstract_bound_changes.csv,254,new,113.0,113.0
+report quote 1051,calc/out/run23/abstract_bound_changes.csv,254,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1052,calc/out/run23/abstract_bound_changes.csv,255,old,229.0,229.0
+report quote 1053,calc/out/run23/abstract_bound_changes.csv,255,new,229.0,229.0
+report quote 1054,calc/out/run23/abstract_bound_changes.csv,255,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1055,calc/out/run23/abstract_bound_changes.csv,256,old,530.0,530.0
+report quote 1056,calc/out/run23/abstract_bound_changes.csv,256,new,530.0,530.0
+report quote 1057,calc/out/run23/abstract_bound_changes.csv,256,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1058,calc/out/run23/abstract_bound_changes.csv,257,old,1135.0,1135.0
+report quote 1059,calc/out/run23/abstract_bound_changes.csv,257,new,1135.0,1135.0
+report quote 1060,calc/out/run23/abstract_bound_changes.csv,257,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1061,calc/out/run23/abstract_bound_changes.csv,258,old,4506.0,4506.0
+report quote 1062,calc/out/run23/abstract_bound_changes.csv,258,new,4506.0,4506.0
+report quote 1063,calc/out/run23/abstract_bound_changes.csv,258,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1064,calc/out/run23/abstract_bound_changes.csv,259,old,511.9,511.9
+report quote 1065,calc/out/run23/abstract_bound_changes.csv,259,new,511.9,511.9
+report quote 1066,calc/out/run23/abstract_bound_changes.csv,259,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1067,calc/out/run23/abstract_bound_changes.csv,260,old,1524671,1524671
+report quote 1068,calc/out/run23/abstract_bound_changes.csv,260,new,1524671,1524671
+report quote 1069,calc/out/run23/abstract_bound_changes.csv,260,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1070,calc/out/run23/abstract_bound_changes.csv,261,old,0.2,0.2
+report quote 1071,calc/out/run23/abstract_bound_changes.csv,261,new,0.2,0.2
+report quote 1072,calc/out/run23/abstract_bound_changes.csv,261,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1073,calc/out/run23/abstract_bound_changes.csv,262,old,3.8,3.8
+report quote 1074,calc/out/run23/abstract_bound_changes.csv,262,new,3.8,3.8
+report quote 1075,calc/out/run23/abstract_bound_changes.csv,262,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1076,calc/out/run23/abstract_bound_changes.csv,263,old,7.8,7.8
+report quote 1077,calc/out/run23/abstract_bound_changes.csv,263,new,7.8,7.8
+report quote 1078,calc/out/run23/abstract_bound_changes.csv,263,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1079,calc/out/run23/abstract_bound_changes.csv,264,old,17.9,17.9
+report quote 1080,calc/out/run23/abstract_bound_changes.csv,264,new,17.9,17.9
+report quote 1081,calc/out/run23/abstract_bound_changes.csv,264,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1082,calc/out/run23/abstract_bound_changes.csv,265,old,34.8,34.8
+report quote 1083,calc/out/run23/abstract_bound_changes.csv,265,new,34.8,34.8
+report quote 1084,calc/out/run23/abstract_bound_changes.csv,265,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1085,calc/out/run23/abstract_bound_changes.csv,266,old,340.0,340.0
+report quote 1086,calc/out/run23/abstract_bound_changes.csv,266,new,340.0,340.0
+report quote 1087,calc/out/run23/abstract_bound_changes.csv,266,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1088,calc/out/run23/abstract_bound_changes.csv,267,old,129.7,129.7
+report quote 1089,calc/out/run23/abstract_bound_changes.csv,267,new,129.7,129.7
+report quote 1090,calc/out/run23/abstract_bound_changes.csv,267,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1091,calc/out/run23/abstract_bound_changes.csv,268,old,1511502,1511502
+report quote 1092,calc/out/run23/abstract_bound_changes.csv,268,new,1511502,1511502
+report quote 1093,calc/out/run23/abstract_bound_changes.csv,268,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1094,calc/out/run23/abstract_bound_changes.csv,269,old,0.21535887833460954,0.21535887833460954
+report quote 1095,calc/out/run23/abstract_bound_changes.csv,269,new,0.21535887833460954,0.21535887833460954
+report quote 1096,calc/out/run23/abstract_bound_changes.csv,269,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1097,calc/out/run23/abstract_bound_changes.csv,270,old,1,1
+report quote 1098,calc/out/run23/abstract_bound_changes.csv,270,new,1,1
+report quote 1099,calc/out/run23/abstract_bound_changes.csv,270,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1100,calc/out/run23/abstract_bound_changes.csv,271,old,84022.0,84022.0
+report quote 1101,calc/out/run23/abstract_bound_changes.csv,271,new,84022.0,84022.0
+report quote 1102,calc/out/run23/abstract_bound_changes.csv,271,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1103,calc/out/run23/abstract_bound_changes.csv,272,old,124893.0,124893.0
+report quote 1104,calc/out/run23/abstract_bound_changes.csv,272,new,124893.0,124893.0
+report quote 1105,calc/out/run23/abstract_bound_changes.csv,272,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1106,calc/out/run23/abstract_bound_changes.csv,273,old,212311.0,212311.0
+report quote 1107,calc/out/run23/abstract_bound_changes.csv,273,new,212311.0,212311.0
+report quote 1108,calc/out/run23/abstract_bound_changes.csv,273,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1109,calc/out/run23/abstract_bound_changes.csv,274,old,431845.0,431845.0
+report quote 1110,calc/out/run23/abstract_bound_changes.csv,274,new,431845.0,431845.0
+report quote 1111,calc/out/run23/abstract_bound_changes.csv,274,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1112,calc/out/run23/abstract_bound_changes.csv,275,old,720173.2,720173.2
+report quote 1113,calc/out/run23/abstract_bound_changes.csv,275,new,720173.2,720173.2
+report quote 1114,calc/out/run23/abstract_bound_changes.csv,275,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1115,calc/out/run23/abstract_bound_changes.csv,276,old,940754.7,940754.7
+report quote 1116,calc/out/run23/abstract_bound_changes.csv,276,new,940754.7,940754.7
+report quote 1117,calc/out/run23/abstract_bound_changes.csv,276,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1118,calc/out/run23/abstract_bound_changes.csv,277,old,307858.2,307858.2
+report quote 1119,calc/out/run23/abstract_bound_changes.csv,277,new,307858.2,307858.2
+report quote 1120,calc/out/run23/abstract_bound_changes.csv,277,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1121,calc/out/run23/abstract_bound_changes.csv,278,old,285129,285129
+report quote 1122,calc/out/run23/abstract_bound_changes.csv,278,new,285129,285129
+report quote 1123,calc/out/run23/abstract_bound_changes.csv,278,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1124,calc/out/run23/abstract_bound_changes.csv,279,old,73.0,73.0
+report quote 1125,calc/out/run23/abstract_bound_changes.csv,279,new,73.0,73.0
+report quote 1126,calc/out/run23/abstract_bound_changes.csv,279,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1127,calc/out/run23/abstract_bound_changes.csv,280,old,154.0,154.0
+report quote 1128,calc/out/run23/abstract_bound_changes.csv,280,new,154.0,154.0
+report quote 1129,calc/out/run23/abstract_bound_changes.csv,280,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1130,calc/out/run23/abstract_bound_changes.csv,281,old,380.0,380.0
+report quote 1131,calc/out/run23/abstract_bound_changes.csv,281,new,380.0,380.0
+report quote 1132,calc/out/run23/abstract_bound_changes.csv,281,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1133,calc/out/run23/abstract_bound_changes.csv,282,old,927.0,927.0
+report quote 1134,calc/out/run23/abstract_bound_changes.csv,282,new,927.0,927.0
+report quote 1135,calc/out/run23/abstract_bound_changes.csv,282,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1136,calc/out/run23/abstract_bound_changes.csv,283,old,2420.0,2420.0
+report quote 1137,calc/out/run23/abstract_bound_changes.csv,283,new,2420.0,2420.0
+report quote 1138,calc/out/run23/abstract_bound_changes.csv,283,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1139,calc/out/run23/abstract_bound_changes.csv,284,old,10038.0,10038.0
+report quote 1140,calc/out/run23/abstract_bound_changes.csv,284,new,10038.0,10038.0
+report quote 1141,calc/out/run23/abstract_bound_changes.csv,284,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1142,calc/out/run23/abstract_bound_changes.csv,285,old,1022.3,1022.3
+report quote 1143,calc/out/run23/abstract_bound_changes.csv,285,new,1022.3,1022.3
+report quote 1144,calc/out/run23/abstract_bound_changes.csv,285,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1145,calc/out/run23/abstract_bound_changes.csv,286,old,281976,281976
+report quote 1146,calc/out/run23/abstract_bound_changes.csv,286,new,281976,281976
+report quote 1147,calc/out/run23/abstract_bound_changes.csv,286,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1148,calc/out/run23/abstract_bound_changes.csv,287,old,141.0,141.0
+report quote 1149,calc/out/run23/abstract_bound_changes.csv,287,new,141.0,141.0
+report quote 1150,calc/out/run23/abstract_bound_changes.csv,287,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1151,calc/out/run23/abstract_bound_changes.csv,288,old,211.0,211.0
+report quote 1152,calc/out/run23/abstract_bound_changes.csv,288,new,211.0,211.0
+report quote 1153,calc/out/run23/abstract_bound_changes.csv,288,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1154,calc/out/run23/abstract_bound_changes.csv,289,old,382.0,382.0
+report quote 1155,calc/out/run23/abstract_bound_changes.csv,289,new,382.0,382.0
+report quote 1156,calc/out/run23/abstract_bound_changes.csv,289,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1157,calc/out/run23/abstract_bound_changes.csv,290,old,770.0,770.0
+report quote 1158,calc/out/run23/abstract_bound_changes.csv,290,new,770.0,770.0
+report quote 1159,calc/out/run23/abstract_bound_changes.csv,290,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1160,calc/out/run23/abstract_bound_changes.csv,291,old,1562.0,1562.0
+report quote 1161,calc/out/run23/abstract_bound_changes.csv,291,new,1562.0,1562.0
+report quote 1162,calc/out/run23/abstract_bound_changes.csv,291,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1163,calc/out/run23/abstract_bound_changes.csv,292,old,6372.9,6372.9
+report quote 1164,calc/out/run23/abstract_bound_changes.csv,292,new,6372.9,6372.9
+report quote 1165,calc/out/run23/abstract_bound_changes.csv,292,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1166,calc/out/run23/abstract_bound_changes.csv,293,old,762.0,762.0
+report quote 1167,calc/out/run23/abstract_bound_changes.csv,293,new,762.0,762.0
+report quote 1168,calc/out/run23/abstract_bound_changes.csv,293,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1169,calc/out/run23/abstract_bound_changes.csv,294,old,285129,285129
+report quote 1170,calc/out/run23/abstract_bound_changes.csv,294,new,285129,285129
+report quote 1171,calc/out/run23/abstract_bound_changes.csv,294,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1172,calc/out/run23/abstract_bound_changes.csv,295,old,3.0,3.0
+report quote 1173,calc/out/run23/abstract_bound_changes.csv,295,new,3.0,3.0
+report quote 1174,calc/out/run23/abstract_bound_changes.csv,295,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1175,calc/out/run23/abstract_bound_changes.csv,296,old,4.5,4.5
+report quote 1176,calc/out/run23/abstract_bound_changes.csv,296,new,4.5,4.5
+report quote 1177,calc/out/run23/abstract_bound_changes.csv,296,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1178,calc/out/run23/abstract_bound_changes.csv,297,old,8.1,8.1
+report quote 1179,calc/out/run23/abstract_bound_changes.csv,297,new,8.1,8.1
+report quote 1180,calc/out/run23/abstract_bound_changes.csv,297,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1181,calc/out/run23/abstract_bound_changes.csv,298,old,18.3,18.3
+report quote 1182,calc/out/run23/abstract_bound_changes.csv,298,new,18.3,18.3
+report quote 1183,calc/out/run23/abstract_bound_changes.csv,298,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1184,calc/out/run23/abstract_bound_changes.csv,299,old,60.6,60.6
+report quote 1185,calc/out/run23/abstract_bound_changes.csv,299,new,60.6,60.6
+report quote 1186,calc/out/run23/abstract_bound_changes.csv,299,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1187,calc/out/run23/abstract_bound_changes.csv,300,old,2177.6,2177.6
+report quote 1188,calc/out/run23/abstract_bound_changes.csv,300,new,2177.6,2177.6
+report quote 1189,calc/out/run23/abstract_bound_changes.csv,300,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1190,calc/out/run23/abstract_bound_changes.csv,301,old,333.0,333.0
+report quote 1191,calc/out/run23/abstract_bound_changes.csv,301,new,333.0,333.0
+report quote 1192,calc/out/run23/abstract_bound_changes.csv,301,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1193,calc/out/run23/abstract_bound_changes.csv,302,old,282262,282262
+report quote 1194,calc/out/run23/abstract_bound_changes.csv,302,new,282262,282262
+report quote 1195,calc/out/run23/abstract_bound_changes.csv,302,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1196,calc/out/run23/abstract_bound_changes.csv,303,old,0.5331836752064005,0.5331836752064005
+report quote 1197,calc/out/run23/abstract_bound_changes.csv,303,new,0.5331836752064005,0.5331836752064005
+report quote 1198,calc/out/run23/abstract_bound_changes.csv,303,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1199,calc/out/run23/abstract_bound_changes.csv,304,old,1,1
+report quote 1200,calc/out/run23/abstract_bound_changes.csv,304,new,1,1
+report quote 1201,calc/out/run23/abstract_bound_changes.csv,304,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1202,calc/out/run23/abstract_bound_changes.csv,305,old,614.0575,614.0575
+report quote 1203,calc/out/run23/abstract_bound_changes.csv,305,new,614.0575,614.0575
+report quote 1204,calc/out/run23/abstract_bound_changes.csv,305,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1205,calc/out/run23/abstract_bound_changes.csv,306,old,4,4
+report quote 1206,calc/out/run23/abstract_bound_changes.csv,306,new,4,4
+report quote 1207,calc/out/run23/abstract_bound_changes.csv,306,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1208,calc/out/run23/abstract_bound_changes.csv,307,old,4,4
+report quote 1209,calc/out/run23/abstract_bound_changes.csv,307,new,4,4
+report quote 1210,calc/out/run23/abstract_bound_changes.csv,307,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1211,calc/out/run23/abstract_bound_changes.csv,308,old,49.1246,49.1246
+report quote 1212,calc/out/run23/abstract_bound_changes.csv,308,new,49.1246,49.1246
+report quote 1213,calc/out/run23/abstract_bound_changes.csv,308,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1214,calc/out/run23/abstract_bound_changes.csv,309,old,0.036139896849339874,0.036139896849339874
+report quote 1215,calc/out/run23/abstract_bound_changes.csv,309,new,0.036139896849339874,0.036139896849339874
+report quote 1216,calc/out/run23/abstract_bound_changes.csv,309,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1217,calc/out/run23/abstract_bound_changes.csv,310,old,0.00831712694614945,0.00831712694614945
+report quote 1218,calc/out/run23/abstract_bound_changes.csv,310,new,0.00831712694614945,0.00831712694614945
+report quote 1219,calc/out/run23/abstract_bound_changes.csv,310,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1220,calc/out/run23/abstract_bound_changes.csv,311,old,1606.0000000000002,1606.0000000000002
+report quote 1221,calc/out/run23/abstract_bound_changes.csv,311,new,1606.0000000000002,1606.0000000000002
+report quote 1222,calc/out/run23/abstract_bound_changes.csv,311,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1223,calc/out/run23/abstract_bound_changes.csv,312,old,4,4
+report quote 1224,calc/out/run23/abstract_bound_changes.csv,312,new,4,4
+report quote 1225,calc/out/run23/abstract_bound_changes.csv,312,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1226,calc/out/run23/abstract_bound_changes.csv,313,old,4,4
+report quote 1227,calc/out/run23/abstract_bound_changes.csv,313,new,4,4
+report quote 1228,calc/out/run23/abstract_bound_changes.csv,313,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1229,calc/out/run23/abstract_bound_changes.csv,314,old,134.67473430118403,134.67473430118403
+report quote 1230,calc/out/run23/abstract_bound_changes.csv,314,new,134.67473430118403,134.67473430118403
+report quote 1231,calc/out/run23/abstract_bound_changes.csv,314,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1232,calc/out/run23/abstract_bound_changes.csv,315,old,0.03377092630959133,0.03377092630959133
+report quote 1233,calc/out/run23/abstract_bound_changes.csv,315,new,0.03377092630959133,0.03377092630959133
+report quote 1234,calc/out/run23/abstract_bound_changes.csv,315,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1235,calc/out/run23/abstract_bound_changes.csv,316,old,0.007771939205494991,0.007771939205494991
+report quote 1236,calc/out/run23/abstract_bound_changes.csv,316,new,0.007771939205494991,0.007771939205494991
+report quote 1237,calc/out/run23/abstract_bound_changes.csv,316,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1238,calc/out/run23/abstract_bound_changes.csv,317,old,614.0575,614.0575
+report quote 1239,calc/out/run23/abstract_bound_changes.csv,317,new,614.0575,614.0575
+report quote 1240,calc/out/run23/abstract_bound_changes.csv,317,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1241,calc/out/run23/abstract_bound_changes.csv,318,old,4,4
+report quote 1242,calc/out/run23/abstract_bound_changes.csv,318,new,4,4
+report quote 1243,calc/out/run23/abstract_bound_changes.csv,318,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1244,calc/out/run23/abstract_bound_changes.csv,319,old,11,11
+report quote 1245,calc/out/run23/abstract_bound_changes.csv,319,new,11,11
+report quote 1246,calc/out/run23/abstract_bound_changes.csv,319,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1247,calc/out/run23/abstract_bound_changes.csv,320,old,135.09265,135.09265
+report quote 1248,calc/out/run23/abstract_bound_changes.csv,320,new,135.09265,135.09265
+report quote 1249,calc/out/run23/abstract_bound_changes.csv,320,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1250,calc/out/run23/abstract_bound_changes.csv,321,old,0.1445595873973595,0.1445595873973595
+report quote 1251,calc/out/run23/abstract_bound_changes.csv,321,new,0.1445595873973595,0.1445595873973595
+report quote 1252,calc/out/run23/abstract_bound_changes.csv,321,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1253,calc/out/run23/abstract_bound_changes.csv,322,old,0.0332685077845978,0.0332685077845978
+report quote 1254,calc/out/run23/abstract_bound_changes.csv,322,new,0.0332685077845978,0.0332685077845978
+report quote 1255,calc/out/run23/abstract_bound_changes.csv,322,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1256,calc/out/run23/abstract_bound_changes.csv,323,old,1606.0000000000002,1606.0000000000002
+report quote 1257,calc/out/run23/abstract_bound_changes.csv,323,new,1606.0000000000002,1606.0000000000002
+report quote 1258,calc/out/run23/abstract_bound_changes.csv,323,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1259,calc/out/run23/abstract_bound_changes.csv,324,old,4,4
+report quote 1260,calc/out/run23/abstract_bound_changes.csv,324,new,4,4
+report quote 1261,calc/out/run23/abstract_bound_changes.csv,324,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1262,calc/out/run23/abstract_bound_changes.csv,325,old,11,11
+report quote 1263,calc/out/run23/abstract_bound_changes.csv,325,new,11,11
+report quote 1264,calc/out/run23/abstract_bound_changes.csv,325,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1265,calc/out/run23/abstract_bound_changes.csv,326,old,358.82276929945607,358.82276929945607
+report quote 1266,calc/out/run23/abstract_bound_changes.csv,326,new,358.82276929945607,358.82276929945607
+report quote 1267,calc/out/run23/abstract_bound_changes.csv,326,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1268,calc/out/run23/abstract_bound_changes.csv,327,old,0.13508370523836533,0.13508370523836533
+report quote 1269,calc/out/run23/abstract_bound_changes.csv,327,new,0.13508370523836533,0.13508370523836533
+report quote 1270,calc/out/run23/abstract_bound_changes.csv,327,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1271,calc/out/run23/abstract_bound_changes.csv,328,old,0.031087756821979964,0.031087756821979964
+report quote 1272,calc/out/run23/abstract_bound_changes.csv,328,new,0.031087756821979964,0.031087756821979964
+report quote 1273,calc/out/run23/abstract_bound_changes.csv,328,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1274,calc/out/run23/abstract_bound_changes.csv,329,old,614.0575,614.0575
+report quote 1275,calc/out/run23/abstract_bound_changes.csv,329,new,614.0575,614.0575
+report quote 1276,calc/out/run23/abstract_bound_changes.csv,329,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1277,calc/out/run23/abstract_bound_changes.csv,330,old,4,4
+report quote 1278,calc/out/run23/abstract_bound_changes.csv,330,new,4,4
+report quote 1279,calc/out/run23/abstract_bound_changes.csv,330,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1280,calc/out/run23/abstract_bound_changes.csv,331,old,27,27
+report quote 1281,calc/out/run23/abstract_bound_changes.csv,331,new,27,27
+report quote 1282,calc/out/run23/abstract_bound_changes.csv,331,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1283,calc/out/run23/abstract_bound_changes.csv,332,old,331.59105000000005,331.59105000000005
+report quote 1284,calc/out/run23/abstract_bound_changes.csv,332,new,331.59105000000005,331.59105000000005
+report quote 1285,calc/out/run23/abstract_bound_changes.csv,332,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1286,calc/out/run23/abstract_bound_changes.csv,333,old,0.45174871061674843,0.45174871061674843
+report quote 1287,calc/out/run23/abstract_bound_changes.csv,333,new,0.45174871061674843,0.45174871061674843
+report quote 1288,calc/out/run23/abstract_bound_changes.csv,333,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1289,calc/out/run23/abstract_bound_changes.csv,334,old,0.10396408682686811,0.10396408682686811
+report quote 1290,calc/out/run23/abstract_bound_changes.csv,334,new,0.10396408682686811,0.10396408682686811
+report quote 1291,calc/out/run23/abstract_bound_changes.csv,334,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1292,calc/out/run23/abstract_bound_changes.csv,335,old,1606.0000000000002,1606.0000000000002
+report quote 1293,calc/out/run23/abstract_bound_changes.csv,335,new,1606.0000000000002,1606.0000000000002
+report quote 1294,calc/out/run23/abstract_bound_changes.csv,335,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1295,calc/out/run23/abstract_bound_changes.csv,336,old,4,4
+report quote 1296,calc/out/run23/abstract_bound_changes.csv,336,new,4,4
+report quote 1297,calc/out/run23/abstract_bound_changes.csv,336,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1298,calc/out/run23/abstract_bound_changes.csv,337,old,27,27
+report quote 1299,calc/out/run23/abstract_bound_changes.csv,337,new,27,27
+report quote 1300,calc/out/run23/abstract_bound_changes.csv,337,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1301,calc/out/run23/abstract_bound_changes.csv,338,old,871.1611350097921,871.1611350097921
+report quote 1302,calc/out/run23/abstract_bound_changes.csv,338,new,871.1611350097921,871.1611350097921
+report quote 1303,calc/out/run23/abstract_bound_changes.csv,338,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1304,calc/out/run23/abstract_bound_changes.csv,339,old,0.42213657886989164,0.42213657886989164
+report quote 1305,calc/out/run23/abstract_bound_changes.csv,339,new,0.42213657886989164,0.42213657886989164
+report quote 1306,calc/out/run23/abstract_bound_changes.csv,339,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1307,calc/out/run23/abstract_bound_changes.csv,340,old,0.0971492400686874,0.0971492400686874
+report quote 1308,calc/out/run23/abstract_bound_changes.csv,340,new,0.0971492400686874,0.0971492400686874
+report quote 1309,calc/out/run23/abstract_bound_changes.csv,340,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1310,calc/out/run23/abstract_bound_changes.csv,341,old,614.0575,614.0575
+report quote 1311,calc/out/run23/abstract_bound_changes.csv,341,new,614.0575,614.0575
+report quote 1312,calc/out/run23/abstract_bound_changes.csv,341,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1313,calc/out/run23/abstract_bound_changes.csv,342,old,4,4
+report quote 1314,calc/out/run23/abstract_bound_changes.csv,342,new,4,4
+report quote 1315,calc/out/run23/abstract_bound_changes.csv,342,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1316,calc/out/run23/abstract_bound_changes.csv,343,old,5,5
+report quote 1317,calc/out/run23/abstract_bound_changes.csv,343,new,5,5
+report quote 1318,calc/out/run23/abstract_bound_changes.csv,343,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1319,calc/out/run23/abstract_bound_changes.csv,344,old,61.40575,61.40575
+report quote 1320,calc/out/run23/abstract_bound_changes.csv,344,new,61.40575,61.40575
+report quote 1321,calc/out/run23/abstract_bound_changes.csv,344,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1322,calc/out/run23/abstract_bound_changes.csv,345,old,0.0,0.0
+report quote 1323,calc/out/run23/abstract_bound_changes.csv,345,new,0.0,0.0
+report quote 1324,calc/out/run23/abstract_bound_changes.csv,345,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1325,calc/out/run23/abstract_bound_changes.csv,346,old,0.0,0.0
+report quote 1326,calc/out/run23/abstract_bound_changes.csv,346,new,0.0,0.0
+report quote 1327,calc/out/run23/abstract_bound_changes.csv,346,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1328,calc/out/run23/abstract_bound_changes.csv,347,old,1606.0000000000002,1606.0000000000002
+report quote 1329,calc/out/run23/abstract_bound_changes.csv,347,new,1606.0000000000002,1606.0000000000002
+report quote 1330,calc/out/run23/abstract_bound_changes.csv,347,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1331,calc/out/run23/abstract_bound_changes.csv,348,old,4,4
+report quote 1332,calc/out/run23/abstract_bound_changes.csv,348,new,4,4
+report quote 1333,calc/out/run23/abstract_bound_changes.csv,348,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1334,calc/out/run23/abstract_bound_changes.csv,349,old,5,5
+report quote 1335,calc/out/run23/abstract_bound_changes.csv,349,new,5,5
+report quote 1336,calc/out/run23/abstract_bound_changes.csv,349,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1337,calc/out/run23/abstract_bound_changes.csv,350,old,166.69588215808002,166.69588215808002
+report quote 1338,calc/out/run23/abstract_bound_changes.csv,350,new,166.69588215808002,166.69588215808002
+report quote 1339,calc/out/run23/abstract_bound_changes.csv,350,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1340,calc/out/run23/abstract_bound_changes.csv,351,old,0.0,0.0
+report quote 1341,calc/out/run23/abstract_bound_changes.csv,351,new,0.0,0.0
+report quote 1342,calc/out/run23/abstract_bound_changes.csv,351,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1343,calc/out/run23/abstract_bound_changes.csv,352,old,0.0,0.0
+report quote 1344,calc/out/run23/abstract_bound_changes.csv,352,new,0.0,0.0
+report quote 1345,calc/out/run23/abstract_bound_changes.csv,352,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1346,calc/out/run23/abstract_bound_changes.csv,353,old,614.0575,614.0575
+report quote 1347,calc/out/run23/abstract_bound_changes.csv,353,new,614.0575,614.0575
+report quote 1348,calc/out/run23/abstract_bound_changes.csv,353,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1349,calc/out/run23/abstract_bound_changes.csv,354,old,4,4
+report quote 1350,calc/out/run23/abstract_bound_changes.csv,354,new,4,4
+report quote 1351,calc/out/run23/abstract_bound_changes.csv,354,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1352,calc/out/run23/abstract_bound_changes.csv,355,old,15,15
+report quote 1353,calc/out/run23/abstract_bound_changes.csv,355,new,15,15
+report quote 1354,calc/out/run23/abstract_bound_changes.csv,355,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1355,calc/out/run23/abstract_bound_changes.csv,356,old,184.21724999999998,184.21724999999998
+report quote 1356,calc/out/run23/abstract_bound_changes.csv,356,new,184.21724999999998,184.21724999999998
+report quote 1357,calc/out/run23/abstract_bound_changes.csv,356,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1358,calc/out/run23/abstract_bound_changes.csv,357,old,0.0,0.0
+report quote 1359,calc/out/run23/abstract_bound_changes.csv,357,new,0.0,0.0
+report quote 1360,calc/out/run23/abstract_bound_changes.csv,357,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1361,calc/out/run23/abstract_bound_changes.csv,358,old,0.0,0.0
+report quote 1362,calc/out/run23/abstract_bound_changes.csv,358,new,0.0,0.0
+report quote 1363,calc/out/run23/abstract_bound_changes.csv,358,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1364,calc/out/run23/abstract_bound_changes.csv,359,old,1606.0000000000002,1606.0000000000002
+report quote 1365,calc/out/run23/abstract_bound_changes.csv,359,new,1606.0000000000002,1606.0000000000002
+report quote 1366,calc/out/run23/abstract_bound_changes.csv,359,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1367,calc/out/run23/abstract_bound_changes.csv,360,old,4,4
+report quote 1368,calc/out/run23/abstract_bound_changes.csv,360,new,4,4
+report quote 1369,calc/out/run23/abstract_bound_changes.csv,360,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1370,calc/out/run23/abstract_bound_changes.csv,361,old,15,15
+report quote 1371,calc/out/run23/abstract_bound_changes.csv,361,new,15,15
+report quote 1372,calc/out/run23/abstract_bound_changes.csv,361,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1373,calc/out/run23/abstract_bound_changes.csv,362,old,486.90736072704004,486.90736072704004
+report quote 1374,calc/out/run23/abstract_bound_changes.csv,362,new,486.90736072704004,486.90736072704004
+report quote 1375,calc/out/run23/abstract_bound_changes.csv,362,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1376,calc/out/run23/abstract_bound_changes.csv,363,old,0.0,0.0
+report quote 1377,calc/out/run23/abstract_bound_changes.csv,363,new,0.0,0.0
+report quote 1378,calc/out/run23/abstract_bound_changes.csv,363,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1379,calc/out/run23/abstract_bound_changes.csv,364,old,0.0,0.0
+report quote 1380,calc/out/run23/abstract_bound_changes.csv,364,new,0.0,0.0
+report quote 1381,calc/out/run23/abstract_bound_changes.csv,364,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1382,calc/out/run23/abstract_bound_changes.csv,365,old,614.0575,614.0575
+report quote 1383,calc/out/run23/abstract_bound_changes.csv,365,new,614.0575,614.0575
+report quote 1384,calc/out/run23/abstract_bound_changes.csv,365,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1385,calc/out/run23/abstract_bound_changes.csv,366,old,4,4
+report quote 1386,calc/out/run23/abstract_bound_changes.csv,366,new,4,4
+report quote 1387,calc/out/run23/abstract_bound_changes.csv,366,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1388,calc/out/run23/abstract_bound_changes.csv,367,old,37,37
+report quote 1389,calc/out/run23/abstract_bound_changes.csv,367,new,37,37
+report quote 1390,calc/out/run23/abstract_bound_changes.csv,367,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1391,calc/out/run23/abstract_bound_changes.csv,368,old,454.40254999999996,454.40254999999996
+report quote 1392,calc/out/run23/abstract_bound_changes.csv,368,new,454.40254999999996,454.40254999999996
+report quote 1393,calc/out/run23/abstract_bound_changes.csv,368,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1394,calc/out/run23/abstract_bound_changes.csv,369,old,0.0,0.0
+report quote 1395,calc/out/run23/abstract_bound_changes.csv,369,new,0.0,0.0
+report quote 1396,calc/out/run23/abstract_bound_changes.csv,369,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1397,calc/out/run23/abstract_bound_changes.csv,370,old,0.0,0.0
+report quote 1398,calc/out/run23/abstract_bound_changes.csv,370,new,0.0,0.0
+report quote 1399,calc/out/run23/abstract_bound_changes.csv,370,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1400,calc/out/run23/abstract_bound_changes.csv,371,old,1606.0000000000002,1606.0000000000002
+report quote 1401,calc/out/run23/abstract_bound_changes.csv,371,new,1606.0000000000002,1606.0000000000002
+report quote 1402,calc/out/run23/abstract_bound_changes.csv,371,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1403,calc/out/run23/abstract_bound_changes.csv,372,old,4,4
+report quote 1404,calc/out/run23/abstract_bound_changes.csv,372,new,4,4
+report quote 1405,calc/out/run23/abstract_bound_changes.csv,372,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1406,calc/out/run23/abstract_bound_changes.csv,373,old,37,37
+report quote 1407,calc/out/run23/abstract_bound_changes.csv,373,new,37,37
+report quote 1408,calc/out/run23/abstract_bound_changes.csv,373,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1409,calc/out/run23/abstract_bound_changes.csv,374,old,1191.372613578752,1191.372613578752
+report quote 1410,calc/out/run23/abstract_bound_changes.csv,374,new,1191.372613578752,1191.372613578752
+report quote 1411,calc/out/run23/abstract_bound_changes.csv,374,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1412,calc/out/run23/abstract_bound_changes.csv,375,old,0.0,0.0
+report quote 1413,calc/out/run23/abstract_bound_changes.csv,375,new,0.0,0.0
+report quote 1414,calc/out/run23/abstract_bound_changes.csv,375,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis
+report quote 1415,calc/out/run23/abstract_bound_changes.csv,376,old,0.0,0.0
+report quote 1416,calc/out/run23/abstract_bound_changes.csv,376,new,0.0,0.0
+report quote 1417,calc/out/run23/abstract_bound_changes.csv,376,why,unchanged on the same coordinate/basis,unchanged on the same coordinate/basis

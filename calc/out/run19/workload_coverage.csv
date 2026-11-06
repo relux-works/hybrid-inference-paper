@@ -1,0 +1,2 @@
+original_calls,common_calls,common_share,max_end_depth,delta_min,delta_max,normalized_calls_person_month,full_workload_supported,full_workload_office_cost,basis,status,alarm_inputs
+39904,10885,0.2727796712109062,249000,512,10000,52500,False,nan,all alternatives use the same indices; original API cache-group prices selected without resetting boundaries; conditional mix normalized to a whole person-month; not full-workload claim,alarm,run19.workload

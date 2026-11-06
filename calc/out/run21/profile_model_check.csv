@@ -1,0 +1,9 @@
+profile,metric,source_mean,model_mean,source_p50,model_p50,source_p90,model_p90,basis,status,alarm_inputs
+existing_combined,depth_per_call,164437.3,164437.30000000002,135362.0,135362.00738096464,250202.0,250200.28422324464,existing seeded workload unchanged,ok,
+existing_combined,new_in_per_call,1066.4,1066.4,158.0,157.99971562997254,3052.0,3095.3725682106256,existing seeded workload unchanged,ok,
+existing_combined,output_per_call,511.9,511.8999999999999,229.0,229.20609248534987,1135.0,1166.8227160456565,existing seeded workload unchanged,ok,
+existing_combined,gap_seconds,129.7,3.2773666875649825,7.8,1.9999501610839454,34.8,7.1428723691374,existing seeded workload unchanged,ok,
+claude_deep,depth_per_call,307858.2,307858.1999999998,212311.0,212407.80042191438,720173.2,720519.6119348506,quantile+mean calibrated; conditional depth-bin delta mean; permuted ranks; active gap cap300s estimated; raw idle gap mean333s,ok,
+claude_deep,new_in_per_call,1022.3,1022.4055,380.0,689.7,2420.0,1853.6,quantile+mean calibrated; conditional depth-bin delta mean; permuted ranks; active gap cap300s estimated; raw idle gap mean333s,ok,
+claude_deep,output_per_call,762.0,762.0000000000014,382.0,382.0000000371077,1562.0,1562.0000204171074,quantile+mean calibrated; conditional depth-bin delta mean; permuted ranks; active gap cap300s estimated; raw idle gap mean333s,ok,
+claude_deep,gap_seconds,333.0,44.118772484191375,8.1,9.431314436992526,60.6,300,quantile+mean calibrated; conditional depth-bin delta mean; permuted ranks; active gap cap300s estimated; raw idle gap mean333s,ok,

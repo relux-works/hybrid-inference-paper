@@ -1,0 +1,55 @@
+{
+  "observed_utc": "2026-11-03T09:23:24.260165+00:00",
+  "inputs": [
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/e2e-results-261101/x/40k/hybrid-bench-mac-metal-40k-20261101T122140494707Z.jsonl",
+      "bytes": 29371,
+      "sha256": "4df01d891107b2a188e6ba3b849184580cf3aab13816659b8bfd5be8d8ca1f22"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/e2e-results-261101/x/40k/hybrid-bench-mac-metal-40k-20261101T122140494707Z.md",
+      "bytes": 498,
+      "sha256": "e68afd4e02326c75e541767db055291e1a48711c37e3cb801e526d72ad5af6d7"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/e2e-results-261101/x/40k/client-info.json",
+      "bytes": 4250,
+      "sha256": "ccfe06fe2003277c20008921868da6448331c31cf59fd59682c0fe45933ba02f"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/e2e-results-261101/x/40k/node-info.json",
+      "bytes": 3874,
+      "sha256": "22ced5888fc4c40d5732ac2f780add200abe64a8bfa8acc77c772e9109b985cc"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/growing-mac-261102/TIMING-EXTRACT.json.gz",
+      "bytes": 35990,
+      "sha256": "d0d3f02115b4d87f4218ec97e235356a63aa2bd59f80fd2bc1888439db7941dd"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/growing-mac-261102/INSTRUMENTATION-TIMING-EXTRACT.json.gz",
+      "bytes": 3442,
+      "sha256": "d15844adcf6e45bb764df0876d3f518dfcbae79cef4c8c6d45722b0f7cfcc169"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/growing-mac-261102/PREFLIGHT-ROUTE-PLAN.json.gz",
+      "bytes": 1730,
+      "sha256": "a51c135828912ad1cd265be20baed5aec8f8ddb3bea6d4108584aa3cef189bd6"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/growing-mac-261102/5g-PREFLIGHT-ROUTE-PLAN.json.gz",
+      "bytes": 1368,
+      "sha256": "ff10f0124dd08aabe3a02196dceb7b4914649649a626a3b594ca07798f75d7c3"
+    },
+    {
+      "path": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+      "bytes": 43577,
+      "sha256": "e6c2d46b84ae721770543b4bec2bd98a5a779c3e981dc5d8ebaa14ed4ce2d5ca"
+    },
+    {
+      "path": "/home/agent/Werkstatt/hybrid-d/llama.cpp/tools/hybrid/RESULTS-hybrid-d-r12-261102.md",
+      "bytes": 19802,
+      "sha256": "97088d0f5f54cbeb37ace47c84919950b456db75bb3425d3cafa39a56af11c2e"
+    }
+  ]
+}

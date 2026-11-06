@@ -1,0 +1,1112 @@
+{
+  "vLLM cold-fit 16k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "vLLM cold-fit 249k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "vLLM cached 16k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "vLLM cached 65k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "vLLM cached 131k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "vLLM cached 249k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "vLLM server-only qualification": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Серверный FP8.}"
+  },
+  "overnight M3 32k": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "overnight M3 64k": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "overnight M3 restored 128k": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "overnight M3 warm 128k": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "overnight M3 260k": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "overnight M5 32k": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "overnight parallel denominators": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Параллельная генерация.}"
+  },
+  "overnight warm lower bound": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Измеренная суммарная генерация"
+  },
+  "overnight agent stream speed": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight agent p90": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight Mac prefill share": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight PRO prefill share": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight large tool output": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight cooled sweep pending": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight agent gain pending": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Реалистичные агенты.}"
+  },
+  "overnight B300 ladder 16": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-llama}"
+  },
+  "overnight B300 ladder 50": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-llama}"
+  },
+  "overnight B300 ladder 100": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-llama}"
+  },
+  "overnight B300 ladder 150": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-llama}"
+  },
+  "overnight B300 ladder 200": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-llama}"
+  },
+  "overnight B300 ladder 249": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-llama}"
+  },
+  "overnight B300 cold marginal 16": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-vllm}"
+  },
+  "overnight B300 cold marginal 50": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-vllm}"
+  },
+  "overnight B300 cold marginal 100": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-vllm}"
+  },
+  "overnight B300 cold marginal 249": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:b300-vllm}"
+  },
+  "overnight B300 portion comparison": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{FP8 на B300.}"
+  },
+  "overnight B300 cached default": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{FP8 на B300.}"
+  },
+  "overnight B300 cached FP8 KV": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{FP8 на B300.}"
+  },
+  "overnight B300 server only": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{FP8 на B300.}"
+  },
+  "overnight bridge export and probe": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый запуск моста состояния.}"
+  },
+  "overnight bridge BF16": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый запуск моста состояния.}"
+  },
+  "overnight bridge Q4": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый запуск моста состояния.}"
+  },
+  "overnight bridge heterogeneous uncalibrated": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый запуск моста состояния.}"
+  },
+  "overnight bridge finite qualification": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый запуск моста состояния.}"
+  },
+  "overnight bridge depth pending": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый запуск моста состояния.}"
+  },
+  "overnight bridge adapter pending": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Сквозная проверка узла vLLM.}"
+  },
+  "overnight B300 economics pending": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Экономические оценки B300 используют"
+  },
+  "overnight import fixed and token costs": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Стоимость вставки состояния.}"
+  },
+  "overnight import long delta": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Стоимость вставки состояния.}"
+  },
+  "overnight import Mac single point": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Стоимость вставки состояния.}"
+  },
+  "overnight import version qualification": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Стоимость вставки состояния.}"
+  },
+  "run14 client M3 Max 128 GB (measured)": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 client M5 Max 64 GB": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 client M5 Max 128 GB": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 client M5 Ultra 96 GB": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 client M5 Ultra 256 GB": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 client Strix Halo 128 GB": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 client DGX Spark 128 GB": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:clients}"
+  },
+  "run14 agents 1": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 agents 2": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 agents 4": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 agents 6": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 agents 8": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 agents 12": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 agents 16": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 mostly modelled 16": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Выигрыш по числу агентов.}"
+  },
+  "run14 import qualification": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\caption{Условных сессий"
+  },
+  "run14 M5 source": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Сколько успевает клиент за день.}"
+  },
+  "run14 transcript M3 Max 128 GB (measured)": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:transcript}"
+  },
+  "run14 transcript M5 Max 64 GB": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:transcript}"
+  },
+  "run14 transcript M5 Air 32 GB (estimate)": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:transcript}"
+  },
+  "run14 offload share 32": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:offload}"
+  },
+  "run14 offload saved 32": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:offload}"
+  },
+  "run14 offload share 16": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:offload}"
+  },
+  "run14 offload saved 16": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:offload}"
+  },
+  "run14 traffic day client subject": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Трафик как статья расходов.}"
+  },
+  "run14 traffic compute storage narrative": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Трафик как статья расходов.}"
+  },
+  "run14 16.0 MB/s prediction": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз для измеренного запуска.}"
+  },
+  "run14 flag union 16": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 flag share 16 depth_modelled": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 flag share 16 count_conservative": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 flag share 16 measured_lower_bound": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 flag share 16 shallow": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run14 node smoke8k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Сквозная проверка узла vLLM.}"
+  },
+  "run14 node smoke32k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Сквозная проверка узла vLLM.}"
+  },
+  "run14 node smoke divergence": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Сквозная проверка узла vLLM.}"
+  },
+  "run14 node smoke timing": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Сквозная проверка узла vLLM.}"
+  },
+  "run14 node smoke qualification": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Сквозная проверка узла vLLM.}"
+  },
+  "run15 cooled anchor 0": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "run15 cooled anchor 1": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "run15 cooled anchor 2": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "run15 transcript prose summary minutes": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Пример вне программирования.}"
+  },
+  "run15 transcript prose hybrid total minutes": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Пример вне программирования.}"
+  },
+  "run15 transcript prose local total minutes": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Пример вне программирования.}"
+  },
+  "run15 cooled protocol": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Параллельная генерация.}"
+  },
+  "run15 np4 sensitivity": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Параллельная генерация.}"
+  },
+  "run15 six coverage": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\noindent\\footnotesize"
+  },
+  "run15 six exclusion": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\noindent\\footnotesize"
+  },
+  "run15 cooled bandwidth share": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Скорость генерации и её запас.}"
+  },
+  "run15 capacity gains": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "Переход от одного к четырём,"
+  },
+  "run15 capacity four sixteen": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "Переход от одного к четырём,"
+  },
+  "run15 measured zone16": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Выигрыш по числу агентов.}"
+  },
+  "run15 depth zone4": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Выигрыш по числу агентов.}"
+  },
+  "run15 traffic volume": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Трафик как статья расходов.}"
+  },
+  "run15 traffic high egress": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Трафик как статья расходов.}"
+  },
+  "run15 SWA GPU exact": {
+    "from": "05b-models.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Проверка скользящего окна.}"
+  },
+  "run15 landed head": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run15 PRO timing": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run15 PRO 8k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run15 PRO 8k cause": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run15 PRO 32k": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run15 PRO chunk chain": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run15 PRO calibration": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Точная общая версия прототипа"
+  },
+  "run16 background ancestry": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Условия измерений.}"
+  },
+  "run16 paired priority limit": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Условия измерений.}"
+  },
+  "run16 kit refuses background": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Условия измерений.}"
+  },
+  "run16 partial PRI31 parallel": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Параллельная генерация.}"
+  },
+  "run16 intermediate counts pending": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Параллельная генерация.}"
+  },
+  "run16 clients capacity": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\caption{Условных сессий"
+  },
+  "run16 agents capacity": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:agents-day}"
+  },
+  "run16 gains interim": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "Переход от одного к четырём,"
+  },
+  "run16 traffic capacity": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Трафик как статья расходов.}"
+  },
+  "run16 SWA background": {
+    "from": "05b-models.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Измерения комплекта"
+  },
+  "run16 M5 priority client table": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\caption{Условных сессий"
+  },
+  "run16 M5 priority sweep table": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Измеренная суммарная"
+  },
+  "run16 M5 gains prose": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Сколько успевает клиент за день.}"
+  },
+  "run16 autopilot capacity": {
+    "from": "11-limitations.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "Расчёты исходят"
+  },
+  "run16 growing timing arms": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренный запуск при 9.75~МБ/с.}"
+  },
+  "run16 outage resync": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренный запуск при 9.75~МБ/с.}"
+  },
+  "run16 decode PRI31": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренный запуск при 9.75~МБ/с.}"
+  },
+  "run16 instrumentation row 0": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:growing-link}"
+  },
+  "run16 instrumentation row 7": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:growing-link}"
+  },
+  "run16 instrumentation row 31": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:growing-link}"
+  },
+  "run16 residual limit": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Канал 9.75"
+  },
+  "run16 captures synchronous": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "Проверяющая программа синхронно"
+  },
+  "run16 validation local turns": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз для измеренного запуска.}"
+  },
+  "run16 validation ideal": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз для измеренного запуска.}"
+  },
+  "run16 validation conditioned": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз для измеренного запуска.}"
+  },
+  "run16 Mac checkpoint measured": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз для измеренного запуска.}"
+  },
+  "run16 Mac recheck uncalibrated": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз для измеренного запуска.}"
+  },
+  "run16 link thresholds": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "Для прежней базовой конфигурации"
+  },
+  "run16 preflight 9.75 MB/s": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Порог канала.}"
+  },
+  "v4b first call accounting": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый сквозной вызов при 16.0~МБ/с.}"
+  },
+  "v4b first call unattributed": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый сквозной вызов при 16.0~МБ/с.}"
+  },
+  "v4b first call historical priority": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый сквозной вызов при 16.0~МБ/с.}"
+  },
+  "v4b first call prediction": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прогноз первого вызова.}"
+  },
+  "v4b restored prefill ratio": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Сколько успевает клиент за день.}"
+  },
+  "run17 threshold qwen27/f32/32000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold qwen27/f32/64000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold qwen27/f32/100000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold qwen27/bf16/32000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold qwen27/bf16/64000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold qwen27/bf16/100000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold glimmer30/f32/32000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold glimmer30/f32/64000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold glimmer30/f32/100000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold gemma31/f32/32000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold gemma31/f32/64000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 threshold gemma31/f32/100000": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:model-link}"
+  },
+  "run17 SWA qualification": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Минимальная полезная"
+  },
+  "run17 SWA import limit": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "Перенос закона вставки Qwen"
+  },
+  "run17 Gemma comparison qualification": {
+    "from": "05b-models.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Gemma 4 и канал.}"
+  },
+  "run17 extrapolation S=0": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:architecture-extrapolation}"
+  },
+  "run17 extrapolation S=10": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:architecture-extrapolation}"
+  },
+  "run17 extrapolation S=50": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:architecture-extrapolation}"
+  },
+  "run17 extrapolation S=78.5": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:architecture-extrapolation}"
+  },
+  "run17 extrapolation S=157": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:architecture-extrapolation}"
+  },
+  "run17 extrapolation limit": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Экстраполяция устройства модели.}"
+  },
+  "run17 extrapolation caption": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Экстраполяция при фиксированных"
+  },
+  "run17 base import total": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 base import arithmetic": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 base gap": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 node full save": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 hashing remains": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 arithmetic upper bound": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 timing-only pending": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Учёт времени растущей сессии.}"
+  },
+  "run17 accounting row 0": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:time-accounting}"
+  },
+  "run17 accounting row 7": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:time-accounting}"
+  },
+  "run17 accounting row 31": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:time-accounting}"
+  },
+  "run17 first request unknown split": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Первый сквозной вызов при 16.0~МБ/с.}"
+  },
+  "run17 turn31 cursor not critical": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "Для хода 7 два критических"
+  },
+  "run17 bf16 tensor bytes": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Передача состояния в bf16.}"
+  },
+  "run17 bf16 CPU loss": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Передача состояния в bf16.}"
+  },
+  "run17 bf16 rounding": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Передача состояния в bf16.}"
+  },
+  "run17 bf16 pending": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Передача состояния в bf16.}"
+  },
+  "run17 bf16 resident unchanged": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Передача состояния в bf16.}"
+  },
+  "run17 bf16 transfer estimate": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Передача состояния в bf16.}"
+  },
+  "v5a normal decode headroom": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренные клиенты.}"
+  },
+  "v5a consumer capacity": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Потребительские GPU как клиенты.}"
+  },
+  "v5a consumer normal": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Потребительские GPU как клиенты.}"
+  },
+  "v5a when pays interim": {
+    "from": "07-economics.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\caption{Условия окупаемости"
+  },
+  "v5a link check first": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Повторная проверка связи.}"
+  },
+  "v5a link check second": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Повторная проверка связи.}"
+  },
+  "v5a link check protocol": {
+    "from": "04-channel.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Повторная проверка связи.}"
+  },
+  "v5a2 Glimmer PRI31 conditions": {
+    "from": "05b-models.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Glimmer на Mac при PRI~31.}"
+  },
+  "v5a2 Glimmer engine pending": {
+    "from": "05b-models.tex",
+    "to": "90-appendix.tex",
+    "marker": "Пороги движка для Glimmer сохраняют"
+  },
+  "v5a3 M5 admission": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{M5 Max при записанном PRI~31.}"
+  },
+  "v5a3 M5 agents": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Длинная сессия и агентские вызовы M5.}"
+  },
+  "v5a3 Qwen parallel 32": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "v5a3 Qwen parallel 64": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "v5a3 Qwen parallel 128": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:parallel-decode}"
+  },
+  "v5a4 M5 archived priority": {
+    "from": "05-clients.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "Отношение сегментного prefill архивного"
+  },
+  "v5a4 vLLM decode methods": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренная пакетная генерация vLLM на 16 тысячах.}"
+  },
+  "v5a4 vLLM decode result": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\label{tab:vllm-decode16}"
+  },
+  "v5a4 vLLM deeper scope": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "Отношение раннего замера"
+  },
+  "v5b M5 sample disclosure": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "Архивные массивы допуска содержат"
+  },
+  "v5c current deep Mac client": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "Ранний замер на глубине"
+  },
+  "v5a2 server rebuild": {
+    "from": "08-million.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренное восстановление на сервере.}"
+  },
+  "v5a3 M5 batching": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренный пакет на M5.}"
+  },
+  "v5a3 M5 regressions": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "Glimmer использует 32 слота"
+  },
+  "v5b dedicated basis": {
+    "from": "07-economics.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Основная база:"
+  },
+  "v5c Mac setup": {
+    "from": "08-million.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Прямой замер Mac.}"
+  },
+  "v5c PRO decode setup": {
+    "from": "06-server.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Измеренная зависимость"
+  },
+  "v5d1 M3 setup": {
+    "from": "05-clients.tex",
+    "to": "90-appendix.tex",
+    "marker": "\\textbf{Ограниченная кривая M3"
+  },
+  "v5d1 API pooled descriptive only": {
+    "from": "07-economics.tex",
+    "to": "90-appendix.tex",
+    "marker": "В миллионном контексте объединение"
+  },
+  "run14 turn 100000/2000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:turn}"
+  },
+  "run14 turn 100000/10000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:turn}"
+  },
+  "run14 turn 200000/2000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:turn}"
+  },
+  "run14 turn 200000/10000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:turn}"
+  },
+  "run14 oneshot 100000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:oneshot}"
+  },
+  "run14 oneshot 200000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:oneshot}"
+  },
+  "run14 oneshot 262000": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\label{tab:oneshot}"
+  },
+  "run14 large turn narrative": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Один ход.}"
+  },
+  "run14 oneshot narrative": {
+    "from": "04-channel.tex",
+    "to": "91-calculation-history.tex",
+    "marker": "\\textbf{Разовая загрузка.}"
+  },
+  "run15 SWA no reread": {
+    "from": "05b-models.tex",
+    "to": "90-appendix.tex",
+    "marker": "Комплект 1.6.5 на"
+  }
+}

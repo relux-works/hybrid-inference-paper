@@ -1,0 +1,6460 @@
+{
+  "samples": [
+    {
+      "sampled_utc": "2026-11-03T15:02:12.678632+00:00",
+      "step": "00-check.sh:readiness",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12230,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12230",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12230 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:02:48.819605+00:00",
+      "step": "30-run-smoke.sh:step-entry",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12692,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12692",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12692 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:02:53.020891+00:00",
+      "step": "30-run-smoke.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12692,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12692",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12692 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 12721,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12721",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12721 12692  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12692,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:02:53.099923+00:00",
+      "step": "30-run-smoke.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12692,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12692",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12692 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 12721,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12721",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12721 12692  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12692,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:03:03.917567+00:00",
+      "step": "40-run-depth.sh:step-entry",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12836,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12836",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12836 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:03:06.076494+00:00",
+      "step": "40-run-depth.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12836,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12836",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12836 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 12879,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12879",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12879 12836  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12836,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:03:06.201341+00:00",
+      "step": "40-run-depth.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 12836,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12836",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12836 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 12879,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12879",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12879 12836  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12836,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:27:30.506323+00:00",
+      "step": "50-run-parallel.sh:step-entry",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14204,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14204",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14204 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:27:32.649446+00:00",
+      "step": "50-run-parallel.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14204,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14204",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14204 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14239,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14239",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14239 14204  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14204,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:27:32.733718+00:00",
+      "step": "50-run-parallel.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14204,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14204",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14204 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14239,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14239",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14239 14204  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14204,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:32:23.033988+00:00",
+      "step": "55-run-scaling.sh:step-entry",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:32:24.308429+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14613,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14613",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14613 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:32:24.381117+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14613,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14613",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14613 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:33:39.961352+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 R    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "R",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14761,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14761",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14761 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:33:40.036526+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14761,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14761",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14761 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:38:40.153956+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 14761,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14761",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14761 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:44:11.993156+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 15404,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "15404",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "15404 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:44:12.072793+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 15404,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "15404",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "15404 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:47:10.796597+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 15650,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "15650",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "15650 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:47:10.869171+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 15650,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "15650",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "15650 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:52:10.976043+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 15650,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "15650",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "15650 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:55:21.775400+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 16171,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "16171",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "16171 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T15:55:21.853761+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 16171,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "16171",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "16171 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:02:57.255553+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 16627,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "16627",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "16627 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:02:57.369072+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 16627,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "16627",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "16627 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:07:57.484266+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 16627,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "16627",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "16627 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:10:37.927300+00:00",
+      "step": "55-run-scaling.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 17130,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17130",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17130 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:10:38.000226+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 17130,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17130",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17130 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:15:38.117763+00:00",
+      "step": "55-run-scaling.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 14559,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "14559",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "14559 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 17130,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17130",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17130 14559  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 14559,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:16:52.153616+00:00",
+      "step": "56-run-maxctx.sh:step-entry",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 17533,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17533",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17533 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:16:55.392639+00:00",
+      "step": "56-run-maxctx.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 17533,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17533",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17533 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 17588,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17588",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17588 17533  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 17533,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:16:55.468966+00:00",
+      "step": "56-run-maxctx.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 17533,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17533",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17533 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 17588,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "17588",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "17588 17533  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 17533,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:39:24.970698+00:00",
+      "step": "57-run-agents.sh:step-entry",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 18792,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "18792",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "18792 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:39:28.156815+00:00",
+      "step": "57-run-agents.sh:server-ready",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 18792,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "18792",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "18792 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 18832,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "18832",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "18832 18792  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 18792,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    },
+    {
+      "sampled_utc": "2026-11-03T16:39:28.235905+00:00",
+      "step": "57-run-agents.sh:before-child",
+      "platform": "Darwin",
+      "ancestry": [
+        {
+          "pid": 18792,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "18792",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "18792 12226  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12226,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12226,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12226",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12226 12187  31  0 S+   bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12187,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12187,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12187",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12187 12151  31  0 S+   /bin/bash\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12151,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "/bin/bash",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12151,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12151",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12151 12150  31  0 S    -zsh\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 12150,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S",
+          "comm": "-zsh",
+          "scheduling_class": null
+        },
+        {
+          "pid": 12150,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "12150",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "12150   737  31  0 Ss   login\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 737,
+          "pri": 31,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "login",
+          "scheduling_class": null
+        },
+        {
+          "pid": 737,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "737",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "  737     1  47  0 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 1,
+          "pri": 47,
+          "nice": 0,
+          "stat": "S",
+          "comm": "/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+          "scheduling_class": null
+        },
+        {
+          "pid": 1,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "1",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "    1     0  37  0 Ss   /sbin/launchd\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 0,
+          "pri": 37,
+          "nice": 0,
+          "stat": "Ss",
+          "comm": "/sbin/launchd",
+          "scheduling_class": null
+        }
+      ],
+      "servers": [
+        {
+          "pid": 18832,
+          "errors": [],
+          "ps": {
+            "command": [
+              "ps",
+              "-p",
+              "18832",
+              "-o",
+              "pid=,ppid=,pri=,nice=,stat=,comm="
+            ],
+            "stdout": "18832 18792  31  0 S+   <work>/llama.cpp/build/bin/llama-server\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          "ppid": 18792,
+          "pri": 31,
+          "nice": 0,
+          "stat": "S+",
+          "comm": "<work>/llama.cpp/build/bin/llama-server",
+          "scheduling_class": null
+        }
+      ],
+      "violations": [],
+      "warnings": [],
+      "override_used": false,
+      "normal_priority": true
+    }
+  ],
+  "override_used": false,
+  "normal_priority": true
+}

@@ -1,0 +1,367 @@
+{
+  "source_path": "/home/agent/lanes/hybrid/.temp/evidence/vllm-pro-g1611-261103/results1611/vllm-20261103T201021Z/decode.json",
+  "source_sha256": "01b83976d23133e81b96154897ba78c0b5147daa8fd25faebcf74460c1a14c7c",
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "method": "private-prefix-prime; no cross-stream KV sharing; common decode window",
+  "timing_granularity": "sse-chunk-receipt",
+  "tokens": 256,
+  "rows": [
+    {
+      "depth": 16384,
+      "capacity": {
+        "max_sessions": 39,
+        "first_no_fit": 40,
+        "probes": [
+          {
+            "n": 1,
+            "fits": true
+          },
+          {
+            "n": 43,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 22,
+            "fits": true
+          },
+          {
+            "n": 32,
+            "fits": true
+          },
+          {
+            "n": 37,
+            "fits": true
+          },
+          {
+            "n": 40,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 38,
+            "fits": true
+          },
+          {
+            "n": 39,
+            "fits": true
+          },
+          {
+            "n": 39,
+            "fits": true
+          },
+          {
+            "n": 40,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          }
+        ]
+      },
+      "shapes": [
+        {
+          "streams": 1,
+          "median": {
+            "aggregate_tok_s": 48.70453006338683,
+            "per_stream_mean_tok_s": 48.70453006338683,
+            "common_window_s": 5.235652611125261,
+            "ttft_s": 0.1147401558700949,
+            "cold_prime_ttft_s": 1.8080704680178314
+          },
+          "batching_gain": 1.0,
+          "round_aggregate_tok_s": [
+            48.70453006338683,
+            48.70341052821337,
+            48.71630307057021
+          ]
+        },
+        {
+          "streams": 8,
+          "median": {
+            "aggregate_tok_s": 302.59977133502423,
+            "per_stream_mean_tok_s": 37.82497141687803,
+            "common_window_s": 6.6823985651135445,
+            "ttft_s": 0.7154478784650564,
+            "cold_prime_ttft_s": 1.799929926986806
+          },
+          "batching_gain": 6.212969736925986,
+          "round_aggregate_tok_s": [
+            302.31293896626374,
+            302.59977133502423,
+            303.03490285237007
+          ]
+        },
+        {
+          "streams": 32,
+          "median": {
+            "aggregate_tok_s": 686.816953541619,
+            "per_stream_mean_tok_s": 21.463029798175597,
+            "common_window_s": 11.695983855053782,
+            "ttft_s": 2.4180537455249578,
+            "cold_prime_ttft_s": 1.8204771794844419
+          },
+          "batching_gain": 14.101705788922645,
+          "round_aggregate_tok_s": [
+            686.816953541619,
+            686.9349236085671,
+            686.7916586133248
+          ]
+        },
+        {
+          "streams": 39,
+          "median": {
+            "aggregate_tok_s": 737.9342485617974,
+            "per_stream_mean_tok_s": 18.921390988764035,
+            "common_window_s": 13.213914409046993,
+            "ttft_s": 2.5534099850337952,
+            "cold_prime_ttft_s": 1.8292342550121248
+          },
+          "batching_gain": 15.151244609103262,
+          "round_aggregate_tok_s": [
+            737.8934883651525,
+            738.1019955800136,
+            737.9342485617974
+          ]
+        }
+      ]
+    },
+    {
+      "depth": 65536,
+      "capacity": {
+        "max_sessions": 12,
+        "first_no_fit": 13,
+        "probes": [
+          {
+            "n": 1,
+            "fits": true
+          },
+          {
+            "n": 14,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 7,
+            "fits": true
+          },
+          {
+            "n": 10,
+            "fits": true
+          },
+          {
+            "n": 12,
+            "fits": true
+          },
+          {
+            "n": 13,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 12,
+            "fits": true
+          },
+          {
+            "n": 13,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          }
+        ]
+      },
+      "shapes": [
+        {
+          "streams": 1,
+          "median": {
+            "aggregate_tok_s": 44.46371230817621,
+            "per_stream_mean_tok_s": 44.46371230817621,
+            "common_window_s": 5.735013717086986,
+            "ttft_s": 0.16313910600729287,
+            "cold_prime_ttft_s": 9.271681927144527
+          },
+          "batching_gain": 1.0,
+          "round_aggregate_tok_s": [
+            44.46371230817621,
+            44.45225717111862,
+            44.47107972518868
+          ]
+        },
+        {
+          "streams": 8,
+          "median": {
+            "aggregate_tok_s": 190.28855418503053,
+            "per_stream_mean_tok_s": 23.786069273128817,
+            "common_window_s": 10.635796388145536,
+            "ttft_s": 0.9191298114601523,
+            "cold_prime_ttft_s": 9.342343638534658
+          },
+          "batching_gain": 4.279637131199216,
+          "round_aggregate_tok_s": [
+            189.54821455183497,
+            190.3007472252772,
+            190.28855418503053
+          ]
+        },
+        {
+          "streams": 12,
+          "median": {
+            "aggregate_tok_s": 225.3503227512157,
+            "per_stream_mean_tok_s": 18.77919356260131,
+            "common_window_s": 13.379168767947704,
+            "ttft_s": 1.3683750331401825,
+            "cold_prime_ttft_s": 9.403298118966632
+          },
+          "batching_gain": 5.068185067169417,
+          "round_aggregate_tok_s": [
+            225.33980363094886,
+            225.45638054937228,
+            225.3503227512157
+          ]
+        }
+      ]
+    },
+    {
+      "depth": 164000,
+      "capacity": {
+        "max_sessions": 5,
+        "first_no_fit": 6,
+        "probes": [
+          {
+            "n": 1,
+            "fits": true
+          },
+          {
+            "n": 7,
+            "fits": false,
+            "reason": "decode preempted"
+          },
+          {
+            "n": 4,
+            "fits": true
+          },
+          {
+            "n": 5,
+            "fits": true
+          },
+          {
+            "n": 6,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 5,
+            "fits": true
+          },
+          {
+            "n": 6,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          }
+        ]
+      },
+      "shapes": [
+        {
+          "streams": 1,
+          "median": {
+            "aggregate_tok_s": 38.10525905280442,
+            "per_stream_mean_tok_s": 38.10525905280442,
+            "common_window_s": 6.691989671206102,
+            "ttft_s": 0.20803848281502724,
+            "cold_prime_ttft_s": 33.61950568202883
+          },
+          "batching_gain": 1.0,
+          "round_aggregate_tok_s": [
+            38.10525905280442,
+            38.10375793303606,
+            38.24946035344629
+          ]
+        },
+        {
+          "streams": 5,
+          "median": {
+            "aggregate_tok_s": 84.22156690471468,
+            "per_stream_mean_tok_s": 16.844313380942936,
+            "common_window_s": 14.936791682150215,
+            "ttft_s": 0.6148586929775774,
+            "cold_prime_ttft_s": 34.044826125958934
+          },
+          "batching_gain": 2.2102347287025266,
+          "round_aggregate_tok_s": [
+            84.18938986655576,
+            84.22156690471468,
+            84.23465162143599
+          ]
+        }
+      ]
+    },
+    {
+      "depth": 256000,
+      "capacity": {
+        "max_sessions": 3,
+        "first_no_fit": 4,
+        "probes": [
+          {
+            "n": 1,
+            "fits": true
+          },
+          {
+            "n": 5,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 3,
+            "fits": true
+          },
+          {
+            "n": 4,
+            "fits": false,
+            "reason": "independent primed contexts not simultaneously resident (cache miss)"
+          },
+          {
+            "n": 3,
+            "fits": true
+          },
+          {
+            "n": 4,
+            "fits": false,
+            "reason": "decode preempted"
+          }
+        ]
+      },
+      "shapes": [
+        {
+          "streams": 1,
+          "median": {
+            "aggregate_tok_s": 33.06693239348491,
+            "per_stream_mean_tok_s": 33.06693239348491,
+            "common_window_s": 7.711631576996297,
+            "ttft_s": 0.33016274799592793,
+            "cold_prime_ttft_s": 68.00944894505665
+          },
+          "batching_gain": 1.0,
+          "round_aggregate_tok_s": [
+            33.06693239348491,
+            33.06755227271127,
+            33.06356341885204
+          ]
+        },
+        {
+          "streams": 3,
+          "median": {
+            "aggregate_tok_s": 57.73022155558607,
+            "per_stream_mean_tok_s": 19.243407185195355,
+            "common_window_s": 13.112716002156958,
+            "ttft_s": 0.9729948930907995,
+            "cold_prime_ttft_s": 68.57077840901911
+          },
+          "batching_gain": 1.7458596058629405,
+          "round_aggregate_tok_s": [
+            57.76382463613075,
+            57.44221827848458,
+            57.73022155558607
+          ]
+        }
+      ]
+    }
+  ]
+}

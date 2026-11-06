@@ -1,0 +1,202 @@
+[
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 1971341,
+    "free_before": 30746980352,
+    "free_after": 30744993792,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 3941384,
+    "free_before": 30744240128,
+    "free_after": 30742269952,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 6452227,
+    "free_before": 30742265856,
+    "free_after": 30739750912,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 8423930,
+    "free_before": 30739226624,
+    "free_after": 30737256448,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 10395503,
+    "free_before": 30736756736,
+    "free_after": 30734786560,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 12299479,
+    "free_before": 30734217216,
+    "free_after": 30732312576,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 14197307,
+    "free_before": 30730752000,
+    "free_after": 30728851456,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 16663153,
+    "free_before": 30728851456,
+    "free_after": 30726385664,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 18608172,
+    "free_before": 30726197248,
+    "free_after": 30724251648,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": ".temp/hybrid-e-r21b-261105/calculation-checkpoint.json",
+    "bytes": 20553315,
+    "free_before": 30723813376,
+    "free_after": 30721867776,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  262G       29G  91% /\n"
+  },
+  {
+    "path": "calc/out/run26/middle_cost.csv",
+    "bytes": 4844494,
+    "free_before": 32190824448,
+    "free_after": 32185974784,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/mixed_scheme.csv",
+    "bytes": 4307202,
+    "free_before": 32185974784,
+    "free_after": 32181665792,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/crossings.csv",
+    "bytes": 514319,
+    "free_before": 32181665792,
+    "free_after": 32181141504,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/fleet_variants.csv",
+    "bytes": 3408423,
+    "free_before": 32181149696,
+    "free_after": 32177737728,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/cloud_reference.csv",
+    "bytes": 12857,
+    "free_before": 32177737728,
+    "free_after": 32177721344,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/cloud_affordability.csv",
+    "bytes": 887,
+    "free_before": 32177721344,
+    "free_after": 32177717248,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/moe_decode.csv",
+    "bytes": 15841,
+    "free_before": 32177717248,
+    "free_after": 32177700864,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/class_map.csv",
+    "bytes": 701,
+    "free_before": 32177700864,
+    "free_after": 32177696768,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/pending_inputs.csv",
+    "bytes": 1191,
+    "free_before": 32177696768,
+    "free_after": 32177692672,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/paper/middle_crossings.csv",
+    "bytes": 39321,
+    "free_before": 32177692672,
+    "free_after": 32177647616,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/paper/team50.csv",
+    "bytes": 46965,
+    "free_before": 32177647616,
+    "free_after": 32177598464,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/paper/words_ready.csv",
+    "bytes": 77469,
+    "free_before": 32177598464,
+    "free_after": 32177520640,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/paper/class_map.csv",
+    "bytes": 701,
+    "free_before": 32177520640,
+    "free_after": 32177516544,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/out/run26/paper/pending_inputs.csv",
+    "bytes": 1191,
+    "free_before": 32177516544,
+    "free_after": 32177512448,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  },
+  {
+    "path": "calc/ENGINE-REPORT-R26-261105.md",
+    "bytes": 14039,
+    "free_before": 32177512448,
+    "free_after": 32177496064,
+    "df_before": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n",
+    "df_after": "Filesystem     1G-blocks  Used Available Use% Mounted on\n/dev/vda1           290G  260G       30G  90% /\n"
+  }
+]

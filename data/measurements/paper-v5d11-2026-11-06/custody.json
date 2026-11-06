@@ -1,0 +1,58 @@
+[
+  {
+    "compressed": "facts-128k-complete.md.gz",
+    "sha256": "b1433e481c26e7baa2f1f8bf717f4335fe84396887718fbfcbf653cf7e87f3a6",
+    "bytes": 3495,
+    "compressed_sha256": "5b49bba67f5b86f0fae81afe365f6812401b548da61a2af6a1537183eed4c4de",
+    "source": "FACTS complete named block"
+  },
+  {
+    "compressed": "facts-four-depths.md.gz",
+    "sha256": "173a22edb027addc0e1cd57c8ad67e8d9fd291b5c2e38426efb69a5a7d5f7720",
+    "bytes": 3613,
+    "compressed_sha256": "882d7a4a79e76f996af79d40a344a38dd358b40f336262d9b77d698f04cd90ca",
+    "source": "FACTS complete named block"
+  },
+  {
+    "compressed": "facts-bf16.md.gz",
+    "sha256": "6287e9e10c58e18bbbee25af255c6015ab4148d30a3c68b06c235fbd3cd486f4",
+    "bytes": 2094,
+    "compressed_sha256": "d4fe316e7e2ae2459bb06653b511d6601c83ab1a2d7d1bbeabd8b250ef4e01a5",
+    "source": "FACTS complete named block"
+  },
+  {
+    "compressed": "r16e-handoff.md.gz",
+    "sha256": "bfc8fb8e851840b3acf6a259d8e68f633aaf1a2ebea50ebe11f6d60871048984",
+    "bytes": 25362,
+    "compressed_sha256": "b5eb915e538c28e76218bf693729da8aa33c5fea93122b6bd0881c304cdb0312",
+    "source": "r16e/r16f handoff or r16f 779e66a3 snapshot; independent review pending as recorded in FACTS"
+  },
+  {
+    "compressed": "r16f-handoff.md.gz",
+    "sha256": "f7a07f1a201d0c7b8e3234e19ff787f23ed5132e292529f37b8de490dfdfe8cb",
+    "bytes": 18451,
+    "compressed_sha256": "95f8efcfdd5ba0aabe93e5d453dc96b9ab3feb7cf72a995cf82a52b9e789c794",
+    "source": "r16e/r16f handoff or r16f 779e66a3 snapshot; independent review pending as recorded in FACTS"
+  },
+  {
+    "compressed": "qwen.json.gz",
+    "sha256": "2b253c445605aa4c60ef5481e6d0bcfaf3ecd06f2f993443687685747f544d6e",
+    "bytes": 98939,
+    "compressed_sha256": "3bf2d266f7816b739de6e921348c0cfe380766b18b84899c079b5e26aa1636df",
+    "source": "r16e 01b49836 unchanged f32 snapshot"
+  },
+  {
+    "compressed": "qwen-bf16.json.gz",
+    "sha256": "df7ee6c1f59e1313bb54cc3c6eca4ccef952bcee64cc806127b881d8fff55c47",
+    "bytes": 58439,
+    "compressed_sha256": "8ce556242911414d60e2297e98aa28e6fdc61161c5019734596cba1cac566c04",
+    "source": "r16e/r16f handoff or r16f 779e66a3 snapshot; independent review pending as recorded in FACTS"
+  },
+  {
+    "compressed": "bf16-input-provenance.json.gz",
+    "sha256": "22e8b321e7d88414197305f0bd10c872981f5ef586f36e776f13d4f81413c2f4",
+    "bytes": 296372,
+    "compressed_sha256": "4c7e3706cb58b58f2398ecc74db775dc103963243d0bfac255e578a6373764af",
+    "source": "r16e/r16f handoff or r16f 779e66a3 snapshot; independent review pending as recorded in FACTS"
+  }
+]

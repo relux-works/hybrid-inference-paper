@@ -1,0 +1,3 @@
+# Owner r21i: v5d part2
+
+Continue signed fcd44c26. Add partial saved Qwen RULER64k368/390 and128k225/390 in a separate interim table. No registered verdict; both remain p1 pending in Holm. Original nodes queued to restart after owner stop2026-11-04; exact per-depth frozen runtime/specs needed. All measured Qwen1M providers fail95% whole-window availability: Phala0.875,Novita0.452,Alibaba0.846. Show cache/cost descriptively, never admit them. Private relux-works/hybrid-inference-data exists; full evidence snapshot follows RC4. Engine24 economic use remains pending. No push/tag/download/native build; all16 gates, signed commit and addressed summary.

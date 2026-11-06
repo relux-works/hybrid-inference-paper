@@ -1,0 +1,12 @@
+server,depth,streams,aggregate_tok_s,resident_limit,engine,extension,observed_at,source
+pro6000_fp8,16384,1,48.70453006338683,39,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,16384,8,302.59977133502423,39,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,16384,32,686.816953541619,39,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,16384,39,737.9342485617974,39,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,65536,1,44.46371230817621,12,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,65536,8,190.28855418503053,12,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,65536,12,225.3503227512157,12,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,164000,1,38.10525905280442,5,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,164000,5,84.22156690471468,5,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,256000,1,33.06693239348491,3,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3
+pro6000_fp8,256000,3,57.73022155558607,3,vllm,native,2026-11-03T23:35:50Z,pro-decode-receipt.json; kit1.6.11 cd85a194; Muse r7at ACCEPT; SSE common-window median3

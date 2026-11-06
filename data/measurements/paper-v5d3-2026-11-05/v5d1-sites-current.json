@@ -1,0 +1,308 @@
+[
+  {
+    "name": "M3 setup",
+    "file": "05-clients.tex",
+    "marker": "\\textbf{Ограниченная кривая M3",
+    "phrase": "\\textbf{Ограниченная кривая M3 при обычном приоритете.} Qwen3.8-27B на M3 Max 128~ГБ, комплект 1.6.13, тёплый запуск, q8\\_0 KV и Flash Attention: 128 выходных токенов, медианы трёх повторов, охлаждение 300 секунд перед каждой серией. Суммарная скорость равна сумме 127 токенов каждого потока, делённой на наибольшее предсказанное время генерации; промпт и восстановление исключены. Полное время запросов этим показателем не измерено."
+  },
+  {
+    "name": "M3 gains and control",
+    "file": "05-clients.tex",
+    "marker": "Максимумы M3",
+    "phrase": "Максимумы M3 по этой сетке равны $54.838/15.282=3.588$, $33.647/13.157=2.557$ и $17.732/11.202=1.583$ при 16/8/4 потоках на 32/64/128 тысячах. При наибольшем измеренном числе потоков 32/24/12 отношения составляют 3.139/2.275/1.522. Свежий контроль на 128 тысячах и четырёх потоках дал 17.694 против 17.732 токена/с в сетке: $(17.694/17.732-1)\\times100=-0.21\\%$. Контроль не заменяет медиану сетки. M5 Max дал 2.71/2.02/1.28 на тех же глубинах; сервер PRO 6000 с vLLM 15.15/5.07/2.21/1.75 на 16/64/164/256 тысячах. Размеры пакетов и определения времени у серий указаны отдельно; отношения не изолируют причинный эффект одной полосы памяти."
+  },
+  {
+    "name": "M3 capped grid and refusal",
+    "file": "05-clients.tex",
+    "marker": "Сетка ограничена",
+    "phrase": "Сетка ограничена 32 потоками на 32 тысячах, 24 на 64 тысячах и 12 на 128 тысячах. Всего 21 форма, 63 повтора, 591 свежее восстановление с учётом отдельного контроля. Ранний запуск 64 тысячи/32 потока был отклонён строгой защитой при приросте 262 страниц; исходная сетка из 23 форм не завершалась. Завершённый запуск использует ограниченную сетку."
+  },
+  {
+    "name": "M3 bounded memory",
+    "file": "05-clients.tex",
+    "marker": "Защита ограничивает",
+    "phrase": "Защита ограничивает выгрузку страниц каждого дочернего процесса 64~МиБ. При 64 тысячах/24 потоках выгружено 2455 страниц (38.36~МиБ), при 128 тысячах/12 потоках 2313 страниц (36.14~МиБ); в пяти остальных дочерних процессах 0. Во всех дочерних процессах swapouts 0. Прирост страниц в отдельных повторах отражён в результатах: 14 повторов на 64 тысячах и 10 на 128 тысячах, от 2 до 265 страниц в каждом. Положительная выгрузка страниц остаётся условием измерения; утверждение о полном отсутствии подкачки не делается."
+  },
+  {
+    "name": "bf16 rehearsal design",
+    "file": "11-limitations.tex",
+    "marker": "\\textbf{Растущая репетиция",
+    "phrase": "\\textbf{Растущая репетиция с транспортом bf16.} На одной RTX PRO 6000 Server Edition клиент CUDA и узел CUDA прошли 40 выбранных ходов от 100 тысяч токенов. Сначала f32-репетиция выбирала оффлоад своей политикой; повтор bf16 использовал тот же записанный журнал токенов и те же границы маршрутизации f32. Каждый критический рекуррентный конверт округлялся в bf16 один раз, состояния узла оставались f32. Измерение выделяет накопленный клиентский эффект bf16; решения маршрутизации bf16 и изменение свободно генерируемой истории этим повтором не проверены. Это функциональная и численная проверка на одной карте, без сравнения скорости."
+  },
+  {
+    "name": "bf16 checkpoints",
+    "file": "11-limitations.tex",
+    "marker": "Контрольные точки находятся",
+    "phrase": "Контрольные точки находятся на глубинах 109\\,591 / 123\\,135 / 134\\,015 / 143\\,439; до каждой точки выполнено 5 / 9 / 12 / 18 импортов. Top-1 совпал в 64/64 позициях на всех четырёх точках у f32 против локального, локального против bf16 и f32 против bf16. Средний KL локального против bf16 округлённо 6.9e-5--1.5e-4 нат, f32 против bf16 5.3e-5--1.8e-4. Максимальная абсолютная разность логитов у f32 против локального 0.53--0.82, у локального против bf16 0.76--1.06, у f32 против bf16 0.51--1.12. Максимальный KL повторов bf16 равен 0.00329 против локального и 0.004457 против f32, оба на ходе 30. В каждой проверке свободная генерация не разошлась за 64 токена. Совпадение ограничено этими контрольными продолжениями; побитовая точность bf16 не заявляется."
+  },
+  {
+    "name": "bf16 lossy status",
+    "file": "90-appendix.tex",
+    "marker": "\\textbf{Классификация репетиции",
+    "phrase": "\\textbf{Классификация репетиции bf16.} Повтор с фиксированными журналом и границами f32 прошёл численный допуск; проверяющая программа завершилась кодом 5 с меткой \\texttt{lossy}. Эта метка ожидается для округления bf16 и сохраняет отказ от утверждения о точном переносе. Числа f32-репетиции, локальной разбивки и повтора bf16 приведены в таблице~\\ref{tab:bf16-growing-kl}."
+  },
+  {
+    "name": "API window spend crosscheck",
+    "file": "07-economics.tex",
+    "marker": "\\textbf{Измеренное окно кэша",
+    "phrase": "\\textbf{Измеренное окно кэша и доступности.} Исследование OpenRouter шло с 2026-11-03 14:39:44 до 2026-11-04 07:22:22 UTC. Обе ограниченные фазы завершились штатно: первая достигла потолка \\$22 в 01:28:49 UTC 4 ноября, дополнение закончилось в 07:21:58 UTC. Известные списания составили \\$29.3068, верхняя сумма с сохранёнными обязательствами \\$44.9799 при лимите \\$45. Приняты 743 вызова; проверка стоимости через записи генерации подтвердила 742, расхождений 0, один вызов остался непроверенным; наибольшая разность \\$9e-10. Принятых строк с отказом по идентичности 0. Резерв обязательств не является измеренным списанием."
+  },
+  {
+    "name": "API restarts identity availability",
+    "file": "07-economics.tex",
+    "marker": "Исследование пережило",
+    "phrase": "Исследование пережило девять общих остановок; данные непрерывны, повторного воспроизведения вызовов нет, возобновлённые ячейки дополнения помечены. Доступность считается по попыткам всего окна, включая начальные заполнения и тайм-ауты. Строка с несовпавшим поставщиком и пригодными данными \\texttt{usage} считается доступной, но исключается из метрик кэша. Начальные заполнения исключены из оценки доли кэша. Неизвестный расход токенов остаётся неизвестным."
+  },
+  {
+    "name": "API cadence scope",
+    "file": "07-economics.tex",
+    "marker": "Доля кэша зависит",
+    "phrase": "Доля кэша зависит от расписания: Qwen в первой фазе дал 0--0.757, GLM при коротких промежутках до 0.998. Эти доли не переносятся между поставщиками и расписаниями; коммерческий агрегат владельца 98.1\\% остаётся отдельным сценарием."
+  },
+  {
+    "name": "API variant exclusions",
+    "file": "07-economics.tex",
+    "marker": "Всего 10 опробованных вариантов",
+    "phrase": "Всего 10 опробованных вариантов ниже 95\\% за всё окно исключены; полный список приведён в таблице~\\ref{tab:api-availability-final}. Конфигурации поставщика учитываются отдельно; доля попаданий в кэш не подменяет доступность."
+  },
+  {
+    "name": "API pooled descriptive only",
+    "file": "07-economics.tex",
+    "marker": "В миллионном контексте объединение",
+    "phrase": "В миллионном контексте объединение первой фазы и основного расписания дополнения дало для GLM-5.3-flash среднюю цену 60.35 доллара за тысячу вызовов по 15 допущенным измеренным поставщикам, одинаково с Alibaba и без Alibaba. У Qwen на миллионе все три измеренных поставщика ниже порога доступности 95\\% и не допущены; цена допущенного измеренного набора неизвестна. Их наблюдения приведены в таблице~\\ref{tab:qwen-million-measured-excluded}. Объединённый результат сохраняет смесь расписаний и измеренных глубин; цены одинаковых форм вызовов и пересечения рассчитаны отдельно в прогоне 24 (таблица~\\ref{tab:r24-api-points})."
+  },
+  {
+    "name": "tab:m3-capped-decode row8",
+    "file": "05-clients.tex",
+    "marker": "\\label{tab:m3-capped-decode}",
+    "phrase": "Глубина & 1 & 2 & 4 & 8 & 12 & 16 & 24 & 32 \\\\"
+  },
+  {
+    "name": "tab:m3-capped-decode row10",
+    "file": "05-clients.tex",
+    "marker": "\\label{tab:m3-capped-decode}",
+    "phrase": "32768 & 15.282 & 22.561 & 34.104 & 48.708 & 49.096 & 54.838 & 44.767 & 47.974 \\\\"
+  },
+  {
+    "name": "tab:m3-capped-decode row11",
+    "file": "05-clients.tex",
+    "marker": "\\label{tab:m3-capped-decode}",
+    "phrase": "65536 & 13.157 & 17.652 & 26.913 & 33.647 & 31.696 & 29.314 & 29.932 & \\\\"
+  },
+  {
+    "name": "tab:m3-capped-decode row12",
+    "file": "05-clients.tex",
+    "marker": "\\label{tab:m3-capped-decode}",
+    "phrase": "131072 & 11.202 & 13.766 & 17.732 & 17.674 & 17.047 & & & \\\\"
+  },
+  {
+    "name": "tab:bf16-growing-kl row8",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:bf16-growing-kl}",
+    "phrase": "Сравнение & 10 & 20 & 30 & 40 \\\\"
+  },
+  {
+    "name": "tab:bf16-growing-kl row10",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:bf16-growing-kl}",
+    "phrase": "f32 с локальным & 1.567e-4 & 3.62e-5 & 2.572e-4 & 1.276e-4 \\\\"
+  },
+  {
+    "name": "tab:bf16-growing-kl row11",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:bf16-growing-kl}",
+    "phrase": "Локальная смена разбивки & 6.12e-4 & 3.48e-5 & 1.60e-4 & 1.80e-4 \\\\"
+  },
+  {
+    "name": "tab:bf16-growing-kl row12",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:bf16-growing-kl}",
+    "phrase": "Локальный с bf16 & 6.92e-5 & 1.212e-4 & 1.53e-4 & 1.025e-4 \\\\"
+  },
+  {
+    "name": "tab:bf16-growing-kl row13",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:bf16-growing-kl}",
+    "phrase": "f32 с bf16 & 7.39e-5 & 1.80e-4 & 1.602e-4 & 5.29e-5 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row10",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & alibaba & 0 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row11",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & modelrun & 0.286 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row12",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & parasail & 0.429 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row13",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & dekallm & 0.451 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row14",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & deepinfra/bf16 & 0.509 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row15",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & streamlake & 0.517 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row16",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & coreweave & 0.757 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row17",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & cloudflare & 0 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row18",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & darkbloom & 0.014 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row19",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, первая фаза & tenstorrent & 0.141 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row20",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "Qwen, короткие промежутки & phala & 0.987 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row21",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & morph & 0.997 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row22",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & relace & 0.997 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row23",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & sail-research & 0.998 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row24",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & gmicloud & 0.998 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row25",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & novita/fp8 & 0.998 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row26",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & digitalocean & 0.998 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row27",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & atlas-cloud & 0.094 \\\\"
+  },
+  {
+    "name": "tab:api-cache-cadence row28",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "GLM, короткие промежутки & phala/nvfp4 & 0.55 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row10",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "Qwen & alibaba & 0.846 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row11",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "Qwen & streamlake & 0.800 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row12",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "Qwen & phala & 0.875 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row13",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "Qwen & novita & 0.452 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row14",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "GLM & morph/fp8 & 0.932 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row15",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "GLM & relace/fp4 & 0.780 \\\\"
+  },
+  {
+    "name": "tab:api-availability-final row16",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "GLM & reka & 0.474 \\\\"
+  },
+  {
+    "name": "tab:m3-capped-decode caption",
+    "file": "05-clients.tex",
+    "marker": "\\label{tab:m3-capped-decode}",
+    "phrase": "\\caption{M3 Max, обычный приоритет: медианы суммарных токенов/с по ограниченной сетке потоков. Пустая ячейка находится вне измеренной сетки, предельную вместимость машины таблица не устанавливает.}"
+  },
+  {
+    "name": "tab:bf16-growing-kl caption",
+    "file": "11-limitations.tex",
+    "marker": "\\label{tab:bf16-growing-kl}",
+    "phrase": "\\caption{Репетиция CUDA с f32 и повтор bf16: средний KL в натах на 64 позициях с заданными токенами. В столбцах контрольные ходы; локальная смена разбивки показана рядом с переносом.}"
+  },
+  {
+    "name": "tab:api-cache-cadence caption",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-cache-cadence}",
+    "phrase": "\\caption{Измеренная доля входных токенов из кэша: разные расписания вызовов. Первая фаза чередует глубины с длинными паузами; основное расписание дополнения использует короткие промежутки.}"
+  },
+  {
+    "name": "tab:api-availability-final caption",
+    "file": "07-economics.tex",
+    "marker": "\\label{tab:api-availability-final}",
+    "phrase": "\\caption{Доступность за всё измеренное окно: перечисленные варианты ниже порога 95\\% и исключены из нового набора. Прошедшие порог варианты имеют доступность 0.969--1; варианты без попыток остаются неквалифицированными.}"
+  }
+]

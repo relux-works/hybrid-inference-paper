@@ -1,0 +1,10 @@
+{
+  "files": {
+    "calc/ENGINE-REPORT-QUOTES-R23-261104.csv": "c4811d54b184e854ceadc586fcb30488cac1d2ff698bdb51b1661a55e9253f0c",
+    "calc/ENGINE-REPORT-R23-261104.md": "9fed098d00a31737d927ec965549384722766c8a1ad2266a0928b939c1c0e995",
+    "calc/R23-VALIDATION-261104.json": "ba53adb54dfed5fcea5e038cab73e88df640d92c3d63878ab7eff0610cad4249"
+  },
+  "numerical_manifest_sha256": "83f42bd6b5107b4d737d76fab6921feb6ec18de6a5c4f29507986291f0a7c3b2",
+  "policy_sha256": "f0c8ca8a56bafd3b6e32c84bf7eb249f0a06f965e42c9e88dfec1f17b23bb08b",
+  "test_sha256": "f8266ade57ae0f881996f5059fbab208f39938739a3db88443bf36746c9b971c"
+}

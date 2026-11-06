@@ -1,0 +1,72 @@
+[
+  {
+    "file": "01-introduction.tex",
+    "body": "ожидает измерения: арендованный узел не запустился",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "04-channel.tex",
+    "body": "репетиция GPU и запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "поставщик и цена",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "поставщик и цена",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "измеренная доля кэша по допущенным поставщикам и общий измеренный интервал доступности; правило учёта несовпавшего поставщика с пригодными данными usage в доступности и его исключения из метрик кэша.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "доля",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "цена",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "репетиция GPU и запуск Mac для качества и скорости передачи bf16.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "ожидаются до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "RULER Qwen на 64 и 128 тысячах и первичный анализ этих глубин до среза данных 2026-11-05 12:00 UTC.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "полная параллельная кривая M3 при обычном приоритете (шаг 55 выполняется), новые опоры движка и прогон 16b; Gemma при обычном приоритете; пакетная генерация B300 после отказа аренды; измеренные доли кэша OpenRouter; репетиция Qwen bf16 на GPU; калибровка моста vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "FACTS section5 with completed named blocks through Engine23; explicit owner r21g remaining measurements and unchanged earlier hardware/calibration/future-work waits."
+  }
+]

@@ -21,7 +21,7 @@ def load(name, overrides=()):
     candidate = Path(name)
     path = candidate if candidate.is_file() else DATA / 'scenarios' / (name + '.json')
     scenario = read_json(path)
-    if scenario.get('kind') not in ('legacy', 'paper', 'glm', 'service', 'ownership', 'bridge', 'paper_tables', 'paper_tables_r6', 'paper_tables_r7', 'paper_tables_r8', 'measurements_r13', 'measurements_r14'):
+    if scenario.get('kind') not in ('legacy', 'paper', 'glm', 'service', 'ownership', 'bridge', 'paper_tables', 'paper_tables_r6', 'paper_tables_r7', 'paper_tables_r8', 'measurements_r13', 'measurements_r14', 'measurements_r17', 'measurements_r18', 'measurements_r19', 'measurements_r20', 'measurements_r21'):
         raise InputError('unknown scenario kind: {}'.format(scenario.get('kind')))
     canonical = scenario['kind'] != 'legacy'
     data, failures = {}, {}
@@ -101,6 +101,21 @@ def run(name, overrides=()):
             {'name': 'legacy transcript', 'columns': {'line': 'text'},
              'rows': [{'line': line} for line in transcript.splitlines()]}],
             'legacy_text': transcript}
+    elif scenario['kind'] == 'measurements_r21':
+        from .measurements_r21 import calculate
+        result = calculate(scenario, inputs)
+    elif scenario['kind'] == 'measurements_r20':
+        from .measurements_r20 import calculate
+        result = calculate(scenario, inputs)
+    elif scenario['kind'] == 'measurements_r19':
+        from .measurements_r19 import calculate
+        result = calculate(scenario, inputs)
+    elif scenario['kind'] == 'measurements_r18':
+        from .measurements_r18 import calculate
+        result = calculate(scenario, inputs)
+    elif scenario['kind'] == 'measurements_r17':
+        from .measurements_r17 import calculate
+        result = calculate(scenario, inputs)
     elif scenario['kind'] == 'measurements_r14':
         from .measurements_r14 import calculate
         result = calculate(scenario, inputs)
@@ -161,6 +176,12 @@ def run(name, overrides=()):
         record_package(inputs)
         result['notes'] = [n.replace('counts above24 refuse', 'counts above32 refuse') for n in result['notes']]
         result['notes'].append('Run15 supersedes parallel anchors only: cooled kit1.6.6 median of all three restored rounds, largest-np32 at32k/64k and np16 at128k. Step56 260k1/2/4/6/8 remains deepest. Step55, restored128k control and YaRN1.04M are historical sensitivities, excluded from base. The np4 control is a server-shape sensitivity only. Run13 depth law and conservative lower-count lookup remain unchanged; no counts above32. Zone flags overlap; measured excludes shallow, modelled-depth and count-conservative calls.')
+    if scenario.get('run16'):
+        from .measurements_r16 import finalize
+        finalize(result,scenario,inputs)
+    if scenario.get('run17'):
+        from .measurements_r17 import finalize
+        finalize(result,scenario,inputs)
     result['sources'] = [{'path': path, **quantity} for path, quantity in sorted(inputs.used.items())]
     result['files'] = list(inputs.files.values())
     return result

@@ -1,0 +1,72 @@
+[
+  {
+    "file": "01-introduction.tex",
+    "body": "покрытие токенов и работы, часть C расчёта 25.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "01-introduction.tex",
+    "body": "пересчёт при доле модели 100\\%, часть B расчёта 25.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "часть A расчёта 25: один или два узла, копии в RAM или NVMe, восстановление по запросу.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "ожидает допущенного поставщика с доступностью не ниже 95\\%.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "калибровка максимума абсолютной разности логитов: два локальных запуска с разной разбивкой на той же глубине 524288 и 1040000.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "полные 390 пар и первичный анализ на 128 тысячах, затем Холм по четырём глубинам; продолжение на узле A с точной сборкой узла B, строки до остановки сохранены.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "Qwen RULER 128 тысяч: завершение 390 пар на узле A со сборкой узла B и первичный анализ с Холмом; 64 тысячи завершены 390/390.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "перенос измеренной ограниченной кривой M3 в новые опоры движка и прогон 16b; Gemma при обычном приоритете; пакетная генерация B300, аренда не запустила контейнер; калибровка моста vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "ожидает измерения: аренда не запустила контейнер",
+    "source": "Owner r21m and complete FACTS blocks; individual waits stated verbatim."
+  }
+]

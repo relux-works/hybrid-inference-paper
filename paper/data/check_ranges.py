@@ -3,7 +3,7 @@
 
 Scope: the sites listed in SITES and DIRECTION_SITES, the two tables, and a guard over all of paper/sections/*.tex.
 
-Values: each figure in SITES is recomputed from engine/*.csv (run 14), payback.csv and the engine inputs named below,
+Values: each figure in SITES is recomputed from engine/*.csv (run 16, historical Q4 scenario), payback.csv and the engine inputs named below,
 rounded the way the text prints it, and must appear at each site SITES lists for it (a paragraph or one sentence, white
 space normalised). The rows of the client table (tab:econ) and the closed-perimeter table (tab:perimeter) are checked
 cell by cell.
@@ -27,7 +27,7 @@ import csv, json, math, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SECTIONS = os.path.join(HERE, '..', 'sections')
-FILES = ('00-abstract.tex', '02-workload.tex', '07-economics.tex', '08-million.tex', '14-conclusion.tex')
+FILES = ('00-abstract.tex', '02-workload.tex', '91-calculation-history.tex', '08-million.tex', '14-conclusion.tex')
 TEAMS = (50, 500, 5000)
 LIGHT_ENDS = (TEAMS[0], TEAMS[-1])  # light load: the hybrid is cheaper at these team sizes
 CLIENT, OWNED, BOUGHT = 'M5 Max 64 GB', 'Mac already owned', 'Mac premium bought'
@@ -269,7 +269,7 @@ def refill_hours():
     out = {}
     for start in (mids[-2], mids[-3]):  # slopes over the last segment and over the last two
         slope = (t[-1] - t[mids.index(start)]) / (mids[-1] - start)
-        out[(int(start / 1e3), int(mids[-1] / 1e3))] = sum(tok(n + 500, slope) * 1000
+        out[(start / 1e3, mids[-1] / 1e3)] = sum(tok(n + 500, slope) * 1000
                                                            for n in range(0, 1_000_000, 1000)) / 3600
     return out
 
@@ -447,8 +447,8 @@ def values(m):
         'GLM two sessions, dearer percent': f'гибрид дороже своего кластера на '
                                             f'{span([100 * (v["hybrid_session"] / v["own_cluster_session"] - 1) for v in two], 0)}\\%',
         'GLM one session, dearer factor': f'при одной в {span([v["hybrid_session"] / v["own_cluster_session"] for v in one])} раза',
-        'refill, both slopes': ' или '.join(f'от {a} до {b} тысячи ({rf[(a, b)]:.1f} часа)' for a, b in rf),
-        'refill, range': f'заново {round(min(rf.values()))}--{round(max(rf.values()))} часов',
+        'refill, both slopes': ' или '.join(f'от {a:g} до {b:g} тысячи ({rf[(a, b)]:.1f} часа)' for a, b in rf),
+        'refill, range': f'заново {compact_span(list(rf.values()), 0)} часов',
         'restore, size': f'около {rs["gb"]:.0f}~ГБ',
         'restore, minutes': f'около {GENITIVE[round(rs["minutes"])]} минут',
         'restore, minutes (conclusion)': f'примерно за {minutes(round(rs["minutes"]))} и дольше',
@@ -523,7 +523,7 @@ def directions(m):
                                                       m['glm_long'][t]['hybrid_session']) for t in (5, 10))
             and m['glm_long'][50]['own_cluster_session'] < m['glm_long'][50]['api_session']
             < m['glm_long'][50]['hybrid_session'],
-        '1M: refill of a million tokens on M3 Max takes longer than a day': min(m['refill'].values()) > 24,
+        '1M: refill of a million tokens on M3 Max takes less than a day': max(m['refill'].values()) < 24,
         '1M: the server copy can lag behind the client under the protocol policy':
             m['s20'][CLIENT]['pending_calls_per_offload'] > 0,
         # The engine has no client SSD figure; its server NVMe tier bandwidth (hosting.json) stands in for it.
@@ -537,47 +537,47 @@ def directions(m):
 
 # Each value must appear at every site that publishes it. A site is (file, marker) for the paragraph that contains the
 # marker, or (file, marker, 'sentence') for the sentence that starts at it.
-C07 = ('07-economics.tex', 'Вывод.} Против медианного')
-C08 = ('08-million.tex', 'Вывод.} Контекст до миллиона')
-P_CLOSED = ('07-economics.tex', 'Одни клиентские машины почти')
-P_TEAMS = ('07-economics.tex', 'Команды от 5 до 5000 человек')
-P_OPEN = ('07-economics.tex', 'Все числа этого раздела')
-P_S20 = ('07-economics.tex', 'При доле 20\\% пользователь')
-P_S50 = ('07-economics.tex', 'При доле 50\\% на открытую')
-P_BUY = ('07-economics.tex', 'Покупка клиента')
-P_HOST = ('07-economics.tex', 'Мак уже есть')
-CAP_PAY = ('07-economics.tex', 'Окупаемость клиента против медианного')
-CAP_PER = ('07-economics.tex', 'Закрытый контур: всё внутри периметра')
-M_OPEN = ('08-million.tex', 'Чем глубже контекст')
-M_LOSS = ('08-million.tex', 'Потеря кэша.')
-M_COST = ('08-million.tex', 'Стоимость сессии.')
-M_COST2 = ('08-million.tex', '500 человек гибрид обходится в', 'sentence')
-M_LOAD = ('08-million.tex', 'Studio при двух сессиях')
-K14 = ('14-conclusion.tex', 'При доле открытой модели 20')
-K14C = ('14-conclusion.tex', 'В закрытом')
-K14R = ('14-conclusion.tex', 'Клиенту, который потерял', 'sentence')
+C07 = ('91-calculation-history.tex', 'Вывод.} Против медианного')
+C08 = ('91-calculation-history.tex', 'Вывод архивного сценария.}')
+P_CLOSED = ('91-calculation-history.tex', 'Одни клиентские машины почти')
+P_TEAMS = ('91-calculation-history.tex', 'Команды от 5 до 5000 человек')
+P_OPEN = ('91-calculation-history.tex', 'Все числа этого раздела')
+P_S20 = ('91-calculation-history.tex', 'При доле 20\\% пользователь')
+P_S50 = ('91-calculation-history.tex', 'При доле 50\\% на открытую')
+P_BUY = ('91-calculation-history.tex', 'Покупка клиента')
+P_HOST = ('91-calculation-history.tex', 'Мак уже есть')
+CAP_PAY = ('91-calculation-history.tex', 'Окупаемость клиента против медианного')
+CAP_PER = ('91-calculation-history.tex', 'Закрытый контур: всё внутри периметра')
+M_OPEN = ('91-calculation-history.tex', 'Чем глубже контекст')
+M_LOSS = ('91-calculation-history.tex', 'Потеря кэша.')
+M_COST = ('91-calculation-history.tex', 'Стоимость сессии.')
+M_COST2 = ('91-calculation-history.tex', '500 человек гибрид обходится в', 'sentence')
+M_LOAD = ('91-calculation-history.tex', 'Studio при двух сессиях')
+K14 = ('91-calculation-history.tex', 'При доле открытой модели 20')
+K14C = ('91-calculation-history.tex', 'В закрытом')
+K14R = ('91-calculation-history.tex', 'Клиенту, который потерял', 'sentence')
 SITES = {
     'medium, design': [P_CLOSED],
     'medium, conservative': [P_CLOSED],
     'medium, both cases': [C07, K14C],
     'light at 50 and 5000, design, percent': [P_CLOSED],
     'light at 50 and 5000, conservative, percent': [P_CLOSED],
-    'light at 500, own against hybrid': [('07-economics.tex', 'На 500 человек при лёгкой нагрузке', 'sentence')],
-    'light at 500, cautious symmetric comparison': [('07-economics.tex', 'При осторожной политике на 500 человек', 'sentence')],
+    'light at 500, own against hybrid': [('91-calculation-history.tex', 'На 500 человек при лёгкой нагрузке', 'sentence')],
+    'light at 500, cautious symmetric comparison': [('91-calculation-history.tex', 'При осторожной политике на 500 человек', 'sentence')],
     'heavy saving, design': [P_CLOSED, C07],
     'heavy saving, conservative': [P_CLOSED, C07],
     'symmetric hardware without team cap': [P_CLOSED, CAP_PER, C07, K14C],
     'symmetric retention budget': [P_CLOSED],
     'symmetric latency budget': [CAP_PER],
     # The own-server sentences are checked one by one: the paragraph mentions $3,370 twice.
-    'own server for five people': [('07-economics.tex', 'Команде из пяти человек нужн', 'sentence')],
-    'own server for five people, light load': [('07-economics.tex', 'пяти человек свой сервер обходится', 'sentence')],
-    'cards for five people': [('07-economics.tex', 'Команде из пяти человек нужн', 'sentence')],
-    'B300 node per person, five people': [('07-economics.tex', 'B300 покупается целиком', 'sentence'),
-                                          ('07-economics.tex', 'Команде из пяти человек нужн', 'sentence')],
-    'own server for twenty people': [('07-economics.tex', 'Команде из двадцати человек нужн', 'sentence')],
-    'cards for twenty people': [('07-economics.tex', 'Команде из двадцати человек нужн', 'sentence')],
-    'B300 node per person, twenty people': [('07-economics.tex', 'Команде из двадцати человек нужн', 'sentence')],
+    'own server for five people': [('91-calculation-history.tex', 'Команде из пяти человек нужн', 'sentence')],
+    'own server for five people, light load': [('91-calculation-history.tex', 'пяти человек свой сервер обходится', 'sentence')],
+    'cards for five people': [('91-calculation-history.tex', 'Команде из пяти человек нужн', 'sentence')],
+    'B300 node per person, five people': [('91-calculation-history.tex', 'B300 покупается целиком', 'sentence'),
+                                          ('91-calculation-history.tex', 'Команде из пяти человек нужн', 'sentence')],
+    'own server for twenty people': [('91-calculation-history.tex', 'Команде из двадцати человек нужн', 'sentence')],
+    'cards for twenty people': [('91-calculation-history.tex', 'Команде из двадцати человек нужн', 'sentence')],
+    'B300 node per person, twenty people': [('91-calculation-history.tex', 'Команде из двадцати человек нужн', 'sentence')],
     'API per 1000 calls': [P_OPEN],
     'upper bound, capacity': [P_OPEN],
     'upper bound, API rise': [P_OPEN],
@@ -589,8 +589,8 @@ SITES = {
     's20 hybrid dollars': [P_S20],
     's20 API dollars': [P_S20],
     's20 API median dollars': [P_S20],
-    's20 below median, all clients, both cases': [('00-abstract.tex', 'Аннотация'), K14],
-    's20 above cheapest, all clients, both cases': [('00-abstract.tex', 'Аннотация'), K14],
+    's20 below median, all clients, both cases': [('91-calculation-history.tex', '% checker-site: v5a-old-abstract-economics'), K14],
+    's20 above cheapest, all clients, both cases': [('91-calculation-history.tex', '% checker-site: v5a-old-abstract-economics'), K14],
     's20 below median, Max clients, both cases': [C07],
     's20 below median, all clients, design': [P_S20],
     's20 above cheapest, all clients, design': [P_S20],
@@ -618,19 +618,19 @@ SITES = {
     'payback s50, overflow to median': [P_BUY, CAP_PAY],
     'payback s50, overflow to median, whole': [P_BUY, CAP_PAY],
     'payback, dearer than cheapest': [CAP_PAY],
-    'GLM API session to 1M': [M_OPEN, M_COST2, ('08-million.tex', 'На 50 человек свой кластер', 'sentence')],
+    'GLM API session to 1M': [M_OPEN, M_COST2, ('91-calculation-history.tex', 'На 50 человек свой кластер', 'sentence')],
     'GLM API session to 200k': [M_OPEN],
     'GLM growth of the session cost': [M_OPEN],
     'GLM two sessions, hybrid': [M_COST2],
-    'GLM two sessions, own cluster': [('08-million.tex', 'На 500 человек свой кластер', 'sentence')],
-    'GLM two sessions, own cluster at 5000': [('08-million.tex', 'На 500 человек свой кластер', 'sentence')],
+    'GLM two sessions, own cluster': [('91-calculation-history.tex', 'На 500 человек свой кластер', 'sentence')],
+    'GLM two sessions, own cluster at 5000': [('91-calculation-history.tex', 'На 500 человек свой кластер', 'sentence')],
     'GLM 50 people': [M_COST],
     'GLM Studio utilization at two sessions': [M_LOAD],
     'GLM Studio capacity': [M_LOAD],
     'GLM full load, Studio share': [M_LOAD],
     'GLM full load, hybrid session': [M_LOAD],
-    'GLM full load, below API': [M_LOAD, C08, ('14-conclusion.tex', 'На глубоком контексте:')],
-    'GLM full load, below own cluster': [M_LOAD, C08, ('14-conclusion.tex', 'На глубоком контексте:')],
+    'GLM full load, below API': [M_LOAD, C08, ('91-calculation-history.tex', 'На глубоком контексте:')],
+    'GLM full load, below own cluster': [M_LOAD, C08, ('91-calculation-history.tex', 'На глубоком контексте:')],
     'GLM four sessions, hybrid': [M_LOAD],
     'GLM four sessions, below own cluster': [C08],
     'GLM four sessions, below API': [M_LOAD, C08],
@@ -654,16 +654,16 @@ DIRECTION_SITES = {
     'closed: medium, hybrid cheaper at every team size': [
         (P_CLOSED, 'раза дешевле своего серверного кластера на 50, 500 и 5000 человек'),
         (C07, 'раза дешевле своего кластера, при тяжёлой на'),
-        (K14C, 'раза дешевле своего серверного кластера, а при лёгкой')],
+        (K14C, 'раза дешевле своего серверного кластера. При лёгкой')],
     'closed: heavy, hybrid cheaper at every team size': [(P_CLOSED, 'на сервере, и гибрид дешевле кластера на')],
     'closed: light, hybrid cheaper at 50 and 5000': [
         (P_CLOSED, 'Для лёгкой нагрузки на 50 и 5000 человек гибрид дешевле кластера на'),
-        (C07, 'а при лёгкой дешевле на 50 и 5000 человек'), (K14C, 'а при лёгкой дешевле на 50 и 5000 человек')],
+        (C07, 'при лёгкой на 50 и 5000 человек гибрид дешевле своего кластера'), (K14C, 'для 50 человек гибрид дешевле')],
     'closed: light at 500, hybrid cheaper with uncapped hardware': [
         (P_CLOSED, 'На 500 человек при лёгкой нагрузке гибрид дешевле своего кластера'),
-        (C07, 'и дешевле на 500: серверы на RTX PRO 6000 допустимы без ограничения размера команды'),
+        (C07, 'на 500 человек гибрид тоже дешевле: серверы на RTX PRO 6000 допустимы без ограничения размера команды'),
         (C07, 'обе схемы имеют одинаковые требования хранения и задержки'),
-        (K14C, 'и дешевле на 500: серверы на RTX PRO 6000 допустимы без ограничения размера команды'),
+        (K14C, 'для 500 дешевле'),
         (K14C, 'обе схемы имеют одинаковые требования хранения и задержки')],
     'closed: the selected option is the cheapest eligible one': [
         (P_CLOSED, 'движок выбирает самый дешёвый из допустимых'), (CAP_PER, 'из допустимых вариантов взят самый дешёвый')],
@@ -673,11 +673,11 @@ DIRECTION_SITES = {
         (P_CLOSED, 'Обе схемы имеют одинаковые сроки хранения и число сохраняемых сессий')],
     'cheapest API cheaper than the hybrid on every client, both shares and policies': [
         (C07, 'Самый дешёвый поставщик API дешевле гибрида на всех рассмотренных клиентах и при обеих долях'),
-        (('07-economics.tex', 'Как это будет меняться'), 'самый дешёвый поставщик обходится дешевле гибрида на всех '
+        (('91-calculation-history.tex', 'Как это будет меняться'), 'самый дешёвый поставщик обходится дешевле гибрида на всех '
                                                           'рассмотренных клиентах'),
         (P_S20, 'раза дороже, чем у самого дешёвого поставщика API'), (P_S20, 'раза дороже самого дешёвого поставщика'),
         (P_S50, '\\% дороже самого дешёвого API ('), (K14, 'раза дороже самого дешёвого'),
-        (('00-abstract.tex', 'Аннотация'), 'раза дороже самого дешёвого'),
+        (('91-calculation-history.tex', '% checker-site: v5a-old-abstract-economics'), 'раза дороже самого дешёвого'),
         (CAP_PAY, 'Против самого дешёвого поставщика гибрид дороже')],
     'at 50% Ultra clients dearer than the cheapest API': [
         (P_S50, 'дороже самого дешёвого API при хранении по политике протокола')],
@@ -689,20 +689,20 @@ DIRECTION_SITES = {
         (P_OPEN, 'ёмкость M5 Max падает'), (P_OPEN, 'API дорожает на'), (P_OPEN, 'разрыв с самым дешёвым сокращается')],
     'storage cheaper than prefill (M5 Max, 20%)': [(P_HOST, 'в месяц, меньше, чем сам prefill')],
     '1M: own cluster cheaper at one and two sessions a day (500, 5000, both policies)': [
-        (('08-million.tex', 'На 500 человек свой кластер', 'sentence'), 'свой кластер стоит'),
-        (('08-million.tex', 'На 500 человек свой кластер', 'sentence'), 'и дешевле гибрида'),
+        (('91-calculation-history.tex', 'На 500 человек свой кластер', 'sentence'), 'свой кластер стоит'),
+        (('91-calculation-history.tex', 'На 500 человек свой кластер', 'sentence'), 'и дешевле гибрида'),
         (C08, 'При двух сессиях в день гибрид дороже своего кластера на')],
     '1M: hybrid cheaper at four sessions a day and at full load (500, 5000, both policies)': [
         (M_LOAD, 'раза дешевле своего кластера и в'),
         (M_LOAD, 'раза дешевле API и в'), (M_LOAD, 'раза дешевле своего кластера.'),
         (C08, 'раза дешевле своего кластера и в'),
-        (('14-conclusion.tex', 'На глубоком контексте:'), 'раза дешевле своего кластера.')],
+        (('91-calculation-history.tex', 'На глубоком контексте:'), 'раза дешевле своего кластера.')],
     '1M: four sessions a day below the API': [(site, 'раза дешевле API') for site in (M_LOAD, C08)],
     '1M: API cheapest for 10 people and fewer; at 50 own below API below hybrid': [
         (M_COST, 'Команде из 10 человек и меньше выделенный сервер не окупается, и дешевле всего остаётся API'),
         (M_COST, 'немного дешевле API'), (M_COST, 'дороже обоих')],
     '1M: conservative policy at most 20% dearer': [(M_LOAD, 'При осторожной политике хранения сессии дороже не больше чем на 20')],
-    '1M: refill of a million tokens on M3 Max takes longer than a day': [(K14R, 'заново больше суток')],
+    '1M: refill of a million tokens on M3 Max takes less than a day': [(K14R, 'заново около 20 часов')],
     '1M: the server copy can lag behind the client under the protocol policy': [
         (M_LOSS, 'Пять минут здесь нижняя граница: по политике протокола сервер дописывает в копию токены вызовов, '
                  'прочитанных клиентом, только при следующем оффлоаде')],
@@ -775,8 +775,8 @@ def check(texts, m=None):
     for kind, rws in (('client table row', econ_rows(m['s20'], m['s50'], m['b50'])),
                       ('closed-perimeter table row', perimeter_rows(m['design'], m['cons']))):
         for row in rws:
-            if norm(row) not in norm(texts['07-economics.tex']):
-                missing.append((f'{kind}: {row}', '07-economics.tex'))
+            if norm(row) not in norm(texts['91-calculation-history.tex']):
+                missing.append((f'{kind}: {row}', '91-calculation-history.tex'))
     holds = directions(m)
     for k, sites in DIRECTION_SITES.items():
         if not holds[k]:
@@ -808,18 +808,27 @@ CORE_FORMS = {
 # Occurrences of a checked figure's printed form that publish a different quantity, each with its reason. An entry is
 # (file, form, a substring of the source line that holds it, reason); an entry that matches nothing is reported.
 ALLOW = (
-    ('04-channel.tex', '\\$150', '\\$150 против', 'R15 egress at 90 USD/TB; separately snapshot-bound by offload traffic guard'),
-    ('07-economics.tex', '28.2', 'бюджет среднего prefill равен 28.2', 'shared snapshot mean-latency budget; unrelated to28.2-hour refill'),
-    ('04-channel.tex', '25.9', 'Состояние в 32 битах: доля вызовов', 'R14 offload share at100Mbit/s; unrelated to25.9-hour refill'),
-    ('05-clients.tex', '36.6', '& 36.6 &', 'tab:clients: generation rate of the M5 Ultra in tokens per second'),
-    ('07-economics.tex', '\\$48', '50 человек, 10 ч в день &', 'tab:rentbuy: buying at 50% residual for 50 people, 10 h a day'),
-    ('07-economics.tex', '\\$59', '10 человек, 24 ч &', 'tab:rentbuy: buying at 80% residual for 10 people, 24 h'),
-    ('07-economics.tex', '\\$35', '50 человек, 10 ч в день &', 'tab:rentbuy: buying at 80% residual for 50 people, 10 h a day'),
-    ('07-economics.tex', '\\$38', '50 человек, 24 ч &', 'tab:rentbuy: buying at 50% residual for 50 people, 24 h'),
-    ('07-economics.tex', '\\$29', '50 человек, 24 ч &', 'tab:rentbuy: buying at 80% residual for 50 people, 24 h'),
-    ('07-economics.tex', '\\$35', 'остаточной стоимости 80\\% (\\$35)', 'rent/buy prose, 50 people, 80% residual'),
-    ('07-economics.tex', '4.8--5.1', 'Не выше на стандартном усилии рассуждения &', 'historical owner API bill in thousands of USD'),
-    ('06-server.tex', '15--30', 'генерация была на 15--30', 'earlier-run measured decode slowdown, not GLM cost'),
+    ('90-appendix.tex', '19.9', 'На всём профиле чтение', 'Original M3 methodology retains mean wait, source-bound to the same run16 normalized calls'),
+    ('91-calculation-history.tex', '1.2--1.5', '1.2--1.5', 'v4b introduction economics bound by offload registry'),
+    ('91-calculation-history.tex', '4.8--6.0', '4.8--6.0', 'v4b introduction economics bound by offload registry'),
+    ('02-workload.tex', '19.9', 'в среднем 19.9 секунды', 'v4b restored distribution, recomputed against all R16 normalized calls'),
+    ('02-workload.tex', '131.4', 'Глубина контекста, тыс. токенов', 'PRI31 measured segment midpoint'),
+    ('02-workload.tex', '181.4', 'Глубина контекста, тыс. токенов', 'PRI31 measured segment midpoint'),
+    ('02-workload.tex', '230.9', 'Глубина контекста, тыс. токенов', 'PRI31 measured segment midpoint'),
+    ('90-appendix.tex', '15.8', 'при 100~Мбит/с на сервер уходит', 'R16 f32 offload call share, source-bound table'),
+    ('91-calculation-history.tex', 'в 1.2 раза', 'хранения гибрид в 5.8--6.0 раза', 'M5 price-bound comparison; source-bound by the breakeven guard'),
+    ('90-appendix.tex', '\\$101', '\\$101 против', 'R15 egress at 90 USD/TB; separately snapshot-bound by offload traffic guard'),
+    ('91-calculation-history.tex', '19.9', 'бюджет среднего prefill равен 19.9', 'shared snapshot mean-latency budget; unrelated to28.2-hour refill'),
+    ('90-appendix.tex', '15.8', 'Состояние в 32 битах: доля вызовов', 'R14 offload share at100Mbit/s; unrelated to25.9-hour refill'),
+    ('91-calculation-history.tex', '45.2', '& 45.2 &', 'tab:clients: generation rate of the M5 Ultra in tokens per second'),
+    ('91-calculation-history.tex', '\\$48', '50 человек, 10 ч в день &', 'tab:rentbuy: buying at 50% residual for 50 people, 10 h a day'),
+    ('91-calculation-history.tex', '\\$59', '10 человек, 24 ч &', 'tab:rentbuy: buying at 80% residual for 10 people, 24 h'),
+    ('91-calculation-history.tex', '\\$35', '50 человек, 10 ч в день &', 'tab:rentbuy: buying at 80% residual for 50 people, 10 h a day'),
+    ('91-calculation-history.tex', '\\$38', '50 человек, 24 ч &', 'tab:rentbuy: buying at 50% residual for 50 people, 24 h'),
+    ('91-calculation-history.tex', '\\$29', '50 человек, 24 ч &', 'tab:rentbuy: buying at 80% residual for 50 people, 24 h'),
+    ('91-calculation-history.tex', '\\$35', 'остаточной стоимости 80\\% (\\$35)', 'rent/buy prose, 50 people, 80% residual'),
+    ('91-calculation-history.tex', '4.8--5.1', 'Не выше на стандартном усилии рассуждения &', 'historical owner API bill in thousands of USD'),
+    ('90-appendix.tex', '15--30', 'генерация была на 15--30', 'earlier-run measured decode slowdown, not GLM cost'),
 )
 
 
@@ -977,12 +986,12 @@ def self_test(texts):
     assert ('storage cheaper than prefill (M5 Max, 20%)', 'engine') in check(texts, dict(m, s20=bad_storage))
     # Named regression controls for review r5b: N3 (restore minutes in the conclusion) and D5 (refill longer than a day).
     n3 = check(plant(texts, K14R, 'примерно за пять минут и дольше', 'примерно за две минуты и дольше'), m)
-    assert ('restore, minutes (conclusion)', '14-conclusion.tex') in n3, 'r5b N3 not reported'
-    d5 = check(plant(texts, K14R, 'заново больше суток', 'заново меньше суток'), m)
-    assert ('direction wording: 1M: refill of a million tokens on M3 Max takes longer than a day',
-            '14-conclusion.tex') in d5, 'r5b D5 not reported'
+    assert ('restore, minutes (conclusion)', '91-calculation-history.tex') in n3, 'r5b N3 not reported'
+    d5 = check(plant(texts, K14R, 'заново около 20 часов', 'заново больше суток'), m)
+    assert ('direction wording: 1M: refill of a million tokens on M3 Max takes less than a day',
+            '91-calculation-history.tex') in d5, 'r5b D5 not reported'
     # r5c: the storage figure follows paper_tables.hours, the engine's input for it (10 h instead of 8 changes it).
-    assert ('restore, storage under the protocol policy', '08-million.tex') in check(
+    assert ('restore, storage under the protocol policy', '91-calculation-history.tex') in check(
         texts, dict(m, restore=restore(hours=engine_input('paper-tables.json', 'paper_tables', 'hours') + 2))), \
         'changed paper_tables.hours not reported'
     # Guard: a checked figure printed in a section that no list names must be reported, and so must an ALLOW entry
@@ -992,8 +1001,8 @@ def self_test(texts):
     form = next(f for f in guard_forms('GLM two sessions, hybrid', expected['GLM two sessions, hybrid']) if f.startswith('\\$'))
     related = texts['12-related.tex'] + '\nСессия гибрида стоит ' + form + '.\n'
     assert ('unregistered occurrence of ' + form, '12-related.tex') in check(dict(texts, **{'12-related.tex': related}), m)
-    economics = texts['07-economics.tex'].replace('\\$38 (2)', '\\$39 (2)', 1)
-    assert any(k.startswith('unused ALLOW entry \\$38') for k, _ in check(dict(texts, **{'07-economics.tex': economics}), m))
+    economics = texts['91-calculation-history.tex'].replace('\\$38 (2)', '\\$39 (2)', 1)
+    assert any(k.startswith('unused ALLOW entry \\$38') for k, _ in check(dict(texts, **{'91-calculation-history.tex': economics}), m))
     # Every original collision site remains mandatory even when its new value
     # no longer coincides with a checked formula. No ALLOW entry can go unused.
     for file, form, marker, reason in ALLOW:
@@ -1006,11 +1015,11 @@ def self_test(texts):
         print(f'negative collision control: {reason}: rejected by unused ALLOW entry {form}')
     # Table rows: a stale cell in each table must be reported.
     row = econ_rows(m['s20'], m['s50'], m['b50'])[2]
-    assert any(k.startswith('client table row') for k, _ in check(dict(texts, **{'07-economics.tex': texts[
-        '07-economics.tex'].replace(row, perturb(row), 1)}), m)), 'stale client row'
+    assert any(k.startswith('client table row') for k, _ in check(dict(texts, **{'91-calculation-history.tex': texts[
+        '91-calculation-history.tex'].replace(row, perturb(row), 1)}), m)), 'stale client row'
     row = perimeter_rows(m['design'], m['cons'])[1]
-    assert any(k.startswith('closed-perimeter table row') for k, _ in check(dict(texts, **{'07-economics.tex': texts[
-        '07-economics.tex'].replace(row, perturb(row), 1)}), m)), 'stale perimeter row'
+    assert any(k.startswith('closed-perimeter table row') for k, _ in check(dict(texts, **{'91-calculation-history.tex': texts[
+        '91-calculation-history.tex'].replace(row, perturb(row), 1)}), m)), 'stale perimeter row'
     # Engine directions: rows changed so that a stated direction no longer holds must be reported.
     def flipped(**changes):
         return check(texts, dict(m, **changes))

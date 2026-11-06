@@ -1,0 +1,13 @@
+client,depth_from,depth,prefill_tok_s,background_priority_interim,capacity_status,wire_state_format,state_quality,status,alarm_inputs
+M3 Max,0,16000,191.5,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M3 Max,28896,50000,128.8,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M3 Max,62896,100000,81.4,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M3 Max,112896,150000,52.5,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M3 Max,162896,200000,38.2,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M3 Max,212896,249000,30.1,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M5 Max,0,16000,586.4,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M5 Max,28896,50000,268.7,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M5 Max,62896,100000,150.6,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M5 Max,112896,150000,95.1,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M5 Max,162896,200000,69.7,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,
+M5 Max,212896,249000,55.0,True,interim; normal-priority M3 parallel remeasurement pending,bf16,pending measured quality of dev-a r38,ok,

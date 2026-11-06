@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Qwen call fraction",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "содержат $21935+238266=260201$ вызов: $260201/1530739=17.0\\%$."
+  },
+  {
+    "name": "Qwen bill fraction",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "$100\\times5429.87/112543.74=4.8\\%$ и $100\\times5732.85/124462.94=4.6\\%$"
+  },
+  {
+    "name": "frontier tokens reference",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "$106836.72\\ldots118452.94$ доллара, против $15061.07\\ldots24456.49$ за те же токены"
+  },
+  {
+    "name": "not task success",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "способность Qwen решать эти задачи в работе не проверена."
+  },
+  {
+    "name": "engine admission independent",
+    "file": "07-economics.tex",
+    "marker": "% checker-site: v5d4-task-cost-bound",
+    "phrase": "сравнение не зависит от серверного движка и допуска API."
+  },
+  {
+    "name": "abstract prefill time",
+    "file": "00-abstract.tex",
+    "marker": "\\textbf{Аннотация.}",
+    "phrase": "M3 Max читает порцию в 10 тысяч токенов на глубине 150 тысяч 225 секунд."
+  },
+  {
+    "name": "abstract f32 documents",
+    "file": "00-abstract.tex",
+    "marker": "\\textbf{Аннотация.}",
+    "phrase": "импорт состояния f32 даёт нулевую разницу KL с локальным расчётом на 20 документах;"
+  },
+  {
+    "name": "abstract cluster crossing",
+    "file": "00-abstract.tex",
+    "marker": "\\textbf{Аннотация.}",
+    "phrase": "гибрид дешевле своего кластера с 5 человек при средней и с 2 при тяжёлой нагрузке,"
+  },
+  {
+    "name": "abstract median crossing",
+    "file": "00-abstract.tex",
+    "marker": "\\textbf{Аннотация.}",
+    "phrase": "медианного API с 5 при тяжёлой и измеренном кэше v1 с долгими паузами;"
+  },
+  {
+    "name": "abstract cheapest boundary",
+    "file": "00-abstract.tex",
+    "marker": "\\textbf{Аннотация.}",
+    "phrase": "гибрид не дешевле самого дешёвого допущенного API ни в одной оценимой измеренной точке Qwen."
+  },
+  {
+    "name": "abstract first call",
+    "file": "00-abstract.tex",
+    "marker": "\\textbf{Аннотация.}",
+    "phrase": "первый вызов на свежем контексте сократил TTFT на 26\\%."
+  }
+]

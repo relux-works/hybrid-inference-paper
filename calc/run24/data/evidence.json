@@ -1,0 +1,27 @@
+{
+  "facts_sha256": "8aeb0944ed6109be2404f6269ba94d1a4fa7af659a749d269b2c301b59682d96",
+  "facts_source": "/home/agent/lanes/hybrid/.temp/paper-v2/FACTS.md",
+  "files": {
+    "API-CACHE-REPORT.md": {
+      "bytes": 32328,
+      "sha256": "2485e7f2dd8c961deeeca95a36eac88a95b71b2c56f9760e40e99a129160d9f6"
+    },
+    "FACTS.md": {
+      "bytes": 2201,
+      "sha256": "c8e658771a2532926f4453860695633fa90f70c46ee444076bf3c5514f1d3bb8"
+    },
+    "accepted-rows.json": {
+      "bytes": 5478706,
+      "sha256": "39076750c3ecf983c274f8de41a66b055b47502415d9eaf33175e01ecf4b2a17"
+    },
+    "analysis.json": {
+      "bytes": 1719467,
+      "sha256": "2b15799b150b6924e5909ce06766bfb0d6baccb7d97f22248992a77996819937"
+    },
+    "call-rows.json": {
+      "bytes": 5849870,
+      "sha256": "8d77644cc678edf2cf8d2fd300db28004282c325e9c5d28143c14876e36aa676"
+    }
+  },
+  "source": "/home/agent/Werkstatt/hybrid-d/llama.cpp/.temp/hybrid-d-r15m-261104/audit-end"
+}

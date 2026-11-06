@@ -1,0 +1,82 @@
+[
+  {
+    "file": "05b-models.tex",
+    "body": "Gemma при нормальном приоритете ожидает свободного Mac.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "06-server.tex",
+    "body": "квалификация vLLM в длинной сессии: добавочный импорт и проходящий контроль качества.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "GLM на Studio: decode и prefill; GLM prefill на B300; раскладка состояния и импорт.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "доля задач среднего класса и качество замены: входной сценарий, без измерения.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "07-economics.tex",
+    "body": "облачный класс внутри контура: производительность, хранение и межсоединение серверного кластера.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "ожидает допущенного поставщика с доступностью не ниже 95\\%.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "08-million.tex",
+    "body": "калибровка максимума абсолютной разности логитов: два локальных запуска с разной разбивкой на той же глубине 524288 и 1040000.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "11-limitations.tex",
+    "body": "полные 390 пар и первичный анализ на 128 тысячах, затем Холм по четырём глубинам; продолжение на узле A с точной сборкой узла B, строки до остановки сохранены.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "13-outlook.tex",
+    "body": "парный сквозной запуск квантильной сессии с отдельным первым запросом и отчётом по фазам.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "калибровка гетерогенного допуска CUDA и Metal на M3 Max, включая сравнение с эталоном BF16.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "Qwen RULER 128 тысяч: завершение 390 пар на узле A со сборкой узла B и первичный анализ с Холмом; 64 тысячи завершены 390/390.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "перенос измеренной ограниченной кривой M3 в новые опоры движка и прогон 16b; Gemma при обычном приоритете; пакетная генерация B300, аренда не запустила контейнер; калибровка моста vLLM на GPU после переработки; лестница Bonsai 2 2B/4B/9B позднее.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "замеры времени без снимков и хэширования свидетельств, с отдельными интервалами этапов на Mac и узле.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "запуск Mac для качества и скорости передачи bf16.",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  },
+  {
+    "file": "90-appendix.tex",
+    "body": "ожидает измерения: аренда не запустила контейнер",
+    "source": "Accepted engines25/26; r49g planned packet and owner r21o; original FACTS physical/calibration waits retained."
+  }
+]

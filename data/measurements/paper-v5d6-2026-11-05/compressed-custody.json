@@ -1,0 +1,26 @@
+[
+  {
+    "original_name": "PREREG-E2E-AMENDMENT.md",
+    "compressed": "PREREG-E2E-AMENDMENT.md.gz",
+    "original_sha256": "6475c8549e9a6dc0e009ef7b12a5bfd0867b6da93a6f1ce4a6f1abafc816a602",
+    "compressed_sha256": "c32071b91711ea3e4a369ddddc7c468c563313b10c980a946ae974dfb72a4449",
+    "bytes": 11138,
+    "reason": "Preserve exact evidence bytes, including terminal blank lines; do not normalize original evidence to satisfy source whitespace check."
+  },
+  {
+    "original_name": "applicability-before.tex",
+    "compressed": "applicability-before.tex.gz",
+    "original_sha256": "d6d6abd7366be85bf66385d3eb6a1a295748b4a7e0e7b2f6ae30278b121d7dd4",
+    "compressed_sha256": "a592ea6a276f50b6ed2093e5d7587d457b4372967b7fba43ab83b76a51555f3f",
+    "bytes": 6931,
+    "reason": "Preserve exact evidence bytes, including terminal blank lines; do not normalize original evidence to satisfy source whitespace check."
+  },
+  {
+    "original_name": "ruler-interim-before.tex",
+    "compressed": "ruler-interim-before.tex.gz",
+    "original_sha256": "f82235d7e1d542d97ecb3b9e072251ef87a7850322b96f03159cbd4544828e6e",
+    "compressed_sha256": "e7946badaab466f85c420198111fca14954c2b0bb49bc22ae30ba64a1579e3d3",
+    "bytes": 3478,
+    "reason": "Preserve exact evidence bytes, including terminal blank lines; do not normalize original evidence to satisfy source whitespace check."
+  }
+]

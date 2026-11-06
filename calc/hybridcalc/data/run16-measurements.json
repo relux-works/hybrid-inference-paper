@@ -1,0 +1,161 @@
+{
+  "m3": {
+    "path": "data/measurements/run16-2026-11-03/m3/qwen27b-mac-bench-results-20261103T062853Z.tar.gz",
+    "sha256": "c2e83fbd4f59a38181e48b17206783e91d6d5b6734624f46d4cede68d7bcace5",
+    "kit": "1.6.7"
+  },
+  "m5": {
+    "path": "data/measurements/run16-2026-11-03/m5/8d265ff6-qwen27b-mac-bench-results-20261102T174709Z.tar.gz",
+    "sha256": "b17ef9d9304937bdc5e559dd28dd03c2ddd61393628c2ac192c8d4cb8acbb778",
+    "kit": "1.6.6",
+    "priority_basis": "owner_reported_normal_priority_not_recorded",
+    "grids": [
+      {
+        "fragment": "-scale32768-largest-np16-",
+        "depth": 32784,
+        "server_np": 16,
+        "counts": [
+          1,
+          2,
+          4,
+          8,
+          12,
+          16
+        ]
+      },
+      {
+        "fragment": "-scale65536-largest-np8-",
+        "depth": 65552,
+        "server_np": 8,
+        "counts": [
+          1,
+          2,
+          4,
+          8
+        ]
+      },
+      {
+        "fragment": "-scale131072-largest-np4-",
+        "depth": 131088,
+        "server_np": 4,
+        "counts": [
+          1,
+          2,
+          4
+        ]
+      }
+    ],
+    "expected_device": "Apple M5 Max"
+  },
+  "PREFLIGHT-ROUTE-PLAN.json.gz": {
+    "path": "data/measurements/run16-2026-11-03/PREFLIGHT-ROUTE-PLAN.json.gz",
+    "sha256": "a51c135828912ad1cd265be20baed5aec8f8ddb3bea6d4108584aa3cef189bd6"
+  },
+  "5g-PREFLIGHT-ROUTE-PLAN.json.gz": {
+    "path": "data/measurements/run16-2026-11-03/5g-PREFLIGHT-ROUTE-PLAN.json.gz",
+    "sha256": "ff10f0124dd08aabe3a02196dceb7b4914649649a626a3b594ca07798f75d7c3"
+  },
+  "TIMING-EXTRACT.json.gz": {
+    "path": "data/measurements/run16-2026-11-03/TIMING-EXTRACT.json.gz",
+    "sha256": "d0d3f02115b4d87f4218ec97e235356a63aa2bd59f80fd2bc1888439db7941dd"
+  },
+  "INSTRUMENTATION-TIMING-EXTRACT.json.gz": {
+    "path": "data/measurements/run16-2026-11-03/INSTRUMENTATION-TIMING-EXTRACT.json.gz",
+    "sha256": "d15844adcf6e45bb764df0876d3f518dfcbae79cef4c8c6d45722b0f7cfcc169"
+  },
+  "facts": {
+    "path": "data/measurements/run16-2026-11-03/FACTS-261103.md",
+    "sha256": "dee4432762372bd007d323899b6c7312281754d8044d60bd999632f3bcdd0d92"
+  },
+  "m3_parallel": {
+    "mode": "r15_interim",
+    "priority_basis": "historical_background_priority_throttled",
+    "background_priority_interim": true,
+    "grids": [
+      {
+        "fragment": "-scale32768-largest-np32-",
+        "depth": 32784,
+        "server_np": 32,
+        "counts": [
+          1,
+          2,
+          4,
+          8,
+          12,
+          16,
+          24,
+          32
+        ]
+      },
+      {
+        "fragment": "-scale65536-largest-np32-",
+        "depth": 65552,
+        "server_np": 32,
+        "counts": [
+          1,
+          2,
+          4,
+          8,
+          12,
+          16,
+          24,
+          32
+        ]
+      },
+      {
+        "fragment": "-scale131072-largest-np16-",
+        "depth": 131088,
+        "server_np": 16,
+        "counts": [
+          1,
+          2,
+          4,
+          8,
+          12,
+          16
+        ]
+      }
+    ],
+    "expected_device": "Apple M3 Max"
+  },
+  "import": {
+    "fixed_s": 1.498,
+    "seconds_token": 4.87e-05,
+    "fit_r2": 0.12,
+    "probe_tokens": 539,
+    "depth_points": [
+      [
+        2000,
+        0.36
+      ],
+      [
+        20000,
+        0.97
+      ],
+      [
+        50000,
+        2.02
+      ],
+      [
+        100000,
+        3.75
+      ]
+    ],
+    "cause": "Full save of old client slot as recovery point before each import; dev-d r12 diagnosis only.",
+    "depth_model": "Conditional OLS intercept+depth slope at delta539, retaining48.7us/transferred-token from the supplied weak marginal fit as an assumption. Recenter fixed intercept to avoid double-counting depth already absorbed by1.498s. The four probes cannot independently identify the delta coefficient.",
+    "bounded_undo": "Sensitivity only; no depth term; not implemented/qualified."
+  },
+  "wire": {
+    "f32_state_bytes": 157000000,
+    "bf16_state_bytes": 78500000,
+    "kv_bytes_token": 34816,
+    "unit": "decimal B; MB=1000000 B",
+    "threshold_rtt_s": 0.14058910400490277
+  },
+  "policy_source": {
+    "path": "data/measurements/run16-2026-11-03/prototype-policy-fca0fe31.py",
+    "sha256": "a2521dee2cfcc8f3666471045cb356f60406b158756474cd4281a3feb8f150da",
+    "commit": "fca0fe31",
+    "role": "Prototype base source; exact r44 driver5be993f2 object unavailable locally; observed timings independently recover the entry threshold."
+  }
+}

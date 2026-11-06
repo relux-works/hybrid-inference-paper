@@ -1,0 +1,11 @@
+node,depth,session_bytes,resident_slots,session_budget_bytes,physical_one_session_tokens,configured_context_limit,measured_rate_depth_limit,basis,status,alarm_inputs
+rtx5090,32000,1271005184,10,13000000000,368885,262144,249000,client_kit_same_llama_cpp_hybrid_binary_assumption,ok,
+rtx5090,64000,2385117184,5,13000000000,368885,262144,249000,client_kit_same_llama_cpp_hybrid_binary_assumption,ok,
+rtx5090,100000,3638493184,3,13000000000,368885,262144,249000,client_kit_same_llama_cpp_hybrid_binary_assumption,ok,
+rtx5090,200000,7120093184,1,13000000000,368885,262144,249000,client_kit_same_llama_cpp_hybrid_binary_assumption,ok,
+rtx5090,249000,8826077184,1,13000000000,368885,262144,249000,client_kit_same_llama_cpp_hybrid_binary_assumption,ok,
+pro6000,32000,1271005184,54,69030000000,1978202,262144,249000,kit1.6.5 PRO6000 same-weight prefill measured; hybrid-binary portability,ok,
+pro6000,64000,2385117184,28,69030000000,1978202,262144,249000,kit1.6.5 PRO6000 same-weight prefill measured; hybrid-binary portability,ok,
+pro6000,100000,3638493184,18,69030000000,1978202,262144,249000,kit1.6.5 PRO6000 same-weight prefill measured; hybrid-binary portability,ok,
+pro6000,200000,7120093184,9,69030000000,1978202,262144,249000,kit1.6.5 PRO6000 same-weight prefill measured; hybrid-binary portability,ok,
+pro6000,249000,8826077184,7,69030000000,1978202,262144,249000,kit1.6.5 PRO6000 same-weight prefill measured; hybrid-binary portability,ok,

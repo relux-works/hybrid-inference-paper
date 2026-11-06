@@ -1,0 +1,30 @@
+[
+  {
+    "compressed": "facts-near-ties.md.gz",
+    "sha256": "44c43474c7076242db1ab4d5b9df07de050b16c20b89f9c6604f4257a1744f91",
+    "bytes": 2294,
+    "compressed_sha256": "1db2789699a52e068e7216374662bbf4b5ac04c24fbf8aab003558ca2ef6982d",
+    "source": "FACTS.md complete named block"
+  },
+  {
+    "compressed": "facts-census.md.gz",
+    "sha256": "65fe33a85f54eab1c241ff6eeb44313f537058d2d9ba08eb08e26f202d453e3d",
+    "bytes": 1470,
+    "compressed_sha256": "40b3b9eb11b15558ed1e4665550336d284bb8e70d3e46bfbe84a54a12da1a9e6",
+    "source": "FACTS.md complete named block"
+  },
+  {
+    "compressed": "facts-attempt5.md.gz",
+    "sha256": "75e82dac0d755e3ac003b86770dde598299306319611f2dda8687ecb487e5ba1",
+    "bytes": 2889,
+    "compressed_sha256": "cc3d2eb5d05c2236d09d487797d4bfcd97467465fbb8b5184dc4b9109069934c",
+    "source": "FACTS.md complete named block"
+  },
+  {
+    "compressed": "review-v5d9.md.gz",
+    "sha256": "a7a2f7c6b606a8d1429ccb1b73370c6f7422d585d1babb9ab89a99722634d64f",
+    "bytes": 15706,
+    "compressed_sha256": "2b12817b6b700731bbbe4e30d8ac169c008554df500447817735423a07c4f1e3",
+    "source": "REVIEW-paper-v5d9-muse.md full review"
+  }
+]

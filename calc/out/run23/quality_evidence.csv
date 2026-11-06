@@ -1,0 +1,4 @@
+evidence,value,ci_low,ci_high,unit,local_own_KL,answer_changes,source,basis,status,alarm_inputs
+bf16 KL study,-0.000298,-0.001076,0.00039,nats relative to local,0.054253,,FACTS KL study8d876c71;20 documents40960 positions,"accepted paired result;95% interval includes0, not universal equivalence",ok,
+bf16 RULER8192,390,,,paired scores equal out of390,,28,bf16-8192-analysis.json,"accepted primary analysis, same examples/seed and frozen local/f32 baselines; score equality does not mean identical answers or100% accuracy; homogeneous CUDA quality evidence, not a universal vLLM-to-Metal calibration",ok,
+bf16 RULER32768,390,,,paired scores equal out of390,,33,bf16-32768-analysis.json,"accepted primary analysis, same examples/seed and frozen local/f32 baselines; score equality does not mean identical answers or100% accuracy; homogeneous CUDA quality evidence, not a universal vLLM-to-Metal calibration",ok,

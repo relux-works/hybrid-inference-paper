@@ -1,0 +1,422 @@
+[
+  {
+    "depth": 32768,
+    "task": "ALL",
+    "n": 390,
+    "bf16_answer_changes": 33,
+    "f32_answer_changes": 33,
+    "partition_answer_changes": 29,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 352,
+      "left_only": 5,
+      "right_only": 5,
+      "both_true": 28,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 10,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 380,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 0.9743589743589743,
+      "offload": 0.9743589743589743,
+      "local_partition": 0.9717948717948718,
+      "offload_bf16": 0.9743589743589743
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "cwe",
+    "n": 30,
+    "bf16_answer_changes": 14,
+    "f32_answer_changes": 12,
+    "partition_answer_changes": 10,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 16,
+      "left_only": 2,
+      "right_only": 0,
+      "both_true": 12,
+      "mcnemar_p": 0.5
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "fwe",
+    "n": 30,
+    "bf16_answer_changes": 5,
+    "f32_answer_changes": 5,
+    "partition_answer_changes": 5,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 25,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 5,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multikey_1",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multikey_2",
+    "n": 30,
+    "bf16_answer_changes": 3,
+    "f32_answer_changes": 4,
+    "partition_answer_changes": 2,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 26,
+      "left_only": 0,
+      "right_only": 1,
+      "both_true": 3,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multikey_3",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multiquery",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_multivalue",
+    "n": 30,
+    "bf16_answer_changes": 8,
+    "f32_answer_changes": 8,
+    "partition_answer_changes": 10,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 19,
+      "left_only": 3,
+      "right_only": 3,
+      "both_true": 5,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_single_1",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_single_2",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "niah_single_3",
+    "n": 30,
+    "bf16_answer_changes": 2,
+    "f32_answer_changes": 3,
+    "partition_answer_changes": 1,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 27,
+      "left_only": 0,
+      "right_only": 1,
+      "both_true": 2,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "qa_1",
+    "n": 30,
+    "bf16_answer_changes": 1,
+    "f32_answer_changes": 1,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 29,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 1,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 1,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 29,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 0.9666666666666667,
+      "offload": 0.9666666666666667,
+      "local_partition": 0.9666666666666667,
+      "offload_bf16": 0.9666666666666667
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "qa_2",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 1,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 9,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 21,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 0.7,
+      "offload": 0.7,
+      "local_partition": 0.6666666666666666,
+      "offload_bf16": 0.7
+    }
+  },
+  {
+    "depth": 32768,
+    "task": "vt",
+    "n": 30,
+    "bf16_answer_changes": 0,
+    "f32_answer_changes": 0,
+    "partition_answer_changes": 0,
+    "bf16_local_score_disagreements": 0,
+    "bf16_f32_score_disagreements": 0,
+    "answer_change_pairs": {
+      "both_false": 30,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 0,
+      "mcnemar_p": 1.0
+    },
+    "accuracy_pairs": {
+      "both_false": 0,
+      "left_only": 0,
+      "right_only": 0,
+      "both_true": 30,
+      "mcnemar_p": 1.0
+    },
+    "score_means": {
+      "local": 1.0,
+      "offload": 1.0,
+      "local_partition": 1.0,
+      "offload_bf16": 1.0
+    }
+  }
+]

@@ -1,5 +1,36 @@
 # Calculation assumptions requiring later evidence
 
+## Resolved source question, analyst pass r21l
+
+The accepted owner model-class export resolves the 17% / 5% provenance question: 260,201 of 1,530,739 calls and 4.6-4.8% of spending, plus the frontier-call and same-token price reference. Arithmetic and source hashes are in `calc/PAPER-V5D5-GAPS-261105.md`. The actual fraction of frontier tasks Qwen can complete remains unmeasured. Neither engine choice nor API admission changes this workload-class arithmetic. The current RULER status and revised RC 4 cutoff are recorded in the completed-analysis map.
+
+## Historical RC 4 measurement boundaries (2026-11-05, r21k)
+
+This historical section is superseded by the completed RULER status at the end of this file. Accepted engine24 economics and descriptive cache measurements are incorporated. At that original 2026-11-05 12:00 UTC cutoff, full RULER64k/128k, B300 decode and an admitted measured Qwen1M API point remain open. Saved RULER prefixes are interim and do not fill the registered analysis. Mac bf16, heterogeneous tolerance, timing-only runs and declared model follow-ups remain qualified waits; all10 raw sites are in `calc/tests/data/paper-v5d4-pending.json` and `calc/PAPER-V5D4-GAPS-261105.md`.
+
+The40-turn CUDA/Metal run showed no long-session speedup. An identical task sequence without diagnostic critical-path work, separate cold start and task success at100k-200k on Metal is still required. Cost per call is not cost per completed task. Auditing remains research outside production reconciliation. A free-prefill overhead floor exceeds the measured cheapest API at the stated light load only; a universal all-load impossibility is not inferred. All earlier measurement records and calculations remain preserved.
+
+## Historical v5a third-pass snapshot (superseded below by the current v5d map)
+
+This section supersedes the historical measurement-status entries below. The original data boundary was 2026-11-05 12:00 UTC; the completed RULER pass below supersedes this historical cutoff.
+
+Checkpoint 10 on Metal is measured with exit 5, top-1 64/64 and the reported controls; heterogeneous tolerance
+and BF16-reference calibration remain pending. Qwen RULER 8k/32k score equivalence is supported (8k by post-review sidecars); Glimmer 8k is not equivalent. Text equivalence is not established at these depths. Qwen 8k/32k preceded registration; Glimmer was not named, straddled registration and uses the rules by extension.
+Qwen 64k/128k, bf16 8k/32k and Glimmer 32k/64k/122880 remain input-state waits.
+
+Normal-priority full M3 intermediate curves/Gemma need an idle Mac; Glimmer PRI31 is measured, with successive deltas and external-disk saves; its frozen engine thresholds still use interim PRI4 anchors;
+16b follows the full curve. The GPU vLLM rework, Bonsai 2 ladder, timing-only instrument-free runs,
+The server-side Qwen rebuild to1.04M is measured in30.2min; Mac download/import/logit/decode remains pending. Quality at depth, measured vLLM decode batching, bf16 RULER/GPU rehearsal/Mac work and the OpenRouter cache test remain pending. The20-document CUDA bf16 KL study is measured and does not close those other items.
+The owner's commercial 98.1% aggregate is a scenario, not a measured Chutes rate.
+
+Current applicability amounts await accepted R20/R21 results; every placeholder has an exact `% R20:` export comment.
+R20 is read without merging; 5090 server rows are excluded by owner direction. Previous Q4 economics survives only
+as a named historical calculation. New sources/maps: `calc/PAPER-V5A-GAPS-261103.md`,
+`calc/tests/data/paper-v5a-pending.json` and `calc/tests/data/paper-v5a-r20-sites.json`.
+
+## Historical assumptions and earlier status snapshots
+
+
 The offline calculation delivery does not block on these measurements. They
 bound the claims made by the canonical and owners' economics scenarios.
 
@@ -170,7 +201,7 @@ A same-build cooled260k sweep, additional counts, sustained realistic-agent
 timings and Mac import-speed-v2 evidence would narrow the remaining limits.
 These are measurement gaps; no new owner decision is required for this run.
 
-## Current paper v3 qualification
+## Historical paper v3 qualification
 
 See `calc/PAPER-V3-GAPS-261102.md`. Run15 updates all current embedded CSVs and derived figures.
 At 16 agents, 44.7524% of calls and 25.7257% of decode-device time use the measured zone; the remaining
@@ -178,3 +209,332 @@ qualifications overlap. Six agents have 0% measured calls and 90.67% shallow-hel
 the row stays printed with a dagger, outside capacity ratios. No fully measured day is claimed.
 Prototype main is `9348ecd6`; landed status does not qualify CUDA-to-Metal calibration or growing-session performance.
 The full-refresh alternative restores the node's state, not equality with a separate local prefill.
+## Run16 qualification limits (2026-11-03)
+
+| Question | Current declared behaviour | Needed evidence |
+| --- | --- | --- |
+| PRI31 M3 parallel capacity | All inherited mixed outputs carry `background_priority_interim`; cooled background measurements remain interim, including the six-stream260k-only gap | The new hash-verified normal-priority sweep via the data-only R16b interface; no final agents/day claim yet |
+| M5 process priority | Priority not recorded; Sergey reports that the launching process showed PRI 31 when checked afterwards (2026-11-03 09:11 UTC) | Recorded process-priority samples for a later sweep, to qualify priority during the measured run |
+| Separating token and depth import costs | Conditional depth OLS at delta539;48.7us/token retained from the weak original marginal fit; measured depth range2k–100k | A joint delta/depth sweep and repeated timings, especially beyond100k |
+| Bounded undo and bf16 state | Unimplemented depth-free sensitivity; bf16 halves recurrent state bytes only | Transaction, rollback/lost-ack and cross-engine state-equivalence qualification before any production claim |
+| 5G timing versus production behaviour | Capture-subtracted arithmetic residuals only; main-run checkpoint/fidelity unmeasured; turn7 and base retain sizeable prediction errors | A qualified checkpoint and an uninstrumented repeat; finer accounting of unallocated time and link variation |
+
+The quoted8.45MB/s is reconciled: it is the old prototype's entry threshold
+with15% saving required by margin+hysteresis, rather than equal-cost break-even.
+The source base `fca0fe31` and the two preserved preflight plans support that
+calculation. The exact driver `5be993f2` Git object was unavailable locally;
+no fetch/download was attempted. This does not replace the recorded source
+hashes in the original extracts.
+
+## Current paper v4 gaps (2026-11-03 08:40 UTC source)
+
+See `calc/PAPER-V4-GAPS-261103.md`. Both 5G timing arms completed 40 turns to 143,439 tokens at PRI 31. The Mac checkpoint 10 remains unmeasured after the fixed backend-label bug; the first recheck refused RAM before checker launch. The 4/4 GPU-rehearsal checkpoints are CUDA-only. Synchronous snapshots are inside measured TTFT; subtraction yields arithmetic residuals, not production timings.
+
+RULER 8k: 390 paired examples on CUDA, identical 97.01% scores in all arms, zero per-example score disagreements. Text changes are 8.72%/8.21%; McNemar p=0.727, excess interval -2.13 to +3.12 pp. Equivalence at 2 pp is not established. 32k is running (about six hours from 07:32 UTC); 64k/128k await the owner budget decision.
+
+Full normal-priority M3 parallel/Gemma/Glimmer measurements need an idle Mac; then R16b replaces interim capacity data. CUDA-to-Metal BF16 calibration needs the Mac. GPU vLLM state bridge awaits rework. Bonsai 2 2B/4B/9B ladder is later. Bounded undo requires implementation and transaction/lost-ack qualification; bf16 thresholds do not qualify its bridge.
+
+## Paper v4b follow-up boundaries
+
+Current pending-site inventory: `calc/tests/data/paper-v4b-pending.json`, explained in `calc/PAPER-V4B-GAPS-261103.md`.
+The four TeX sites reference only FACTS section 5 waits; RULER8k, the timing arms, KL and the small task pilots are measured.
+The r20c accounting supersedes the old25.5-second rounded subtraction: the first call has25.370 seconds outside three meters,19.659 inside request preparation and5.711 on the client outside preparation. Individual subphases remain untimed.
+M5 priority was not recorded during measurement; a later PRI31 launcher check does not establish the measured process QoS.
+Gemma's445.6 MB window follows geometry. R17 now supplies interim measured-rate thresholds; larger fixed bytes alone do not order them against Qwen. Normal-priority SWA and actual SWA import calibration remain pending.
+The restored model-geometry table retains its prior analytical estimates; those estimates are not measured Gemma/Glimmer link thresholds.
+
+## Engine run17 (2026-11-03)
+
+- PRI31 Glimmer/Gemma Mac rates are pending; current kit1.6.5 background-priority
+  data is interim. Data-only source/priority interfaces are documented in
+  `calc/README.md`. R16b parallel replacement remains available for Run17.
+- The SWA import assumption `r16_qwen_token_depth_portability` has no SWA import
+  measurements. The window may add import work that this estimate excludes.
+- Ideal tensor payload geometry is reconciled with full sequence-save geometry;
+  actual prototype framing, chunking and SWA hybrid timings are unmeasured here.
+  No new Gemma/Glimmer native hybrid runs were performed by this task.
+- bf16 recurrent tensor wire economics assume half the f32 tensor bytes with
+  unchanged resident memory/import/decode; measured quality of dev-a r38 is
+  pending. This task makes no quality or production-readiness claim.
+- Architecture extrapolation holds Qwen rates/import fixed and is not a claim
+  about a real model. Lower fixed bytes alone do not establish model quality.
+
+## Paper v4c current measurement boundaries
+
+See `calc/PAPER-V4C-GAPS-261103.md` and `calc/tests/data/paper-v4c-pending.json` for all six macro sites.
+Two additions are required by the owner's r20c inputs: timing-only Mac/node calls with separate spans, and
+GPU/Mac quality and speed of the implemented lossy bf16 transport. The earlier four sites remain FACTS5 waits.
+The base import2.908 seconds already sums all ten chunks. Subtracting snapshot downloads still retains
+synchronous evidence-file hashing25.748GB inside node extend wrappers; residuals remain arithmetic upper bounds.
+R17 thresholds at32k/64k/100k use same-build PRO6000 rates and exact tensor bytes, distinct from the retained
+R16 B300/rounded-state sensitivity. Glimmer/Gemma Mac rates are interim PRI4; import reuses Qwen as a named estimate.
+CPU bf16 implementation and normal-value rounding are measured; these facts do not qualify long-context27B quality
+or GPU/Mac speed. Only recurrent wire tensors halve; resident memory and import/decode assumptions stay fixed.
+
+## Analyst pass r21d
+
+All26 legacy R20 sites remain pending for accepted engine22. Recorded PRI31 M5 Qwen/Glimmer data close the priority-recording caveat for the new measurements; older model outputs keep their original inputs as a historical calculation. RULER 8k/32k scores are post-result analyses with a margin fixed at14:36UTC; Qwen64k/128k are the strictly preregistered depths. Glimmer is exploratory. Paired BF16-wire KL does not qualify lossless transport, GPU rehearsal, Mac or bf16 RULER. No excluded cache-probe result is used.
+
+## Owner pass r21e: current measurement boundary
+
+Accepted bf16 RULER8k/32k and exploratory Glimmer32k replace the earlier waits;
+Glimmer stops at32k by owner decision. Main 1M economics await engine22; Mac
+slot download is measured, import/logit gate/decode/delta prefill remain pending.
+Server restore is warm (newly written file, no OS-cache drop); cold restore is
+unmeasured. vLLM decode batching is measured only at16k on PRO6000Workstation;
+deeper PRO6000 and B300 batches still wait. GPU rehearsal and Mac bf16 quality
+and speed remain pending despite the bounded CUDA KL and RULER observations.
+The engine must revisit unmeasured M4 prefill:8.38 local sessions/day versus
+6.73 for M5 on measured anchors. No current M4 row is presented.
+Raw26 R20 source hooks remain unchanged; one visible applicability pending
+notice supersedes their four repeated renderings. Exact current waits and
+closed-scope authority are in paper-v5a4-pending.json and the gap map.
+
+
+## Engine run18 (2026-11-03)
+
+- Resolved source custody: canonical FACTS corrected5090 Qwen suffix to...e3e8
+  on2026-11-03; the supplied full digest/manifest now matches. Original...16b
+  discrepancy and corrected full digest remain in the report/quote ledger.
+- Optional task boundary: default116-call normalization group per rental. The
+  fitted call mix is not a chronological session trace. Actual task boundaries
+  and trace/cold-start measurements would tighten economics. Whole-hour rounding
+  is a sensitivity, not an assertion of Vast billing granularity.
+- GPU import portability remains unmeasured: the CUDA-only PR9 joint delta/depth
+  fit replaces the rejected Mac slope composition. Host full-slot file timings
+  cannot separately identify the imported-delta endpoint/recovery cost. Measure
+  that endpoint on each card/model; Glimmer import and bf16 quality remain pending.
+- Full fitted workload exceeds GPU context caps. Conditional common-subset
+  costs are not full-workload/persistent-machine quotes; aggregate GPU hours can
+  require concurrent independent rentals. No Glimmer fetch/API price is supplied.
+
+- R18 historical resource exception: free disk27754147840 B at2026-11-03
+  11:45:52Z was below28GB. Own engine02 stopped by recorded PID (return-15); no
+  foreign cleanup/control. After recovery, exact-current engine03 passed399
+  tests with observed free space above28GB. The earlier breach remains recorded
+  and is not converted into a successful resource-control claim.
+
+- R10c resource exception: observer recorded 27867369472 B at
+  2026-11-03T12:46:20.733004Z after the owned engine02 process was stopped
+  (return -15). This violated the 28GB rule. The report preserves the earlier
+  exit reading, later lower observation and monitoring gap. A retry uses a
+  29GB intervention threshold; a later green suite cannot erase the breach.
+
+
+## Run19 qualification boundaries
+
+- R10c producer headf7aeef95 was still pending independent acceptance at
+  branching; R19 uses that explicitly permitted parent, not an invented review.
+- The 5090 client-kit path is reused for a hybrid prefill node by assumption.
+  Measure that binary and concurrent service before calling the node qualified.
+- About13GB usable KV/state is an owner-provided estimate. Physical368885,
+  configured262144 and measured249000 token bounds differ. Full fitted calls
+  exceed these limits; the10885-call conditional quote is not full-workload cost.
+- Same-card file save/restore timings support full-session migration; RAM
+  direct-copy speed and storage provenance are not isolated. Uniform session
+  popularity and249k reservations give sufficient fleets, not optimal packing.
+- The sourced1999.99USD card listing is sold out. Host1500USD, cache sizes and
+  power are unpriced estimates. A current available box quote may change the
+  narrow larger-team comparison with the cheapest API.
+- Rented GPU-work cost is a utilization allocation, distinct from a full warm
+  calendar lease. Startup/model fetch, independent retention provisioning,
+  provider host resources and persistence across terminated leases are not
+  qualified. Client demand throughput is not established by server sizing.
+
+## Run20 qualification boundaries
+
+- Run19 exact-head review was pending at branching from3a1eed0d. No independent
+  acceptance is invented. R10c f7aeef95 acceptance was subsequently observed.
+- vLLM decode1/8/32-stream measurements are pending. BF16 KV prevents some
+  planned deep parallel cells from fitting; missing measurements cannot
+  override physical capacity.1M rates are extrapolated bandwidth bounds only.
+- PR16 bridge server timings are measured smoke envelopes, not isolated
+  conversion cost or production latency. FP8-KV bridge portability, deeper
+  geometry, GPU concurrency, CPU occupancy and task quality need measurement.
+  Heterogeneous checker exit5 remains uncalibrated.
+- vLLM state restore is unmeasured here. Uniform residency misses rebuild the
+  cold prefix; that prefix already includes pending history, which must not
+  be charged again. Retention/workspace/weight budgets are estimates.
+- API admission is snapshot-based.98.1% is the owner's aggregate commercial
+  cache share, not a measured hit rate at each OpenRouter endpoint. The
+  provider-specific data-only interface is empty. Snapshot availability is
+  historical, and unknown availability is disclosed rather than measured.
+- The common measured-envelope subset covers27.28% of the fitted workload.
+  Full-workload economics and universal team-size claims are not established.
+  Costs/multiples omit the equal non-open commercial share. Client purchase
+  prices and non-5090 rental prices are inherited estimates, not new offers.
+- Dedicated server calendar costs differ from shared work-price allocations.
+  Hybrid fleets are sufficient under the R19 provision policy, not proven
+  minimum fleets. Break-even scans stop at500, so no infinite-team theorem.
+- The shared filesystem briefly fell below28GB during this run. The observer
+  minimum/resource-exception and gate logs preserve this failure; subsequent
+  passing tests cannot retroactively satisfy the throughout-run floor.
+
+- Run20 budgets one recurrent state/session. Additional vLLM prefix-checkpoint
+  and allocator overhead is unmeasured; modelled residency/batching capacities
+  are conditional on that idealization, not deployment guarantees.
+
+- Later R19 review CHANGES REQUESTED at3a1eed0d is a rental coverage-label
+  finding only. R20 inherits that producer base and preserves R19 exports as
+  required; the historical R19 finding remains for its own rework. New R20
+  price/threshold rows explicitly carry coverage and normalization, covered
+  by a named regression and narrowing mutant.
+
+- The R20 bridge coefficient is a token-weighted smoke average projected
+  through zero, not a short-turn latency fit or a conservative upper bound.
+  Fixed overhead is visible in the54-token increment; geometry portability
+  remains an economic sensitivity until measured at workload deltas/depths.
+
+## Run21 qualifications
+
+- The delivered session package contains aggregates, not raw calls. Claude
+  pauses are median8.1/p9060.6s, versus7.8/34.8s combined. No raw recomputation
+  or per-model depth averages is possible from the counts-only model list.
+  Deep quantile+mean reconstruction, conditional delta means, rank pairing,
+  tail endpoints and a300s active-gap cap are modelling assumptions. Published
+  source statistics and actual model marginals are both exported.
+- No measured1M delta-prefill or normal-priority1M decode is available here.
+  The1.67tok/s at1.04M is background priority; the~7.42tok/s raw M3 ceiling
+  is not achievable-throughput evidence. Deep Mac imports extend the R16
+  recovery-depth law. Fresh0.8/2.8MB/s observations have no raw trace supplied;
+  full-slot5.18MB/s is a delta-path portability sensitivity.
+- vLLM deep cached/cold rates and session admission beyond249k remain
+  extrapolated; planned512k/1M decode data uses a guarded data-only interface.
+  Hybrid Qwen must use model-card YaRN factor4 on client and server. API
+  providers' extension method and equivalent task quality are unknown.
+- GLM/M5Ultra, Studio1M57min and GLM B300 prefill carried from Qwen are
+  unmeasured. FP8 GLM328GB requires at least2B300 GPUs; ideal summed
+  bandwidth omits replica communication. Expert-union batching includes
+  complete per-session KV/state, rather than treating KV as shared weights.
+- The local GLM research note omits cache declarations and exact metadata for
+  the grouped endpoints. Its individually listed candidates fail closed;
+  cheapest/median admitted GLM prices remain noncomputable until data arrives.
+- 5090 server choices are excluded from run21 by owner decision. Their frozen
+  run20 rows are not used in the paper; measured5090 client interfaces remain.
+  The historical R19 F1 basis is fixed in source and a run21 successor view,
+  preserving all R13–20 bytes. Historical office zero boxes mean local bypass;
+  the R19 report's share table is NVMe; hybrid fleet sizing stays sufficient,
+  not proven minimal. PRO6000 rate-basis relabelling now refuses.
+- Initial run21 inspection observed27.821GB free before writes, below28GB.
+  Writes were held until recovery. Shared-disk floor compliance throughout the
+  task cannot be claimed; subsequent green tests do not erase that observation.
+
+- The growing-task companion also keeps the projected GLM two-GPU replica,
+  whole eight-GPU node prices and finite concurrency. Studio250W/$8000 and its
+ 57min cold integral remain estimates, not new hardware measurements. It
+  grows by conditional mean input plus mean generated output and median gaps;
+  correlations and task quality are unqualified. At50 staff/two1M tasks/day,
+  projected GLM hybrid can undercut its own cluster while Qwen hybrid does not;
+  unavailable GLM API admission prevents a qualified API multiple.
+
+R14/r5x publication status: R20 API population and partial availability labels
+are corrected; native llama bridge duplicates are labelled not applicable.
+Independent re-review remains pending. Paper projections exclude5090 servers;
+measured5090 clients remain in scope. R20 full numerical cells and R21 full
+CSVs are preserved. The review's nonblocking sample-size/plausibility guards
+for future measured cache/decode rows and the single-source discount reading
+remain open; published measurement replacement lists are empty.
+
+R15/r5x2: words-ready billing and link conditions are now embedded and parsed
+in every paper sentence and report quotation; no numerical cells change.
+Independent re-review remains pending. Snapshot-bound parser/link choices
+state the office and engine-WAN assumptions; this adds no measured link rate
+or measured deep-model result. Existing capacity alarms stay nonfinite and
+are explicitly disclosed in sentence text.
+
+## Paper v5b current boundaries
+
+The accepted run 22 closes model/economics deferrals, not physical measurement waits.
+All 26 historical R20 sites have explicit accepted successors. Current economics cover the owned M5 Max
+and selected call shapes, not M3 money claims or the full unconditional source workload. Server decode
+remains modelled for every selected economic call; the 16384 measurement is a distinct coordinate.
+The deep Claude profile is local-only with zero offload and zero occupancy. Provider cache rates and a
+measured common availability window remain pending; zero cache is priced rather than excluded.
+1M M3 thresholds use extended local-rate/import estimates; M5 has no positive anchored budget.
+Warm server restore is never treated as direct Mac delta import. The direct Mac interface remains empty.
+Remaining physical waits are enumerated in paper-v5b-pending.json and PAPER-V5B-GAPS-261103.md.
+
+
+## Paper v5c measurement status
+
+Accepted direct Mac 512k/1.04M local timings and five same-device depth-quality cases close their former waits.
+PRO vLLM decode is measured at four depths, interpolated between them, modelled outside; B300 still modelled.
+Warm full-slot LaCie recovery is a proxy, not a delta-import measurement; the raised raw-logit bound is uncalibrated.
+Remaining sites and authorities: `calc/tests/data/paper-v5c-pending.json` and `calc/PAPER-V5C-GAPS-261104.md`.
+
+
+## Paper v5d part 1 remaining waits
+
+The capped M3 grid, bf16 GPU rehearsal and descriptive API cache/availability study are measured.
+Measured-cache economic use awaits engine run 24; no new cost/crossing is inferred in part 1.
+Saved interim RULER64k/128k rows now cover368/390 and225/390 after the owner stopped the nodes on2026-11-04; complete registered analyses remain pending;
+the cut-off stays 2026-11-05 12:00Z. B300 decode remains modelled because no rental container started.
+All current sites and other unchanged hardware/calibration waits: `calc/tests/data/paper-v5d1-pending.json`.
+
+## v5d part2: current status
+
+Saved Qwen RULER64k/128k rows are descriptive serial prefixes, not completed registered depths. Missing22 qa_2 and165 examples respectively; original nodes queued to restart with frozen per-depth identities. Both depths remain p1 in Holm. All three measured Qwen1M providers are excluded below95% availability; no admitted measured Qwen1M price exists. Engine24 measured-cache economics pending. Private hybrid-inference-data exists, evidence snapshot after RC4. Current finite waits: calc/tests/data/paper-v5d2-pending.json. Older entries above record their historical observation dates.
+
+## v5d part3: RC4 close
+
+Accepted engine24 closes the measured-cache economic-model wait. Qwen v1 and GLM v1/core have cadence-labelled partial priceable cohorts; Qwen core remains unavailable. Full RULER64k/128k, B300 decode and an admitted Qwen1M provider remain pending at the owner-set2026-11-05 12:00Z cut-off. Other calibration/model/future-work qualifications remain mapped in calc/tests/data/paper-v5d3-pending.json. Earlier engine24 pending statements above are historical. Private evidence repository snapshot followsRC4.
+
+## RC 4 candidate review, r21m
+
+Pending engine 25: Part A verifies fleet minimality with one or two nodes and RAM/NVMe/on-demand restore; Part B recalculates a true closed perimeter at 100% model share; Part C measures covered token/work shares. The analyst's approximately $20 instead of $57 light-load figure is conditional on one node sufficing, not a replacement for table 18. Mac logit calibration needs paired local runs with different partitions at the same depths. Registered RULER/Holm still awaits 128k completion on node A with node B's build; 64k is now complete. Clean paired end-to-end replay is preregistered, not run. Native engine 24 prices remain unchanged; long-pause measured-cache cohorts do not establish a short-interval recommendation.
+
+## Current closed-perimeter scope, r21n
+
+The20% Qwen component admits5-medium/2-heavy crossings inside a closed perimeter only with an internal larger model handling the other80% at the same cost in both alternatives. This supersedes r21m's assumption of an external cloud remainder. Full100% and mixed-scheme conclusions wait for engine26; no accepted engine25 revision is available at writing. Existing fleet/coverage waits remain. New unmeasured inputs: GLM decode/prefill on Studio; GLM prefill on B300; M5Ultra extrapolated from M5Max by owner decision; Studio512GB price/configuration; middle-class task share as an input scenario. Exact pending macros: calc/tests/data/paper-v5d7-pending.json.
+
+## Current status after accepted engines 25 and 26
+
+Fleet alternatives, fitted coverage, full-Qwen and internal mixed-scheme comparisons are calculated;
+they do not qualify restore proxies, real arrivals or task-success substitution. Studio/GLM speeds,
+GLM import/quality and cloud-class throughput/interconnect/storage remain unmeasured. Reported
+Studio list-price proxies and the owner-directed Ultra projection replace former missing numeric
+inputs, without becoming measured hardware rates. Remaining physical waits include RULER128k/Holm,
+long-session vLLM handoff/quality qualification, the planned clean lifecycle replay, Mac calibration
+and the existing B300 decode/Mac-bf16/model follow-ups. Exact macros: calc/tests/data/paper-v5d10-pending.json (current inventory).
+The corrected FACTS now supplies the0/112 export control and exact codec/append diagnostics. Quantile packet8432f75d is a frozen planned artifact
+under review, not inference or a dev-e numeric prediction.
+
+## Current post-review status, v5d9
+
+524288 Metal partition/repeat noise is0 and the historical1.08298 is reproduced cross-device;
+1040000 calibration was cancelled,3.01402 unexplained. This is partial, not calibrated acceptance.
+The vLLM export, codec and append are exact; even full-server N-1 handoff refuses the unchanged
+quality gate. One natural-text document is measured; long-session qualification remains pending, not impossible.
+The pre-probe forecast exists; the second signed numeric commitment and inference remain pending.
+Architecture traffic and GPU/link start capacity are shown arithmetic, with assumed starts/uniform
+arrivals and no full-path/queue claim. RULER128k/Holm and near-tie scope unchanged by this pass.
+Exact macro inventory: calc/tests/data/paper-v5d9-pending.json.
+
+## Current v5d10 waits
+
+The near-tie softcap hypothesis has no GPU result: reconstruct exact pinned prompts with hash checks,
+or predeclare a separate new dataset. Attempt 5 on predeclared natural text refused top-1 at turn 4,
+so vLLM long sessions remain unqualified. A near-tie-aware criterion needs advance specification
+and unseen documents. N6 remains a phrase-checker limitation: appended token-preserving contradictions
+need full prose review; finite omission and semantic narrowing controls are retained.
+RULER completion/Holm and all existing 128k mentions are unchanged for the separate pass.
+Mac calibration at 1.04M, the clean paired lifecycle experiment, B300 decode, Mac bf16/current-build
+and declared model follow-ups retain their physical waits. Exact macro inventory:
+`calc/tests/data/paper-v5d10-pending.json`.
+
+## Current completed RULER status, `v5d11`
+
+This section supersedes every earlier RULER wait and registration-timing summary in this historical log.
+All four Qwen f32 depths have 390 pairs; Holm is complete. The 128k registered interval passes, but
+the frozen supplementary guard withholds score equivalence. Scores at 8k/32k/64k meet the stated
+bound, without a simultaneous four-depth or text-equivalence claim. The margin followed 8k/32k;
+128k straddled registration (zero or one row before it), then changed hosts using the original binaries.
+bf16 8k/32k analysis is reported; higher bf16 depths were never measured and enter as absent p=1.
+The release measurement cut-off is 2026-11-06 06:00 UTC. Both deep RULER completions and vLLM
+attempt 5 followed the original cut-off. Every unrelated pending macro is retained byte-for-byte;
+Mac calibration/bf16, vLLM qualification, clean paired end-to-end replay and the other declared
+physical/model waits remain. Current inventory: `calc/tests/data/paper-v5d11-pending.json`.
+
+## RC 4 publication prerequisites, 2026-11-06
+
+The owner-signed tag and fresh-node bundle proof remain incident-lane steps. No private-history runtime blocker remains; the production tag gate is expected 1 until the owner tags. The diagnostic source PDF must be rebuilt as release assets after the owner recommit/tag. The completed RULER results and F1 correction above remain current.

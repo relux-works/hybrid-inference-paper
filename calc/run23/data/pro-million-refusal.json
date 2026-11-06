@@ -1,0 +1,146 @@
+{
+  "schema": 1,
+  "host": "pro6000",
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "native_context": 262144,
+  "extended_context": 1048576,
+  "llama_yarn_args": [
+    "--rope-scaling",
+    "yarn",
+    "--rope-scale",
+    "4",
+    "--yarn-orig-ctx",
+    "262144"
+  ],
+  "decode_tokens": 256,
+  "limit": 32,
+  "cooldown_s": 15.0,
+  "measured_rounds": 3,
+  "decode_timing_granularity": "sse-chunk-receipt",
+  "yarn": {
+    "rope_type": "yarn",
+    "factor": 4.0,
+    "original_max_position_embeddings": 262144,
+    "beta_fast": 32,
+    "beta_slow": 1,
+    "attention_factor": 1.138629436111989
+  },
+  "rows": [
+    {
+      "kv": "auto",
+      "depth": 1000000,
+      "status": "refused",
+      "prefill": [
+        {
+          "delta": 2343,
+          "status": "unmeasured",
+          "rounds": [],
+          "reason": "To serve at least one request with the model's max seq len (1010001), (61.97 GiB KV cache is needed, which is larger than the available KV cache memory (56.62 GiB). Based on the available memory, the estimated maximum model length is 922768. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details."
+        },
+        {
+          "delta": 10000,
+          "status": "unmeasured",
+          "rounds": [],
+          "reason": "To serve at least one request with the model's max seq len (1010001), (61.97 GiB KV cache is needed, which is larger than the available KV cache memory (56.62 GiB). Based on the available memory, the estimated maximum model length is 922768. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details."
+        }
+      ],
+      "decode": {
+        "status": "unmeasured",
+        "shapes": [],
+        "max_sessions": null,
+        "maximum_searched": false,
+        "reason": "To serve at least one request with the model's max seq len (1010001), (61.97 GiB KV cache is needed, which is larger than the available KV cache memory (56.62 GiB). Based on the available memory, the estimated maximum model length is 922768. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details."
+      },
+      "error": "To serve at least one request with the model's max seq len (1010001), (61.97 GiB KV cache is needed, which is larger than the available KV cache memory (56.62 GiB). Based on the available memory, the estimated maximum model length is 922768. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.",
+      "startup_refusal": {
+        "server_log": "server.log",
+        "architecture_error": null
+      },
+      "launcher_error": "server startup exit 1",
+      "allowed_refusal": {
+        "kind": "kv-capacity",
+        "message": "To serve at least one request with the model's max seq len (1010001), (61.97 GiB KV cache is needed, which is larger than the available KV cache memory (56.62 GiB). Based on the available memory, the estimated maximum model length is 922768. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.",
+        "source": "https://github.com/vllm-project/vllm/blob/v0.32.0/vllm/v1/core/kv_cache_utils.py#L917-L952",
+        "phase": "before-health",
+        "exit_code": 1,
+        "shape": {
+          "kv": "auto",
+          "depth": 1000000,
+          "output_tokens": 10001,
+          "max_model_len": 1010001,
+          "max_num_seqs": 1
+        },
+        "server_log_sha256": "d8044b17dd88fffe9b0199c4383feb9fb004605cc494fc7946022be061948552",
+        "launch_sha256": "6bf362c6300aa9d473e4cd93fac9536aff0cc029d4208ec502f5572c8353793c"
+      }
+    },
+    {
+      "kv": "fp8",
+      "depth": 1000000,
+      "status": "unavailable",
+      "prefill": [
+        {
+          "delta": 2343,
+          "status": "unmeasured",
+          "rounds": [],
+          "reason": "server startup exit 1"
+        },
+        {
+          "delta": 10000,
+          "status": "unmeasured",
+          "rounds": [],
+          "reason": "server startup exit 1"
+        }
+      ],
+      "decode": {
+        "status": "unmeasured",
+        "shapes": [],
+        "max_sessions": null,
+        "maximum_searched": false,
+        "reason": "server startup exit 1"
+      },
+      "error": "server startup exit 1",
+      "startup_refusal": {
+        "server_log": "server.log",
+        "architecture_error": null
+      }
+    }
+  ],
+  "hf_overrides": {
+    "text_config": {
+      "max_position_embeddings": 1048576,
+      "rope_parameters": {
+        "rope_type": "yarn",
+        "factor": 4.0,
+        "original_max_position_embeddings": 262144,
+        "beta_fast": 32,
+        "beta_slow": 1,
+        "attention_factor": 1.138629436111989
+      }
+    }
+  },
+  "versions": {
+    "vllm": "0.32.0",
+    "torch": "2.13.0+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+  },
+  "original_rope_config": {
+    "rope_parameters": {
+      "mrope_interleaved": true,
+      "mrope_section": [
+        11,
+        11,
+        10
+      ],
+      "partial_rotary_factor": 0.25,
+      "rope_theta": 10000000,
+      "rope_type": "default"
+    },
+    "rope_scaling": null,
+    "rope_theta": null,
+    "partial_rotary_factor": 0.25,
+    "max_position_embeddings": 262144
+  }
+}

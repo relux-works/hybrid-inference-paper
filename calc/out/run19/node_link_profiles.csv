@@ -1,0 +1,6 @@
+key,bytes_s,rtt_s,rental,basis,status,alarm_inputs
+office_gigabit,125000000.0,0.001,False,ideal application goodput; 1ms RTT assumption,ok,
+office_10gbe,1250000000.0,0.001,False,ideal application goodput; 1ms RTT assumption,ok,
+measured_wifi_wan,5185832.08249437,0.12575693751568906,True,measured Wi-Fi plus WAN/SSH path; replay; not office-LAN measurement,ok,
+measured_5g_wan,9753009.771238122,0.14058910400490277,True,measured 5G WAN/SSH path replay,ok,
+engine_wan,112500000.0,0.4,True,existing engine WAN bandwidth/goodput/RTT estimate,ok,

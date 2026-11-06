@@ -3,6 +3,108 @@
 Every paper version is a GitHub Release with the PDF. Versions follow [Semantic Versioning](https://semver.org) as
 README.md defines it for the paper, in the section "Versions and releases".
 
+## [0.1.0-rc.4] - 2026-11-06
+
+RC 4 updates rc.3 with ordinary-priority client measurements, accepted engine runs 16–26, depth-dependent batching and link boundaries, complete Qwen RULER with conservative 128k limits, and declared economic scenarios. The forty-turn CUDA/Metal run showed no long-session speedup. Data cut-off: 2026-11-06 06:00 UTC. Clean end-to-end task replay and long-session vLLM qualification remain outstanding.
+
+
+- Store the two oversized accepted quote ledgers as deterministic single-member gzip, preserving their exact decompressed identities. Pin committed gzip hashes separately, retain all custody checks and reject introduced blobs at or above 100 MiB. The public release proof validates distinct regeneration filenames, clears optimization and records both inherited signal dispositions. Manuscript bytes are unchanged.
+
+- RC 4 portability: reference CPython 3.14.4 keeps exact CSV regeneration; other interpreters use an announced two-ulp float bound with exact non-float bytes. Test-only copy barriers and child SIGINT/SIGTERM resets retain interruption checks under inherited ignored signals. The release proof requires 42 automatic regeneration reports of the expected mode and zero of the opposite mode. Published outputs and manuscript bytes are unchanged.
+
+### Paper `v5d12`
+
+- Correct the 128k departure attribution to fwe #12 (+1/3), qa_2 #13 (+1) and qa_2 #14 (-1) in both arm pairs, using accepted analysis 8dd0577b. Preserve every interval, p-value and equivalence verdict; add an identity regression and task-renaming negative control.
+
+### Paper `v5d11`
+
+- Complete Qwen RULER at all four depths. Report registered and supplementary Holm separately: score equivalence at 8k/32k/64k, withheld at 128k by the frozen unseen-range guard despite its passing registered interval. No four-depth or answer-text equivalence claim.
+- Add bf16 score analysis at 8k/32k, with degenerate-case sidecars, bounded collection timing and never-measured higher depths. Keep every unrelated pending macro exact.
+- Set this release's measurement cut-off to 2026-11-06 06:00 UTC. Both deep RULER completions and vLLM attempt 5 followed the original cut-off; the 128k final example completed at 05:56:57 UTC. Version unchanged.
+
+### Paper `v5d10`
+
+- Add the accepted greedy near-tie study: content-flip lower bounds, separate answer/token denominators, and the unrun softcap hypothesis test.
+- Record the metadata-only Mac date census and the predeclared natural-text vLLM attempt 5: three accepted turns, then a top-1-only refusal at turn four; long-session qualification remains pending.
+- Correct the frozen-wait band to 25.6–28.4% and print the Qwen egress limit of about 280 people. Fix duplicate/stale documentation and run-16 audit scratch-path portability with an omission regression.
+- Preserve all 128k mentions for the separate completion/Holm pass. Version unchanged.
+
+
+- `v5d9` incorporates partial 524k Metal partition calibration, the corrected vLLM export/codec/append
+  diagnosis (including the accepted one-document natural-text diagnostic) and the accepted pre-probe time forecast, without promoting any to full-path acceptance.
+- Compares Qwen/Glimmer start-phase traffic and GPU/link capacity as shown arithmetic; separates
+  Glimmer live-window bytes from measured save-size ratios. Corrects 0.9 GB / 1 Gbit daily capacity to 12,000;
+  about 11,000 uses 1 GB. Retains uniform-arrival/shared-prefix/qualification limits.
+- Corrects the current whitespace disclosure; native accepted vendor/source snapshots remain exact.
+
+
+### Changed
+- Integrated accepted engine runs 25 and 26 without changing any published output byte. Kept run-24 table 18 as primary; labelled fleet alternatives as unmeasured retention/local-compute sensitivities. Replaced full-contour deferrals with prefill-only capacity-aware crossings, internal common-cost cancellation and the zero-offload GLM boundary.
+- Added the two-phase session interpretation, fitted coverage shares and a rough start-phase budget. The lifecycle quantile replay is planned, with separate source cohorts, synthetic shared-prefix fairness and finite-tail distortion; no end-to-end result is claimed. Transport qualified after its initial refusal, while long-session vLLM remains unqualified after the turn-one quality gate.
+- Clarified the closed-perimeter comparison: medium/heavy crossings at 5/2 people price the 20% Qwen component only, with the other 80% served by an internal larger model at identical cost in both alternatives. Accepted engine run 26 now gives full-share and mixed-scheme comparisons, with client-capacity refusal and a prefill-only contract.
+- Added the model-class map and internal task-share definition, with explicit unmeasured Studio/GLM/Ultra configuration and price inputs; kept native engine run 24 outputs and table 18 unchanged.
+- Revised the RC 4 candidate after the analyst and external reviews: full-perimeter conclusions use the accepted 100% model-share calculation; the current 20% segment requires the remaining calls to run on an internal larger model at equal cost in both alternatives. Replaced typical-load wording with declared scenarios and exposed call-shape coverage, fleet minimality and practical-recommendation limits.
+- Explained the measured-cache median: the measured Qwen v1 cohort has 11 providers against 15 without cache; the like-for-like no-cache median is $19.71 against measured $12.55. Removed the median gain from the abstracts and disclosed the long-pause bias and the one warm Ionstream observation.
+- Disclosed the Mac logit-bound refusal and subsequent increase without calling it an acceptance; calibration against local partition changes remains pending. Opened the million-token section with measured decode, API availability and server-capacity boundaries, plus a recomputed peak-bandwidth estimate.
+- Added complete Qwen RULER 64k (390 pairs), keeping 128k interim and disclosing the completion host change. Moved quality results before Limitations and cited the published, still-planned paired replay protocol. Kept the instrumented 40-turn no-speedup result unchanged.
+- Made publication and engine provenance checks portable to the public one-commit release layout. Pinned historical content and blob hashes retain the original revision/path provenance, cross-check local Git objects when available, and report fixture mode otherwise. Added deterministic generators, a private-lookup regression guard and positive/negative public-layout controls; frozen exports and computation remain unchanged.
+- Replaced both abstracts with the analyst's division-of-labour text, limiting RULER to 8k/32k with the post-result margin caveat, the cheapest measured API boundary; later review removes the measured median gain; the closed-perimeter component requires an internal equal-cost remainder. Preserved the omitted measurement conditions and statistical qualifications in the main text and methods.
+- Resolved the model-class source question: 260,201 of 1,530,739 calls (17.0%) and 4.6-4.8% of spending are Qwen-tier by model index. Added the frontier-call share, actual bill and same-token Qwen-price reference; none establishes completed-task substitution or depends on server-engine/API admission choices.
+- Reframed RC 4 around measured transport and bounded prefill results: the fresh 39,504-token call reduced TTFT by about 26%; the 40-turn 9.75 MB/s session showed no speedup. Kept base preparation separate, exposed the snapshot-subtraction arithmetic and retained hashing in its scope.
+- Separated per-call economics from completed-task cost. The cheapest admitted API remains cheaper at every priceable measured Qwen point; the free-prefill overhead comparison is bounded to light load. Workload model-index classes do not establish task substitution.
+- Narrowed the contribution to long-lived internet sessions, measured offload boundaries and transport exactness. Cited EXO 1.0 and PPD v1 as predecessors; state auditing remains future research outside production reconciliation.
+- Corrected the archived medium-load inconsistency to 19.25 unserved calls out of 800 (2.41%, 98% served after rounding). Moved laboratory history into appendices without dropping measured results, added the finite deep/Metal quality inventory and planned task-level scenario.
+- RC 4 data cut-off: 2026-11-06 06:00 UTC (original: 2026-11-05 12:00Z). Owner-authorized post-cutoff updates: RULER 64k completed on its original node at 14:28Z; accepted engine runs 25/26 and transport qualification at about 19:50Z are included by the later content brief. RULER 128k and full Holm analysis are now complete; vLLM attempt 5 also followed the original cut-off. Pending: preregistered end-to-end replay, B300 decode and an admitted measured Qwen 1M API point. The private `relux-works/hybrid-inference-data` repository exists; the full evidence snapshot follows RC 4.
+- Integrated accepted engine run 24 by signed local merge. Added separate no-cache, owner 98.1% and measured-cache points by cadence, partial priceable cohorts and the assumed transfer of hit fractions to paper shapes. The one-warm-observation Qwen v1 minimum stays descriptive.
+- Added dedicated measured Qwen v1 crossings and their cadence limits, the rented-server crossings and local-only Claude caveat. All ten attempted endpoints below 95% whole-window availability remain excluded. Updated the start/end applicability blocks and bilingual abstracts; preserved historical controls and hardware inputs.
+- Archived the initial saved interim Qwen RULER slice at 64k (368/390 pairs), now replaced by complete 390/390 results. The saved 128k interim slice (225/390, early needle tasks) is also superseded by the full registered/Holm analysis, with the host change from B to A using B's exact build.
+- Reported measured Qwen 1M cache/cost/availability for Phala, Novita and Alibaba as excluded below the unchanged 95% admission rule. No excluded row enters an admitted minimum or median; engine run 24 now supplies the separate measured-cache economic point.
+- Named the existing private hybrid-inference-data repository, with the full evidence snapshot to follow RC 4.
+- Added the complete ordinary-priority capped M3 Max Qwen decode grid, per-child bounded paging, refused original startup and fresh control. Placed its depth-dependent gains beside M5 Max and measured PRO 6000 gains in the division-of-labour thesis.
+- Added the CUDA growing-session bf16 replay with all four checkpoints, the matching f32 rehearsal and partition noise. Kept the fixed token journal/routing boundaries and lossy transport scope explicit; only Mac bf16 follow-ups remain pending.
+- Added the final descriptive OpenRouter cache/availability window, spending and cost reconciliation, cadence dependence, whole-window exclusions and continuous resumed data. Provider mismatches with usable usage count as available and are excluded from cache metrics.
+- Filled measured-cache economic comparisons from accepted engine run 24. Retained accepted run 23 control amounts and all source exports; reported saved partial deeper RULER rows separately after the owner stopped the rental nodes; those prefixes are now archived beneath the completed analysis. B300 decode stays modelled because no container started.
+- Integrated accepted engine run 23 by signed local merge with immutable prior outputs. Replaced 1M routing with explicit warm full-slot LaCie recovery proxies and retained the separate 120-second sensitivity. Bought-office headline crossings are unchanged; the local-only Claude rented-server light crossing moves from 87 to 73 people.
+- Added the complete direct Mac timing/gate table at 512k and 1.04M, both raw-logit bound attempts and the 2.7% comparison with the former anchored estimate. Preserved the measured server slot fill and useful download throughput.
+- Added exact same-device f32 handoff logits in five depth-quality cases, with full partition controls and descriptive scope. Both abstracts report this bounded result within their character limits.
+- Replaced deeper PRO 6000 decode assumptions with four measured depths and stated interpolation, preserving B300 and out-of-surface models. Added loopback CUDA bridge component timings and the PRO 6000 vLLM 1M capacity refusal.
+- Corrected the semicolon, stale cheapest-API conclusion and bf16 rounding wording. Provider-cache rates, common-window availability and mismatch accounting are now reported; their economic application is now reported from accepted engine run 24.
+- Integrated accepted engine run 22 for paper v5b with a signed local merge, preserving all historical exports. Resolved all 26 deferred R20 sites through explicit accepted-output mappings; physical measurement waits remain pending.
+- Made the dedicated bought team server and owned M5 Max the primary economics, with service and calendar occupancy beside fleet costs. Replaced superseded idleness ratios, crossings and API baselines; separated the shared-work and full-utilization limits.
+- Added the owner-approved plain-language applicability block at the beginning and end, with source-row corrections, privacy and memory-bandwidth boundaries. Updated Russian and English abstracts with conditional economics.
+- Added client-specific 1M bf16/f32 routing estimates and separate 120-second sensitivity, plus API prices across the snapshot and separate 72-hour cohorts with and without Alibaba. Direct Mac measurements are now reported with a warm full-slot recovery proxy, distinct from delta import.
+- Replaced the earlier shallow-only server decode basis with measured depth points and interpolation. Disclosed that the primary deep Claude profile never offloads and M3 Max has no current money rows. Retained every superseded calculation as explicitly historical evidence.
+- Applied the owner's `v5a4` review: bf16 rounds the state with no detected KL effect in the measured study; added completed bf16 RULER 8k/32k and exploratory Glimmer 32k, with the owner stopping Glimmer at that depth.
+- Moved the complete archived run14 million-token economics and conclusions into appendix C. Added measured useful Mac download throughput and explicitly warm server restore; completed the announced direct Mac work and current economics in the subsequent accepted passes.
+- Made the RTX 5090 client boundary explicit with measured prefill/decode ratios and resident-session limits; removed the unmeasured M4 row from the client table, retained its estimate as an engine gap, and qualified the archived M5 prefill ratio's unrecorded priority.
+- Added measured PRO 6000 Workstation vLLM decode batching through 256k. Retained the old synthetic median per price item as labelled history; current API prices use admitted providers.
+- Consolidated repeated applicability notices and retained the original 26 R20 source bindings as historical migration evidence; moved instrumentation details to the appendix, rounded the displayed cache scenario price, and added an English arXiv abstract. Both abstracts now contain the accepted economic applicability bounds within their release budgets.
+- Applied the independent analyst corrections: separated RULER score identity from changed answer text and transport controls; stated post-result margin selection and exploratory Glimmer scope.
+- Added recorded PRI 31 M5 Max Qwen/Glimmer runs, complete ladders and batching/depth data, with the two measured regressions against the older sweep. Preserved old engine-basis calculations for the deferred engine pass.
+- Withdrew the unconditional heavy-load advantage because the own cluster was recalculated on vLLM; current economic applicability uses the accepted dedicated-server calculation.
+- Replaced headline shallow prefill ratios with profile-depth estimates and moved laboratory details out of the abstract.
+- Addressed r5y: guarded technology-free Unreleased link descriptions; extended all 1M old-basis fences, documented Glimmer registration scope, corrected interpolated introduction times and the checker file tuple.
+- Added accepted paired RULER primary results and degenerate-case sidecars, the bounded bf16 KL study, normal-priority Glimmer client measurements and the measured server-side 1.04M rebuild. The 26 former R20 placeholders are resolved through accepted-output mappings; only named remaining measurements stay pending.
+- Reframed the abstract, introduction and conclusion around shared server prefill and per-session client decode; showed the B300 ratio and explicitly calculated profile-depth ratios.
+- Replaced former export-bound R20 applicability placeholders with accepted dedicated-basis paragraphs; kept RTX 5090 as a client only. Preserved the full previous economics, figures and comparisons as a labelled appendix.
+- Added measured checkpoint 10 with heterogeneous exit 5 limits, Qwen RULER 32k and Glimmer RULER 8k descriptives, the registered primary criterion (primary analysis now reported below), consumer GPU clients, API/cache admission assumptions, and static YaRN boundaries.
+- Replaced link technology labels with rates/RTTs, added the link check and timing-applicability table, and made three concrete export/layout/KV requests to vendors.
+- Addressed all six r5u notes: consistent refill direction, semantic limitations label, named price referent, measured/modelled abstract split, normal-priority decode headroom and fresh same-head gate receipts.
+- Rebuilt pending/export inventories for the fixed release-candidate data cut-off; retained title, authors, version and every prior result without cuts for length.
+- Merged accepted engine run17 with a signed merge. Added all 32k/64k/100k model/link thresholds, interim SWA priority/import qualifications and the full 15-cell architecture extrapolation; corrected Gemma's depth-dependent comparison and complete live-window payloads.
+- Refined the first 16.0 MB/s, 110 ms RTT call from rounded 25.5-second subtraction to exact-source 25.370-second enclosing-phase attribution. Corrected the ten-chunk base import and retained evidence hashing inside the capture-subtracted arithmetic upper bound; added timing-only runs to the pending map.
+- Recorded implemented, CPU-reviewed lossy bf16 recurrent transport, bounded real-state rounding, wire savings and paired economics sensitivity. The CUDA KL study and bf16 RULER at 8k/32k are now measured; GPU rehearsal is now reported with fixed journal/routing scope; Mac follow-ups remain pending; resident memory/import/decode assumptions do not halve.
+- Corrected the lexical word counter's handling of escaped currency signs and recounted both base and candidate; preserved title/thesis, authors, release version and every unsuperseded result without a length target.
+- Applied the owner's second-review follow-up: arXiv-length abstract, explicit API applicability ratios and link boundaries in the abstract and limitations; kept title and thesis.
+- Restored non-superseded r20 deletions, including the first 16.0 MB/s, 110 ms RTT call and its component accounting and current R16 prediction, network placement and client-control context, and updated prefill-distribution arithmetic.
+- Rebuilt the light-load conclusion from both R16 retention policies for all six team sizes; bound every amount/direction in the publication checker. The contribution is now narrowed below; audit is future work.
+- Corrected all current M5 priority qualifications, showed Gemma window/KV geometry without new calibrated engine predictions, and inventoried all remaining pending sites against FACTS section 5.
+- Integrated accepted engine run 16 with a signed merge. Replaced M3 single-stream anchors with recorded PRI 31 data, updated all dependent figures and tables, and visibly qualified interim background-priority multi-stream capacity. Added the cooled M5 sweep with unrecorded priority; the launching process showed PRI 31 when checked afterwards.
+- Replaced growing-session placeholders with both completed 40-turn CUDA-to-Metal timing arms at 9.75 MB/s, 140.6 ms RTT. Separated synchronous snapshot instrumentation from arithmetic residuals; kept CUDA-only rehearsal fidelity distinct; Mac checkpoint 10 has since been measured with uncalibrated exit 5.
+- Added depth-dependent prototype import, future bounded-undo sensitivity, f32/bf16 link thresholds, measured preflights and bounded engine validation against the 9.75 MB/s, 140.6 ms RTT run.
+- Replaced planned RULER 8k evaluation with 390 paired examples: equal 97.01% scores, zero score disagreements, text changes and paired interval; text equivalence at 2 pp remains unestablished; score equivalence is now supported by the reported sidecars. Refreshed pending measurements from the 08:40 UTC source.
+- Kept the release version and Cyrillic author names; replaced superseded numbers. The owner subsequently revoked the no-growth target. See the v4 gap map for before/after counts and the complete old/new/source number ledger.
+
 ## [0.1.0-rc.3] - 2026-11-02
 
 Paper v3 integrates reviewed engine run 15, cooled M3 Max parallel measurements, stage-2 bridge and task-pilot

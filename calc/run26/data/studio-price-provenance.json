@@ -1,0 +1,15 @@
+[
+  {
+    "url": "https://www.macworld.com/article/3271691/the-mac-studio-with-512gb-of-ram-is-shipping-and-it-costs-new-car-money.html",
+    "sha256_fetched_page": "f1b80403b5e652a05b4a506ba4d4174f6d1309d32b6466f08e6ef5b4d5034004",
+    "bytes": 257221,
+    "observed_at": "2026-11-05",
+    "reported_list_512_usd": 22299,
+    "reported_list_256_usd": 10799,
+    "basis": "Apple US36CPU/80GPU Ultra,1TB; media-reported list price, purchase-cost proxy; not performance evidence"
+  },
+  {
+    "url": "https://www.macrumors.com/2026/10/28/MAC-STUDIO-M5-ULTRA-512GB-RAM/",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]
